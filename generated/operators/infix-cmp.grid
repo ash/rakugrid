@@ -1,0 +1,2032 @@
+atom     operators/infix-cmp
+source   generated
+gen      gen/ladder.raku
+form     ({A}) cmp ({B})
+ladder   mixed × mixed, both orders
+axes     0 | 1 | -1 | 0e0 | NaN | "" | "0" | "a" | True | False | Nil | Any | () | (1,) | {}
+cols     0 | 1 | -1 | 0e0 | NaN | "" | "0" | "a" | True | False | Nil | Any | () | (1,) | {}
+
+- id     0001
+  from   ladder:mixed×mixed
+  cell   0 | 0
+  code   (0) cmp (0)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0002
+  from   ladder:mixed×mixed
+  cell   0 | 1
+  code   (0) cmp (1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0003
+  from   ladder:mixed×mixed
+  cell   0 | -1
+  code   (0) cmp (-1)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0004
+  from   ladder:mixed×mixed
+  cell   0 | 0e0
+  code   (0) cmp (0e0)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0005
+  from   ladder:mixed×mixed
+  cell   0 | NaN
+  code   (0) cmp (NaN)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Same
+
+- id     0006
+  from   ladder:mixed×mixed
+  cell   0 | ""
+  code   (0) cmp ("")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0007
+  from   ladder:mixed×mixed
+  cell   0 | "0"
+  code   (0) cmp ("0")
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0008
+  from   ladder:mixed×mixed
+  cell   0 | "a"
+  code   (0) cmp ("a")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0009
+  from   ladder:mixed×mixed
+  cell   0 | True
+  code   (0) cmp (True)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0010
+  from   ladder:mixed×mixed
+  cell   0 | False
+  code   (0) cmp (False)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0011
+  from   ladder:mixed×mixed
+  cell   0 | Nil
+  code   (0) cmp (Nil)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0012
+  from   ladder:mixed×mixed
+  cell   0 | Any
+  code   (0) cmp (Any)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0013
+  from   ladder:mixed×mixed
+  cell   0 | ()
+  code   (0) cmp (())
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0014
+  from   ladder:mixed×mixed
+  cell   0 | (1,)
+  code   (0) cmp ((1,))
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0015
+  from   ladder:mixed×mixed
+  cell   0 | {}
+  code   (0) cmp ({})
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0016
+  from   ladder:mixed×mixed
+  cell   1 | 0
+  code   (1) cmp (0)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0017
+  from   ladder:mixed×mixed
+  cell   1 | 1
+  code   (1) cmp (1)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0018
+  from   ladder:mixed×mixed
+  cell   1 | -1
+  code   (1) cmp (-1)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0019
+  from   ladder:mixed×mixed
+  cell   1 | 0e0
+  code   (1) cmp (0e0)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0020
+  from   ladder:mixed×mixed
+  cell   1 | NaN
+  code   (1) cmp (NaN)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Same
+
+- id     0021
+  from   ladder:mixed×mixed
+  cell   1 | ""
+  code   (1) cmp ("")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0022
+  from   ladder:mixed×mixed
+  cell   1 | "0"
+  code   (1) cmp ("0")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0023
+  from   ladder:mixed×mixed
+  cell   1 | "a"
+  code   (1) cmp ("a")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0024
+  from   ladder:mixed×mixed
+  cell   1 | True
+  code   (1) cmp (True)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0025
+  from   ladder:mixed×mixed
+  cell   1 | False
+  code   (1) cmp (False)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0026
+  from   ladder:mixed×mixed
+  cell   1 | Nil
+  code   (1) cmp (Nil)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0027
+  from   ladder:mixed×mixed
+  cell   1 | Any
+  code   (1) cmp (Any)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0028
+  from   ladder:mixed×mixed
+  cell   1 | ()
+  code   (1) cmp (())
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0029
+  from   ladder:mixed×mixed
+  cell   1 | (1,)
+  code   (1) cmp ((1,))
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0030
+  from   ladder:mixed×mixed
+  cell   1 | {}
+  code   (1) cmp ({})
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0031
+  from   ladder:mixed×mixed
+  cell   -1 | 0
+  code   (-1) cmp (0)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0032
+  from   ladder:mixed×mixed
+  cell   -1 | 1
+  code   (-1) cmp (1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0033
+  from   ladder:mixed×mixed
+  cell   -1 | -1
+  code   (-1) cmp (-1)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0034
+  from   ladder:mixed×mixed
+  cell   -1 | 0e0
+  code   (-1) cmp (0e0)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0035
+  from   ladder:mixed×mixed
+  cell   -1 | NaN
+  code   (-1) cmp (NaN)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Same
+
+- id     0036
+  from   ladder:mixed×mixed
+  cell   -1 | ""
+  code   (-1) cmp ("")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0037
+  from   ladder:mixed×mixed
+  cell   -1 | "0"
+  code   (-1) cmp ("0")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0038
+  from   ladder:mixed×mixed
+  cell   -1 | "a"
+  code   (-1) cmp ("a")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0039
+  from   ladder:mixed×mixed
+  cell   -1 | True
+  code   (-1) cmp (True)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0040
+  from   ladder:mixed×mixed
+  cell   -1 | False
+  code   (-1) cmp (False)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0041
+  from   ladder:mixed×mixed
+  cell   -1 | Nil
+  code   (-1) cmp (Nil)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0042
+  from   ladder:mixed×mixed
+  cell   -1 | Any
+  code   (-1) cmp (Any)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0043
+  from   ladder:mixed×mixed
+  cell   -1 | ()
+  code   (-1) cmp (())
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0044
+  from   ladder:mixed×mixed
+  cell   -1 | (1,)
+  code   (-1) cmp ((1,))
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0045
+  from   ladder:mixed×mixed
+  cell   -1 | {}
+  code   (-1) cmp ({})
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0046
+  from   ladder:mixed×mixed
+  cell   0e0 | 0
+  code   (0e0) cmp (0)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0047
+  from   ladder:mixed×mixed
+  cell   0e0 | 1
+  code   (0e0) cmp (1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0048
+  from   ladder:mixed×mixed
+  cell   0e0 | -1
+  code   (0e0) cmp (-1)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0049
+  from   ladder:mixed×mixed
+  cell   0e0 | 0e0
+  code   (0e0) cmp (0e0)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0050
+  from   ladder:mixed×mixed
+  cell   0e0 | NaN
+  code   (0e0) cmp (NaN)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Same
+
+- id     0051
+  from   ladder:mixed×mixed
+  cell   0e0 | ""
+  code   (0e0) cmp ("")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0052
+  from   ladder:mixed×mixed
+  cell   0e0 | "0"
+  code   (0e0) cmp ("0")
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0053
+  from   ladder:mixed×mixed
+  cell   0e0 | "a"
+  code   (0e0) cmp ("a")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0054
+  from   ladder:mixed×mixed
+  cell   0e0 | True
+  code   (0e0) cmp (True)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0055
+  from   ladder:mixed×mixed
+  cell   0e0 | False
+  code   (0e0) cmp (False)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0056
+  from   ladder:mixed×mixed
+  cell   0e0 | Nil
+  code   (0e0) cmp (Nil)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0057
+  from   ladder:mixed×mixed
+  cell   0e0 | Any
+  code   (0e0) cmp (Any)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0058
+  from   ladder:mixed×mixed
+  cell   0e0 | ()
+  code   (0e0) cmp (())
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0059
+  from   ladder:mixed×mixed
+  cell   0e0 | (1,)
+  code   (0e0) cmp ((1,))
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0060
+  from   ladder:mixed×mixed
+  cell   0e0 | {}
+  code   (0e0) cmp ({})
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0061
+  from   ladder:mixed×mixed
+  cell   NaN | 0
+  code   (NaN) cmp (0)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → Same
+
+- id     0062
+  from   ladder:mixed×mixed
+  cell   NaN | 1
+  code   (NaN) cmp (1)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → Same
+
+- id     0063
+  from   ladder:mixed×mixed
+  cell   NaN | -1
+  code   (NaN) cmp (-1)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → Same
+
+- id     0064
+  from   ladder:mixed×mixed
+  cell   NaN | 0e0
+  code   (NaN) cmp (0e0)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → Same
+
+- id     0065
+  from   ladder:mixed×mixed
+  cell   NaN | NaN
+  code   (NaN) cmp (NaN)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0066
+  from   ladder:mixed×mixed
+  cell   NaN | ""
+  code   (NaN) cmp ("")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0067
+  from   ladder:mixed×mixed
+  cell   NaN | "0"
+  code   (NaN) cmp ("0")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0068
+  from   ladder:mixed×mixed
+  cell   NaN | "a"
+  code   (NaN) cmp ("a")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0069
+  from   ladder:mixed×mixed
+  cell   NaN | True
+  code   (NaN) cmp (True)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → Same
+
+- id     0070
+  from   ladder:mixed×mixed
+  cell   NaN | False
+  code   (NaN) cmp (False)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → Same
+
+- id     0071
+  from   ladder:mixed×mixed
+  cell   NaN | Nil
+  code   (NaN) cmp (Nil)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0072
+  from   ladder:mixed×mixed
+  cell   NaN | Any
+  code   (NaN) cmp (Any)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0073
+  from   ladder:mixed×mixed
+  cell   NaN | ()
+  code   (NaN) cmp (())
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0074
+  from   ladder:mixed×mixed
+  cell   NaN | (1,)
+  code   (NaN) cmp ((1,))
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0075
+  from   ladder:mixed×mixed
+  cell   NaN | {}
+  code   (NaN) cmp ({})
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0076
+  from   ladder:mixed×mixed
+  cell   "" | 0
+  code   ("") cmp (0)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0077
+  from   ladder:mixed×mixed
+  cell   "" | 1
+  code   ("") cmp (1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0078
+  from   ladder:mixed×mixed
+  cell   "" | -1
+  code   ("") cmp (-1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0079
+  from   ladder:mixed×mixed
+  cell   "" | 0e0
+  code   ("") cmp (0e0)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0080
+  from   ladder:mixed×mixed
+  cell   "" | NaN
+  code   ("") cmp (NaN)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0081
+  from   ladder:mixed×mixed
+  cell   "" | ""
+  code   ("") cmp ("")
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0082
+  from   ladder:mixed×mixed
+  cell   "" | "0"
+  code   ("") cmp ("0")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0083
+  from   ladder:mixed×mixed
+  cell   "" | "a"
+  code   ("") cmp ("a")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0084
+  from   ladder:mixed×mixed
+  cell   "" | True
+  code   ("") cmp (True)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0085
+  from   ladder:mixed×mixed
+  cell   "" | False
+  code   ("") cmp (False)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0086
+  from   ladder:mixed×mixed
+  cell   "" | Nil
+  code   ("") cmp (Nil)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0087
+  from   ladder:mixed×mixed
+  cell   "" | Any
+  code   ("") cmp (Any)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0088
+  from   ladder:mixed×mixed
+  cell   "" | ()
+  code   ("") cmp (())
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0089
+  from   ladder:mixed×mixed
+  cell   "" | (1,)
+  code   ("") cmp ((1,))
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0090
+  from   ladder:mixed×mixed
+  cell   "" | {}
+  code   ("") cmp ({})
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0091
+  from   ladder:mixed×mixed
+  cell   "0" | 0
+  code   ("0") cmp (0)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0092
+  from   ladder:mixed×mixed
+  cell   "0" | 1
+  code   ("0") cmp (1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0093
+  from   ladder:mixed×mixed
+  cell   "0" | -1
+  code   ("0") cmp (-1)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0094
+  from   ladder:mixed×mixed
+  cell   "0" | 0e0
+  code   ("0") cmp (0e0)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0095
+  from   ladder:mixed×mixed
+  cell   "0" | NaN
+  code   ("0") cmp (NaN)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0096
+  from   ladder:mixed×mixed
+  cell   "0" | ""
+  code   ("0") cmp ("")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0097
+  from   ladder:mixed×mixed
+  cell   "0" | "0"
+  code   ("0") cmp ("0")
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0098
+  from   ladder:mixed×mixed
+  cell   "0" | "a"
+  code   ("0") cmp ("a")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0099
+  from   ladder:mixed×mixed
+  cell   "0" | True
+  code   ("0") cmp (True)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0100
+  from   ladder:mixed×mixed
+  cell   "0" | False
+  code   ("0") cmp (False)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0101
+  from   ladder:mixed×mixed
+  cell   "0" | Nil
+  code   ("0") cmp (Nil)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0102
+  from   ladder:mixed×mixed
+  cell   "0" | Any
+  code   ("0") cmp (Any)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0103
+  from   ladder:mixed×mixed
+  cell   "0" | ()
+  code   ("0") cmp (())
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0104
+  from   ladder:mixed×mixed
+  cell   "0" | (1,)
+  code   ("0") cmp ((1,))
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0105
+  from   ladder:mixed×mixed
+  cell   "0" | {}
+  code   ("0") cmp ({})
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0106
+  from   ladder:mixed×mixed
+  cell   "a" | 0
+  code   ("a") cmp (0)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0107
+  from   ladder:mixed×mixed
+  cell   "a" | 1
+  code   ("a") cmp (1)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0108
+  from   ladder:mixed×mixed
+  cell   "a" | -1
+  code   ("a") cmp (-1)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0109
+  from   ladder:mixed×mixed
+  cell   "a" | 0e0
+  code   ("a") cmp (0e0)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0110
+  from   ladder:mixed×mixed
+  cell   "a" | NaN
+  code   ("a") cmp (NaN)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0111
+  from   ladder:mixed×mixed
+  cell   "a" | ""
+  code   ("a") cmp ("")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0112
+  from   ladder:mixed×mixed
+  cell   "a" | "0"
+  code   ("a") cmp ("0")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0113
+  from   ladder:mixed×mixed
+  cell   "a" | "a"
+  code   ("a") cmp ("a")
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0114
+  from   ladder:mixed×mixed
+  cell   "a" | True
+  code   ("a") cmp (True)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0115
+  from   ladder:mixed×mixed
+  cell   "a" | False
+  code   ("a") cmp (False)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0116
+  from   ladder:mixed×mixed
+  cell   "a" | Nil
+  code   ("a") cmp (Nil)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0117
+  from   ladder:mixed×mixed
+  cell   "a" | Any
+  code   ("a") cmp (Any)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0118
+  from   ladder:mixed×mixed
+  cell   "a" | ()
+  code   ("a") cmp (())
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0119
+  from   ladder:mixed×mixed
+  cell   "a" | (1,)
+  code   ("a") cmp ((1,))
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0120
+  from   ladder:mixed×mixed
+  cell   "a" | {}
+  code   ("a") cmp ({})
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0121
+  from   ladder:mixed×mixed
+  cell   True | 0
+  code   (True) cmp (0)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0122
+  from   ladder:mixed×mixed
+  cell   True | 1
+  code   (True) cmp (1)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0123
+  from   ladder:mixed×mixed
+  cell   True | -1
+  code   (True) cmp (-1)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0124
+  from   ladder:mixed×mixed
+  cell   True | 0e0
+  code   (True) cmp (0e0)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0125
+  from   ladder:mixed×mixed
+  cell   True | NaN
+  code   (True) cmp (NaN)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Same
+
+- id     0126
+  from   ladder:mixed×mixed
+  cell   True | ""
+  code   (True) cmp ("")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0127
+  from   ladder:mixed×mixed
+  cell   True | "0"
+  code   (True) cmp ("0")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0128
+  from   ladder:mixed×mixed
+  cell   True | "a"
+  code   (True) cmp ("a")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0129
+  from   ladder:mixed×mixed
+  cell   True | True
+  code   (True) cmp (True)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0130
+  from   ladder:mixed×mixed
+  cell   True | False
+  code   (True) cmp (False)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0131
+  from   ladder:mixed×mixed
+  cell   True | Nil
+  code   (True) cmp (Nil)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0132
+  from   ladder:mixed×mixed
+  cell   True | Any
+  code   (True) cmp (Any)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0133
+  from   ladder:mixed×mixed
+  cell   True | ()
+  code   (True) cmp (())
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0134
+  from   ladder:mixed×mixed
+  cell   True | (1,)
+  code   (True) cmp ((1,))
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0135
+  from   ladder:mixed×mixed
+  cell   True | {}
+  code   (True) cmp ({})
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0136
+  from   ladder:mixed×mixed
+  cell   False | 0
+  code   (False) cmp (0)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0137
+  from   ladder:mixed×mixed
+  cell   False | 1
+  code   (False) cmp (1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0138
+  from   ladder:mixed×mixed
+  cell   False | -1
+  code   (False) cmp (-1)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0139
+  from   ladder:mixed×mixed
+  cell   False | 0e0
+  code   (False) cmp (0e0)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0140
+  from   ladder:mixed×mixed
+  cell   False | NaN
+  code   (False) cmp (NaN)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Same
+
+- id     0141
+  from   ladder:mixed×mixed
+  cell   False | ""
+  code   (False) cmp ("")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0142
+  from   ladder:mixed×mixed
+  cell   False | "0"
+  code   (False) cmp ("0")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0143
+  from   ladder:mixed×mixed
+  cell   False | "a"
+  code   (False) cmp ("a")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0144
+  from   ladder:mixed×mixed
+  cell   False | True
+  code   (False) cmp (True)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0145
+  from   ladder:mixed×mixed
+  cell   False | False
+  code   (False) cmp (False)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0146
+  from   ladder:mixed×mixed
+  cell   False | Nil
+  code   (False) cmp (Nil)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0147
+  from   ladder:mixed×mixed
+  cell   False | Any
+  code   (False) cmp (Any)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0148
+  from   ladder:mixed×mixed
+  cell   False | ()
+  code   (False) cmp (())
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0149
+  from   ladder:mixed×mixed
+  cell   False | (1,)
+  code   (False) cmp ((1,))
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0150
+  from   ladder:mixed×mixed
+  cell   False | {}
+  code   (False) cmp ({})
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0151
+  from   ladder:mixed×mixed
+  cell   Nil | 0
+  code   (Nil) cmp (0)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0152
+  from   ladder:mixed×mixed
+  cell   Nil | 1
+  code   (Nil) cmp (1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0153
+  from   ladder:mixed×mixed
+  cell   Nil | -1
+  code   (Nil) cmp (-1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0154
+  from   ladder:mixed×mixed
+  cell   Nil | 0e0
+  code   (Nil) cmp (0e0)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0155
+  from   ladder:mixed×mixed
+  cell   Nil | NaN
+  code   (Nil) cmp (NaN)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0156
+  from   ladder:mixed×mixed
+  cell   Nil | ""
+  code   (Nil) cmp ("")
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0157
+  from   ladder:mixed×mixed
+  cell   Nil | "0"
+  code   (Nil) cmp ("0")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0158
+  from   ladder:mixed×mixed
+  cell   Nil | "a"
+  code   (Nil) cmp ("a")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0159
+  from   ladder:mixed×mixed
+  cell   Nil | True
+  code   (Nil) cmp (True)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0160
+  from   ladder:mixed×mixed
+  cell   Nil | False
+  code   (Nil) cmp (False)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0161
+  from   ladder:mixed×mixed
+  cell   Nil | Nil
+  code   (Nil) cmp (Nil)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0162
+  from   ladder:mixed×mixed
+  cell   Nil | Any
+  code   (Nil) cmp (Any)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0163
+  from   ladder:mixed×mixed
+  cell   Nil | ()
+  code   (Nil) cmp (())
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0164
+  from   ladder:mixed×mixed
+  cell   Nil | (1,)
+  code   (Nil) cmp ((1,))
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0165
+  from   ladder:mixed×mixed
+  cell   Nil | {}
+  code   (Nil) cmp ({})
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0166
+  from   ladder:mixed×mixed
+  cell   Any | 0
+  code   (Any) cmp (0)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0167
+  from   ladder:mixed×mixed
+  cell   Any | 1
+  code   (Any) cmp (1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0168
+  from   ladder:mixed×mixed
+  cell   Any | -1
+  code   (Any) cmp (-1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0169
+  from   ladder:mixed×mixed
+  cell   Any | 0e0
+  code   (Any) cmp (0e0)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0170
+  from   ladder:mixed×mixed
+  cell   Any | NaN
+  code   (Any) cmp (NaN)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0171
+  from   ladder:mixed×mixed
+  cell   Any | ""
+  code   (Any) cmp ("")
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0172
+  from   ladder:mixed×mixed
+  cell   Any | "0"
+  code   (Any) cmp ("0")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0173
+  from   ladder:mixed×mixed
+  cell   Any | "a"
+  code   (Any) cmp ("a")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0174
+  from   ladder:mixed×mixed
+  cell   Any | True
+  code   (Any) cmp (True)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0175
+  from   ladder:mixed×mixed
+  cell   Any | False
+  code   (Any) cmp (False)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0176
+  from   ladder:mixed×mixed
+  cell   Any | Nil
+  code   (Any) cmp (Nil)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0177
+  from   ladder:mixed×mixed
+  cell   Any | Any
+  code   (Any) cmp (Any)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0178
+  from   ladder:mixed×mixed
+  cell   Any | ()
+  code   (Any) cmp (())
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0179
+  from   ladder:mixed×mixed
+  cell   Any | (1,)
+  code   (Any) cmp ((1,))
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0180
+  from   ladder:mixed×mixed
+  cell   Any | {}
+  code   (Any) cmp ({})
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0181
+  from   ladder:mixed×mixed
+  cell   () | 0
+  code   (()) cmp (0)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0182
+  from   ladder:mixed×mixed
+  cell   () | 1
+  code   (()) cmp (1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0183
+  from   ladder:mixed×mixed
+  cell   () | -1
+  code   (()) cmp (-1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0184
+  from   ladder:mixed×mixed
+  cell   () | 0e0
+  code   (()) cmp (0e0)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0185
+  from   ladder:mixed×mixed
+  cell   () | NaN
+  code   (()) cmp (NaN)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0186
+  from   ladder:mixed×mixed
+  cell   () | ""
+  code   (()) cmp ("")
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0187
+  from   ladder:mixed×mixed
+  cell   () | "0"
+  code   (()) cmp ("0")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0188
+  from   ladder:mixed×mixed
+  cell   () | "a"
+  code   (()) cmp ("a")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0189
+  from   ladder:mixed×mixed
+  cell   () | True
+  code   (()) cmp (True)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0190
+  from   ladder:mixed×mixed
+  cell   () | False
+  code   (()) cmp (False)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0191
+  from   ladder:mixed×mixed
+  cell   () | Nil
+  code   (()) cmp (Nil)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0192
+  from   ladder:mixed×mixed
+  cell   () | Any
+  code   (()) cmp (Any)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0193
+  from   ladder:mixed×mixed
+  cell   () | ()
+  code   (()) cmp (())
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0194
+  from   ladder:mixed×mixed
+  cell   () | (1,)
+  code   (()) cmp ((1,))
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0195
+  from   ladder:mixed×mixed
+  cell   () | {}
+  code   (()) cmp ({})
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0196
+  from   ladder:mixed×mixed
+  cell   (1,) | 0
+  code   ((1,)) cmp (0)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0197
+  from   ladder:mixed×mixed
+  cell   (1,) | 1
+  code   ((1,)) cmp (1)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0198
+  from   ladder:mixed×mixed
+  cell   (1,) | -1
+  code   ((1,)) cmp (-1)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0199
+  from   ladder:mixed×mixed
+  cell   (1,) | 0e0
+  code   ((1,)) cmp (0e0)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0200
+  from   ladder:mixed×mixed
+  cell   (1,) | NaN
+  code   ((1,)) cmp (NaN)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0201
+  from   ladder:mixed×mixed
+  cell   (1,) | ""
+  code   ((1,)) cmp ("")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0202
+  from   ladder:mixed×mixed
+  cell   (1,) | "0"
+  code   ((1,)) cmp ("0")
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0203
+  from   ladder:mixed×mixed
+  cell   (1,) | "a"
+  code   ((1,)) cmp ("a")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0204
+  from   ladder:mixed×mixed
+  cell   (1,) | True
+  code   ((1,)) cmp (True)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0205
+  from   ladder:mixed×mixed
+  cell   (1,) | False
+  code   ((1,)) cmp (False)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0206
+  from   ladder:mixed×mixed
+  cell   (1,) | Nil
+  code   ((1,)) cmp (Nil)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0207
+  from   ladder:mixed×mixed
+  cell   (1,) | Any
+  code   ((1,)) cmp (Any)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0208
+  from   ladder:mixed×mixed
+  cell   (1,) | ()
+  code   ((1,)) cmp (())
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0209
+  from   ladder:mixed×mixed
+  cell   (1,) | (1,)
+  code   ((1,)) cmp ((1,))
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0210
+  from   ladder:mixed×mixed
+  cell   (1,) | {}
+  code   ((1,)) cmp ({})
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → More
+
+- id     0211
+  from   ladder:mixed×mixed
+  cell   {} | 0
+  code   ({}) cmp (0)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0212
+  from   ladder:mixed×mixed
+  cell   {} | 1
+  code   ({}) cmp (1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0213
+  from   ladder:mixed×mixed
+  cell   {} | -1
+  code   ({}) cmp (-1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0214
+  from   ladder:mixed×mixed
+  cell   {} | 0e0
+  code   ({}) cmp (0e0)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0215
+  from   ladder:mixed×mixed
+  cell   {} | NaN
+  code   ({}) cmp (NaN)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0216
+  from   ladder:mixed×mixed
+  cell   {} | ""
+  code   ({}) cmp ("")
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0217
+  from   ladder:mixed×mixed
+  cell   {} | "0"
+  code   ({}) cmp ("0")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0218
+  from   ladder:mixed×mixed
+  cell   {} | "a"
+  code   ({}) cmp ("a")
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0219
+  from   ladder:mixed×mixed
+  cell   {} | True
+  code   ({}) cmp (True)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0220
+  from   ladder:mixed×mixed
+  cell   {} | False
+  code   ({}) cmp (False)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0221
+  from   ladder:mixed×mixed
+  cell   {} | Nil
+  code   ({}) cmp (Nil)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0222
+  from   ladder:mixed×mixed
+  cell   {} | Any
+  code   ({}) cmp (Any)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0223
+  from   ladder:mixed×mixed
+  cell   {} | ()
+  code   ({}) cmp (())
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same
+
+- id     0224
+  from   ladder:mixed×mixed
+  cell   {} | (1,)
+  code   ({}) cmp ((1,))
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Less
+
+- id     0225
+  from   ladder:mixed×mixed
+  cell   {} | {}
+  code   ({}) cmp ({})
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → Same

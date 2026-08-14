@@ -1,0 +1,630 @@
+#!/usr/bin/env raku
+# rakugrid — the Rakugrid harness.
+#
+#   rakugrid fire [<selector>]     run tests, emit TAP
+#   rakugrid check                 the build rule: no unsigned divergences
+#   rakugrid cover                 which atoms have tests, which do not
+#   rakugrid isolate <id>          print one test as a standalone program
+#   rakugrid adjudications         the ledger of signed rulings
+#
+# Options: --engine=<cmd> (default $RAKUGRID_ENGINE or `raku`), --keep, --verbose
+#
+# Deliberately one file: rakupp's `is export` on many-sub modules is still
+# unreliable, and the harness must run unchanged on every implementation it
+# tests. See docs/FORMAT.md for the .grid format this parses.
+
+my $ROOT   = $*PROGRAM.IO.absolute.IO.parent.parent;
+my $ENGINE = %*ENV<RAKUGRID_ENGINE> // 'raku';
+my $KEEP   = False;
+my $VERB   = False;
+
+# ---------------------------------------------------------------- the format
+
+# A .grid file is a header of `name value` lines at column 0, then records.
+# A record opens with `- id <n>`; its fields are indented two spaces. A field
+# whose own line is empty takes the indented block that follows. Repeated
+# fields (oracle, from) accumulate.
+
+sub parse-grid($path) {
+    my %header;
+    my @records;
+    my %cur;
+    my @lines = $path.IO.lines;
+    my $n = @lines.elems;
+    my $i = 0;
+
+    sub flush() {
+        if %cur {
+            @records.push: %cur.clone;
+            %cur = ();
+        }
+    }
+
+    while $i < $n {
+        my $line = @lines[$i];
+        $i++;
+
+        next if $line ~~ /^ \s* '#'/;
+        if $line ~~ /^ \s* $/ {
+            flush();
+            next;
+        }
+
+        # record opener: `- id  0041`
+        if $line ~~ /^ '-' \s+ (\w+) \s+ (.*) $/ {
+            flush();
+            %cur{~$0} = ~$1;
+            %cur<_file> = ~$path;
+            next;
+        }
+
+        # indented field
+        if $line ~~ /^ '  ' (\w[\w|'-']*) (.*) $/ {
+            my $name  = ~$0;
+            my $value = (~$1).trim;
+
+            if $value eq '' {
+                # block value: everything indented deeper, until it dedents
+                my @block;
+                while $i < $n && (@lines[$i] ~~ /^ '    ' / || @lines[$i] ~~ /^ \s* $/) {
+                    last if @lines[$i] ~~ /^ \s* $/ && !(@lines[$i+1] // '') ~~ /^ '    ' /;
+                    @block.push: (@lines[$i] ~~ /^ '    ' (.*) $/) ?? ~$0 !! '';
+                    $i++;
+                }
+                $value = @block.join("\n");
+            }
+            if $name eq 'oracle' | 'from' {
+                %cur{$name} = [] unless %cur{$name}:exists;
+                %cur{$name}.push: $value;
+            }
+            else {
+                %cur{$name} = $value;
+            }
+            next;
+        }
+
+        # header line at column 0
+        if $line ~~ /^ (\w[\w|'-']*) \s+ (.*) $/ {
+            %header{~$0} = (~$1).trim;
+        }
+    }
+    flush();
+
+    return { header => %header, records => @records };
+}
+
+# Expected values are compared as `.raku` TEXT, never by re-compiling them: a
+# value's own `.raku` is not always re-parseable (`18446744073709551616.0` is
+# not), and text comparison also makes NaN compare equal to NaN, which is what a
+# test wants and what `==` will not give.
+sub raku-literal($s) {
+    return "'" ~ $s.subst('\\', '\\\\', :g).subst("'", "\\'", :g) ~ "'";
+}
+
+# The one assertion each record makes. Exactly one of these must be present.
+constant @ASSERTIONS = <is type throws output finishes same-as parses no-parse>;
+
+# `type` is a modifier when it accompanies another assertion — "this expression
+# produces this value, of this type" is one behaviour — and an assertion in its
+# own right when it stands alone.
+sub assertion-of(%r) {
+    my @found = @ASSERTIONS.grep({ %r{$_}:exists });
+    return @found.grep({ $_ ne 'type' }) if @found > 1 && @found.grep({ $_ eq 'type' });
+    return @found;
+}
+
+# The authoritative oracle: newest line for the reference implementation.
+sub authoritative(%r, $reference = 'rakudo') {
+    my @lines = (%r<oracle> // []).grep({ $_.starts-with($reference) });
+    return @lines ?? @lines[*-1] !! Nil;
+}
+
+sub oracle-observation($line) {
+    return ~$0 if $line ~~ / '→' \s* (.*) $/;
+    return '';
+}
+
+sub grid-files() {
+    my @out;
+    for <atoms generated molecules> -> $dir {
+        my $d = $ROOT.add($dir);
+        next unless $d.e;
+        @out.append: find-grid($d);
+    }
+    return @out.sort;
+}
+
+sub find-grid($dir) {
+    my @out;
+    for $dir.dir -> $e {
+        if $e.d {
+            @out.append: find-grid($e);
+        }
+        elsif $e.extension eq 'grid' {
+            @out.push: $e;
+        }
+    }
+    return @out;
+}
+
+sub atom-of(%parsed) {
+    return %parsed<header><atom> // 'unknown';
+}
+
+sub id-of(%parsed, %r) {
+    return 'grid:' ~ atom-of(%parsed) ~ '#' ~ (%r<id> // '????');
+}
+
+# ------------------------------------------------------------------- program
+
+# Build one dense program per file. Assertions that need process isolation
+# (parses / no-parse / finishes / output) are not emitted here — they belong to
+# the isolated lane, which `fire` reports as skipped until it is built.
+
+constant @IN-PROCESS = <is type throws same-as>;
+
+sub emit-program(%parsed) {
+    my @body;
+    my @ran;
+
+    for %parsed<records>.list -> %r {
+        my @a = assertion-of(%r);
+        next unless @a == 1;
+        next unless @a[0] eq any(@IN-PROCESS);
+        @ran.push: %r;
+        @body.push: emit-record(%parsed, %r, @a[0]);
+    }
+
+    my $prelude = q:to/END/;
+    my $i = 0;
+    sub tap($ok, $desc, $diag = '') {
+        $i++;
+        if $ok {
+            say "ok $i - $desc";
+        }
+        else {
+            say "not ok $i - $desc";
+            say "# " ~ $diag if $diag;
+        }
+    }
+    END
+
+    my $src = "# generated by rakugrid — do not edit\n"
+            ~ "say \"1..{ @ran.elems }\";\n"
+            ~ $prelude
+            ~ @body.join("\n");
+
+    return { source => $src, ran => @ran };
+}
+
+sub indent($text, $by = 8) {
+    return $text.lines.map({ (' ' x $by) ~ $_ }).join("\n");
+}
+
+sub emit-record(%parsed, %r, $kind) {
+    my $id    = id-of(%parsed, %r);
+    my $setup = %r<setup> // '';
+    my $code  = %r<code>  // '';
+    my $desc  = $id;
+
+    my $subject = ($setup ?? $setup ~ "\n" !! '') ~ $code;
+
+    if $kind eq 'is' {
+        my $exp   = %r<is>;
+        my $wtype = %r<type> // '';
+        my $tcheck = $wtype
+            ?? " && \$got.WHAT.^name eq '$wtype'"
+            !! '';
+        my $tdiag = $wtype
+            ?? " ~ \" (type \" ~ \$got.WHAT.^name ~ \", expected $wtype)\""
+            !! '';
+        return qq:to/END/;
+        \{
+            my \$got = try \{
+        { indent($subject, 8) }
+            \};
+            my \$err = \$! ?? \$!.^name !! '';
+            my \$exp = { raku-literal($exp) };
+            tap(!\$err && \$got.raku eq \$exp{ $tcheck }, "$desc",
+                \$err ?? "threw \$err" !! "got " ~ \$got.raku ~ ", expected " ~ \$exp{ $tdiag });
+        \}
+        END
+    }
+
+    if $kind eq 'type' {
+        my $exp = %r<type>;
+        return qq:to/END/;
+        \{
+            my \$got = try \{
+        { indent($subject, 8) }
+            \};
+            my \$err = \$! ?? \$!.^name !! '';
+            tap(!\$err && \$got.WHAT.^name eq '{ $exp }', "$desc",
+                \$err ?? "threw \$err" !! "got type " ~ \$got.WHAT.^name ~ ", expected { $exp }");
+        \}
+        END
+    }
+
+    if $kind eq 'same-as' {
+        my $other = %r<same-as>;
+        return qq:to/END/;
+        \{
+            my \$got = try \{
+        { indent($subject, 8) }
+            \};
+            my \$e1 = \$! ?? \$!.^name !! '';
+            my \$alt = try \{ { $other } \};
+            my \$e2 = \$! ?? \$!.^name !! '';
+            tap(\$e1 eq \$e2 && \$got.raku eq \$alt.raku, "$desc",
+                "got " ~ \$got.raku ~ " vs " ~ \$alt.raku);
+        \}
+        END
+    }
+
+    if $kind eq 'throws' {
+        my $exp = %r<throws>;
+        return qq:to/END/;
+        \{
+            my \$ok = False;
+            my \$saw = 'nothing';
+            try \{
+        { indent($subject, 8) }
+            \};
+            if \$! \{
+                \$saw = \$!.^name;
+                \$ok  = \$!.^name eq '{ $exp }' || \$! ~~ ::('{ $exp }');
+            \}
+            tap(\$ok, "$desc", "threw " ~ \$saw ~ ", expected { $exp }");
+        \}
+        END
+    }
+
+    return '';
+}
+
+# ---------------------------------------------------------------- subcommands
+
+sub cmd-fire(@selector) {
+    my @files = grid-files();
+    @files = @files.grep({ so @selector.first({ ~$^s && $_.absolute.contains($^s) }) }) if @selector;
+
+    unless @files {
+        note "no .grid files found under atoms/ or molecules/";
+        exit 0;
+    }
+
+    my $total = 0;
+    my $bad   = 0;
+    my $skip  = 0;
+
+    for @files -> $f {
+        my %parsed = parse-grid($f);
+        my %p      = emit-program(%parsed);
+        $skip += %parsed<records>.elems - %p<ran>.elems;
+        next unless %p<ran>.elems;
+
+        my $tmp = $ROOT.add('tmp');
+        $tmp.mkdir unless $tmp.e;
+        my $out = $tmp.add($f.basename ~ '.gen.raku');
+        $out.spurt(%p<source>);
+
+        my $proc = run($ENGINE, $out.absolute, :out, :err);
+        my $text = $proc.out.slurp(:close);
+        my $errt = $proc.err.slurp(:close);
+        $out.unlink unless $KEEP;
+
+        my $seen = 0;
+        for $text.lines -> $l {
+            next unless $l.starts-with('ok ') || $l.starts-with('not ok ') || $l.starts-with('# ');
+            if $l.starts-with('ok ') || $l.starts-with('not ok ') {
+                $total++;
+                $seen++;
+            }
+            $bad++ if $l.starts-with('not ok ');
+            say $l;
+        }
+
+        # A file that never ran is a failure, not a silence. Without this the
+        # suite reports "0 failed" for a program that did not compile.
+        if $seen < %p<ran>.elems {
+            my $lost = %p<ran>.elems - $seen;
+            say "not ok - { %parsed<header><atom> // $f.basename }: $lost test{ $lost == 1 ?? '' !! 's' } produced no result";
+            say "# $_" for $errt.lines.grep({ .trim }).head(5);
+            $bad   += $lost;
+            $total += $lost;
+        }
+        elsif $errt.trim {
+            say "# {$f.basename}: engine wrote to stderr:";
+            say "# $_" for $errt.lines.grep({ .trim }).head(5);
+        }
+    }
+
+    say "# $total ran, $bad failed, $skip awaiting the isolated lane";
+    exit $bad ?? 1 !! 0;
+}
+
+# The build rule. An assertion that differs from the authoritative oracle needs
+# a signed verdict, a rationale and a date it was ruled against.
+sub cmd-check() {
+    my $problems = 0;
+
+    for grid-files() -> $f {
+        my %parsed = parse-grid($f);
+
+        for %parsed<records>.list -> %r {
+            my $id = id-of(%parsed, %r);
+            my @a  = assertion-of(%r);
+
+            if @a == 0 {
+                say "$id: no assertion";
+                $problems++;
+                next;
+            }
+            if @a > 1 {
+                say "$id: { @a.elems } assertions ({ @a.join(', ') }) — one test, one behaviour";
+                $problems++;
+            }
+            unless %r<from> {
+                say "$id: no provenance";
+                $problems++;
+            }
+
+            my $auth = authoritative(%r);
+            next unless $auth;
+
+            my $observed = oracle-observation($auth);
+            my $asserted = %r{@a[0]} // '';
+
+            # a throwing observation is recorded as `ERR:<type>`
+            $observed = $observed.substr(4) if $observed.starts-with('ERR:');
+
+            next if $observed eq $asserted;
+
+            unless %r<verdict> && %r<why> && %r<ruled> {
+                say "$id: asserts '$asserted' but { $auth } — unsigned divergence";
+                $problems++;
+                next;
+            }
+            unless %r<ruled>.contains('against') {
+                say "$id: verdict is not pinned to an observation (`ruled <date> against <impl>-<version>`)";
+                $problems++;
+            }
+        }
+    }
+
+    if $problems {
+        say "# $problems problem{ $problems == 1 ?? '' !! 's' }";
+        exit 1;
+    }
+    say "# clean";
+}
+
+sub cmd-cover() {
+    my %by-atom;
+    for grid-files() -> $f {
+        my %parsed = parse-grid($f);
+        %by-atom{atom-of(%parsed)} += %parsed<records>.elems;
+    }
+    for %by-atom.keys.sort -> $a {
+        say sprintf("%-40s %5d", $a, %by-atom{$a});
+    }
+    say "# { %by-atom.elems } atoms, { %by-atom.values.sum } tests";
+    say "# ladder and inventory coverage arrive with the extractors (phase 0)";
+}
+
+sub cmd-isolate($id) {
+    for grid-files() -> $f {
+        my %parsed = parse-grid($f);
+        for %parsed<records>.list -> %r {
+            next unless id-of(%parsed, %r) eq $id || (%r<id> // '') eq $id;
+            say "# $id";
+            say "# from: { (%r<from> // []).join(' · ') }";
+            say '';
+            say %r<setup> if %r<setup>;
+            say %r<code>;
+            return;
+        }
+    }
+    note "no such test: $id";
+    exit 1;
+}
+
+# A recorded observation, rendered short enough to scan in a grid.
+sub short-obs($o) {
+    return '·' unless $o;
+    return abbrev-exception($o.substr(4)) if $o.starts-with('ERR:');
+    return $o.chars > 10 ?? $o.substr(0, 9) ~ '…' !! $o;
+}
+
+# X::Numeric::DivideByZero → !DBZ, with the full name given in a legend. A
+# matrix is only worth rendering if a row fits on a line.
+sub abbrev-exception($full) {
+    my $last = $full.split('::')[*-1];
+    my $caps = $last.comb.grep({ $_ ~~ /<[A..Z]>/ }).join;
+    $caps = $last.substr(0, 3).uc unless $caps;
+    return '!' ~ $caps;
+}
+
+sub engine-of($line) {
+    return ~$0 if $line ~~ /^ (\S+) /;
+    return '';
+}
+
+# Every record where the engines on record disagree, clustered by the shape of
+# the disagreement so a cluster of 28 identical ones reads as one line.
+sub cmd-diverge(@selector) {
+    my %clusters;
+    my $records = 0;
+
+    for grid-files() -> $f {
+        my %parsed = parse-grid($f);
+        next if @selector && !@selector.first({ ~$^s && $f.absolute.contains($^s) });
+
+        for %parsed<records>.list -> %r {
+            my $auth = authoritative(%r);
+            next unless $auth;
+            my $ref-obs = oracle-observation($auth);
+
+            for (%r<oracle> // []).list -> $line {
+                next if $line eq $auth;
+                my $eng = engine-of($line);
+                next if $eng eq engine-of($auth);
+                my $obs = oracle-observation($line);
+                next if $obs eq $ref-obs;
+
+                $records++;
+                my $key = "$eng\t{ short-obs($ref-obs) }\t{ short-obs($obs) }";
+                %clusters{$key} = [] unless %clusters{$key}:exists;
+                %clusters{$key}.push: { id => id-of(%parsed, %r), code => (%r<code> // '').lines.join(' ') };
+            }
+        }
+    }
+
+    unless %clusters {
+        say "# no divergences on record";
+        return;
+    }
+
+    for %clusters.keys.sort({ -%clusters{$_}.elems }) -> $key {
+        my ($eng, $ref-obs, $obs) = $key.split("\t");
+        my @cases = %clusters{$key}.list;
+        say "";
+        say "{ @cases.elems } × $eng    reference: $ref-obs    got: $obs";
+        for @cases.head($VERB ?? @cases.elems !! 4) -> %c {
+            say sprintf("    %-34s %s", %c<code>, %c<id>);
+        }
+        say "    … { @cases.elems - 4 } more (--verbose for all)" if !$VERB && @cases > 4;
+    }
+    say "";
+    say "# $records divergent observation{ $records == 1 ?? '' !! 's' } in { %clusters.elems } cluster{ %clusters.elems == 1 ?? '' !! 's' }";
+}
+
+# A ladder cross is a matrix. Render it as one — far faster to scan than a list.
+sub cmd-matrix($atom) {
+    for grid-files() -> $f {
+        my %parsed = parse-grid($f);
+        my $name   = atom-of(%parsed);
+        next unless $name eq $atom || $name.contains($atom);
+
+        my $axes = %parsed<header><axes>;
+        unless $axes {
+            note "$name has no `axes` header — not a cross";
+            next;
+        }
+        my @axes = $axes.split(' | ');
+
+        my %cell;
+        my %flagged;
+        my %legend;
+        for %parsed<records>.list -> %r {
+            next unless %r<cell>;
+            my ($a, $b) = %r<cell>.split(' | ');
+            my $auth = authoritative(%r);
+            my $ref-obs = $auth ?? oracle-observation($auth) !! '';
+            %cell{"$a|$b"} = short-obs($ref-obs);
+            %legend{short-obs($ref-obs)} = $ref-obs.substr(4) if $ref-obs.starts-with('ERR:');
+
+            for (%r<oracle> // []).list -> $line {
+                next if $line eq $auth;
+                next if engine-of($line) eq engine-of($auth // '');
+                if oracle-observation($line) ne $ref-obs {
+                    %flagged{"$a|$b"} = { id => id-of(%parsed, %r), code => %r<code>, ref => $ref-obs,
+                                          other => $line };
+                }
+            }
+        }
+
+        my $w = 1;
+        for %cell.values -> $v {
+            $w = $v.chars if $v.chars > $w;
+        }
+        $w += 2;                               # the divergence marker, and a gap
+        my $lw = @axes.map(*.chars).max;
+
+        say "";
+        say "$name    reference: { %parsed<records>[0] ?? engine-of(authoritative(%parsed<records>[0]) // '') !! '?' }";
+        say "";
+        say (' ' x $lw) ~ '  ' ~ @axes.map({ sprintf("%-{$w}s", $_) }).join('');
+
+        for @axes -> $a {
+            my $row = sprintf("%-{$lw}s", $a) ~ '  ';
+            for @axes -> $b {
+                my $v = %cell{"$a|$b"} // '·';
+                $v = '*' ~ $v if %flagged{"$a|$b"};
+                $row ~= sprintf("%-{$w}s", $v);
+            }
+            say $row;
+        }
+
+        if %legend {
+            say "";
+            for %legend.keys.sort -> $k {
+                say "  $k = { %legend{$k} }";
+            }
+        }
+
+        if %flagged {
+            say "";
+            say "* { %flagged.elems } cell{ %flagged.elems == 1 ?? '' !! 's' } where another engine disagrees:";
+            for %flagged.keys.sort -> $k {
+                my %d = %flagged{$k};
+                say sprintf("    %-16s reference %-28s %s", %d<code>, %d<ref>, %d<other>);
+            }
+        }
+        say "";
+    }
+}
+
+sub cmd-adjudications() {
+    my $n = 0;
+    for grid-files() -> $f {
+        my %parsed = parse-grid($f);
+        for %parsed<records>.list -> %r {
+            next unless %r<verdict>;
+            $n++;
+            say id-of(%parsed, %r) ~ '  [' ~ %r<verdict> ~ ']';
+            say '    ' ~ %r<code>.lines.join(' ');
+            say '    asserts: ' ~ (assertion-of(%r).map({ $_ ~ ' ' ~ %r{$_} }).join(', '));
+            say '    ' ~ (%r<oracle> // []).join("\n    ");
+            say '    why: ' ~ (%r<why> // '');
+            say '    ruled: ' ~ (%r<ruled> // '');
+            say '';
+        }
+    }
+    say "# $n ruling{ $n == 1 ?? '' !! 's' }";
+}
+
+# ------------------------------------------------------------------- dispatch
+
+my @args;
+for @*ARGS -> $a {
+    if $a.starts-with('--engine=') {
+        $ENGINE = $a.substr(9);
+    }
+    elsif $a eq '--keep' {
+        $KEEP = True;
+    }
+    elsif $a eq '--verbose' {
+        $VERB = True;
+    }
+    else {
+        @args.push: $a;
+    }
+}
+
+my $cmd = @args.shift // 'fire';
+
+given $cmd {
+    when 'fire'          { cmd-fire(@args) }
+    when 'check'         { cmd-check() }
+    when 'cover'         { cmd-cover() }
+    when 'isolate'       { cmd-isolate(@args[0] // '') }
+    when 'diverge'       { cmd-diverge(@args) }
+    when 'matrix'        { cmd-matrix(@args[0] // '') }
+    when 'adjudications' { cmd-adjudications() }
+    default {
+        note "usage: rakugrid [fire|check|cover|diverge|matrix <atom>|isolate <id>|adjudications]";
+        note "                [--engine=<cmd>] [--verbose] [--keep]";
+        exit 2;
+    }
+}

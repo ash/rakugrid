@@ -1,0 +1,140 @@
+atom     operators/prefix-not
+source   generated
+gen      gen/ladder.raku
+form     !({A})
+ladder   mixed
+
+- id     0001
+  from   ladder:mixed
+  cell   0
+  code   !(0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0002
+  from   ladder:mixed
+  cell   1
+  code   !(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0003
+  from   ladder:mixed
+  cell   -1
+  code   !(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0004
+  from   ladder:mixed
+  cell   0e0
+  code   !(0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0005
+  from   ladder:mixed
+  cell   NaN
+  code   !(NaN)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0006
+  from   ladder:mixed
+  cell   ""
+  code   !("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0007
+  from   ladder:mixed
+  cell   "0"
+  code   !("0")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0008
+  from   ladder:mixed
+  cell   "a"
+  code   !("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0009
+  from   ladder:mixed
+  cell   True
+  code   !(True)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0010
+  from   ladder:mixed
+  cell   False
+  code   !(False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0011
+  from   ladder:mixed
+  cell   Nil
+  code   !(Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0012
+  from   ladder:mixed
+  cell   Any
+  code   !(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0013
+  from   ladder:mixed
+  cell   ()
+  code   !(())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0014
+  from   ladder:mixed
+  cell   (1,)
+  code   !((1,))
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0015
+  from   ladder:mixed
+  cell   {}
+  code   !({})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True

@@ -1,0 +1,583 @@
+atom     operators/infix-or
+source   generated
+gen      gen/ladder.raku
+form     ({A}) || ({B})
+ladder   bool × bool, both orders
+axes     True | False | 0 | 1 | "" | "0" | Nil | Any
+cols     True | False | 0 | 1 | "" | "0" | Nil | Any
+
+- id     0001
+  from   ladder:bool×bool
+  cell   True | True
+  code   (True) || (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0002
+  from   ladder:bool×bool
+  cell   True | False
+  code   (True) || (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0003
+  from   ladder:bool×bool
+  cell   True | 0
+  code   (True) || (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0004
+  from   ladder:bool×bool
+  cell   True | 1
+  code   (True) || (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0005
+  from   ladder:bool×bool
+  cell   True | ""
+  code   (True) || ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0006
+  from   ladder:bool×bool
+  cell   True | "0"
+  code   (True) || ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0007
+  from   ladder:bool×bool
+  cell   True | Nil
+  code   (True) || (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0008
+  from   ladder:bool×bool
+  cell   True | Any
+  code   (True) || (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0009
+  from   ladder:bool×bool
+  cell   False | True
+  code   (False) || (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0010
+  from   ladder:bool×bool
+  cell   False | False
+  code   (False) || (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0011
+  from   ladder:bool×bool
+  cell   False | 0
+  code   (False) || (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0012
+  from   ladder:bool×bool
+  cell   False | 1
+  code   (False) || (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0013
+  from   ladder:bool×bool
+  cell   False | ""
+  code   (False) || ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0014
+  from   ladder:bool×bool
+  cell   False | "0"
+  code   (False) || ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0015
+  from   ladder:bool×bool
+  cell   False | Nil
+  code   (False) || (Nil)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0016
+  from   ladder:bool×bool
+  cell   False | Any
+  code   (False) || (Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0017
+  from   ladder:bool×bool
+  cell   0 | True
+  code   (0) || (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0018
+  from   ladder:bool×bool
+  cell   0 | False
+  code   (0) || (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0019
+  from   ladder:bool×bool
+  cell   0 | 0
+  code   (0) || (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0020
+  from   ladder:bool×bool
+  cell   0 | 1
+  code   (0) || (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0021
+  from   ladder:bool×bool
+  cell   0 | ""
+  code   (0) || ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0022
+  from   ladder:bool×bool
+  cell   0 | "0"
+  code   (0) || ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0023
+  from   ladder:bool×bool
+  cell   0 | Nil
+  code   (0) || (Nil)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0024
+  from   ladder:bool×bool
+  cell   0 | Any
+  code   (0) || (Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0025
+  from   ladder:bool×bool
+  cell   1 | True
+  code   (1) || (True)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0026
+  from   ladder:bool×bool
+  cell   1 | False
+  code   (1) || (False)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0027
+  from   ladder:bool×bool
+  cell   1 | 0
+  code   (1) || (0)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0028
+  from   ladder:bool×bool
+  cell   1 | 1
+  code   (1) || (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0029
+  from   ladder:bool×bool
+  cell   1 | ""
+  code   (1) || ("")
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0030
+  from   ladder:bool×bool
+  cell   1 | "0"
+  code   (1) || ("0")
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0031
+  from   ladder:bool×bool
+  cell   1 | Nil
+  code   (1) || (Nil)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0032
+  from   ladder:bool×bool
+  cell   1 | Any
+  code   (1) || (Any)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0033
+  from   ladder:bool×bool
+  cell   "" | True
+  code   ("") || (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0034
+  from   ladder:bool×bool
+  cell   "" | False
+  code   ("") || (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0035
+  from   ladder:bool×bool
+  cell   "" | 0
+  code   ("") || (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0036
+  from   ladder:bool×bool
+  cell   "" | 1
+  code   ("") || (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0037
+  from   ladder:bool×bool
+  cell   "" | ""
+  code   ("") || ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0038
+  from   ladder:bool×bool
+  cell   "" | "0"
+  code   ("") || ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0039
+  from   ladder:bool×bool
+  cell   "" | Nil
+  code   ("") || (Nil)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0040
+  from   ladder:bool×bool
+  cell   "" | Any
+  code   ("") || (Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0041
+  from   ladder:bool×bool
+  cell   "0" | True
+  code   ("0") || (True)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0042
+  from   ladder:bool×bool
+  cell   "0" | False
+  code   ("0") || (False)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0043
+  from   ladder:bool×bool
+  cell   "0" | 0
+  code   ("0") || (0)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0044
+  from   ladder:bool×bool
+  cell   "0" | 1
+  code   ("0") || (1)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0045
+  from   ladder:bool×bool
+  cell   "0" | ""
+  code   ("0") || ("")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0046
+  from   ladder:bool×bool
+  cell   "0" | "0"
+  code   ("0") || ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0047
+  from   ladder:bool×bool
+  cell   "0" | Nil
+  code   ("0") || (Nil)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0048
+  from   ladder:bool×bool
+  cell   "0" | Any
+  code   ("0") || (Any)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0049
+  from   ladder:bool×bool
+  cell   Nil | True
+  code   (Nil) || (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0050
+  from   ladder:bool×bool
+  cell   Nil | False
+  code   (Nil) || (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0051
+  from   ladder:bool×bool
+  cell   Nil | 0
+  code   (Nil) || (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0052
+  from   ladder:bool×bool
+  cell   Nil | 1
+  code   (Nil) || (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0053
+  from   ladder:bool×bool
+  cell   Nil | ""
+  code   (Nil) || ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0054
+  from   ladder:bool×bool
+  cell   Nil | "0"
+  code   (Nil) || ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0055
+  from   ladder:bool×bool
+  cell   Nil | Nil
+  code   (Nil) || (Nil)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0056
+  from   ladder:bool×bool
+  cell   Nil | Any
+  code   (Nil) || (Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0057
+  from   ladder:bool×bool
+  cell   Any | True
+  code   (Any) || (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0058
+  from   ladder:bool×bool
+  cell   Any | False
+  code   (Any) || (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0059
+  from   ladder:bool×bool
+  cell   Any | 0
+  code   (Any) || (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0060
+  from   ladder:bool×bool
+  cell   Any | 1
+  code   (Any) || (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0061
+  from   ladder:bool×bool
+  cell   Any | ""
+  code   (Any) || ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0062
+  from   ladder:bool×bool
+  cell   Any | "0"
+  code   (Any) || ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0063
+  from   ladder:bool×bool
+  cell   Any | Nil
+  code   (Any) || (Nil)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0064
+  from   ladder:bool×bool
+  cell   Any | Any
+  code   (Any) || (Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any

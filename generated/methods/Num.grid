@@ -1,0 +1,138 @@
+atom     methods/Num
+source   generated
+gen      gen/ladder.raku
+form     ({A}).Num
+ladder   mixed
+
+- id     0001
+  from   ladder:mixed
+  cell   0
+  code   (0).Num
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0002
+  from   ladder:mixed
+  cell   1
+  code   (1).Num
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0003
+  from   ladder:mixed
+  cell   -1
+  code   (-1).Num
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-3.14.0 → -1e0
+
+- id     0004
+  from   ladder:mixed
+  cell   0e0
+  code   (0e0).Num
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0005
+  from   ladder:mixed
+  cell   NaN
+  code   (NaN).Num
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0006
+  from   ladder:mixed
+  cell   ""
+  code   ("").Num
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0007
+  from   ladder:mixed
+  cell   "0"
+  code   ("0").Num
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0008
+  from   ladder:mixed
+  cell   "a"
+  code   ("a").Num
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ${:exception(X::Str::Numeric), :message("Cannot convert string to number: base-10 number must begin with valid digits or '.' in 'a'")}
+
+- id     0009
+  from   ladder:mixed
+  cell   True
+  code   (True).Num
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0010
+  from   ladder:mixed
+  cell   False
+  code   (False).Num
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0011
+  from   ladder:mixed
+  cell   Nil
+  code   (Nil).Num
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0012
+  from   ladder:mixed
+  cell   Any
+  code   (Any).Num
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0013
+  from   ladder:mixed
+  cell   ()
+  code   (()).Num
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0014
+  from   ladder:mixed
+  cell   (1,)
+  code   ((1,)).Num
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0015
+  from   ladder:mixed
+  cell   {}
+  code   ({}).Num
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0

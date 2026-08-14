@@ -1,0 +1,1096 @@
+atom     operators/infix-minus
+source   generated
+gen      gen/ladder.raku
+form     ({A}) - ({B})
+ladder   numeric × numeric, both orders
+axes     0 | 1 | -1 | 2**64 | 1/3 | 0e0 | -0e0 | 1e0 | Inf | -Inf | NaN
+cols     0 | 1 | -1 | 2**64 | 1/3 | 0e0 | -0e0 | 1e0 | Inf | -Inf | NaN
+
+- id     0001
+  from   ladder:numeric×numeric
+  cell   0 | 0
+  code   (0) - (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0002
+  from   ladder:numeric×numeric
+  cell   0 | 1
+  code   (0) - (1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-3.14.0 → -1
+
+- id     0003
+  from   ladder:numeric×numeric
+  cell   0 | -1
+  code   (0) - (-1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0004
+  from   ladder:numeric×numeric
+  cell   0 | 2**64
+  code   (0) - (2**64)
+  is     -18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → -18446744073709551616
+  oracle rakupp-3.14.0 → -18446744073709551616
+
+- id     0005
+  from   ladder:numeric×numeric
+  cell   0 | 1/3
+  code   (0) - (1/3)
+  is     <-1/3>
+  type   Rat
+  oracle rakudo-2026.07 → <-1/3>
+  oracle rakupp-3.14.0 → <-1/3>
+
+- id     0006
+  from   ladder:numeric×numeric
+  cell   0 | 0e0
+  code   (0) - (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0007
+  from   ladder:numeric×numeric
+  cell   0 | -0e0
+  code   (0) - (-0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0008
+  from   ladder:numeric×numeric
+  cell   0 | 1e0
+  code   (0) - (1e0)
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-3.14.0 → -1e0
+
+- id     0009
+  from   ladder:numeric×numeric
+  cell   0 | Inf
+  code   (0) - (Inf)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0010
+  from   ladder:numeric×numeric
+  cell   0 | -Inf
+  code   (0) - (-Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0011
+  from   ladder:numeric×numeric
+  cell   0 | NaN
+  code   (0) - (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0012
+  from   ladder:numeric×numeric
+  cell   1 | 0
+  code   (1) - (0)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0013
+  from   ladder:numeric×numeric
+  cell   1 | 1
+  code   (1) - (1)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0014
+  from   ladder:numeric×numeric
+  cell   1 | -1
+  code   (1) - (-1)
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
+
+- id     0015
+  from   ladder:numeric×numeric
+  cell   1 | 2**64
+  code   (1) - (2**64)
+  is     -18446744073709551615
+  type   Int
+  oracle rakudo-2026.07 → -18446744073709551615
+  oracle rakupp-3.14.0 → -18446744073709551615
+
+- id     0016
+  from   ladder:numeric×numeric
+  cell   1 | 1/3
+  code   (1) - (1/3)
+  is     <2/3>
+  type   Rat
+  oracle rakudo-2026.07 → <2/3>
+  oracle rakupp-3.14.0 → <2/3>
+
+- id     0017
+  from   ladder:numeric×numeric
+  cell   1 | 0e0
+  code   (1) - (0e0)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0018
+  from   ladder:numeric×numeric
+  cell   1 | -0e0
+  code   (1) - (-0e0)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0019
+  from   ladder:numeric×numeric
+  cell   1 | 1e0
+  code   (1) - (1e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0020
+  from   ladder:numeric×numeric
+  cell   1 | Inf
+  code   (1) - (Inf)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0021
+  from   ladder:numeric×numeric
+  cell   1 | -Inf
+  code   (1) - (-Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0022
+  from   ladder:numeric×numeric
+  cell   1 | NaN
+  code   (1) - (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0023
+  from   ladder:numeric×numeric
+  cell   -1 | 0
+  code   (-1) - (0)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-3.14.0 → -1
+
+- id     0024
+  from   ladder:numeric×numeric
+  cell   -1 | 1
+  code   (-1) - (1)
+  is     -2
+  type   Int
+  oracle rakudo-2026.07 → -2
+  oracle rakupp-3.14.0 → -2
+
+- id     0025
+  from   ladder:numeric×numeric
+  cell   -1 | -1
+  code   (-1) - (-1)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0026
+  from   ladder:numeric×numeric
+  cell   -1 | 2**64
+  code   (-1) - (2**64)
+  is     -18446744073709551617
+  type   Int
+  oracle rakudo-2026.07 → -18446744073709551617
+  oracle rakupp-3.14.0 → -18446744073709551617
+
+- id     0027
+  from   ladder:numeric×numeric
+  cell   -1 | 1/3
+  code   (-1) - (1/3)
+  is     <-4/3>
+  type   Rat
+  oracle rakudo-2026.07 → <-4/3>
+  oracle rakupp-3.14.0 → <-4/3>
+
+- id     0028
+  from   ladder:numeric×numeric
+  cell   -1 | 0e0
+  code   (-1) - (0e0)
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-3.14.0 → -1e0
+
+- id     0029
+  from   ladder:numeric×numeric
+  cell   -1 | -0e0
+  code   (-1) - (-0e0)
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-3.14.0 → -1e0
+
+- id     0030
+  from   ladder:numeric×numeric
+  cell   -1 | 1e0
+  code   (-1) - (1e0)
+  is     -2e0
+  type   Num
+  oracle rakudo-2026.07 → -2e0
+  oracle rakupp-3.14.0 → -2e0
+
+- id     0031
+  from   ladder:numeric×numeric
+  cell   -1 | Inf
+  code   (-1) - (Inf)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0032
+  from   ladder:numeric×numeric
+  cell   -1 | -Inf
+  code   (-1) - (-Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0033
+  from   ladder:numeric×numeric
+  cell   -1 | NaN
+  code   (-1) - (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0034
+  from   ladder:numeric×numeric
+  cell   2**64 | 0
+  code   (2**64) - (0)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-3.14.0 → 18446744073709551616
+
+- id     0035
+  from   ladder:numeric×numeric
+  cell   2**64 | 1
+  code   (2**64) - (1)
+  is     18446744073709551615
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551615
+  oracle rakupp-3.14.0 → 18446744073709551615
+
+- id     0036
+  from   ladder:numeric×numeric
+  cell   2**64 | -1
+  code   (2**64) - (-1)
+  is     18446744073709551617
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551617
+  oracle rakupp-3.14.0 → 18446744073709551617
+
+- id     0037
+  from   ladder:numeric×numeric
+  cell   2**64 | 2**64
+  code   (2**64) - (2**64)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0038
+  from   ladder:numeric×numeric
+  cell   2**64 | 1/3
+  code   (2**64) - (1/3)
+  is     <55340232221128654847/3>
+  type   Rat
+  oracle rakudo-2026.07 → <55340232221128654847/3>
+  oracle rakupp-3.14.0 → <55340232221128654847/3>
+
+- id     0039
+  from   ladder:numeric×numeric
+  cell   2**64 | 0e0
+  code   (2**64) - (0e0)
+  is     1.8446744073709552e+19
+  type   Num
+  oracle rakudo-2026.07 → 1.8446744073709552e+19
+  oracle rakupp-3.14.0 → 1.8446744073709552e+19
+
+- id     0040
+  from   ladder:numeric×numeric
+  cell   2**64 | -0e0
+  code   (2**64) - (-0e0)
+  is     1.8446744073709552e+19
+  type   Num
+  oracle rakudo-2026.07 → 1.8446744073709552e+19
+  oracle rakupp-3.14.0 → 1.8446744073709552e+19
+
+- id     0041
+  from   ladder:numeric×numeric
+  cell   2**64 | 1e0
+  code   (2**64) - (1e0)
+  is     1.8446744073709552e+19
+  type   Num
+  oracle rakudo-2026.07 → 1.8446744073709552e+19
+  oracle rakupp-3.14.0 → 1.8446744073709552e+19
+
+- id     0042
+  from   ladder:numeric×numeric
+  cell   2**64 | Inf
+  code   (2**64) - (Inf)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0043
+  from   ladder:numeric×numeric
+  cell   2**64 | -Inf
+  code   (2**64) - (-Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0044
+  from   ladder:numeric×numeric
+  cell   2**64 | NaN
+  code   (2**64) - (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0045
+  from   ladder:numeric×numeric
+  cell   1/3 | 0
+  code   (1/3) - (0)
+  is     <1/3>
+  type   Rat
+  oracle rakudo-2026.07 → <1/3>
+  oracle rakupp-3.14.0 → <1/3>
+
+- id     0046
+  from   ladder:numeric×numeric
+  cell   1/3 | 1
+  code   (1/3) - (1)
+  is     <-2/3>
+  type   Rat
+  oracle rakudo-2026.07 → <-2/3>
+  oracle rakupp-3.14.0 → <-2/3>
+
+- id     0047
+  from   ladder:numeric×numeric
+  cell   1/3 | -1
+  code   (1/3) - (-1)
+  is     <4/3>
+  type   Rat
+  oracle rakudo-2026.07 → <4/3>
+  oracle rakupp-3.14.0 → <4/3>
+
+- id     0048
+  from   ladder:numeric×numeric
+  cell   1/3 | 2**64
+  code   (1/3) - (2**64)
+  is     <-55340232221128654847/3>
+  type   Rat
+  oracle rakudo-2026.07 → <-55340232221128654847/3>
+  oracle rakupp-3.14.0 → <-55340232221128654847/3>
+
+- id     0049
+  from   ladder:numeric×numeric
+  cell   1/3 | 1/3
+  code   (1/3) - (1/3)
+  is     0.0
+  type   Rat
+  oracle rakudo-2026.07 → 0.0
+  oracle rakupp-3.14.0 → 0.0
+
+- id     0050
+  from   ladder:numeric×numeric
+  cell   1/3 | 0e0
+  code   (1/3) - (0e0)
+  is     0.3333333333333333e0
+  type   Num
+  oracle rakudo-2026.07 → 0.3333333333333333e0
+  oracle rakupp-3.14.0 → 0.3333333333333333e0
+
+- id     0051
+  from   ladder:numeric×numeric
+  cell   1/3 | -0e0
+  code   (1/3) - (-0e0)
+  is     0.3333333333333333e0
+  type   Num
+  oracle rakudo-2026.07 → 0.3333333333333333e0
+  oracle rakupp-3.14.0 → 0.3333333333333333e0
+
+- id     0052
+  from   ladder:numeric×numeric
+  cell   1/3 | 1e0
+  code   (1/3) - (1e0)
+  is     -0.6666666666666667e0
+  type   Num
+  oracle rakudo-2026.07 → -0.6666666666666667e0
+  oracle rakupp-3.14.0 → -0.6666666666666667e0
+
+- id     0053
+  from   ladder:numeric×numeric
+  cell   1/3 | Inf
+  code   (1/3) - (Inf)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0054
+  from   ladder:numeric×numeric
+  cell   1/3 | -Inf
+  code   (1/3) - (-Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0055
+  from   ladder:numeric×numeric
+  cell   1/3 | NaN
+  code   (1/3) - (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0056
+  from   ladder:numeric×numeric
+  cell   0e0 | 0
+  code   (0e0) - (0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0057
+  from   ladder:numeric×numeric
+  cell   0e0 | 1
+  code   (0e0) - (1)
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-3.14.0 → -1e0
+
+- id     0058
+  from   ladder:numeric×numeric
+  cell   0e0 | -1
+  code   (0e0) - (-1)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0059
+  from   ladder:numeric×numeric
+  cell   0e0 | 2**64
+  code   (0e0) - (2**64)
+  is     -1.8446744073709552e+19
+  type   Num
+  oracle rakudo-2026.07 → -1.8446744073709552e+19
+  oracle rakupp-3.14.0 → -1.8446744073709552e+19
+
+- id     0060
+  from   ladder:numeric×numeric
+  cell   0e0 | 1/3
+  code   (0e0) - (1/3)
+  is     -0.3333333333333333e0
+  type   Num
+  oracle rakudo-2026.07 → -0.3333333333333333e0
+  oracle rakupp-3.14.0 → -0.3333333333333333e0
+
+- id     0061
+  from   ladder:numeric×numeric
+  cell   0e0 | 0e0
+  code   (0e0) - (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0062
+  from   ladder:numeric×numeric
+  cell   0e0 | -0e0
+  code   (0e0) - (-0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0063
+  from   ladder:numeric×numeric
+  cell   0e0 | 1e0
+  code   (0e0) - (1e0)
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-3.14.0 → -1e0
+
+- id     0064
+  from   ladder:numeric×numeric
+  cell   0e0 | Inf
+  code   (0e0) - (Inf)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0065
+  from   ladder:numeric×numeric
+  cell   0e0 | -Inf
+  code   (0e0) - (-Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0066
+  from   ladder:numeric×numeric
+  cell   0e0 | NaN
+  code   (0e0) - (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0067
+  from   ladder:numeric×numeric
+  cell   -0e0 | 0
+  code   (-0e0) - (0)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-3.14.0 → -0e0
+
+- id     0068
+  from   ladder:numeric×numeric
+  cell   -0e0 | 1
+  code   (-0e0) - (1)
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-3.14.0 → -1e0
+
+- id     0069
+  from   ladder:numeric×numeric
+  cell   -0e0 | -1
+  code   (-0e0) - (-1)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0070
+  from   ladder:numeric×numeric
+  cell   -0e0 | 2**64
+  code   (-0e0) - (2**64)
+  is     -1.8446744073709552e+19
+  type   Num
+  oracle rakudo-2026.07 → -1.8446744073709552e+19
+  oracle rakupp-3.14.0 → -1.8446744073709552e+19
+
+- id     0071
+  from   ladder:numeric×numeric
+  cell   -0e0 | 1/3
+  code   (-0e0) - (1/3)
+  is     -0.3333333333333333e0
+  type   Num
+  oracle rakudo-2026.07 → -0.3333333333333333e0
+  oracle rakupp-3.14.0 → -0.3333333333333333e0
+
+- id     0072
+  from   ladder:numeric×numeric
+  cell   -0e0 | 0e0
+  code   (-0e0) - (0e0)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-3.14.0 → -0e0
+
+- id     0073
+  from   ladder:numeric×numeric
+  cell   -0e0 | -0e0
+  code   (-0e0) - (-0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0074
+  from   ladder:numeric×numeric
+  cell   -0e0 | 1e0
+  code   (-0e0) - (1e0)
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-3.14.0 → -1e0
+
+- id     0075
+  from   ladder:numeric×numeric
+  cell   -0e0 | Inf
+  code   (-0e0) - (Inf)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0076
+  from   ladder:numeric×numeric
+  cell   -0e0 | -Inf
+  code   (-0e0) - (-Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0077
+  from   ladder:numeric×numeric
+  cell   -0e0 | NaN
+  code   (-0e0) - (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0078
+  from   ladder:numeric×numeric
+  cell   1e0 | 0
+  code   (1e0) - (0)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0079
+  from   ladder:numeric×numeric
+  cell   1e0 | 1
+  code   (1e0) - (1)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0080
+  from   ladder:numeric×numeric
+  cell   1e0 | -1
+  code   (1e0) - (-1)
+  is     2e0
+  type   Num
+  oracle rakudo-2026.07 → 2e0
+  oracle rakupp-3.14.0 → 2e0
+
+- id     0081
+  from   ladder:numeric×numeric
+  cell   1e0 | 2**64
+  code   (1e0) - (2**64)
+  is     -1.8446744073709552e+19
+  type   Num
+  oracle rakudo-2026.07 → -1.8446744073709552e+19
+  oracle rakupp-3.14.0 → -1.8446744073709552e+19
+
+- id     0082
+  from   ladder:numeric×numeric
+  cell   1e0 | 1/3
+  code   (1e0) - (1/3)
+  is     0.6666666666666667e0
+  type   Num
+  oracle rakudo-2026.07 → 0.6666666666666667e0
+  oracle rakupp-3.14.0 → 0.6666666666666667e0
+
+- id     0083
+  from   ladder:numeric×numeric
+  cell   1e0 | 0e0
+  code   (1e0) - (0e0)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0084
+  from   ladder:numeric×numeric
+  cell   1e0 | -0e0
+  code   (1e0) - (-0e0)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0085
+  from   ladder:numeric×numeric
+  cell   1e0 | 1e0
+  code   (1e0) - (1e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0086
+  from   ladder:numeric×numeric
+  cell   1e0 | Inf
+  code   (1e0) - (Inf)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0087
+  from   ladder:numeric×numeric
+  cell   1e0 | -Inf
+  code   (1e0) - (-Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0088
+  from   ladder:numeric×numeric
+  cell   1e0 | NaN
+  code   (1e0) - (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0089
+  from   ladder:numeric×numeric
+  cell   Inf | 0
+  code   (Inf) - (0)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0090
+  from   ladder:numeric×numeric
+  cell   Inf | 1
+  code   (Inf) - (1)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0091
+  from   ladder:numeric×numeric
+  cell   Inf | -1
+  code   (Inf) - (-1)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0092
+  from   ladder:numeric×numeric
+  cell   Inf | 2**64
+  code   (Inf) - (2**64)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0093
+  from   ladder:numeric×numeric
+  cell   Inf | 1/3
+  code   (Inf) - (1/3)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0094
+  from   ladder:numeric×numeric
+  cell   Inf | 0e0
+  code   (Inf) - (0e0)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0095
+  from   ladder:numeric×numeric
+  cell   Inf | -0e0
+  code   (Inf) - (-0e0)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0096
+  from   ladder:numeric×numeric
+  cell   Inf | 1e0
+  code   (Inf) - (1e0)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0097
+  from   ladder:numeric×numeric
+  cell   Inf | Inf
+  code   (Inf) - (Inf)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0098
+  from   ladder:numeric×numeric
+  cell   Inf | -Inf
+  code   (Inf) - (-Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0099
+  from   ladder:numeric×numeric
+  cell   Inf | NaN
+  code   (Inf) - (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0100
+  from   ladder:numeric×numeric
+  cell   -Inf | 0
+  code   (-Inf) - (0)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0101
+  from   ladder:numeric×numeric
+  cell   -Inf | 1
+  code   (-Inf) - (1)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0102
+  from   ladder:numeric×numeric
+  cell   -Inf | -1
+  code   (-Inf) - (-1)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0103
+  from   ladder:numeric×numeric
+  cell   -Inf | 2**64
+  code   (-Inf) - (2**64)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0104
+  from   ladder:numeric×numeric
+  cell   -Inf | 1/3
+  code   (-Inf) - (1/3)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0105
+  from   ladder:numeric×numeric
+  cell   -Inf | 0e0
+  code   (-Inf) - (0e0)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0106
+  from   ladder:numeric×numeric
+  cell   -Inf | -0e0
+  code   (-Inf) - (-0e0)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0107
+  from   ladder:numeric×numeric
+  cell   -Inf | 1e0
+  code   (-Inf) - (1e0)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0108
+  from   ladder:numeric×numeric
+  cell   -Inf | Inf
+  code   (-Inf) - (Inf)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0109
+  from   ladder:numeric×numeric
+  cell   -Inf | -Inf
+  code   (-Inf) - (-Inf)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0110
+  from   ladder:numeric×numeric
+  cell   -Inf | NaN
+  code   (-Inf) - (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0111
+  from   ladder:numeric×numeric
+  cell   NaN | 0
+  code   (NaN) - (0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0112
+  from   ladder:numeric×numeric
+  cell   NaN | 1
+  code   (NaN) - (1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0113
+  from   ladder:numeric×numeric
+  cell   NaN | -1
+  code   (NaN) - (-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0114
+  from   ladder:numeric×numeric
+  cell   NaN | 2**64
+  code   (NaN) - (2**64)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0115
+  from   ladder:numeric×numeric
+  cell   NaN | 1/3
+  code   (NaN) - (1/3)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0116
+  from   ladder:numeric×numeric
+  cell   NaN | 0e0
+  code   (NaN) - (0e0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0117
+  from   ladder:numeric×numeric
+  cell   NaN | -0e0
+  code   (NaN) - (-0e0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0118
+  from   ladder:numeric×numeric
+  cell   NaN | 1e0
+  code   (NaN) - (1e0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0119
+  from   ladder:numeric×numeric
+  cell   NaN | Inf
+  code   (NaN) - (Inf)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0120
+  from   ladder:numeric×numeric
+  cell   NaN | -Inf
+  code   (NaN) - (-Inf)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0121
+  from   ladder:numeric×numeric
+  cell   NaN | NaN
+  code   (NaN) - (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN

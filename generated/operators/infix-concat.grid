@@ -1,0 +1,583 @@
+atom     operators/infix-concat
+source   generated
+gen      gen/ladder.raku
+form     ({A}) ~ ({B})
+ladder   string × string, both orders
+axes     "" | " " | "0" | "a" | "A" | "abc" | "e\c[COMBINING ACUTE ACCENT]" | "\0"
+cols     "" | " " | "0" | "a" | "A" | "abc" | "e\c[COMBINING ACUTE ACCENT]" | "\0"
+
+- id     0001
+  from   ladder:string×string
+  cell   "" | ""
+  code   ("") ~ ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0002
+  from   ladder:string×string
+  cell   "" | " "
+  code   ("") ~ (" ")
+  is     " "
+  type   Str
+  oracle rakudo-2026.07 → " "
+  oracle rakupp-3.14.0 → " "
+
+- id     0003
+  from   ladder:string×string
+  cell   "" | "0"
+  code   ("") ~ ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0004
+  from   ladder:string×string
+  cell   "" | "a"
+  code   ("") ~ ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0005
+  from   ladder:string×string
+  cell   "" | "A"
+  code   ("") ~ ("A")
+  is     "A"
+  type   Str
+  oracle rakudo-2026.07 → "A"
+  oracle rakupp-3.14.0 → "A"
+
+- id     0006
+  from   ladder:string×string
+  cell   "" | "abc"
+  code   ("") ~ ("abc")
+  is     "abc"
+  type   Str
+  oracle rakudo-2026.07 → "abc"
+  oracle rakupp-3.14.0 → "abc"
+
+- id     0007
+  from   ladder:string×string
+  cell   "" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ("") ~ ("e\c[COMBINING ACUTE ACCENT]")
+  is     "é"
+  type   Str
+  oracle rakudo-2026.07 → "é"
+  oracle rakupp-3.14.0 → "é"
+
+- id     0008
+  from   ladder:string×string
+  cell   "" | "\0"
+  code   ("") ~ ("\0")
+  is     "\0"
+  type   Str
+  oracle rakudo-2026.07 → "\0"
+  oracle rakupp-3.14.0 → "\0"
+
+- id     0009
+  from   ladder:string×string
+  cell   " " | ""
+  code   (" ") ~ ("")
+  is     " "
+  type   Str
+  oracle rakudo-2026.07 → " "
+  oracle rakupp-3.14.0 → " "
+
+- id     0010
+  from   ladder:string×string
+  cell   " " | " "
+  code   (" ") ~ (" ")
+  is     "  "
+  type   Str
+  oracle rakudo-2026.07 → "  "
+  oracle rakupp-3.14.0 → "  "
+
+- id     0011
+  from   ladder:string×string
+  cell   " " | "0"
+  code   (" ") ~ ("0")
+  is     " 0"
+  type   Str
+  oracle rakudo-2026.07 → " 0"
+  oracle rakupp-3.14.0 → " 0"
+
+- id     0012
+  from   ladder:string×string
+  cell   " " | "a"
+  code   (" ") ~ ("a")
+  is     " a"
+  type   Str
+  oracle rakudo-2026.07 → " a"
+  oracle rakupp-3.14.0 → " a"
+
+- id     0013
+  from   ladder:string×string
+  cell   " " | "A"
+  code   (" ") ~ ("A")
+  is     " A"
+  type   Str
+  oracle rakudo-2026.07 → " A"
+  oracle rakupp-3.14.0 → " A"
+
+- id     0014
+  from   ladder:string×string
+  cell   " " | "abc"
+  code   (" ") ~ ("abc")
+  is     " abc"
+  type   Str
+  oracle rakudo-2026.07 → " abc"
+  oracle rakupp-3.14.0 → " abc"
+
+- id     0015
+  from   ladder:string×string
+  cell   " " | "e\c[COMBINING ACUTE ACCENT]"
+  code   (" ") ~ ("e\c[COMBINING ACUTE ACCENT]")
+  is     " é"
+  type   Str
+  oracle rakudo-2026.07 → " é"
+  oracle rakupp-3.14.0 → " é"
+
+- id     0016
+  from   ladder:string×string
+  cell   " " | "\0"
+  code   (" ") ~ ("\0")
+  is     " \0"
+  type   Str
+  oracle rakudo-2026.07 → " \0"
+  oracle rakupp-3.14.0 → " \0"
+
+- id     0017
+  from   ladder:string×string
+  cell   "0" | ""
+  code   ("0") ~ ("")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0018
+  from   ladder:string×string
+  cell   "0" | " "
+  code   ("0") ~ (" ")
+  is     "0 "
+  type   Str
+  oracle rakudo-2026.07 → "0 "
+  oracle rakupp-3.14.0 → "0 "
+
+- id     0019
+  from   ladder:string×string
+  cell   "0" | "0"
+  code   ("0") ~ ("0")
+  is     "00"
+  type   Str
+  oracle rakudo-2026.07 → "00"
+  oracle rakupp-3.14.0 → "00"
+
+- id     0020
+  from   ladder:string×string
+  cell   "0" | "a"
+  code   ("0") ~ ("a")
+  is     "0a"
+  type   Str
+  oracle rakudo-2026.07 → "0a"
+  oracle rakupp-3.14.0 → "0a"
+
+- id     0021
+  from   ladder:string×string
+  cell   "0" | "A"
+  code   ("0") ~ ("A")
+  is     "0A"
+  type   Str
+  oracle rakudo-2026.07 → "0A"
+  oracle rakupp-3.14.0 → "0A"
+
+- id     0022
+  from   ladder:string×string
+  cell   "0" | "abc"
+  code   ("0") ~ ("abc")
+  is     "0abc"
+  type   Str
+  oracle rakudo-2026.07 → "0abc"
+  oracle rakupp-3.14.0 → "0abc"
+
+- id     0023
+  from   ladder:string×string
+  cell   "0" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ("0") ~ ("e\c[COMBINING ACUTE ACCENT]")
+  is     "0é"
+  type   Str
+  oracle rakudo-2026.07 → "0é"
+  oracle rakupp-3.14.0 → "0é"
+
+- id     0024
+  from   ladder:string×string
+  cell   "0" | "\0"
+  code   ("0") ~ ("\0")
+  is     "0\0"
+  type   Str
+  oracle rakudo-2026.07 → "0\0"
+  oracle rakupp-3.14.0 → "0\0"
+
+- id     0025
+  from   ladder:string×string
+  cell   "a" | ""
+  code   ("a") ~ ("")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0026
+  from   ladder:string×string
+  cell   "a" | " "
+  code   ("a") ~ (" ")
+  is     "a "
+  type   Str
+  oracle rakudo-2026.07 → "a "
+  oracle rakupp-3.14.0 → "a "
+
+- id     0027
+  from   ladder:string×string
+  cell   "a" | "0"
+  code   ("a") ~ ("0")
+  is     "a0"
+  type   Str
+  oracle rakudo-2026.07 → "a0"
+  oracle rakupp-3.14.0 → "a0"
+
+- id     0028
+  from   ladder:string×string
+  cell   "a" | "a"
+  code   ("a") ~ ("a")
+  is     "aa"
+  type   Str
+  oracle rakudo-2026.07 → "aa"
+  oracle rakupp-3.14.0 → "aa"
+
+- id     0029
+  from   ladder:string×string
+  cell   "a" | "A"
+  code   ("a") ~ ("A")
+  is     "aA"
+  type   Str
+  oracle rakudo-2026.07 → "aA"
+  oracle rakupp-3.14.0 → "aA"
+
+- id     0030
+  from   ladder:string×string
+  cell   "a" | "abc"
+  code   ("a") ~ ("abc")
+  is     "aabc"
+  type   Str
+  oracle rakudo-2026.07 → "aabc"
+  oracle rakupp-3.14.0 → "aabc"
+
+- id     0031
+  from   ladder:string×string
+  cell   "a" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ("a") ~ ("e\c[COMBINING ACUTE ACCENT]")
+  is     "aé"
+  type   Str
+  oracle rakudo-2026.07 → "aé"
+  oracle rakupp-3.14.0 → "aé"
+
+- id     0032
+  from   ladder:string×string
+  cell   "a" | "\0"
+  code   ("a") ~ ("\0")
+  is     "a\0"
+  type   Str
+  oracle rakudo-2026.07 → "a\0"
+  oracle rakupp-3.14.0 → "a\0"
+
+- id     0033
+  from   ladder:string×string
+  cell   "A" | ""
+  code   ("A") ~ ("")
+  is     "A"
+  type   Str
+  oracle rakudo-2026.07 → "A"
+  oracle rakupp-3.14.0 → "A"
+
+- id     0034
+  from   ladder:string×string
+  cell   "A" | " "
+  code   ("A") ~ (" ")
+  is     "A "
+  type   Str
+  oracle rakudo-2026.07 → "A "
+  oracle rakupp-3.14.0 → "A "
+
+- id     0035
+  from   ladder:string×string
+  cell   "A" | "0"
+  code   ("A") ~ ("0")
+  is     "A0"
+  type   Str
+  oracle rakudo-2026.07 → "A0"
+  oracle rakupp-3.14.0 → "A0"
+
+- id     0036
+  from   ladder:string×string
+  cell   "A" | "a"
+  code   ("A") ~ ("a")
+  is     "Aa"
+  type   Str
+  oracle rakudo-2026.07 → "Aa"
+  oracle rakupp-3.14.0 → "Aa"
+
+- id     0037
+  from   ladder:string×string
+  cell   "A" | "A"
+  code   ("A") ~ ("A")
+  is     "AA"
+  type   Str
+  oracle rakudo-2026.07 → "AA"
+  oracle rakupp-3.14.0 → "AA"
+
+- id     0038
+  from   ladder:string×string
+  cell   "A" | "abc"
+  code   ("A") ~ ("abc")
+  is     "Aabc"
+  type   Str
+  oracle rakudo-2026.07 → "Aabc"
+  oracle rakupp-3.14.0 → "Aabc"
+
+- id     0039
+  from   ladder:string×string
+  cell   "A" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ("A") ~ ("e\c[COMBINING ACUTE ACCENT]")
+  is     "Aé"
+  type   Str
+  oracle rakudo-2026.07 → "Aé"
+  oracle rakupp-3.14.0 → "Aé"
+
+- id     0040
+  from   ladder:string×string
+  cell   "A" | "\0"
+  code   ("A") ~ ("\0")
+  is     "A\0"
+  type   Str
+  oracle rakudo-2026.07 → "A\0"
+  oracle rakupp-3.14.0 → "A\0"
+
+- id     0041
+  from   ladder:string×string
+  cell   "abc" | ""
+  code   ("abc") ~ ("")
+  is     "abc"
+  type   Str
+  oracle rakudo-2026.07 → "abc"
+  oracle rakupp-3.14.0 → "abc"
+
+- id     0042
+  from   ladder:string×string
+  cell   "abc" | " "
+  code   ("abc") ~ (" ")
+  is     "abc "
+  type   Str
+  oracle rakudo-2026.07 → "abc "
+  oracle rakupp-3.14.0 → "abc "
+
+- id     0043
+  from   ladder:string×string
+  cell   "abc" | "0"
+  code   ("abc") ~ ("0")
+  is     "abc0"
+  type   Str
+  oracle rakudo-2026.07 → "abc0"
+  oracle rakupp-3.14.0 → "abc0"
+
+- id     0044
+  from   ladder:string×string
+  cell   "abc" | "a"
+  code   ("abc") ~ ("a")
+  is     "abca"
+  type   Str
+  oracle rakudo-2026.07 → "abca"
+  oracle rakupp-3.14.0 → "abca"
+
+- id     0045
+  from   ladder:string×string
+  cell   "abc" | "A"
+  code   ("abc") ~ ("A")
+  is     "abcA"
+  type   Str
+  oracle rakudo-2026.07 → "abcA"
+  oracle rakupp-3.14.0 → "abcA"
+
+- id     0046
+  from   ladder:string×string
+  cell   "abc" | "abc"
+  code   ("abc") ~ ("abc")
+  is     "abcabc"
+  type   Str
+  oracle rakudo-2026.07 → "abcabc"
+  oracle rakupp-3.14.0 → "abcabc"
+
+- id     0047
+  from   ladder:string×string
+  cell   "abc" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ("abc") ~ ("e\c[COMBINING ACUTE ACCENT]")
+  is     "abcé"
+  type   Str
+  oracle rakudo-2026.07 → "abcé"
+  oracle rakupp-3.14.0 → "abcé"
+
+- id     0048
+  from   ladder:string×string
+  cell   "abc" | "\0"
+  code   ("abc") ~ ("\0")
+  is     "abc\0"
+  type   Str
+  oracle rakudo-2026.07 → "abc\0"
+  oracle rakupp-3.14.0 → "abc\0"
+
+- id     0049
+  from   ladder:string×string
+  cell   "e\c[COMBINING ACUTE ACCENT]" | ""
+  code   ("e\c[COMBINING ACUTE ACCENT]") ~ ("")
+  is     "é"
+  type   Str
+  oracle rakudo-2026.07 → "é"
+  oracle rakupp-3.14.0 → "é"
+
+- id     0050
+  from   ladder:string×string
+  cell   "e\c[COMBINING ACUTE ACCENT]" | " "
+  code   ("e\c[COMBINING ACUTE ACCENT]") ~ (" ")
+  is     "é "
+  type   Str
+  oracle rakudo-2026.07 → "é "
+  oracle rakupp-3.14.0 → "é "
+
+- id     0051
+  from   ladder:string×string
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "0"
+  code   ("e\c[COMBINING ACUTE ACCENT]") ~ ("0")
+  is     "é0"
+  type   Str
+  oracle rakudo-2026.07 → "é0"
+  oracle rakupp-3.14.0 → "é0"
+
+- id     0052
+  from   ladder:string×string
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "a"
+  code   ("e\c[COMBINING ACUTE ACCENT]") ~ ("a")
+  is     "éa"
+  type   Str
+  oracle rakudo-2026.07 → "éa"
+  oracle rakupp-3.14.0 → "éa"
+
+- id     0053
+  from   ladder:string×string
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "A"
+  code   ("e\c[COMBINING ACUTE ACCENT]") ~ ("A")
+  is     "éA"
+  type   Str
+  oracle rakudo-2026.07 → "éA"
+  oracle rakupp-3.14.0 → "éA"
+
+- id     0054
+  from   ladder:string×string
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "abc"
+  code   ("e\c[COMBINING ACUTE ACCENT]") ~ ("abc")
+  is     "éabc"
+  type   Str
+  oracle rakudo-2026.07 → "éabc"
+  oracle rakupp-3.14.0 → "éabc"
+
+- id     0055
+  from   ladder:string×string
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ("e\c[COMBINING ACUTE ACCENT]") ~ ("e\c[COMBINING ACUTE ACCENT]")
+  is     "éé"
+  type   Str
+  oracle rakudo-2026.07 → "éé"
+  oracle rakupp-3.14.0 → "éé"
+
+- id     0056
+  from   ladder:string×string
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "\0"
+  code   ("e\c[COMBINING ACUTE ACCENT]") ~ ("\0")
+  is     "é\0"
+  type   Str
+  oracle rakudo-2026.07 → "é\0"
+  oracle rakupp-3.14.0 → "é\0"
+
+- id     0057
+  from   ladder:string×string
+  cell   "\0" | ""
+  code   ("\0") ~ ("")
+  is     "\0"
+  type   Str
+  oracle rakudo-2026.07 → "\0"
+  oracle rakupp-3.14.0 → "\0"
+
+- id     0058
+  from   ladder:string×string
+  cell   "\0" | " "
+  code   ("\0") ~ (" ")
+  is     "\0 "
+  type   Str
+  oracle rakudo-2026.07 → "\0 "
+  oracle rakupp-3.14.0 → "\0 "
+
+- id     0059
+  from   ladder:string×string
+  cell   "\0" | "0"
+  code   ("\0") ~ ("0")
+  is     "\00"
+  type   Str
+  oracle rakudo-2026.07 → "\00"
+  oracle rakupp-3.14.0 → "\00"
+
+- id     0060
+  from   ladder:string×string
+  cell   "\0" | "a"
+  code   ("\0") ~ ("a")
+  is     "\0a"
+  type   Str
+  oracle rakudo-2026.07 → "\0a"
+  oracle rakupp-3.14.0 → "\0a"
+
+- id     0061
+  from   ladder:string×string
+  cell   "\0" | "A"
+  code   ("\0") ~ ("A")
+  is     "\0A"
+  type   Str
+  oracle rakudo-2026.07 → "\0A"
+  oracle rakupp-3.14.0 → "\0A"
+
+- id     0062
+  from   ladder:string×string
+  cell   "\0" | "abc"
+  code   ("\0") ~ ("abc")
+  is     "\0abc"
+  type   Str
+  oracle rakudo-2026.07 → "\0abc"
+  oracle rakupp-3.14.0 → "\0abc"
+
+- id     0063
+  from   ladder:string×string
+  cell   "\0" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ("\0") ~ ("e\c[COMBINING ACUTE ACCENT]")
+  is     "\0é"
+  type   Str
+  oracle rakudo-2026.07 → "\0é"
+  oracle rakupp-3.14.0 → "\0é"
+
+- id     0064
+  from   ladder:string×string
+  cell   "\0" | "\0"
+  code   ("\0") ~ ("\0")
+  is     "\0\0"
+  type   Str
+  oracle rakudo-2026.07 → "\0\0"
+  oracle rakupp-3.14.0 → "\0\0"

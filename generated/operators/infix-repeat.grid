@@ -1,0 +1,503 @@
+atom     operators/infix-repeat
+source   generated
+gen      gen/ladder.raku
+form     ({A}) x ({B})
+ladder   string × count, both orders
+axes     "" | " " | "0" | "a" | "A" | "abc" | "e\c[COMBINING ACUTE ACCENT]" | "\0"
+cols     0 | 1 | 2 | -1 | 1/2 | 0e0 | NaN
+
+- id     0001
+  from   ladder:string×count
+  cell   "" | 0
+  code   ("") x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0002
+  from   ladder:string×count
+  cell   "" | 1
+  code   ("") x (1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0003
+  from   ladder:string×count
+  cell   "" | 2
+  code   ("") x (2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0004
+  from   ladder:string×count
+  cell   "" | -1
+  code   ("") x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0005
+  from   ladder:string×count
+  cell   "" | 1/2
+  code   ("") x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0006
+  from   ladder:string×count
+  cell   "" | 0e0
+  code   ("") x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0007
+  from   ladder:string×count
+  cell   "" | NaN
+  code   ("") x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""
+
+- id     0008
+  from   ladder:string×count
+  cell   " " | 0
+  code   (" ") x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0009
+  from   ladder:string×count
+  cell   " " | 1
+  code   (" ") x (1)
+  is     " "
+  type   Str
+  oracle rakudo-2026.07 → " "
+  oracle rakupp-3.14.0 → " "
+
+- id     0010
+  from   ladder:string×count
+  cell   " " | 2
+  code   (" ") x (2)
+  is     "  "
+  type   Str
+  oracle rakudo-2026.07 → "  "
+  oracle rakupp-3.14.0 → "  "
+
+- id     0011
+  from   ladder:string×count
+  cell   " " | -1
+  code   (" ") x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0012
+  from   ladder:string×count
+  cell   " " | 1/2
+  code   (" ") x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0013
+  from   ladder:string×count
+  cell   " " | 0e0
+  code   (" ") x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0014
+  from   ladder:string×count
+  cell   " " | NaN
+  code   (" ") x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""
+
+- id     0015
+  from   ladder:string×count
+  cell   "0" | 0
+  code   ("0") x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0016
+  from   ladder:string×count
+  cell   "0" | 1
+  code   ("0") x (1)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0017
+  from   ladder:string×count
+  cell   "0" | 2
+  code   ("0") x (2)
+  is     "00"
+  type   Str
+  oracle rakudo-2026.07 → "00"
+  oracle rakupp-3.14.0 → "00"
+
+- id     0018
+  from   ladder:string×count
+  cell   "0" | -1
+  code   ("0") x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0019
+  from   ladder:string×count
+  cell   "0" | 1/2
+  code   ("0") x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0020
+  from   ladder:string×count
+  cell   "0" | 0e0
+  code   ("0") x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0021
+  from   ladder:string×count
+  cell   "0" | NaN
+  code   ("0") x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""
+
+- id     0022
+  from   ladder:string×count
+  cell   "a" | 0
+  code   ("a") x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0023
+  from   ladder:string×count
+  cell   "a" | 1
+  code   ("a") x (1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0024
+  from   ladder:string×count
+  cell   "a" | 2
+  code   ("a") x (2)
+  is     "aa"
+  type   Str
+  oracle rakudo-2026.07 → "aa"
+  oracle rakupp-3.14.0 → "aa"
+
+- id     0025
+  from   ladder:string×count
+  cell   "a" | -1
+  code   ("a") x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0026
+  from   ladder:string×count
+  cell   "a" | 1/2
+  code   ("a") x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0027
+  from   ladder:string×count
+  cell   "a" | 0e0
+  code   ("a") x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0028
+  from   ladder:string×count
+  cell   "a" | NaN
+  code   ("a") x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""
+
+- id     0029
+  from   ladder:string×count
+  cell   "A" | 0
+  code   ("A") x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0030
+  from   ladder:string×count
+  cell   "A" | 1
+  code   ("A") x (1)
+  is     "A"
+  type   Str
+  oracle rakudo-2026.07 → "A"
+  oracle rakupp-3.14.0 → "A"
+
+- id     0031
+  from   ladder:string×count
+  cell   "A" | 2
+  code   ("A") x (2)
+  is     "AA"
+  type   Str
+  oracle rakudo-2026.07 → "AA"
+  oracle rakupp-3.14.0 → "AA"
+
+- id     0032
+  from   ladder:string×count
+  cell   "A" | -1
+  code   ("A") x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0033
+  from   ladder:string×count
+  cell   "A" | 1/2
+  code   ("A") x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0034
+  from   ladder:string×count
+  cell   "A" | 0e0
+  code   ("A") x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0035
+  from   ladder:string×count
+  cell   "A" | NaN
+  code   ("A") x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""
+
+- id     0036
+  from   ladder:string×count
+  cell   "abc" | 0
+  code   ("abc") x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0037
+  from   ladder:string×count
+  cell   "abc" | 1
+  code   ("abc") x (1)
+  is     "abc"
+  type   Str
+  oracle rakudo-2026.07 → "abc"
+  oracle rakupp-3.14.0 → "abc"
+
+- id     0038
+  from   ladder:string×count
+  cell   "abc" | 2
+  code   ("abc") x (2)
+  is     "abcabc"
+  type   Str
+  oracle rakudo-2026.07 → "abcabc"
+  oracle rakupp-3.14.0 → "abcabc"
+
+- id     0039
+  from   ladder:string×count
+  cell   "abc" | -1
+  code   ("abc") x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0040
+  from   ladder:string×count
+  cell   "abc" | 1/2
+  code   ("abc") x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0041
+  from   ladder:string×count
+  cell   "abc" | 0e0
+  code   ("abc") x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0042
+  from   ladder:string×count
+  cell   "abc" | NaN
+  code   ("abc") x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""
+
+- id     0043
+  from   ladder:string×count
+  cell   "e\c[COMBINING ACUTE ACCENT]" | 0
+  code   ("e\c[COMBINING ACUTE ACCENT]") x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0044
+  from   ladder:string×count
+  cell   "e\c[COMBINING ACUTE ACCENT]" | 1
+  code   ("e\c[COMBINING ACUTE ACCENT]") x (1)
+  is     "é"
+  type   Str
+  oracle rakudo-2026.07 → "é"
+  oracle rakupp-3.14.0 → "é"
+
+- id     0045
+  from   ladder:string×count
+  cell   "e\c[COMBINING ACUTE ACCENT]" | 2
+  code   ("e\c[COMBINING ACUTE ACCENT]") x (2)
+  is     "éé"
+  type   Str
+  oracle rakudo-2026.07 → "éé"
+  oracle rakupp-3.14.0 → "éé"
+
+- id     0046
+  from   ladder:string×count
+  cell   "e\c[COMBINING ACUTE ACCENT]" | -1
+  code   ("e\c[COMBINING ACUTE ACCENT]") x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0047
+  from   ladder:string×count
+  cell   "e\c[COMBINING ACUTE ACCENT]" | 1/2
+  code   ("e\c[COMBINING ACUTE ACCENT]") x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0048
+  from   ladder:string×count
+  cell   "e\c[COMBINING ACUTE ACCENT]" | 0e0
+  code   ("e\c[COMBINING ACUTE ACCENT]") x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0049
+  from   ladder:string×count
+  cell   "e\c[COMBINING ACUTE ACCENT]" | NaN
+  code   ("e\c[COMBINING ACUTE ACCENT]") x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""
+
+- id     0050
+  from   ladder:string×count
+  cell   "\0" | 0
+  code   ("\0") x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0051
+  from   ladder:string×count
+  cell   "\0" | 1
+  code   ("\0") x (1)
+  is     "\0"
+  type   Str
+  oracle rakudo-2026.07 → "\0"
+  oracle rakupp-3.14.0 → "\0"
+
+- id     0052
+  from   ladder:string×count
+  cell   "\0" | 2
+  code   ("\0") x (2)
+  is     "\0\0"
+  type   Str
+  oracle rakudo-2026.07 → "\0\0"
+  oracle rakupp-3.14.0 → "\0\0"
+
+- id     0053
+  from   ladder:string×count
+  cell   "\0" | -1
+  code   ("\0") x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0054
+  from   ladder:string×count
+  cell   "\0" | 1/2
+  code   ("\0") x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0055
+  from   ladder:string×count
+  cell   "\0" | 0e0
+  code   ("\0") x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0056
+  from   ladder:string×count
+  cell   "\0" | NaN
+  code   ("\0") x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""
