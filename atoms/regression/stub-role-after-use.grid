@@ -1,0 +1,21 @@
+atom     regression/stub-role-after-use
+source   curated
+kind     whole-program — a minimal repro, not yet reduced to an atom
+
+- id     0001
+  from   rakupp:t/regression/stub-role-after-use.raku
+  budget 20s
+  code
+    # BROKE: leg 22 — X::Package::Stubbed treated `use RoleB; role RoleB {...}`
+    # as a never-completed stub, but a stub naming a use'd module is a legal
+    # redeclaration hint (S11-modules/nested.t -> GONE, caught by gate av1).
+    # FIXED: same leg — stubs whose name matches a use'd module are exempt.
+    use lib $?FILE.IO.parent.parent.add('fixtures').Str;
+    use StubbedRole;
+    role StubbedRole {...}
+    class C does StubbedRole {}
+    die 'stub-after-use broken' unless so C ~~ StubbedRole;
+    say 'PASS';
+  output PASS
+  oracle rakudo-2026.07 → PASS
+  oracle rakupp-3.14.0 → PASS

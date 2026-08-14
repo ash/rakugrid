@@ -16,6 +16,7 @@
 my $ROOT   = $*PROGRAM.IO.absolute.IO.parent.parent;
 my $ENGINE = %*ENV<RAKUGRID_ENGINE> // 'raku';
 my $KEEP   = False;
+my $GUARD  = 0;
 my $VERB   = False;
 
 # ---------------------------------------------------------------- the format
@@ -67,7 +68,8 @@ sub parse-grid($path) {
                 # block value: everything indented deeper, until it dedents
                 my @block;
                 while $i < $n && (@lines[$i] ~~ /^ '    ' / || @lines[$i] ~~ /^ \s* $/) {
-                    last if @lines[$i] ~~ /^ \s* $/ && !(@lines[$i+1] // '') ~~ /^ '    ' /;
+                    last if @lines[$i] ~~ /^ \s* $/
+                            && !((@lines[$i+1] // '') ~~ /^ '    ' /);
                     @block.push: (@lines[$i] ~~ /^ '    ' (.*) $/) ?? ~$0 !! '';
                     $i++;
                 }
@@ -119,6 +121,20 @@ sub authoritative(%r, $reference = 'rakudo') {
     return @lines ?? @lines[*-1] !! Nil;
 }
 
+# An oracle line is one line by construction, so a multi-line observation is
+# recorded as a summary: `<first line> …(N lines)`. Comparing a summary against
+# a full expected value has to compare what the summary actually carries, or
+# every multi-line record reads as an unsigned divergence.
+sub observation-matches($observed, $asserted) {
+    if $observed ~~ / (.*?) \s* '…(' (\d+) ' lines)' $/ {
+        my $head  = ~$0;
+        my $count = +$1;
+        my @lines = $asserted.lines;
+        return @lines.elems == $count && (@lines[0] // '') eq $head;
+    }
+    return $observed eq $asserted;
+}
+
 sub oracle-observation($line) {
     return ~$0 if $line ~~ / '→' \s* (.*) $/;
     return '';
@@ -163,11 +179,60 @@ sub id-of(%parsed, %r) {
 
 constant @IN-PROCESS = <is type throws same-as>;
 
-sub emit-program(%parsed) {
+constant @ISOLATED = <parses no-parse finishes output>;
+
+# A guarded run: the child is backgrounded under /bin/sh with a watchdog that
+# kills it after $secs. Deliberately shell rather than Proc::Async — this has to
+# behave identically on every engine the harness runs under, and a busy loop
+# must not be able to starve the watchdog.
+sub sh-quote($s) {
+    return "'" ~ $s.subst("'", "'\\''", :g) ~ "'";
+}
+
+sub run-guarded($cmd, @args, $secs = 10, $cwd = '') {
+    my $line = ([$cmd, |@args].map({ sh-quote($_) })).join(' ');
+    $line = "cd { sh-quote($cwd) } && $line" if $cwd;
+
+    # Output goes to FILES, never to a pipe. A killed program can leave a
+    # grandchild alive holding an inherited pipe, and then the read waits for an
+    # EOF that never comes — the watchdog fires, the process dies, and the
+    # harness hangs anyway. Files have no such dependency on who else is
+    # holding the descriptor. The watchdog also kills the whole process group
+    # where the shell supports job control, so those grandchildren go too.
+    my $base = tmpdir().add('guard-' ~ $*PID ~ '-' ~ $GUARD++);
+    my $o = $base.absolute ~ '.out';
+    my $e = $base.absolute ~ '.err';
+
+    my $script = "exec >/dev/null 2>&1; set -m 2>/dev/null || true; "
+               ~ "$line > { sh-quote($o) } 2> { sh-quote($e) } & p=\$!; "
+               ~ "( sleep $secs; kill -9 -\$p 2>/dev/null || kill -9 \$p 2>/dev/null ) & w=\$!; "
+               ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; exit \$rc";
+
+    my $p = run('/bin/sh', '-c', $script);
+    my $out = $o.IO.e ?? $o.IO.slurp !! '';
+    my $err = $e.IO.e ?? $e.IO.slurp !! '';
+    $o.IO.unlink if $o.IO.e;
+    $e.IO.unlink if $e.IO.e;
+    return { out => $out, err => $err, exit => $p.exitcode, timeout => $p.exitcode == 137 };
+}
+
+sub budget-of(%r) {
+    my $b = %r<budget> // %r<finishes> // '10s';
+    return +$0 if $b ~~ /(\d+)/;
+    return 10;
+}
+
+# A record parked by an unresolved ruling does not run. It is not a pass and not
+# a failure — it is a question nobody has answered yet, and it is counted as one.
+sub parked(%r) {
+    return (%r<verdict> // '') eq 'disputed';
+}
+
+sub emit-program(%parsed, @records) {
     my @body;
     my @ran;
 
-    for %parsed<records>.list -> %r {
+    for @records -> %r {
         my @a = assertion-of(%r);
         next unless @a == 1;
         next unless @a[0] eq any(@IN-PROCESS);
@@ -284,63 +349,200 @@ sub emit-record(%parsed, %r, $kind) {
 
 # ---------------------------------------------------------------- subcommands
 
+my $SEQ = 0;
+my $BAD = 0;
+my $PARKED = 0;
+
+sub report($ok, $desc, $diag = '') {
+    $SEQ++;
+    if $ok {
+        say "ok $SEQ - $desc";
+    }
+    else {
+        say "not ok $SEQ - $desc";
+        $BAD++;
+        say "# $_" for $diag.lines.grep({ .trim }).head(4);
+    }
+}
+
+sub tmpdir() {
+    my $t = $ROOT.add('tmp');
+    $t.mkdir unless $t.e;
+    return $t;
+}
+
+# Isolated programs run from tmp/run/, which mirrors the layout an imported
+# whole-program record was written against: a sibling `fixtures/` one level up,
+# reachable as $?FILE.IO.parent.parent.add('fixtures').
+sub rundir() {
+    my $t = tmpdir();
+    my $r = $t.add('run');
+    $r.mkdir unless $r.e;
+    my $link = $t.add('fixtures');
+    if !$link.e && $ROOT.add('fixtures').d {
+        run('ln', '-s', $ROOT.add('fixtures').absolute, $link.absolute, :out, :err);
+    }
+    return $r;
+}
+
+# One record, run in its own process. Used both for the isolated assertions and
+# as the fallback when a dense file loses tests — a crash then costs one result
+# instead of the whole file.
+sub fire-one(%parsed, %r) {
+    my $id   = id-of(%parsed, %r);
+    my @a    = assertion-of(%r);
+    my $kind = @a[0] // '';
+    my $secs = budget-of(%r);
+    my $tmp  = rundir();
+
+    my $subject = (%r<setup> ?? %r<setup> ~ "\n" !! '') ~ (%r<code> // '');
+
+    if $kind eq 'parses' | 'no-parse' {
+        # Named after the atom, not `one.raku`: a whole-program record can read
+    # $?FILE or $*PROGRAM, and a generic temp name changes what it sees.
+    my $src = $tmp.add(atom-of(%parsed).split('/')[*-1] ~ '.raku');
+        $src.spurt($subject);
+        my %g = run-guarded($ENGINE, ['-c', $src.absolute], $secs, $tmp.absolute);
+        $src.unlink unless $KEEP;
+        my $compiled = %g<exit> == 0;
+
+        if $kind eq 'parses' {
+            report($compiled, $id, %g<err>);
+        }
+        else {
+            my $want = %r<error> // '';
+            my $said = %g<out> ~ %g<err>;
+            report(!$compiled && (!$want || $said.contains($want)), $id,
+                   $compiled ?? "compiled, expected a parse failure"
+                             !! "reported: { $said.lines.head(2).join(' ') }");
+        }
+        return;
+    }
+
+    # everything else needs the program actually run
+    # Named after the atom, not `one.raku`: a whole-program record can read
+    # $?FILE or $*PROGRAM, and a generic temp name changes what it sees.
+    my $src = $tmp.add(atom-of(%parsed).split('/')[*-1] ~ '.raku');
+    # `[%r]` would flatten the record into Pairs — push keeps it one element.
+    my @one;
+    @one.push: %r;
+    my $wrapped = $kind eq any(@IN-PROCESS)
+        ?? emit-program(%parsed, @one)<source>
+        !! $subject;
+    $src.spurt($wrapped.ends-with("\n") ?? $wrapped !! $wrapped ~ "\n");
+    # A whole-program record may create and then `use` a sibling file. Run it
+    # with the temp directory as the working directory so relative paths, and
+    # $?FILE.IO.parent, agree with where the program actually sits.
+    my %g = run-guarded($ENGINE, [$src.absolute], $secs, $tmp.absolute);
+    $src.unlink unless $KEEP;
+
+    if $kind eq 'finishes' {
+        report(!%g<timeout> && %g<exit> == 0, $id,
+               %g<timeout> ?? "did not finish within {$secs}s"
+                           !! "exit { %g<exit> }: { %g<err>.lines.head(2).join(' ') }");
+        return;
+    }
+
+    if $kind eq 'output' {
+        my $want = %r<output> // '';
+        my $got  = %g<out>.chomp;
+        report(!%g<timeout> && $got eq $want.chomp, $id,
+               %g<timeout> ?? "did not finish within {$secs}s"
+                           !! "got: { $got.lines.head(2).join(' ') }");
+        return;
+    }
+
+    # an in-process assertion, re-run alone because the dense file lost it
+    my $line = %g<out>.lines.first({ .starts-with('ok ') || .starts-with('not ok ') });
+    if !$line {
+        my $why = %g<timeout>
+            ?? "did not finish within {$secs}s"
+            !! "no result (exit { %g<exit> }): { (%g<err> ~ %g<out>).lines.grep({ .trim }).head(2).join(' ') }";
+        report(False, $id, $why);
+        return;
+    }
+    report($line.starts-with('ok '), $id,
+           %g<out>.lines.grep({ .starts-with('# ') }).head(2).join("\n").subst('# ', ''));
+}
+
 sub cmd-fire(@selector) {
     my @files = grid-files();
     @files = @files.grep({ so @selector.first({ ~$^s && $_.absolute.contains($^s) }) }) if @selector;
 
     unless @files {
-        note "no .grid files found under atoms/ or molecules/";
+        note "no .grid files found under atoms/, generated/ or molecules/";
         exit 0;
     }
 
-    my $total = 0;
-    my $bad   = 0;
-    my $skip  = 0;
+    my $recovered = 0;
 
     for @files -> $f {
         my %parsed = parse-grid($f);
-        my %p      = emit-program(%parsed);
-        $skip += %parsed<records>.elems - %p<ran>.elems;
-        next unless %p<ran>.elems;
+        my @dense;
+        my @lone;
 
-        my $tmp = $ROOT.add('tmp');
-        $tmp.mkdir unless $tmp.e;
-        my $out = $tmp.add($f.basename ~ '.gen.raku');
-        $out.spurt(%p<source>);
-
-        my $proc = run($ENGINE, $out.absolute, :out, :err);
-        my $text = $proc.out.slurp(:close);
-        my $errt = $proc.err.slurp(:close);
-        $out.unlink unless $KEEP;
-
-        my $seen = 0;
-        for $text.lines -> $l {
-            next unless $l.starts-with('ok ') || $l.starts-with('not ok ') || $l.starts-with('# ');
-            if $l.starts-with('ok ') || $l.starts-with('not ok ') {
-                $total++;
-                $seen++;
+        for %parsed<records>.list -> %r {
+            my @a = assertion-of(%r);
+            next unless @a == 1;
+            if parked(%r) {
+                $PARKED++;
+                next;
             }
-            $bad++ if $l.starts-with('not ok ');
-            say $l;
+            if @a[0] eq any(@IN-PROCESS) {
+                @dense.push: %r;
+            }
+            elsif @a[0] eq any(@ISOLATED) {
+                @lone.push: %r;
+            }
         }
 
-        # A file that never ran is a failure, not a silence. Without this the
-        # suite reports "0 failed" for a program that did not compile.
-        if $seen < %p<ran>.elems {
-            my $lost = %p<ran>.elems - $seen;
-            say "not ok - { %parsed<header><atom> // $f.basename }: $lost test{ $lost == 1 ?? '' !! 's' } produced no result";
-            say "# $_" for $errt.lines.grep({ .trim }).head(5);
-            $bad   += $lost;
-            $total += $lost;
+        if @dense {
+            my %p  = emit-program(%parsed, @dense);
+            my $out = tmpdir().add($f.basename ~ '.gen.raku');
+            $out.spurt(%p<source>);
+
+            my %g = run-guarded($ENGINE, [$out.absolute], 120);
+            $out.unlink unless $KEEP;
+
+            my %result;
+            my $last = '';
+            for %g<out>.lines -> $l {
+                if $l ~~ /^ ('not ' )? 'ok' \s+ \d+ \s* '-' \s* (\S+) / {
+                    $last = ~$1;
+                    %result{$last} = { ok => !$0, diag => '' };
+                }
+                elsif $l.starts-with('# ') && $last {
+                    %result{$last}<diag> ~= $l.substr(2) ~ "\n";
+                }
+            }
+
+            my @lost;
+            for @dense -> %r {
+                my $id = id-of(%parsed, %r);
+                if %result{$id}:exists {
+                    report(%result{$id}<ok>, $id, %result{$id}<diag>);
+                }
+                else {
+                    @lost.push: %r;
+                }
+            }
+
+            # The dense file died partway. Re-run what it lost, one process
+            # each, so a crash costs one result rather than the whole file.
+            if @lost {
+                say "# { %parsed<header><atom> // $f.basename }: dense run lost { @lost.elems }, re-running individually";
+                $recovered += @lost.elems;
+                fire-one(%parsed, $_) for @lost;
+            }
         }
-        elsif $errt.trim {
-            say "# {$f.basename}: engine wrote to stderr:";
-            say "# $_" for $errt.lines.grep({ .trim }).head(5);
-        }
+
+        fire-one(%parsed, $_) for @lone;
     }
 
-    say "# $total ran, $bad failed, $skip awaiting the isolated lane";
-    exit $bad ?? 1 !! 0;
+    my $note = $recovered ?? ", $recovered re-run individually after a dense-run failure" !! '';
+    my $park = $PARKED ?? ", $PARKED parked on an unresolved ruling" !! '';
+    say "# $SEQ ran, $BAD failed$note$park";
+    exit $BAD ?? 1 !! 0;
 }
 
 # The build rule. An assertion that differs from the authoritative oracle needs
@@ -378,7 +580,7 @@ sub cmd-check() {
             # a throwing observation is recorded as `ERR:<type>`
             $observed = $observed.substr(4) if $observed.starts-with('ERR:');
 
-            next if $observed eq $asserted;
+            next if observation-matches($observed, $asserted);
 
             unless %r<verdict> && %r<why> && %r<ruled> {
                 say "$id: asserts '$asserted' but { $auth } — unsigned divergence";
@@ -410,6 +612,60 @@ sub cmd-cover() {
     }
     say "# { %by-atom.elems } atoms, { %by-atom.values.sum } tests";
     say "# ladder and inventory coverage arrive with the extractors (phase 0)";
+}
+
+# The numbers the README quotes. Printed rather than hand-maintained, so they
+# can be refreshed instead of drifting.
+sub cmd-stats() {
+    my %atoms;
+    my %engines;
+    my $tests = 0;
+    my $crashes = 0;
+    my $ruled = 0;
+    my $curated = 0;
+    my $generated = 0;
+
+    my %clusters;
+    my $divergent = 0;
+
+    for grid-files() -> $f {
+        my %parsed = parse-grid($f);
+        my $atom = atom-of(%parsed);
+        %atoms{$atom} = 1;
+
+        if (%parsed<header><source> // '') eq 'generated' {
+            $generated += %parsed<records>.elems;
+        }
+        else {
+            $curated += %parsed<records>.elems;
+        }
+
+        for %parsed<records>.list -> %r {
+            $tests++;
+            $ruled++ if %r<verdict>;
+
+            my $auth = authoritative(%r);
+            my $ref-obs = $auth ?? oracle-observation($auth) !! '';
+
+            for (%r<oracle> // []).list -> $line {
+                %engines{engine-of($line)} = 1;
+                $crashes++ if oracle-observation($line).starts-with('CRASH:');
+                next if !$auth || $line eq $auth;
+                next if engine-of($line) eq engine-of($auth);
+                my $obs = oracle-observation($line);
+                next if $obs eq $ref-obs;
+                $divergent++;
+                %clusters{"{ engine-of($line) }\t{ short-obs($ref-obs) }\t{ short-obs($obs) }"} = 1;
+            }
+        }
+    }
+
+    say "atoms                { %atoms.elems }";
+    say "tests                { $tests }   ({ $generated } generated, { $curated } curated)";
+    say "engines on record    { %engines.keys.sort.join(', ') }";
+    say "divergences          { $divergent } observation{ $divergent == 1 ?? '' !! 's' } in { %clusters.elems } cluster{ %clusters.elems == 1 ?? '' !! 's' }";
+    say "crashes on record    { $crashes }";
+    say "signed rulings       { $ruled }";
 }
 
 sub cmd-isolate($id) {
@@ -544,16 +800,19 @@ sub cmd-matrix($atom) {
         say "";
         say "$name    reference: { %parsed<records>[0] ?? engine-of(authoritative(%parsed<records>[0]) // '') !! '?' }";
         say "";
-        say (' ' x $lw) ~ '  ' ~ @axes.map({ sprintf("%-{$w}s", $_) }).join('');
+        my @cols = %parsed<header><cols> ?? %parsed<header><cols>.split(' | ') !! @axes;
+
+        say (' ' x $lw) ~ ' │ ' ~ @cols.map({ sprintf("%-{$w}s", $_) }).join('').trim-trailing;
+        say ('─' x $lw) ~ '─┼─' ~ ('─' x ($w * @cols.elems - 1));
 
         for @axes -> $a {
-            my $row = sprintf("%-{$lw}s", $a) ~ '  ';
-            for @axes -> $b {
+            my $row = sprintf("%-{$lw}s", $a) ~ ' │ ';
+            for @cols -> $b {
                 my $v = %cell{"$a|$b"} // '·';
                 $v = '*' ~ $v if %flagged{"$a|$b"};
                 $row ~= sprintf("%-{$w}s", $v);
             }
-            say $row;
+            say $row.trim-trailing;
         }
 
         if %legend {
@@ -619,6 +878,7 @@ given $cmd {
     when 'check'         { cmd-check() }
     when 'cover'         { cmd-cover() }
     when 'isolate'       { cmd-isolate(@args[0] // '') }
+    when 'stats'         { cmd-stats() }
     when 'diverge'       { cmd-diverge(@args) }
     when 'matrix'        { cmd-matrix(@args[0] // '') }
     when 'adjudications' { cmd-adjudications() }

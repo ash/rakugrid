@@ -10,6 +10,17 @@ not run ordinary programs without hitting hundreds of bugs.
 
 Rakugrid is built from what those bugs taught us.
 
+| | |
+|---|---|
+| **atoms** | 312 |
+| **tests** | 4,004 — 3,745 generated, 259 curated |
+| **engines on record** | `rakudo-2026.07`, `rakupp-3.14.0` |
+| **divergences** | 891 observations in 74 clusters |
+| **crashes on record** | 2 |
+| **signed rulings** | 28 |
+
+<sub>Refresh with `rakugrid stats` — these are printed, not hand-maintained.</sub>
+
 ## The three things Roast does not do
 
 1. **Provenance.** Every test records *why it exists* — a bug we fixed, a
@@ -79,6 +90,7 @@ from, but nothing in the suite depends on it.
 rakugrid fire                                  # run everything, emit TAP
 rakugrid fire --engine=/path/to/rakupp         # …against another implementation
 rakugrid check                                 # the build rule: no unsigned divergences
+rakugrid stats                                 # the counters at the top of this file
 rakugrid cover                                 # which atoms have tests
 rakugrid diverge                               # where recorded engines disagree, clustered
 rakugrid matrix infix-divide                   # a ladder cross rendered as a matrix
@@ -93,11 +105,15 @@ need not be the same one.
 
 Phase 0. Working: the `.grid` parser, `fire` (in-process assertions — `is`,
 `type`, `throws`, `same-as`), `check`, `cover`, `diverge`, `matrix`, `isolate`,
-`adjudications`, and the first generator (`gen/ladder.raku`, edge-ladder crosses
-for operators and methods). **3,745 tests across 53 atoms**, with two engines on
-record.
+`adjudications`, and two generators: `gen/ladder.raku` (edge-ladder crosses for
+operators and methods) and `gen/import-regression.raku` (whole-program repros
+imported with provenance, fixtures included). Two engines on record throughout.
 
-Not yet built: the isolated lane (`parses`, `no-parse`, `finishes`, `output`),
-the atom and facet inventory extractors, and ladder-completeness in `cover`.
+The isolated lane runs `output`, `finishes`, `parses` and `no-parse` a process
+each, under a shell watchdog, and any record that kills the dense program is
+re-run alone so a crash costs one result rather than a file.
+
+Not yet built: the atom and facet inventory extractors, ladder-completeness in
+`cover`, and the molecule layer.
 
 See [docs/PLAN.md](docs/PLAN.md) for the full plan.

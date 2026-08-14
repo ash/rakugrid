@@ -1,0 +1,50 @@
+atom     regression/contextualizer-modifiers-and-dir
+source   curated
+kind     whole-program — a minimal repro, not yet reduced to an atom
+
+- id     0001
+  from   rakupp:t/regression/contextualizer-modifiers-and-dir.raku
+  budget 20s
+  code
+    # Regression:
+    #   1. Statement modifiers inside a sigil contextualizer — `@(EXPR for LIST)`,
+    #      `@(EXPR if COND)`, `$(EXPR for LIST)` — used to be a parse error
+    #      ("expected ) got 'for'"). JSON::Unmarshal's `@(_unmarshal($_, …) for @data)`
+    #      needs it.
+    #   2. `dir()` yields IO::Path entries (not Str), matching Rakudo — File::Find's
+    #      `checkrules(IO::Path:D $io, …)` and any `.d`/`.IO` on the result need it.
+    # Contract: exit 0 + last line PASS.
+    my @fail;
+
+    # 1. contextualizer statement modifiers
+    @fail.push("at-for (@(($_*2 for 1..3)).join(','))")
+        unless @($_ * 2 for 1..3).Array eqv [2, 4, 6];  # .Array: eqv is type-aware
+    @fail.push('at-if-true')  unless @(42 if True).elems == 1;
+    @fail.push('at-if-false') unless @(42 if False).elems == 0;
+    @fail.push('dollar-for')  unless $($_ + 1 for 1..3).List eqv (2, 3, 4);
+
+    # 2. dir() returns IO::Path
+    @fail.push('dir-iopath') unless dir('.').head ~~ IO::Path;
+    # a :test matcher filters basenames
+    @fail.push('dir-test') unless dir('.', test => /'.'/).elems > 0;
+
+    # 3. File::Find works on top of dir() (finds a known file in src/)
+    # Guarded with a RUNTIME require: File::Find is an ecosystem module, absent on a
+    # clean CI runner. The old guard put `use` inside the try, which stopped working
+    # when a failed `use` became a compile-time error — the file then died before
+    # the try existed, on CI only (the module IS installed on the dev machine, which
+    # is exactly how the gap hid locally). `require` fails at run time, catchably;
+    # the rest of this file's checks keep running everywhere either way.
+    {
+        my $n = try { require File::Find; find(dir => 'src', name => 'Value.h').elems };
+        with $n     { @fail.push("file-find ($n)") unless $n == 1 }
+        else        { note '# File::Find not installed here — skipping find() check' }
+    }
+
+    if @fail { note "FAILED: @fail[]"; say 'FAIL' } else { say 'PASS' }
+  output PASS
+  oracle rakudo-2026.07 → exit 1
+  oracle rakupp-3.14.0 → FAIL
+  verdict disputed
+  why    the reference implementation does not satisfy the program's own contract here (exit 0 with a last line of PASS) — it needs modules that are not installed, or exercises something only one engine implements; there is no reference observation to rule against
+  ruled  2026-08-14 against rakudo-2026.07

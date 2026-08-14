@@ -61,6 +61,7 @@ An empty string is `""`, which is also what distinguishes it from a block.
 | `from` | provenance, one or more entries separated by ` · `. Required. |
 | `tags` | free-form labels for selection (`slow`, `native`, `unicode`). |
 | `level` | lowest density level that includes this test (0–4, default 1). |
+| `budget` | wall-clock allowance for this record in the isolated lane, e.g. `20s`. Default 10s. Not an assertion — `finishes` is the assertion that a program terminates; `budget` is how long anything else is given before it is killed. |
 
 Provenance schemes: `roast:<file>`, `bug:<slug>`, `corpus:<path>`,
 `module:<dist>`, `docs:<page>`, `showcase:<name>`,
@@ -88,7 +89,13 @@ page.
 | `finishes` | terminates within a budget: `finishes 2s` |
 | `same-as` | equals another expression — no oracle needed |
 | `parses` | compiles, without being run |
-| `no-parse` | fails to compile, with `error` naming what must be reported |
+| `no-parse` | fails to compile; an optional `error` field names text the diagnostic must contain |
+
+The first four run in-process, many to a program. The last four —
+`output`, `finishes`, `parses`, `no-parse` — need a process each, because a
+parse failure, a hang or a crash would otherwise take every other test in the
+file down with it. A record that crashes the dense program is automatically
+re-run alone, so a fault costs one result rather than a whole file.
 
 `same-as` is the oracle-free lane and carries much of the molecule layer:
 internal consistency is checkable without deciding who is right.
@@ -138,6 +145,14 @@ across versions of the same one:
 **A record whose assertion differs from its `oracle` without a `verdict`, `why`
 and `ruled` fails the build.** Divergence from the reference implementation is
 always permitted and never silent.
+
+A `disputed` verdict **parks** the record: it does not run, and it counts as
+neither a pass nor a failure but as an open question, reported separately. That
+is what keeps an unanswered case visible instead of letting it drain away as a
+skip. It is also the honest home for a test the reference implementation cannot
+run at all in this environment — the alternative would be to promote "the only
+engine that ran it" into "correct", which is exactly the mistake this format
+exists to prevent.
 
 Worked example — the reference implementation does not answer at all:
 
