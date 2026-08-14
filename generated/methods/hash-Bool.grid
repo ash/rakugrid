@@ -1,0 +1,50 @@
+atom     methods/hash-Bool
+source   generated
+gen      gen/ladder.raku
+form     ({A}).Bool
+ladder   hash
+
+- id     0001
+  from   ladder:hash
+  cell   {}
+  code   ({}).Bool
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0002
+  from   ladder:hash
+  cell   {a=>1}
+  code   ({a=>1}).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0003
+  from   ladder:hash
+  cell   {a=>1,b=>2}
+  code   ({a=>1,b=>2}).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0004
+  from   ladder:hash
+  cell   {"" => 1}
+  code   ({"" => 1}).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0005
+  from   ladder:hash
+  cell   {a=>Any}
+  code   ({a=>Any}).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True

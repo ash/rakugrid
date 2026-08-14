@@ -1,0 +1,331 @@
+#!/usr/bin/env raku
+# gen/molecules.raku — the interaction layer: constructs that each work alone.
+#
+#   rakupp gen/molecules.raku --engines=raku,/path/to/rakupp
+#
+# Every ladder cell tests ONE construct. This tests CROSSINGS, because that is
+# where our hard bugs actually lived: `return` inside `CATCH` yielding Nil,
+# `next` inside `.map` escaping to the enclosing loop, a method losing `return`
+# inside a loop. Each of those needed two facets to reproduce and none is
+# reachable by testing either construct alone.
+#
+# The first cross is Exit × Nesting — the two axes that produced most of the
+# defect record. A cell is a small program written from a template, so it is
+# well-formed by construction rather than by string-splicing.
+#
+# Cells are ORDER-SENSITIVE: ids come from position, so new levels must be
+# APPENDED to the axis, never inserted.
+
+my $ROOT  = $*PROGRAM.IO.absolute.IO.parent.parent;
+my $TMP   = $ROOT.add('tmp');
+$TMP.mkdir unless $TMP.e;
+my $GUARD = 0;
+
+# --- the axes ---------------------------------------------------------------
+
+# Where the exit happens. `{X}` is the exit statement; each skeleton is an
+# EXPRESSION, so its value is what the crossing actually produced.
+constant @NESTING =
+    { name => 'sub-body',      form => 'do { sub f() { {X}; "fell" }; f() }' },
+    { name => 'method-body',   form => 'do { class C{U} { method m() { {X}; "fell" } }; C{U}.new.m }' },
+    { name => 'bare-block',    form => 'do { {X}; "fell" }' },
+    { name => 'loop-body',     form => 'do { my @r; for 1..3 { {X}; @r.push("b") }; @r.join(",") }' },
+    { name => 'loop-in-sub',   form => 'do { sub f() { for 1..3 { {X} }; "end" }; f() }' },
+    { name => 'gather',        form => 'do { gather { {X}; take "after" }.list.raku }' },
+    { name => 'catch',         form => 'do { sub f() { die "boom"; CATCH { default { {X} } } }; f() }' },
+    { name => 'map-body',      form => 'do { (1..3).map({ {X}; $_ }).list.raku }' },
+    { name => 'map-in-loop',   form => 'do { my @r; for 1..2 { @r.push((1..3).map({ {X}; $_ }).elems) }; @r.join(",") }' },
+    { name => 'given-when',    form => 'do { given 1 { when 1 { {X}; "w" }; "after" } }' },
+    { name => 'leave-phaser',  form => 'do { sub f() { LEAVE { {X} }; "body" }; f() }' },
+    { name => 'thunk-rhs',     form => 'do { my $v = False || do { {X}; "x" }; $v }' },
+    { name => 'sort-callback', form => 'do { (3,1,2).sort({ {X}; $^a <=> $^b }).list.raku }' },
+    { name => 'nested-blocks', form => 'do { my $v = do { do { {X}; "inner" } }; $v }' };
+
+# How control leaves. `succeed` only means anything under `when`, `take` only
+# under `gather`, `emit` only under a supply — which is the point: the illegal
+# crossings must fail, and fail in a stated way.
+constant @EXIT =
+    { name => 'fall-through', stmt => '1'          },
+    { name => 'return',       stmt => 'return "R"' },
+    { name => 'last',         stmt => 'last'       },
+    { name => 'next',         stmt => 'next'       },
+    { name => 'die',          stmt => 'die "D"'    },
+    { name => 'take',         stmt => 'take "T"'   },
+    { name => 'fail',         stmt => 'fail "F"'   },
+    { name => 'succeed',      stmt => 'succeed "S"' },
+    { name => 'emit',         stmt => 'emit "E"'   },
+    { name => 'warn',         stmt => 'warn "W"'   };
+
+# --- probing ----------------------------------------------------------------
+
+# TWO probes, in two processes, on purpose. Compiling `sub { EXPR }` to see
+# whether EXPR compiles also DECLARES anything EXPR declares — so a cell
+# containing `class C {…}` was being declared once by the compile check and
+# again by the evaluation, and every such cell reported a redeclaration that
+# exists only inside the probe.
+constant $PROBE-COMPILE = q:to/END/;
+    use MONKEY-SEE-NO-EVAL;
+    for @*ARGS[0].IO.lines -> $expr {
+        try EVAL "sub \{ $expr \}";
+        if $! {
+            say join("\t", $expr, 'NOCOMPILE', '-', ($!.message.lines[0] // '').subst("\t", ' ', :g));
+        }
+        else {
+            say join("\t", $expr, 'COMPILES', '-', '');
+        }
+        $*OUT.flush;
+    }
+    END
+
+constant $PROBE-VALUE = q:to/END/;
+    use MONKEY-SEE-NO-EVAL;
+    for @*ARGS[0].IO.lines -> $expr {
+        my $r = try EVAL $expr;
+        if $! {
+            say join("\t", $expr, 'ERR:' ~ $!.^name, '-');
+        }
+        else {
+            say join("\t", $expr, $r.raku, $r.WHAT.^name);
+        }
+        $*OUT.flush;
+    }
+    END
+
+sub sh-quote($s) {
+    return "'" ~ $s.subst("'", "'\\''", :g) ~ "'";
+}
+
+sub run-sh($line, $secs) {
+    my $base = $TMP.add('mol-' ~ $*PID ~ '-' ~ $GUARD++).absolute;
+    my $script = "exec >/dev/null 2>&1; set -m 2>/dev/null || true; "
+               ~ "$line > { sh-quote($base ~ '.out') } 2> { sh-quote($base ~ '.err') } & p=\$!; "
+               ~ "( sleep $secs; kill -9 -\$p 2>/dev/null || kill -9 \$p 2>/dev/null ) & w=\$!; "
+               ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; exit \$rc";
+    my $p = run('/bin/sh', '-c', $script);
+    my $out = ($base ~ '.out').IO.e ?? ($base ~ '.out').IO.slurp !! '';
+    my $err = ($base ~ '.err').IO.e ?? ($base ~ '.err').IO.slurp !! '';
+    ($base ~ '.out').IO.unlink if ($base ~ '.out').IO.e;
+    ($base ~ '.err').IO.unlink if ($base ~ '.err').IO.e;
+    return { out => $out, err => $err, exit => $p.exitcode };
+}
+
+sub run-batch($cmd, @exprs, $secs = 180, $src = $PROBE-VALUE) {
+    my $probe = $TMP.add('mol-probe.raku');
+    my $list  = $TMP.add('mol-exprs.txt');
+    $probe.spurt($src);
+    $list.spurt(@exprs.join("\n") ~ "\n");
+
+    my %g = run-sh("{ sh-quote($cmd) } { sh-quote($probe.absolute) } { sh-quote($list.absolute) }", $secs);
+    my %by;
+    for %g<out>.lines -> $l {
+        my @f = $l.split("\t");
+        next unless @f >= 3;
+        %by{@f[0]} = { value => @f[1], type => @f[2], msg => (@f[3] // '') };
+    }
+    return { seen => %by, exit => %g<exit> };
+}
+
+# A crossing can loop forever — `redo` is the obvious one, but so is any exit
+# that restarts its own block. Resume past whatever killed the run rather than
+# recording the rest as a silent gap.
+sub observe($cmd, @exprs, $src = $PROBE-VALUE) {
+    my %seen;
+    my @todo = @exprs;
+    while @todo {
+        my %r = run-batch($cmd, @todo, 180, $src);
+        for @todo -> $e {
+            %seen{$e} = %r<seen>{$e} if %r<seen>{$e};
+        }
+        my @missing = @todo.grep({ !%seen{$_} });
+        last unless @missing;
+        my $bad  = @missing[0];
+        my %solo = run-batch($cmd, [$bad], 15, $src);
+        %seen{$bad} = %solo<seen>{$bad}
+            // { value => (%solo<exit> == 137 ?? 'HANG' !! 'CRASH:' ~ %solo<exit>), type => '-', msg => '' };
+        note "#   no answer for: $bad" unless %solo<seen>{$bad};
+        @todo = @missing.elems > 1 ?? @missing[1 .. *] !! [];
+    }
+    return %seen;
+}
+
+# EVAL is not a file. Confirm every compile-failure candidate the way the
+# harness will actually compile it.
+sub probe-file($cmd, $expr) {
+    my $f = $TMP.add('mol-confirm.raku');
+    $f.spurt("my \$r = try \{ $expr \};\n"
+           ~ "if \$\! \{ say 'ERR:' ~ \$\!.^name ~ \"\\t-\" \}\n"
+           ~ "else \{ say \$r.raku ~ \"\\t\" ~ \$r.WHAT.^name \}\n");
+
+    my %c = run-sh("{ sh-quote($cmd) } -c { sh-quote($f.absolute) }", 20);
+    if %c<exit> != 0 {
+        my $msg = (%c<err> ~ %c<out>).lines.grep({ .trim }).head(1).join(' ').subst("\t", ' ', :g);
+        return { value => 'NOCOMPILE', type => '-', msg => $msg };
+    }
+    my %r = run-sh("{ sh-quote($cmd) } { sh-quote($f.absolute) }", 20);
+    my @f2 = (%r<out>.lines[0] // '').split("\t");
+    return { value => 'CRASH:' ~ %r<exit>, type => '-', msg => '' } unless @f2 >= 2;
+    return { value => @f2[0], type => @f2[1], msg => '' };
+}
+
+
+# Cells share a file once they are packed into a dense program, so any name a
+# skeleton introduces must be unique to its cell. `class C` in ten cells is ten
+# redeclarations, and the tests then fail on each other rather than on the
+# language.
+sub expr-for(%n, %x) {
+    my $u = (%n<name> ~ '_' ~ %x<name>).subst('-', '_', :g);
+    return %n<form>.subst('{X}', %x<stmt>, :g).subst('{U}', $u, :g);
+}
+
+sub engine-id($cmd) {
+    my $p = run($cmd, '-e', 'print $*RAKU.compiler.name', :out, :err);
+    my $name = $p.out.slurp(:close).trim;
+    $p.err.slurp(:close);
+    if $name.contains('Raku++') || $name.lc.contains('rakupp') {
+        my $v = run($cmd, '--version', :out, :err);
+        my $text = $v.out.slurp(:close);
+        $v.err.slurp(:close);
+        my $ver = $text ~~ /(\d+ '.' \d+ '.' \d+)/ ?? ~$0 !! 'unknown';
+        return "rakupp-$ver";
+    }
+    my $p2 = run($cmd, '-e', 'print $*RAKU.compiler.version', :out, :err);
+    my $ver = $p2.out.slurp(:close).trim;
+    $p2.err.slurp(:close);
+    return ($name || 'unknown') ~ '-' ~ ($ver || 'unknown');
+}
+
+# ------------------------------------------------------------------------ run
+
+my @engines = 'raku';
+for @*ARGS -> $a {
+    @engines = $a.substr(10).split(',') if $a.starts-with('--engines=');
+}
+my @ids = @engines.map({ engine-id($_) });
+
+my @cells;
+for @NESTING -> %n {
+    for @EXIT -> %x {
+        @cells.push: { nesting => %n<name>, exit => %x<name>,
+                       expr => expr-for(%n, %x) };
+    }
+}
+my @all = @cells.map(*<expr>).unique;
+
+say "# { @NESTING.elems } nestings × { @EXIT.elems } exits = { @cells.elems } crossings";
+say "# engines: { @ids.join(', ') }";
+
+my @obs;
+for @engines -> $e {
+    say "# probing $e …";
+    my %v = observe($e, @all);
+    my %c = observe($e, @all, $PROBE-COMPILE);
+    for @all -> $x {
+        if %c{$x} && %c{$x}<value> eq 'NOCOMPILE' {
+            %v{$x} = { value => 'NOCOMPILE', type => '-', msg => (%c{$x}<msg> // '') };
+        }
+    }
+    @obs.push: %v;
+}
+
+# A cell the batch probe could not answer is a CANDIDATE too, not a dead end.
+# `last` outside a loop kills the probe process, but it is a clean compile-time
+# error in a real file — parking it would have hidden a perfectly good test.
+my @candidates = @all.grep({
+    my $v = @obs[0]{$_} ?? @obs[0]{$_}<value> !! '';
+    $v eq 'NOCOMPILE' || $v.starts-with('CRASH') || $v eq 'HANG'
+});
+if @candidates {
+    say "# confirming { @candidates.elems } compile-failure candidates against real files …";
+    my $overturned = 0;
+    for @candidates -> $expr {
+        for ^@engines -> $e {
+            my %real = probe-file(@engines[$e], $expr);
+            $overturned++ if $e == 0 && %real<value> ne 'NOCOMPILE';
+            @obs[$e]{$expr} = %real;
+        }
+    }
+    say "#   $overturned were EVAL artefacts" if $overturned;
+}
+
+say "# re-probing { @ids[0] } to check the observations reproduce …";
+my %again = observe(@engines[0], @all);
+for @candidates -> $e {
+    %again{$e} = @obs[0]{$e};
+}
+
+my $ref = @obs[0];
+# ONE atom, not one per nesting: the crossing IS the thing under test, so the
+# whole 14 × 10 grid belongs in a single file where `rakugrid matrix` can render
+# it and a hole is visible at a glance.
+my $outdir = $ROOT.add('molecules');
+$outdir.mkdir unless $outdir.e;
+
+my $written = 0;
+my $parked  = 0;
+
+my @out;
+@out.push: "atom     molecules/exit-nesting";
+@out.push: "source   generated";
+@out.push: "gen      gen/molecules.raku";
+@out.push: "facets   nesting × exit";
+@out.push: "axes     { @NESTING.map(*<name>).join(' | ') }";
+@out.push: "cols     { @EXIT.map(*<name>).join(' | ') }";
+@out.push: '';
+
+my $i = 0;
+for @NESTING -> %n {
+    for @EXIT -> %x {
+        $i++;
+        my $expr = expr-for(%n, %x);
+        my $r = $ref{$expr};
+        next unless $r;
+
+        @out.push: "- id     { sprintf('%04d', $i) }";
+        @out.push: "  from   molecule:exit×nesting";
+        @out.push: "  cell   { %n<name> } | { %x<name> }";
+        @out.push: "  facets nesting={ %n<name> } exit={ %x<name> }";
+
+        my $answered = !($r<value>.starts-with('CRASH') || $r<value> eq 'HANG');
+        my $stable   = %again{$expr} && %again{$expr}<value> eq $r<value>;
+
+        if $r<value> eq 'NOCOMPILE' {
+            @out.push: "  code   sub \{ $expr \}";
+            @out.push: "  no-parse the crossing does not compile";
+        }
+        elsif $r<value>.starts-with('ERR:') {
+            @out.push: "  code   $expr";
+            @out.push: "  throws { $r<value>.substr(4) }";
+        }
+        else {
+            @out.push: "  code   $expr";
+            @out.push: "  is     { $r<value> }";
+            @out.push: "  type   { $r<type> }";
+        }
+
+        for ^@engines -> $e {
+            my $o = @obs[$e]{$expr};
+            next unless $o;
+            my $obs = $o<value> eq 'NOCOMPILE' && $o<msg> ?? 'NOCOMPILE: ' ~ $o<msg> !! $o<value>;
+            @out.push: "  oracle { @ids[$e] } → $obs";
+        }
+
+        if !$answered {
+            @out.push: "  verdict disputed";
+            @out.push: "  why    the reference produced no usable answer for this crossing (it crashed or did not terminate)";
+            @out.push: "  ruled  2026-08-14 against { @ids[0] }";
+            $parked++;
+        }
+        elsif !$stable {
+            @out.push: "  verdict disputed";
+            @out.push: "  why    the reference answers differently on two identical runs, so there is nothing stable to assert";
+            @out.push: "  ruled  2026-08-14 against { @ids[0] }";
+            $parked++;
+        }
+        @out.push: '';
+        $written++;
+    }
+}
+
+$outdir.add('exit-nesting.grid').spurt(@out.join("\n"));
+
+say "# wrote $written crossings, $parked parked";

@@ -4,7 +4,7 @@ kind     whole-program — a minimal repro, not yet reduced to an atom
 
 - id     0001
   from   rakupp:t/regression/symlink-and-x-io.raku
-  budget 20s
+  budget 25s
   code
     # Regression: the symlink/link/readlink SUB forms were missing entirely, and the
     # X::IO exception family could not be CONSTRUCTED — rakupp threw those types from

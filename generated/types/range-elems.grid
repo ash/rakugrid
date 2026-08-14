@@ -1,0 +1,59 @@
+atom     types/range-elems
+source   generated
+gen      gen/ladder.raku
+form     ({A}).elems
+ladder   range
+
+- id     0001
+  from   ladder:range
+  cell   (1..3)
+  code   ((1..3)).elems
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-3.14.0 → 3
+
+- id     0002
+  from   ladder:range
+  cell   (1^..3)
+  code   ((1^..3)).elems
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
+
+- id     0003
+  from   ladder:range
+  cell   (1..^3)
+  code   ((1..^3)).elems
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
+
+- id     0004
+  from   ladder:range
+  cell   (3..1)
+  code   ((3..1)).elems
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0005
+  from   ladder:range
+  cell   (1..1)
+  code   ((1..1)).elems
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0006
+  from   ladder:range
+  cell   ("a".."c")
+  code   (("a".."c")).elems
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-3.14.0 → 3

@@ -135,6 +135,13 @@ sub observation-matches($observed, $asserted) {
     return $observed eq $asserted;
 }
 
+# A rejection's WORDING is not specified, so two engines refusing the same
+# fragment agree even when they say so differently. Compare the structural fact.
+sub comparable($o) {
+    return 'rejected' if $o.starts-with('rejected:');
+    return $o;
+}
+
 sub oracle-observation($line) {
     return ~$0 if $line ~~ / '→' \s* (.*) $/;
     return '';
@@ -401,7 +408,10 @@ sub fire-one(%parsed, %r) {
         # Named after the atom, not `one.raku`: a whole-program record can read
     # $?FILE or $*PROGRAM, and a generic temp name changes what it sees.
     my $src = $tmp.add(atom-of(%parsed).split('/')[*-1] ~ '.raku');
-        $src.spurt($subject);
+        # The trailing newline is not cosmetic: a heredoc scans the lines that
+        # follow it, so `q:to{abc}` parses differently in a file that ends
+        # without one. Write it exactly as the oracle was captured.
+        $src.spurt($subject.ends-with("\n") ?? $subject !! $subject ~ "\n");
         my %g = run-guarded($ENGINE, ['-c', $src.absolute], $secs, $tmp.absolute);
         $src.unlink unless $KEEP;
         my $compiled = %g<exit> == 0;
@@ -574,7 +584,23 @@ sub cmd-check() {
             my $auth = authoritative(%r);
             next unless $auth;
 
+            # `parses` and `no-parse` assert a structural fact, not a value.
+            # There is nothing in an observation to compare them against.
+            next if @a[0] eq 'parses' | 'no-parse';
+
             my $observed = oracle-observation($auth);
+
+            # `same-as` asserts a RELATION between two spellings, so its
+            # observation is whether they agreed — not a value to match. It
+            # needs a ruling exactly when the reference says they did not.
+            if @a[0] eq 'same-as' {
+                next if $observed.starts-with('AGREE');
+                unless %r<verdict> && %r<why> && %r<ruled> {
+                    say "$id: the reference breaks this law ({ $observed }) with no ruling";
+                    $problems++;
+                }
+                next;
+            }
             my $asserted = %r{@a[0]} // '';
 
             # a throwing observation is recorded as `ERR:<type>`
@@ -653,7 +679,7 @@ sub cmd-stats() {
                 next if !$auth || $line eq $auth;
                 next if engine-of($line) eq engine-of($auth);
                 my $obs = oracle-observation($line);
-                next if $obs eq $ref-obs;
+                next if comparable($obs) eq comparable($ref-obs);
                 $divergent++;
                 %clusters{"{ engine-of($line) }\t{ short-obs($ref-obs) }\t{ short-obs($obs) }"} = 1;
             }
@@ -726,7 +752,7 @@ sub cmd-diverge(@selector) {
                 my $eng = engine-of($line);
                 next if $eng eq engine-of($auth);
                 my $obs = oracle-observation($line);
-                next if $obs eq $ref-obs;
+                next if comparable($obs) eq comparable($ref-obs);
 
                 $records++;
                 my $key = "$eng\t{ short-obs($ref-obs) }\t{ short-obs($obs) }";
@@ -783,7 +809,7 @@ sub cmd-matrix($atom) {
             for (%r<oracle> // []).list -> $line {
                 next if $line eq $auth;
                 next if engine-of($line) eq engine-of($auth // '');
-                if oracle-observation($line) ne $ref-obs {
+                if comparable(oracle-observation($line)) ne comparable($ref-obs) {
                     %flagged{"$a|$b"} = { id => id-of(%parsed, %r), code => %r<code>, ref => $ref-obs,
                                           other => $line };
                 }

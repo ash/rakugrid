@@ -1,0 +1,95 @@
+atom     syntax/colonpair
+source   generated
+gen      gen/syntax.raku
+kind     parse grid — compiled with -c, never run
+
+- id     0001
+  from   syntax::a
+  code   sub f(|c) { }; my $a = 1; f(:a);
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0002
+  from   syntax::!a
+  code   sub f(|c) { }; my $a = 1; f(:!a);
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0003
+  from   syntax::a(1)
+  code   sub f(|c) { }; my $a = 1; f(:a(1));
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0004
+  from   syntax::a<b>
+  code   sub f(|c) { }; my $a = 1; f(:a<b>);
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0005
+  from   syntax::a<b c>
+  code   sub f(|c) { }; my $a = 1; f(:a<b c>);
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0006
+  from   syntax::$a
+  code   sub f(|c) { }; my $a = 1; f(:$a);
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0007
+  from   syntax::a{1}
+  code   sub f(|c) { }; my $a = 1; f(:a{1});
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0008
+  from   syntax:a => 1
+  code   sub f(|c) { }; my $a = 1; f(a => 1);
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0009
+  from   syntax::a[1,2]
+  code   sub f(|c) { }; my $a = 1; f(:a[1,2]);
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0010
+  from   syntax::1a
+  code   sub f(|c) { }; my $a = 1; f(:1a);
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0011
+  from   syntax::2nd
+  code   sub f(|c) { }; my $a = 1; f(:2nd);
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0012
+  from   syntax::a«b»
+  code   sub f(|c) { }; my $a = 1; f(:a«b»);
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → rejected: ===SORRY!=== Parse error at line 1: expected ) (got '«')
+
+- id     0013
+  from   syntax::::a
+  code   sub f(|c) { }; my $a = 1; f(:::a);
+  no-parse the reference rejects this spelling
+  oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-13.raku
+  oracle rakupp-3.14.0 → rejected: ===SORRY!=== Parse error at line 1: unexpected operator in term position (got '::')

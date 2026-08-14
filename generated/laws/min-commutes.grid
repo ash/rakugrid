@@ -1,0 +1,1027 @@
+atom     laws/min-commutes
+source   generated
+gen      gen/laws.raku
+law      ({A}) min ({B})  ===  ({B}) min ({A})
+ladder   numeric, arity 2
+
+- id     0001
+  from   law:min-commutes
+  cell   0 | 0
+  code   (0) min (0)
+  same-as (0) min (0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0002
+  from   law:min-commutes
+  cell   0 | 1
+  code   (0) min (1)
+  same-as (1) min (0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0003
+  from   law:min-commutes
+  cell   0 | -1
+  code   (0) min (-1)
+  same-as (-1) min (0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0004
+  from   law:min-commutes
+  cell   0 | 2**64
+  code   (0) min (2**64)
+  same-as (2**64) min (0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0005
+  from   law:min-commutes
+  cell   0 | 1/3
+  code   (0) min (1/3)
+  same-as (1/3) min (0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0006
+  from   law:min-commutes
+  cell   0 | 0e0
+  code   (0) min (0e0)
+  same-as (0e0) min (0)
+  oracle rakudo-2026.07 → DIFFER: 0e0 vs 0
+  oracle rakupp-3.14.0 → DIFFER: 0 vs 0e0
+  verdict disputed
+  why    the reference itself breaks this law at this cell (0e0 vs 0) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0007
+  from   law:min-commutes
+  cell   0 | -0e0
+  code   (0) min (-0e0)
+  same-as (-0e0) min (0)
+  oracle rakudo-2026.07 → DIFFER: -0e0 vs 0
+  oracle rakupp-3.14.0 → DIFFER: 0 vs -0e0
+  verdict disputed
+  why    the reference itself breaks this law at this cell (-0e0 vs 0) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0008
+  from   law:min-commutes
+  cell   0 | 1e0
+  code   (0) min (1e0)
+  same-as (1e0) min (0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0009
+  from   law:min-commutes
+  cell   0 | Inf
+  code   (0) min (Inf)
+  same-as (Inf) min (0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0010
+  from   law:min-commutes
+  cell   0 | -Inf
+  code   (0) min (-Inf)
+  same-as (-Inf) min (0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0011
+  from   law:min-commutes
+  cell   0 | NaN
+  code   (0) min (NaN)
+  same-as (NaN) min (0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → DIFFER: 0 vs NaN
+
+- id     0012
+  from   law:min-commutes
+  cell   1 | 0
+  code   (1) min (0)
+  same-as (0) min (1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0013
+  from   law:min-commutes
+  cell   1 | 1
+  code   (1) min (1)
+  same-as (1) min (1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0014
+  from   law:min-commutes
+  cell   1 | -1
+  code   (1) min (-1)
+  same-as (-1) min (1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0015
+  from   law:min-commutes
+  cell   1 | 2**64
+  code   (1) min (2**64)
+  same-as (2**64) min (1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0016
+  from   law:min-commutes
+  cell   1 | 1/3
+  code   (1) min (1/3)
+  same-as (1/3) min (1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0017
+  from   law:min-commutes
+  cell   1 | 0e0
+  code   (1) min (0e0)
+  same-as (0e0) min (1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0018
+  from   law:min-commutes
+  cell   1 | -0e0
+  code   (1) min (-0e0)
+  same-as (-0e0) min (1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0019
+  from   law:min-commutes
+  cell   1 | 1e0
+  code   (1) min (1e0)
+  same-as (1e0) min (1)
+  oracle rakudo-2026.07 → DIFFER: 1e0 vs 1
+  oracle rakupp-3.14.0 → DIFFER: 1 vs 1e0
+  verdict disputed
+  why    the reference itself breaks this law at this cell (1e0 vs 1) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0020
+  from   law:min-commutes
+  cell   1 | Inf
+  code   (1) min (Inf)
+  same-as (Inf) min (1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0021
+  from   law:min-commutes
+  cell   1 | -Inf
+  code   (1) min (-Inf)
+  same-as (-Inf) min (1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0022
+  from   law:min-commutes
+  cell   1 | NaN
+  code   (1) min (NaN)
+  same-as (NaN) min (1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → DIFFER: 1 vs NaN
+
+- id     0023
+  from   law:min-commutes
+  cell   -1 | 0
+  code   (-1) min (0)
+  same-as (0) min (-1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0024
+  from   law:min-commutes
+  cell   -1 | 1
+  code   (-1) min (1)
+  same-as (1) min (-1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0025
+  from   law:min-commutes
+  cell   -1 | -1
+  code   (-1) min (-1)
+  same-as (-1) min (-1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0026
+  from   law:min-commutes
+  cell   -1 | 2**64
+  code   (-1) min (2**64)
+  same-as (2**64) min (-1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0027
+  from   law:min-commutes
+  cell   -1 | 1/3
+  code   (-1) min (1/3)
+  same-as (1/3) min (-1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0028
+  from   law:min-commutes
+  cell   -1 | 0e0
+  code   (-1) min (0e0)
+  same-as (0e0) min (-1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0029
+  from   law:min-commutes
+  cell   -1 | -0e0
+  code   (-1) min (-0e0)
+  same-as (-0e0) min (-1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0030
+  from   law:min-commutes
+  cell   -1 | 1e0
+  code   (-1) min (1e0)
+  same-as (1e0) min (-1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0031
+  from   law:min-commutes
+  cell   -1 | Inf
+  code   (-1) min (Inf)
+  same-as (Inf) min (-1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0032
+  from   law:min-commutes
+  cell   -1 | -Inf
+  code   (-1) min (-Inf)
+  same-as (-Inf) min (-1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0033
+  from   law:min-commutes
+  cell   -1 | NaN
+  code   (-1) min (NaN)
+  same-as (NaN) min (-1)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → DIFFER: -1 vs NaN
+
+- id     0034
+  from   law:min-commutes
+  cell   2**64 | 0
+  code   (2**64) min (0)
+  same-as (0) min (2**64)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0035
+  from   law:min-commutes
+  cell   2**64 | 1
+  code   (2**64) min (1)
+  same-as (1) min (2**64)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0036
+  from   law:min-commutes
+  cell   2**64 | -1
+  code   (2**64) min (-1)
+  same-as (-1) min (2**64)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0037
+  from   law:min-commutes
+  cell   2**64 | 2**64
+  code   (2**64) min (2**64)
+  same-as (2**64) min (2**64)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0038
+  from   law:min-commutes
+  cell   2**64 | 1/3
+  code   (2**64) min (1/3)
+  same-as (1/3) min (2**64)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0039
+  from   law:min-commutes
+  cell   2**64 | 0e0
+  code   (2**64) min (0e0)
+  same-as (0e0) min (2**64)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0040
+  from   law:min-commutes
+  cell   2**64 | -0e0
+  code   (2**64) min (-0e0)
+  same-as (-0e0) min (2**64)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0041
+  from   law:min-commutes
+  cell   2**64 | 1e0
+  code   (2**64) min (1e0)
+  same-as (1e0) min (2**64)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0042
+  from   law:min-commutes
+  cell   2**64 | Inf
+  code   (2**64) min (Inf)
+  same-as (Inf) min (2**64)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0043
+  from   law:min-commutes
+  cell   2**64 | -Inf
+  code   (2**64) min (-Inf)
+  same-as (-Inf) min (2**64)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0044
+  from   law:min-commutes
+  cell   2**64 | NaN
+  code   (2**64) min (NaN)
+  same-as (NaN) min (2**64)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → DIFFER: 18446744073709551616 vs NaN
+
+- id     0045
+  from   law:min-commutes
+  cell   1/3 | 0
+  code   (1/3) min (0)
+  same-as (0) min (1/3)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0046
+  from   law:min-commutes
+  cell   1/3 | 1
+  code   (1/3) min (1)
+  same-as (1) min (1/3)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0047
+  from   law:min-commutes
+  cell   1/3 | -1
+  code   (1/3) min (-1)
+  same-as (-1) min (1/3)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0048
+  from   law:min-commutes
+  cell   1/3 | 2**64
+  code   (1/3) min (2**64)
+  same-as (2**64) min (1/3)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0049
+  from   law:min-commutes
+  cell   1/3 | 1/3
+  code   (1/3) min (1/3)
+  same-as (1/3) min (1/3)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0050
+  from   law:min-commutes
+  cell   1/3 | 0e0
+  code   (1/3) min (0e0)
+  same-as (0e0) min (1/3)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0051
+  from   law:min-commutes
+  cell   1/3 | -0e0
+  code   (1/3) min (-0e0)
+  same-as (-0e0) min (1/3)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0052
+  from   law:min-commutes
+  cell   1/3 | 1e0
+  code   (1/3) min (1e0)
+  same-as (1e0) min (1/3)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0053
+  from   law:min-commutes
+  cell   1/3 | Inf
+  code   (1/3) min (Inf)
+  same-as (Inf) min (1/3)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0054
+  from   law:min-commutes
+  cell   1/3 | -Inf
+  code   (1/3) min (-Inf)
+  same-as (-Inf) min (1/3)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0055
+  from   law:min-commutes
+  cell   1/3 | NaN
+  code   (1/3) min (NaN)
+  same-as (NaN) min (1/3)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → DIFFER: <1/3> vs NaN
+
+- id     0056
+  from   law:min-commutes
+  cell   0e0 | 0
+  code   (0e0) min (0)
+  same-as (0) min (0e0)
+  oracle rakudo-2026.07 → DIFFER: 0 vs 0e0
+  oracle rakupp-3.14.0 → DIFFER: 0e0 vs 0
+  verdict disputed
+  why    the reference itself breaks this law at this cell (0 vs 0e0) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0057
+  from   law:min-commutes
+  cell   0e0 | 1
+  code   (0e0) min (1)
+  same-as (1) min (0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0058
+  from   law:min-commutes
+  cell   0e0 | -1
+  code   (0e0) min (-1)
+  same-as (-1) min (0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0059
+  from   law:min-commutes
+  cell   0e0 | 2**64
+  code   (0e0) min (2**64)
+  same-as (2**64) min (0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0060
+  from   law:min-commutes
+  cell   0e0 | 1/3
+  code   (0e0) min (1/3)
+  same-as (1/3) min (0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0061
+  from   law:min-commutes
+  cell   0e0 | 0e0
+  code   (0e0) min (0e0)
+  same-as (0e0) min (0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0062
+  from   law:min-commutes
+  cell   0e0 | -0e0
+  code   (0e0) min (-0e0)
+  same-as (-0e0) min (0e0)
+  oracle rakudo-2026.07 → DIFFER: 0e0 vs -0e0
+  oracle rakupp-3.14.0 → DIFFER: 0e0 vs -0e0
+  verdict disputed
+  why    the reference itself breaks this law at this cell (0e0 vs -0e0) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0063
+  from   law:min-commutes
+  cell   0e0 | 1e0
+  code   (0e0) min (1e0)
+  same-as (1e0) min (0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0064
+  from   law:min-commutes
+  cell   0e0 | Inf
+  code   (0e0) min (Inf)
+  same-as (Inf) min (0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0065
+  from   law:min-commutes
+  cell   0e0 | -Inf
+  code   (0e0) min (-Inf)
+  same-as (-Inf) min (0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0066
+  from   law:min-commutes
+  cell   0e0 | NaN
+  code   (0e0) min (NaN)
+  same-as (NaN) min (0e0)
+  oracle rakudo-2026.07 → DIFFER: 0e0 vs NaN
+  oracle rakupp-3.14.0 → DIFFER: 0e0 vs NaN
+  verdict disputed
+  why    the reference itself breaks this law at this cell (0e0 vs NaN) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0067
+  from   law:min-commutes
+  cell   -0e0 | 0
+  code   (-0e0) min (0)
+  same-as (0) min (-0e0)
+  oracle rakudo-2026.07 → DIFFER: 0 vs -0e0
+  oracle rakupp-3.14.0 → DIFFER: -0e0 vs 0
+  verdict disputed
+  why    the reference itself breaks this law at this cell (0 vs -0e0) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0068
+  from   law:min-commutes
+  cell   -0e0 | 1
+  code   (-0e0) min (1)
+  same-as (1) min (-0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0069
+  from   law:min-commutes
+  cell   -0e0 | -1
+  code   (-0e0) min (-1)
+  same-as (-1) min (-0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0070
+  from   law:min-commutes
+  cell   -0e0 | 2**64
+  code   (-0e0) min (2**64)
+  same-as (2**64) min (-0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0071
+  from   law:min-commutes
+  cell   -0e0 | 1/3
+  code   (-0e0) min (1/3)
+  same-as (1/3) min (-0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0072
+  from   law:min-commutes
+  cell   -0e0 | 0e0
+  code   (-0e0) min (0e0)
+  same-as (0e0) min (-0e0)
+  oracle rakudo-2026.07 → DIFFER: -0e0 vs 0e0
+  oracle rakupp-3.14.0 → DIFFER: -0e0 vs 0e0
+  verdict disputed
+  why    the reference itself breaks this law at this cell (-0e0 vs 0e0) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0073
+  from   law:min-commutes
+  cell   -0e0 | -0e0
+  code   (-0e0) min (-0e0)
+  same-as (-0e0) min (-0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0074
+  from   law:min-commutes
+  cell   -0e0 | 1e0
+  code   (-0e0) min (1e0)
+  same-as (1e0) min (-0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0075
+  from   law:min-commutes
+  cell   -0e0 | Inf
+  code   (-0e0) min (Inf)
+  same-as (Inf) min (-0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0076
+  from   law:min-commutes
+  cell   -0e0 | -Inf
+  code   (-0e0) min (-Inf)
+  same-as (-Inf) min (-0e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0077
+  from   law:min-commutes
+  cell   -0e0 | NaN
+  code   (-0e0) min (NaN)
+  same-as (NaN) min (-0e0)
+  oracle rakudo-2026.07 → DIFFER: -0e0 vs NaN
+  oracle rakupp-3.14.0 → DIFFER: -0e0 vs NaN
+  verdict disputed
+  why    the reference itself breaks this law at this cell (-0e0 vs NaN) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0078
+  from   law:min-commutes
+  cell   1e0 | 0
+  code   (1e0) min (0)
+  same-as (0) min (1e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0079
+  from   law:min-commutes
+  cell   1e0 | 1
+  code   (1e0) min (1)
+  same-as (1) min (1e0)
+  oracle rakudo-2026.07 → DIFFER: 1 vs 1e0
+  oracle rakupp-3.14.0 → DIFFER: 1e0 vs 1
+  verdict disputed
+  why    the reference itself breaks this law at this cell (1 vs 1e0) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0080
+  from   law:min-commutes
+  cell   1e0 | -1
+  code   (1e0) min (-1)
+  same-as (-1) min (1e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0081
+  from   law:min-commutes
+  cell   1e0 | 2**64
+  code   (1e0) min (2**64)
+  same-as (2**64) min (1e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0082
+  from   law:min-commutes
+  cell   1e0 | 1/3
+  code   (1e0) min (1/3)
+  same-as (1/3) min (1e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0083
+  from   law:min-commutes
+  cell   1e0 | 0e0
+  code   (1e0) min (0e0)
+  same-as (0e0) min (1e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0084
+  from   law:min-commutes
+  cell   1e0 | -0e0
+  code   (1e0) min (-0e0)
+  same-as (-0e0) min (1e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0085
+  from   law:min-commutes
+  cell   1e0 | 1e0
+  code   (1e0) min (1e0)
+  same-as (1e0) min (1e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0086
+  from   law:min-commutes
+  cell   1e0 | Inf
+  code   (1e0) min (Inf)
+  same-as (Inf) min (1e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0087
+  from   law:min-commutes
+  cell   1e0 | -Inf
+  code   (1e0) min (-Inf)
+  same-as (-Inf) min (1e0)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0088
+  from   law:min-commutes
+  cell   1e0 | NaN
+  code   (1e0) min (NaN)
+  same-as (NaN) min (1e0)
+  oracle rakudo-2026.07 → DIFFER: 1e0 vs NaN
+  oracle rakupp-3.14.0 → DIFFER: 1e0 vs NaN
+  verdict disputed
+  why    the reference itself breaks this law at this cell (1e0 vs NaN) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0089
+  from   law:min-commutes
+  cell   Inf | 0
+  code   (Inf) min (0)
+  same-as (0) min (Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0090
+  from   law:min-commutes
+  cell   Inf | 1
+  code   (Inf) min (1)
+  same-as (1) min (Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0091
+  from   law:min-commutes
+  cell   Inf | -1
+  code   (Inf) min (-1)
+  same-as (-1) min (Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0092
+  from   law:min-commutes
+  cell   Inf | 2**64
+  code   (Inf) min (2**64)
+  same-as (2**64) min (Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0093
+  from   law:min-commutes
+  cell   Inf | 1/3
+  code   (Inf) min (1/3)
+  same-as (1/3) min (Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0094
+  from   law:min-commutes
+  cell   Inf | 0e0
+  code   (Inf) min (0e0)
+  same-as (0e0) min (Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0095
+  from   law:min-commutes
+  cell   Inf | -0e0
+  code   (Inf) min (-0e0)
+  same-as (-0e0) min (Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0096
+  from   law:min-commutes
+  cell   Inf | 1e0
+  code   (Inf) min (1e0)
+  same-as (1e0) min (Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0097
+  from   law:min-commutes
+  cell   Inf | Inf
+  code   (Inf) min (Inf)
+  same-as (Inf) min (Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0098
+  from   law:min-commutes
+  cell   Inf | -Inf
+  code   (Inf) min (-Inf)
+  same-as (-Inf) min (Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0099
+  from   law:min-commutes
+  cell   Inf | NaN
+  code   (Inf) min (NaN)
+  same-as (NaN) min (Inf)
+  oracle rakudo-2026.07 → DIFFER: Inf vs NaN
+  oracle rakupp-3.14.0 → DIFFER: Inf vs NaN
+  verdict disputed
+  why    the reference itself breaks this law at this cell (Inf vs NaN) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0100
+  from   law:min-commutes
+  cell   -Inf | 0
+  code   (-Inf) min (0)
+  same-as (0) min (-Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0101
+  from   law:min-commutes
+  cell   -Inf | 1
+  code   (-Inf) min (1)
+  same-as (1) min (-Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0102
+  from   law:min-commutes
+  cell   -Inf | -1
+  code   (-Inf) min (-1)
+  same-as (-1) min (-Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0103
+  from   law:min-commutes
+  cell   -Inf | 2**64
+  code   (-Inf) min (2**64)
+  same-as (2**64) min (-Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0104
+  from   law:min-commutes
+  cell   -Inf | 1/3
+  code   (-Inf) min (1/3)
+  same-as (1/3) min (-Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0105
+  from   law:min-commutes
+  cell   -Inf | 0e0
+  code   (-Inf) min (0e0)
+  same-as (0e0) min (-Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0106
+  from   law:min-commutes
+  cell   -Inf | -0e0
+  code   (-Inf) min (-0e0)
+  same-as (-0e0) min (-Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0107
+  from   law:min-commutes
+  cell   -Inf | 1e0
+  code   (-Inf) min (1e0)
+  same-as (1e0) min (-Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0108
+  from   law:min-commutes
+  cell   -Inf | Inf
+  code   (-Inf) min (Inf)
+  same-as (Inf) min (-Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0109
+  from   law:min-commutes
+  cell   -Inf | -Inf
+  code   (-Inf) min (-Inf)
+  same-as (-Inf) min (-Inf)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0110
+  from   law:min-commutes
+  cell   -Inf | NaN
+  code   (-Inf) min (NaN)
+  same-as (NaN) min (-Inf)
+  oracle rakudo-2026.07 → DIFFER: -Inf vs NaN
+  oracle rakupp-3.14.0 → DIFFER: -Inf vs NaN
+  verdict disputed
+  why    the reference itself breaks this law at this cell (-Inf vs NaN) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0111
+  from   law:min-commutes
+  cell   NaN | 0
+  code   (NaN) min (0)
+  same-as (0) min (NaN)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → DIFFER: NaN vs 0
+
+- id     0112
+  from   law:min-commutes
+  cell   NaN | 1
+  code   (NaN) min (1)
+  same-as (1) min (NaN)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → DIFFER: NaN vs 1
+
+- id     0113
+  from   law:min-commutes
+  cell   NaN | -1
+  code   (NaN) min (-1)
+  same-as (-1) min (NaN)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → DIFFER: NaN vs -1
+
+- id     0114
+  from   law:min-commutes
+  cell   NaN | 2**64
+  code   (NaN) min (2**64)
+  same-as (2**64) min (NaN)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → DIFFER: NaN vs 18446744073709551616
+
+- id     0115
+  from   law:min-commutes
+  cell   NaN | 1/3
+  code   (NaN) min (1/3)
+  same-as (1/3) min (NaN)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → DIFFER: NaN vs <1/3>
+
+- id     0116
+  from   law:min-commutes
+  cell   NaN | 0e0
+  code   (NaN) min (0e0)
+  same-as (0e0) min (NaN)
+  oracle rakudo-2026.07 → DIFFER: NaN vs 0e0
+  oracle rakupp-3.14.0 → DIFFER: NaN vs 0e0
+  verdict disputed
+  why    the reference itself breaks this law at this cell (NaN vs 0e0) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0117
+  from   law:min-commutes
+  cell   NaN | -0e0
+  code   (NaN) min (-0e0)
+  same-as (-0e0) min (NaN)
+  oracle rakudo-2026.07 → DIFFER: NaN vs -0e0
+  oracle rakupp-3.14.0 → DIFFER: NaN vs -0e0
+  verdict disputed
+  why    the reference itself breaks this law at this cell (NaN vs -0e0) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0118
+  from   law:min-commutes
+  cell   NaN | 1e0
+  code   (NaN) min (1e0)
+  same-as (1e0) min (NaN)
+  oracle rakudo-2026.07 → DIFFER: NaN vs 1e0
+  oracle rakupp-3.14.0 → DIFFER: NaN vs 1e0
+  verdict disputed
+  why    the reference itself breaks this law at this cell (NaN vs 1e0) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0119
+  from   law:min-commutes
+  cell   NaN | Inf
+  code   (NaN) min (Inf)
+  same-as (Inf) min (NaN)
+  oracle rakudo-2026.07 → DIFFER: NaN vs Inf
+  oracle rakupp-3.14.0 → DIFFER: NaN vs Inf
+  verdict disputed
+  why    the reference itself breaks this law at this cell (NaN vs Inf) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0120
+  from   law:min-commutes
+  cell   NaN | -Inf
+  code   (NaN) min (-Inf)
+  same-as (-Inf) min (NaN)
+  oracle rakudo-2026.07 → DIFFER: NaN vs -Inf
+  oracle rakupp-3.14.0 → DIFFER: NaN vs -Inf
+  verdict disputed
+  why    the reference itself breaks this law at this cell (NaN vs -Inf) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
+  ruled  2026-08-14 against rakudo-2026.07
+
+- id     0121
+  from   law:min-commutes
+  cell   NaN | NaN
+  code   (NaN) min (NaN)
+  same-as (NaN) min (NaN)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE

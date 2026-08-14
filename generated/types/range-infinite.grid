@@ -1,0 +1,50 @@
+atom     types/range-infinite
+source   generated
+gen      gen/ladder.raku
+form     ({A}).infinite
+ladder   endless
+
+- id     0001
+  from   ladder:endless
+  cell   (1..Inf)
+  code   ((1..Inf)).infinite
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0002
+  from   ladder:endless
+  cell   (-Inf..0)
+  code   ((-Inf..0)).infinite
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0003
+  from   ladder:endless
+  cell   (-Inf..Inf)
+  code   ((-Inf..Inf)).infinite
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0004
+  from   ladder:endless
+  cell   (1..3)
+  code   ((1..3)).infinite
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0005
+  from   ladder:endless
+  cell   (3..1)
+  code   ((3..1)).infinite
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False

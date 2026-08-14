@@ -1,0 +1,95 @@
+atom     methods/tail
+source   generated
+gen      gen/ladder.raku
+form     ({A}).tail
+ladder   list
+
+- id     0001
+  from   ladder:list
+  cell   ()
+  code   (()).tail
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0002
+  from   ladder:list
+  cell   (1,)
+  code   ((1,)).tail
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0003
+  from   ladder:list
+  cell   (1,2,3)
+  code   ((1,2,3)).tail
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-3.14.0 → 3
+
+- id     0004
+  from   ladder:list
+  cell   [1,2,3]
+  code   ([1,2,3]).tail
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-3.14.0 → 3
+
+- id     0005
+  from   ladder:list
+  cell   (1..3)
+  code   ((1..3)).tail
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-3.14.0 → 3
+
+- id     0006
+  from   ladder:list
+  cell   (1,(2,3))
+  code   ((1,(2,3))).tail
+  is     $(2, 3)
+  type   List
+  oracle rakudo-2026.07 → $(2, 3)
+  oracle rakupp-3.14.0 → $(2, 3).Seq
+
+- id     0007
+  from   ladder:list
+  cell   <a b>
+  code   (<a b>).tail
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0008
+  from   ladder:list
+  cell   (Any,)
+  code   ((Any,)).tail
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0009
+  from   ladder:list
+  cell   (1,Nil,2)
+  code   ((1,Nil,2)).tail
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
+
+- id     0010
+  from   ladder:list
+  cell   (1,"a")
+  code   ((1,"a")).tail
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"

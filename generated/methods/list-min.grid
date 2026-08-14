@@ -1,0 +1,95 @@
+atom     methods/list-min
+source   generated
+gen      gen/ladder.raku
+form     ({A}).min
+ladder   list
+
+- id     0001
+  from   ladder:list
+  cell   ()
+  code   (()).min
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0002
+  from   ladder:list
+  cell   (1,)
+  code   ((1,)).min
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0003
+  from   ladder:list
+  cell   (1,2,3)
+  code   ((1,2,3)).min
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0004
+  from   ladder:list
+  cell   [1,2,3]
+  code   ([1,2,3]).min
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0005
+  from   ladder:list
+  cell   (1..3)
+  code   ((1..3)).min
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0006
+  from   ladder:list
+  cell   (1,(2,3))
+  code   ((1,(2,3))).min
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0007
+  from   ladder:list
+  cell   <a b>
+  code   (<a b>).min
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0008
+  from   ladder:list
+  cell   (Any,)
+  code   ((Any,)).min
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0009
+  from   ladder:list
+  cell   (1,Nil,2)
+  code   ((1,Nil,2)).min
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0010
+  from   ladder:list
+  cell   (1,"a")
+  code   ((1,"a")).min
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1

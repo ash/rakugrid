@@ -1,0 +1,50 @@
+atom     methods/keys
+source   generated
+gen      gen/ladder.raku
+form     ({A}).keys.sort
+ladder   hash
+
+- id     0001
+  from   ladder:hash
+  cell   {}
+  code   ({}).keys.sort
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-3.14.0 → $().Seq
+
+- id     0002
+  from   ladder:hash
+  cell   {a=>1}
+  code   ({a=>1}).keys.sort
+  is     $(("a",).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("a",).Seq)
+  oracle rakupp-3.14.0 → $("a",).Seq
+
+- id     0003
+  from   ladder:hash
+  cell   {a=>1,b=>2}
+  code   ({a=>1,b=>2}).keys.sort
+  is     $(("a", "b").Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("a", "b").Seq)
+  oracle rakupp-3.14.0 → $("a", "b").Seq
+
+- id     0004
+  from   ladder:hash
+  cell   {"" => 1}
+  code   ({"" => 1}).keys.sort
+  is     $(("",).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("",).Seq)
+  oracle rakupp-3.14.0 → $("",).Seq
+
+- id     0005
+  from   ladder:hash
+  cell   {a=>Any}
+  code   ({a=>Any}).keys.sort
+  is     $(("a",).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("a",).Seq)
+  oracle rakupp-3.14.0 → $("a",).Seq

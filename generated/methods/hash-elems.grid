@@ -1,0 +1,50 @@
+atom     methods/hash-elems
+source   generated
+gen      gen/ladder.raku
+form     ({A}).elems
+ladder   hash
+
+- id     0001
+  from   ladder:hash
+  cell   {}
+  code   ({}).elems
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0002
+  from   ladder:hash
+  cell   {a=>1}
+  code   ({a=>1}).elems
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0003
+  from   ladder:hash
+  cell   {a=>1,b=>2}
+  code   ({a=>1,b=>2}).elems
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
+
+- id     0004
+  from   ladder:hash
+  cell   {"" => 1}
+  code   ({"" => 1}).elems
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0005
+  from   ladder:hash
+  cell   {a=>Any}
+  code   ({a=>Any}).elems
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1

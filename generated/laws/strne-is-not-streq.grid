@@ -1,0 +1,397 @@
+atom     laws/strne-is-not-streq
+source   generated
+gen      gen/laws.raku
+law      ({A}) ne ({B})  ===  !(({A}) eq ({B}))
+ladder   string, arity 2
+
+- id     0001
+  from   law:strne-is-not-streq
+  cell   "" | ""
+  code   ("") ne ("")
+  same-as !(("") eq (""))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0002
+  from   law:strne-is-not-streq
+  cell   "" | " "
+  code   ("") ne (" ")
+  same-as !(("") eq (" "))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0003
+  from   law:strne-is-not-streq
+  cell   "" | "0"
+  code   ("") ne ("0")
+  same-as !(("") eq ("0"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0004
+  from   law:strne-is-not-streq
+  cell   "" | "a"
+  code   ("") ne ("a")
+  same-as !(("") eq ("a"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0005
+  from   law:strne-is-not-streq
+  cell   "" | "A"
+  code   ("") ne ("A")
+  same-as !(("") eq ("A"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0006
+  from   law:strne-is-not-streq
+  cell   "" | "abc"
+  code   ("") ne ("abc")
+  same-as !(("") eq ("abc"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0007
+  from   law:strne-is-not-streq
+  cell   "" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ("") ne ("e\c[COMBINING ACUTE ACCENT]")
+  same-as !(("") eq ("e\c[COMBINING ACUTE ACCENT]"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0008
+  from   law:strne-is-not-streq
+  cell   " " | ""
+  code   (" ") ne ("")
+  same-as !((" ") eq (""))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0009
+  from   law:strne-is-not-streq
+  cell   " " | " "
+  code   (" ") ne (" ")
+  same-as !((" ") eq (" "))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0010
+  from   law:strne-is-not-streq
+  cell   " " | "0"
+  code   (" ") ne ("0")
+  same-as !((" ") eq ("0"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0011
+  from   law:strne-is-not-streq
+  cell   " " | "a"
+  code   (" ") ne ("a")
+  same-as !((" ") eq ("a"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0012
+  from   law:strne-is-not-streq
+  cell   " " | "A"
+  code   (" ") ne ("A")
+  same-as !((" ") eq ("A"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0013
+  from   law:strne-is-not-streq
+  cell   " " | "abc"
+  code   (" ") ne ("abc")
+  same-as !((" ") eq ("abc"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0014
+  from   law:strne-is-not-streq
+  cell   " " | "e\c[COMBINING ACUTE ACCENT]"
+  code   (" ") ne ("e\c[COMBINING ACUTE ACCENT]")
+  same-as !((" ") eq ("e\c[COMBINING ACUTE ACCENT]"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0015
+  from   law:strne-is-not-streq
+  cell   "0" | ""
+  code   ("0") ne ("")
+  same-as !(("0") eq (""))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0016
+  from   law:strne-is-not-streq
+  cell   "0" | " "
+  code   ("0") ne (" ")
+  same-as !(("0") eq (" "))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0017
+  from   law:strne-is-not-streq
+  cell   "0" | "0"
+  code   ("0") ne ("0")
+  same-as !(("0") eq ("0"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0018
+  from   law:strne-is-not-streq
+  cell   "0" | "a"
+  code   ("0") ne ("a")
+  same-as !(("0") eq ("a"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0019
+  from   law:strne-is-not-streq
+  cell   "0" | "A"
+  code   ("0") ne ("A")
+  same-as !(("0") eq ("A"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0020
+  from   law:strne-is-not-streq
+  cell   "0" | "abc"
+  code   ("0") ne ("abc")
+  same-as !(("0") eq ("abc"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0021
+  from   law:strne-is-not-streq
+  cell   "0" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ("0") ne ("e\c[COMBINING ACUTE ACCENT]")
+  same-as !(("0") eq ("e\c[COMBINING ACUTE ACCENT]"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0022
+  from   law:strne-is-not-streq
+  cell   "a" | ""
+  code   ("a") ne ("")
+  same-as !(("a") eq (""))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0023
+  from   law:strne-is-not-streq
+  cell   "a" | " "
+  code   ("a") ne (" ")
+  same-as !(("a") eq (" "))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0024
+  from   law:strne-is-not-streq
+  cell   "a" | "0"
+  code   ("a") ne ("0")
+  same-as !(("a") eq ("0"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0025
+  from   law:strne-is-not-streq
+  cell   "a" | "a"
+  code   ("a") ne ("a")
+  same-as !(("a") eq ("a"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0026
+  from   law:strne-is-not-streq
+  cell   "a" | "A"
+  code   ("a") ne ("A")
+  same-as !(("a") eq ("A"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0027
+  from   law:strne-is-not-streq
+  cell   "a" | "abc"
+  code   ("a") ne ("abc")
+  same-as !(("a") eq ("abc"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0028
+  from   law:strne-is-not-streq
+  cell   "a" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ("a") ne ("e\c[COMBINING ACUTE ACCENT]")
+  same-as !(("a") eq ("e\c[COMBINING ACUTE ACCENT]"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0029
+  from   law:strne-is-not-streq
+  cell   "A" | ""
+  code   ("A") ne ("")
+  same-as !(("A") eq (""))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0030
+  from   law:strne-is-not-streq
+  cell   "A" | " "
+  code   ("A") ne (" ")
+  same-as !(("A") eq (" "))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0031
+  from   law:strne-is-not-streq
+  cell   "A" | "0"
+  code   ("A") ne ("0")
+  same-as !(("A") eq ("0"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0032
+  from   law:strne-is-not-streq
+  cell   "A" | "a"
+  code   ("A") ne ("a")
+  same-as !(("A") eq ("a"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0033
+  from   law:strne-is-not-streq
+  cell   "A" | "A"
+  code   ("A") ne ("A")
+  same-as !(("A") eq ("A"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0034
+  from   law:strne-is-not-streq
+  cell   "A" | "abc"
+  code   ("A") ne ("abc")
+  same-as !(("A") eq ("abc"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0035
+  from   law:strne-is-not-streq
+  cell   "A" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ("A") ne ("e\c[COMBINING ACUTE ACCENT]")
+  same-as !(("A") eq ("e\c[COMBINING ACUTE ACCENT]"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0036
+  from   law:strne-is-not-streq
+  cell   "abc" | ""
+  code   ("abc") ne ("")
+  same-as !(("abc") eq (""))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0037
+  from   law:strne-is-not-streq
+  cell   "abc" | " "
+  code   ("abc") ne (" ")
+  same-as !(("abc") eq (" "))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0038
+  from   law:strne-is-not-streq
+  cell   "abc" | "0"
+  code   ("abc") ne ("0")
+  same-as !(("abc") eq ("0"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0039
+  from   law:strne-is-not-streq
+  cell   "abc" | "a"
+  code   ("abc") ne ("a")
+  same-as !(("abc") eq ("a"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0040
+  from   law:strne-is-not-streq
+  cell   "abc" | "A"
+  code   ("abc") ne ("A")
+  same-as !(("abc") eq ("A"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0041
+  from   law:strne-is-not-streq
+  cell   "abc" | "abc"
+  code   ("abc") ne ("abc")
+  same-as !(("abc") eq ("abc"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0042
+  from   law:strne-is-not-streq
+  cell   "abc" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ("abc") ne ("e\c[COMBINING ACUTE ACCENT]")
+  same-as !(("abc") eq ("e\c[COMBINING ACUTE ACCENT]"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0043
+  from   law:strne-is-not-streq
+  cell   "e\c[COMBINING ACUTE ACCENT]" | ""
+  code   ("e\c[COMBINING ACUTE ACCENT]") ne ("")
+  same-as !(("e\c[COMBINING ACUTE ACCENT]") eq (""))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0044
+  from   law:strne-is-not-streq
+  cell   "e\c[COMBINING ACUTE ACCENT]" | " "
+  code   ("e\c[COMBINING ACUTE ACCENT]") ne (" ")
+  same-as !(("e\c[COMBINING ACUTE ACCENT]") eq (" "))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0045
+  from   law:strne-is-not-streq
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "0"
+  code   ("e\c[COMBINING ACUTE ACCENT]") ne ("0")
+  same-as !(("e\c[COMBINING ACUTE ACCENT]") eq ("0"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0046
+  from   law:strne-is-not-streq
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "a"
+  code   ("e\c[COMBINING ACUTE ACCENT]") ne ("a")
+  same-as !(("e\c[COMBINING ACUTE ACCENT]") eq ("a"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0047
+  from   law:strne-is-not-streq
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "A"
+  code   ("e\c[COMBINING ACUTE ACCENT]") ne ("A")
+  same-as !(("e\c[COMBINING ACUTE ACCENT]") eq ("A"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0048
+  from   law:strne-is-not-streq
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "abc"
+  code   ("e\c[COMBINING ACUTE ACCENT]") ne ("abc")
+  same-as !(("e\c[COMBINING ACUTE ACCENT]") eq ("abc"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0049
+  from   law:strne-is-not-streq
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ("e\c[COMBINING ACUTE ACCENT]") ne ("e\c[COMBINING ACUTE ACCENT]")
+  same-as !(("e\c[COMBINING ACUTE ACCENT]") eq ("e\c[COMBINING ACUTE ACCENT]"))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE

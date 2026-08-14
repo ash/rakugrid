@@ -1,0 +1,47 @@
+atom     types/range-bounds-elems
+source   generated
+gen      gen/ladder.raku
+form     ({A}).elems
+ladder   endless
+
+- id     0001
+  from   ladder:endless
+  cell   (1..Inf)
+  code   ((1..Inf)).elems
+  throws X::Cannot::Lazy
+  oracle rakudo-2026.07 → ERR:X::Cannot::Lazy
+  oracle rakupp-3.14.0 → Inf
+
+- id     0002
+  from   ladder:endless
+  cell   (-Inf..0)
+  code   ((-Inf..0)).elems
+  throws X::Cannot::Lazy
+  oracle rakudo-2026.07 → ERR:X::Cannot::Lazy
+  oracle rakupp-3.14.0 → 10000
+
+- id     0003
+  from   ladder:endless
+  cell   (-Inf..Inf)
+  code   ((-Inf..Inf)).elems
+  throws X::Cannot::Lazy
+  oracle rakudo-2026.07 → ERR:X::Cannot::Lazy
+  oracle rakupp-3.14.0 → Inf
+
+- id     0004
+  from   ladder:endless
+  cell   (1..3)
+  code   ((1..3)).elems
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-3.14.0 → 3
+
+- id     0005
+  from   ladder:endless
+  cell   (3..1)
+  code   ((3..1)).elems
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0

@@ -1,0 +1,77 @@
+atom     methods/ord
+source   generated
+gen      gen/ladder.raku
+form     ({A}).ord
+ladder   string
+
+- id     0001
+  from   ladder:string
+  cell   ""
+  code   ("").ord
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0002
+  from   ladder:string
+  cell   " "
+  code   (" ").ord
+  is     32
+  type   Int
+  oracle rakudo-2026.07 → 32
+  oracle rakupp-3.14.0 → 32
+
+- id     0003
+  from   ladder:string
+  cell   "0"
+  code   ("0").ord
+  is     48
+  type   Int
+  oracle rakudo-2026.07 → 48
+  oracle rakupp-3.14.0 → 48
+
+- id     0004
+  from   ladder:string
+  cell   "a"
+  code   ("a").ord
+  is     97
+  type   Int
+  oracle rakudo-2026.07 → 97
+  oracle rakupp-3.14.0 → 97
+
+- id     0005
+  from   ladder:string
+  cell   "A"
+  code   ("A").ord
+  is     65
+  type   Int
+  oracle rakudo-2026.07 → 65
+  oracle rakupp-3.14.0 → 65
+
+- id     0006
+  from   ladder:string
+  cell   "abc"
+  code   ("abc").ord
+  is     97
+  type   Int
+  oracle rakudo-2026.07 → 97
+  oracle rakupp-3.14.0 → 97
+
+- id     0007
+  from   ladder:string
+  cell   "e\c[COMBINING ACUTE ACCENT]"
+  code   ("e\c[COMBINING ACUTE ACCENT]").ord
+  is     233
+  type   Int
+  oracle rakudo-2026.07 → 233
+  oracle rakupp-3.14.0 → 233
+
+- id     0008
+  from   ladder:string
+  cell   "\0"
+  code   ("\0").ord
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0

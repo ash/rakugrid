@@ -1,0 +1,50 @@
+atom     methods/hash-raku
+source   generated
+gen      gen/ladder.raku
+form     ({A}).raku
+ladder   hash
+
+- id     0001
+  from   ladder:hash
+  cell   {}
+  code   ({}).raku
+  is     "\{}"
+  type   Str
+  oracle rakudo-2026.07 → "\{}"
+  oracle rakupp-3.14.0 → "\{}"
+
+- id     0002
+  from   ladder:hash
+  cell   {a=>1}
+  code   ({a=>1}).raku
+  is     "\{:a(1)}"
+  type   Str
+  oracle rakudo-2026.07 → "\{:a(1)}"
+  oracle rakupp-3.14.0 → "\{:a(1)}"
+
+- id     0003
+  from   ladder:hash
+  cell   {a=>1,b=>2}
+  code   ({a=>1,b=>2}).raku
+  is     "\{:a(1), :b(2)}"
+  type   Str
+  oracle rakudo-2026.07 → "\{:a(1), :b(2)}"
+  oracle rakupp-3.14.0 → "\{:a(1), :b(2)}"
+
+- id     0004
+  from   ladder:hash
+  cell   {"" => 1}
+  code   ({"" => 1}).raku
+  is     "\{\"\" => 1}"
+  type   Str
+  oracle rakudo-2026.07 → "\{\"\" => 1}"
+  oracle rakupp-3.14.0 → "\{\"\" => 1}"
+
+- id     0005
+  from   ladder:hash
+  cell   {a=>Any}
+  code   ({a=>Any}).raku
+  is     "\{:a(Any)}"
+  type   Str
+  oracle rakudo-2026.07 → "\{:a(Any)}"
+  oracle rakupp-3.14.0 → "\{:a(Any)}"

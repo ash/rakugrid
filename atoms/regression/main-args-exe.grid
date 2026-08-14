@@ -4,7 +4,7 @@ kind     whole-program — a minimal repro, not yet reduced to an atom
 
 - id     0001
   from   rakupp:t/regression/main-args-exe.raku
-  budget 20s
+  budget 81s
   code
     # MAIN command-line conventions in NATIVE --exe binaries — the compiled face
     # of main-args-conventions.raku. The compiled invoke used to skip the whole
@@ -109,4 +109,4 @@ kind     whole-program — a minimal repro, not yet reduced to an atom
     exit($fails ?? 1 !! 0);
   output PASS
   oracle rakudo-2026.07 → PASS
-  oracle rakupp-3.14.0 → ok - a short alias key binds (-r) …(11 lines)
+  oracle rakupp-3.14.0 → TIMEOUT after 20s

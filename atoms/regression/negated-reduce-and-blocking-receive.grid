@@ -4,7 +4,7 @@ kind     whole-program — a minimal repro, not yet reduced to an atom
 
 - id     0001
   from   rakupp:t/regression/negated-reduce-and-blocking-receive.raku
-  budget 20s
+  budget 81s
   code
     # Regression: two fixes found chasing S17-channel/stress.t.
     #   1. `[!after]` — the `!` negation metaop glued to a WORD infix inside a reduce

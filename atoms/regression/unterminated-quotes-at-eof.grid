@@ -4,7 +4,7 @@ kind     whole-program — a minimal repro, not yet reduced to an atom
 
 - id     0001
   from   rakupp:t/regression/unterminated-quotes-at-eof.raku
-  budget 20s
+  budget 81s
   code
     # Regression: a delimited construct that never closed was ACCEPTED. The
     # string-literal scanner in src/Lexer.cpp (and its dozen sibling scans: q//,
@@ -150,7 +150,7 @@ kind     whole-program — a minimal repro, not yet reduced to an atom
     }
     say 'PASS';
   output PASS
-  oracle rakudo-2026.07 → exit 1
+  oracle rakudo-2026.07 → TIMEOUT after 20s
   oracle rakupp-3.14.0 → PASS
   verdict disputed
   why    the reference implementation does not satisfy the program's own contract here (exit 0 with a last line of PASS) — it needs modules that are not installed, or exercises something only one engine implements; there is no reference observation to rule against

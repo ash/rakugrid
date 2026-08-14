@@ -1,0 +1,61 @@
+atom     laws/flip-is-involution
+source   generated
+gen      gen/laws.raku
+law      ({A}).flip.flip  ===  ({A}).Str
+ladder   string, arity 1
+
+- id     0001
+  from   law:flip-is-involution
+  cell   ""
+  code   ("").flip.flip
+  same-as ("").Str
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0002
+  from   law:flip-is-involution
+  cell   " "
+  code   (" ").flip.flip
+  same-as (" ").Str
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0003
+  from   law:flip-is-involution
+  cell   "0"
+  code   ("0").flip.flip
+  same-as ("0").Str
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0004
+  from   law:flip-is-involution
+  cell   "a"
+  code   ("a").flip.flip
+  same-as ("a").Str
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0005
+  from   law:flip-is-involution
+  cell   "A"
+  code   ("A").flip.flip
+  same-as ("A").Str
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0006
+  from   law:flip-is-involution
+  cell   "abc"
+  code   ("abc").flip.flip
+  same-as ("abc").Str
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0007
+  from   law:flip-is-involution
+  cell   "e\c[COMBINING ACUTE ACCENT]"
+  code   ("e\c[COMBINING ACUTE ACCENT]").flip.flip
+  same-as ("e\c[COMBINING ACUTE ACCENT]").Str
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE

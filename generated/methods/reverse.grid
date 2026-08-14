@@ -1,0 +1,95 @@
+atom     methods/reverse
+source   generated
+gen      gen/ladder.raku
+form     ({A}).reverse
+ladder   list
+
+- id     0001
+  from   ladder:list
+  cell   ()
+  code   (()).reverse
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-3.14.0 → $().Seq
+
+- id     0002
+  from   ladder:list
+  cell   (1,)
+  code   ((1,)).reverse
+  is     $((1,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1,).Seq)
+  oracle rakupp-3.14.0 → $(1,).Seq
+
+- id     0003
+  from   ladder:list
+  cell   (1,2,3)
+  code   ((1,2,3)).reverse
+  is     $((3, 2, 1).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((3, 2, 1).Seq)
+  oracle rakupp-3.14.0 → $(3, 2, 1).Seq
+
+- id     0004
+  from   ladder:list
+  cell   [1,2,3]
+  code   ([1,2,3]).reverse
+  is     $((3, 2, 1).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((3, 2, 1).Seq)
+  oracle rakupp-3.14.0 → $(3, 2, 1).Seq
+
+- id     0005
+  from   ladder:list
+  cell   (1..3)
+  code   ((1..3)).reverse
+  is     $((3, 2, 1).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((3, 2, 1).Seq)
+  oracle rakupp-3.14.0 → $(3, 2, 1).Seq
+
+- id     0006
+  from   ladder:list
+  cell   (1,(2,3))
+  code   ((1,(2,3))).reverse
+  is     $(((2, 3), 1).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((2, 3), 1).Seq)
+  oracle rakupp-3.14.0 → $((2, 3), 1).Seq
+
+- id     0007
+  from   ladder:list
+  cell   <a b>
+  code   (<a b>).reverse
+  is     $(("b", "a").Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("b", "a").Seq)
+  oracle rakupp-3.14.0 → $("b", "a").Seq
+
+- id     0008
+  from   ladder:list
+  cell   (Any,)
+  code   ((Any,)).reverse
+  is     $((Any,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Any,).Seq)
+  oracle rakupp-3.14.0 → $(Any,).Seq
+
+- id     0009
+  from   ladder:list
+  cell   (1,Nil,2)
+  code   ((1,Nil,2)).reverse
+  is     $((2, Nil, 1).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((2, Nil, 1).Seq)
+  oracle rakupp-3.14.0 → $(2, Nil, 1).Seq
+
+- id     0010
+  from   ladder:list
+  cell   (1,"a")
+  code   ((1,"a")).reverse
+  is     $(("a", 1).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("a", 1).Seq)
+  oracle rakupp-3.14.0 → $("a", 1).Seq

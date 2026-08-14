@@ -1,0 +1,77 @@
+atom     methods/str-index
+source   generated
+gen      gen/ladder.raku
+form     ({A}).index("a")
+ladder   string
+
+- id     0001
+  from   ladder:string
+  cell   ""
+  code   ("").index("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0002
+  from   ladder:string
+  cell   " "
+  code   (" ").index("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0003
+  from   ladder:string
+  cell   "0"
+  code   ("0").index("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0004
+  from   ladder:string
+  cell   "a"
+  code   ("a").index("a")
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0005
+  from   ladder:string
+  cell   "A"
+  code   ("A").index("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0006
+  from   ladder:string
+  cell   "abc"
+  code   ("abc").index("a")
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0007
+  from   ladder:string
+  cell   "e\c[COMBINING ACUTE ACCENT]"
+  code   ("e\c[COMBINING ACUTE ACCENT]").index("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0008
+  from   ladder:string
+  cell   "\0"
+  code   ("\0").index("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any

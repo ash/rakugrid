@@ -1,0 +1,137 @@
+atom     syntax/phaser-sub
+source   generated
+gen      gen/syntax.raku
+kind     parse grid — compiled with -c, never run
+
+- id     0001
+  from   syntax:BEGIN in a sub
+  code   sub f() { BEGIN { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0002
+  from   syntax:CHECK in a sub
+  code   sub f() { CHECK { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0003
+  from   syntax:INIT in a sub
+  code   sub f() { INIT { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0004
+  from   syntax:END in a sub
+  code   sub f() { END { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0005
+  from   syntax:ENTER in a sub
+  code   sub f() { ENTER { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0006
+  from   syntax:LEAVE in a sub
+  code   sub f() { LEAVE { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0007
+  from   syntax:KEEP in a sub
+  code   sub f() { KEEP { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0008
+  from   syntax:UNDO in a sub
+  code   sub f() { UNDO { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0009
+  from   syntax:FIRST in a sub
+  code   sub f() { FIRST { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0010
+  from   syntax:NEXT in a sub
+  code   sub f() { NEXT { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0011
+  from   syntax:LAST in a sub
+  code   sub f() { LAST { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0012
+  from   syntax:PRE in a sub
+  code   sub f() { PRE { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0013
+  from   syntax:POST in a sub
+  code   sub f() { POST { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0014
+  from   syntax:CATCH in a sub
+  code   sub f() { CATCH { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0015
+  from   syntax:CONTROL in a sub
+  code   sub f() { CONTROL { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0016
+  from   syntax:DOC in a sub
+  code   sub f() { DOC { 1 } }
+  no-parse the reference rejects this spelling
+  oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-294.raku
+  oracle rakupp-3.14.0 → compiles
+
+- id     0017
+  from   syntax:QUIT in a sub
+  code   sub f() { QUIT { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0018
+  from   syntax:CLOSE in a sub
+  code   sub f() { CLOSE { 1 } }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-3.14.0 → compiles
+
+- id     0019
+  from   syntax:COMPOSE in a sub
+  code   sub f() { COMPOSE { 1 } }
+  no-parse the reference rejects this spelling
+  oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-297.raku
+  oracle rakupp-3.14.0 → compiles

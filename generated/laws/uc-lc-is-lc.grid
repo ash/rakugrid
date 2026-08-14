@@ -1,0 +1,61 @@
+atom     laws/uc-lc-is-lc
+source   generated
+gen      gen/laws.raku
+law      ({A}).uc.lc  ===  ({A}).lc
+ladder   string, arity 1
+
+- id     0001
+  from   law:uc-lc-is-lc
+  cell   ""
+  code   ("").uc.lc
+  same-as ("").lc
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0002
+  from   law:uc-lc-is-lc
+  cell   " "
+  code   (" ").uc.lc
+  same-as (" ").lc
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0003
+  from   law:uc-lc-is-lc
+  cell   "0"
+  code   ("0").uc.lc
+  same-as ("0").lc
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0004
+  from   law:uc-lc-is-lc
+  cell   "a"
+  code   ("a").uc.lc
+  same-as ("a").lc
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0005
+  from   law:uc-lc-is-lc
+  cell   "A"
+  code   ("A").uc.lc
+  same-as ("A").lc
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0006
+  from   law:uc-lc-is-lc
+  cell   "abc"
+  code   ("abc").uc.lc
+  same-as ("abc").lc
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0007
+  from   law:uc-lc-is-lc
+  cell   "e\c[COMBINING ACUTE ACCENT]"
+  code   ("e\c[COMBINING ACUTE ACCENT]").uc.lc
+  same-as ("e\c[COMBINING ACUTE ACCENT]").lc
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE

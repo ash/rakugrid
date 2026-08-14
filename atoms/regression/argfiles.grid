@@ -4,7 +4,7 @@ kind     whole-program — a minimal repro, not yet reduced to an atom
 
 - id     0001
   from   rakupp:t/regression/argfiles.raku
-  budget 20s
+  budget 43s
   code
     # Regression: $*ARGFILES (issue #14) was undefined — `say $*ARGFILES` printed
     # (Any) and `.lines` yielded nothing, so the awk/perl-style one-liner

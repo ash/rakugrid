@@ -1,0 +1,50 @@
+atom     types/range-bounds-max
+source   generated
+gen      gen/ladder.raku
+form     ({A}).max
+ladder   endless
+
+- id     0001
+  from   ladder:endless
+  cell   (1..Inf)
+  code   ((1..Inf)).max
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0002
+  from   ladder:endless
+  cell   (-Inf..0)
+  code   ((-Inf..0)).max
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → -9223372036854765809
+
+- id     0003
+  from   ladder:endless
+  cell   (-Inf..Inf)
+  code   ((-Inf..Inf)).max
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0004
+  from   ladder:endless
+  cell   (1..3)
+  code   ((1..3)).max
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-3.14.0 → 3
+
+- id     0005
+  from   ladder:endless
+  cell   (3..1)
+  code   ((3..1)).max
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1

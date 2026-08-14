@@ -33,7 +33,22 @@ constant %LADDERS =
     mixed   => ['0', '1', '-1', '0e0', 'NaN', '""', '"0"', '"a"', 'True', 'False',
                 'Nil', 'Any', '()', '(1,)', '{}'],
 
-    bool    => ['True', 'False', '0', '1', '""', '"0"', 'Nil', 'Any'];
+    bool    => ['True', 'False', '0', '1', '""', '"0"', 'Nil', 'Any'],
+
+    # finite only: an endless list would hang anything that walks it
+    list    => ['()', '(1,)', '(1,2,3)', '[1,2,3]', '(1..3)', '(1,(2,3))',
+                '<a b>', '(Any,)', '(1,Nil,2)', '(1,"a")'],
+
+    hash    => ['{}', '{a=>1}', '{a=>1,b=>2}', '{"" => 1}', '{a=>Any}'],
+
+    # walked by the method, so bounded
+    range   => ['(1..3)', '(1^..3)', '(1..^3)', '(3..1)', '(1..1)', '("a".."c")'],
+
+    # only for methods that answer from the bounds without walking
+    endless => ['(1..Inf)', '(-Inf..0)', '(-Inf..Inf)', '(1..3)', '(3..1)'],
+
+    # indices, including the ones that fall outside
+    index   => ['0', '1', '2', '-1', '99', '1/2', 'Inf'];
 
 # atom => [ form, left ladder, right ladder ].  `{A}` and `{B}` are the operands;
 # a spec with no `{B}` is unary and produces one row rather than a cross.
@@ -107,14 +122,88 @@ constant @SPECS =
     { atom => 'methods/lc',                form => '({A}).lc',        left => 'string'  },
     { atom => 'methods/flip',              form => '({A}).flip',      left => 'string'  },
     { atom => 'methods/trim',              form => '({A}).trim',      left => 'string'  },
-    { atom => 'methods/ords',              form => '({A}).ords',      left => 'string'  };
+    { atom => 'methods/ords',              form => '({A}).ords',      left => 'string'  },
+    # --- list methods -----------------------------------------------------
+    { atom => 'methods/elems',             form => '({A}).elems',     left => 'list'    },
+    { atom => 'methods/list-Bool',         form => '({A}).Bool',      left => 'list'    },
+    { atom => 'methods/head',              form => '({A}).head',      left => 'list'    },
+    { atom => 'methods/tail',              form => '({A}).tail',      left => 'list'    },
+    { atom => 'methods/reverse',           form => '({A}).reverse',   left => 'list'    },
+    { atom => 'methods/sort',              form => '({A}).sort',      left => 'list'    },
+    { atom => 'methods/unique',            form => '({A}).unique',    left => 'list'    },
+    { atom => 'methods/flat',              form => '({A}).flat',      left => 'list'    },
+    { atom => 'methods/join',              form => '({A}).join(",")', left => 'list'    },
+    { atom => 'methods/list-min',          form => '({A}).min',       left => 'list'    },
+    { atom => 'methods/list-max',          form => '({A}).max',       left => 'list'    },
+    { atom => 'methods/sum',               form => '({A}).sum',       left => 'list'    },
+    { atom => 'methods/list-Str',          form => '({A}).Str',       left => 'list'    },
+    { atom => 'methods/list-raku',         form => '({A}).raku',      left => 'list'    },
+    { atom => 'methods/index-into',        form => '({A})[{B}]',      left => 'list',   right => 'index' },
+
+    # --- hash methods -----------------------------------------------------
+    { atom => 'methods/hash-elems',        form => '({A}).elems',     left => 'hash'    },
+    { atom => 'methods/hash-Bool',         form => '({A}).Bool',      left => 'hash'    },
+    { atom => 'methods/keys',              form => '({A}).keys.sort', left => 'hash'    },
+    { atom => 'methods/values',            form => '({A}).values.sort(*.raku)', left => 'hash' },
+    { atom => 'methods/antipairs',         form => '({A}).antipairs.sort(*.raku)', left => 'hash' },
+    { atom => 'methods/hash-raku',         form => '({A}).raku',      left => 'hash'    },
+
+    # --- ranges -----------------------------------------------------------
+    { atom => 'types/range-elems',         form => '({A}).elems',     left => 'range'   },
+    { atom => 'types/range-list',          form => '({A}).list',      left => 'range'   },
+    { atom => 'types/range-Bool',          form => '({A}).Bool',      left => 'range'   },
+    { atom => 'types/range-reverse',       form => '({A}).reverse',   left => 'range'   },
+    { atom => 'types/range-bounds-min',    form => '({A}).min',       left => 'endless' },
+    { atom => 'types/range-bounds-max',    form => '({A}).max',       left => 'endless' },
+    { atom => 'types/range-infinite',      form => '({A}).infinite',  left => 'endless' },
+    { atom => 'types/range-bounds-elems',  form => '({A}).elems',     left => 'endless' },
+
+    # --- matching ---------------------------------------------------------
+    { atom => 'operators/infix-smartmatch', form => '({A}) ~~ ({B})', left => 'mixed',  right => 'mixed' },
+    { atom => 'operators/infix-str-cmp',   form => '({A}) cmp ({B})', left => 'string', right => 'string' },
+
+    # --- two-argument string methods --------------------------------------
+    { atom => 'methods/substr',            form => '({A}).substr({B})',  left => 'string', right => 'index' },
+    { atom => 'methods/str-index',         form => '({A}).index("a")',   left => 'string'  },
+    { atom => 'methods/split',             form => '({A}).split("")',    left => 'string'  },
+    { atom => 'methods/comb',              form => '({A}).comb',         left => 'string'  },
+    { atom => 'methods/ord',               form => '({A}).ord',          left => 'string'  },
+    { atom => 'methods/starts-with',       form => '({A}).starts-with({B})', left => 'string', right => 'string' },
+    { atom => 'methods/str-contains',      form => '({A}).contains({B})',    left => 'string', right => 'string' },
+
+    # --- introspection ----------------------------------------------------
+    { atom => 'methods/WHAT-name',         form => '({A}).WHAT.^name',   left => 'mixed'   },
+    { atom => 'methods/raku-roundtrip',    form => '({A}).raku',         left => 'mixed'   },
+    { atom => 'methods/gist',              form => '({A}).gist',         left => 'mixed'   },
+    { atom => 'methods/WHICH',             form => '({A}).WHICH.Str',    left => 'mixed'   };
+
 
 # Flushed after every line on purpose: an engine that dies mid-probe takes its
 # buffered output with it, and then the crash looks like 3,000 missing
 # observations instead of one.
+# Two questions per expression, not one: does it COMPILE, and what does it do?
+# `try EVAL` cannot tell them apart — it catches a compile-time failure as a
+# runtime exception, and the cell then looks like `throws` when in truth the
+# expression cannot be compiled at all. Inlined into a dense program that kills
+# every other test in the file. Compiling `sub { EXPR }` answers the first
+# question without running anything.
 constant $PROBE = q:to/END/;
     use MONKEY-SEE-NO-EVAL;
     for @*ARGS[0].IO.lines -> $expr {
+        my $cmsg = '';
+        my $compiles = 1;
+        {
+            try EVAL "sub \{ $expr \}";
+            if $! {
+                $compiles = 0;
+                $cmsg = ($!.message.lines[0] // '').subst("\t", ' ', :g);
+            }
+        }
+        if !$compiles {
+            say join("\t", $expr, 'NOCOMPILE', '-', $cmsg);
+            $*OUT.flush;
+            next;
+        }
         my $r = try EVAL $expr;
         if $! {
             say join("\t", $expr, 'ERR:' ~ $!.^name, '-');
@@ -146,21 +235,38 @@ sub engine-id($cmd) {
     return ($name || 'unknown') ~ '-' ~ ($ver || 'unknown');
 }
 
-sub run-batch($cmd, @exprs, $tmp) {
+sub sh-quote($s) {
+    return "'" ~ $s.subst("'", "'\\''", :g) ~ "'";
+}
+
+my $GUARD = 0;
+
+# Guarded, and through files rather than pipes: a probe that hangs or is killed
+# can leave a descendant holding an inherited pipe, and the read then waits on
+# an EOF that never comes.
+sub run-batch($cmd, @exprs, $tmp, $secs = 180) {
     my $probe = $tmp.add('probe.raku');
     my $list  = $tmp.add('exprs.txt');
     $probe.spurt($PROBE);
     $list.spurt(@exprs.join("\n") ~ "\n");
 
-    my $p = run($cmd, $probe.absolute, $list.absolute, :out, :err);
-    my $out = $p.out.slurp(:close);
-    $p.err.slurp(:close);
+    my $base = $tmp.add('probe-' ~ $*PID ~ '-' ~ $GUARD++).absolute;
+    my $line = "{ sh-quote($cmd) } { sh-quote($probe.absolute) } { sh-quote($list.absolute) }";
+    my $script = "exec >/dev/null 2>&1; set -m 2>/dev/null || true; "
+               ~ "$line > { sh-quote($base ~ '.out') } 2> { sh-quote($base ~ '.err') } & p=\$!; "
+               ~ "( sleep $secs; kill -9 -\$p 2>/dev/null || kill -9 \$p 2>/dev/null ) & w=\$!; "
+               ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; exit \$rc";
+
+    my $p = run('/bin/sh', '-c', $script);
+    my $out = ($base ~ '.out').IO.e ?? ($base ~ '.out').IO.slurp !! '';
+    ($base ~ '.out').IO.unlink if ($base ~ '.out').IO.e;
+    ($base ~ '.err').IO.unlink if ($base ~ '.err').IO.e;
 
     my %by-expr;
     for $out.lines -> $l {
         my @f = $l.split("\t");
         next unless @f >= 3;
-        %by-expr{@f[0]} = { value => @f[1], type => @f[2] };
+        %by-expr{@f[0]} = { value => @f[1], type => @f[2], msg => (@f[3] // '') };
     }
     return { seen => %by-expr, exit => $p.exitcode };
 }
@@ -185,20 +291,60 @@ sub observe($cmd, @exprs, $tmp) {
         # with per-line flushing, the first unobserved expression is the one
         # that killed the run
         my $bad  = @missing[0];
-        my %solo = run-batch($cmd, [$bad], $tmp);
+        my %solo = run-batch($cmd, [$bad], $tmp, 15);
         if %solo<seen>{$bad} {
             %seen{$bad} = %solo<seen>{$bad};
         }
         else {
-            %seen{$bad} = { value => 'CRASH:' ~ %solo<exit>, type => '-' };
+            my $how = %solo<exit> == 137 ?? 'HANG' !! 'CRASH:' ~ %solo<exit>;
+            %seen{$bad} = { value => $how, type => '-' };
             $crashes++;
-            note "#   crash (exit { %solo<exit> }): $bad";
+            note "#   { $how.lc } : $bad";
         }
         @todo = @missing.elems > 1 ?? @missing[1 .. *] !! [];
     }
 
     note "#   $crashes crash{ $crashes == 1 ?? '' !! 'es' } recorded" if $crashes;
     return %seen;
+}
+
+
+# EVAL is not the same compiler context as a file: Rakudo compiles
+# `sub { (0) ~~ (Nil) }` from a file happily and dies on the identical text
+# under EVAL. So a NOCOMPILE flagged by the batch probe is only a CANDIDATE —
+# it is confirmed by compiling a real file, the way `rakugrid fire` will. Same
+# lesson as staging: capture the observation the way the test reproduces it.
+sub run-cmd($cmd, @args, $tmp, $secs = 15) {
+    my $base = $tmp.add('cmd-' ~ $*PID ~ '-' ~ $GUARD++).absolute;
+    my $line = ([$cmd, |@args].map({ sh-quote($_) })).join(' ');
+    my $script = "exec >/dev/null 2>&1; set -m 2>/dev/null || true; "
+               ~ "$line > { sh-quote($base ~ '.out') } 2> { sh-quote($base ~ '.err') } & p=\$!; "
+               ~ "( sleep $secs; kill -9 -\$p 2>/dev/null || kill -9 \$p 2>/dev/null ) & w=\$!; "
+               ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; exit \$rc";
+    my $p = run('/bin/sh', '-c', $script);
+    my $out = ($base ~ '.out').IO.e ?? ($base ~ '.out').IO.slurp !! '';
+    my $err = ($base ~ '.err').IO.e ?? ($base ~ '.err').IO.slurp !! '';
+    ($base ~ '.out').IO.unlink if ($base ~ '.out').IO.e;
+    ($base ~ '.err').IO.unlink if ($base ~ '.err').IO.e;
+    return { out => $out, err => $err, exit => $p.exitcode };
+}
+
+sub probe-file($cmd, $expr, $tmp) {
+    my $f = $tmp.add('confirm.raku');
+    $f.spurt("my \$r = try \{ $expr \};\n"
+           ~ "if \$\! \{ say 'ERR:' ~ \$\!.^name ~ \"\\t-\" \}\n"
+           ~ "else \{ say \$r.raku ~ \"\\t\" ~ \$r.WHAT.^name \}\n");
+
+    my %c = run-cmd($cmd, ['-c', $f.absolute], $tmp);
+    if %c<exit> != 0 {
+        my $msg = (%c<err> ~ %c<out>).lines.grep({ .trim }).head(2).join(' ').subst("\t", ' ', :g);
+        return { value => 'NOCOMPILE', type => '-', msg => $msg };
+    }
+
+    my %r = run-cmd($cmd, [$f.absolute], $tmp);
+    my @f = (%r<out>.lines[0] // '').split("\t");
+    return { value => 'CRASH:' ~ %r<exit>, type => '-', msg => '' } unless @f >= 2;
+    return { value => @f[0], type => @f[1], msg => '' };
 }
 
 sub build-cells(%spec) {
@@ -254,6 +400,38 @@ for @engines -> $e {
 }
 my $ref = @obs[0];
 
+# The reference is probed TWICE. An expression whose observation changes between
+# two identical runs cannot be asserted at all — .WHICH on a reference type
+# carries an address, and a test built from one run of it is flaky by
+# construction. Those cells are parked, not silently dropped.
+# A cell the batch probe could not answer is a CANDIDATE too, not a dead end.
+# `last` outside a loop kills the probe process, but it is a clean compile-time
+# error in a real file — parking it would have hidden a perfectly good test.
+my @candidates = @all.grep({
+    my $v = @obs[0]{$_} ?? @obs[0]{$_}<value> !! '';
+    $v eq 'NOCOMPILE' || $v.starts-with('CRASH') || $v eq 'HANG'
+});
+if @candidates {
+    say "# confirming { @candidates.elems } compile-failure candidate{ @candidates == 1 ?? '' !! 's' } against real files …";
+    my $overturned = 0;
+    for @candidates -> $expr {
+        for ^@engines -> $e {
+            my %real = probe-file(@engines[$e], $expr, $tmp);
+            $overturned++ if $e == 0 && %real<value> ne 'NOCOMPILE';
+            @obs[$e]{$expr} = %real;
+        }
+    }
+    say "#   $overturned were EVAL artefacts, not compile failures" if $overturned;
+}
+
+say "# re-probing { @engines[0] } to check the observations reproduce …";
+my %again = observe(@engines[0], @all, $tmp);
+for @candidates -> $expr {
+    %again{$expr} = @obs[0]{$expr};      # already confirmed against a real file
+}
+my $unstable = 0;
+my $noanswer = 0;
+
 my $files = 0;
 my $tests = 0;
 
@@ -286,20 +464,55 @@ for @SPECS -> %spec {
         @out.push: "- id     { sprintf('%04d', $n) }";
         @out.push: "  from   ladder:{ %spec<left> }{ $binary ?? '×' ~ %spec<right> !! '' }";
         @out.push: $binary ?? "  cell   { %c<a> } | { %c<b> }" !! "  cell   { %c<a> }";
-        @out.push: "  code   { %c<expr> }";
 
-        if $r<value>.starts-with('ERR:') {
+        if $r<value> eq 'NOCOMPILE' {
+            # The expression is compiled in the same VALUE context the probe
+            # used. Context matters: Rakudo compiles `(0) ~~ (Nil)` at
+            # statement level and refuses it inside `sub { }`, so a test that
+            # dropped the wrapper would be checking a different question.
+            @out.push: "  code   sub \{ { %c<expr> } \}";
+            # Deliberately no `error` field: the diagnostic's wording is not
+            # specified, and asserting one engine's prose would test the message
+            # rather than the language. The requirement is that it not compile.
+            @out.push: "  no-parse compile-time failure";
+        }
+        elsif $r<value>.starts-with('ERR:') {
+            @out.push: "  code   { %c<expr> }";
             @out.push: "  throws { $r<value>.substr(4) }";
         }
         else {
+            @out.push: "  code   { %c<expr> }";
             @out.push: "  is     { $r<value> }";
             @out.push: "  type   { $r<type> }";
         }
 
+        my $reproducible = %again{%c<expr>} && %again{%c<expr>}<value> eq $r<value>;
+
+        # A reference that crashed, hung, or otherwise produced no usable answer
+        # gives us nothing to assert. Park it — never turn "CRASH:1" into an
+        # expected value.
+        my $answered = !($r<value>.starts-with('CRASH') || $r<value> eq 'HANG');
+
         for ^@engines -> $e {
             my $o = @obs[$e]{%c<expr>};
             next unless $o;
-            @out.push: "  oracle { @ids[$e] } → { $o<value> }";
+            my $obs = $o<value> eq 'NOCOMPILE' && $o<msg>
+                ?? 'NOCOMPILE: ' ~ $o<msg>
+                !! $o<value>;
+            @out.push: "  oracle { @ids[$e] } → $obs";
+        }
+
+        if !$answered {
+            @out.push: "  verdict disputed";
+            @out.push: "  why    the reference produced no usable answer for this cell (it crashed or did not terminate), so there is nothing to assert";
+            @out.push: "  ruled  2026-08-14 against { @ids[0] }";
+            $noanswer++;
+        }
+        elsif !$reproducible {
+            @out.push: "  verdict disputed";
+            @out.push: "  why    the reference gives a different answer on two identical runs, so there is nothing stable to assert — typically an address inside .WHICH or an unordered container";
+            @out.push: "  ruled  2026-08-14 against { @ids[0] }";
+            $unstable++;
         }
         @out.push: '';
         $tests++;
@@ -311,4 +524,6 @@ for @SPECS -> %spec {
     $files++;
 }
 
+say "# $unstable cell{ $unstable == 1 ?? '' !! 's' } parked as not reproducible" if $unstable;
+say "# $noanswer cell{ $noanswer == 1 ?? '' !! 's' } parked with no reference answer" if $noanswer;
 say "# wrote $files files, $tests tests, { @engines.elems } engine{ @engines == 1 ?? '' !! 's' } on record";

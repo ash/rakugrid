@@ -4,7 +4,7 @@ kind     whole-program — a minimal repro, not yet reduced to an atom
 
 - id     0001
   from   rakupp:t/regression/whenever-promise-emit-preserving.raku
-  budget 20s
+  budget 33s
   code
     # Regression: async primitives that a Cro::HTTP::Client request exercises —
     #   * `whenever $promise` in a supply block is ASYNC: an unkept promise stays

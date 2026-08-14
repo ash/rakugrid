@@ -1,0 +1,69 @@
+atom     laws/not-is-negated-Bool
+source   generated
+gen      gen/laws.raku
+law      !({A})  ===  !(({A}).Bool)
+ladder   bool, arity 1
+
+- id     0001
+  from   law:not-is-negated-Bool
+  cell   True
+  code   !(True)
+  same-as !((True).Bool)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0002
+  from   law:not-is-negated-Bool
+  cell   False
+  code   !(False)
+  same-as !((False).Bool)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0003
+  from   law:not-is-negated-Bool
+  cell   0
+  code   !(0)
+  same-as !((0).Bool)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0004
+  from   law:not-is-negated-Bool
+  cell   1
+  code   !(1)
+  same-as !((1).Bool)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0005
+  from   law:not-is-negated-Bool
+  cell   ""
+  code   !("")
+  same-as !(("").Bool)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0006
+  from   law:not-is-negated-Bool
+  cell   "0"
+  code   !("0")
+  same-as !(("0").Bool)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0007
+  from   law:not-is-negated-Bool
+  cell   Nil
+  code   !(Nil)
+  same-as !((Nil).Bool)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0008
+  from   law:not-is-negated-Bool
+  cell   Any
+  code   !(Any)
+  same-as !((Any).Bool)
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE

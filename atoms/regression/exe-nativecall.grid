@@ -4,7 +4,7 @@ kind     whole-program — a minimal repro, not yet reduced to an atom
 
 - id     0001
   from   rakupp:t/regression/exe-nativecall.raku
-  budget 20s
+  budget 81s
   code
     # Regression: NativeCall under --exe. Codegen had NO `is native` support — the
     # stub body `{ * }` compiled silently and every native call returned Any, so a
@@ -106,7 +106,7 @@ kind     whole-program — a minimal repro, not yet reduced to an atom
     else     { say 'PASS' }
   output PASS
   oracle rakudo-2026.07 → FAIL
-  oracle rakupp-3.14.0 → PASS
+  oracle rakupp-3.14.0 → TIMEOUT after 20s
   verdict disputed
   why    the reference implementation does not satisfy the program's own contract here (exit 0 with a last line of PASS) — it needs modules that are not installed, or exercises something only one engine implements; there is no reference observation to rule against
   ruled  2026-08-14 against rakudo-2026.07

@@ -1,0 +1,479 @@
+atom     methods/substr
+source   generated
+gen      gen/ladder.raku
+form     ({A}).substr({B})
+ladder   string × index, both orders
+axes     "" | " " | "0" | "a" | "A" | "abc" | "e\c[COMBINING ACUTE ACCENT]" | "\0"
+cols     0 | 1 | 2 | -1 | 99 | 1/2 | Inf
+
+- id     0001
+  from   ladder:string×index
+  cell   "" | 0
+  code   ("").substr(0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0002
+  from   ladder:string×index
+  cell   "" | 1
+  code   ("").substr(1)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0003
+  from   ladder:string×index
+  cell   "" | 2
+  code   ("").substr(2)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0004
+  from   ladder:string×index
+  cell   "" | -1
+  code   ("").substr(-1)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0005
+  from   ladder:string×index
+  cell   "" | 99
+  code   ("").substr(99)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0006
+  from   ladder:string×index
+  cell   "" | 1/2
+  code   ("").substr(1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0007
+  from   ladder:string×index
+  cell   "" | Inf
+  code   ("").substr(Inf)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""
+
+- id     0008
+  from   ladder:string×index
+  cell   " " | 0
+  code   (" ").substr(0)
+  is     " "
+  type   Str
+  oracle rakudo-2026.07 → " "
+  oracle rakupp-3.14.0 → " "
+
+- id     0009
+  from   ladder:string×index
+  cell   " " | 1
+  code   (" ").substr(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0010
+  from   ladder:string×index
+  cell   " " | 2
+  code   (" ").substr(2)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0011
+  from   ladder:string×index
+  cell   " " | -1
+  code   (" ").substr(-1)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → " "
+
+- id     0012
+  from   ladder:string×index
+  cell   " " | 99
+  code   (" ").substr(99)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0013
+  from   ladder:string×index
+  cell   " " | 1/2
+  code   (" ").substr(1/2)
+  is     " "
+  type   Str
+  oracle rakudo-2026.07 → " "
+  oracle rakupp-3.14.0 → " "
+
+- id     0014
+  from   ladder:string×index
+  cell   " " | Inf
+  code   (" ").substr(Inf)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""
+
+- id     0015
+  from   ladder:string×index
+  cell   "0" | 0
+  code   ("0").substr(0)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0016
+  from   ladder:string×index
+  cell   "0" | 1
+  code   ("0").substr(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0017
+  from   ladder:string×index
+  cell   "0" | 2
+  code   ("0").substr(2)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0018
+  from   ladder:string×index
+  cell   "0" | -1
+  code   ("0").substr(-1)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → "0"
+
+- id     0019
+  from   ladder:string×index
+  cell   "0" | 99
+  code   ("0").substr(99)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0020
+  from   ladder:string×index
+  cell   "0" | 1/2
+  code   ("0").substr(1/2)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → "0"
+
+- id     0021
+  from   ladder:string×index
+  cell   "0" | Inf
+  code   ("0").substr(Inf)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""
+
+- id     0022
+  from   ladder:string×index
+  cell   "a" | 0
+  code   ("a").substr(0)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0023
+  from   ladder:string×index
+  cell   "a" | 1
+  code   ("a").substr(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0024
+  from   ladder:string×index
+  cell   "a" | 2
+  code   ("a").substr(2)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0025
+  from   ladder:string×index
+  cell   "a" | -1
+  code   ("a").substr(-1)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → "a"
+
+- id     0026
+  from   ladder:string×index
+  cell   "a" | 99
+  code   ("a").substr(99)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0027
+  from   ladder:string×index
+  cell   "a" | 1/2
+  code   ("a").substr(1/2)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0028
+  from   ladder:string×index
+  cell   "a" | Inf
+  code   ("a").substr(Inf)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""
+
+- id     0029
+  from   ladder:string×index
+  cell   "A" | 0
+  code   ("A").substr(0)
+  is     "A"
+  type   Str
+  oracle rakudo-2026.07 → "A"
+  oracle rakupp-3.14.0 → "A"
+
+- id     0030
+  from   ladder:string×index
+  cell   "A" | 1
+  code   ("A").substr(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0031
+  from   ladder:string×index
+  cell   "A" | 2
+  code   ("A").substr(2)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0032
+  from   ladder:string×index
+  cell   "A" | -1
+  code   ("A").substr(-1)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → "A"
+
+- id     0033
+  from   ladder:string×index
+  cell   "A" | 99
+  code   ("A").substr(99)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0034
+  from   ladder:string×index
+  cell   "A" | 1/2
+  code   ("A").substr(1/2)
+  is     "A"
+  type   Str
+  oracle rakudo-2026.07 → "A"
+  oracle rakupp-3.14.0 → "A"
+
+- id     0035
+  from   ladder:string×index
+  cell   "A" | Inf
+  code   ("A").substr(Inf)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""
+
+- id     0036
+  from   ladder:string×index
+  cell   "abc" | 0
+  code   ("abc").substr(0)
+  is     "abc"
+  type   Str
+  oracle rakudo-2026.07 → "abc"
+  oracle rakupp-3.14.0 → "abc"
+
+- id     0037
+  from   ladder:string×index
+  cell   "abc" | 1
+  code   ("abc").substr(1)
+  is     "bc"
+  type   Str
+  oracle rakudo-2026.07 → "bc"
+  oracle rakupp-3.14.0 → "bc"
+
+- id     0038
+  from   ladder:string×index
+  cell   "abc" | 2
+  code   ("abc").substr(2)
+  is     "c"
+  type   Str
+  oracle rakudo-2026.07 → "c"
+  oracle rakupp-3.14.0 → "c"
+
+- id     0039
+  from   ladder:string×index
+  cell   "abc" | -1
+  code   ("abc").substr(-1)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → "c"
+
+- id     0040
+  from   ladder:string×index
+  cell   "abc" | 99
+  code   ("abc").substr(99)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0041
+  from   ladder:string×index
+  cell   "abc" | 1/2
+  code   ("abc").substr(1/2)
+  is     "abc"
+  type   Str
+  oracle rakudo-2026.07 → "abc"
+  oracle rakupp-3.14.0 → "abc"
+
+- id     0042
+  from   ladder:string×index
+  cell   "abc" | Inf
+  code   ("abc").substr(Inf)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""
+
+- id     0043
+  from   ladder:string×index
+  cell   "e\c[COMBINING ACUTE ACCENT]" | 0
+  code   ("e\c[COMBINING ACUTE ACCENT]").substr(0)
+  is     "é"
+  type   Str
+  oracle rakudo-2026.07 → "é"
+  oracle rakupp-3.14.0 → "é"
+
+- id     0044
+  from   ladder:string×index
+  cell   "e\c[COMBINING ACUTE ACCENT]" | 1
+  code   ("e\c[COMBINING ACUTE ACCENT]").substr(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0045
+  from   ladder:string×index
+  cell   "e\c[COMBINING ACUTE ACCENT]" | 2
+  code   ("e\c[COMBINING ACUTE ACCENT]").substr(2)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0046
+  from   ladder:string×index
+  cell   "e\c[COMBINING ACUTE ACCENT]" | -1
+  code   ("e\c[COMBINING ACUTE ACCENT]").substr(-1)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → "é"
+
+- id     0047
+  from   ladder:string×index
+  cell   "e\c[COMBINING ACUTE ACCENT]" | 99
+  code   ("e\c[COMBINING ACUTE ACCENT]").substr(99)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0048
+  from   ladder:string×index
+  cell   "e\c[COMBINING ACUTE ACCENT]" | 1/2
+  code   ("e\c[COMBINING ACUTE ACCENT]").substr(1/2)
+  is     "é"
+  type   Str
+  oracle rakudo-2026.07 → "é"
+  oracle rakupp-3.14.0 → "é"
+
+- id     0049
+  from   ladder:string×index
+  cell   "e\c[COMBINING ACUTE ACCENT]" | Inf
+  code   ("e\c[COMBINING ACUTE ACCENT]").substr(Inf)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""
+
+- id     0050
+  from   ladder:string×index
+  cell   "\0" | 0
+  code   ("\0").substr(0)
+  is     "\0"
+  type   Str
+  oracle rakudo-2026.07 → "\0"
+  oracle rakupp-3.14.0 → "\0"
+
+- id     0051
+  from   ladder:string×index
+  cell   "\0" | 1
+  code   ("\0").substr(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0052
+  from   ladder:string×index
+  cell   "\0" | 2
+  code   ("\0").substr(2)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0053
+  from   ladder:string×index
+  cell   "\0" | -1
+  code   ("\0").substr(-1)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → "\0"
+
+- id     0054
+  from   ladder:string×index
+  cell   "\0" | 99
+  code   ("\0").substr(99)
+  throws X::OutOfRange
+  oracle rakudo-2026.07 → ERR:X::OutOfRange
+  oracle rakupp-3.14.0 → ""
+
+- id     0055
+  from   ladder:string×index
+  cell   "\0" | 1/2
+  code   ("\0").substr(1/2)
+  is     "\0"
+  type   Str
+  oracle rakudo-2026.07 → "\0"
+  oracle rakupp-3.14.0 → "\0"
+
+- id     0056
+  from   ladder:string×index
+  cell   "\0" | Inf
+  code   ("\0").substr(Inf)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-3.14.0 → ""

@@ -1,0 +1,2749 @@
+atom     laws/concat-associates
+source   generated
+gen      gen/laws.raku
+law      ((({A}) ~ ({B})) ~ ({C}))  ===  (({A}) ~ (({B}) ~ ({C})))
+ladder   string, arity 3
+
+- id     0001
+  from   law:concat-associates
+  cell   "" | "" | ""
+  code   ((("") ~ ("")) ~ (""))
+  same-as (("") ~ (("") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0002
+  from   law:concat-associates
+  cell   "" | "" | " "
+  code   ((("") ~ ("")) ~ (" "))
+  same-as (("") ~ (("") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0003
+  from   law:concat-associates
+  cell   "" | "" | "0"
+  code   ((("") ~ ("")) ~ ("0"))
+  same-as (("") ~ (("") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0004
+  from   law:concat-associates
+  cell   "" | "" | "a"
+  code   ((("") ~ ("")) ~ ("a"))
+  same-as (("") ~ (("") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0005
+  from   law:concat-associates
+  cell   "" | "" | "A"
+  code   ((("") ~ ("")) ~ ("A"))
+  same-as (("") ~ (("") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0006
+  from   law:concat-associates
+  cell   "" | "" | "abc"
+  code   ((("") ~ ("")) ~ ("abc"))
+  same-as (("") ~ (("") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0007
+  from   law:concat-associates
+  cell   "" | "" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("") ~ ("")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("") ~ (("") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0008
+  from   law:concat-associates
+  cell   "" | " " | ""
+  code   ((("") ~ (" ")) ~ (""))
+  same-as (("") ~ ((" ") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0009
+  from   law:concat-associates
+  cell   "" | " " | " "
+  code   ((("") ~ (" ")) ~ (" "))
+  same-as (("") ~ ((" ") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0010
+  from   law:concat-associates
+  cell   "" | " " | "0"
+  code   ((("") ~ (" ")) ~ ("0"))
+  same-as (("") ~ ((" ") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0011
+  from   law:concat-associates
+  cell   "" | " " | "a"
+  code   ((("") ~ (" ")) ~ ("a"))
+  same-as (("") ~ ((" ") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0012
+  from   law:concat-associates
+  cell   "" | " " | "A"
+  code   ((("") ~ (" ")) ~ ("A"))
+  same-as (("") ~ ((" ") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0013
+  from   law:concat-associates
+  cell   "" | " " | "abc"
+  code   ((("") ~ (" ")) ~ ("abc"))
+  same-as (("") ~ ((" ") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0014
+  from   law:concat-associates
+  cell   "" | " " | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("") ~ (" ")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("") ~ ((" ") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0015
+  from   law:concat-associates
+  cell   "" | "0" | ""
+  code   ((("") ~ ("0")) ~ (""))
+  same-as (("") ~ (("0") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0016
+  from   law:concat-associates
+  cell   "" | "0" | " "
+  code   ((("") ~ ("0")) ~ (" "))
+  same-as (("") ~ (("0") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0017
+  from   law:concat-associates
+  cell   "" | "0" | "0"
+  code   ((("") ~ ("0")) ~ ("0"))
+  same-as (("") ~ (("0") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0018
+  from   law:concat-associates
+  cell   "" | "0" | "a"
+  code   ((("") ~ ("0")) ~ ("a"))
+  same-as (("") ~ (("0") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0019
+  from   law:concat-associates
+  cell   "" | "0" | "A"
+  code   ((("") ~ ("0")) ~ ("A"))
+  same-as (("") ~ (("0") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0020
+  from   law:concat-associates
+  cell   "" | "0" | "abc"
+  code   ((("") ~ ("0")) ~ ("abc"))
+  same-as (("") ~ (("0") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0021
+  from   law:concat-associates
+  cell   "" | "0" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("") ~ ("0")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("") ~ (("0") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0022
+  from   law:concat-associates
+  cell   "" | "a" | ""
+  code   ((("") ~ ("a")) ~ (""))
+  same-as (("") ~ (("a") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0023
+  from   law:concat-associates
+  cell   "" | "a" | " "
+  code   ((("") ~ ("a")) ~ (" "))
+  same-as (("") ~ (("a") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0024
+  from   law:concat-associates
+  cell   "" | "a" | "0"
+  code   ((("") ~ ("a")) ~ ("0"))
+  same-as (("") ~ (("a") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0025
+  from   law:concat-associates
+  cell   "" | "a" | "a"
+  code   ((("") ~ ("a")) ~ ("a"))
+  same-as (("") ~ (("a") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0026
+  from   law:concat-associates
+  cell   "" | "a" | "A"
+  code   ((("") ~ ("a")) ~ ("A"))
+  same-as (("") ~ (("a") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0027
+  from   law:concat-associates
+  cell   "" | "a" | "abc"
+  code   ((("") ~ ("a")) ~ ("abc"))
+  same-as (("") ~ (("a") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0028
+  from   law:concat-associates
+  cell   "" | "a" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("") ~ ("a")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("") ~ (("a") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0029
+  from   law:concat-associates
+  cell   "" | "A" | ""
+  code   ((("") ~ ("A")) ~ (""))
+  same-as (("") ~ (("A") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0030
+  from   law:concat-associates
+  cell   "" | "A" | " "
+  code   ((("") ~ ("A")) ~ (" "))
+  same-as (("") ~ (("A") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0031
+  from   law:concat-associates
+  cell   "" | "A" | "0"
+  code   ((("") ~ ("A")) ~ ("0"))
+  same-as (("") ~ (("A") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0032
+  from   law:concat-associates
+  cell   "" | "A" | "a"
+  code   ((("") ~ ("A")) ~ ("a"))
+  same-as (("") ~ (("A") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0033
+  from   law:concat-associates
+  cell   "" | "A" | "A"
+  code   ((("") ~ ("A")) ~ ("A"))
+  same-as (("") ~ (("A") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0034
+  from   law:concat-associates
+  cell   "" | "A" | "abc"
+  code   ((("") ~ ("A")) ~ ("abc"))
+  same-as (("") ~ (("A") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0035
+  from   law:concat-associates
+  cell   "" | "A" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("") ~ ("A")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("") ~ (("A") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0036
+  from   law:concat-associates
+  cell   "" | "abc" | ""
+  code   ((("") ~ ("abc")) ~ (""))
+  same-as (("") ~ (("abc") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0037
+  from   law:concat-associates
+  cell   "" | "abc" | " "
+  code   ((("") ~ ("abc")) ~ (" "))
+  same-as (("") ~ (("abc") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0038
+  from   law:concat-associates
+  cell   "" | "abc" | "0"
+  code   ((("") ~ ("abc")) ~ ("0"))
+  same-as (("") ~ (("abc") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0039
+  from   law:concat-associates
+  cell   "" | "abc" | "a"
+  code   ((("") ~ ("abc")) ~ ("a"))
+  same-as (("") ~ (("abc") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0040
+  from   law:concat-associates
+  cell   "" | "abc" | "A"
+  code   ((("") ~ ("abc")) ~ ("A"))
+  same-as (("") ~ (("abc") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0041
+  from   law:concat-associates
+  cell   "" | "abc" | "abc"
+  code   ((("") ~ ("abc")) ~ ("abc"))
+  same-as (("") ~ (("abc") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0042
+  from   law:concat-associates
+  cell   "" | "abc" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("") ~ ("abc")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("") ~ (("abc") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0043
+  from   law:concat-associates
+  cell   "" | "e\c[COMBINING ACUTE ACCENT]" | ""
+  code   ((("") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ (""))
+  same-as (("") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0044
+  from   law:concat-associates
+  cell   "" | "e\c[COMBINING ACUTE ACCENT]" | " "
+  code   ((("") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ (" "))
+  same-as (("") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0045
+  from   law:concat-associates
+  cell   "" | "e\c[COMBINING ACUTE ACCENT]" | "0"
+  code   ((("") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("0"))
+  same-as (("") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0046
+  from   law:concat-associates
+  cell   "" | "e\c[COMBINING ACUTE ACCENT]" | "a"
+  code   ((("") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("a"))
+  same-as (("") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0047
+  from   law:concat-associates
+  cell   "" | "e\c[COMBINING ACUTE ACCENT]" | "A"
+  code   ((("") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("A"))
+  same-as (("") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0048
+  from   law:concat-associates
+  cell   "" | "e\c[COMBINING ACUTE ACCENT]" | "abc"
+  code   ((("") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("abc"))
+  same-as (("") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0049
+  from   law:concat-associates
+  cell   "" | "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0050
+  from   law:concat-associates
+  cell   " " | "" | ""
+  code   (((" ") ~ ("")) ~ (""))
+  same-as ((" ") ~ (("") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0051
+  from   law:concat-associates
+  cell   " " | "" | " "
+  code   (((" ") ~ ("")) ~ (" "))
+  same-as ((" ") ~ (("") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0052
+  from   law:concat-associates
+  cell   " " | "" | "0"
+  code   (((" ") ~ ("")) ~ ("0"))
+  same-as ((" ") ~ (("") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0053
+  from   law:concat-associates
+  cell   " " | "" | "a"
+  code   (((" ") ~ ("")) ~ ("a"))
+  same-as ((" ") ~ (("") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0054
+  from   law:concat-associates
+  cell   " " | "" | "A"
+  code   (((" ") ~ ("")) ~ ("A"))
+  same-as ((" ") ~ (("") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0055
+  from   law:concat-associates
+  cell   " " | "" | "abc"
+  code   (((" ") ~ ("")) ~ ("abc"))
+  same-as ((" ") ~ (("") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0056
+  from   law:concat-associates
+  cell   " " | "" | "e\c[COMBINING ACUTE ACCENT]"
+  code   (((" ") ~ ("")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as ((" ") ~ (("") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0057
+  from   law:concat-associates
+  cell   " " | " " | ""
+  code   (((" ") ~ (" ")) ~ (""))
+  same-as ((" ") ~ ((" ") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0058
+  from   law:concat-associates
+  cell   " " | " " | " "
+  code   (((" ") ~ (" ")) ~ (" "))
+  same-as ((" ") ~ ((" ") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0059
+  from   law:concat-associates
+  cell   " " | " " | "0"
+  code   (((" ") ~ (" ")) ~ ("0"))
+  same-as ((" ") ~ ((" ") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0060
+  from   law:concat-associates
+  cell   " " | " " | "a"
+  code   (((" ") ~ (" ")) ~ ("a"))
+  same-as ((" ") ~ ((" ") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0061
+  from   law:concat-associates
+  cell   " " | " " | "A"
+  code   (((" ") ~ (" ")) ~ ("A"))
+  same-as ((" ") ~ ((" ") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0062
+  from   law:concat-associates
+  cell   " " | " " | "abc"
+  code   (((" ") ~ (" ")) ~ ("abc"))
+  same-as ((" ") ~ ((" ") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0063
+  from   law:concat-associates
+  cell   " " | " " | "e\c[COMBINING ACUTE ACCENT]"
+  code   (((" ") ~ (" ")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as ((" ") ~ ((" ") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0064
+  from   law:concat-associates
+  cell   " " | "0" | ""
+  code   (((" ") ~ ("0")) ~ (""))
+  same-as ((" ") ~ (("0") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0065
+  from   law:concat-associates
+  cell   " " | "0" | " "
+  code   (((" ") ~ ("0")) ~ (" "))
+  same-as ((" ") ~ (("0") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0066
+  from   law:concat-associates
+  cell   " " | "0" | "0"
+  code   (((" ") ~ ("0")) ~ ("0"))
+  same-as ((" ") ~ (("0") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0067
+  from   law:concat-associates
+  cell   " " | "0" | "a"
+  code   (((" ") ~ ("0")) ~ ("a"))
+  same-as ((" ") ~ (("0") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0068
+  from   law:concat-associates
+  cell   " " | "0" | "A"
+  code   (((" ") ~ ("0")) ~ ("A"))
+  same-as ((" ") ~ (("0") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0069
+  from   law:concat-associates
+  cell   " " | "0" | "abc"
+  code   (((" ") ~ ("0")) ~ ("abc"))
+  same-as ((" ") ~ (("0") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0070
+  from   law:concat-associates
+  cell   " " | "0" | "e\c[COMBINING ACUTE ACCENT]"
+  code   (((" ") ~ ("0")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as ((" ") ~ (("0") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0071
+  from   law:concat-associates
+  cell   " " | "a" | ""
+  code   (((" ") ~ ("a")) ~ (""))
+  same-as ((" ") ~ (("a") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0072
+  from   law:concat-associates
+  cell   " " | "a" | " "
+  code   (((" ") ~ ("a")) ~ (" "))
+  same-as ((" ") ~ (("a") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0073
+  from   law:concat-associates
+  cell   " " | "a" | "0"
+  code   (((" ") ~ ("a")) ~ ("0"))
+  same-as ((" ") ~ (("a") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0074
+  from   law:concat-associates
+  cell   " " | "a" | "a"
+  code   (((" ") ~ ("a")) ~ ("a"))
+  same-as ((" ") ~ (("a") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0075
+  from   law:concat-associates
+  cell   " " | "a" | "A"
+  code   (((" ") ~ ("a")) ~ ("A"))
+  same-as ((" ") ~ (("a") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0076
+  from   law:concat-associates
+  cell   " " | "a" | "abc"
+  code   (((" ") ~ ("a")) ~ ("abc"))
+  same-as ((" ") ~ (("a") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0077
+  from   law:concat-associates
+  cell   " " | "a" | "e\c[COMBINING ACUTE ACCENT]"
+  code   (((" ") ~ ("a")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as ((" ") ~ (("a") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0078
+  from   law:concat-associates
+  cell   " " | "A" | ""
+  code   (((" ") ~ ("A")) ~ (""))
+  same-as ((" ") ~ (("A") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0079
+  from   law:concat-associates
+  cell   " " | "A" | " "
+  code   (((" ") ~ ("A")) ~ (" "))
+  same-as ((" ") ~ (("A") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0080
+  from   law:concat-associates
+  cell   " " | "A" | "0"
+  code   (((" ") ~ ("A")) ~ ("0"))
+  same-as ((" ") ~ (("A") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0081
+  from   law:concat-associates
+  cell   " " | "A" | "a"
+  code   (((" ") ~ ("A")) ~ ("a"))
+  same-as ((" ") ~ (("A") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0082
+  from   law:concat-associates
+  cell   " " | "A" | "A"
+  code   (((" ") ~ ("A")) ~ ("A"))
+  same-as ((" ") ~ (("A") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0083
+  from   law:concat-associates
+  cell   " " | "A" | "abc"
+  code   (((" ") ~ ("A")) ~ ("abc"))
+  same-as ((" ") ~ (("A") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0084
+  from   law:concat-associates
+  cell   " " | "A" | "e\c[COMBINING ACUTE ACCENT]"
+  code   (((" ") ~ ("A")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as ((" ") ~ (("A") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0085
+  from   law:concat-associates
+  cell   " " | "abc" | ""
+  code   (((" ") ~ ("abc")) ~ (""))
+  same-as ((" ") ~ (("abc") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0086
+  from   law:concat-associates
+  cell   " " | "abc" | " "
+  code   (((" ") ~ ("abc")) ~ (" "))
+  same-as ((" ") ~ (("abc") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0087
+  from   law:concat-associates
+  cell   " " | "abc" | "0"
+  code   (((" ") ~ ("abc")) ~ ("0"))
+  same-as ((" ") ~ (("abc") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0088
+  from   law:concat-associates
+  cell   " " | "abc" | "a"
+  code   (((" ") ~ ("abc")) ~ ("a"))
+  same-as ((" ") ~ (("abc") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0089
+  from   law:concat-associates
+  cell   " " | "abc" | "A"
+  code   (((" ") ~ ("abc")) ~ ("A"))
+  same-as ((" ") ~ (("abc") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0090
+  from   law:concat-associates
+  cell   " " | "abc" | "abc"
+  code   (((" ") ~ ("abc")) ~ ("abc"))
+  same-as ((" ") ~ (("abc") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0091
+  from   law:concat-associates
+  cell   " " | "abc" | "e\c[COMBINING ACUTE ACCENT]"
+  code   (((" ") ~ ("abc")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as ((" ") ~ (("abc") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0092
+  from   law:concat-associates
+  cell   " " | "e\c[COMBINING ACUTE ACCENT]" | ""
+  code   (((" ") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ (""))
+  same-as ((" ") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0093
+  from   law:concat-associates
+  cell   " " | "e\c[COMBINING ACUTE ACCENT]" | " "
+  code   (((" ") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ (" "))
+  same-as ((" ") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0094
+  from   law:concat-associates
+  cell   " " | "e\c[COMBINING ACUTE ACCENT]" | "0"
+  code   (((" ") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("0"))
+  same-as ((" ") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0095
+  from   law:concat-associates
+  cell   " " | "e\c[COMBINING ACUTE ACCENT]" | "a"
+  code   (((" ") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("a"))
+  same-as ((" ") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0096
+  from   law:concat-associates
+  cell   " " | "e\c[COMBINING ACUTE ACCENT]" | "A"
+  code   (((" ") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("A"))
+  same-as ((" ") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0097
+  from   law:concat-associates
+  cell   " " | "e\c[COMBINING ACUTE ACCENT]" | "abc"
+  code   (((" ") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("abc"))
+  same-as ((" ") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0098
+  from   law:concat-associates
+  cell   " " | "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]"
+  code   (((" ") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as ((" ") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0099
+  from   law:concat-associates
+  cell   "0" | "" | ""
+  code   ((("0") ~ ("")) ~ (""))
+  same-as (("0") ~ (("") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0100
+  from   law:concat-associates
+  cell   "0" | "" | " "
+  code   ((("0") ~ ("")) ~ (" "))
+  same-as (("0") ~ (("") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0101
+  from   law:concat-associates
+  cell   "0" | "" | "0"
+  code   ((("0") ~ ("")) ~ ("0"))
+  same-as (("0") ~ (("") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0102
+  from   law:concat-associates
+  cell   "0" | "" | "a"
+  code   ((("0") ~ ("")) ~ ("a"))
+  same-as (("0") ~ (("") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0103
+  from   law:concat-associates
+  cell   "0" | "" | "A"
+  code   ((("0") ~ ("")) ~ ("A"))
+  same-as (("0") ~ (("") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0104
+  from   law:concat-associates
+  cell   "0" | "" | "abc"
+  code   ((("0") ~ ("")) ~ ("abc"))
+  same-as (("0") ~ (("") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0105
+  from   law:concat-associates
+  cell   "0" | "" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("0") ~ ("")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("0") ~ (("") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0106
+  from   law:concat-associates
+  cell   "0" | " " | ""
+  code   ((("0") ~ (" ")) ~ (""))
+  same-as (("0") ~ ((" ") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0107
+  from   law:concat-associates
+  cell   "0" | " " | " "
+  code   ((("0") ~ (" ")) ~ (" "))
+  same-as (("0") ~ ((" ") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0108
+  from   law:concat-associates
+  cell   "0" | " " | "0"
+  code   ((("0") ~ (" ")) ~ ("0"))
+  same-as (("0") ~ ((" ") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0109
+  from   law:concat-associates
+  cell   "0" | " " | "a"
+  code   ((("0") ~ (" ")) ~ ("a"))
+  same-as (("0") ~ ((" ") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0110
+  from   law:concat-associates
+  cell   "0" | " " | "A"
+  code   ((("0") ~ (" ")) ~ ("A"))
+  same-as (("0") ~ ((" ") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0111
+  from   law:concat-associates
+  cell   "0" | " " | "abc"
+  code   ((("0") ~ (" ")) ~ ("abc"))
+  same-as (("0") ~ ((" ") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0112
+  from   law:concat-associates
+  cell   "0" | " " | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("0") ~ (" ")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("0") ~ ((" ") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0113
+  from   law:concat-associates
+  cell   "0" | "0" | ""
+  code   ((("0") ~ ("0")) ~ (""))
+  same-as (("0") ~ (("0") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0114
+  from   law:concat-associates
+  cell   "0" | "0" | " "
+  code   ((("0") ~ ("0")) ~ (" "))
+  same-as (("0") ~ (("0") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0115
+  from   law:concat-associates
+  cell   "0" | "0" | "0"
+  code   ((("0") ~ ("0")) ~ ("0"))
+  same-as (("0") ~ (("0") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0116
+  from   law:concat-associates
+  cell   "0" | "0" | "a"
+  code   ((("0") ~ ("0")) ~ ("a"))
+  same-as (("0") ~ (("0") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0117
+  from   law:concat-associates
+  cell   "0" | "0" | "A"
+  code   ((("0") ~ ("0")) ~ ("A"))
+  same-as (("0") ~ (("0") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0118
+  from   law:concat-associates
+  cell   "0" | "0" | "abc"
+  code   ((("0") ~ ("0")) ~ ("abc"))
+  same-as (("0") ~ (("0") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0119
+  from   law:concat-associates
+  cell   "0" | "0" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("0") ~ ("0")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("0") ~ (("0") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0120
+  from   law:concat-associates
+  cell   "0" | "a" | ""
+  code   ((("0") ~ ("a")) ~ (""))
+  same-as (("0") ~ (("a") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0121
+  from   law:concat-associates
+  cell   "0" | "a" | " "
+  code   ((("0") ~ ("a")) ~ (" "))
+  same-as (("0") ~ (("a") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0122
+  from   law:concat-associates
+  cell   "0" | "a" | "0"
+  code   ((("0") ~ ("a")) ~ ("0"))
+  same-as (("0") ~ (("a") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0123
+  from   law:concat-associates
+  cell   "0" | "a" | "a"
+  code   ((("0") ~ ("a")) ~ ("a"))
+  same-as (("0") ~ (("a") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0124
+  from   law:concat-associates
+  cell   "0" | "a" | "A"
+  code   ((("0") ~ ("a")) ~ ("A"))
+  same-as (("0") ~ (("a") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0125
+  from   law:concat-associates
+  cell   "0" | "a" | "abc"
+  code   ((("0") ~ ("a")) ~ ("abc"))
+  same-as (("0") ~ (("a") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0126
+  from   law:concat-associates
+  cell   "0" | "a" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("0") ~ ("a")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("0") ~ (("a") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0127
+  from   law:concat-associates
+  cell   "0" | "A" | ""
+  code   ((("0") ~ ("A")) ~ (""))
+  same-as (("0") ~ (("A") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0128
+  from   law:concat-associates
+  cell   "0" | "A" | " "
+  code   ((("0") ~ ("A")) ~ (" "))
+  same-as (("0") ~ (("A") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0129
+  from   law:concat-associates
+  cell   "0" | "A" | "0"
+  code   ((("0") ~ ("A")) ~ ("0"))
+  same-as (("0") ~ (("A") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0130
+  from   law:concat-associates
+  cell   "0" | "A" | "a"
+  code   ((("0") ~ ("A")) ~ ("a"))
+  same-as (("0") ~ (("A") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0131
+  from   law:concat-associates
+  cell   "0" | "A" | "A"
+  code   ((("0") ~ ("A")) ~ ("A"))
+  same-as (("0") ~ (("A") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0132
+  from   law:concat-associates
+  cell   "0" | "A" | "abc"
+  code   ((("0") ~ ("A")) ~ ("abc"))
+  same-as (("0") ~ (("A") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0133
+  from   law:concat-associates
+  cell   "0" | "A" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("0") ~ ("A")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("0") ~ (("A") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0134
+  from   law:concat-associates
+  cell   "0" | "abc" | ""
+  code   ((("0") ~ ("abc")) ~ (""))
+  same-as (("0") ~ (("abc") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0135
+  from   law:concat-associates
+  cell   "0" | "abc" | " "
+  code   ((("0") ~ ("abc")) ~ (" "))
+  same-as (("0") ~ (("abc") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0136
+  from   law:concat-associates
+  cell   "0" | "abc" | "0"
+  code   ((("0") ~ ("abc")) ~ ("0"))
+  same-as (("0") ~ (("abc") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0137
+  from   law:concat-associates
+  cell   "0" | "abc" | "a"
+  code   ((("0") ~ ("abc")) ~ ("a"))
+  same-as (("0") ~ (("abc") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0138
+  from   law:concat-associates
+  cell   "0" | "abc" | "A"
+  code   ((("0") ~ ("abc")) ~ ("A"))
+  same-as (("0") ~ (("abc") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0139
+  from   law:concat-associates
+  cell   "0" | "abc" | "abc"
+  code   ((("0") ~ ("abc")) ~ ("abc"))
+  same-as (("0") ~ (("abc") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0140
+  from   law:concat-associates
+  cell   "0" | "abc" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("0") ~ ("abc")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("0") ~ (("abc") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0141
+  from   law:concat-associates
+  cell   "0" | "e\c[COMBINING ACUTE ACCENT]" | ""
+  code   ((("0") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ (""))
+  same-as (("0") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0142
+  from   law:concat-associates
+  cell   "0" | "e\c[COMBINING ACUTE ACCENT]" | " "
+  code   ((("0") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ (" "))
+  same-as (("0") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0143
+  from   law:concat-associates
+  cell   "0" | "e\c[COMBINING ACUTE ACCENT]" | "0"
+  code   ((("0") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("0"))
+  same-as (("0") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0144
+  from   law:concat-associates
+  cell   "0" | "e\c[COMBINING ACUTE ACCENT]" | "a"
+  code   ((("0") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("a"))
+  same-as (("0") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0145
+  from   law:concat-associates
+  cell   "0" | "e\c[COMBINING ACUTE ACCENT]" | "A"
+  code   ((("0") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("A"))
+  same-as (("0") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0146
+  from   law:concat-associates
+  cell   "0" | "e\c[COMBINING ACUTE ACCENT]" | "abc"
+  code   ((("0") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("abc"))
+  same-as (("0") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0147
+  from   law:concat-associates
+  cell   "0" | "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("0") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("0") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0148
+  from   law:concat-associates
+  cell   "a" | "" | ""
+  code   ((("a") ~ ("")) ~ (""))
+  same-as (("a") ~ (("") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0149
+  from   law:concat-associates
+  cell   "a" | "" | " "
+  code   ((("a") ~ ("")) ~ (" "))
+  same-as (("a") ~ (("") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0150
+  from   law:concat-associates
+  cell   "a" | "" | "0"
+  code   ((("a") ~ ("")) ~ ("0"))
+  same-as (("a") ~ (("") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0151
+  from   law:concat-associates
+  cell   "a" | "" | "a"
+  code   ((("a") ~ ("")) ~ ("a"))
+  same-as (("a") ~ (("") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0152
+  from   law:concat-associates
+  cell   "a" | "" | "A"
+  code   ((("a") ~ ("")) ~ ("A"))
+  same-as (("a") ~ (("") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0153
+  from   law:concat-associates
+  cell   "a" | "" | "abc"
+  code   ((("a") ~ ("")) ~ ("abc"))
+  same-as (("a") ~ (("") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0154
+  from   law:concat-associates
+  cell   "a" | "" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("a") ~ ("")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("a") ~ (("") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0155
+  from   law:concat-associates
+  cell   "a" | " " | ""
+  code   ((("a") ~ (" ")) ~ (""))
+  same-as (("a") ~ ((" ") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0156
+  from   law:concat-associates
+  cell   "a" | " " | " "
+  code   ((("a") ~ (" ")) ~ (" "))
+  same-as (("a") ~ ((" ") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0157
+  from   law:concat-associates
+  cell   "a" | " " | "0"
+  code   ((("a") ~ (" ")) ~ ("0"))
+  same-as (("a") ~ ((" ") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0158
+  from   law:concat-associates
+  cell   "a" | " " | "a"
+  code   ((("a") ~ (" ")) ~ ("a"))
+  same-as (("a") ~ ((" ") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0159
+  from   law:concat-associates
+  cell   "a" | " " | "A"
+  code   ((("a") ~ (" ")) ~ ("A"))
+  same-as (("a") ~ ((" ") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0160
+  from   law:concat-associates
+  cell   "a" | " " | "abc"
+  code   ((("a") ~ (" ")) ~ ("abc"))
+  same-as (("a") ~ ((" ") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0161
+  from   law:concat-associates
+  cell   "a" | " " | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("a") ~ (" ")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("a") ~ ((" ") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0162
+  from   law:concat-associates
+  cell   "a" | "0" | ""
+  code   ((("a") ~ ("0")) ~ (""))
+  same-as (("a") ~ (("0") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0163
+  from   law:concat-associates
+  cell   "a" | "0" | " "
+  code   ((("a") ~ ("0")) ~ (" "))
+  same-as (("a") ~ (("0") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0164
+  from   law:concat-associates
+  cell   "a" | "0" | "0"
+  code   ((("a") ~ ("0")) ~ ("0"))
+  same-as (("a") ~ (("0") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0165
+  from   law:concat-associates
+  cell   "a" | "0" | "a"
+  code   ((("a") ~ ("0")) ~ ("a"))
+  same-as (("a") ~ (("0") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0166
+  from   law:concat-associates
+  cell   "a" | "0" | "A"
+  code   ((("a") ~ ("0")) ~ ("A"))
+  same-as (("a") ~ (("0") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0167
+  from   law:concat-associates
+  cell   "a" | "0" | "abc"
+  code   ((("a") ~ ("0")) ~ ("abc"))
+  same-as (("a") ~ (("0") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0168
+  from   law:concat-associates
+  cell   "a" | "0" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("a") ~ ("0")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("a") ~ (("0") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0169
+  from   law:concat-associates
+  cell   "a" | "a" | ""
+  code   ((("a") ~ ("a")) ~ (""))
+  same-as (("a") ~ (("a") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0170
+  from   law:concat-associates
+  cell   "a" | "a" | " "
+  code   ((("a") ~ ("a")) ~ (" "))
+  same-as (("a") ~ (("a") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0171
+  from   law:concat-associates
+  cell   "a" | "a" | "0"
+  code   ((("a") ~ ("a")) ~ ("0"))
+  same-as (("a") ~ (("a") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0172
+  from   law:concat-associates
+  cell   "a" | "a" | "a"
+  code   ((("a") ~ ("a")) ~ ("a"))
+  same-as (("a") ~ (("a") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0173
+  from   law:concat-associates
+  cell   "a" | "a" | "A"
+  code   ((("a") ~ ("a")) ~ ("A"))
+  same-as (("a") ~ (("a") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0174
+  from   law:concat-associates
+  cell   "a" | "a" | "abc"
+  code   ((("a") ~ ("a")) ~ ("abc"))
+  same-as (("a") ~ (("a") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0175
+  from   law:concat-associates
+  cell   "a" | "a" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("a") ~ ("a")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("a") ~ (("a") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0176
+  from   law:concat-associates
+  cell   "a" | "A" | ""
+  code   ((("a") ~ ("A")) ~ (""))
+  same-as (("a") ~ (("A") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0177
+  from   law:concat-associates
+  cell   "a" | "A" | " "
+  code   ((("a") ~ ("A")) ~ (" "))
+  same-as (("a") ~ (("A") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0178
+  from   law:concat-associates
+  cell   "a" | "A" | "0"
+  code   ((("a") ~ ("A")) ~ ("0"))
+  same-as (("a") ~ (("A") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0179
+  from   law:concat-associates
+  cell   "a" | "A" | "a"
+  code   ((("a") ~ ("A")) ~ ("a"))
+  same-as (("a") ~ (("A") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0180
+  from   law:concat-associates
+  cell   "a" | "A" | "A"
+  code   ((("a") ~ ("A")) ~ ("A"))
+  same-as (("a") ~ (("A") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0181
+  from   law:concat-associates
+  cell   "a" | "A" | "abc"
+  code   ((("a") ~ ("A")) ~ ("abc"))
+  same-as (("a") ~ (("A") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0182
+  from   law:concat-associates
+  cell   "a" | "A" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("a") ~ ("A")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("a") ~ (("A") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0183
+  from   law:concat-associates
+  cell   "a" | "abc" | ""
+  code   ((("a") ~ ("abc")) ~ (""))
+  same-as (("a") ~ (("abc") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0184
+  from   law:concat-associates
+  cell   "a" | "abc" | " "
+  code   ((("a") ~ ("abc")) ~ (" "))
+  same-as (("a") ~ (("abc") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0185
+  from   law:concat-associates
+  cell   "a" | "abc" | "0"
+  code   ((("a") ~ ("abc")) ~ ("0"))
+  same-as (("a") ~ (("abc") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0186
+  from   law:concat-associates
+  cell   "a" | "abc" | "a"
+  code   ((("a") ~ ("abc")) ~ ("a"))
+  same-as (("a") ~ (("abc") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0187
+  from   law:concat-associates
+  cell   "a" | "abc" | "A"
+  code   ((("a") ~ ("abc")) ~ ("A"))
+  same-as (("a") ~ (("abc") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0188
+  from   law:concat-associates
+  cell   "a" | "abc" | "abc"
+  code   ((("a") ~ ("abc")) ~ ("abc"))
+  same-as (("a") ~ (("abc") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0189
+  from   law:concat-associates
+  cell   "a" | "abc" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("a") ~ ("abc")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("a") ~ (("abc") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0190
+  from   law:concat-associates
+  cell   "a" | "e\c[COMBINING ACUTE ACCENT]" | ""
+  code   ((("a") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ (""))
+  same-as (("a") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0191
+  from   law:concat-associates
+  cell   "a" | "e\c[COMBINING ACUTE ACCENT]" | " "
+  code   ((("a") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ (" "))
+  same-as (("a") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0192
+  from   law:concat-associates
+  cell   "a" | "e\c[COMBINING ACUTE ACCENT]" | "0"
+  code   ((("a") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("0"))
+  same-as (("a") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0193
+  from   law:concat-associates
+  cell   "a" | "e\c[COMBINING ACUTE ACCENT]" | "a"
+  code   ((("a") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("a"))
+  same-as (("a") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0194
+  from   law:concat-associates
+  cell   "a" | "e\c[COMBINING ACUTE ACCENT]" | "A"
+  code   ((("a") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("A"))
+  same-as (("a") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0195
+  from   law:concat-associates
+  cell   "a" | "e\c[COMBINING ACUTE ACCENT]" | "abc"
+  code   ((("a") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("abc"))
+  same-as (("a") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0196
+  from   law:concat-associates
+  cell   "a" | "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("a") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("a") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0197
+  from   law:concat-associates
+  cell   "A" | "" | ""
+  code   ((("A") ~ ("")) ~ (""))
+  same-as (("A") ~ (("") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0198
+  from   law:concat-associates
+  cell   "A" | "" | " "
+  code   ((("A") ~ ("")) ~ (" "))
+  same-as (("A") ~ (("") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0199
+  from   law:concat-associates
+  cell   "A" | "" | "0"
+  code   ((("A") ~ ("")) ~ ("0"))
+  same-as (("A") ~ (("") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0200
+  from   law:concat-associates
+  cell   "A" | "" | "a"
+  code   ((("A") ~ ("")) ~ ("a"))
+  same-as (("A") ~ (("") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0201
+  from   law:concat-associates
+  cell   "A" | "" | "A"
+  code   ((("A") ~ ("")) ~ ("A"))
+  same-as (("A") ~ (("") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0202
+  from   law:concat-associates
+  cell   "A" | "" | "abc"
+  code   ((("A") ~ ("")) ~ ("abc"))
+  same-as (("A") ~ (("") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0203
+  from   law:concat-associates
+  cell   "A" | "" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("A") ~ ("")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("A") ~ (("") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0204
+  from   law:concat-associates
+  cell   "A" | " " | ""
+  code   ((("A") ~ (" ")) ~ (""))
+  same-as (("A") ~ ((" ") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0205
+  from   law:concat-associates
+  cell   "A" | " " | " "
+  code   ((("A") ~ (" ")) ~ (" "))
+  same-as (("A") ~ ((" ") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0206
+  from   law:concat-associates
+  cell   "A" | " " | "0"
+  code   ((("A") ~ (" ")) ~ ("0"))
+  same-as (("A") ~ ((" ") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0207
+  from   law:concat-associates
+  cell   "A" | " " | "a"
+  code   ((("A") ~ (" ")) ~ ("a"))
+  same-as (("A") ~ ((" ") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0208
+  from   law:concat-associates
+  cell   "A" | " " | "A"
+  code   ((("A") ~ (" ")) ~ ("A"))
+  same-as (("A") ~ ((" ") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0209
+  from   law:concat-associates
+  cell   "A" | " " | "abc"
+  code   ((("A") ~ (" ")) ~ ("abc"))
+  same-as (("A") ~ ((" ") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0210
+  from   law:concat-associates
+  cell   "A" | " " | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("A") ~ (" ")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("A") ~ ((" ") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0211
+  from   law:concat-associates
+  cell   "A" | "0" | ""
+  code   ((("A") ~ ("0")) ~ (""))
+  same-as (("A") ~ (("0") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0212
+  from   law:concat-associates
+  cell   "A" | "0" | " "
+  code   ((("A") ~ ("0")) ~ (" "))
+  same-as (("A") ~ (("0") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0213
+  from   law:concat-associates
+  cell   "A" | "0" | "0"
+  code   ((("A") ~ ("0")) ~ ("0"))
+  same-as (("A") ~ (("0") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0214
+  from   law:concat-associates
+  cell   "A" | "0" | "a"
+  code   ((("A") ~ ("0")) ~ ("a"))
+  same-as (("A") ~ (("0") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0215
+  from   law:concat-associates
+  cell   "A" | "0" | "A"
+  code   ((("A") ~ ("0")) ~ ("A"))
+  same-as (("A") ~ (("0") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0216
+  from   law:concat-associates
+  cell   "A" | "0" | "abc"
+  code   ((("A") ~ ("0")) ~ ("abc"))
+  same-as (("A") ~ (("0") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0217
+  from   law:concat-associates
+  cell   "A" | "0" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("A") ~ ("0")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("A") ~ (("0") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0218
+  from   law:concat-associates
+  cell   "A" | "a" | ""
+  code   ((("A") ~ ("a")) ~ (""))
+  same-as (("A") ~ (("a") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0219
+  from   law:concat-associates
+  cell   "A" | "a" | " "
+  code   ((("A") ~ ("a")) ~ (" "))
+  same-as (("A") ~ (("a") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0220
+  from   law:concat-associates
+  cell   "A" | "a" | "0"
+  code   ((("A") ~ ("a")) ~ ("0"))
+  same-as (("A") ~ (("a") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0221
+  from   law:concat-associates
+  cell   "A" | "a" | "a"
+  code   ((("A") ~ ("a")) ~ ("a"))
+  same-as (("A") ~ (("a") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0222
+  from   law:concat-associates
+  cell   "A" | "a" | "A"
+  code   ((("A") ~ ("a")) ~ ("A"))
+  same-as (("A") ~ (("a") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0223
+  from   law:concat-associates
+  cell   "A" | "a" | "abc"
+  code   ((("A") ~ ("a")) ~ ("abc"))
+  same-as (("A") ~ (("a") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0224
+  from   law:concat-associates
+  cell   "A" | "a" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("A") ~ ("a")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("A") ~ (("a") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0225
+  from   law:concat-associates
+  cell   "A" | "A" | ""
+  code   ((("A") ~ ("A")) ~ (""))
+  same-as (("A") ~ (("A") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0226
+  from   law:concat-associates
+  cell   "A" | "A" | " "
+  code   ((("A") ~ ("A")) ~ (" "))
+  same-as (("A") ~ (("A") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0227
+  from   law:concat-associates
+  cell   "A" | "A" | "0"
+  code   ((("A") ~ ("A")) ~ ("0"))
+  same-as (("A") ~ (("A") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0228
+  from   law:concat-associates
+  cell   "A" | "A" | "a"
+  code   ((("A") ~ ("A")) ~ ("a"))
+  same-as (("A") ~ (("A") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0229
+  from   law:concat-associates
+  cell   "A" | "A" | "A"
+  code   ((("A") ~ ("A")) ~ ("A"))
+  same-as (("A") ~ (("A") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0230
+  from   law:concat-associates
+  cell   "A" | "A" | "abc"
+  code   ((("A") ~ ("A")) ~ ("abc"))
+  same-as (("A") ~ (("A") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0231
+  from   law:concat-associates
+  cell   "A" | "A" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("A") ~ ("A")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("A") ~ (("A") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0232
+  from   law:concat-associates
+  cell   "A" | "abc" | ""
+  code   ((("A") ~ ("abc")) ~ (""))
+  same-as (("A") ~ (("abc") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0233
+  from   law:concat-associates
+  cell   "A" | "abc" | " "
+  code   ((("A") ~ ("abc")) ~ (" "))
+  same-as (("A") ~ (("abc") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0234
+  from   law:concat-associates
+  cell   "A" | "abc" | "0"
+  code   ((("A") ~ ("abc")) ~ ("0"))
+  same-as (("A") ~ (("abc") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0235
+  from   law:concat-associates
+  cell   "A" | "abc" | "a"
+  code   ((("A") ~ ("abc")) ~ ("a"))
+  same-as (("A") ~ (("abc") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0236
+  from   law:concat-associates
+  cell   "A" | "abc" | "A"
+  code   ((("A") ~ ("abc")) ~ ("A"))
+  same-as (("A") ~ (("abc") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0237
+  from   law:concat-associates
+  cell   "A" | "abc" | "abc"
+  code   ((("A") ~ ("abc")) ~ ("abc"))
+  same-as (("A") ~ (("abc") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0238
+  from   law:concat-associates
+  cell   "A" | "abc" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("A") ~ ("abc")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("A") ~ (("abc") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0239
+  from   law:concat-associates
+  cell   "A" | "e\c[COMBINING ACUTE ACCENT]" | ""
+  code   ((("A") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ (""))
+  same-as (("A") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0240
+  from   law:concat-associates
+  cell   "A" | "e\c[COMBINING ACUTE ACCENT]" | " "
+  code   ((("A") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ (" "))
+  same-as (("A") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0241
+  from   law:concat-associates
+  cell   "A" | "e\c[COMBINING ACUTE ACCENT]" | "0"
+  code   ((("A") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("0"))
+  same-as (("A") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0242
+  from   law:concat-associates
+  cell   "A" | "e\c[COMBINING ACUTE ACCENT]" | "a"
+  code   ((("A") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("a"))
+  same-as (("A") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0243
+  from   law:concat-associates
+  cell   "A" | "e\c[COMBINING ACUTE ACCENT]" | "A"
+  code   ((("A") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("A"))
+  same-as (("A") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0244
+  from   law:concat-associates
+  cell   "A" | "e\c[COMBINING ACUTE ACCENT]" | "abc"
+  code   ((("A") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("abc"))
+  same-as (("A") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0245
+  from   law:concat-associates
+  cell   "A" | "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("A") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("A") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0246
+  from   law:concat-associates
+  cell   "abc" | "" | ""
+  code   ((("abc") ~ ("")) ~ (""))
+  same-as (("abc") ~ (("") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0247
+  from   law:concat-associates
+  cell   "abc" | "" | " "
+  code   ((("abc") ~ ("")) ~ (" "))
+  same-as (("abc") ~ (("") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0248
+  from   law:concat-associates
+  cell   "abc" | "" | "0"
+  code   ((("abc") ~ ("")) ~ ("0"))
+  same-as (("abc") ~ (("") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0249
+  from   law:concat-associates
+  cell   "abc" | "" | "a"
+  code   ((("abc") ~ ("")) ~ ("a"))
+  same-as (("abc") ~ (("") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0250
+  from   law:concat-associates
+  cell   "abc" | "" | "A"
+  code   ((("abc") ~ ("")) ~ ("A"))
+  same-as (("abc") ~ (("") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0251
+  from   law:concat-associates
+  cell   "abc" | "" | "abc"
+  code   ((("abc") ~ ("")) ~ ("abc"))
+  same-as (("abc") ~ (("") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0252
+  from   law:concat-associates
+  cell   "abc" | "" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("abc") ~ ("")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("abc") ~ (("") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0253
+  from   law:concat-associates
+  cell   "abc" | " " | ""
+  code   ((("abc") ~ (" ")) ~ (""))
+  same-as (("abc") ~ ((" ") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0254
+  from   law:concat-associates
+  cell   "abc" | " " | " "
+  code   ((("abc") ~ (" ")) ~ (" "))
+  same-as (("abc") ~ ((" ") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0255
+  from   law:concat-associates
+  cell   "abc" | " " | "0"
+  code   ((("abc") ~ (" ")) ~ ("0"))
+  same-as (("abc") ~ ((" ") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0256
+  from   law:concat-associates
+  cell   "abc" | " " | "a"
+  code   ((("abc") ~ (" ")) ~ ("a"))
+  same-as (("abc") ~ ((" ") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0257
+  from   law:concat-associates
+  cell   "abc" | " " | "A"
+  code   ((("abc") ~ (" ")) ~ ("A"))
+  same-as (("abc") ~ ((" ") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0258
+  from   law:concat-associates
+  cell   "abc" | " " | "abc"
+  code   ((("abc") ~ (" ")) ~ ("abc"))
+  same-as (("abc") ~ ((" ") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0259
+  from   law:concat-associates
+  cell   "abc" | " " | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("abc") ~ (" ")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("abc") ~ ((" ") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0260
+  from   law:concat-associates
+  cell   "abc" | "0" | ""
+  code   ((("abc") ~ ("0")) ~ (""))
+  same-as (("abc") ~ (("0") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0261
+  from   law:concat-associates
+  cell   "abc" | "0" | " "
+  code   ((("abc") ~ ("0")) ~ (" "))
+  same-as (("abc") ~ (("0") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0262
+  from   law:concat-associates
+  cell   "abc" | "0" | "0"
+  code   ((("abc") ~ ("0")) ~ ("0"))
+  same-as (("abc") ~ (("0") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0263
+  from   law:concat-associates
+  cell   "abc" | "0" | "a"
+  code   ((("abc") ~ ("0")) ~ ("a"))
+  same-as (("abc") ~ (("0") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0264
+  from   law:concat-associates
+  cell   "abc" | "0" | "A"
+  code   ((("abc") ~ ("0")) ~ ("A"))
+  same-as (("abc") ~ (("0") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0265
+  from   law:concat-associates
+  cell   "abc" | "0" | "abc"
+  code   ((("abc") ~ ("0")) ~ ("abc"))
+  same-as (("abc") ~ (("0") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0266
+  from   law:concat-associates
+  cell   "abc" | "0" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("abc") ~ ("0")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("abc") ~ (("0") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0267
+  from   law:concat-associates
+  cell   "abc" | "a" | ""
+  code   ((("abc") ~ ("a")) ~ (""))
+  same-as (("abc") ~ (("a") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0268
+  from   law:concat-associates
+  cell   "abc" | "a" | " "
+  code   ((("abc") ~ ("a")) ~ (" "))
+  same-as (("abc") ~ (("a") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0269
+  from   law:concat-associates
+  cell   "abc" | "a" | "0"
+  code   ((("abc") ~ ("a")) ~ ("0"))
+  same-as (("abc") ~ (("a") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0270
+  from   law:concat-associates
+  cell   "abc" | "a" | "a"
+  code   ((("abc") ~ ("a")) ~ ("a"))
+  same-as (("abc") ~ (("a") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0271
+  from   law:concat-associates
+  cell   "abc" | "a" | "A"
+  code   ((("abc") ~ ("a")) ~ ("A"))
+  same-as (("abc") ~ (("a") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0272
+  from   law:concat-associates
+  cell   "abc" | "a" | "abc"
+  code   ((("abc") ~ ("a")) ~ ("abc"))
+  same-as (("abc") ~ (("a") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0273
+  from   law:concat-associates
+  cell   "abc" | "a" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("abc") ~ ("a")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("abc") ~ (("a") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0274
+  from   law:concat-associates
+  cell   "abc" | "A" | ""
+  code   ((("abc") ~ ("A")) ~ (""))
+  same-as (("abc") ~ (("A") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0275
+  from   law:concat-associates
+  cell   "abc" | "A" | " "
+  code   ((("abc") ~ ("A")) ~ (" "))
+  same-as (("abc") ~ (("A") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0276
+  from   law:concat-associates
+  cell   "abc" | "A" | "0"
+  code   ((("abc") ~ ("A")) ~ ("0"))
+  same-as (("abc") ~ (("A") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0277
+  from   law:concat-associates
+  cell   "abc" | "A" | "a"
+  code   ((("abc") ~ ("A")) ~ ("a"))
+  same-as (("abc") ~ (("A") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0278
+  from   law:concat-associates
+  cell   "abc" | "A" | "A"
+  code   ((("abc") ~ ("A")) ~ ("A"))
+  same-as (("abc") ~ (("A") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0279
+  from   law:concat-associates
+  cell   "abc" | "A" | "abc"
+  code   ((("abc") ~ ("A")) ~ ("abc"))
+  same-as (("abc") ~ (("A") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0280
+  from   law:concat-associates
+  cell   "abc" | "A" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("abc") ~ ("A")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("abc") ~ (("A") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0281
+  from   law:concat-associates
+  cell   "abc" | "abc" | ""
+  code   ((("abc") ~ ("abc")) ~ (""))
+  same-as (("abc") ~ (("abc") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0282
+  from   law:concat-associates
+  cell   "abc" | "abc" | " "
+  code   ((("abc") ~ ("abc")) ~ (" "))
+  same-as (("abc") ~ (("abc") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0283
+  from   law:concat-associates
+  cell   "abc" | "abc" | "0"
+  code   ((("abc") ~ ("abc")) ~ ("0"))
+  same-as (("abc") ~ (("abc") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0284
+  from   law:concat-associates
+  cell   "abc" | "abc" | "a"
+  code   ((("abc") ~ ("abc")) ~ ("a"))
+  same-as (("abc") ~ (("abc") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0285
+  from   law:concat-associates
+  cell   "abc" | "abc" | "A"
+  code   ((("abc") ~ ("abc")) ~ ("A"))
+  same-as (("abc") ~ (("abc") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0286
+  from   law:concat-associates
+  cell   "abc" | "abc" | "abc"
+  code   ((("abc") ~ ("abc")) ~ ("abc"))
+  same-as (("abc") ~ (("abc") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0287
+  from   law:concat-associates
+  cell   "abc" | "abc" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("abc") ~ ("abc")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("abc") ~ (("abc") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0288
+  from   law:concat-associates
+  cell   "abc" | "e\c[COMBINING ACUTE ACCENT]" | ""
+  code   ((("abc") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ (""))
+  same-as (("abc") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0289
+  from   law:concat-associates
+  cell   "abc" | "e\c[COMBINING ACUTE ACCENT]" | " "
+  code   ((("abc") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ (" "))
+  same-as (("abc") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0290
+  from   law:concat-associates
+  cell   "abc" | "e\c[COMBINING ACUTE ACCENT]" | "0"
+  code   ((("abc") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("0"))
+  same-as (("abc") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0291
+  from   law:concat-associates
+  cell   "abc" | "e\c[COMBINING ACUTE ACCENT]" | "a"
+  code   ((("abc") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("a"))
+  same-as (("abc") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0292
+  from   law:concat-associates
+  cell   "abc" | "e\c[COMBINING ACUTE ACCENT]" | "A"
+  code   ((("abc") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("A"))
+  same-as (("abc") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0293
+  from   law:concat-associates
+  cell   "abc" | "e\c[COMBINING ACUTE ACCENT]" | "abc"
+  code   ((("abc") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("abc"))
+  same-as (("abc") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0294
+  from   law:concat-associates
+  cell   "abc" | "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("abc") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("abc") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0295
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "" | ""
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("")) ~ (""))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0296
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "" | " "
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("")) ~ (" "))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0297
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "" | "0"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("")) ~ ("0"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0298
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "" | "a"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("")) ~ ("a"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0299
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "" | "A"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("")) ~ ("A"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0300
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "" | "abc"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("")) ~ ("abc"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0301
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0302
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | " " | ""
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ (" ")) ~ (""))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ ((" ") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0303
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | " " | " "
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ (" ")) ~ (" "))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ ((" ") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0304
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | " " | "0"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ (" ")) ~ ("0"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ ((" ") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0305
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | " " | "a"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ (" ")) ~ ("a"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ ((" ") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0306
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | " " | "A"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ (" ")) ~ ("A"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ ((" ") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0307
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | " " | "abc"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ (" ")) ~ ("abc"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ ((" ") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0308
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | " " | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ (" ")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ ((" ") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0309
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "0" | ""
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("0")) ~ (""))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("0") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0310
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "0" | " "
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("0")) ~ (" "))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("0") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0311
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "0" | "0"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("0")) ~ ("0"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("0") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0312
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "0" | "a"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("0")) ~ ("a"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("0") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0313
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "0" | "A"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("0")) ~ ("A"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("0") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0314
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "0" | "abc"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("0")) ~ ("abc"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("0") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0315
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "0" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("0")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("0") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0316
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "a" | ""
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("a")) ~ (""))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("a") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0317
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "a" | " "
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("a")) ~ (" "))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("a") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0318
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "a" | "0"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("a")) ~ ("0"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("a") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0319
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "a" | "a"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("a")) ~ ("a"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("a") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0320
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "a" | "A"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("a")) ~ ("A"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("a") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0321
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "a" | "abc"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("a")) ~ ("abc"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("a") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0322
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "a" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("a")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("a") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0323
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "A" | ""
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("A")) ~ (""))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("A") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0324
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "A" | " "
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("A")) ~ (" "))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("A") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0325
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "A" | "0"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("A")) ~ ("0"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("A") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0326
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "A" | "a"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("A")) ~ ("a"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("A") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0327
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "A" | "A"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("A")) ~ ("A"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("A") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0328
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "A" | "abc"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("A")) ~ ("abc"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("A") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0329
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "A" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("A")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("A") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0330
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "abc" | ""
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("abc")) ~ (""))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("abc") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0331
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "abc" | " "
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("abc")) ~ (" "))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("abc") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0332
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "abc" | "0"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("abc")) ~ ("0"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("abc") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0333
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "abc" | "a"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("abc")) ~ ("a"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("abc") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0334
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "abc" | "A"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("abc")) ~ ("A"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("abc") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0335
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "abc" | "abc"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("abc")) ~ ("abc"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("abc") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0336
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "abc" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("abc")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("abc") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0337
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]" | ""
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ (""))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0338
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]" | " "
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ (" "))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ (" ")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0339
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]" | "0"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("0"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("0")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0340
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]" | "a"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("a"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("a")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0341
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]" | "A"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("A"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("A")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0342
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]" | "abc"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("abc"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("abc")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE
+
+- id     0343
+  from   law:concat-associates
+  cell   "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]" | "e\c[COMBINING ACUTE ACCENT]"
+  code   ((("e\c[COMBINING ACUTE ACCENT]") ~ ("e\c[COMBINING ACUTE ACCENT]")) ~ ("e\c[COMBINING ACUTE ACCENT]"))
+  same-as (("e\c[COMBINING ACUTE ACCENT]") ~ (("e\c[COMBINING ACUTE ACCENT]") ~ ("e\c[COMBINING ACUTE ACCENT]")))
+  oracle rakudo-2026.07 → AGREE
+  oracle rakupp-3.14.0 → AGREE

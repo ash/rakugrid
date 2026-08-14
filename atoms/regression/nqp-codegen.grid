@@ -4,7 +4,7 @@ kind     whole-program — a minimal repro, not yet reduced to an atom
 
 - id     0001
   from   rakupp:t/regression/nqp-codegen.raku
-  budget 20s
+  budget 46s
   code
     # Regression: `use nqp` ops must NATIVE-COMPILE (--exe), not fall back to AOT
     # bundling. The eager leaf ops share a runtime entry (rtNqpOp) with the

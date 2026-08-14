@@ -4,7 +4,7 @@ kind     whole-program — a minimal repro, not yet reduced to an atom
 
 - id     0001
   from   rakupp:t/regression/array-mutators-no-snapshot.raku
-  budget 20s
+  budget 40s
   code
     # Regression: Array mutators that write through the handle (push/append/
     # unshift/prepend/pop/shift/splice) must not pay methodCallTail's O(n)

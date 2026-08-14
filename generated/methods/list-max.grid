@@ -1,0 +1,95 @@
+atom     methods/list-max
+source   generated
+gen      gen/ladder.raku
+form     ({A}).max
+ladder   list
+
+- id     0001
+  from   ladder:list
+  cell   ()
+  code   (()).max
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0002
+  from   ladder:list
+  cell   (1,)
+  code   ((1,)).max
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0003
+  from   ladder:list
+  cell   (1,2,3)
+  code   ((1,2,3)).max
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-3.14.0 → 3
+
+- id     0004
+  from   ladder:list
+  cell   [1,2,3]
+  code   ([1,2,3]).max
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-3.14.0 → 3
+
+- id     0005
+  from   ladder:list
+  cell   (1..3)
+  code   ((1..3)).max
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-3.14.0 → 3
+
+- id     0006
+  from   ladder:list
+  cell   (1,(2,3))
+  code   ((1,(2,3))).max
+  is     $(2, 3)
+  type   List
+  oracle rakudo-2026.07 → $(2, 3)
+  oracle rakupp-3.14.0 → $(2, 3)
+
+- id     0007
+  from   ladder:list
+  cell   <a b>
+  code   (<a b>).max
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0008
+  from   ladder:list
+  cell   (Any,)
+  code   ((Any,)).max
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0009
+  from   ladder:list
+  cell   (1,Nil,2)
+  code   ((1,Nil,2)).max
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
+
+- id     0010
+  from   ladder:list
+  cell   (1,"a")
+  code   ((1,"a")).max
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"

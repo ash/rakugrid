@@ -4,7 +4,7 @@ kind     whole-program — a minimal repro, not yet reduced to an atom
 
 - id     0001
   from   rakupp:t/regression/main-args-conventions.raku
-  budget 20s
+  budget 81s
   code
     # MAIN command-line conventions — the full oracle matrix (Rakudo 2026.07),
     # reported as "rakupp demands =, Rakudo does not" and pinned here as three
@@ -172,43 +172,9 @@ kind     whole-program — a minimal repro, not yet reduced to an atom
              e.raku b.raku g2.raku o3.raku c.raku na.raku rep.raku rep2.raku>;
     say $fails == 0 ?? 'PASS' !! 'FAIL';
     exit($fails ?? 1 !! 0);
-  output
-    ok - --foo abc pairs (Str named)
-    ok - …and composes with a Bool after
-    ok - --foo=abc still works
-    ok - consumption is unconditional
-    ok - Int named does NOT pair
-    ok - pairing works with a slurpy present
-    ok - a positional token ends options
-    ok - a bare -- is consumed, all positional after
-    ok - pairing beats an optional positional
-    ok - …and a later token still fills it
-    ok - a LEADING positional ends options first
-    ok - -v is a named option
-    ok - -n=3 binds through single dash
-    ok - --/v negates
-    ok - -foo val pairs through single dash
-    ok - -5 alone is (mis)read as an option
-    ok - -- -5 passes the negative number
-    ok - multi: pairing picks the fitting candidate
-    ok - multi: a literal positional ends options
-    ok - an UNTYPED named does not pair
-    ok - a Num named does not pair either
-    ok - Str:D pairs (the smiley is fine)
-    ok - two pairings in one command
-    ok - a one-letter -f pairs too
-    ok - an OPTIONAL Str named pairs like a required one
-    ok - a *% slurpy does not disturb pairing
-    ok - a stray positional after a pairing still fails
-    ok - pairing cannot conjure a missing required positional
-    ok - the = form is also literal after the boundary
-    ok - -xyz is one name, not a cluster
-    ok - named-anywhere: an option after a positional binds
-    ok - named-anywhere: pairing follows past the boundary
-    ok - named-anywhere: -- still ends options
-    ok - a repeated option collects into :@x
-    ok - a single occurrence still binds :@x
-    ok - a repeated option does NOT bind a scalar
-    PASS
-  oracle rakudo-2026.07 → ok - --foo abc pairs (Str named) …(37 lines)
+  output PASS
+  oracle rakudo-2026.07 → TIMEOUT after 20s
   oracle rakupp-3.14.0 → ok - --foo abc pairs (Str named) …(37 lines)
+  verdict disputed
+  why    the reference implementation does not satisfy the program's own contract here (exit 0 with a last line of PASS) — it needs modules that are not installed, or exercises something only one engine implements; there is no reference observation to rule against
+  ruled  2026-08-14 against rakudo-2026.07

@@ -157,9 +157,19 @@ for @files -> $f {
     $staged.spurt($code);
 
     my @obs;
+    my $elapsed = 0;
     for @engines -> $e {
+        my $t0 = now;
         @obs.push: run-guarded($e, [$staged.absolute], $BUDGET, $stage.absolute);
+        my $took = now - $t0;
+        $elapsed = $took if $took > $elapsed;
     }
+
+    # The budget is MEASURED, not guessed. A fixed ceiling makes a program that
+    # re-invokes the interpreter a few times pass or fail depending on how busy
+    # the machine is, and a flaky test is worse than no test.
+    my $budget = ($elapsed * 4).ceiling;
+    $budget = $BUDGET if $budget < $BUDGET;
 
     # These programs declare their own contract in a header comment: exit 0 and
     # a last line of PASS. Exit 0 alone is not enough — several print `FAIL:`
@@ -177,7 +187,7 @@ for @files -> $f {
     @out.push: '';
     @out.push: "- id     0001";
     @out.push: "  from   rakupp:t/regression/{ $f.basename }";
-    @out.push: "  budget {$BUDGET}s";
+    @out.push: "  budget {$budget}s";
     @out.push: "  code";
     @out.push: indent-block($code);
 

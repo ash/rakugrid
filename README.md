@@ -12,12 +12,12 @@ Rakugrid is built from what those bugs taught us.
 
 | | |
 |---|---|
-| **atoms** | 312 |
-| **tests** | 4,004 — 3,745 generated, 259 curated |
+| **atoms** | 402 |
+| **tests** | 8,479 — 8,219 generated, 260 curated |
 | **engines on record** | `rakudo-2026.07`, `rakupp-3.14.0` |
-| **divergences** | 891 observations in 74 clusters |
-| **crashes on record** | 2 |
-| **signed rulings** | 28 |
+| **divergences** | 1,273 observations in 152 clusters |
+| **crashes on record** | 24 |
+| **signed rulings** | 147 |
 
 <sub>Refresh with `rakugrid stats` — these are printed, not hand-maintained.</sub>
 
@@ -105,15 +105,18 @@ need not be the same one.
 
 Phase 0. Working: the `.grid` parser, `fire` (in-process assertions — `is`,
 `type`, `throws`, `same-as`), `check`, `cover`, `diverge`, `matrix`, `isolate`,
-`adjudications`, and two generators: `gen/ladder.raku` (edge-ladder crosses for
-operators and methods) and `gen/import-regression.raku` (whole-program repros
-imported with provenance, fixtures included). Two engines on record throughout.
+`adjudications`, and four generators: `gen/ladder.raku` (edge-ladder crosses
+for operators and methods), `gen/syntax.raku` (the parse grid — which spellings
+compile), `gen/laws.raku` (algebraic laws asserted with `same-as`, needing no
+oracle), `gen/molecules.raku` (the interaction layer — Exit × Nesting) and
+`gen/import-regression.raku` (whole-program repros imported with
+provenance, fixtures included). Two engines on record throughout.
 
 The isolated lane runs `output`, `finishes`, `parses` and `no-parse` a process
 each, under a shell watchdog, and any record that kills the dense program is
 re-run alone so a crash costs one result rather than a file.
 
 Not yet built: the atom and facet inventory extractors, ladder-completeness in
-`cover`, and the molecule layer.
+`cover`, directed shrinking, and the remaining facet axes.
 
 See [docs/PLAN.md](docs/PLAN.md) for the full plan.

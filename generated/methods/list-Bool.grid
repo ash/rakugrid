@@ -1,0 +1,95 @@
+atom     methods/list-Bool
+source   generated
+gen      gen/ladder.raku
+form     ({A}).Bool
+ladder   list
+
+- id     0001
+  from   ladder:list
+  cell   ()
+  code   (()).Bool
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0002
+  from   ladder:list
+  cell   (1,)
+  code   ((1,)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0003
+  from   ladder:list
+  cell   (1,2,3)
+  code   ((1,2,3)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0004
+  from   ladder:list
+  cell   [1,2,3]
+  code   ([1,2,3]).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0005
+  from   ladder:list
+  cell   (1..3)
+  code   ((1..3)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0006
+  from   ladder:list
+  cell   (1,(2,3))
+  code   ((1,(2,3))).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0007
+  from   ladder:list
+  cell   <a b>
+  code   (<a b>).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0008
+  from   ladder:list
+  cell   (Any,)
+  code   ((Any,)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0009
+  from   ladder:list
+  cell   (1,Nil,2)
+  code   ((1,Nil,2)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0010
+  from   ladder:list
+  cell   (1,"a")
+  code   ((1,"a")).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
