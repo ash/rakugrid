@@ -2,90 +2,10 @@ atom     methods/Junction
 source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
-axes     BUILD_LEAST_DERIVED | Bool | CREATE | Capture | DEFINITE | HOW | INSTANTIATE-GENERIC | POPULATE | REPR | THREAD | VAR | WHAT | WHERE | WHO | bless | can | does | is-generic | item | not | self | set_why | so | take
+axes     Bool | CREATE | Capture | DEFINITE | HOW | INSTANTIATE-GENERIC | POPULATE | REPR | THREAD | VAR | WHAT | WHERE | WHO | bless | can | does | is-generic | item | not | self | so | take
 cols     any(1,2) | all(1,2)
 
 - id     0001
-  from   inventory:Junction.^methods
-  cell   BUILD_LEAST_DERIVED(0) | any(1,2)
-  code   (any(1,2)).BUILD_LEAST_DERIVED(0)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0002
-  from   inventory:Junction.^methods
-  cell   BUILD_LEAST_DERIVED(1) | any(1,2)
-  code   (any(1,2)).BUILD_LEAST_DERIVED(1)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0003
-  from   inventory:Junction.^methods
-  cell   BUILD_LEAST_DERIVED(-1) | any(1,2)
-  code   (any(1,2)).BUILD_LEAST_DERIVED(-1)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0004
-  from   inventory:Junction.^methods
-  cell   BUILD_LEAST_DERIVED("a") | any(1,2)
-  code   (any(1,2)).BUILD_LEAST_DERIVED("a")
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0005
-  from   inventory:Junction.^methods
-  cell   BUILD_LEAST_DERIVED(Any) | any(1,2)
-  code   (any(1,2)).BUILD_LEAST_DERIVED(Any)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0006
-  from   inventory:Junction.^methods
-  cell   BUILD_LEAST_DERIVED(0) | all(1,2)
-  code   (all(1,2)).BUILD_LEAST_DERIVED(0)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0007
-  from   inventory:Junction.^methods
-  cell   BUILD_LEAST_DERIVED(1) | all(1,2)
-  code   (all(1,2)).BUILD_LEAST_DERIVED(1)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0008
-  from   inventory:Junction.^methods
-  cell   BUILD_LEAST_DERIVED(-1) | all(1,2)
-  code   (all(1,2)).BUILD_LEAST_DERIVED(-1)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0009
-  from   inventory:Junction.^methods
-  cell   BUILD_LEAST_DERIVED("a") | all(1,2)
-  code   (all(1,2)).BUILD_LEAST_DERIVED("a")
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0010
-  from   inventory:Junction.^methods
-  cell   BUILD_LEAST_DERIVED(Any) | all(1,2)
-  code   (all(1,2)).BUILD_LEAST_DERIVED(Any)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0011
   from   inventory:Junction.^methods
   cell   Bool | any(1,2)
   code   (any(1,2)).Bool
@@ -94,7 +14,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0012
+- id     0002
   from   inventory:Junction.^methods
   cell   Bool | all(1,2)
   code   (all(1,2)).Bool
@@ -103,7 +23,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0013
+- id     0003
   from   inventory:Junction.^methods
   cell   CREATE | any(1,2)
   code   (any(1,2)).CREATE
@@ -115,7 +35,7 @@ cols     any(1,2) | all(1,2)
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0014
+- id     0004
   from   inventory:Junction.^methods
   cell   CREATE | all(1,2)
   code   (all(1,2)).CREATE
@@ -127,7 +47,7 @@ cols     any(1,2) | all(1,2)
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0015
+- id     0005
   from   inventory:Junction.^methods
   cell   Capture | any(1,2)
   code   (any(1,2)).Capture
@@ -136,7 +56,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → \()
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0016
+- id     0006
   from   inventory:Junction.^methods
   cell   Capture | all(1,2)
   code   (all(1,2)).Capture
@@ -145,7 +65,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → \()
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0017
+- id     0007
   from   inventory:Junction.^methods
   cell   DEFINITE | any(1,2)
   code   (any(1,2)).DEFINITE
@@ -154,7 +74,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0018
+- id     0008
   from   inventory:Junction.^methods
   cell   DEFINITE | all(1,2)
   code   (all(1,2)).DEFINITE
@@ -163,7 +83,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0019
+- id     0009
   from   inventory:Junction.^methods
   cell   HOW | any(1,2)
   code   (any(1,2)).HOW
@@ -172,7 +92,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0020
+- id     0010
   from   inventory:Junction.^methods
   cell   HOW | all(1,2)
   code   (all(1,2)).HOW
@@ -181,7 +101,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0021
+- id     0011
   from   inventory:Junction.^methods
   cell   INSTANTIATE-GENERIC(0) | any(1,2)
   code   (any(1,2)).INSTANTIATE-GENERIC(0)
@@ -189,7 +109,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0022
+- id     0012
   from   inventory:Junction.^methods
   cell   INSTANTIATE-GENERIC(1) | any(1,2)
   code   (any(1,2)).INSTANTIATE-GENERIC(1)
@@ -197,7 +117,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0023
+- id     0013
   from   inventory:Junction.^methods
   cell   INSTANTIATE-GENERIC(-1) | any(1,2)
   code   (any(1,2)).INSTANTIATE-GENERIC(-1)
@@ -205,7 +125,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0024
+- id     0014
   from   inventory:Junction.^methods
   cell   INSTANTIATE-GENERIC("a") | any(1,2)
   code   (any(1,2)).INSTANTIATE-GENERIC("a")
@@ -213,7 +133,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0025
+- id     0015
   from   inventory:Junction.^methods
   cell   INSTANTIATE-GENERIC(Any) | any(1,2)
   code   (any(1,2)).INSTANTIATE-GENERIC(Any)
@@ -221,7 +141,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0026
+- id     0016
   from   inventory:Junction.^methods
   cell   INSTANTIATE-GENERIC(0) | all(1,2)
   code   (all(1,2)).INSTANTIATE-GENERIC(0)
@@ -229,7 +149,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0027
+- id     0017
   from   inventory:Junction.^methods
   cell   INSTANTIATE-GENERIC(1) | all(1,2)
   code   (all(1,2)).INSTANTIATE-GENERIC(1)
@@ -237,7 +157,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0028
+- id     0018
   from   inventory:Junction.^methods
   cell   INSTANTIATE-GENERIC(-1) | all(1,2)
   code   (all(1,2)).INSTANTIATE-GENERIC(-1)
@@ -245,7 +165,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0029
+- id     0019
   from   inventory:Junction.^methods
   cell   INSTANTIATE-GENERIC("a") | all(1,2)
   code   (all(1,2)).INSTANTIATE-GENERIC("a")
@@ -253,7 +173,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0030
+- id     0020
   from   inventory:Junction.^methods
   cell   INSTANTIATE-GENERIC(Any) | all(1,2)
   code   (all(1,2)).INSTANTIATE-GENERIC(Any)
@@ -261,7 +181,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0031
+- id     0021
   from   inventory:Junction.^methods
   cell   POPULATE(0) | any(1,2)
   code   (any(1,2)).POPULATE(0)
@@ -270,7 +190,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → any(1, 2)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0032
+- id     0022
   from   inventory:Junction.^methods
   cell   POPULATE(1) | any(1,2)
   code   (any(1,2)).POPULATE(1)
@@ -279,7 +199,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → any(1, 2)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0033
+- id     0023
   from   inventory:Junction.^methods
   cell   POPULATE(-1) | any(1,2)
   code   (any(1,2)).POPULATE(-1)
@@ -288,7 +208,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → any(1, 2)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0034
+- id     0024
   from   inventory:Junction.^methods
   cell   POPULATE("a") | any(1,2)
   code   (any(1,2)).POPULATE("a")
@@ -297,7 +217,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → any(1, 2)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0035
+- id     0025
   from   inventory:Junction.^methods
   cell   POPULATE(Any) | any(1,2)
   code   (any(1,2)).POPULATE(Any)
@@ -306,7 +226,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → any(1, 2)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0036
+- id     0026
   from   inventory:Junction.^methods
   cell   POPULATE(0) | all(1,2)
   code   (all(1,2)).POPULATE(0)
@@ -315,7 +235,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → all(1, 2)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0037
+- id     0027
   from   inventory:Junction.^methods
   cell   POPULATE(1) | all(1,2)
   code   (all(1,2)).POPULATE(1)
@@ -324,7 +244,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → all(1, 2)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0038
+- id     0028
   from   inventory:Junction.^methods
   cell   POPULATE(-1) | all(1,2)
   code   (all(1,2)).POPULATE(-1)
@@ -333,7 +253,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → all(1, 2)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0039
+- id     0029
   from   inventory:Junction.^methods
   cell   POPULATE("a") | all(1,2)
   code   (all(1,2)).POPULATE("a")
@@ -342,7 +262,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → all(1, 2)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0040
+- id     0030
   from   inventory:Junction.^methods
   cell   POPULATE(Any) | all(1,2)
   code   (all(1,2)).POPULATE(Any)
@@ -351,7 +271,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → all(1, 2)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0041
+- id     0031
   from   inventory:Junction.^methods
   cell   REPR | any(1,2)
   code   (any(1,2)).REPR
@@ -360,7 +280,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0042
+- id     0032
   from   inventory:Junction.^methods
   cell   REPR | all(1,2)
   code   (all(1,2)).REPR
@@ -369,7 +289,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0043
+- id     0033
   from   inventory:Junction.^methods
   cell   THREAD(0) | any(1,2)
   code   (any(1,2)).THREAD(0)
@@ -377,7 +297,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0044
+- id     0034
   from   inventory:Junction.^methods
   cell   THREAD(1) | any(1,2)
   code   (any(1,2)).THREAD(1)
@@ -385,7 +305,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0045
+- id     0035
   from   inventory:Junction.^methods
   cell   THREAD(-1) | any(1,2)
   code   (any(1,2)).THREAD(-1)
@@ -393,7 +313,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0046
+- id     0036
   from   inventory:Junction.^methods
   cell   THREAD("a") | any(1,2)
   code   (any(1,2)).THREAD("a")
@@ -401,7 +321,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0047
+- id     0037
   from   inventory:Junction.^methods
   cell   THREAD(Any) | any(1,2)
   code   (any(1,2)).THREAD(Any)
@@ -409,7 +329,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Coerce::Impossible
 
-- id     0048
+- id     0038
   from   inventory:Junction.^methods
   cell   THREAD(0) | all(1,2)
   code   (all(1,2)).THREAD(0)
@@ -417,7 +337,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0049
+- id     0039
   from   inventory:Junction.^methods
   cell   THREAD(1) | all(1,2)
   code   (all(1,2)).THREAD(1)
@@ -425,7 +345,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0050
+- id     0040
   from   inventory:Junction.^methods
   cell   THREAD(-1) | all(1,2)
   code   (all(1,2)).THREAD(-1)
@@ -433,7 +353,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0051
+- id     0041
   from   inventory:Junction.^methods
   cell   THREAD("a") | all(1,2)
   code   (all(1,2)).THREAD("a")
@@ -441,7 +361,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0052
+- id     0042
   from   inventory:Junction.^methods
   cell   THREAD(Any) | all(1,2)
   code   (all(1,2)).THREAD(Any)
@@ -449,7 +369,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Coerce::Impossible
 
-- id     0053
+- id     0043
   from   inventory:Junction.^methods
   cell   VAR | any(1,2)
   code   (any(1,2)).VAR
@@ -458,7 +378,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → any(1, 2)
   oracle rakupp-3.14.0 → any(1, 2)
 
-- id     0054
+- id     0044
   from   inventory:Junction.^methods
   cell   VAR | all(1,2)
   code   (all(1,2)).VAR
@@ -467,7 +387,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → all(1, 2)
   oracle rakupp-3.14.0 → all(1, 2)
 
-- id     0055
+- id     0045
   from   inventory:Junction.^methods
   cell   WHAT | any(1,2)
   code   (any(1,2)).WHAT
@@ -476,7 +396,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Junction
   oracle rakupp-3.14.0 → Junction
 
-- id     0056
+- id     0046
   from   inventory:Junction.^methods
   cell   WHAT | all(1,2)
   code   (all(1,2)).WHAT
@@ -485,7 +405,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Junction
   oracle rakupp-3.14.0 → Junction
 
-- id     0057
+- id     0047
   from   inventory:Junction.^methods
   cell   WHERE | any(1,2)
   code   (any(1,2)).WHERE
@@ -497,7 +417,7 @@ cols     any(1,2) | all(1,2)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0058
+- id     0048
   from   inventory:Junction.^methods
   cell   WHERE | all(1,2)
   code   (all(1,2)).WHERE
@@ -509,7 +429,7 @@ cols     any(1,2) | all(1,2)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0059
+- id     0049
   from   inventory:Junction.^methods
   cell   WHO | any(1,2)
   code   (any(1,2)).WHO
@@ -518,7 +438,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0060
+- id     0050
   from   inventory:Junction.^methods
   cell   WHO | all(1,2)
   code   (all(1,2)).WHO
@@ -527,7 +447,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0061
+- id     0051
   from   inventory:Junction.^methods
   cell   bless | any(1,2)
   code   (any(1,2)).bless
@@ -539,7 +459,7 @@ cols     any(1,2) | all(1,2)
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0062
+- id     0052
   from   inventory:Junction.^methods
   cell   bless | all(1,2)
   code   (all(1,2)).bless
@@ -551,7 +471,7 @@ cols     any(1,2) | all(1,2)
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0063
+- id     0053
   from   inventory:Junction.^methods
   cell   can(0) | any(1,2)
   code   (any(1,2)).can(0)
@@ -559,7 +479,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → any((), ())
 
-- id     0064
+- id     0054
   from   inventory:Junction.^methods
   cell   can(1) | any(1,2)
   code   (any(1,2)).can(1)
@@ -567,7 +487,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → any((), ())
 
-- id     0065
+- id     0055
   from   inventory:Junction.^methods
   cell   can(-1) | any(1,2)
   code   (any(1,2)).can(-1)
@@ -575,7 +495,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → any((), ())
 
-- id     0066
+- id     0056
   from   inventory:Junction.^methods
   cell   can("a") | any(1,2)
   code   (any(1,2)).can("a")
@@ -584,7 +504,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → any((), ())
 
-- id     0067
+- id     0057
   from   inventory:Junction.^methods
   cell   can(Any) | any(1,2)
   code   (any(1,2)).can(Any)
@@ -592,7 +512,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → any((), ())
 
-- id     0068
+- id     0058
   from   inventory:Junction.^methods
   cell   can(0) | all(1,2)
   code   (all(1,2)).can(0)
@@ -600,7 +520,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → all((), ())
 
-- id     0069
+- id     0059
   from   inventory:Junction.^methods
   cell   can(1) | all(1,2)
   code   (all(1,2)).can(1)
@@ -608,7 +528,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → all((), ())
 
-- id     0070
+- id     0060
   from   inventory:Junction.^methods
   cell   can(-1) | all(1,2)
   code   (all(1,2)).can(-1)
@@ -616,7 +536,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → all((), ())
 
-- id     0071
+- id     0061
   from   inventory:Junction.^methods
   cell   can("a") | all(1,2)
   code   (all(1,2)).can("a")
@@ -625,7 +545,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → all((), ())
 
-- id     0072
+- id     0062
   from   inventory:Junction.^methods
   cell   can(Any) | all(1,2)
   code   (all(1,2)).can(Any)
@@ -633,7 +553,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → all((), ())
 
-- id     0073
+- id     0063
   from   inventory:Junction.^methods
   cell   does(0) | any(1,2)
   code   (any(1,2)).does(0)
@@ -642,7 +562,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → any(Bool::True, Bool::True)
 
-- id     0074
+- id     0064
   from   inventory:Junction.^methods
   cell   does(1) | any(1,2)
   code   (any(1,2)).does(1)
@@ -651,7 +571,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → any(Bool::True, Bool::True)
 
-- id     0075
+- id     0065
   from   inventory:Junction.^methods
   cell   does(-1) | any(1,2)
   code   (any(1,2)).does(-1)
@@ -660,7 +580,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → any(Bool::True, Bool::True)
 
-- id     0076
+- id     0066
   from   inventory:Junction.^methods
   cell   does("a") | any(1,2)
   code   (any(1,2)).does("a")
@@ -669,7 +589,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → any(Bool::False, Bool::False)
 
-- id     0077
+- id     0067
   from   inventory:Junction.^methods
   cell   does(Any) | any(1,2)
   code   (any(1,2)).does(Any)
@@ -678,7 +598,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → any(Bool::True, Bool::True)
 
-- id     0078
+- id     0068
   from   inventory:Junction.^methods
   cell   does(0) | all(1,2)
   code   (all(1,2)).does(0)
@@ -687,7 +607,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → all(Bool::True, Bool::True)
 
-- id     0079
+- id     0069
   from   inventory:Junction.^methods
   cell   does(1) | all(1,2)
   code   (all(1,2)).does(1)
@@ -696,7 +616,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → all(Bool::True, Bool::True)
 
-- id     0080
+- id     0070
   from   inventory:Junction.^methods
   cell   does(-1) | all(1,2)
   code   (all(1,2)).does(-1)
@@ -705,7 +625,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → all(Bool::True, Bool::True)
 
-- id     0081
+- id     0071
   from   inventory:Junction.^methods
   cell   does("a") | all(1,2)
   code   (all(1,2)).does("a")
@@ -714,7 +634,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → all(Bool::False, Bool::False)
 
-- id     0082
+- id     0072
   from   inventory:Junction.^methods
   cell   does(Any) | all(1,2)
   code   (all(1,2)).does(Any)
@@ -723,7 +643,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → all(Bool::True, Bool::True)
 
-- id     0083
+- id     0073
   from   inventory:Junction.^methods
   cell   is-generic | any(1,2)
   code   (any(1,2)).is-generic
@@ -732,7 +652,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0084
+- id     0074
   from   inventory:Junction.^methods
   cell   is-generic | all(1,2)
   code   (all(1,2)).is-generic
@@ -741,7 +661,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0085
+- id     0075
   from   inventory:Junction.^methods
   cell   item | any(1,2)
   code   (any(1,2)).item
@@ -750,7 +670,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → any(1, 2)
   oracle rakupp-3.14.0 → any(1, 2)
 
-- id     0086
+- id     0076
   from   inventory:Junction.^methods
   cell   item | all(1,2)
   code   (all(1,2)).item
@@ -759,7 +679,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → all(1, 2)
   oracle rakupp-3.14.0 → all(1, 2)
 
-- id     0087
+- id     0077
   from   inventory:Junction.^methods
   cell   not | any(1,2)
   code   (any(1,2)).not
@@ -768,7 +688,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0088
+- id     0078
   from   inventory:Junction.^methods
   cell   not | all(1,2)
   code   (all(1,2)).not
@@ -777,7 +697,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0089
+- id     0079
   from   inventory:Junction.^methods
   cell   self | any(1,2)
   code   (any(1,2)).self
@@ -786,7 +706,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → any(1, 2)
   oracle rakupp-3.14.0 → any(1, 2)
 
-- id     0090
+- id     0080
   from   inventory:Junction.^methods
   cell   self | all(1,2)
   code   (all(1,2)).self
@@ -795,97 +715,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → all(1, 2)
   oracle rakupp-3.14.0 → all(1, 2)
 
-- id     0091
-  from   inventory:Junction.^methods
-  cell   set_why(0) | any(1,2)
-  code   (any(1,2)).set_why(0)
-  is     0
-  type   Int
-  oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0092
-  from   inventory:Junction.^methods
-  cell   set_why(1) | any(1,2)
-  code   (any(1,2)).set_why(1)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0093
-  from   inventory:Junction.^methods
-  cell   set_why(-1) | any(1,2)
-  code   (any(1,2)).set_why(-1)
-  is     -1
-  type   Int
-  oracle rakudo-2026.07 → -1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0094
-  from   inventory:Junction.^methods
-  cell   set_why("a") | any(1,2)
-  code   (any(1,2)).set_why("a")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0095
-  from   inventory:Junction.^methods
-  cell   set_why(Any) | any(1,2)
-  code   (any(1,2)).set_why(Any)
-  is     Any
-  type   Any
-  oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0096
-  from   inventory:Junction.^methods
-  cell   set_why(0) | all(1,2)
-  code   (all(1,2)).set_why(0)
-  is     0
-  type   Int
-  oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0097
-  from   inventory:Junction.^methods
-  cell   set_why(1) | all(1,2)
-  code   (all(1,2)).set_why(1)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0098
-  from   inventory:Junction.^methods
-  cell   set_why(-1) | all(1,2)
-  code   (all(1,2)).set_why(-1)
-  is     -1
-  type   Int
-  oracle rakudo-2026.07 → -1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0099
-  from   inventory:Junction.^methods
-  cell   set_why("a") | all(1,2)
-  code   (all(1,2)).set_why("a")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0100
-  from   inventory:Junction.^methods
-  cell   set_why(Any) | all(1,2)
-  code   (all(1,2)).set_why(Any)
-  is     Any
-  type   Any
-  oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0101
+- id     0081
   from   inventory:Junction.^methods
   cell   so | any(1,2)
   code   (any(1,2)).so
@@ -894,7 +724,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0102
+- id     0082
   from   inventory:Junction.^methods
   cell   so | all(1,2)
   code   (all(1,2)).so
@@ -903,7 +733,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0103
+- id     0083
   from   inventory:Junction.^methods
   cell   take | any(1,2)
   code   (any(1,2)).take
@@ -911,7 +741,7 @@ cols     any(1,2) | all(1,2)
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → any(1, 2)
 
-- id     0104
+- id     0084
   from   inventory:Junction.^methods
   cell   take | all(1,2)
   code   (all(1,2)).take

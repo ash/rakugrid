@@ -1,0 +1,383 @@
+atom     methods/Numeric
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     FatRat | log10 | log2 | pred | roots | succ
+cols     1 | 1e0 | 1/2 | 1+0i
+
+- id     0001
+  from   inventory:Numeric.^methods
+  cell   FatRat | 1
+  code   (1).FatRat
+  is     FatRat.new(1, 1)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(1, 1)
+  oracle rakupp-3.14.0 → FatRat.new(1, 1)
+
+- id     0002
+  from   inventory:Numeric.^methods
+  cell   FatRat | 1e0
+  code   (1e0).FatRat
+  is     FatRat.new(1, 1)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(1, 1)
+  oracle rakupp-3.14.0 → FatRat.new(1, 1)
+
+- id     0003
+  from   inventory:Numeric.^methods
+  cell   FatRat | 1/2
+  code   (1/2).FatRat
+  is     FatRat.new(1, 2)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(1, 2)
+  oracle rakupp-3.14.0 → FatRat.new(1, 2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0004
+  from   inventory:Numeric.^methods
+  cell   FatRat | 1+0i
+  code   (1+0i).FatRat
+  is     FatRat.new(1, 1)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(1, 1)
+  oracle rakupp-3.14.0 → FatRat.new(1, 1)
+
+- id     0005
+  from   inventory:Numeric.^methods
+  cell   log10 | 1
+  code   (1).log10
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0006
+  from   inventory:Numeric.^methods
+  cell   log10 | 1e0
+  code   (1e0).log10
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0007
+  from   inventory:Numeric.^methods
+  cell   log10 | 1/2
+  code   (1/2).log10
+  is     -0.30102999566398114e0
+  type   Num
+  oracle rakudo-2026.07 → -0.30102999566398114e0
+  oracle rakupp-3.14.0 → -0.3010299956639812e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0008
+  from   inventory:Numeric.^methods
+  cell   log10 | 1+0i
+  code   (1+0i).log10
+  is     <0+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0+0i>
+  oracle rakupp-3.14.0 → <0+0i>
+
+- id     0009
+  from   inventory:Numeric.^methods
+  cell   log2 | 1
+  code   (1).log2
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0010
+  from   inventory:Numeric.^methods
+  cell   log2 | 1e0
+  code   (1e0).log2
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0011
+  from   inventory:Numeric.^methods
+  cell   log2 | 1/2
+  code   (1/2).log2
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-3.14.0 → -1e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0012
+  from   inventory:Numeric.^methods
+  cell   log2 | 1+0i
+  code   (1+0i).log2
+  is     <0+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0+0i>
+  oracle rakupp-3.14.0 → <0+0i>
+
+- id     0013
+  from   inventory:Numeric.^methods
+  cell   pred | 1
+  code   (1).pred
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0014
+  from   inventory:Numeric.^methods
+  cell   pred | 1e0
+  code   (1e0).pred
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0
+
+- id     0015
+  from   inventory:Numeric.^methods
+  cell   pred | 1/2
+  code   (1/2).pred
+  is     -0.5
+  type   Rat
+  oracle rakudo-2026.07 → -0.5
+  oracle rakupp-3.14.0 → -1
+
+- id     0016
+  from   inventory:Numeric.^methods
+  cell   pred | 1+0i
+  code   (1+0i).pred
+  is     <0+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0+0i>
+  oracle rakupp-3.14.0 → -1
+
+- id     0017
+  from   inventory:Numeric.^methods
+  cell   roots(0) | 1
+  code   (1).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0018
+  from   inventory:Numeric.^methods
+  cell   roots(1) | 1
+  code   (1).roots(1)
+  is     <1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1+0i>
+  oracle rakupp-3.14.0 → $(<1+0i>,)
+
+- id     0019
+  from   inventory:Numeric.^methods
+  cell   roots(-1) | 1
+  code   (1).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0020
+  from   inventory:Numeric.^methods
+  cell   roots("a") | 1
+  code   (1).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0021
+  from   inventory:Numeric.^methods
+  cell   roots(Any) | 1
+  code   (1).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0022
+  from   inventory:Numeric.^methods
+  cell   roots(0) | 1e0
+  code   (1e0).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0023
+  from   inventory:Numeric.^methods
+  cell   roots(1) | 1e0
+  code   (1e0).roots(1)
+  is     <1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1+0i>
+  oracle rakupp-3.14.0 → $(<1+0i>,)
+
+- id     0024
+  from   inventory:Numeric.^methods
+  cell   roots(-1) | 1e0
+  code   (1e0).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0025
+  from   inventory:Numeric.^methods
+  cell   roots("a") | 1e0
+  code   (1e0).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0026
+  from   inventory:Numeric.^methods
+  cell   roots(Any) | 1e0
+  code   (1e0).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0027
+  from   inventory:Numeric.^methods
+  cell   roots(0) | 1/2
+  code   (1/2).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0028
+  from   inventory:Numeric.^methods
+  cell   roots(1) | 1/2
+  code   (1/2).roots(1)
+  is     <0.5+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5+0i>
+  oracle rakupp-3.14.0 → $(<0.5+0i>,)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0029
+  from   inventory:Numeric.^methods
+  cell   roots(-1) | 1/2
+  code   (1/2).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0030
+  from   inventory:Numeric.^methods
+  cell   roots("a") | 1/2
+  code   (1/2).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0031
+  from   inventory:Numeric.^methods
+  cell   roots(Any) | 1/2
+  code   (1/2).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0032
+  from   inventory:Numeric.^methods
+  cell   roots(0) | 1+0i
+  code   (1+0i).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0033
+  from   inventory:Numeric.^methods
+  cell   roots(1) | 1+0i
+  code   (1+0i).roots(1)
+  is     <1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1+0i>
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0034
+  from   inventory:Numeric.^methods
+  cell   roots(-1) | 1+0i
+  code   (1+0i).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0035
+  from   inventory:Numeric.^methods
+  cell   roots("a") | 1+0i
+  code   (1+0i).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0036
+  from   inventory:Numeric.^methods
+  cell   roots(Any) | 1+0i
+  code   (1+0i).roots(Any)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0037
+  from   inventory:Numeric.^methods
+  cell   succ | 1
+  code   (1).succ
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
+
+- id     0038
+  from   inventory:Numeric.^methods
+  cell   succ | 1e0
+  code   (1e0).succ
+  is     2e0
+  type   Num
+  oracle rakudo-2026.07 → 2e0
+  oracle rakupp-3.14.0 → 2
+
+- id     0039
+  from   inventory:Numeric.^methods
+  cell   succ | 1/2
+  code   (1/2).succ
+  is     1.5
+  type   Rat
+  oracle rakudo-2026.07 → 1.5
+  oracle rakupp-3.14.0 → 1
+
+- id     0040
+  from   inventory:Numeric.^methods
+  cell   succ | 1+0i
+  code   (1+0i).succ
+  is     <2+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <2+0i>
+  oracle rakupp-3.14.0 → 1

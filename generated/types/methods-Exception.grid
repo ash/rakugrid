@@ -1,0 +1,797 @@
+atom     methods/Exception
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     Bool | CREATE | Capture | DEFINITE | Failure | HOW | INSTANTIATE-GENERIC | POPULATE | REPR | VAR | WHAT | WHERE | WHO | all | any | backtrace | bless | cache | can | chrs | die | does | fail | is-compile-time | is-generic | item | join | lazy-if | message | nl-out | none | not | one | reset-backtrace | resume | rethrow | reverse | self | so | sum | take | throw | vault-backtrace
+cols     X::AdHoc.new(payload => "x")
+
+- id     0001
+  from   inventory:Exception.^methods
+  cell   Bool | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0002
+  from   inventory:Exception.^methods
+  cell   CREATE | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).CREATE
+  is     X::AdHoc.new(payload => Nil)
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => Nil)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0003
+  from   inventory:Exception.^methods
+  cell   Capture | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).Capture
+  is     \(:payload("x"))
+  type   Capture
+  oracle rakudo-2026.07 → \(:payload("x"))
+  oracle rakupp-3.14.0 → \(:message("x"), :payload("x"))
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0004
+  from   inventory:Exception.^methods
+  cell   DEFINITE | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0005
+  from   inventory:Exception.^methods
+  cell   Failure | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).Failure
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0006
+  from   inventory:Exception.^methods
+  cell   HOW | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW.new
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0007
+  from   inventory:Exception.^methods
+  cell   INSTANTIATE-GENERIC(0) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0008
+  from   inventory:Exception.^methods
+  cell   INSTANTIATE-GENERIC(1) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0009
+  from   inventory:Exception.^methods
+  cell   INSTANTIATE-GENERIC(-1) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0010
+  from   inventory:Exception.^methods
+  cell   INSTANTIATE-GENERIC("a") | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0011
+  from   inventory:Exception.^methods
+  cell   INSTANTIATE-GENERIC(Any) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0012
+  from   inventory:Exception.^methods
+  cell   POPULATE(0) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).POPULATE(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0013
+  from   inventory:Exception.^methods
+  cell   POPULATE(1) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).POPULATE(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0014
+  from   inventory:Exception.^methods
+  cell   POPULATE(-1) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).POPULATE(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0015
+  from   inventory:Exception.^methods
+  cell   POPULATE("a") | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).POPULATE("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0016
+  from   inventory:Exception.^methods
+  cell   POPULATE(Any) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).POPULATE(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0017
+  from   inventory:Exception.^methods
+  cell   REPR | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0018
+  from   inventory:Exception.^methods
+  cell   VAR | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).VAR
+  is     X::AdHoc.new(payload => "x")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
+  oracle rakupp-3.14.0 → X::AdHoc.new(payload => "x", message => Any)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0019
+  from   inventory:Exception.^methods
+  cell   WHAT | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).WHAT
+  is     X::AdHoc
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc
+  oracle rakupp-3.14.0 → X::AdHoc
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0020
+  from   inventory:Exception.^methods
+  cell   WHERE | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).WHERE
+  is     6065966913320
+  type   Int
+  oracle rakudo-2026.07 → 6065966913320
+  oracle rakupp-3.14.0 → 140390568066904
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0021
+  from   inventory:Exception.^methods
+  cell   WHO | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0022
+  from   inventory:Exception.^methods
+  cell   all | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).all
+  is     all(X::AdHoc.new(payload => "x"))
+  type   Junction
+  oracle rakudo-2026.07 → all(X::AdHoc.new(payload => "x"))
+  oracle rakupp-3.14.0 → all(X::AdHoc.new(payload => "x", message => Any))
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0023
+  from   inventory:Exception.^methods
+  cell   any | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).any
+  is     any(X::AdHoc.new(payload => "x"))
+  type   Junction
+  oracle rakudo-2026.07 → any(X::AdHoc.new(payload => "x"))
+  oracle rakupp-3.14.0 → any(X::AdHoc.new(payload => "x", message => Any))
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0024
+  from   inventory:Exception.^methods
+  cell   backtrace | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).backtrace
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → $({:file("/Users/ash/rakugrid/tmp/mm-probe-2.raku"), :line(1)},)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0025
+  from   inventory:Exception.^methods
+  cell   bless | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).bless
+  is     X::AdHoc.new(payload => "Unexplained error")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "Unexplained error")
+  oracle rakupp-3.14.0 → X::AdHoc.new(payload => Any, message => Any)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0026
+  from   inventory:Exception.^methods
+  cell   cache | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).cache
+  is     $(X::AdHoc.new(payload => "x"),)
+  type   List
+  oracle rakudo-2026.07 → $(X::AdHoc.new(payload => "x"),)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0027
+  from   inventory:Exception.^methods
+  cell   can(0) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0028
+  from   inventory:Exception.^methods
+  cell   can(1) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0029
+  from   inventory:Exception.^methods
+  cell   can(-1) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0030
+  from   inventory:Exception.^methods
+  cell   can("a") | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0031
+  from   inventory:Exception.^methods
+  cell   can(Any) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0032
+  from   inventory:Exception.^methods
+  cell   chrs | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0033
+  from   inventory:Exception.^methods
+  cell   die | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).die
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0034
+  from   inventory:Exception.^methods
+  cell   does(0) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0035
+  from   inventory:Exception.^methods
+  cell   does(1) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0036
+  from   inventory:Exception.^methods
+  cell   does(-1) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0037
+  from   inventory:Exception.^methods
+  cell   does("a") | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0038
+  from   inventory:Exception.^methods
+  cell   does(Any) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0039
+  from   inventory:Exception.^methods
+  cell   fail | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).fail
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::AdHoc
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0040
+  from   inventory:Exception.^methods
+  cell   is-compile-time | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).is-compile-time
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0041
+  from   inventory:Exception.^methods
+  cell   is-generic | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0042
+  from   inventory:Exception.^methods
+  cell   item | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).item
+  is     X::AdHoc.new(payload => "x")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
+  oracle rakupp-3.14.0 → X::AdHoc.new(payload => "x", message => Any)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0043
+  from   inventory:Exception.^methods
+  cell   join(0) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).join(0)
+  is     "x"
+  type   Str
+  oracle rakudo-2026.07 → "x"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0044
+  from   inventory:Exception.^methods
+  cell   join(1) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).join(1)
+  is     "x"
+  type   Str
+  oracle rakudo-2026.07 → "x"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0045
+  from   inventory:Exception.^methods
+  cell   join(-1) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).join(-1)
+  is     "x"
+  type   Str
+  oracle rakudo-2026.07 → "x"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0046
+  from   inventory:Exception.^methods
+  cell   join("a") | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).join("a")
+  is     "x"
+  type   Str
+  oracle rakudo-2026.07 → "x"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0047
+  from   inventory:Exception.^methods
+  cell   join(Any) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0048
+  from   inventory:Exception.^methods
+  cell   lazy-if(0) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).lazy-if(0)
+  is     X::AdHoc.new(payload => "x")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0049
+  from   inventory:Exception.^methods
+  cell   lazy-if(1) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).lazy-if(1)
+  is     X::AdHoc.new(payload => "x")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0050
+  from   inventory:Exception.^methods
+  cell   lazy-if(-1) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).lazy-if(-1)
+  is     X::AdHoc.new(payload => "x")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0051
+  from   inventory:Exception.^methods
+  cell   lazy-if("a") | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).lazy-if("a")
+  is     X::AdHoc.new(payload => "x")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0052
+  from   inventory:Exception.^methods
+  cell   lazy-if(Any) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).lazy-if(Any)
+  is     X::AdHoc.new(payload => "x")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0053
+  from   inventory:Exception.^methods
+  cell   message | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).message
+  is     "x"
+  type   Str
+  oracle rakudo-2026.07 → "x"
+  oracle rakupp-3.14.0 → "x"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0054
+  from   inventory:Exception.^methods
+  cell   nl-out | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0055
+  from   inventory:Exception.^methods
+  cell   none | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).none
+  is     none(X::AdHoc.new(payload => "x"))
+  type   Junction
+  oracle rakudo-2026.07 → none(X::AdHoc.new(payload => "x"))
+  oracle rakupp-3.14.0 → none(X::AdHoc.new(payload => "x", message => Any))
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0056
+  from   inventory:Exception.^methods
+  cell   not | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0057
+  from   inventory:Exception.^methods
+  cell   one | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).one
+  is     one(X::AdHoc.new(payload => "x"))
+  type   Junction
+  oracle rakudo-2026.07 → one(X::AdHoc.new(payload => "x"))
+  oracle rakupp-3.14.0 → one(X::AdHoc.new(payload => "x", message => Any))
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0058
+  from   inventory:Exception.^methods
+  cell   reset-backtrace | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).reset-backtrace
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0059
+  from   inventory:Exception.^methods
+  cell   resume | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).resume
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Parameter::InvalidConcreteness
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0060
+  from   inventory:Exception.^methods
+  cell   rethrow | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).rethrow
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::AdHoc
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0061
+  from   inventory:Exception.^methods
+  cell   reverse | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).reverse
+  is     $((X::AdHoc.new(payload => "x"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((X::AdHoc.new(payload => "x"),).Seq)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0062
+  from   inventory:Exception.^methods
+  cell   self | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).self
+  is     X::AdHoc.new(payload => "x")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
+  oracle rakupp-3.14.0 → X::AdHoc.new(payload => "x", message => Any)
+
+- id     0063
+  from   inventory:Exception.^methods
+  cell   so | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0064
+  from   inventory:Exception.^methods
+  cell   sum | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).sum
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0065
+  from   inventory:Exception.^methods
+  cell   take | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → X::AdHoc.new(payload => "x", message => Any)
+
+- id     0066
+  from   inventory:Exception.^methods
+  cell   throw(0) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).throw(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::AdHoc
+
+- id     0067
+  from   inventory:Exception.^methods
+  cell   throw(1) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).throw(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::AdHoc
+
+- id     0068
+  from   inventory:Exception.^methods
+  cell   throw(-1) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).throw(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::AdHoc
+
+- id     0069
+  from   inventory:Exception.^methods
+  cell   throw("a") | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).throw("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::AdHoc
+
+- id     0070
+  from   inventory:Exception.^methods
+  cell   throw(Any) | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).throw(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::AdHoc
+
+- id     0071
+  from   inventory:Exception.^methods
+  cell   vault-backtrace | X::AdHoc.new(payload => "x")
+  code   (X::AdHoc.new(payload => "x")).vault-backtrace
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound

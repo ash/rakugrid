@@ -1,0 +1,1367 @@
+atom     methods/Real
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     Bridge | Complex | Int | Num | Rat | abs | acos | acosec | acosech | acosh | acotan | acotanh | asec | asech | asin | asinh | atan | atanh | ceiling | cis | conj | cos | cosec | cosech | cosh | cotan | cotanh | floor | isNaN | rand | sec | sech | sign | sin | sinh | tan | tanh | truncate | unpolar
+cols     1 | 1e0 | 1/2
+
+- id     0001
+  from   inventory:Real.^methods
+  cell   Bridge | 1
+  code   (1).Bridge
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0002
+  from   inventory:Real.^methods
+  cell   Bridge | 1e0
+  code   (1e0).Bridge
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0003
+  from   inventory:Real.^methods
+  cell   Bridge | 1/2
+  code   (1/2).Bridge
+  is     0.5e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5e0
+  oracle rakupp-3.14.0 → 0.5e0
+
+- id     0004
+  from   inventory:Real.^methods
+  cell   Complex | 1
+  code   (1).Complex
+  is     <1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1+0i>
+  oracle rakupp-3.14.0 → <1+0i>
+
+- id     0005
+  from   inventory:Real.^methods
+  cell   Complex | 1e0
+  code   (1e0).Complex
+  is     <1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1+0i>
+  oracle rakupp-3.14.0 → <1+0i>
+
+- id     0006
+  from   inventory:Real.^methods
+  cell   Complex | 1/2
+  code   (1/2).Complex
+  is     <0.5+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5+0i>
+  oracle rakupp-3.14.0 → <0.5+0i>
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0007
+  from   inventory:Real.^methods
+  cell   Int | 1
+  code   (1).Int
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0008
+  from   inventory:Real.^methods
+  cell   Int | 1e0
+  code   (1e0).Int
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0009
+  from   inventory:Real.^methods
+  cell   Int | 1/2
+  code   (1/2).Int
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0010
+  from   inventory:Real.^methods
+  cell   Num | 1
+  code   (1).Num
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0011
+  from   inventory:Real.^methods
+  cell   Num | 1e0
+  code   (1e0).Num
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0012
+  from   inventory:Real.^methods
+  cell   Num | 1/2
+  code   (1/2).Num
+  is     0.5e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5e0
+  oracle rakupp-3.14.0 → 0.5e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0013
+  from   inventory:Real.^methods
+  cell   Rat(0) | 1
+  code   (1).Rat(0)
+  is     1.0
+  type   Rat
+  oracle rakudo-2026.07 → 1.0
+  oracle rakupp-3.14.0 → 1.0
+
+- id     0014
+  from   inventory:Real.^methods
+  cell   Rat(1) | 1
+  code   (1).Rat(1)
+  is     1.0
+  type   Rat
+  oracle rakudo-2026.07 → 1.0
+  oracle rakupp-3.14.0 → 1.0
+
+- id     0015
+  from   inventory:Real.^methods
+  cell   Rat(-1) | 1
+  code   (1).Rat(-1)
+  is     1.0
+  type   Rat
+  oracle rakudo-2026.07 → 1.0
+  oracle rakupp-3.14.0 → 1.0
+
+- id     0016
+  from   inventory:Real.^methods
+  cell   Rat("a") | 1
+  code   (1).Rat("a")
+  is     1.0
+  type   Rat
+  oracle rakudo-2026.07 → 1.0
+  oracle rakupp-3.14.0 → 1.0
+
+- id     0017
+  from   inventory:Real.^methods
+  cell   Rat(Any) | 1
+  code   (1).Rat(Any)
+  is     1.0
+  type   Rat
+  oracle rakudo-2026.07 → 1.0
+  oracle rakupp-3.14.0 → 1.0
+
+- id     0018
+  from   inventory:Real.^methods
+  cell   Rat(0) | 1e0
+  code   (1e0).Rat(0)
+  is     1.0
+  type   Rat
+  oracle rakudo-2026.07 → 1.0
+  oracle rakupp-3.14.0 → 1.0
+
+- id     0019
+  from   inventory:Real.^methods
+  cell   Rat(1) | 1e0
+  code   (1e0).Rat(1)
+  is     1.0
+  type   Rat
+  oracle rakudo-2026.07 → 1.0
+  oracle rakupp-3.14.0 → 1.0
+
+- id     0020
+  from   inventory:Real.^methods
+  cell   Rat(-1) | 1e0
+  code   (1e0).Rat(-1)
+  is     1.0
+  type   Rat
+  oracle rakudo-2026.07 → 1.0
+  oracle rakupp-3.14.0 → 1.0
+
+- id     0021
+  from   inventory:Real.^methods
+  cell   Rat("a") | 1e0
+  code   (1e0).Rat("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → 1.0
+
+- id     0022
+  from   inventory:Real.^methods
+  cell   Rat(Any) | 1e0
+  code   (1e0).Rat(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → 1.0
+
+- id     0023
+  from   inventory:Real.^methods
+  cell   Rat(0) | 1/2
+  code   (1/2).Rat(0)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → 0.5
+
+- id     0024
+  from   inventory:Real.^methods
+  cell   Rat(1) | 1/2
+  code   (1/2).Rat(1)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → 0.5
+
+- id     0025
+  from   inventory:Real.^methods
+  cell   Rat(-1) | 1/2
+  code   (1/2).Rat(-1)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → 0.5
+
+- id     0026
+  from   inventory:Real.^methods
+  cell   Rat("a") | 1/2
+  code   (1/2).Rat("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → 0.5
+
+- id     0027
+  from   inventory:Real.^methods
+  cell   Rat(Any) | 1/2
+  code   (1/2).Rat(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → 0.5
+
+- id     0028
+  from   inventory:Real.^methods
+  cell   abs | 1
+  code   (1).abs
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0029
+  from   inventory:Real.^methods
+  cell   abs | 1e0
+  code   (1e0).abs
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0030
+  from   inventory:Real.^methods
+  cell   abs | 1/2
+  code   (1/2).abs
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → 0.5
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0031
+  from   inventory:Real.^methods
+  cell   acos | 1
+  code   (1).acos
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0032
+  from   inventory:Real.^methods
+  cell   acos | 1e0
+  code   (1e0).acos
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0033
+  from   inventory:Real.^methods
+  cell   acos | 1/2
+  code   (1/2).acos
+  is     1.0471975511965976e0
+  type   Num
+  oracle rakudo-2026.07 → 1.0471975511965976e0
+  oracle rakupp-3.14.0 → 1.0471975511965976e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0034
+  from   inventory:Real.^methods
+  cell   acosec | 1
+  code   (1).acosec
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-3.14.0 → 1.5707963267948966e0
+
+- id     0035
+  from   inventory:Real.^methods
+  cell   acosec | 1e0
+  code   (1e0).acosec
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-3.14.0 → 1.5707963267948966e0
+
+- id     0036
+  from   inventory:Real.^methods
+  cell   acosec | 1/2
+  code   (1/2).acosec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0037
+  from   inventory:Real.^methods
+  cell   acosech | 1
+  code   (1).acosech
+  is     0.8813735870195429e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8813735870195429e0
+  oracle rakupp-3.14.0 → 0.881373587019543e0
+
+- id     0038
+  from   inventory:Real.^methods
+  cell   acosech | 1e0
+  code   (1e0).acosech
+  is     0.8813735870195429e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8813735870195429e0
+  oracle rakupp-3.14.0 → 0.881373587019543e0
+
+- id     0039
+  from   inventory:Real.^methods
+  cell   acosech | 1/2
+  code   (1/2).acosech
+  is     1.4436354751788103e0
+  type   Num
+  oracle rakudo-2026.07 → 1.4436354751788103e0
+  oracle rakupp-3.14.0 → 1.4436354751788103e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0040
+  from   inventory:Real.^methods
+  cell   acosh | 1
+  code   (1).acosh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0041
+  from   inventory:Real.^methods
+  cell   acosh | 1e0
+  code   (1e0).acosh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0042
+  from   inventory:Real.^methods
+  cell   acosh | 1/2
+  code   (1/2).acosh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0043
+  from   inventory:Real.^methods
+  cell   acotan | 1
+  code   (1).acotan
+  is     0.7853981633974483e0
+  type   Num
+  oracle rakudo-2026.07 → 0.7853981633974483e0
+  oracle rakupp-3.14.0 → 0.7853981633974483e0
+
+- id     0044
+  from   inventory:Real.^methods
+  cell   acotan | 1e0
+  code   (1e0).acotan
+  is     0.7853981633974483e0
+  type   Num
+  oracle rakudo-2026.07 → 0.7853981633974483e0
+  oracle rakupp-3.14.0 → 0.7853981633974483e0
+
+- id     0045
+  from   inventory:Real.^methods
+  cell   acotan | 1/2
+  code   (1/2).acotan
+  is     1.1071487177940906e0
+  type   Num
+  oracle rakudo-2026.07 → 1.1071487177940906e0
+  oracle rakupp-3.14.0 → 1.1071487177940906e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0046
+  from   inventory:Real.^methods
+  cell   acotanh | 1
+  code   (1).acotanh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0047
+  from   inventory:Real.^methods
+  cell   acotanh | 1e0
+  code   (1e0).acotanh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0048
+  from   inventory:Real.^methods
+  cell   acotanh | 1/2
+  code   (1/2).acotanh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0049
+  from   inventory:Real.^methods
+  cell   asec | 1
+  code   (1).asec
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0050
+  from   inventory:Real.^methods
+  cell   asec | 1e0
+  code   (1e0).asec
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0051
+  from   inventory:Real.^methods
+  cell   asec | 1/2
+  code   (1/2).asec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0052
+  from   inventory:Real.^methods
+  cell   asech | 1
+  code   (1).asech
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0053
+  from   inventory:Real.^methods
+  cell   asech | 1e0
+  code   (1e0).asech
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0054
+  from   inventory:Real.^methods
+  cell   asech | 1/2
+  code   (1/2).asech
+  is     1.3169578969248166e0
+  type   Num
+  oracle rakudo-2026.07 → 1.3169578969248166e0
+  oracle rakupp-3.14.0 → 1.3169578969248166e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0055
+  from   inventory:Real.^methods
+  cell   asin | 1
+  code   (1).asin
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-3.14.0 → 1.5707963267948966e0
+
+- id     0056
+  from   inventory:Real.^methods
+  cell   asin | 1e0
+  code   (1e0).asin
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-3.14.0 → 1.5707963267948966e0
+
+- id     0057
+  from   inventory:Real.^methods
+  cell   asin | 1/2
+  code   (1/2).asin
+  is     0.5235987755982988e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5235987755982988e0
+  oracle rakupp-3.14.0 → 0.5235987755982988e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0058
+  from   inventory:Real.^methods
+  cell   asinh | 1
+  code   (1).asinh
+  is     0.8813735870195429e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8813735870195429e0
+  oracle rakupp-3.14.0 → 0.881373587019543e0
+
+- id     0059
+  from   inventory:Real.^methods
+  cell   asinh | 1e0
+  code   (1e0).asinh
+  is     0.8813735870195429e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8813735870195429e0
+  oracle rakupp-3.14.0 → 0.881373587019543e0
+
+- id     0060
+  from   inventory:Real.^methods
+  cell   asinh | 1/2
+  code   (1/2).asinh
+  is     0.48121182505960347e0
+  type   Num
+  oracle rakudo-2026.07 → 0.48121182505960347e0
+  oracle rakupp-3.14.0 → 0.48121182505960347e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0061
+  from   inventory:Real.^methods
+  cell   atan | 1
+  code   (1).atan
+  is     0.7853981633974483e0
+  type   Num
+  oracle rakudo-2026.07 → 0.7853981633974483e0
+  oracle rakupp-3.14.0 → 0.7853981633974483e0
+
+- id     0062
+  from   inventory:Real.^methods
+  cell   atan | 1e0
+  code   (1e0).atan
+  is     0.7853981633974483e0
+  type   Num
+  oracle rakudo-2026.07 → 0.7853981633974483e0
+  oracle rakupp-3.14.0 → 0.7853981633974483e0
+
+- id     0063
+  from   inventory:Real.^methods
+  cell   atan | 1/2
+  code   (1/2).atan
+  is     0.46364760900080615e0
+  type   Num
+  oracle rakudo-2026.07 → 0.46364760900080615e0
+  oracle rakupp-3.14.0 → 0.46364760900080615e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0064
+  from   inventory:Real.^methods
+  cell   atanh | 1
+  code   (1).atanh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0065
+  from   inventory:Real.^methods
+  cell   atanh | 1e0
+  code   (1e0).atanh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0066
+  from   inventory:Real.^methods
+  cell   atanh | 1/2
+  code   (1/2).atanh
+  is     0.5493061443340549e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5493061443340549e0
+  oracle rakupp-3.14.0 → 0.5493061443340549e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0067
+  from   inventory:Real.^methods
+  cell   ceiling | 1
+  code   (1).ceiling
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0068
+  from   inventory:Real.^methods
+  cell   ceiling | 1e0
+  code   (1e0).ceiling
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0069
+  from   inventory:Real.^methods
+  cell   ceiling | 1/2
+  code   (1/2).ceiling
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0070
+  from   inventory:Real.^methods
+  cell   cis | 1
+  code   (1).cis
+  is     <0.5403023058681398+0.8414709848078965i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
+  oracle rakupp-3.14.0 → <0.5403023058681398+0.8414709848078965i>
+
+- id     0071
+  from   inventory:Real.^methods
+  cell   cis | 1e0
+  code   (1e0).cis
+  is     <0.5403023058681398+0.8414709848078965i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
+  oracle rakupp-3.14.0 → <0.5403023058681398+0.8414709848078965i>
+
+- id     0072
+  from   inventory:Real.^methods
+  cell   cis | 1/2
+  code   (1/2).cis
+  is     <0.8775825618903728+0.479425538604203i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.8775825618903728+0.479425538604203i>
+  oracle rakupp-3.14.0 → <0.8775825618903728+0.479425538604203i>
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0073
+  from   inventory:Real.^methods
+  cell   conj | 1
+  code   (1).conj
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0074
+  from   inventory:Real.^methods
+  cell   conj | 1e0
+  code   (1e0).conj
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0075
+  from   inventory:Real.^methods
+  cell   conj | 1/2
+  code   (1/2).conj
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → 0.5
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0076
+  from   inventory:Real.^methods
+  cell   cos | 1
+  code   (1).cos
+  is     0.5403023058681398e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5403023058681398e0
+  oracle rakupp-3.14.0 → 0.5403023058681398e0
+
+- id     0077
+  from   inventory:Real.^methods
+  cell   cos | 1e0
+  code   (1e0).cos
+  is     0.5403023058681398e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5403023058681398e0
+  oracle rakupp-3.14.0 → 0.5403023058681398e0
+
+- id     0078
+  from   inventory:Real.^methods
+  cell   cos | 1/2
+  code   (1/2).cos
+  is     0.8775825618903728e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8775825618903728e0
+  oracle rakupp-3.14.0 → 0.8775825618903728e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0079
+  from   inventory:Real.^methods
+  cell   cosec | 1
+  code   (1).cosec
+  is     1.1883951057781212e0
+  type   Num
+  oracle rakudo-2026.07 → 1.1883951057781212e0
+  oracle rakupp-3.14.0 → 1.1883951057781212e0
+
+- id     0080
+  from   inventory:Real.^methods
+  cell   cosec | 1e0
+  code   (1e0).cosec
+  is     1.1883951057781212e0
+  type   Num
+  oracle rakudo-2026.07 → 1.1883951057781212e0
+  oracle rakupp-3.14.0 → 1.1883951057781212e0
+
+- id     0081
+  from   inventory:Real.^methods
+  cell   cosec | 1/2
+  code   (1/2).cosec
+  is     2.085829642933488e0
+  type   Num
+  oracle rakudo-2026.07 → 2.085829642933488e0
+  oracle rakupp-3.14.0 → 2.085829642933488e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0082
+  from   inventory:Real.^methods
+  cell   cosech | 1
+  code   (1).cosech
+  is     0.8509181282393216e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8509181282393216e0
+  oracle rakupp-3.14.0 → 0.8509181282393216e0
+
+- id     0083
+  from   inventory:Real.^methods
+  cell   cosech | 1e0
+  code   (1e0).cosech
+  is     0.8509181282393216e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8509181282393216e0
+  oracle rakupp-3.14.0 → 0.8509181282393216e0
+
+- id     0084
+  from   inventory:Real.^methods
+  cell   cosech | 1/2
+  code   (1/2).cosech
+  is     1.9190347513349437e0
+  type   Num
+  oracle rakudo-2026.07 → 1.9190347513349437e0
+  oracle rakupp-3.14.0 → 1.9190347513349437e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0085
+  from   inventory:Real.^methods
+  cell   cosh | 1
+  code   (1).cosh
+  is     1.5430806348152437e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5430806348152437e0
+  oracle rakupp-3.14.0 → 1.5430806348152437e0
+
+- id     0086
+  from   inventory:Real.^methods
+  cell   cosh | 1e0
+  code   (1e0).cosh
+  is     1.5430806348152437e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5430806348152437e0
+  oracle rakupp-3.14.0 → 1.5430806348152437e0
+
+- id     0087
+  from   inventory:Real.^methods
+  cell   cosh | 1/2
+  code   (1/2).cosh
+  is     1.1276259652063807e0
+  type   Num
+  oracle rakudo-2026.07 → 1.1276259652063807e0
+  oracle rakupp-3.14.0 → 1.1276259652063807e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0088
+  from   inventory:Real.^methods
+  cell   cotan | 1
+  code   (1).cotan
+  is     0.6420926159343308e0
+  type   Num
+  oracle rakudo-2026.07 → 0.6420926159343308e0
+  oracle rakupp-3.14.0 → 0.6420926159343308e0
+
+- id     0089
+  from   inventory:Real.^methods
+  cell   cotan | 1e0
+  code   (1e0).cotan
+  is     0.6420926159343308e0
+  type   Num
+  oracle rakudo-2026.07 → 0.6420926159343308e0
+  oracle rakupp-3.14.0 → 0.6420926159343308e0
+
+- id     0090
+  from   inventory:Real.^methods
+  cell   cotan | 1/2
+  code   (1/2).cotan
+  is     1.830487721712452e0
+  type   Num
+  oracle rakudo-2026.07 → 1.830487721712452e0
+  oracle rakupp-3.14.0 → 1.830487721712452e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0091
+  from   inventory:Real.^methods
+  cell   cotanh | 1
+  code   (1).cotanh
+  is     1.3130352854993315e0
+  type   Num
+  oracle rakudo-2026.07 → 1.3130352854993315e0
+  oracle rakupp-3.14.0 → 1.3130352854993315e0
+
+- id     0092
+  from   inventory:Real.^methods
+  cell   cotanh | 1e0
+  code   (1e0).cotanh
+  is     1.3130352854993315e0
+  type   Num
+  oracle rakudo-2026.07 → 1.3130352854993315e0
+  oracle rakupp-3.14.0 → 1.3130352854993315e0
+
+- id     0093
+  from   inventory:Real.^methods
+  cell   cotanh | 1/2
+  code   (1/2).cotanh
+  is     2.163953413738653e0
+  type   Num
+  oracle rakudo-2026.07 → 2.163953413738653e0
+  oracle rakupp-3.14.0 → 2.163953413738653e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0094
+  from   inventory:Real.^methods
+  cell   floor | 1
+  code   (1).floor
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0095
+  from   inventory:Real.^methods
+  cell   floor | 1e0
+  code   (1e0).floor
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0096
+  from   inventory:Real.^methods
+  cell   floor | 1/2
+  code   (1/2).floor
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0097
+  from   inventory:Real.^methods
+  cell   isNaN | 1
+  code   (1).isNaN
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0098
+  from   inventory:Real.^methods
+  cell   isNaN | 1e0
+  code   (1e0).isNaN
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0099
+  from   inventory:Real.^methods
+  cell   isNaN | 1/2
+  code   (1/2).isNaN
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0100
+  from   inventory:Real.^methods
+  cell   rand | 1
+  code   (1).rand
+  is     0.470121135813489e0
+  type   Num
+  oracle rakudo-2026.07 → 0.470121135813489e0
+  oracle rakupp-3.14.0 → 0.6870504773208488e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0101
+  from   inventory:Real.^methods
+  cell   rand | 1e0
+  code   (1e0).rand
+  is     0.08542997510027561e0
+  type   Num
+  oracle rakudo-2026.07 → 0.08542997510027561e0
+  oracle rakupp-3.14.0 → 0.47441871346508435e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0102
+  from   inventory:Real.^methods
+  cell   rand | 1/2
+  code   (1/2).rand
+  is     0.46155084603736807e0
+  type   Num
+  oracle rakudo-2026.07 → 0.46155084603736807e0
+  oracle rakupp-3.14.0 → 0.3390731113209977e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0103
+  from   inventory:Real.^methods
+  cell   sec | 1
+  code   (1).sec
+  is     1.8508157176809255e0
+  type   Num
+  oracle rakudo-2026.07 → 1.8508157176809255e0
+  oracle rakupp-3.14.0 → 1.8508157176809255e0
+
+- id     0104
+  from   inventory:Real.^methods
+  cell   sec | 1e0
+  code   (1e0).sec
+  is     1.8508157176809255e0
+  type   Num
+  oracle rakudo-2026.07 → 1.8508157176809255e0
+  oracle rakupp-3.14.0 → 1.8508157176809255e0
+
+- id     0105
+  from   inventory:Real.^methods
+  cell   sec | 1/2
+  code   (1/2).sec
+  is     1.139493927324549e0
+  type   Num
+  oracle rakudo-2026.07 → 1.139493927324549e0
+  oracle rakupp-3.14.0 → 1.139493927324549e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0106
+  from   inventory:Real.^methods
+  cell   sech | 1
+  code   (1).sech
+  is     0.6480542736638855e0
+  type   Num
+  oracle rakudo-2026.07 → 0.6480542736638855e0
+  oracle rakupp-3.14.0 → 0.6480542736638855e0
+
+- id     0107
+  from   inventory:Real.^methods
+  cell   sech | 1e0
+  code   (1e0).sech
+  is     0.6480542736638855e0
+  type   Num
+  oracle rakudo-2026.07 → 0.6480542736638855e0
+  oracle rakupp-3.14.0 → 0.6480542736638855e0
+
+- id     0108
+  from   inventory:Real.^methods
+  cell   sech | 1/2
+  code   (1/2).sech
+  is     0.886818883970074e0
+  type   Num
+  oracle rakudo-2026.07 → 0.886818883970074e0
+  oracle rakupp-3.14.0 → 0.886818883970074e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0109
+  from   inventory:Real.^methods
+  cell   sign | 1
+  code   (1).sign
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0110
+  from   inventory:Real.^methods
+  cell   sign | 1e0
+  code   (1e0).sign
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0111
+  from   inventory:Real.^methods
+  cell   sign | 1/2
+  code   (1/2).sign
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0112
+  from   inventory:Real.^methods
+  cell   sin | 1
+  code   (1).sin
+  is     0.8414709848078965e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8414709848078965e0
+  oracle rakupp-3.14.0 → 0.8414709848078965e0
+
+- id     0113
+  from   inventory:Real.^methods
+  cell   sin | 1e0
+  code   (1e0).sin
+  is     0.8414709848078965e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8414709848078965e0
+  oracle rakupp-3.14.0 → 0.8414709848078965e0
+
+- id     0114
+  from   inventory:Real.^methods
+  cell   sin | 1/2
+  code   (1/2).sin
+  is     0.479425538604203e0
+  type   Num
+  oracle rakudo-2026.07 → 0.479425538604203e0
+  oracle rakupp-3.14.0 → 0.479425538604203e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0115
+  from   inventory:Real.^methods
+  cell   sinh | 1
+  code   (1).sinh
+  is     1.1752011936438014e0
+  type   Num
+  oracle rakudo-2026.07 → 1.1752011936438014e0
+  oracle rakupp-3.14.0 → 1.1752011936438014e0
+
+- id     0116
+  from   inventory:Real.^methods
+  cell   sinh | 1e0
+  code   (1e0).sinh
+  is     1.1752011936438014e0
+  type   Num
+  oracle rakudo-2026.07 → 1.1752011936438014e0
+  oracle rakupp-3.14.0 → 1.1752011936438014e0
+
+- id     0117
+  from   inventory:Real.^methods
+  cell   sinh | 1/2
+  code   (1/2).sinh
+  is     0.5210953054937474e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5210953054937474e0
+  oracle rakupp-3.14.0 → 0.5210953054937474e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0118
+  from   inventory:Real.^methods
+  cell   tan | 1
+  code   (1).tan
+  is     1.557407724654902e0
+  type   Num
+  oracle rakudo-2026.07 → 1.557407724654902e0
+  oracle rakupp-3.14.0 → 1.557407724654902e0
+
+- id     0119
+  from   inventory:Real.^methods
+  cell   tan | 1e0
+  code   (1e0).tan
+  is     1.557407724654902e0
+  type   Num
+  oracle rakudo-2026.07 → 1.557407724654902e0
+  oracle rakupp-3.14.0 → 1.557407724654902e0
+
+- id     0120
+  from   inventory:Real.^methods
+  cell   tan | 1/2
+  code   (1/2).tan
+  is     0.5463024898437905e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5463024898437905e0
+  oracle rakupp-3.14.0 → 0.5463024898437905e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0121
+  from   inventory:Real.^methods
+  cell   tanh | 1
+  code   (1).tanh
+  is     0.7615941559557649e0
+  type   Num
+  oracle rakudo-2026.07 → 0.7615941559557649e0
+  oracle rakupp-3.14.0 → 0.7615941559557649e0
+
+- id     0122
+  from   inventory:Real.^methods
+  cell   tanh | 1e0
+  code   (1e0).tanh
+  is     0.7615941559557649e0
+  type   Num
+  oracle rakudo-2026.07 → 0.7615941559557649e0
+  oracle rakupp-3.14.0 → 0.7615941559557649e0
+
+- id     0123
+  from   inventory:Real.^methods
+  cell   tanh | 1/2
+  code   (1/2).tanh
+  is     0.46211715726000974e0
+  type   Num
+  oracle rakudo-2026.07 → 0.46211715726000974e0
+  oracle rakupp-3.14.0 → 0.46211715726000974e0
+
+- id     0124
+  from   inventory:Real.^methods
+  cell   truncate | 1
+  code   (1).truncate
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0125
+  from   inventory:Real.^methods
+  cell   truncate | 1e0
+  code   (1e0).truncate
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0126
+  from   inventory:Real.^methods
+  cell   truncate | 1/2
+  code   (1/2).truncate
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0127
+  from   inventory:Real.^methods
+  cell   unpolar(0) | 1
+  code   (1).unpolar(0)
+  is     <1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1+0i>
+  oracle rakupp-3.14.0 → <1+0i>
+
+- id     0128
+  from   inventory:Real.^methods
+  cell   unpolar(1) | 1
+  code   (1).unpolar(1)
+  is     <0.5403023058681398+0.8414709848078965i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
+  oracle rakupp-3.14.0 → <0.5403023058681398+0.8414709848078965i>
+
+- id     0129
+  from   inventory:Real.^methods
+  cell   unpolar(-1) | 1
+  code   (1).unpolar(-1)
+  is     <0.5403023058681398-0.8414709848078965i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5403023058681398-0.8414709848078965i>
+  oracle rakupp-3.14.0 → <0.5403023058681398-0.8414709848078965i>
+
+- id     0130
+  from   inventory:Real.^methods
+  cell   unpolar("a") | 1
+  code   (1).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → <1+0i>
+
+- id     0131
+  from   inventory:Real.^methods
+  cell   unpolar(Any) | 1
+  code   (1).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → <1+0i>
+
+- id     0132
+  from   inventory:Real.^methods
+  cell   unpolar(0) | 1e0
+  code   (1e0).unpolar(0)
+  is     <1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1+0i>
+  oracle rakupp-3.14.0 → <1+0i>
+
+- id     0133
+  from   inventory:Real.^methods
+  cell   unpolar(1) | 1e0
+  code   (1e0).unpolar(1)
+  is     <0.5403023058681398+0.8414709848078965i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
+  oracle rakupp-3.14.0 → <0.5403023058681398+0.8414709848078965i>
+
+- id     0134
+  from   inventory:Real.^methods
+  cell   unpolar(-1) | 1e0
+  code   (1e0).unpolar(-1)
+  is     <0.5403023058681398-0.8414709848078965i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5403023058681398-0.8414709848078965i>
+  oracle rakupp-3.14.0 → <0.5403023058681398-0.8414709848078965i>
+
+- id     0135
+  from   inventory:Real.^methods
+  cell   unpolar("a") | 1e0
+  code   (1e0).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → <1+0i>
+
+- id     0136
+  from   inventory:Real.^methods
+  cell   unpolar(Any) | 1e0
+  code   (1e0).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → <1+0i>
+
+- id     0137
+  from   inventory:Real.^methods
+  cell   unpolar(0) | 1/2
+  code   (1/2).unpolar(0)
+  is     <0.5+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5+0i>
+  oracle rakupp-3.14.0 → <0.5+0i>
+
+- id     0138
+  from   inventory:Real.^methods
+  cell   unpolar(1) | 1/2
+  code   (1/2).unpolar(1)
+  is     <0.2701511529340699+0.42073549240394825i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.2701511529340699+0.42073549240394825i>
+  oracle rakupp-3.14.0 → <0.2701511529340699+0.42073549240394825i>
+
+- id     0139
+  from   inventory:Real.^methods
+  cell   unpolar(-1) | 1/2
+  code   (1/2).unpolar(-1)
+  is     <0.2701511529340699-0.42073549240394825i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.2701511529340699-0.42073549240394825i>
+  oracle rakupp-3.14.0 → <0.2701511529340699-0.42073549240394825i>
+
+- id     0140
+  from   inventory:Real.^methods
+  cell   unpolar("a") | 1/2
+  code   (1/2).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → <0.5+0i>
+
+- id     0141
+  from   inventory:Real.^methods
+  cell   unpolar(Any) | 1/2
+  code   (1/2).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → <0.5+0i>

@@ -1,0 +1,5496 @@
+atom     methods/Cool
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     AST | Bool | CREATE | Capture | Complex | DEFINITE | EVAL | Failure | FatRat | HOW | INSTANTIATE-GENERIC | NFC | NFD | NFKC | NFKD | Num | Order | POPULATE | REPR | Rat | VAR | Version | WHAT | WHERE | WHO | abs | acos | acosec | acosech | acosh | acotan | acotanh | all | any | asec | asech | asin | asinh | atan | atan2 | atanh | bless | byte | cache | can | ceiling | chars | chomp | chr | chrs | cis | codes | conj | cos | cosec | cosech | cosh | cotan | cotanh | does | fc | flip | floor | indent | int | int16 | int32 | int64 | int8 | is-generic | is-prime | item | join | lazy-if | lc | log10 | log2 | nl-out | none | not | one | ord | ords | parse-names | path | rand | reverse | roots | samecase | samemark | samespace | sec | sech | self | sign | sin | sinh | so | sqrt | sum | take | tan | tanh | tc | tclc | trim | trim-leading | trim-trailing | truncate | uc | uint | uint16 | uint32 | uint64 | uint8 | uniname | uninames | uniparse | uniprop | uniprops | unival | univals | unpolar | wordcase
+cols     1 | "a" | 1/2
+
+- id     0001
+  from   inventory:Cool.^methods
+  cell   AST(0) | 1
+  code   (1).AST(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0002
+  from   inventory:Cool.^methods
+  cell   AST(1) | 1
+  code   (1).AST(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0003
+  from   inventory:Cool.^methods
+  cell   AST(-1) | 1
+  code   (1).AST(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0004
+  from   inventory:Cool.^methods
+  cell   AST("a") | 1
+  code   (1).AST("a")
+  throws X::CompUnit::UnsatisfiedDependency+{X::Comp}
+  oracle rakudo-2026.07 → ERR:X::CompUnit::UnsatisfiedDependency+{X::Comp}
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0005
+  from   inventory:Cool.^methods
+  cell   AST(Any) | 1
+  code   (1).AST(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0006
+  from   inventory:Cool.^methods
+  cell   AST(0) | "a"
+  code   ("a").AST(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0007
+  from   inventory:Cool.^methods
+  cell   AST(1) | "a"
+  code   ("a").AST(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0008
+  from   inventory:Cool.^methods
+  cell   AST(-1) | "a"
+  code   ("a").AST(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0009
+  from   inventory:Cool.^methods
+  cell   AST("a") | "a"
+  code   ("a").AST("a")
+  throws X::CompUnit::UnsatisfiedDependency+{X::Comp}
+  oracle rakudo-2026.07 → ERR:X::CompUnit::UnsatisfiedDependency+{X::Comp}
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0010
+  from   inventory:Cool.^methods
+  cell   AST(Any) | "a"
+  code   ("a").AST(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0011
+  from   inventory:Cool.^methods
+  cell   AST(0) | 1/2
+  code   (1/2).AST(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0012
+  from   inventory:Cool.^methods
+  cell   AST(1) | 1/2
+  code   (1/2).AST(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0013
+  from   inventory:Cool.^methods
+  cell   AST(-1) | 1/2
+  code   (1/2).AST(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0014
+  from   inventory:Cool.^methods
+  cell   AST("a") | 1/2
+  code   (1/2).AST("a")
+  throws X::CompUnit::UnsatisfiedDependency+{X::Comp}
+  oracle rakudo-2026.07 → ERR:X::CompUnit::UnsatisfiedDependency+{X::Comp}
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0015
+  from   inventory:Cool.^methods
+  cell   AST(Any) | 1/2
+  code   (1/2).AST(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0016
+  from   inventory:Cool.^methods
+  cell   Bool | 1
+  code   (1).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0017
+  from   inventory:Cool.^methods
+  cell   Bool | "a"
+  code   ("a").Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0018
+  from   inventory:Cool.^methods
+  cell   Bool | 1/2
+  code   (1/2).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0019
+  from   inventory:Cool.^methods
+  cell   CREATE | 1
+  code   (1).CREATE
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0020
+  from   inventory:Cool.^methods
+  cell   CREATE | "a"
+  code   ("a").CREATE
+  is     UNRENDERABLE
+  type   Str
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0021
+  from   inventory:Cool.^methods
+  cell   CREATE | 1/2
+  code   (1/2).CREATE
+  is     UNRENDERABLE
+  type   Rat
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0022
+  from   inventory:Cool.^methods
+  cell   Capture | 1
+  code   (1).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0023
+  from   inventory:Cool.^methods
+  cell   Capture | "a"
+  code   ("a").Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0024
+  from   inventory:Cool.^methods
+  cell   Capture | 1/2
+  code   (1/2).Capture
+  is     \(:denominator(2), :numerator(1))
+  type   Capture
+  oracle rakudo-2026.07 → \(:denominator(2), :numerator(1))
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0025
+  from   inventory:Cool.^methods
+  cell   Complex | 1
+  code   (1).Complex
+  is     <1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1+0i>
+  oracle rakupp-3.14.0 → <1+0i>
+
+- id     0026
+  from   inventory:Cool.^methods
+  cell   Complex | "a"
+  code   ("a").Complex
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Any
+
+- id     0027
+  from   inventory:Cool.^methods
+  cell   Complex | 1/2
+  code   (1/2).Complex
+  is     <0.5+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5+0i>
+  oracle rakupp-3.14.0 → <0.5+0i>
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0028
+  from   inventory:Cool.^methods
+  cell   DEFINITE | 1
+  code   (1).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0029
+  from   inventory:Cool.^methods
+  cell   DEFINITE | "a"
+  code   ("a").DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0030
+  from   inventory:Cool.^methods
+  cell   DEFINITE | 1/2
+  code   (1/2).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0031
+  from   inventory:Cool.^methods
+  cell   EVAL | 1
+  code   (1).EVAL
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0032
+  from   inventory:Cool.^methods
+  cell   EVAL | "a"
+  code   ("a").EVAL
+  throws X::Undeclared::Symbols
+  oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
+  oracle rakupp-3.14.0 → ERR:X::Undeclared::Symbols
+
+- id     0033
+  from   inventory:Cool.^methods
+  cell   EVAL | 1/2
+  code   (1/2).EVAL
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0034
+  from   inventory:Cool.^methods
+  cell   Failure | 1
+  code   (1).Failure
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0035
+  from   inventory:Cool.^methods
+  cell   Failure | "a"
+  code   ("a").Failure
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0036
+  from   inventory:Cool.^methods
+  cell   Failure | 1/2
+  code   (1/2).Failure
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0037
+  from   inventory:Cool.^methods
+  cell   FatRat | 1
+  code   (1).FatRat
+  is     FatRat.new(1, 1)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(1, 1)
+  oracle rakupp-3.14.0 → FatRat.new(1, 1)
+
+- id     0038
+  from   inventory:Cool.^methods
+  cell   FatRat | "a"
+  code   ("a").FatRat
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Any
+
+- id     0039
+  from   inventory:Cool.^methods
+  cell   FatRat | 1/2
+  code   (1/2).FatRat
+  is     FatRat.new(1, 2)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(1, 2)
+  oracle rakupp-3.14.0 → FatRat.new(1, 2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0040
+  from   inventory:Cool.^methods
+  cell   HOW | 1
+  code   (1).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+
+- id     0041
+  from   inventory:Cool.^methods
+  cell   HOW | "a"
+  code   ("a").HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+
+- id     0042
+  from   inventory:Cool.^methods
+  cell   HOW | 1/2
+  code   (1/2).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0043
+  from   inventory:Cool.^methods
+  cell   INSTANTIATE-GENERIC(0) | 1
+  code   (1).INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0044
+  from   inventory:Cool.^methods
+  cell   INSTANTIATE-GENERIC(1) | 1
+  code   (1).INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0045
+  from   inventory:Cool.^methods
+  cell   INSTANTIATE-GENERIC(-1) | 1
+  code   (1).INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0046
+  from   inventory:Cool.^methods
+  cell   INSTANTIATE-GENERIC("a") | 1
+  code   (1).INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0047
+  from   inventory:Cool.^methods
+  cell   INSTANTIATE-GENERIC(Any) | 1
+  code   (1).INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0048
+  from   inventory:Cool.^methods
+  cell   INSTANTIATE-GENERIC(0) | "a"
+  code   ("a").INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0049
+  from   inventory:Cool.^methods
+  cell   INSTANTIATE-GENERIC(1) | "a"
+  code   ("a").INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0050
+  from   inventory:Cool.^methods
+  cell   INSTANTIATE-GENERIC(-1) | "a"
+  code   ("a").INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0051
+  from   inventory:Cool.^methods
+  cell   INSTANTIATE-GENERIC("a") | "a"
+  code   ("a").INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0052
+  from   inventory:Cool.^methods
+  cell   INSTANTIATE-GENERIC(Any) | "a"
+  code   ("a").INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0053
+  from   inventory:Cool.^methods
+  cell   INSTANTIATE-GENERIC(0) | 1/2
+  code   (1/2).INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0054
+  from   inventory:Cool.^methods
+  cell   INSTANTIATE-GENERIC(1) | 1/2
+  code   (1/2).INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0055
+  from   inventory:Cool.^methods
+  cell   INSTANTIATE-GENERIC(-1) | 1/2
+  code   (1/2).INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0056
+  from   inventory:Cool.^methods
+  cell   INSTANTIATE-GENERIC("a") | 1/2
+  code   (1/2).INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0057
+  from   inventory:Cool.^methods
+  cell   INSTANTIATE-GENERIC(Any) | 1/2
+  code   (1/2).INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0058
+  from   inventory:Cool.^methods
+  cell   NFC | 1
+  code   (1).NFC
+  is     Uni.new(0x0031).NFC
+  type   NFC
+  oracle rakudo-2026.07 → Uni.new(0x0031).NFC
+  oracle rakupp-3.14.0 → Uni.new(0x0031).NFC
+
+- id     0059
+  from   inventory:Cool.^methods
+  cell   NFC | "a"
+  code   ("a").NFC
+  is     Uni.new(0x0061).NFC
+  type   NFC
+  oracle rakudo-2026.07 → Uni.new(0x0061).NFC
+  oracle rakupp-3.14.0 → Uni.new(0x0061).NFC
+
+- id     0060
+  from   inventory:Cool.^methods
+  cell   NFC | 1/2
+  code   (1/2).NFC
+  is     Uni.new(0x0030, 0x002e, 0x0035).NFC
+  type   NFC
+  oracle rakudo-2026.07 → Uni.new(0x0030, 0x002e, 0x0035).NFC
+  oracle rakupp-3.14.0 → Uni.new(0x0030, 0x002e, 0x0035).NFC
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0061
+  from   inventory:Cool.^methods
+  cell   NFD | 1
+  code   (1).NFD
+  is     Uni.new(0x0031).NFD
+  type   NFD
+  oracle rakudo-2026.07 → Uni.new(0x0031).NFD
+  oracle rakupp-3.14.0 → Uni.new(0x0031).NFD
+
+- id     0062
+  from   inventory:Cool.^methods
+  cell   NFD | "a"
+  code   ("a").NFD
+  is     Uni.new(0x0061).NFD
+  type   NFD
+  oracle rakudo-2026.07 → Uni.new(0x0061).NFD
+  oracle rakupp-3.14.0 → Uni.new(0x0061).NFD
+
+- id     0063
+  from   inventory:Cool.^methods
+  cell   NFD | 1/2
+  code   (1/2).NFD
+  is     Uni.new(0x0030, 0x002e, 0x0035).NFD
+  type   NFD
+  oracle rakudo-2026.07 → Uni.new(0x0030, 0x002e, 0x0035).NFD
+  oracle rakupp-3.14.0 → Uni.new(0x0030, 0x002e, 0x0035).NFD
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0064
+  from   inventory:Cool.^methods
+  cell   NFKC | 1
+  code   (1).NFKC
+  is     Uni.new(0x0031).NFKC
+  type   NFKC
+  oracle rakudo-2026.07 → Uni.new(0x0031).NFKC
+  oracle rakupp-3.14.0 → Uni.new(0x0031).NFKC
+
+- id     0065
+  from   inventory:Cool.^methods
+  cell   NFKC | "a"
+  code   ("a").NFKC
+  is     Uni.new(0x0061).NFKC
+  type   NFKC
+  oracle rakudo-2026.07 → Uni.new(0x0061).NFKC
+  oracle rakupp-3.14.0 → Uni.new(0x0061).NFKC
+
+- id     0066
+  from   inventory:Cool.^methods
+  cell   NFKC | 1/2
+  code   (1/2).NFKC
+  is     Uni.new(0x0030, 0x002e, 0x0035).NFKC
+  type   NFKC
+  oracle rakudo-2026.07 → Uni.new(0x0030, 0x002e, 0x0035).NFKC
+  oracle rakupp-3.14.0 → Uni.new(0x0030, 0x002e, 0x0035).NFKC
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0067
+  from   inventory:Cool.^methods
+  cell   NFKD | 1
+  code   (1).NFKD
+  is     Uni.new(0x0031).NFKD
+  type   NFKD
+  oracle rakudo-2026.07 → Uni.new(0x0031).NFKD
+  oracle rakupp-3.14.0 → Uni.new(0x0031).NFKD
+
+- id     0068
+  from   inventory:Cool.^methods
+  cell   NFKD | "a"
+  code   ("a").NFKD
+  is     Uni.new(0x0061).NFKD
+  type   NFKD
+  oracle rakudo-2026.07 → Uni.new(0x0061).NFKD
+  oracle rakupp-3.14.0 → Uni.new(0x0061).NFKD
+
+- id     0069
+  from   inventory:Cool.^methods
+  cell   NFKD | 1/2
+  code   (1/2).NFKD
+  is     Uni.new(0x0030, 0x002e, 0x0035).NFKD
+  type   NFKD
+  oracle rakudo-2026.07 → Uni.new(0x0030, 0x002e, 0x0035).NFKD
+  oracle rakupp-3.14.0 → Uni.new(0x0030, 0x002e, 0x0035).NFKD
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0070
+  from   inventory:Cool.^methods
+  cell   Num | 1
+  code   (1).Num
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0071
+  from   inventory:Cool.^methods
+  cell   Num | "a"
+  code   ("a").Num
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Any
+
+- id     0072
+  from   inventory:Cool.^methods
+  cell   Num | 1/2
+  code   (1/2).Num
+  is     0.5e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5e0
+  oracle rakupp-3.14.0 → 0.5e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0073
+  from   inventory:Cool.^methods
+  cell   Order | 1
+  code   (1).Order
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0074
+  from   inventory:Cool.^methods
+  cell   Order | "a"
+  code   ("a").Order
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0075
+  from   inventory:Cool.^methods
+  cell   Order | 1/2
+  code   (1/2).Order
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0076
+  from   inventory:Cool.^methods
+  cell   POPULATE(0) | 1
+  code   (1).POPULATE(0)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0077
+  from   inventory:Cool.^methods
+  cell   POPULATE(1) | 1
+  code   (1).POPULATE(1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0078
+  from   inventory:Cool.^methods
+  cell   POPULATE(-1) | 1
+  code   (1).POPULATE(-1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0079
+  from   inventory:Cool.^methods
+  cell   POPULATE("a") | 1
+  code   (1).POPULATE("a")
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0080
+  from   inventory:Cool.^methods
+  cell   POPULATE(Any) | 1
+  code   (1).POPULATE(Any)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0081
+  from   inventory:Cool.^methods
+  cell   POPULATE(0) | "a"
+  code   ("a").POPULATE(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0082
+  from   inventory:Cool.^methods
+  cell   POPULATE(1) | "a"
+  code   ("a").POPULATE(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0083
+  from   inventory:Cool.^methods
+  cell   POPULATE(-1) | "a"
+  code   ("a").POPULATE(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0084
+  from   inventory:Cool.^methods
+  cell   POPULATE("a") | "a"
+  code   ("a").POPULATE("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0085
+  from   inventory:Cool.^methods
+  cell   POPULATE(Any) | "a"
+  code   ("a").POPULATE(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0086
+  from   inventory:Cool.^methods
+  cell   POPULATE(0) | 1/2
+  code   (1/2).POPULATE(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0087
+  from   inventory:Cool.^methods
+  cell   POPULATE(1) | 1/2
+  code   (1/2).POPULATE(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0088
+  from   inventory:Cool.^methods
+  cell   POPULATE(-1) | 1/2
+  code   (1/2).POPULATE(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0089
+  from   inventory:Cool.^methods
+  cell   POPULATE("a") | 1/2
+  code   (1/2).POPULATE("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0090
+  from   inventory:Cool.^methods
+  cell   POPULATE(Any) | 1/2
+  code   (1/2).POPULATE(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0091
+  from   inventory:Cool.^methods
+  cell   REPR | 1
+  code   (1).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0092
+  from   inventory:Cool.^methods
+  cell   REPR | "a"
+  code   ("a").REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0093
+  from   inventory:Cool.^methods
+  cell   REPR | 1/2
+  code   (1/2).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0094
+  from   inventory:Cool.^methods
+  cell   Rat | 1
+  code   (1).Rat
+  is     1.0
+  type   Rat
+  oracle rakudo-2026.07 → 1.0
+  oracle rakupp-3.14.0 → 1.0
+
+- id     0095
+  from   inventory:Cool.^methods
+  cell   Rat | "a"
+  code   ("a").Rat
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Any
+
+- id     0096
+  from   inventory:Cool.^methods
+  cell   Rat | 1/2
+  code   (1/2).Rat
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → 0.5
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0097
+  from   inventory:Cool.^methods
+  cell   VAR | 1
+  code   (1).VAR
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0098
+  from   inventory:Cool.^methods
+  cell   VAR | "a"
+  code   ("a").VAR
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0099
+  from   inventory:Cool.^methods
+  cell   VAR | 1/2
+  code   (1/2).VAR
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → 0.5
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0100
+  from   inventory:Cool.^methods
+  cell   Version | 1
+  code   (1).Version
+  is     v1
+  type   Version
+  oracle rakudo-2026.07 → v1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0101
+  from   inventory:Cool.^methods
+  cell   Version | "a"
+  code   ("a").Version
+  is     Version.new('a')
+  type   Version
+  oracle rakudo-2026.07 → Version.new('a')
+  oracle rakupp-3.14.0 → va
+
+- id     0102
+  from   inventory:Cool.^methods
+  cell   Version | 1/2
+  code   (1/2).Version
+  is     v0.5
+  type   Version
+  oracle rakudo-2026.07 → v0.5
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0103
+  from   inventory:Cool.^methods
+  cell   WHAT | 1
+  code   (1).WHAT
+  is     Int
+  type   Int
+  oracle rakudo-2026.07 → Int
+  oracle rakupp-3.14.0 → Int
+
+- id     0104
+  from   inventory:Cool.^methods
+  cell   WHAT | "a"
+  code   ("a").WHAT
+  is     Str
+  type   Str
+  oracle rakudo-2026.07 → Str
+  oracle rakupp-3.14.0 → Str
+
+- id     0105
+  from   inventory:Cool.^methods
+  cell   WHAT | 1/2
+  code   (1/2).WHAT
+  is     Rat
+  type   Rat
+  oracle rakudo-2026.07 → Rat
+  oracle rakupp-3.14.0 → Rat
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0106
+  from   inventory:Cool.^methods
+  cell   WHERE | 1
+  code   (1).WHERE
+  is     5200298604624
+  type   Int
+  oracle rakudo-2026.07 → 5200298604624
+  oracle rakupp-3.14.0 → 14120902432
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0107
+  from   inventory:Cool.^methods
+  cell   WHERE | "a"
+  code   ("a").WHERE
+  is     4892269039816
+  type   Int
+  oracle rakudo-2026.07 → 4892269039816
+  oracle rakupp-3.14.0 → 14194290464
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0108
+  from   inventory:Cool.^methods
+  cell   WHERE | 1/2
+  code   (1/2).WHERE
+  is     2805937079392
+  type   Int
+  oracle rakudo-2026.07 → 2805937079392
+  oracle rakupp-3.14.0 → 14205414864
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0109
+  from   inventory:Cool.^methods
+  cell   WHO | 1
+  code   (1).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+
+- id     0110
+  from   inventory:Cool.^methods
+  cell   WHO | "a"
+  code   ("a").WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+
+- id     0111
+  from   inventory:Cool.^methods
+  cell   WHO | 1/2
+  code   (1/2).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0112
+  from   inventory:Cool.^methods
+  cell   abs | 1
+  code   (1).abs
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0113
+  from   inventory:Cool.^methods
+  cell   abs | "a"
+  code   ("a").abs
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Any
+
+- id     0114
+  from   inventory:Cool.^methods
+  cell   abs | 1/2
+  code   (1/2).abs
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → 0.5
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0115
+  from   inventory:Cool.^methods
+  cell   acos | 1
+  code   (1).acos
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0116
+  from   inventory:Cool.^methods
+  cell   acos | "a"
+  code   ("a").acos
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 1.5707963267948966e0
+
+- id     0117
+  from   inventory:Cool.^methods
+  cell   acos | 1/2
+  code   (1/2).acos
+  is     1.0471975511965976e0
+  type   Num
+  oracle rakudo-2026.07 → 1.0471975511965976e0
+  oracle rakupp-3.14.0 → 1.0471975511965976e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0118
+  from   inventory:Cool.^methods
+  cell   acosec | 1
+  code   (1).acosec
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-3.14.0 → 1.5707963267948966e0
+
+- id     0119
+  from   inventory:Cool.^methods
+  cell   acosec | "a"
+  code   ("a").acosec
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → NaN
+
+- id     0120
+  from   inventory:Cool.^methods
+  cell   acosec | 1/2
+  code   (1/2).acosec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0121
+  from   inventory:Cool.^methods
+  cell   acosech | 1
+  code   (1).acosech
+  is     0.8813735870195429e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8813735870195429e0
+  oracle rakupp-3.14.0 → 0.881373587019543e0
+
+- id     0122
+  from   inventory:Cool.^methods
+  cell   acosech | "a"
+  code   ("a").acosech
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Inf
+
+- id     0123
+  from   inventory:Cool.^methods
+  cell   acosech | 1/2
+  code   (1/2).acosech
+  is     1.4436354751788103e0
+  type   Num
+  oracle rakudo-2026.07 → 1.4436354751788103e0
+  oracle rakupp-3.14.0 → 1.4436354751788103e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0124
+  from   inventory:Cool.^methods
+  cell   acosh | 1
+  code   (1).acosh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0125
+  from   inventory:Cool.^methods
+  cell   acosh | "a"
+  code   ("a").acosh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → NaN
+
+- id     0126
+  from   inventory:Cool.^methods
+  cell   acosh | 1/2
+  code   (1/2).acosh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0127
+  from   inventory:Cool.^methods
+  cell   acotan | 1
+  code   (1).acotan
+  is     0.7853981633974483e0
+  type   Num
+  oracle rakudo-2026.07 → 0.7853981633974483e0
+  oracle rakupp-3.14.0 → 0.7853981633974483e0
+
+- id     0128
+  from   inventory:Cool.^methods
+  cell   acotan | "a"
+  code   ("a").acotan
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 1.5707963267948966e0
+
+- id     0129
+  from   inventory:Cool.^methods
+  cell   acotan | 1/2
+  code   (1/2).acotan
+  is     1.1071487177940906e0
+  type   Num
+  oracle rakudo-2026.07 → 1.1071487177940906e0
+  oracle rakupp-3.14.0 → 1.1071487177940906e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0130
+  from   inventory:Cool.^methods
+  cell   acotanh | 1
+  code   (1).acotanh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0131
+  from   inventory:Cool.^methods
+  cell   acotanh | "a"
+  code   ("a").acotanh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → NaN
+
+- id     0132
+  from   inventory:Cool.^methods
+  cell   acotanh | 1/2
+  code   (1/2).acotanh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0133
+  from   inventory:Cool.^methods
+  cell   all | 1
+  code   (1).all
+  is     all(1)
+  type   Junction
+  oracle rakudo-2026.07 → all(1)
+  oracle rakupp-3.14.0 → all(1)
+
+- id     0134
+  from   inventory:Cool.^methods
+  cell   all | "a"
+  code   ("a").all
+  is     all("a")
+  type   Junction
+  oracle rakudo-2026.07 → all("a")
+  oracle rakupp-3.14.0 → all("a")
+
+- id     0135
+  from   inventory:Cool.^methods
+  cell   all | 1/2
+  code   (1/2).all
+  is     all(0.5)
+  type   Junction
+  oracle rakudo-2026.07 → all(0.5)
+  oracle rakupp-3.14.0 → all(0.5)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0136
+  from   inventory:Cool.^methods
+  cell   any | 1
+  code   (1).any
+  is     any(1)
+  type   Junction
+  oracle rakudo-2026.07 → any(1)
+  oracle rakupp-3.14.0 → any(1)
+
+- id     0137
+  from   inventory:Cool.^methods
+  cell   any | "a"
+  code   ("a").any
+  is     any("a")
+  type   Junction
+  oracle rakudo-2026.07 → any("a")
+  oracle rakupp-3.14.0 → any("a")
+
+- id     0138
+  from   inventory:Cool.^methods
+  cell   any | 1/2
+  code   (1/2).any
+  is     any(0.5)
+  type   Junction
+  oracle rakudo-2026.07 → any(0.5)
+  oracle rakupp-3.14.0 → any(0.5)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0139
+  from   inventory:Cool.^methods
+  cell   asec | 1
+  code   (1).asec
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0140
+  from   inventory:Cool.^methods
+  cell   asec | "a"
+  code   ("a").asec
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → NaN
+
+- id     0141
+  from   inventory:Cool.^methods
+  cell   asec | 1/2
+  code   (1/2).asec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0142
+  from   inventory:Cool.^methods
+  cell   asech | 1
+  code   (1).asech
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0143
+  from   inventory:Cool.^methods
+  cell   asech | "a"
+  code   ("a").asech
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Inf
+
+- id     0144
+  from   inventory:Cool.^methods
+  cell   asech | 1/2
+  code   (1/2).asech
+  is     1.3169578969248166e0
+  type   Num
+  oracle rakudo-2026.07 → 1.3169578969248166e0
+  oracle rakupp-3.14.0 → 1.3169578969248166e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0145
+  from   inventory:Cool.^methods
+  cell   asin | 1
+  code   (1).asin
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-3.14.0 → 1.5707963267948966e0
+
+- id     0146
+  from   inventory:Cool.^methods
+  cell   asin | "a"
+  code   ("a").asin
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0147
+  from   inventory:Cool.^methods
+  cell   asin | 1/2
+  code   (1/2).asin
+  is     0.5235987755982988e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5235987755982988e0
+  oracle rakupp-3.14.0 → 0.5235987755982988e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0148
+  from   inventory:Cool.^methods
+  cell   asinh | 1
+  code   (1).asinh
+  is     0.8813735870195429e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8813735870195429e0
+  oracle rakupp-3.14.0 → 0.881373587019543e0
+
+- id     0149
+  from   inventory:Cool.^methods
+  cell   asinh | "a"
+  code   ("a").asinh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0150
+  from   inventory:Cool.^methods
+  cell   asinh | 1/2
+  code   (1/2).asinh
+  is     0.48121182505960347e0
+  type   Num
+  oracle rakudo-2026.07 → 0.48121182505960347e0
+  oracle rakupp-3.14.0 → 0.48121182505960347e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0151
+  from   inventory:Cool.^methods
+  cell   atan | 1
+  code   (1).atan
+  is     0.7853981633974483e0
+  type   Num
+  oracle rakudo-2026.07 → 0.7853981633974483e0
+  oracle rakupp-3.14.0 → 0.7853981633974483e0
+
+- id     0152
+  from   inventory:Cool.^methods
+  cell   atan | "a"
+  code   ("a").atan
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0153
+  from   inventory:Cool.^methods
+  cell   atan | 1/2
+  code   (1/2).atan
+  is     0.46364760900080615e0
+  type   Num
+  oracle rakudo-2026.07 → 0.46364760900080615e0
+  oracle rakupp-3.14.0 → 0.46364760900080615e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0154
+  from   inventory:Cool.^methods
+  cell   atan2(0) | 1
+  code   (1).atan2(0)
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-3.14.0 → 1.5707963267948966e0
+
+- id     0155
+  from   inventory:Cool.^methods
+  cell   atan2(1) | 1
+  code   (1).atan2(1)
+  is     0.7853981633974483e0
+  type   Num
+  oracle rakudo-2026.07 → 0.7853981633974483e0
+  oracle rakupp-3.14.0 → 0.7853981633974483e0
+
+- id     0156
+  from   inventory:Cool.^methods
+  cell   atan2(-1) | 1
+  code   (1).atan2(-1)
+  is     2.356194490192345e0
+  type   Num
+  oracle rakudo-2026.07 → 2.356194490192345e0
+  oracle rakupp-3.14.0 → 2.356194490192345e0
+
+- id     0157
+  from   inventory:Cool.^methods
+  cell   atan2("a") | 1
+  code   (1).atan2("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 1.5707963267948966e0
+
+- id     0158
+  from   inventory:Cool.^methods
+  cell   atan2(Any) | 1
+  code   (1).atan2(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → 1.5707963267948966e0
+
+- id     0159
+  from   inventory:Cool.^methods
+  cell   atan2(0) | "a"
+  code   ("a").atan2(0)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0160
+  from   inventory:Cool.^methods
+  cell   atan2(1) | "a"
+  code   ("a").atan2(1)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0161
+  from   inventory:Cool.^methods
+  cell   atan2(-1) | "a"
+  code   ("a").atan2(-1)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 3.141592653589793e0
+
+- id     0162
+  from   inventory:Cool.^methods
+  cell   atan2("a") | "a"
+  code   ("a").atan2("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0163
+  from   inventory:Cool.^methods
+  cell   atan2(Any) | "a"
+  code   ("a").atan2(Any)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0164
+  from   inventory:Cool.^methods
+  cell   atan2(0) | 1/2
+  code   (1/2).atan2(0)
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-3.14.0 → 1.5707963267948966e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0165
+  from   inventory:Cool.^methods
+  cell   atan2(1) | 1/2
+  code   (1/2).atan2(1)
+  is     0.4636476090008061e0
+  type   Num
+  oracle rakudo-2026.07 → 0.4636476090008061e0
+  oracle rakupp-3.14.0 → 0.4636476090008061e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0166
+  from   inventory:Cool.^methods
+  cell   atan2(-1) | 1/2
+  code   (1/2).atan2(-1)
+  is     2.677945044588987e0
+  type   Num
+  oracle rakudo-2026.07 → 2.677945044588987e0
+  oracle rakupp-3.14.0 → 2.677945044588987e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0167
+  from   inventory:Cool.^methods
+  cell   atan2("a") | 1/2
+  code   (1/2).atan2("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 1.5707963267948966e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0168
+  from   inventory:Cool.^methods
+  cell   atan2(Any) | 1/2
+  code   (1/2).atan2(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → 1.5707963267948966e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0169
+  from   inventory:Cool.^methods
+  cell   atanh | 1
+  code   (1).atanh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-3.14.0 → Inf
+
+- id     0170
+  from   inventory:Cool.^methods
+  cell   atanh | "a"
+  code   ("a").atanh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0171
+  from   inventory:Cool.^methods
+  cell   atanh | 1/2
+  code   (1/2).atanh
+  is     0.5493061443340549e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5493061443340549e0
+  oracle rakupp-3.14.0 → 0.5493061443340549e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0172
+  from   inventory:Cool.^methods
+  cell   bless | 1
+  code   (1).bless
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0173
+  from   inventory:Cool.^methods
+  cell   bless | "a"
+  code   ("a").bless
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0174
+  from   inventory:Cool.^methods
+  cell   bless | 1/2
+  code   (1/2).bless
+  is     UNRENDERABLE
+  type   Rat
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0175
+  from   inventory:Cool.^methods
+  cell   byte | 1
+  code   (1).byte
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0176
+  from   inventory:Cool.^methods
+  cell   byte | "a"
+  code   ("a").byte
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0177
+  from   inventory:Cool.^methods
+  cell   byte | 1/2
+  code   (1/2).byte
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0178
+  from   inventory:Cool.^methods
+  cell   cache | 1
+  code   (1).cache
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-3.14.0 → $(1,)
+
+- id     0179
+  from   inventory:Cool.^methods
+  cell   cache | "a"
+  code   ("a").cache
+  is     $("a",)
+  type   List
+  oracle rakudo-2026.07 → $("a",)
+  oracle rakupp-3.14.0 → $("a",)
+
+- id     0180
+  from   inventory:Cool.^methods
+  cell   cache | 1/2
+  code   (1/2).cache
+  is     $(0.5,)
+  type   List
+  oracle rakudo-2026.07 → $(0.5,)
+  oracle rakupp-3.14.0 → $(0.5,)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0181
+  from   inventory:Cool.^methods
+  cell   can(0) | 1
+  code   (1).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0182
+  from   inventory:Cool.^methods
+  cell   can(1) | 1
+  code   (1).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0183
+  from   inventory:Cool.^methods
+  cell   can(-1) | 1
+  code   (1).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0184
+  from   inventory:Cool.^methods
+  cell   can("a") | 1
+  code   (1).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0185
+  from   inventory:Cool.^methods
+  cell   can(Any) | 1
+  code   (1).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0186
+  from   inventory:Cool.^methods
+  cell   can(0) | "a"
+  code   ("a").can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0187
+  from   inventory:Cool.^methods
+  cell   can(1) | "a"
+  code   ("a").can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0188
+  from   inventory:Cool.^methods
+  cell   can(-1) | "a"
+  code   ("a").can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0189
+  from   inventory:Cool.^methods
+  cell   can("a") | "a"
+  code   ("a").can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0190
+  from   inventory:Cool.^methods
+  cell   can(Any) | "a"
+  code   ("a").can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0191
+  from   inventory:Cool.^methods
+  cell   can(0) | 1/2
+  code   (1/2).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0192
+  from   inventory:Cool.^methods
+  cell   can(1) | 1/2
+  code   (1/2).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0193
+  from   inventory:Cool.^methods
+  cell   can(-1) | 1/2
+  code   (1/2).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0194
+  from   inventory:Cool.^methods
+  cell   can("a") | 1/2
+  code   (1/2).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0195
+  from   inventory:Cool.^methods
+  cell   can(Any) | 1/2
+  code   (1/2).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0196
+  from   inventory:Cool.^methods
+  cell   ceiling | 1
+  code   (1).ceiling
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0197
+  from   inventory:Cool.^methods
+  cell   ceiling | "a"
+  code   ("a").ceiling
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0
+
+- id     0198
+  from   inventory:Cool.^methods
+  cell   ceiling | 1/2
+  code   (1/2).ceiling
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0199
+  from   inventory:Cool.^methods
+  cell   chars | 1
+  code   (1).chars
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0200
+  from   inventory:Cool.^methods
+  cell   chars | "a"
+  code   ("a").chars
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0201
+  from   inventory:Cool.^methods
+  cell   chars | 1/2
+  code   (1/2).chars
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-3.14.0 → 3
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0202
+  from   inventory:Cool.^methods
+  cell   chomp(0) | 1
+  code   (1).chomp(0)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0203
+  from   inventory:Cool.^methods
+  cell   chomp(1) | 1
+  code   (1).chomp(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → "1"
+
+- id     0204
+  from   inventory:Cool.^methods
+  cell   chomp(-1) | 1
+  code   (1).chomp(-1)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0205
+  from   inventory:Cool.^methods
+  cell   chomp("a") | 1
+  code   (1).chomp("a")
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0206
+  from   inventory:Cool.^methods
+  cell   chomp(Any) | 1
+  code   (1).chomp(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "1"
+
+- id     0207
+  from   inventory:Cool.^methods
+  cell   chomp(0) | "a"
+  code   ("a").chomp(0)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0208
+  from   inventory:Cool.^methods
+  cell   chomp(1) | "a"
+  code   ("a").chomp(1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0209
+  from   inventory:Cool.^methods
+  cell   chomp(-1) | "a"
+  code   ("a").chomp(-1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0210
+  from   inventory:Cool.^methods
+  cell   chomp("a") | "a"
+  code   ("a").chomp("a")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → "a"
+
+- id     0211
+  from   inventory:Cool.^methods
+  cell   chomp(Any) | "a"
+  code   ("a").chomp(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "a"
+
+- id     0212
+  from   inventory:Cool.^methods
+  cell   chomp(0) | 1/2
+  code   (1/2).chomp(0)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0213
+  from   inventory:Cool.^methods
+  cell   chomp(1) | 1/2
+  code   (1/2).chomp(1)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0214
+  from   inventory:Cool.^methods
+  cell   chomp(-1) | 1/2
+  code   (1/2).chomp(-1)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0215
+  from   inventory:Cool.^methods
+  cell   chomp("a") | 1/2
+  code   (1/2).chomp("a")
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0216
+  from   inventory:Cool.^methods
+  cell   chomp(Any) | 1/2
+  code   (1/2).chomp(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0217
+  from   inventory:Cool.^methods
+  cell   chr | 1
+  code   (1).chr
+  is     "\x[1]"
+  type   Str
+  oracle rakudo-2026.07 → "\x[1]"
+  oracle rakupp-3.14.0 → ""
+
+- id     0218
+  from   inventory:Cool.^methods
+  cell   chr | "a"
+  code   ("a").chr
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → "\0"
+
+- id     0219
+  from   inventory:Cool.^methods
+  cell   chr | 1/2
+  code   (1/2).chr
+  is     "\0"
+  type   Str
+  oracle rakudo-2026.07 → "\0"
+  oracle rakupp-3.14.0 → "\0"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0220
+  from   inventory:Cool.^methods
+  cell   chrs | 1
+  code   (1).chrs
+  is     "\x[1]"
+  type   Str
+  oracle rakudo-2026.07 → "\x[1]"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0221
+  from   inventory:Cool.^methods
+  cell   chrs | "a"
+  code   ("a").chrs
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0222
+  from   inventory:Cool.^methods
+  cell   chrs | 1/2
+  code   (1/2).chrs
+  throws X::TypeCheck
+  oracle rakudo-2026.07 → ERR:X::TypeCheck
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0223
+  from   inventory:Cool.^methods
+  cell   cis | 1
+  code   (1).cis
+  is     <0.5403023058681398+0.8414709848078965i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
+  oracle rakupp-3.14.0 → <0.5403023058681398+0.8414709848078965i>
+
+- id     0224
+  from   inventory:Cool.^methods
+  cell   cis | "a"
+  code   ("a").cis
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → <1+0i>
+
+- id     0225
+  from   inventory:Cool.^methods
+  cell   cis | 1/2
+  code   (1/2).cis
+  is     <0.8775825618903728+0.479425538604203i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.8775825618903728+0.479425538604203i>
+  oracle rakupp-3.14.0 → <0.8775825618903728+0.479425538604203i>
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0226
+  from   inventory:Cool.^methods
+  cell   codes | 1
+  code   (1).codes
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0227
+  from   inventory:Cool.^methods
+  cell   codes | "a"
+  code   ("a").codes
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0228
+  from   inventory:Cool.^methods
+  cell   codes | 1/2
+  code   (1/2).codes
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-3.14.0 → 3
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0229
+  from   inventory:Cool.^methods
+  cell   conj | 1
+  code   (1).conj
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0230
+  from   inventory:Cool.^methods
+  cell   conj | "a"
+  code   ("a").conj
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Any
+
+- id     0231
+  from   inventory:Cool.^methods
+  cell   conj | 1/2
+  code   (1/2).conj
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → 0.5
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0232
+  from   inventory:Cool.^methods
+  cell   cos | 1
+  code   (1).cos
+  is     0.5403023058681398e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5403023058681398e0
+  oracle rakupp-3.14.0 → 0.5403023058681398e0
+
+- id     0233
+  from   inventory:Cool.^methods
+  cell   cos | "a"
+  code   ("a").cos
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0234
+  from   inventory:Cool.^methods
+  cell   cos | 1/2
+  code   (1/2).cos
+  is     0.8775825618903728e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8775825618903728e0
+  oracle rakupp-3.14.0 → 0.8775825618903728e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0235
+  from   inventory:Cool.^methods
+  cell   cosec | 1
+  code   (1).cosec
+  is     1.1883951057781212e0
+  type   Num
+  oracle rakudo-2026.07 → 1.1883951057781212e0
+  oracle rakupp-3.14.0 → 1.1883951057781212e0
+
+- id     0236
+  from   inventory:Cool.^methods
+  cell   cosec | "a"
+  code   ("a").cosec
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Inf
+
+- id     0237
+  from   inventory:Cool.^methods
+  cell   cosec | 1/2
+  code   (1/2).cosec
+  is     2.085829642933488e0
+  type   Num
+  oracle rakudo-2026.07 → 2.085829642933488e0
+  oracle rakupp-3.14.0 → 2.085829642933488e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0238
+  from   inventory:Cool.^methods
+  cell   cosech | 1
+  code   (1).cosech
+  is     0.8509181282393216e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8509181282393216e0
+  oracle rakupp-3.14.0 → 0.8509181282393216e0
+
+- id     0239
+  from   inventory:Cool.^methods
+  cell   cosech | "a"
+  code   ("a").cosech
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Inf
+
+- id     0240
+  from   inventory:Cool.^methods
+  cell   cosech | 1/2
+  code   (1/2).cosech
+  is     1.9190347513349437e0
+  type   Num
+  oracle rakudo-2026.07 → 1.9190347513349437e0
+  oracle rakupp-3.14.0 → 1.9190347513349437e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0241
+  from   inventory:Cool.^methods
+  cell   cosh | 1
+  code   (1).cosh
+  is     1.5430806348152437e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5430806348152437e0
+  oracle rakupp-3.14.0 → 1.5430806348152437e0
+
+- id     0242
+  from   inventory:Cool.^methods
+  cell   cosh | "a"
+  code   ("a").cosh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0243
+  from   inventory:Cool.^methods
+  cell   cosh | 1/2
+  code   (1/2).cosh
+  is     1.1276259652063807e0
+  type   Num
+  oracle rakudo-2026.07 → 1.1276259652063807e0
+  oracle rakupp-3.14.0 → 1.1276259652063807e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0244
+  from   inventory:Cool.^methods
+  cell   cotan | 1
+  code   (1).cotan
+  is     0.6420926159343308e0
+  type   Num
+  oracle rakudo-2026.07 → 0.6420926159343308e0
+  oracle rakupp-3.14.0 → 0.6420926159343308e0
+
+- id     0245
+  from   inventory:Cool.^methods
+  cell   cotan | "a"
+  code   ("a").cotan
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Inf
+
+- id     0246
+  from   inventory:Cool.^methods
+  cell   cotan | 1/2
+  code   (1/2).cotan
+  is     1.830487721712452e0
+  type   Num
+  oracle rakudo-2026.07 → 1.830487721712452e0
+  oracle rakupp-3.14.0 → 1.830487721712452e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0247
+  from   inventory:Cool.^methods
+  cell   cotanh | 1
+  code   (1).cotanh
+  is     1.3130352854993315e0
+  type   Num
+  oracle rakudo-2026.07 → 1.3130352854993315e0
+  oracle rakupp-3.14.0 → 1.3130352854993315e0
+
+- id     0248
+  from   inventory:Cool.^methods
+  cell   cotanh | "a"
+  code   ("a").cotanh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Inf
+
+- id     0249
+  from   inventory:Cool.^methods
+  cell   cotanh | 1/2
+  code   (1/2).cotanh
+  is     2.163953413738653e0
+  type   Num
+  oracle rakudo-2026.07 → 2.163953413738653e0
+  oracle rakupp-3.14.0 → 2.163953413738653e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0250
+  from   inventory:Cool.^methods
+  cell   does(0) | 1
+  code   (1).does(0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0251
+  from   inventory:Cool.^methods
+  cell   does(1) | 1
+  code   (1).does(1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0252
+  from   inventory:Cool.^methods
+  cell   does(-1) | 1
+  code   (1).does(-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0253
+  from   inventory:Cool.^methods
+  cell   does("a") | 1
+  code   (1).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0254
+  from   inventory:Cool.^methods
+  cell   does(Any) | 1
+  code   (1).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0255
+  from   inventory:Cool.^methods
+  cell   does(0) | "a"
+  code   ("a").does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0256
+  from   inventory:Cool.^methods
+  cell   does(1) | "a"
+  code   ("a").does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0257
+  from   inventory:Cool.^methods
+  cell   does(-1) | "a"
+  code   ("a").does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0258
+  from   inventory:Cool.^methods
+  cell   does("a") | "a"
+  code   ("a").does("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0259
+  from   inventory:Cool.^methods
+  cell   does(Any) | "a"
+  code   ("a").does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0260
+  from   inventory:Cool.^methods
+  cell   does(0) | 1/2
+  code   (1/2).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0261
+  from   inventory:Cool.^methods
+  cell   does(1) | 1/2
+  code   (1/2).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0262
+  from   inventory:Cool.^methods
+  cell   does(-1) | 1/2
+  code   (1/2).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0263
+  from   inventory:Cool.^methods
+  cell   does("a") | 1/2
+  code   (1/2).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0264
+  from   inventory:Cool.^methods
+  cell   does(Any) | 1/2
+  code   (1/2).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0265
+  from   inventory:Cool.^methods
+  cell   fc | 1
+  code   (1).fc
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0266
+  from   inventory:Cool.^methods
+  cell   fc | "a"
+  code   ("a").fc
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0267
+  from   inventory:Cool.^methods
+  cell   fc | 1/2
+  code   (1/2).fc
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0268
+  from   inventory:Cool.^methods
+  cell   flip | 1
+  code   (1).flip
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0269
+  from   inventory:Cool.^methods
+  cell   flip | "a"
+  code   ("a").flip
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0270
+  from   inventory:Cool.^methods
+  cell   flip | 1/2
+  code   (1/2).flip
+  is     "5.0"
+  type   Str
+  oracle rakudo-2026.07 → "5.0"
+  oracle rakupp-3.14.0 → "5.0"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0271
+  from   inventory:Cool.^methods
+  cell   floor | 1
+  code   (1).floor
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0272
+  from   inventory:Cool.^methods
+  cell   floor | "a"
+  code   ("a").floor
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0
+
+- id     0273
+  from   inventory:Cool.^methods
+  cell   floor | 1/2
+  code   (1/2).floor
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0274
+  from   inventory:Cool.^methods
+  cell   indent(0) | 1
+  code   (1).indent(0)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0275
+  from   inventory:Cool.^methods
+  cell   indent(1) | 1
+  code   (1).indent(1)
+  is     " 1"
+  type   Str
+  oracle rakudo-2026.07 → " 1"
+  oracle rakupp-3.14.0 → " 1"
+
+- id     0276
+  from   inventory:Cool.^methods
+  cell   indent(-1) | 1
+  code   (1).indent(-1)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0277
+  from   inventory:Cool.^methods
+  cell   indent("a") | 1
+  code   (1).indent("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → "1"
+
+- id     0278
+  from   inventory:Cool.^methods
+  cell   indent(Any) | 1
+  code   (1).indent(Any)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0279
+  from   inventory:Cool.^methods
+  cell   indent(0) | "a"
+  code   ("a").indent(0)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0280
+  from   inventory:Cool.^methods
+  cell   indent(1) | "a"
+  code   ("a").indent(1)
+  is     " a"
+  type   Str
+  oracle rakudo-2026.07 → " a"
+  oracle rakupp-3.14.0 → " a"
+
+- id     0281
+  from   inventory:Cool.^methods
+  cell   indent(-1) | "a"
+  code   ("a").indent(-1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0282
+  from   inventory:Cool.^methods
+  cell   indent("a") | "a"
+  code   ("a").indent("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → "a"
+
+- id     0283
+  from   inventory:Cool.^methods
+  cell   indent(Any) | "a"
+  code   ("a").indent(Any)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0284
+  from   inventory:Cool.^methods
+  cell   indent(0) | 1/2
+  code   (1/2).indent(0)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0285
+  from   inventory:Cool.^methods
+  cell   indent(1) | 1/2
+  code   (1/2).indent(1)
+  is     " 0.5"
+  type   Str
+  oracle rakudo-2026.07 → " 0.5"
+  oracle rakupp-3.14.0 → " 0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0286
+  from   inventory:Cool.^methods
+  cell   indent(-1) | 1/2
+  code   (1/2).indent(-1)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0287
+  from   inventory:Cool.^methods
+  cell   indent("a") | 1/2
+  code   (1/2).indent("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0288
+  from   inventory:Cool.^methods
+  cell   indent(Any) | 1/2
+  code   (1/2).indent(Any)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0289
+  from   inventory:Cool.^methods
+  cell   int | 1
+  code   (1).int
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0290
+  from   inventory:Cool.^methods
+  cell   int | "a"
+  code   ("a").int
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0291
+  from   inventory:Cool.^methods
+  cell   int | 1/2
+  code   (1/2).int
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0292
+  from   inventory:Cool.^methods
+  cell   int16 | 1
+  code   (1).int16
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0293
+  from   inventory:Cool.^methods
+  cell   int16 | "a"
+  code   ("a").int16
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0294
+  from   inventory:Cool.^methods
+  cell   int16 | 1/2
+  code   (1/2).int16
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0295
+  from   inventory:Cool.^methods
+  cell   int32 | 1
+  code   (1).int32
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0296
+  from   inventory:Cool.^methods
+  cell   int32 | "a"
+  code   ("a").int32
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0297
+  from   inventory:Cool.^methods
+  cell   int32 | 1/2
+  code   (1/2).int32
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0298
+  from   inventory:Cool.^methods
+  cell   int64 | 1
+  code   (1).int64
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0299
+  from   inventory:Cool.^methods
+  cell   int64 | "a"
+  code   ("a").int64
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0300
+  from   inventory:Cool.^methods
+  cell   int64 | 1/2
+  code   (1/2).int64
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0301
+  from   inventory:Cool.^methods
+  cell   int8 | 1
+  code   (1).int8
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0302
+  from   inventory:Cool.^methods
+  cell   int8 | "a"
+  code   ("a").int8
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0303
+  from   inventory:Cool.^methods
+  cell   int8 | 1/2
+  code   (1/2).int8
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0304
+  from   inventory:Cool.^methods
+  cell   is-generic | 1
+  code   (1).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0305
+  from   inventory:Cool.^methods
+  cell   is-generic | "a"
+  code   ("a").is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0306
+  from   inventory:Cool.^methods
+  cell   is-generic | 1/2
+  code   (1/2).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0307
+  from   inventory:Cool.^methods
+  cell   is-prime | 1
+  code   (1).is-prime
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0308
+  from   inventory:Cool.^methods
+  cell   is-prime | "a"
+  code   ("a").is-prime
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0309
+  from   inventory:Cool.^methods
+  cell   is-prime | 1/2
+  code   (1/2).is-prime
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0310
+  from   inventory:Cool.^methods
+  cell   item | 1
+  code   (1).item
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0311
+  from   inventory:Cool.^methods
+  cell   item | "a"
+  code   ("a").item
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0312
+  from   inventory:Cool.^methods
+  cell   item | 1/2
+  code   (1/2).item
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → 0.5
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0313
+  from   inventory:Cool.^methods
+  cell   join(0) | 1
+  code   (1).join(0)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0314
+  from   inventory:Cool.^methods
+  cell   join(1) | 1
+  code   (1).join(1)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0315
+  from   inventory:Cool.^methods
+  cell   join(-1) | 1
+  code   (1).join(-1)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0316
+  from   inventory:Cool.^methods
+  cell   join("a") | 1
+  code   (1).join("a")
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0317
+  from   inventory:Cool.^methods
+  cell   join(Any) | 1
+  code   (1).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → "1"
+
+- id     0318
+  from   inventory:Cool.^methods
+  cell   join(0) | "a"
+  code   ("a").join(0)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0319
+  from   inventory:Cool.^methods
+  cell   join(1) | "a"
+  code   ("a").join(1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0320
+  from   inventory:Cool.^methods
+  cell   join(-1) | "a"
+  code   ("a").join(-1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0321
+  from   inventory:Cool.^methods
+  cell   join("a") | "a"
+  code   ("a").join("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0322
+  from   inventory:Cool.^methods
+  cell   join(Any) | "a"
+  code   ("a").join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → "a"
+
+- id     0323
+  from   inventory:Cool.^methods
+  cell   join(0) | 1/2
+  code   (1/2).join(0)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0324
+  from   inventory:Cool.^methods
+  cell   join(1) | 1/2
+  code   (1/2).join(1)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0325
+  from   inventory:Cool.^methods
+  cell   join(-1) | 1/2
+  code   (1/2).join(-1)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0326
+  from   inventory:Cool.^methods
+  cell   join("a") | 1/2
+  code   (1/2).join("a")
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0327
+  from   inventory:Cool.^methods
+  cell   join(Any) | 1/2
+  code   (1/2).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0328
+  from   inventory:Cool.^methods
+  cell   lazy-if(0) | 1
+  code   (1).lazy-if(0)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0329
+  from   inventory:Cool.^methods
+  cell   lazy-if(1) | 1
+  code   (1).lazy-if(1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0330
+  from   inventory:Cool.^methods
+  cell   lazy-if(-1) | 1
+  code   (1).lazy-if(-1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0331
+  from   inventory:Cool.^methods
+  cell   lazy-if("a") | 1
+  code   (1).lazy-if("a")
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0332
+  from   inventory:Cool.^methods
+  cell   lazy-if(Any) | 1
+  code   (1).lazy-if(Any)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0333
+  from   inventory:Cool.^methods
+  cell   lazy-if(0) | "a"
+  code   ("a").lazy-if(0)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0334
+  from   inventory:Cool.^methods
+  cell   lazy-if(1) | "a"
+  code   ("a").lazy-if(1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0335
+  from   inventory:Cool.^methods
+  cell   lazy-if(-1) | "a"
+  code   ("a").lazy-if(-1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0336
+  from   inventory:Cool.^methods
+  cell   lazy-if("a") | "a"
+  code   ("a").lazy-if("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0337
+  from   inventory:Cool.^methods
+  cell   lazy-if(Any) | "a"
+  code   ("a").lazy-if(Any)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0338
+  from   inventory:Cool.^methods
+  cell   lazy-if(0) | 1/2
+  code   (1/2).lazy-if(0)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0339
+  from   inventory:Cool.^methods
+  cell   lazy-if(1) | 1/2
+  code   (1/2).lazy-if(1)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0340
+  from   inventory:Cool.^methods
+  cell   lazy-if(-1) | 1/2
+  code   (1/2).lazy-if(-1)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0341
+  from   inventory:Cool.^methods
+  cell   lazy-if("a") | 1/2
+  code   (1/2).lazy-if("a")
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0342
+  from   inventory:Cool.^methods
+  cell   lazy-if(Any) | 1/2
+  code   (1/2).lazy-if(Any)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0343
+  from   inventory:Cool.^methods
+  cell   lc | 1
+  code   (1).lc
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0344
+  from   inventory:Cool.^methods
+  cell   lc | "a"
+  code   ("a").lc
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0345
+  from   inventory:Cool.^methods
+  cell   lc | 1/2
+  code   (1/2).lc
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0346
+  from   inventory:Cool.^methods
+  cell   log10 | 1
+  code   (1).log10
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0347
+  from   inventory:Cool.^methods
+  cell   log10 | "a"
+  code   ("a").log10
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0348
+  from   inventory:Cool.^methods
+  cell   log10 | 1/2
+  code   (1/2).log10
+  is     -0.30102999566398114e0
+  type   Num
+  oracle rakudo-2026.07 → -0.30102999566398114e0
+  oracle rakupp-3.14.0 → -0.3010299956639812e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0349
+  from   inventory:Cool.^methods
+  cell   log2 | 1
+  code   (1).log2
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0350
+  from   inventory:Cool.^methods
+  cell   log2 | "a"
+  code   ("a").log2
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0351
+  from   inventory:Cool.^methods
+  cell   log2 | 1/2
+  code   (1/2).log2
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-3.14.0 → -1e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0352
+  from   inventory:Cool.^methods
+  cell   nl-out | 1
+  code   (1).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0353
+  from   inventory:Cool.^methods
+  cell   nl-out | "a"
+  code   ("a").nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0354
+  from   inventory:Cool.^methods
+  cell   nl-out | 1/2
+  code   (1/2).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0355
+  from   inventory:Cool.^methods
+  cell   none | 1
+  code   (1).none
+  is     none(1)
+  type   Junction
+  oracle rakudo-2026.07 → none(1)
+  oracle rakupp-3.14.0 → none(1)
+
+- id     0356
+  from   inventory:Cool.^methods
+  cell   none | "a"
+  code   ("a").none
+  is     none("a")
+  type   Junction
+  oracle rakudo-2026.07 → none("a")
+  oracle rakupp-3.14.0 → none("a")
+
+- id     0357
+  from   inventory:Cool.^methods
+  cell   none | 1/2
+  code   (1/2).none
+  is     none(0.5)
+  type   Junction
+  oracle rakudo-2026.07 → none(0.5)
+  oracle rakupp-3.14.0 → none(0.5)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0358
+  from   inventory:Cool.^methods
+  cell   not | 1
+  code   (1).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0359
+  from   inventory:Cool.^methods
+  cell   not | "a"
+  code   ("a").not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0360
+  from   inventory:Cool.^methods
+  cell   not | 1/2
+  code   (1/2).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0361
+  from   inventory:Cool.^methods
+  cell   one | 1
+  code   (1).one
+  is     one(1)
+  type   Junction
+  oracle rakudo-2026.07 → one(1)
+  oracle rakupp-3.14.0 → one(1)
+
+- id     0362
+  from   inventory:Cool.^methods
+  cell   one | "a"
+  code   ("a").one
+  is     one("a")
+  type   Junction
+  oracle rakudo-2026.07 → one("a")
+  oracle rakupp-3.14.0 → one("a")
+
+- id     0363
+  from   inventory:Cool.^methods
+  cell   one | 1/2
+  code   (1/2).one
+  is     one(0.5)
+  type   Junction
+  oracle rakudo-2026.07 → one(0.5)
+  oracle rakupp-3.14.0 → one(0.5)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0364
+  from   inventory:Cool.^methods
+  cell   ord | 1
+  code   (1).ord
+  is     49
+  type   Int
+  oracle rakudo-2026.07 → 49
+  oracle rakupp-3.14.0 → 49
+
+- id     0365
+  from   inventory:Cool.^methods
+  cell   ord | "a"
+  code   ("a").ord
+  is     97
+  type   Int
+  oracle rakudo-2026.07 → 97
+  oracle rakupp-3.14.0 → 97
+
+- id     0366
+  from   inventory:Cool.^methods
+  cell   ord | 1/2
+  code   (1/2).ord
+  is     48
+  type   Int
+  oracle rakudo-2026.07 → 48
+  oracle rakupp-3.14.0 → 48
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0367
+  from   inventory:Cool.^methods
+  cell   ords | 1
+  code   (1).ords
+  is     $((49,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((49,).Seq)
+  oracle rakupp-3.14.0 → $(49,).Seq
+
+- id     0368
+  from   inventory:Cool.^methods
+  cell   ords | "a"
+  code   ("a").ords
+  is     $((97,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((97,).Seq)
+  oracle rakupp-3.14.0 → $(97,).Seq
+
+- id     0369
+  from   inventory:Cool.^methods
+  cell   ords | 1/2
+  code   (1/2).ords
+  is     $((48, 46, 53).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((48, 46, 53).Seq)
+  oracle rakupp-3.14.0 → $(48, 46, 53).Seq
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0370
+  from   inventory:Cool.^methods
+  cell   parse-names | 1
+  code   (1).parse-names
+  throws X::Str::InvalidCharName
+  oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0371
+  from   inventory:Cool.^methods
+  cell   parse-names | "a"
+  code   ("a").parse-names
+  throws X::Str::InvalidCharName
+  oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0372
+  from   inventory:Cool.^methods
+  cell   parse-names | 1/2
+  code   (1/2).parse-names
+  throws X::Str::InvalidCharName
+  oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0373
+  from   inventory:Cool.^methods
+  cell   path | 1
+  code   (1).path
+  is     IO::Path.new("1", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  type   IO::Path
+  oracle rakudo-2026.07 → IO::Path.new("1", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  oracle rakupp-3.14.0 → "1"
+
+- id     0374
+  from   inventory:Cool.^methods
+  cell   path | "a"
+  code   ("a").path
+  is     IO::Path.new("a", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  type   IO::Path
+  oracle rakudo-2026.07 → IO::Path.new("a", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  oracle rakupp-3.14.0 → "a"
+
+- id     0375
+  from   inventory:Cool.^methods
+  cell   path | 1/2
+  code   (1/2).path
+  is     IO::Path.new("0.5", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  type   IO::Path
+  oracle rakudo-2026.07 → IO::Path.new("0.5", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0376
+  from   inventory:Cool.^methods
+  cell   rand | 1
+  code   (1).rand
+  is     0.470121135813489e0
+  type   Num
+  oracle rakudo-2026.07 → 0.470121135813489e0
+  oracle rakupp-3.14.0 → 0.6870504773208488e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0377
+  from   inventory:Cool.^methods
+  cell   rand | "a"
+  code   ("a").rand
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0378
+  from   inventory:Cool.^methods
+  cell   rand | 1/2
+  code   (1/2).rand
+  is     0.46155084603736807e0
+  type   Num
+  oracle rakudo-2026.07 → 0.46155084603736807e0
+  oracle rakupp-3.14.0 → 0.3390731113209977e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0379
+  from   inventory:Cool.^methods
+  cell   reverse | 1
+  code   (1).reverse
+  is     $((1,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1,).Seq)
+  oracle rakupp-3.14.0 → $(1,).Seq
+
+- id     0380
+  from   inventory:Cool.^methods
+  cell   reverse | "a"
+  code   ("a").reverse
+  is     $(("a",).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("a",).Seq)
+  oracle rakupp-3.14.0 → $("a",).Seq
+
+- id     0381
+  from   inventory:Cool.^methods
+  cell   reverse | 1/2
+  code   (1/2).reverse
+  is     $((0.5,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((0.5,).Seq)
+  oracle rakupp-3.14.0 → $(0.5,).Seq
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0382
+  from   inventory:Cool.^methods
+  cell   roots(0) | 1
+  code   (1).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0383
+  from   inventory:Cool.^methods
+  cell   roots(1) | 1
+  code   (1).roots(1)
+  is     <1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1+0i>
+  oracle rakupp-3.14.0 → $(<1+0i>,)
+
+- id     0384
+  from   inventory:Cool.^methods
+  cell   roots(-1) | 1
+  code   (1).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0385
+  from   inventory:Cool.^methods
+  cell   roots("a") | 1
+  code   (1).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0386
+  from   inventory:Cool.^methods
+  cell   roots(Any) | 1
+  code   (1).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0387
+  from   inventory:Cool.^methods
+  cell   roots(0) | "a"
+  code   ("a").roots(0)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0388
+  from   inventory:Cool.^methods
+  cell   roots(1) | "a"
+  code   ("a").roots(1)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → $(<0+0i>,)
+
+- id     0389
+  from   inventory:Cool.^methods
+  cell   roots(-1) | "a"
+  code   ("a").roots(-1)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0390
+  from   inventory:Cool.^methods
+  cell   roots("a") | "a"
+  code   ("a").roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0391
+  from   inventory:Cool.^methods
+  cell   roots(Any) | "a"
+  code   ("a").roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+
+- id     0392
+  from   inventory:Cool.^methods
+  cell   roots(0) | 1/2
+  code   (1/2).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0393
+  from   inventory:Cool.^methods
+  cell   roots(1) | 1/2
+  code   (1/2).roots(1)
+  is     <0.5+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5+0i>
+  oracle rakupp-3.14.0 → $(<0.5+0i>,)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0394
+  from   inventory:Cool.^methods
+  cell   roots(-1) | 1/2
+  code   (1/2).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0395
+  from   inventory:Cool.^methods
+  cell   roots("a") | 1/2
+  code   (1/2).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0396
+  from   inventory:Cool.^methods
+  cell   roots(Any) | 1/2
+  code   (1/2).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0397
+  from   inventory:Cool.^methods
+  cell   samecase(0) | 1
+  code   (1).samecase(0)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0398
+  from   inventory:Cool.^methods
+  cell   samecase(1) | 1
+  code   (1).samecase(1)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0399
+  from   inventory:Cool.^methods
+  cell   samecase(-1) | 1
+  code   (1).samecase(-1)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0400
+  from   inventory:Cool.^methods
+  cell   samecase("a") | 1
+  code   (1).samecase("a")
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0401
+  from   inventory:Cool.^methods
+  cell   samecase(Any) | 1
+  code   (1).samecase(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "1"
+
+- id     0402
+  from   inventory:Cool.^methods
+  cell   samecase(0) | "a"
+  code   ("a").samecase(0)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0403
+  from   inventory:Cool.^methods
+  cell   samecase(1) | "a"
+  code   ("a").samecase(1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0404
+  from   inventory:Cool.^methods
+  cell   samecase(-1) | "a"
+  code   ("a").samecase(-1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0405
+  from   inventory:Cool.^methods
+  cell   samecase("a") | "a"
+  code   ("a").samecase("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0406
+  from   inventory:Cool.^methods
+  cell   samecase(Any) | "a"
+  code   ("a").samecase(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "a"
+
+- id     0407
+  from   inventory:Cool.^methods
+  cell   samecase(0) | 1/2
+  code   (1/2).samecase(0)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0408
+  from   inventory:Cool.^methods
+  cell   samecase(1) | 1/2
+  code   (1/2).samecase(1)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0409
+  from   inventory:Cool.^methods
+  cell   samecase(-1) | 1/2
+  code   (1/2).samecase(-1)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0410
+  from   inventory:Cool.^methods
+  cell   samecase("a") | 1/2
+  code   (1/2).samecase("a")
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0411
+  from   inventory:Cool.^methods
+  cell   samecase(Any) | 1/2
+  code   (1/2).samecase(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0412
+  from   inventory:Cool.^methods
+  cell   samemark(0) | 1
+  code   (1).samemark(0)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0413
+  from   inventory:Cool.^methods
+  cell   samemark(1) | 1
+  code   (1).samemark(1)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0414
+  from   inventory:Cool.^methods
+  cell   samemark(-1) | 1
+  code   (1).samemark(-1)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0415
+  from   inventory:Cool.^methods
+  cell   samemark("a") | 1
+  code   (1).samemark("a")
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0416
+  from   inventory:Cool.^methods
+  cell   samemark(Any) | 1
+  code   (1).samemark(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "1"
+
+- id     0417
+  from   inventory:Cool.^methods
+  cell   samemark(0) | "a"
+  code   ("a").samemark(0)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0418
+  from   inventory:Cool.^methods
+  cell   samemark(1) | "a"
+  code   ("a").samemark(1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0419
+  from   inventory:Cool.^methods
+  cell   samemark(-1) | "a"
+  code   ("a").samemark(-1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0420
+  from   inventory:Cool.^methods
+  cell   samemark("a") | "a"
+  code   ("a").samemark("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0421
+  from   inventory:Cool.^methods
+  cell   samemark(Any) | "a"
+  code   ("a").samemark(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "a"
+
+- id     0422
+  from   inventory:Cool.^methods
+  cell   samemark(0) | 1/2
+  code   (1/2).samemark(0)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0423
+  from   inventory:Cool.^methods
+  cell   samemark(1) | 1/2
+  code   (1/2).samemark(1)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0424
+  from   inventory:Cool.^methods
+  cell   samemark(-1) | 1/2
+  code   (1/2).samemark(-1)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0425
+  from   inventory:Cool.^methods
+  cell   samemark("a") | 1/2
+  code   (1/2).samemark("a")
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0426
+  from   inventory:Cool.^methods
+  cell   samemark(Any) | 1/2
+  code   (1/2).samemark(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "0.5"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0427
+  from   inventory:Cool.^methods
+  cell   samespace(0) | 1
+  code   (1).samespace(0)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0428
+  from   inventory:Cool.^methods
+  cell   samespace(1) | 1
+  code   (1).samespace(1)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0429
+  from   inventory:Cool.^methods
+  cell   samespace(-1) | 1
+  code   (1).samespace(-1)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0430
+  from   inventory:Cool.^methods
+  cell   samespace("a") | 1
+  code   (1).samespace("a")
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0431
+  from   inventory:Cool.^methods
+  cell   samespace(Any) | 1
+  code   (1).samespace(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0432
+  from   inventory:Cool.^methods
+  cell   samespace(0) | "a"
+  code   ("a").samespace(0)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0433
+  from   inventory:Cool.^methods
+  cell   samespace(1) | "a"
+  code   ("a").samespace(1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0434
+  from   inventory:Cool.^methods
+  cell   samespace(-1) | "a"
+  code   ("a").samespace(-1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0435
+  from   inventory:Cool.^methods
+  cell   samespace("a") | "a"
+  code   ("a").samespace("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0436
+  from   inventory:Cool.^methods
+  cell   samespace(Any) | "a"
+  code   ("a").samespace(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0437
+  from   inventory:Cool.^methods
+  cell   samespace(0) | 1/2
+  code   (1/2).samespace(0)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0438
+  from   inventory:Cool.^methods
+  cell   samespace(1) | 1/2
+  code   (1/2).samespace(1)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0439
+  from   inventory:Cool.^methods
+  cell   samespace(-1) | 1/2
+  code   (1/2).samespace(-1)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0440
+  from   inventory:Cool.^methods
+  cell   samespace("a") | 1/2
+  code   (1/2).samespace("a")
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0441
+  from   inventory:Cool.^methods
+  cell   samespace(Any) | 1/2
+  code   (1/2).samespace(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0442
+  from   inventory:Cool.^methods
+  cell   sec | 1
+  code   (1).sec
+  is     1.8508157176809255e0
+  type   Num
+  oracle rakudo-2026.07 → 1.8508157176809255e0
+  oracle rakupp-3.14.0 → 1.8508157176809255e0
+
+- id     0443
+  from   inventory:Cool.^methods
+  cell   sec | "a"
+  code   ("a").sec
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0444
+  from   inventory:Cool.^methods
+  cell   sec | 1/2
+  code   (1/2).sec
+  is     1.139493927324549e0
+  type   Num
+  oracle rakudo-2026.07 → 1.139493927324549e0
+  oracle rakupp-3.14.0 → 1.139493927324549e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0445
+  from   inventory:Cool.^methods
+  cell   sech | 1
+  code   (1).sech
+  is     0.6480542736638855e0
+  type   Num
+  oracle rakudo-2026.07 → 0.6480542736638855e0
+  oracle rakupp-3.14.0 → 0.6480542736638855e0
+
+- id     0446
+  from   inventory:Cool.^methods
+  cell   sech | "a"
+  code   ("a").sech
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0447
+  from   inventory:Cool.^methods
+  cell   sech | 1/2
+  code   (1/2).sech
+  is     0.886818883970074e0
+  type   Num
+  oracle rakudo-2026.07 → 0.886818883970074e0
+  oracle rakupp-3.14.0 → 0.886818883970074e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0448
+  from   inventory:Cool.^methods
+  cell   self | 1
+  code   (1).self
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0449
+  from   inventory:Cool.^methods
+  cell   self | "a"
+  code   ("a").self
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0450
+  from   inventory:Cool.^methods
+  cell   self | 1/2
+  code   (1/2).self
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → 0.5
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0451
+  from   inventory:Cool.^methods
+  cell   sign | 1
+  code   (1).sign
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0452
+  from   inventory:Cool.^methods
+  cell   sign | "a"
+  code   ("a").sign
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0
+
+- id     0453
+  from   inventory:Cool.^methods
+  cell   sign | 1/2
+  code   (1/2).sign
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0454
+  from   inventory:Cool.^methods
+  cell   sin | 1
+  code   (1).sin
+  is     0.8414709848078965e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8414709848078965e0
+  oracle rakupp-3.14.0 → 0.8414709848078965e0
+
+- id     0455
+  from   inventory:Cool.^methods
+  cell   sin | "a"
+  code   ("a").sin
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0456
+  from   inventory:Cool.^methods
+  cell   sin | 1/2
+  code   (1/2).sin
+  is     0.479425538604203e0
+  type   Num
+  oracle rakudo-2026.07 → 0.479425538604203e0
+  oracle rakupp-3.14.0 → 0.479425538604203e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0457
+  from   inventory:Cool.^methods
+  cell   sinh | 1
+  code   (1).sinh
+  is     1.1752011936438014e0
+  type   Num
+  oracle rakudo-2026.07 → 1.1752011936438014e0
+  oracle rakupp-3.14.0 → 1.1752011936438014e0
+
+- id     0458
+  from   inventory:Cool.^methods
+  cell   sinh | "a"
+  code   ("a").sinh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0459
+  from   inventory:Cool.^methods
+  cell   sinh | 1/2
+  code   (1/2).sinh
+  is     0.5210953054937474e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5210953054937474e0
+  oracle rakupp-3.14.0 → 0.5210953054937474e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0460
+  from   inventory:Cool.^methods
+  cell   so | 1
+  code   (1).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0461
+  from   inventory:Cool.^methods
+  cell   so | "a"
+  code   ("a").so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0462
+  from   inventory:Cool.^methods
+  cell   so | 1/2
+  code   (1/2).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0463
+  from   inventory:Cool.^methods
+  cell   sqrt | 1
+  code   (1).sqrt
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0464
+  from   inventory:Cool.^methods
+  cell   sqrt | "a"
+  code   ("a").sqrt
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Any
+
+- id     0465
+  from   inventory:Cool.^methods
+  cell   sqrt | 1/2
+  code   (1/2).sqrt
+  is     0.7071067811865476e0
+  type   Num
+  oracle rakudo-2026.07 → 0.7071067811865476e0
+  oracle rakupp-3.14.0 → 0.7071067811865476e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0466
+  from   inventory:Cool.^methods
+  cell   sum | 1
+  code   (1).sum
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0467
+  from   inventory:Cool.^methods
+  cell   sum | "a"
+  code   ("a").sum
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0468
+  from   inventory:Cool.^methods
+  cell   sum | 1/2
+  code   (1/2).sum
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-3.14.0 → 0.5
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0469
+  from   inventory:Cool.^methods
+  cell   take | 1
+  code   (1).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → 1
+
+- id     0470
+  from   inventory:Cool.^methods
+  cell   take | "a"
+  code   ("a").take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → "a"
+
+- id     0471
+  from   inventory:Cool.^methods
+  cell   take | 1/2
+  code   (1/2).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → 0.5
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0472
+  from   inventory:Cool.^methods
+  cell   tan | 1
+  code   (1).tan
+  is     1.557407724654902e0
+  type   Num
+  oracle rakudo-2026.07 → 1.557407724654902e0
+  oracle rakupp-3.14.0 → 1.557407724654902e0
+
+- id     0473
+  from   inventory:Cool.^methods
+  cell   tan | "a"
+  code   ("a").tan
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0474
+  from   inventory:Cool.^methods
+  cell   tan | 1/2
+  code   (1/2).tan
+  is     0.5463024898437905e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5463024898437905e0
+  oracle rakupp-3.14.0 → 0.5463024898437905e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0475
+  from   inventory:Cool.^methods
+  cell   tanh | 1
+  code   (1).tanh
+  is     0.7615941559557649e0
+  type   Num
+  oracle rakudo-2026.07 → 0.7615941559557649e0
+  oracle rakupp-3.14.0 → 0.7615941559557649e0
+
+- id     0476
+  from   inventory:Cool.^methods
+  cell   tanh | "a"
+  code   ("a").tanh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0477
+  from   inventory:Cool.^methods
+  cell   tanh | 1/2
+  code   (1/2).tanh
+  is     0.46211715726000974e0
+  type   Num
+  oracle rakudo-2026.07 → 0.46211715726000974e0
+  oracle rakupp-3.14.0 → 0.46211715726000974e0
+
+- id     0478
+  from   inventory:Cool.^methods
+  cell   tc | 1
+  code   (1).tc
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0479
+  from   inventory:Cool.^methods
+  cell   tc | "a"
+  code   ("a").tc
+  is     "A"
+  type   Str
+  oracle rakudo-2026.07 → "A"
+  oracle rakupp-3.14.0 → "A"
+
+- id     0480
+  from   inventory:Cool.^methods
+  cell   tc | 1/2
+  code   (1/2).tc
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+
+- id     0481
+  from   inventory:Cool.^methods
+  cell   tclc | 1
+  code   (1).tclc
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0482
+  from   inventory:Cool.^methods
+  cell   tclc | "a"
+  code   ("a").tclc
+  is     "A"
+  type   Str
+  oracle rakudo-2026.07 → "A"
+  oracle rakupp-3.14.0 → "A"
+
+- id     0483
+  from   inventory:Cool.^methods
+  cell   tclc | 1/2
+  code   (1/2).tclc
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+
+- id     0484
+  from   inventory:Cool.^methods
+  cell   trim | 1
+  code   (1).trim
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0485
+  from   inventory:Cool.^methods
+  cell   trim | "a"
+  code   ("a").trim
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0486
+  from   inventory:Cool.^methods
+  cell   trim | 1/2
+  code   (1/2).trim
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+
+- id     0487
+  from   inventory:Cool.^methods
+  cell   trim-leading | 1
+  code   (1).trim-leading
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0488
+  from   inventory:Cool.^methods
+  cell   trim-leading | "a"
+  code   ("a").trim-leading
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0489
+  from   inventory:Cool.^methods
+  cell   trim-leading | 1/2
+  code   (1/2).trim-leading
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+
+- id     0490
+  from   inventory:Cool.^methods
+  cell   trim-trailing | 1
+  code   (1).trim-trailing
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0491
+  from   inventory:Cool.^methods
+  cell   trim-trailing | "a"
+  code   ("a").trim-trailing
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0492
+  from   inventory:Cool.^methods
+  cell   trim-trailing | 1/2
+  code   (1/2).trim-trailing
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+
+- id     0493
+  from   inventory:Cool.^methods
+  cell   truncate | 1
+  code   (1).truncate
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0494
+  from   inventory:Cool.^methods
+  cell   truncate | "a"
+  code   ("a").truncate
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0
+
+- id     0495
+  from   inventory:Cool.^methods
+  cell   truncate | 1/2
+  code   (1/2).truncate
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0496
+  from   inventory:Cool.^methods
+  cell   uc | 1
+  code   (1).uc
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0497
+  from   inventory:Cool.^methods
+  cell   uc | "a"
+  code   ("a").uc
+  is     "A"
+  type   Str
+  oracle rakudo-2026.07 → "A"
+  oracle rakupp-3.14.0 → "A"
+
+- id     0498
+  from   inventory:Cool.^methods
+  cell   uc | 1/2
+  code   (1/2).uc
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"
+
+- id     0499
+  from   inventory:Cool.^methods
+  cell   uint | 1
+  code   (1).uint
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0500
+  from   inventory:Cool.^methods
+  cell   uint | "a"
+  code   ("a").uint
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0501
+  from   inventory:Cool.^methods
+  cell   uint | 1/2
+  code   (1/2).uint
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0502
+  from   inventory:Cool.^methods
+  cell   uint16 | 1
+  code   (1).uint16
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0503
+  from   inventory:Cool.^methods
+  cell   uint16 | "a"
+  code   ("a").uint16
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0504
+  from   inventory:Cool.^methods
+  cell   uint16 | 1/2
+  code   (1/2).uint16
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0505
+  from   inventory:Cool.^methods
+  cell   uint32 | 1
+  code   (1).uint32
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0506
+  from   inventory:Cool.^methods
+  cell   uint32 | "a"
+  code   ("a").uint32
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0507
+  from   inventory:Cool.^methods
+  cell   uint32 | 1/2
+  code   (1/2).uint32
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0508
+  from   inventory:Cool.^methods
+  cell   uint64 | 1
+  code   (1).uint64
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0509
+  from   inventory:Cool.^methods
+  cell   uint64 | "a"
+  code   ("a").uint64
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0510
+  from   inventory:Cool.^methods
+  cell   uint64 | 1/2
+  code   (1/2).uint64
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0511
+  from   inventory:Cool.^methods
+  cell   uint8 | 1
+  code   (1).uint8
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0512
+  from   inventory:Cool.^methods
+  cell   uint8 | "a"
+  code   ("a").uint8
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0513
+  from   inventory:Cool.^methods
+  cell   uint8 | 1/2
+  code   (1/2).uint8
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0514
+  from   inventory:Cool.^methods
+  cell   uniname | 1
+  code   (1).uniname
+  is     "<control-0001>"
+  type   Str
+  oracle rakudo-2026.07 → "<control-0001>"
+  oracle rakupp-3.14.0 → "<control-0001>"
+
+- id     0515
+  from   inventory:Cool.^methods
+  cell   uniname | "a"
+  code   ("a").uniname
+  is     "LATIN SMALL LETTER A"
+  type   Str
+  oracle rakudo-2026.07 → "LATIN SMALL LETTER A"
+  oracle rakupp-3.14.0 → "LATIN SMALL LETTER A"
+
+- id     0516
+  from   inventory:Cool.^methods
+  cell   uniname | 1/2
+  code   (1/2).uniname
+  is     "DIGIT ZERO"
+  type   Str
+  oracle rakudo-2026.07 → "DIGIT ZERO"
+  oracle rakupp-3.14.0 → "DIGIT ZERO"
+
+- id     0517
+  from   inventory:Cool.^methods
+  cell   uninames | 1
+  code   (1).uninames
+  is     $(("DIGIT ONE",).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("DIGIT ONE",).Seq)
+  oracle rakupp-3.14.0 → $("DIGIT ONE",).Seq
+
+- id     0518
+  from   inventory:Cool.^methods
+  cell   uninames | "a"
+  code   ("a").uninames
+  is     $(("LATIN SMALL LETTER A",).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("LATIN SMALL LETTER A",).Seq)
+  oracle rakupp-3.14.0 → $("LATIN SMALL LETTER A",).Seq
+
+- id     0519
+  from   inventory:Cool.^methods
+  cell   uninames | 1/2
+  code   (1/2).uninames
+  is     $(("DIGIT ZERO", "FULL STOP", "DIGIT FIVE").Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("DIGIT ZERO", "FULL STOP", "DIGIT FIVE").Seq)
+  oracle rakupp-3.14.0 → $("DIGIT ZERO", "FULL STOP", "DIGIT FIVE").Seq
+
+- id     0520
+  from   inventory:Cool.^methods
+  cell   uniparse | 1
+  code   (1).uniparse
+  throws X::Str::InvalidCharName
+  oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0521
+  from   inventory:Cool.^methods
+  cell   uniparse | "a"
+  code   ("a").uniparse
+  throws X::Str::InvalidCharName
+  oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
+  oracle rakupp-3.14.0 → ERR:X::Str::InvalidCharName
+
+- id     0522
+  from   inventory:Cool.^methods
+  cell   uniparse | 1/2
+  code   (1/2).uniparse
+  throws X::Str::InvalidCharName
+  oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0523
+  from   inventory:Cool.^methods
+  cell   uniprop(0) | 1
+  code   (1).uniprop(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0524
+  from   inventory:Cool.^methods
+  cell   uniprop(1) | 1
+  code   (1).uniprop(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0525
+  from   inventory:Cool.^methods
+  cell   uniprop(-1) | 1
+  code   (1).uniprop(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0526
+  from   inventory:Cool.^methods
+  cell   uniprop("a") | 1
+  code   (1).uniprop("a")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0527
+  from   inventory:Cool.^methods
+  cell   uniprop(Any) | 1
+  code   (1).uniprop(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0528
+  from   inventory:Cool.^methods
+  cell   uniprop(0) | "a"
+  code   ("a").uniprop(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0529
+  from   inventory:Cool.^methods
+  cell   uniprop(1) | "a"
+  code   ("a").uniprop(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0530
+  from   inventory:Cool.^methods
+  cell   uniprop(-1) | "a"
+  code   ("a").uniprop(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0531
+  from   inventory:Cool.^methods
+  cell   uniprop("a") | "a"
+  code   ("a").uniprop("a")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0532
+  from   inventory:Cool.^methods
+  cell   uniprop(Any) | "a"
+  code   ("a").uniprop(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0533
+  from   inventory:Cool.^methods
+  cell   uniprop(0) | 1/2
+  code   (1/2).uniprop(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0534
+  from   inventory:Cool.^methods
+  cell   uniprop(1) | 1/2
+  code   (1/2).uniprop(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0535
+  from   inventory:Cool.^methods
+  cell   uniprop(-1) | 1/2
+  code   (1/2).uniprop(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0536
+  from   inventory:Cool.^methods
+  cell   uniprop("a") | 1/2
+  code   (1/2).uniprop("a")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0537
+  from   inventory:Cool.^methods
+  cell   uniprop(Any) | 1/2
+  code   (1/2).uniprop(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0538
+  from   inventory:Cool.^methods
+  cell   uniprops(0) | 1
+  code   (1).uniprops(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False,).Seq
+
+- id     0539
+  from   inventory:Cool.^methods
+  cell   uniprops(1) | 1
+  code   (1).uniprops(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False,).Seq
+
+- id     0540
+  from   inventory:Cool.^methods
+  cell   uniprops(-1) | 1
+  code   (1).uniprops(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False,).Seq
+
+- id     0541
+  from   inventory:Cool.^methods
+  cell   uniprops("a") | 1
+  code   (1).uniprops("a")
+  is     $(("0",).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("0",).Seq)
+  oracle rakupp-3.14.0 → $(Bool::False,).Seq
+
+- id     0542
+  from   inventory:Cool.^methods
+  cell   uniprops(Any) | 1
+  code   (1).uniprops(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False,).Seq
+
+- id     0543
+  from   inventory:Cool.^methods
+  cell   uniprops(0) | "a"
+  code   ("a").uniprops(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False,).Seq
+
+- id     0544
+  from   inventory:Cool.^methods
+  cell   uniprops(1) | "a"
+  code   ("a").uniprops(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False,).Seq
+
+- id     0545
+  from   inventory:Cool.^methods
+  cell   uniprops(-1) | "a"
+  code   ("a").uniprops(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False,).Seq
+
+- id     0546
+  from   inventory:Cool.^methods
+  cell   uniprops("a") | "a"
+  code   ("a").uniprops("a")
+  is     $(("0",).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("0",).Seq)
+  oracle rakupp-3.14.0 → $(Bool::False,).Seq
+
+- id     0547
+  from   inventory:Cool.^methods
+  cell   uniprops(Any) | "a"
+  code   ("a").uniprops(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False,).Seq
+
+- id     0548
+  from   inventory:Cool.^methods
+  cell   uniprops(0) | 1/2
+  code   (1/2).uniprops(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False, Bool::False, Bool::False).Seq
+
+- id     0549
+  from   inventory:Cool.^methods
+  cell   uniprops(1) | 1/2
+  code   (1/2).uniprops(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False, Bool::False, Bool::False).Seq
+
+- id     0550
+  from   inventory:Cool.^methods
+  cell   uniprops(-1) | 1/2
+  code   (1/2).uniprops(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False, Bool::False, Bool::False).Seq
+
+- id     0551
+  from   inventory:Cool.^methods
+  cell   uniprops("a") | 1/2
+  code   (1/2).uniprops("a")
+  is     $(("0", "0", "0").Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("0", "0", "0").Seq)
+  oracle rakupp-3.14.0 → $(Bool::False, Bool::False, Bool::False).Seq
+
+- id     0552
+  from   inventory:Cool.^methods
+  cell   uniprops(Any) | 1/2
+  code   (1/2).uniprops(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False, Bool::False, Bool::False).Seq
+
+- id     0553
+  from   inventory:Cool.^methods
+  cell   unival | 1
+  code   (1).unival
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0554
+  from   inventory:Cool.^methods
+  cell   unival | "a"
+  code   ("a").unival
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → NaN
+
+- id     0555
+  from   inventory:Cool.^methods
+  cell   unival | 1/2
+  code   (1/2).unival
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-3.14.0 → 0
+
+- id     0556
+  from   inventory:Cool.^methods
+  cell   univals | 1
+  code   (1).univals
+  is     $((1,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1,).Seq)
+  oracle rakupp-3.14.0 → $(1,)
+
+- id     0557
+  from   inventory:Cool.^methods
+  cell   univals | "a"
+  code   ("a").univals
+  is     $((NaN,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((NaN,).Seq)
+  oracle rakupp-3.14.0 → $(NaN,)
+
+- id     0558
+  from   inventory:Cool.^methods
+  cell   univals | 1/2
+  code   (1/2).univals
+  is     $((0, NaN, 5).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((0, NaN, 5).Seq)
+  oracle rakupp-3.14.0 → $(0, NaN, 5)
+
+- id     0559
+  from   inventory:Cool.^methods
+  cell   unpolar(0) | 1
+  code   (1).unpolar(0)
+  is     <1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1+0i>
+  oracle rakupp-3.14.0 → <1+0i>
+
+- id     0560
+  from   inventory:Cool.^methods
+  cell   unpolar(1) | 1
+  code   (1).unpolar(1)
+  is     <0.5403023058681398+0.8414709848078965i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
+  oracle rakupp-3.14.0 → <0.5403023058681398+0.8414709848078965i>
+
+- id     0561
+  from   inventory:Cool.^methods
+  cell   unpolar(-1) | 1
+  code   (1).unpolar(-1)
+  is     <0.5403023058681398-0.8414709848078965i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5403023058681398-0.8414709848078965i>
+  oracle rakupp-3.14.0 → <0.5403023058681398-0.8414709848078965i>
+
+- id     0562
+  from   inventory:Cool.^methods
+  cell   unpolar("a") | 1
+  code   (1).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → <1+0i>
+
+- id     0563
+  from   inventory:Cool.^methods
+  cell   unpolar(Any) | 1
+  code   (1).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → <1+0i>
+
+- id     0564
+  from   inventory:Cool.^methods
+  cell   unpolar(0) | "a"
+  code   ("a").unpolar(0)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → <0+0i>
+
+- id     0565
+  from   inventory:Cool.^methods
+  cell   unpolar(1) | "a"
+  code   ("a").unpolar(1)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → <0+0i>
+
+- id     0566
+  from   inventory:Cool.^methods
+  cell   unpolar(-1) | "a"
+  code   ("a").unpolar(-1)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → <0-0i>
+
+- id     0567
+  from   inventory:Cool.^methods
+  cell   unpolar("a") | "a"
+  code   ("a").unpolar("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → <0+0i>
+
+- id     0568
+  from   inventory:Cool.^methods
+  cell   unpolar(Any) | "a"
+  code   ("a").unpolar(Any)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → <0+0i>
+
+- id     0569
+  from   inventory:Cool.^methods
+  cell   unpolar(0) | 1/2
+  code   (1/2).unpolar(0)
+  is     <0.5+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5+0i>
+  oracle rakupp-3.14.0 → <0.5+0i>
+
+- id     0570
+  from   inventory:Cool.^methods
+  cell   unpolar(1) | 1/2
+  code   (1/2).unpolar(1)
+  is     <0.2701511529340699+0.42073549240394825i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.2701511529340699+0.42073549240394825i>
+  oracle rakupp-3.14.0 → <0.2701511529340699+0.42073549240394825i>
+
+- id     0571
+  from   inventory:Cool.^methods
+  cell   unpolar(-1) | 1/2
+  code   (1/2).unpolar(-1)
+  is     <0.2701511529340699-0.42073549240394825i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.2701511529340699-0.42073549240394825i>
+  oracle rakupp-3.14.0 → <0.2701511529340699-0.42073549240394825i>
+
+- id     0572
+  from   inventory:Cool.^methods
+  cell   unpolar("a") | 1/2
+  code   (1/2).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → <0.5+0i>
+
+- id     0573
+  from   inventory:Cool.^methods
+  cell   unpolar(Any) | 1/2
+  code   (1/2).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → <0.5+0i>
+
+- id     0574
+  from   inventory:Cool.^methods
+  cell   wordcase | 1
+  code   (1).wordcase
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-3.14.0 → "1"
+
+- id     0575
+  from   inventory:Cool.^methods
+  cell   wordcase | "a"
+  code   ("a").wordcase
+  is     "A"
+  type   Str
+  oracle rakudo-2026.07 → "A"
+  oracle rakupp-3.14.0 → "A"
+
+- id     0576
+  from   inventory:Cool.^methods
+  cell   wordcase | 1/2
+  code   (1/2).wordcase
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-3.14.0 → "0.5"

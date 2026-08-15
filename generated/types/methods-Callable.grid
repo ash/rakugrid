@@ -1,0 +1,58 @@
+atom     methods/Callable
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     Capture | of | returns
+cols     { 1 } | &say
+
+- id     0001
+  from   inventory:Callable.^methods
+  cell   Capture | { 1 }
+  code   ({ 1 }).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0002
+  from   inventory:Callable.^methods
+  cell   Capture | &say
+  code   (&say).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0003
+  from   inventory:Callable.^methods
+  cell   of | { 1 }
+  code   ({ 1 }).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-3.14.0 → Mu
+
+- id     0004
+  from   inventory:Callable.^methods
+  cell   of | &say
+  code   (&say).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-3.14.0 → Mu
+
+- id     0005
+  from   inventory:Callable.^methods
+  cell   returns | { 1 }
+  code   ({ 1 }).returns
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-3.14.0 → Mu
+
+- id     0006
+  from   inventory:Callable.^methods
+  cell   returns | &say
+  code   (&say).returns
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-3.14.0 → Mu

@@ -1,0 +1,706 @@
+atom     methods/Parameter
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     Bool | CREATE | Capture | DEFINITE | HOW | INSTANTIATE-GENERIC | POPULATE | REPR | VAR | WHAT | WHERE | WHO | all | any | bless | cache | can | capture | chrs | constraints | default | does | invocant | is-generic | is-item | item | join | lazy-if | modifier | multi-invocant | name | named | nl-out | none | not | of | one | onearg | optional | positional | prefix | raw | readonly | reverse | rw | self | sigil | slurpy | so | suffix | sum | take | twigil | type | untyped | usage-name
+cols     :(Int $a)
+
+- id     0001
+  from   inventory:Parameter.^methods
+  cell   Bool | :(Int $a)
+  code   (:(Int $a)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0002
+  from   inventory:Parameter.^methods
+  cell   CREATE | :(Int $a)
+  code   (:(Int $a)).CREATE
+  is     :()
+  type   Signature
+  oracle rakudo-2026.07 → :()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0003
+  from   inventory:Parameter.^methods
+  cell   Capture | :(Int $a)
+  code   (:(Int $a)).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0004
+  from   inventory:Parameter.^methods
+  cell   DEFINITE | :(Int $a)
+  code   (:(Int $a)).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0005
+  from   inventory:Parameter.^methods
+  cell   HOW | :(Int $a)
+  code   (:(Int $a)).HOW
+  is     UNRENDERABLE
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0006
+  from   inventory:Parameter.^methods
+  cell   INSTANTIATE-GENERIC(0) | :(Int $a)
+  code   (:(Int $a)).INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0007
+  from   inventory:Parameter.^methods
+  cell   INSTANTIATE-GENERIC(1) | :(Int $a)
+  code   (:(Int $a)).INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0008
+  from   inventory:Parameter.^methods
+  cell   INSTANTIATE-GENERIC(-1) | :(Int $a)
+  code   (:(Int $a)).INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0009
+  from   inventory:Parameter.^methods
+  cell   INSTANTIATE-GENERIC("a") | :(Int $a)
+  code   (:(Int $a)).INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0010
+  from   inventory:Parameter.^methods
+  cell   INSTANTIATE-GENERIC(Any) | :(Int $a)
+  code   (:(Int $a)).INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0011
+  from   inventory:Parameter.^methods
+  cell   POPULATE(0) | :(Int $a)
+  code   (:(Int $a)).POPULATE(0)
+  is     :(Int $a)
+  type   Signature
+  oracle rakudo-2026.07 → :(Int $a)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0012
+  from   inventory:Parameter.^methods
+  cell   POPULATE(1) | :(Int $a)
+  code   (:(Int $a)).POPULATE(1)
+  is     :(Int $a)
+  type   Signature
+  oracle rakudo-2026.07 → :(Int $a)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0013
+  from   inventory:Parameter.^methods
+  cell   POPULATE(-1) | :(Int $a)
+  code   (:(Int $a)).POPULATE(-1)
+  is     :(Int $a)
+  type   Signature
+  oracle rakudo-2026.07 → :(Int $a)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0014
+  from   inventory:Parameter.^methods
+  cell   POPULATE("a") | :(Int $a)
+  code   (:(Int $a)).POPULATE("a")
+  is     :(Int $a)
+  type   Signature
+  oracle rakudo-2026.07 → :(Int $a)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0015
+  from   inventory:Parameter.^methods
+  cell   POPULATE(Any) | :(Int $a)
+  code   (:(Int $a)).POPULATE(Any)
+  is     :(Int $a)
+  type   Signature
+  oracle rakudo-2026.07 → :(Int $a)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0016
+  from   inventory:Parameter.^methods
+  cell   REPR | :(Int $a)
+  code   (:(Int $a)).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0017
+  from   inventory:Parameter.^methods
+  cell   VAR | :(Int $a)
+  code   (:(Int $a)).VAR
+  is     :(Int $a)
+  type   Signature
+  oracle rakudo-2026.07 → :(Int $a)
+  oracle rakupp-3.14.0 → :(Int $a)
+
+- id     0018
+  from   inventory:Parameter.^methods
+  cell   WHAT | :(Int $a)
+  code   (:(Int $a)).WHAT
+  is     Signature
+  type   Signature
+  oracle rakudo-2026.07 → Signature
+  oracle rakupp-3.14.0 → Signature
+
+- id     0019
+  from   inventory:Parameter.^methods
+  cell   WHERE | :(Int $a)
+  code   (:(Int $a)).WHERE
+  is     3296881347496
+  type   Int
+  oracle rakudo-2026.07 → 3296881347496
+  oracle rakupp-3.14.0 → 140435173433816
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0020
+  from   inventory:Parameter.^methods
+  cell   WHO | :(Int $a)
+  code   (:(Int $a)).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+
+- id     0021
+  from   inventory:Parameter.^methods
+  cell   all | :(Int $a)
+  code   (:(Int $a)).all
+  is     all(:(Int $a))
+  type   Junction
+  oracle rakudo-2026.07 → all(:(Int $a))
+  oracle rakupp-3.14.0 → all(:arity(1), :count(1), :params(({:capture(Bool::False), :constraints(Mu), :copy(Bool::False), :default(Code), :invocant(Bool::False), :modifier(""), :multi-invocant(Bool::True), :name("\$a"), :named(Bool::False), :named_names($()), :optional(Bool::False), :prefix(""), :raw(Bool::False), :readonly(Bool::True), :rw(Bool::False), :slurpy(Bool::False), :str("Int \$a"), :suffix(""), :type("Int"), :type-obj(Int), :usage-name("a")},)), :str("(Int \$a)"))
+
+- id     0022
+  from   inventory:Parameter.^methods
+  cell   any | :(Int $a)
+  code   (:(Int $a)).any
+  is     any(:(Int $a))
+  type   Junction
+  oracle rakudo-2026.07 → any(:(Int $a))
+  oracle rakupp-3.14.0 → any(:arity(1), :count(1), :params(({:capture(Bool::False), :constraints(Mu), :copy(Bool::False), :default(Code), :invocant(Bool::False), :modifier(""), :multi-invocant(Bool::True), :name("\$a"), :named(Bool::False), :named_names($()), :optional(Bool::False), :prefix(""), :raw(Bool::False), :readonly(Bool::True), :rw(Bool::False), :slurpy(Bool::False), :str("Int \$a"), :suffix(""), :type("Int"), :type-obj(Int), :usage-name("a")},)), :str("(Int \$a)"))
+
+- id     0023
+  from   inventory:Parameter.^methods
+  cell   bless | :(Int $a)
+  code   (:(Int $a)).bless
+  is     :()
+  type   Signature
+  oracle rakudo-2026.07 → :()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0024
+  from   inventory:Parameter.^methods
+  cell   cache | :(Int $a)
+  code   (:(Int $a)).cache
+  is     $(:(Int $a),)
+  type   List
+  oracle rakudo-2026.07 → $(:(Int $a),)
+  oracle rakupp-3.14.0 → $(:arity(1), :count(1), :params(({:capture(Bool::False), :constraints(Mu), :copy(Bool::False), :default(Code), :invocant(Bool::False), :modifier(""), :multi-invocant(Bool::True), :name("\$a"), :named(Bool::False), :named_names($()), :optional(Bool::False), :prefix(""), :raw(Bool::False), :readonly(Bool::True), :rw(Bool::False), :slurpy(Bool::False), :str("Int \$a"), :suffix(""), :type("Int"), :type-obj(Int), :usage-name("a")},)), :str("(Int \$a)"))
+
+- id     0025
+  from   inventory:Parameter.^methods
+  cell   can(0) | :(Int $a)
+  code   (:(Int $a)).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0026
+  from   inventory:Parameter.^methods
+  cell   can(1) | :(Int $a)
+  code   (:(Int $a)).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0027
+  from   inventory:Parameter.^methods
+  cell   can(-1) | :(Int $a)
+  code   (:(Int $a)).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0028
+  from   inventory:Parameter.^methods
+  cell   can("a") | :(Int $a)
+  code   (:(Int $a)).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0029
+  from   inventory:Parameter.^methods
+  cell   can(Any) | :(Int $a)
+  code   (:(Int $a)).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0030
+  from   inventory:Parameter.^methods
+  cell   capture | :(Int $a)
+  code   (:(Int $a)).capture
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0031
+  from   inventory:Parameter.^methods
+  cell   chrs | :(Int $a)
+  code   (:(Int $a)).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "\0\0\0\0"
+
+- id     0032
+  from   inventory:Parameter.^methods
+  cell   constraints | :(Int $a)
+  code   (:(Int $a)).constraints
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0033
+  from   inventory:Parameter.^methods
+  cell   default | :(Int $a)
+  code   (:(Int $a)).default
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → Any
+
+- id     0034
+  from   inventory:Parameter.^methods
+  cell   does(0) | :(Int $a)
+  code   (:(Int $a)).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0035
+  from   inventory:Parameter.^methods
+  cell   does(1) | :(Int $a)
+  code   (:(Int $a)).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0036
+  from   inventory:Parameter.^methods
+  cell   does(-1) | :(Int $a)
+  code   (:(Int $a)).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0037
+  from   inventory:Parameter.^methods
+  cell   does("a") | :(Int $a)
+  code   (:(Int $a)).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0038
+  from   inventory:Parameter.^methods
+  cell   does(Any) | :(Int $a)
+  code   (:(Int $a)).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0039
+  from   inventory:Parameter.^methods
+  cell   invocant | :(Int $a)
+  code   (:(Int $a)).invocant
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0040
+  from   inventory:Parameter.^methods
+  cell   is-generic | :(Int $a)
+  code   (:(Int $a)).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0041
+  from   inventory:Parameter.^methods
+  cell   is-item | :(Int $a)
+  code   (:(Int $a)).is-item
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0042
+  from   inventory:Parameter.^methods
+  cell   item | :(Int $a)
+  code   (:(Int $a)).item
+  is     :(Int $a)
+  type   Signature
+  oracle rakudo-2026.07 → :(Int $a)
+  oracle rakupp-3.14.0 → :(Int $a)
+
+- id     0043
+  from   inventory:Parameter.^methods
+  cell   join(0) | :(Int $a)
+  code   (:(Int $a)).join(0)
+  is     "Signature<3296891529648>"
+  type   Str
+  oracle rakudo-2026.07 → "Signature<3296891529648>"
+  oracle rakupp-3.14.0 → "arity\t10count\t10params\tcapture\tFalse\nconstraints\t\ncopy\tFalse\ndefault\t\ninvocant\tFalse\nmodifier\t\nmulti-invocant\tTrue\nname\t\$a\nnamed\tFalse\nnamed_names\t\noptional\tFalse\nprefix\t\nraw\tFalse\nreadonly\tTrue\nrw\tFalse\nslurpy\tFalse\nstr\tInt \$a\nsuffix\t\ntype\tInt\ntype-obj\t\nusage-name\ta0str\t(Int \$a)"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0044
+  from   inventory:Parameter.^methods
+  cell   join(1) | :(Int $a)
+  code   (:(Int $a)).join(1)
+  is     "Signature<3296891529968>"
+  type   Str
+  oracle rakudo-2026.07 → "Signature<3296891529968>"
+  oracle rakupp-3.14.0 → "arity\t11count\t11params\tcapture\tFalse\nconstraints\t\ncopy\tFalse\ndefault\t\ninvocant\tFalse\nmodifier\t\nmulti-invocant\tTrue\nname\t\$a\nnamed\tFalse\nnamed_names\t\noptional\tFalse\nprefix\t\nraw\tFalse\nreadonly\tTrue\nrw\tFalse\nslurpy\tFalse\nstr\tInt \$a\nsuffix\t\ntype\tInt\ntype-obj\t\nusage-name\ta1str\t(Int \$a)"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0045
+  from   inventory:Parameter.^methods
+  cell   join(-1) | :(Int $a)
+  code   (:(Int $a)).join(-1)
+  is     "Signature<3296891530048>"
+  type   Str
+  oracle rakudo-2026.07 → "Signature<3296891530048>"
+  oracle rakupp-3.14.0 → "arity\t1-1count\t1-1params\tcapture\tFalse\nconstraints\t\ncopy\tFalse\ndefault\t\ninvocant\tFalse\nmodifier\t\nmulti-invocant\tTrue\nname\t\$a\nnamed\tFalse\nnamed_names\t\noptional\tFalse\nprefix\t\nraw\tFalse\nreadonly\tTrue\nrw\tFalse\nslurpy\tFalse\nstr\tInt \$a\nsuffix\t\ntype\tInt\ntype-obj\t\nusage-name\ta-1str\t(Int \$a)"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0046
+  from   inventory:Parameter.^methods
+  cell   join("a") | :(Int $a)
+  code   (:(Int $a)).join("a")
+  is     "Signature<3296891539008>"
+  type   Str
+  oracle rakudo-2026.07 → "Signature<3296891539008>"
+  oracle rakupp-3.14.0 → "arity\t1acount\t1aparams\tcapture\tFalse\nconstraints\t\ncopy\tFalse\ndefault\t\ninvocant\tFalse\nmodifier\t\nmulti-invocant\tTrue\nname\t\$a\nnamed\tFalse\nnamed_names\t\noptional\tFalse\nprefix\t\nraw\tFalse\nreadonly\tTrue\nrw\tFalse\nslurpy\tFalse\nstr\tInt \$a\nsuffix\t\ntype\tInt\ntype-obj\t\nusage-name\taastr\t(Int \$a)"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0047
+  from   inventory:Parameter.^methods
+  cell   join(Any) | :(Int $a)
+  code   (:(Int $a)).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → "arity\t1count\t1params\tcapture\tFalse\nconstraints\t\ncopy\tFalse\ndefault\t\ninvocant\tFalse\nmodifier\t\nmulti-invocant\tTrue\nname\t\$a\nnamed\tFalse\nnamed_names\t\noptional\tFalse\nprefix\t\nraw\tFalse\nreadonly\tTrue\nrw\tFalse\nslurpy\tFalse\nstr\tInt \$a\nsuffix\t\ntype\tInt\ntype-obj\t\nusage-name\tastr\t(Int \$a)"
+
+- id     0048
+  from   inventory:Parameter.^methods
+  cell   lazy-if(0) | :(Int $a)
+  code   (:(Int $a)).lazy-if(0)
+  is     :(Int $a)
+  type   Signature
+  oracle rakudo-2026.07 → :(Int $a)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0049
+  from   inventory:Parameter.^methods
+  cell   lazy-if(1) | :(Int $a)
+  code   (:(Int $a)).lazy-if(1)
+  is     :(Int $a)
+  type   Signature
+  oracle rakudo-2026.07 → :(Int $a)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0050
+  from   inventory:Parameter.^methods
+  cell   lazy-if(-1) | :(Int $a)
+  code   (:(Int $a)).lazy-if(-1)
+  is     :(Int $a)
+  type   Signature
+  oracle rakudo-2026.07 → :(Int $a)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0051
+  from   inventory:Parameter.^methods
+  cell   lazy-if("a") | :(Int $a)
+  code   (:(Int $a)).lazy-if("a")
+  is     :(Int $a)
+  type   Signature
+  oracle rakudo-2026.07 → :(Int $a)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0052
+  from   inventory:Parameter.^methods
+  cell   lazy-if(Any) | :(Int $a)
+  code   (:(Int $a)).lazy-if(Any)
+  is     :(Int $a)
+  type   Signature
+  oracle rakudo-2026.07 → :(Int $a)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0053
+  from   inventory:Parameter.^methods
+  cell   modifier | :(Int $a)
+  code   (:(Int $a)).modifier
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0054
+  from   inventory:Parameter.^methods
+  cell   multi-invocant | :(Int $a)
+  code   (:(Int $a)).multi-invocant
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0055
+  from   inventory:Parameter.^methods
+  cell   name | :(Int $a)
+  code   (:(Int $a)).name
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → "element"
+
+- id     0056
+  from   inventory:Parameter.^methods
+  cell   named | :(Int $a)
+  code   (:(Int $a)).named
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0057
+  from   inventory:Parameter.^methods
+  cell   nl-out | :(Int $a)
+  code   (:(Int $a)).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0058
+  from   inventory:Parameter.^methods
+  cell   none | :(Int $a)
+  code   (:(Int $a)).none
+  is     none(:(Int $a))
+  type   Junction
+  oracle rakudo-2026.07 → none(:(Int $a))
+  oracle rakupp-3.14.0 → none(:arity(1), :count(1), :params(({:capture(Bool::False), :constraints(Mu), :copy(Bool::False), :default(Code), :invocant(Bool::False), :modifier(""), :multi-invocant(Bool::True), :name("\$a"), :named(Bool::False), :named_names($()), :optional(Bool::False), :prefix(""), :raw(Bool::False), :readonly(Bool::True), :rw(Bool::False), :slurpy(Bool::False), :str("Int \$a"), :suffix(""), :type("Int"), :type-obj(Int), :usage-name("a")},)), :str("(Int \$a)"))
+
+- id     0059
+  from   inventory:Parameter.^methods
+  cell   not | :(Int $a)
+  code   (:(Int $a)).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0060
+  from   inventory:Parameter.^methods
+  cell   of | :(Int $a)
+  code   (:(Int $a)).of
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → Mu
+
+- id     0061
+  from   inventory:Parameter.^methods
+  cell   one | :(Int $a)
+  code   (:(Int $a)).one
+  is     one(:(Int $a))
+  type   Junction
+  oracle rakudo-2026.07 → one(:(Int $a))
+  oracle rakupp-3.14.0 → one(:arity(1), :count(1), :params(({:capture(Bool::False), :constraints(Mu), :copy(Bool::False), :default(Code), :invocant(Bool::False), :modifier(""), :multi-invocant(Bool::True), :name("\$a"), :named(Bool::False), :named_names($()), :optional(Bool::False), :prefix(""), :raw(Bool::False), :readonly(Bool::True), :rw(Bool::False), :slurpy(Bool::False), :str("Int \$a"), :suffix(""), :type("Int"), :type-obj(Int), :usage-name("a")},)), :str("(Int \$a)"))
+
+- id     0062
+  from   inventory:Parameter.^methods
+  cell   onearg | :(Int $a)
+  code   (:(Int $a)).onearg
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0063
+  from   inventory:Parameter.^methods
+  cell   optional | :(Int $a)
+  code   (:(Int $a)).optional
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0064
+  from   inventory:Parameter.^methods
+  cell   positional | :(Int $a)
+  code   (:(Int $a)).positional
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0065
+  from   inventory:Parameter.^methods
+  cell   prefix | :(Int $a)
+  code   (:(Int $a)).prefix
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0066
+  from   inventory:Parameter.^methods
+  cell   raw | :(Int $a)
+  code   (:(Int $a)).raw
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0067
+  from   inventory:Parameter.^methods
+  cell   readonly | :(Int $a)
+  code   (:(Int $a)).readonly
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0068
+  from   inventory:Parameter.^methods
+  cell   reverse | :(Int $a)
+  code   (:(Int $a)).reverse
+  is     $((:(Int $a),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((:(Int $a),).Seq)
+  oracle rakupp-3.14.0 → $(:str("(Int \$a)"), :params(({:capture(Bool::False), :constraints(Mu), :copy(Bool::False), :default(Code), :invocant(Bool::False), :modifier(""), :multi-invocant(Bool::True), :name("\$a"), :named(Bool::False), :named_names($()), :optional(Bool::False), :prefix(""), :raw(Bool::False), :readonly(Bool::True), :rw(Bool::False), :slurpy(Bool::False), :str("Int \$a"), :suffix(""), :type("Int"), :type-obj(Int), :usage-name("a")},)), :count(1), :arity(1)).Seq
+
+- id     0069
+  from   inventory:Parameter.^methods
+  cell   rw | :(Int $a)
+  code   (:(Int $a)).rw
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0070
+  from   inventory:Parameter.^methods
+  cell   self | :(Int $a)
+  code   (:(Int $a)).self
+  is     :(Int $a)
+  type   Signature
+  oracle rakudo-2026.07 → :(Int $a)
+  oracle rakupp-3.14.0 → :(Int $a)
+
+- id     0071
+  from   inventory:Parameter.^methods
+  cell   sigil | :(Int $a)
+  code   (:(Int $a)).sigil
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0072
+  from   inventory:Parameter.^methods
+  cell   slurpy | :(Int $a)
+  code   (:(Int $a)).slurpy
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0073
+  from   inventory:Parameter.^methods
+  cell   so | :(Int $a)
+  code   (:(Int $a)).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0074
+  from   inventory:Parameter.^methods
+  cell   suffix | :(Int $a)
+  code   (:(Int $a)).suffix
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0075
+  from   inventory:Parameter.^methods
+  cell   sum | :(Int $a)
+  code   (:(Int $a)).sum
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0076
+  from   inventory:Parameter.^methods
+  cell   take | :(Int $a)
+  code   (:(Int $a)).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → :(Int $a)
+
+- id     0077
+  from   inventory:Parameter.^methods
+  cell   twigil | :(Int $a)
+  code   (:(Int $a)).twigil
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0078
+  from   inventory:Parameter.^methods
+  cell   type | :(Int $a)
+  code   (:(Int $a)).type
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0079
+  from   inventory:Parameter.^methods
+  cell   untyped | :(Int $a)
+  code   (:(Int $a)).untyped
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0080
+  from   inventory:Parameter.^methods
+  cell   usage-name | :(Int $a)
+  code   (:(Int $a)).usage-name
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound

@@ -1,0 +1,102 @@
+atom     methods/Enumeration
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     COERCE | clone | enums | new | pair | pred | succ
+cols     Order::Less
+
+- id     0001
+  from   inventory:Enumeration.^methods
+  cell   COERCE(0) | Order::Less
+  code   (Order::Less).COERCE(0)
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0002
+  from   inventory:Enumeration.^methods
+  cell   COERCE(1) | Order::Less
+  code   (Order::Less).COERCE(1)
+  is     Order::More
+  type   Order
+  oracle rakudo-2026.07 → Order::More
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0003
+  from   inventory:Enumeration.^methods
+  cell   COERCE(-1) | Order::Less
+  code   (Order::Less).COERCE(-1)
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0004
+  from   inventory:Enumeration.^methods
+  cell   COERCE("a") | Order::Less
+  code   (Order::Less).COERCE("a")
+  throws X::Enum::NoValue
+  oracle rakudo-2026.07 → ERR:X::Enum::NoValue
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0005
+  from   inventory:Enumeration.^methods
+  cell   COERCE(Any) | Order::Less
+  code   (Order::Less).COERCE(Any)
+  throws X::Enum::NoValue
+  oracle rakudo-2026.07 → ERR:X::Enum::NoValue
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0006
+  from   inventory:Enumeration.^methods
+  cell   clone | Order::Less
+  code   (Order::Less).clone
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → Order::Less
+
+- id     0007
+  from   inventory:Enumeration.^methods
+  cell   enums | Order::Less
+  code   (Order::Less).enums
+  is     $(Map.new((:Less(-1),:More(1),:Same(0))))
+  type   Map
+  oracle rakudo-2026.07 → $(Map.new((:Less(-1),:More(1),:Same(0))))
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0008
+  from   inventory:Enumeration.^methods
+  cell   new | Order::Less
+  code   (Order::Less).new
+  throws X::Constructor::BadType
+  oracle rakudo-2026.07 → ERR:X::Constructor::BadType
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0009
+  from   inventory:Enumeration.^methods
+  cell   pair | Order::Less
+  code   (Order::Less).pair
+  is     :Less(-1)
+  type   Pair
+  oracle rakudo-2026.07 → :Less(-1)
+  oracle rakupp-3.14.0 → :Less(-1)
+
+- id     0010
+  from   inventory:Enumeration.^methods
+  cell   pred | Order::Less
+  code   (Order::Less).pred
+  is     Order::Less
+  type   Order
+  oracle rakudo-2026.07 → Order::Less
+  oracle rakupp-3.14.0 → -2
+
+- id     0011
+  from   inventory:Enumeration.^methods
+  cell   succ | Order::Less
+  code   (Order::Less).succ
+  is     Order::Same
+  type   Order
+  oracle rakudo-2026.07 → Order::Same
+  oracle rakupp-3.14.0 → 0

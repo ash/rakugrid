@@ -1,0 +1,1184 @@
+atom     methods/Method
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     Bool | CREATE | Capture | DEFINITE | HOW | INSTANTIATE-GENERIC | IS-SETTING-ONLY | POPULATE | REPR | VAR | WHAT | WHERE | WHO | WHY | all | any | arity | assoc | associative | bless | bytecode-size | cache | can | candidates | cando | chrs | count | does | equiv | file | has-loop-phasers | has-phaser | has-phasers | iffy | is-generic | is-implementation-detail | is-wrapped | item | iterator | join | lazy-if | line | looser | multi | nl-out | none | not | of | one | outer | package | phasers | precedence | reducer | returns | reverse | self | signature | so | soft | sum | take | thunky | tighter | unwrap | wrap
+cols     (class { method m() { 1 } }).^find_method("m")
+
+- id     0001
+  from   inventory:Method.^methods
+  cell   Bool | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0002
+  from   inventory:Method.^methods
+  cell   CREATE | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).CREATE
+  is     UNRENDERABLE
+  type   Method
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0003
+  from   inventory:Method.^methods
+  cell   Capture | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0004
+  from   inventory:Method.^methods
+  cell   DEFINITE | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0005
+  from   inventory:Method.^methods
+  cell   HOW | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+
+- id     0006
+  from   inventory:Method.^methods
+  cell   INSTANTIATE-GENERIC(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0007
+  from   inventory:Method.^methods
+  cell   INSTANTIATE-GENERIC(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0008
+  from   inventory:Method.^methods
+  cell   INSTANTIATE-GENERIC(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0009
+  from   inventory:Method.^methods
+  cell   INSTANTIATE-GENERIC("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0010
+  from   inventory:Method.^methods
+  cell   INSTANTIATE-GENERIC(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0011
+  from   inventory:Method.^methods
+  cell   IS-SETTING-ONLY(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).IS-SETTING-ONLY(0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0012
+  from   inventory:Method.^methods
+  cell   IS-SETTING-ONLY(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).IS-SETTING-ONLY(1)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0013
+  from   inventory:Method.^methods
+  cell   IS-SETTING-ONLY(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).IS-SETTING-ONLY(-1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0014
+  from   inventory:Method.^methods
+  cell   IS-SETTING-ONLY("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).IS-SETTING-ONLY("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0015
+  from   inventory:Method.^methods
+  cell   IS-SETTING-ONLY(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).IS-SETTING-ONLY(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0016
+  from   inventory:Method.^methods
+  cell   POPULATE(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).POPULATE(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0017
+  from   inventory:Method.^methods
+  cell   POPULATE(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).POPULATE(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0018
+  from   inventory:Method.^methods
+  cell   POPULATE(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).POPULATE(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0019
+  from   inventory:Method.^methods
+  cell   POPULATE("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).POPULATE("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0020
+  from   inventory:Method.^methods
+  cell   POPULATE(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).POPULATE(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0021
+  from   inventory:Method.^methods
+  cell   REPR | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0022
+  from   inventory:Method.^methods
+  cell   VAR | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).VAR
+  is     method m (<anon|22> $:: *%_) { #`(Method|6107536945272) ... }
+  type   Method
+  oracle rakudo-2026.07 → method m (<anon|22> $:: *%_) { #`(Method|6107536945272) ... }
+  oracle rakupp-3.14.0 → &m
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0023
+  from   inventory:Method.^methods
+  cell   WHAT | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).WHAT
+  is     Method
+  type   Method
+  oracle rakudo-2026.07 → Method
+  oracle rakupp-3.14.0 → Method
+
+- id     0024
+  from   inventory:Method.^methods
+  cell   WHERE | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).WHERE
+  is     6107484212480
+  type   Int
+  oracle rakudo-2026.07 → 6107484212480
+  oracle rakupp-3.14.0 → 14070873552
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0025
+  from   inventory:Method.^methods
+  cell   WHO | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+
+- id     0026
+  from   inventory:Method.^methods
+  cell   WHY | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).WHY
+  is     Nil
+  type   Nil+{Mu::Suggestion[Method]}
+  oracle rakudo-2026.07 → Nil
+  oracle rakupp-3.14.0 → Any
+
+- id     0027
+  from   inventory:Method.^methods
+  cell   all | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).all
+  is     all(method m (<anon|27> $:: *%_) { #`(Method|6107509279800) ... })
+  type   Junction
+  oracle rakudo-2026.07 → all(method m (<anon|27> $:: *%_) { #`(Method|6107509279800) ... })
+  oracle rakupp-3.14.0 → all(&m)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0028
+  from   inventory:Method.^methods
+  cell   any | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).any
+  is     any(method m (<anon|28> $:: *%_) { #`(Method|6107509279936) ... })
+  type   Junction
+  oracle rakudo-2026.07 → any(method m (<anon|28> $:: *%_) { #`(Method|6107509279936) ... })
+  oracle rakupp-3.14.0 → any(&m)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0029
+  from   inventory:Method.^methods
+  cell   arity | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).arity
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 0
+
+- id     0030
+  from   inventory:Method.^methods
+  cell   assoc(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).assoc(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0031
+  from   inventory:Method.^methods
+  cell   assoc(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).assoc(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0032
+  from   inventory:Method.^methods
+  cell   assoc(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).assoc(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0033
+  from   inventory:Method.^methods
+  cell   assoc("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).assoc("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0034
+  from   inventory:Method.^methods
+  cell   assoc(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).assoc(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0035
+  from   inventory:Method.^methods
+  cell   associative | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).associative
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0036
+  from   inventory:Method.^methods
+  cell   bless | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).bless
+  is     UNRENDERABLE
+  type   Method
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0037
+  from   inventory:Method.^methods
+  cell   bytecode-size | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).bytecode-size
+  is     96
+  type   Int
+  oracle rakudo-2026.07 → 96
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0038
+  from   inventory:Method.^methods
+  cell   cache | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).cache
+  is     $(method m (<anon|38> $:: *%_) { #`(Method|6107536955064) ... },)
+  type   List
+  oracle rakudo-2026.07 → $(method m (<anon|38> $:: *%_) { #`(Method|6107536955064) ... },)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0039
+  from   inventory:Method.^methods
+  cell   can(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0040
+  from   inventory:Method.^methods
+  cell   can(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0041
+  from   inventory:Method.^methods
+  cell   can(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0042
+  from   inventory:Method.^methods
+  cell   can("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0043
+  from   inventory:Method.^methods
+  cell   can(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0044
+  from   inventory:Method.^methods
+  cell   candidates | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).candidates
+  is     $(method m (<anon|44> $:: *%_) { #`(Method|6107536957512) ... },)
+  type   List
+  oracle rakudo-2026.07 → $(method m (<anon|44> $:: *%_) { #`(Method|6107536957512) ... },)
+  oracle rakupp-3.14.0 → $(&m,)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0045
+  from   inventory:Method.^methods
+  cell   cando(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).cando(0)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $(&m,)
+
+- id     0046
+  from   inventory:Method.^methods
+  cell   cando(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).cando(1)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $(&m,)
+
+- id     0047
+  from   inventory:Method.^methods
+  cell   cando(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).cando(-1)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $(&m,)
+
+- id     0048
+  from   inventory:Method.^methods
+  cell   cando("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).cando("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $(&m,)
+
+- id     0049
+  from   inventory:Method.^methods
+  cell   cando(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).cando(Any)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $(&m,)
+
+- id     0050
+  from   inventory:Method.^methods
+  cell   chrs | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0051
+  from   inventory:Method.^methods
+  cell   count | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).count
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 0
+
+- id     0052
+  from   inventory:Method.^methods
+  cell   does(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0053
+  from   inventory:Method.^methods
+  cell   does(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0054
+  from   inventory:Method.^methods
+  cell   does(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0055
+  from   inventory:Method.^methods
+  cell   does("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0056
+  from   inventory:Method.^methods
+  cell   does(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0057
+  from   inventory:Method.^methods
+  cell   equiv(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).equiv(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0058
+  from   inventory:Method.^methods
+  cell   equiv(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).equiv(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0059
+  from   inventory:Method.^methods
+  cell   equiv(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).equiv(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0060
+  from   inventory:Method.^methods
+  cell   equiv("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).equiv("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0061
+  from   inventory:Method.^methods
+  cell   equiv(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).equiv(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0062
+  from   inventory:Method.^methods
+  cell   file | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).file
+  is     "EVAL_99"
+  type   Str
+  oracle rakudo-2026.07 → "EVAL_99"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0063
+  from   inventory:Method.^methods
+  cell   has-loop-phasers | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).has-loop-phasers
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0064
+  from   inventory:Method.^methods
+  cell   has-phaser(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).has-phaser(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0065
+  from   inventory:Method.^methods
+  cell   has-phaser(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).has-phaser(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0066
+  from   inventory:Method.^methods
+  cell   has-phaser(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).has-phaser(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0067
+  from   inventory:Method.^methods
+  cell   has-phaser("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).has-phaser("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0068
+  from   inventory:Method.^methods
+  cell   has-phaser(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).has-phaser(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0069
+  from   inventory:Method.^methods
+  cell   has-phasers | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).has-phasers
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0070
+  from   inventory:Method.^methods
+  cell   iffy | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).iffy
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0071
+  from   inventory:Method.^methods
+  cell   is-generic | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0072
+  from   inventory:Method.^methods
+  cell   is-implementation-detail | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).is-implementation-detail
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0073
+  from   inventory:Method.^methods
+  cell   is-wrapped | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).is-wrapped
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0074
+  from   inventory:Method.^methods
+  cell   item | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).item
+  is     method m (<anon|74> $:: *%_) { #`(Method|6107536970568) ... }
+  type   Method
+  oracle rakudo-2026.07 → method m (<anon|74> $:: *%_) { #`(Method|6107536970568) ... }
+  oracle rakupp-3.14.0 → &m
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0075
+  from   inventory:Method.^methods
+  cell   iterator | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).iterator
+  is     Rakudo::Iterator::OneValue.new
+  type   Rakudo::Iterator::OneValue
+  oracle rakudo-2026.07 → Rakudo::Iterator::OneValue.new
+  oracle rakupp-3.14.0 → ${:items($[&m]), :pos(0)}
+
+- id     0076
+  from   inventory:Method.^methods
+  cell   join(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).join(0)
+  is     "m"
+  type   Str
+  oracle rakudo-2026.07 → "m"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0077
+  from   inventory:Method.^methods
+  cell   join(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).join(1)
+  is     "m"
+  type   Str
+  oracle rakudo-2026.07 → "m"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0078
+  from   inventory:Method.^methods
+  cell   join(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).join(-1)
+  is     "m"
+  type   Str
+  oracle rakudo-2026.07 → "m"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0079
+  from   inventory:Method.^methods
+  cell   join("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).join("a")
+  is     "m"
+  type   Str
+  oracle rakudo-2026.07 → "m"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0080
+  from   inventory:Method.^methods
+  cell   join(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0081
+  from   inventory:Method.^methods
+  cell   lazy-if(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).lazy-if(0)
+  is     method m (<anon|81> $:: *%_) { #`(Method|6107584574784) ... }
+  type   Method
+  oracle rakudo-2026.07 → method m (<anon|81> $:: *%_) { #`(Method|6107584574784) ... }
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0082
+  from   inventory:Method.^methods
+  cell   lazy-if(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).lazy-if(1)
+  is     method m (<anon|82> $:: *%_) { #`(Method|6107584574920) ... }
+  type   Method
+  oracle rakudo-2026.07 → method m (<anon|82> $:: *%_) { #`(Method|6107584574920) ... }
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0083
+  from   inventory:Method.^methods
+  cell   lazy-if(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).lazy-if(-1)
+  is     method m (<anon|83> $:: *%_) { #`(Method|6107584575056) ... }
+  type   Method
+  oracle rakudo-2026.07 → method m (<anon|83> $:: *%_) { #`(Method|6107584575056) ... }
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0084
+  from   inventory:Method.^methods
+  cell   lazy-if("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).lazy-if("a")
+  is     method m (<anon|84> $:: *%_) { #`(Method|6107584575192) ... }
+  type   Method
+  oracle rakudo-2026.07 → method m (<anon|84> $:: *%_) { #`(Method|6107584575192) ... }
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0085
+  from   inventory:Method.^methods
+  cell   lazy-if(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).lazy-if(Any)
+  is     method m (<anon|85> $:: *%_) { #`(Method|6107584576960) ... }
+  type   Method
+  oracle rakudo-2026.07 → method m (<anon|85> $:: *%_) { #`(Method|6107584576960) ... }
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0086
+  from   inventory:Method.^methods
+  cell   line | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).line
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0087
+  from   inventory:Method.^methods
+  cell   looser(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).looser(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0088
+  from   inventory:Method.^methods
+  cell   looser(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).looser(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0089
+  from   inventory:Method.^methods
+  cell   looser(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).looser(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0090
+  from   inventory:Method.^methods
+  cell   looser("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).looser("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0091
+  from   inventory:Method.^methods
+  cell   looser(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).looser(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0092
+  from   inventory:Method.^methods
+  cell   multi | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).multi
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0093
+  from   inventory:Method.^methods
+  cell   nl-out | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0094
+  from   inventory:Method.^methods
+  cell   none | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).none
+  is     none(method m (<anon|94> $:: *%_) { #`(Method|6107584578592) ... })
+  type   Junction
+  oracle rakudo-2026.07 → none(method m (<anon|94> $:: *%_) { #`(Method|6107584578592) ... })
+  oracle rakupp-3.14.0 → none(&m)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0095
+  from   inventory:Method.^methods
+  cell   not | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0096
+  from   inventory:Method.^methods
+  cell   of | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-3.14.0 → Mu
+
+- id     0097
+  from   inventory:Method.^methods
+  cell   one | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).one
+  is     one(method m (<anon|97> $:: *%_) { #`(Method|6107584580904) ... })
+  type   Junction
+  oracle rakudo-2026.07 → one(method m (<anon|97> $:: *%_) { #`(Method|6107584580904) ... })
+  oracle rakupp-3.14.0 → one(&m)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0098
+  from   inventory:Method.^methods
+  cell   outer | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).outer
+  is     ->  { #`(Block|6107358913384) ... }
+  type   Block
+  oracle rakudo-2026.07 → ->  { #`(Block|6107358913384) ... }
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0099
+  from   inventory:Method.^methods
+  cell   package | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).package
+  is     <anon|99>
+  type   <anon|99>
+  oracle rakudo-2026.07 → <anon|99>
+  oracle rakupp-3.14.0 → GLOBAL
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0100
+  from   inventory:Method.^methods
+  cell   phasers(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).phasers(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0101
+  from   inventory:Method.^methods
+  cell   phasers(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).phasers(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0102
+  from   inventory:Method.^methods
+  cell   phasers(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).phasers(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0103
+  from   inventory:Method.^methods
+  cell   phasers("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).phasers("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0104
+  from   inventory:Method.^methods
+  cell   phasers(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).phasers(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0105
+  from   inventory:Method.^methods
+  cell   precedence | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).precedence
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0106
+  from   inventory:Method.^methods
+  cell   reducer | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).reducer
+  is     proto sub METAOP_REDUCE_LEFT (|) {*}
+  type   Sub+{is-implementation-detail}
+  oracle rakudo-2026.07 → proto sub METAOP_REDUCE_LEFT (|) {*}
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0107
+  from   inventory:Method.^methods
+  cell   returns | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).returns
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-3.14.0 → Mu
+
+- id     0108
+  from   inventory:Method.^methods
+  cell   reverse | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).reverse
+  is     $((method m (<anon|108> $:: *%_) { #`(Method|6107584588656) ... },).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((method m (<anon|108> $:: *%_) { #`(Method|6107584588656) ... },).Seq)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0109
+  from   inventory:Method.^methods
+  cell   self | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).self
+  is     method m (<anon|109> $:: *%_) { #`(Method|6107584588792) ... }
+  type   Method
+  oracle rakudo-2026.07 → method m (<anon|109> $:: *%_) { #`(Method|6107584588792) ... }
+  oracle rakupp-3.14.0 → &m
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0110
+  from   inventory:Method.^methods
+  cell   signature | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).signature
+  is     :(<anon|110> $:: *%_)
+  type   Signature
+  oracle rakudo-2026.07 → :(<anon|110> $:: *%_)
+  oracle rakupp-3.14.0 → :()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0111
+  from   inventory:Method.^methods
+  cell   so | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0112
+  from   inventory:Method.^methods
+  cell   soft | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).soft
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0113
+  from   inventory:Method.^methods
+  cell   sum | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).sum
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0114
+  from   inventory:Method.^methods
+  cell   take | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → &m
+
+- id     0115
+  from   inventory:Method.^methods
+  cell   thunky | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).thunky
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0116
+  from   inventory:Method.^methods
+  cell   tighter(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).tighter(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0117
+  from   inventory:Method.^methods
+  cell   tighter(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).tighter(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0118
+  from   inventory:Method.^methods
+  cell   tighter(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).tighter(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0119
+  from   inventory:Method.^methods
+  cell   tighter("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).tighter("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0120
+  from   inventory:Method.^methods
+  cell   tighter(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).tighter(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0121
+  from   inventory:Method.^methods
+  cell   unwrap(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).unwrap(0)
+  throws X::Routine::Unwrap
+  oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
+  oracle rakupp-3.14.0 → &m
+
+- id     0122
+  from   inventory:Method.^methods
+  cell   unwrap(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).unwrap(1)
+  throws X::Routine::Unwrap
+  oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
+  oracle rakupp-3.14.0 → &m
+
+- id     0123
+  from   inventory:Method.^methods
+  cell   unwrap(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).unwrap(-1)
+  throws X::Routine::Unwrap
+  oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
+  oracle rakupp-3.14.0 → &m
+
+- id     0124
+  from   inventory:Method.^methods
+  cell   unwrap("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).unwrap("a")
+  throws X::Routine::Unwrap
+  oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
+  oracle rakupp-3.14.0 → &m
+
+- id     0125
+  from   inventory:Method.^methods
+  cell   unwrap(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).unwrap(Any)
+  throws X::Routine::Unwrap
+  oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
+  oracle rakupp-3.14.0 → &m
+
+- id     0126
+  from   inventory:Method.^methods
+  cell   wrap(0) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).wrap(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ${:routine(&m), :wrapper(0)}
+
+- id     0127
+  from   inventory:Method.^methods
+  cell   wrap(1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).wrap(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ${:routine(&m), :wrapper(1)}
+
+- id     0128
+  from   inventory:Method.^methods
+  cell   wrap(-1) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).wrap(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ${:routine(&m), :wrapper(-1)}
+
+- id     0129
+  from   inventory:Method.^methods
+  cell   wrap("a") | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).wrap("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ${:routine(&m), :wrapper("a")}
+
+- id     0130
+  from   inventory:Method.^methods
+  cell   wrap(Any) | (class { method m() { 1 } }).^find_method("m")
+  code   ((class { method m() { 1 } }).^find_method("m")).wrap(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ${:routine(&m), :wrapper(Any)}

@@ -2,65 +2,10 @@ atom     methods/Date
 source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
-axes     BUILD_LEAST_DERIVED | Bool | CREATE | Capture | DEFINITE | Date | DateTime | FLATTENABLE_HASH | FLATTENABLE_LIST | HOW | INSTANTIATE-GENERIC | IO | MOVE-DAYS | POPULATE | REPR | VAR | WHAT | WHERE | WHO | all | any | bless | cache | can | chrs | clone | day | day-of-month | day-of-week | day-of-year | daycount | dd-mm-yyyy | does | first-date-in-month | formatter | is-generic | is-leap-year | item | join | last-date-in-month | lazy-if | mm-dd | mm-dd-yyyy | month | new-from-daycount | nl-out | none | not | one | pred | reverse | self | set_why | so | succ | sum | take | today | truncated-to | week | week-number | week-year | weekday-of-month | year | yyyy-mm | yyyy-mm-dd
+axes     Bool | CREATE | Capture | DEFINITE | Date | DateTime | HOW | INSTANTIATE-GENERIC | IO | MOVE-DAYS | POPULATE | REPR | VAR | WHAT | WHERE | WHO | all | any | bless | cache | can | chrs | clone | day | day-of-month | day-of-week | day-of-year | daycount | dd-mm-yyyy | does | first-date-in-month | formatter | is-generic | is-leap-year | item | join | last-date-in-month | lazy-if | mm-dd | mm-dd-yyyy | month | new-from-daycount | nl-out | none | not | one | pred | reverse | self | so | succ | sum | take | today | truncated-to | week | week-number | week-year | weekday-of-month | year | yyyy-mm | yyyy-mm-dd
 cols     Date.new(2000,1,1)
 
 - id     0001
-  from   inventory:Date.^methods
-  cell   BUILD_LEAST_DERIVED(0) | Date.new(2000,1,1)
-  code   (Date.new(2000,1,1)).BUILD_LEAST_DERIVED(0)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0002
-  from   inventory:Date.^methods
-  cell   BUILD_LEAST_DERIVED(1) | Date.new(2000,1,1)
-  code   (Date.new(2000,1,1)).BUILD_LEAST_DERIVED(1)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0003
-  from   inventory:Date.^methods
-  cell   BUILD_LEAST_DERIVED(-1) | Date.new(2000,1,1)
-  code   (Date.new(2000,1,1)).BUILD_LEAST_DERIVED(-1)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0004
-  from   inventory:Date.^methods
-  cell   BUILD_LEAST_DERIVED("a") | Date.new(2000,1,1)
-  code   (Date.new(2000,1,1)).BUILD_LEAST_DERIVED("a")
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0005
-  from   inventory:Date.^methods
-  cell   BUILD_LEAST_DERIVED(Any) | Date.new(2000,1,1)
-  code   (Date.new(2000,1,1)).BUILD_LEAST_DERIVED(Any)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0006
   from   inventory:Date.^methods
   cell   Bool | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).Bool
@@ -68,11 +13,8 @@ cols     Date.new(2000,1,1)
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0007
+- id     0002
   from   inventory:Date.^methods
   cell   CREATE | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).CREATE
@@ -80,11 +22,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(0,0,0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0008
+- id     0003
   from   inventory:Date.^methods
   cell   Capture | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).Capture
@@ -92,11 +31,8 @@ cols     Date.new(2000,1,1)
   type   Capture
   oracle rakudo-2026.07 → \(:day(1), :daycount(51544), :formatter(Callable), :month(1), :year(2000))
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0009
+- id     0004
   from   inventory:Date.^methods
   cell   DEFINITE | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).DEFINITE
@@ -104,11 +40,8 @@ cols     Date.new(2000,1,1)
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0010
+- id     0005
   from   inventory:Date.^methods
   cell   Date | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).Date
@@ -116,11 +49,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
   oracle rakupp-3.14.0 → ${:day(1), :month(1), :year(2000)}
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0011
+- id     0006
   from   inventory:Date.^methods
   cell   DateTime | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).DateTime
@@ -128,35 +58,8 @@ cols     Date.new(2000,1,1)
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
   oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0012
-  from   inventory:Date.^methods
-  cell   FLATTENABLE_HASH | Date.new(2000,1,1)
-  code   (Date.new(2000,1,1)).FLATTENABLE_HASH
-  is     ${}
-  type   Hash
-  oracle rakudo-2026.07 → ${}
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0013
-  from   inventory:Date.^methods
-  cell   FLATTENABLE_LIST | Date.new(2000,1,1)
-  code   (Date.new(2000,1,1)).FLATTENABLE_LIST
-  is     $(Date.new(2000,1,1),)
-  type   List
-  oracle rakudo-2026.07 → $(Date.new(2000,1,1),)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0014
+- id     0007
   from   inventory:Date.^methods
   cell   HOW | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).HOW
@@ -164,66 +67,48 @@ cols     Date.new(2000,1,1)
   type   Perl6::Metamodel::ClassHOW
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0015
+- id     0008
   from   inventory:Date.^methods
   cell   INSTANTIATE-GENERIC(0) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).INSTANTIATE-GENERIC(0)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0016
+- id     0009
   from   inventory:Date.^methods
   cell   INSTANTIATE-GENERIC(1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).INSTANTIATE-GENERIC(1)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0017
+- id     0010
   from   inventory:Date.^methods
   cell   INSTANTIATE-GENERIC(-1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).INSTANTIATE-GENERIC(-1)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0018
+- id     0011
   from   inventory:Date.^methods
   cell   INSTANTIATE-GENERIC("a") | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).INSTANTIATE-GENERIC("a")
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0019
+- id     0012
   from   inventory:Date.^methods
   cell   INSTANTIATE-GENERIC(Any) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).INSTANTIATE-GENERIC(Any)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0020
+- id     0013
   from   inventory:Date.^methods
   cell   IO | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).IO
@@ -231,11 +116,8 @@ cols     Date.new(2000,1,1)
   type   IO::Path
   oracle rakudo-2026.07 → IO::Path.new("2000-01-01", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
   oracle rakupp-3.14.0 → IO::Path.new("2000-01-01", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0021
+- id     0014
   from   inventory:Date.^methods
   cell   MOVE-DAYS(0) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).MOVE-DAYS(0)
@@ -243,11 +125,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0022
+- id     0015
   from   inventory:Date.^methods
   cell   MOVE-DAYS(1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).MOVE-DAYS(1)
@@ -255,11 +134,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,2)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0023
+- id     0016
   from   inventory:Date.^methods
   cell   MOVE-DAYS(-1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).MOVE-DAYS(-1)
@@ -267,88 +143,64 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(1999,12,31)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0024
+- id     0017
   from   inventory:Date.^methods
   cell   MOVE-DAYS("a") | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).MOVE-DAYS("a")
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0025
+- id     0018
   from   inventory:Date.^methods
   cell   MOVE-DAYS(Any) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).MOVE-DAYS(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0026
+- id     0019
   from   inventory:Date.^methods
   cell   POPULATE(0) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).POPULATE(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0027
+- id     0020
   from   inventory:Date.^methods
   cell   POPULATE(1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).POPULATE(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0028
+- id     0021
   from   inventory:Date.^methods
   cell   POPULATE(-1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).POPULATE(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0029
+- id     0022
   from   inventory:Date.^methods
   cell   POPULATE("a") | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).POPULATE("a")
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0030
+- id     0023
   from   inventory:Date.^methods
   cell   POPULATE(Any) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).POPULATE(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0031
+- id     0024
   from   inventory:Date.^methods
   cell   REPR | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).REPR
@@ -356,11 +208,8 @@ cols     Date.new(2000,1,1)
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0032
+- id     0025
   from   inventory:Date.^methods
   cell   VAR | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).VAR
@@ -368,11 +217,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
   oracle rakupp-3.14.0 → ${:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000)}
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0033
+- id     0026
   from   inventory:Date.^methods
   cell   WHAT | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).WHAT
@@ -380,11 +226,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date
   oracle rakupp-3.14.0 → Date
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0034
+- id     0027
   from   inventory:Date.^methods
   cell   WHERE | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).WHERE
@@ -396,7 +239,7 @@ cols     Date.new(2000,1,1)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0035
+- id     0028
   from   inventory:Date.^methods
   cell   WHO | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).WHO
@@ -404,11 +247,8 @@ cols     Date.new(2000,1,1)
   type   Stash
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0036
+- id     0029
   from   inventory:Date.^methods
   cell   all | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).all
@@ -416,11 +256,8 @@ cols     Date.new(2000,1,1)
   type   Junction
   oracle rakudo-2026.07 → all(Date.new(2000,1,1))
   oracle rakupp-3.14.0 → all(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000))
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0037
+- id     0030
   from   inventory:Date.^methods
   cell   any | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).any
@@ -428,11 +265,8 @@ cols     Date.new(2000,1,1)
   type   Junction
   oracle rakudo-2026.07 → any(Date.new(2000,1,1))
   oracle rakupp-3.14.0 → any(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000))
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0038
+- id     0031
   from   inventory:Date.^methods
   cell   bless | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).bless
@@ -440,11 +274,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(0,0,0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0039
+- id     0032
   from   inventory:Date.^methods
   cell   cache | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).cache
@@ -452,44 +283,32 @@ cols     Date.new(2000,1,1)
   type   List
   oracle rakudo-2026.07 → $(Date.new(2000,1,1),)
   oracle rakupp-3.14.0 → $(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000))
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0040
+- id     0033
   from   inventory:Date.^methods
   cell   can(0) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0041
+- id     0034
   from   inventory:Date.^methods
   cell   can(1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0042
+- id     0035
   from   inventory:Date.^methods
   cell   can(-1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0043
+- id     0036
   from   inventory:Date.^methods
   cell   can("a") | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).can("a")
@@ -497,33 +316,24 @@ cols     Date.new(2000,1,1)
   type   List
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0044
+- id     0037
   from   inventory:Date.^methods
   cell   can(Any) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0045
+- id     0038
   from   inventory:Date.^methods
   cell   chrs | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).chrs
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "\0\0\0\0\0\0\0"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0046
+- id     0039
   from   inventory:Date.^methods
   cell   clone | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).clone
@@ -531,11 +341,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
   oracle rakupp-3.14.0 → ${:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000)}
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0047
+- id     0040
   from   inventory:Date.^methods
   cell   day | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).day
@@ -543,11 +350,8 @@ cols     Date.new(2000,1,1)
   type   Int
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0048
+- id     0041
   from   inventory:Date.^methods
   cell   day-of-month | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).day-of-month
@@ -555,11 +359,8 @@ cols     Date.new(2000,1,1)
   type   Int
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0049
+- id     0042
   from   inventory:Date.^methods
   cell   day-of-week | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).day-of-week
@@ -567,11 +368,8 @@ cols     Date.new(2000,1,1)
   type   Int
   oracle rakudo-2026.07 → 6
   oracle rakupp-3.14.0 → 6
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0050
+- id     0043
   from   inventory:Date.^methods
   cell   day-of-year | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).day-of-year
@@ -579,11 +377,8 @@ cols     Date.new(2000,1,1)
   type   Int
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0051
+- id     0044
   from   inventory:Date.^methods
   cell   daycount | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).daycount
@@ -591,44 +386,32 @@ cols     Date.new(2000,1,1)
   type   Int
   oracle rakudo-2026.07 → 51544
   oracle rakupp-3.14.0 → 51544
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0052
+- id     0045
   from   inventory:Date.^methods
   cell   dd-mm-yyyy(0) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).dd-mm-yyyy(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "01-01-2000"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0053
+- id     0046
   from   inventory:Date.^methods
   cell   dd-mm-yyyy(1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).dd-mm-yyyy(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "01-01-2000"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0054
+- id     0047
   from   inventory:Date.^methods
   cell   dd-mm-yyyy(-1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).dd-mm-yyyy(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "01-01-2000"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0055
+- id     0048
   from   inventory:Date.^methods
   cell   dd-mm-yyyy("a") | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).dd-mm-yyyy("a")
@@ -636,22 +419,16 @@ cols     Date.new(2000,1,1)
   type   Str
   oracle rakudo-2026.07 → "01a01a2000"
   oracle rakupp-3.14.0 → "01-01-2000"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0056
+- id     0049
   from   inventory:Date.^methods
   cell   dd-mm-yyyy(Any) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).dd-mm-yyyy(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "01-01-2000"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0057
+- id     0050
   from   inventory:Date.^methods
   cell   does(0) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).does(0)
@@ -659,11 +436,8 @@ cols     Date.new(2000,1,1)
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0058
+- id     0051
   from   inventory:Date.^methods
   cell   does(1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).does(1)
@@ -671,11 +445,8 @@ cols     Date.new(2000,1,1)
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0059
+- id     0052
   from   inventory:Date.^methods
   cell   does(-1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).does(-1)
@@ -683,11 +454,8 @@ cols     Date.new(2000,1,1)
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0060
+- id     0053
   from   inventory:Date.^methods
   cell   does("a") | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).does("a")
@@ -695,11 +463,8 @@ cols     Date.new(2000,1,1)
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0061
+- id     0054
   from   inventory:Date.^methods
   cell   does(Any) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).does(Any)
@@ -707,11 +472,8 @@ cols     Date.new(2000,1,1)
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0062
+- id     0055
   from   inventory:Date.^methods
   cell   first-date-in-month | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).first-date-in-month
@@ -719,11 +481,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
   oracle rakupp-3.14.0 → ${:day(1), :month(1), :year(2000)}
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0063
+- id     0056
   from   inventory:Date.^methods
   cell   formatter | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).formatter
@@ -731,11 +490,8 @@ cols     Date.new(2000,1,1)
   type   Callable
   oracle rakudo-2026.07 → Callable
   oracle rakupp-3.14.0 → Callable
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0064
+- id     0057
   from   inventory:Date.^methods
   cell   is-generic | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).is-generic
@@ -743,11 +499,8 @@ cols     Date.new(2000,1,1)
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0065
+- id     0058
   from   inventory:Date.^methods
   cell   is-leap-year | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).is-leap-year
@@ -755,11 +508,8 @@ cols     Date.new(2000,1,1)
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0066
+- id     0059
   from   inventory:Date.^methods
   cell   item | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).item
@@ -767,11 +517,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
   oracle rakupp-3.14.0 → ${:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000)}
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0067
+- id     0060
   from   inventory:Date.^methods
   cell   join(0) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).join(0)
@@ -779,11 +526,8 @@ cols     Date.new(2000,1,1)
   type   Str
   oracle rakudo-2026.07 → "2000-01-01"
   oracle rakupp-3.14.0 → "day\t10hour\t00minute\t00month\t10posix\t9466848000second\t00year\t2000"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0068
+- id     0061
   from   inventory:Date.^methods
   cell   join(1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).join(1)
@@ -791,11 +535,8 @@ cols     Date.new(2000,1,1)
   type   Str
   oracle rakudo-2026.07 → "2000-01-01"
   oracle rakupp-3.14.0 → "day\t11hour\t01minute\t01month\t11posix\t9466848001second\t01year\t2000"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0069
+- id     0062
   from   inventory:Date.^methods
   cell   join(-1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).join(-1)
@@ -803,11 +544,8 @@ cols     Date.new(2000,1,1)
   type   Str
   oracle rakudo-2026.07 → "2000-01-01"
   oracle rakupp-3.14.0 → "day\t1-1hour\t0-1minute\t0-1month\t1-1posix\t946684800-1second\t0-1year\t2000"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0070
+- id     0063
   from   inventory:Date.^methods
   cell   join("a") | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).join("a")
@@ -815,22 +553,16 @@ cols     Date.new(2000,1,1)
   type   Str
   oracle rakudo-2026.07 → "2000-01-01"
   oracle rakupp-3.14.0 → "day\t1ahour\t0aminute\t0amonth\t1aposix\t946684800asecond\t0ayear\t2000"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0071
+- id     0064
   from   inventory:Date.^methods
   cell   join(Any) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).join(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → "day\t1hour\t0minute\t0month\t1posix\t946684800second\t0year\t2000"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0072
+- id     0065
   from   inventory:Date.^methods
   cell   last-date-in-month | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).last-date-in-month
@@ -838,11 +570,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,31)
   oracle rakupp-3.14.0 → ${:day(31), :month(1), :year(2000)}
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0073
+- id     0066
   from   inventory:Date.^methods
   cell   lazy-if(0) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).lazy-if(0)
@@ -850,11 +579,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0074
+- id     0067
   from   inventory:Date.^methods
   cell   lazy-if(1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).lazy-if(1)
@@ -862,11 +588,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0075
+- id     0068
   from   inventory:Date.^methods
   cell   lazy-if(-1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).lazy-if(-1)
@@ -874,11 +597,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0076
+- id     0069
   from   inventory:Date.^methods
   cell   lazy-if("a") | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).lazy-if("a")
@@ -886,11 +606,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0077
+- id     0070
   from   inventory:Date.^methods
   cell   lazy-if(Any) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).lazy-if(Any)
@@ -898,44 +615,32 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0078
+- id     0071
   from   inventory:Date.^methods
   cell   mm-dd(0) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0079
+- id     0072
   from   inventory:Date.^methods
   cell   mm-dd(1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0080
+- id     0073
   from   inventory:Date.^methods
   cell   mm-dd(-1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0081
+- id     0074
   from   inventory:Date.^methods
   cell   mm-dd("a") | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd("a")
@@ -943,55 +648,40 @@ cols     Date.new(2000,1,1)
   type   Str
   oracle rakudo-2026.07 → "01a01"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0082
+- id     0075
   from   inventory:Date.^methods
   cell   mm-dd(Any) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0083
+- id     0076
   from   inventory:Date.^methods
   cell   mm-dd-yyyy(0) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd-yyyy(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "01-01-2000"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0084
+- id     0077
   from   inventory:Date.^methods
   cell   mm-dd-yyyy(1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd-yyyy(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "01-01-2000"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0085
+- id     0078
   from   inventory:Date.^methods
   cell   mm-dd-yyyy(-1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd-yyyy(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "01-01-2000"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0086
+- id     0079
   from   inventory:Date.^methods
   cell   mm-dd-yyyy("a") | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd-yyyy("a")
@@ -999,22 +689,16 @@ cols     Date.new(2000,1,1)
   type   Str
   oracle rakudo-2026.07 → "01a01a2000"
   oracle rakupp-3.14.0 → "01-01-2000"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0087
+- id     0080
   from   inventory:Date.^methods
   cell   mm-dd-yyyy(Any) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd-yyyy(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "01-01-2000"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0088
+- id     0081
   from   inventory:Date.^methods
   cell   month | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).month
@@ -1022,11 +706,8 @@ cols     Date.new(2000,1,1)
   type   Int
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0089
+- id     0082
   from   inventory:Date.^methods
   cell   new-from-daycount(0) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).new-from-daycount(0)
@@ -1034,11 +715,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(1858,11,17)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0090
+- id     0083
   from   inventory:Date.^methods
   cell   new-from-daycount(1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).new-from-daycount(1)
@@ -1046,11 +724,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(1858,11,18)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0091
+- id     0084
   from   inventory:Date.^methods
   cell   new-from-daycount(-1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).new-from-daycount(-1)
@@ -1058,33 +733,24 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(1858,11,16)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0092
+- id     0085
   from   inventory:Date.^methods
   cell   new-from-daycount("a") | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).new-from-daycount("a")
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0093
+- id     0086
   from   inventory:Date.^methods
   cell   new-from-daycount(Any) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).new-from-daycount(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0094
+- id     0087
   from   inventory:Date.^methods
   cell   nl-out | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).nl-out
@@ -1092,11 +758,8 @@ cols     Date.new(2000,1,1)
   type   Str
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0095
+- id     0088
   from   inventory:Date.^methods
   cell   none | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).none
@@ -1104,11 +767,8 @@ cols     Date.new(2000,1,1)
   type   Junction
   oracle rakudo-2026.07 → none(Date.new(2000,1,1))
   oracle rakupp-3.14.0 → none(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000))
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0096
+- id     0089
   from   inventory:Date.^methods
   cell   not | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).not
@@ -1116,11 +776,8 @@ cols     Date.new(2000,1,1)
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0097
+- id     0090
   from   inventory:Date.^methods
   cell   one | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).one
@@ -1128,11 +785,8 @@ cols     Date.new(2000,1,1)
   type   Junction
   oracle rakudo-2026.07 → one(Date.new(2000,1,1))
   oracle rakupp-3.14.0 → one(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000))
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0098
+- id     0091
   from   inventory:Date.^methods
   cell   pred | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).pred
@@ -1140,11 +794,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(1999,12,31)
   oracle rakupp-3.14.0 → ${:day(31), :month(12), :year(1999)}
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0099
+- id     0092
   from   inventory:Date.^methods
   cell   reverse | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).reverse
@@ -1152,11 +803,8 @@ cols     Date.new(2000,1,1)
   type   Seq
   oracle rakudo-2026.07 → $((Date.new(2000,1,1),).Seq)
   oracle rakupp-3.14.0 → $(:year(2000), :second(0), :posix(946684800), :month(1), :minute(0), :hour(0), :day(1)).Seq
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0100
+- id     0093
   from   inventory:Date.^methods
   cell   self | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).self
@@ -1164,71 +812,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
   oracle rakupp-3.14.0 → ${:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000)}
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0101
-  from   inventory:Date.^methods
-  cell   set_why(0) | Date.new(2000,1,1)
-  code   (Date.new(2000,1,1)).set_why(0)
-  is     0
-  type   Int
-  oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0102
-  from   inventory:Date.^methods
-  cell   set_why(1) | Date.new(2000,1,1)
-  code   (Date.new(2000,1,1)).set_why(1)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0103
-  from   inventory:Date.^methods
-  cell   set_why(-1) | Date.new(2000,1,1)
-  code   (Date.new(2000,1,1)).set_why(-1)
-  is     -1
-  type   Int
-  oracle rakudo-2026.07 → -1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0104
-  from   inventory:Date.^methods
-  cell   set_why("a") | Date.new(2000,1,1)
-  code   (Date.new(2000,1,1)).set_why("a")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0105
-  from   inventory:Date.^methods
-  cell   set_why(Any) | Date.new(2000,1,1)
-  code   (Date.new(2000,1,1)).set_why(Any)
-  is     Any
-  type   Any
-  oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0106
+- id     0094
   from   inventory:Date.^methods
   cell   so | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).so
@@ -1236,11 +821,8 @@ cols     Date.new(2000,1,1)
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0107
+- id     0095
   from   inventory:Date.^methods
   cell   succ | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).succ
@@ -1248,11 +830,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,2)
   oracle rakupp-3.14.0 → ${:day(2), :month(1), :year(2000)}
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0108
+- id     0096
   from   inventory:Date.^methods
   cell   sum | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).sum
@@ -1260,11 +839,8 @@ cols     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
   oracle rakupp-3.14.0 → 0e0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0109
+- id     0097
   from   inventory:Date.^methods
   cell   take | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).take
@@ -1272,7 +848,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → ${:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000)}
 
-- id     0110
+- id     0098
   from   inventory:Date.^methods
   cell   today | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).today
@@ -1281,7 +857,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → Date.new(2026,8,15)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0111
+- id     0099
   from   inventory:Date.^methods
   cell   truncated-to(0) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).truncated-to(0)
@@ -1289,7 +865,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ${:day(1), :month(1), :year(2000)}
 
-- id     0112
+- id     0100
   from   inventory:Date.^methods
   cell   truncated-to(1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).truncated-to(1)
@@ -1297,7 +873,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ${:day(1), :month(1), :year(2000)}
 
-- id     0113
+- id     0101
   from   inventory:Date.^methods
   cell   truncated-to(-1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).truncated-to(-1)
@@ -1305,7 +881,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ${:day(1), :month(1), :year(2000)}
 
-- id     0114
+- id     0102
   from   inventory:Date.^methods
   cell   truncated-to("a") | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).truncated-to("a")
@@ -1313,7 +889,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ${:day(1), :month(1), :year(2000)}
 
-- id     0115
+- id     0103
   from   inventory:Date.^methods
   cell   truncated-to(Any) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).truncated-to(Any)
@@ -1321,7 +897,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ${:day(1), :month(1), :year(2000)}
 
-- id     0116
+- id     0104
   from   inventory:Date.^methods
   cell   week | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).week
@@ -1330,7 +906,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → $(1999, 52)
   oracle rakupp-3.14.0 → $(1999, 52)
 
-- id     0117
+- id     0105
   from   inventory:Date.^methods
   cell   week-number | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).week-number
@@ -1339,7 +915,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → 52
   oracle rakupp-3.14.0 → 52
 
-- id     0118
+- id     0106
   from   inventory:Date.^methods
   cell   week-year | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).week-year
@@ -1348,7 +924,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → 1999
   oracle rakupp-3.14.0 → 1999
 
-- id     0119
+- id     0107
   from   inventory:Date.^methods
   cell   weekday-of-month | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).weekday-of-month
@@ -1357,7 +933,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0120
+- id     0108
   from   inventory:Date.^methods
   cell   year | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).year
@@ -1366,7 +942,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → 2000
   oracle rakupp-3.14.0 → 2000
 
-- id     0121
+- id     0109
   from   inventory:Date.^methods
   cell   yyyy-mm(0) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm(0)
@@ -1374,7 +950,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0122
+- id     0110
   from   inventory:Date.^methods
   cell   yyyy-mm(1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm(1)
@@ -1382,7 +958,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0123
+- id     0111
   from   inventory:Date.^methods
   cell   yyyy-mm(-1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm(-1)
@@ -1390,7 +966,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0124
+- id     0112
   from   inventory:Date.^methods
   cell   yyyy-mm("a") | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm("a")
@@ -1399,7 +975,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → "2000a01"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0125
+- id     0113
   from   inventory:Date.^methods
   cell   yyyy-mm(Any) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm(Any)
@@ -1407,7 +983,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0126
+- id     0114
   from   inventory:Date.^methods
   cell   yyyy-mm-dd(0) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm-dd(0)
@@ -1415,7 +991,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "2000-01-01"
 
-- id     0127
+- id     0115
   from   inventory:Date.^methods
   cell   yyyy-mm-dd(1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm-dd(1)
@@ -1423,7 +999,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "2000-01-01"
 
-- id     0128
+- id     0116
   from   inventory:Date.^methods
   cell   yyyy-mm-dd(-1) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm-dd(-1)
@@ -1431,7 +1007,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "2000-01-01"
 
-- id     0129
+- id     0117
   from   inventory:Date.^methods
   cell   yyyy-mm-dd("a") | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm-dd("a")
@@ -1440,7 +1016,7 @@ cols     Date.new(2000,1,1)
   oracle rakudo-2026.07 → "2000a01a01"
   oracle rakupp-3.14.0 → "2000-01-01"
 
-- id     0130
+- id     0118
   from   inventory:Date.^methods
   cell   yyyy-mm-dd(Any) | Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm-dd(Any)

@@ -1,0 +1,1397 @@
+atom     methods/utf8
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     Bool | Buf | COMPARE | CREATE | Capture | DEFINITE | HOW | INSTANTIATE-GENERIC | Int | Numeric | POPULATE | REPR | SAME | VAR | WHAT | WHERE | WHO | all | any | bless | bytes | cache | can | chars | chrs | codes | contents | decode-with-valid-encoding | does | encoding | is-generic | item | join | lazy-if | nl-out | none | not | of | one | reverse | self | so | sum | take
+cols     "a".encode | "".encode
+
+- id     0001
+  from   inventory:utf8.^methods
+  cell   Bool | "a".encode
+  code   ("a".encode).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0002
+  from   inventory:utf8.^methods
+  cell   Bool | "".encode
+  code   ("".encode).Bool
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0003
+  from   inventory:utf8.^methods
+  cell   Buf | "a".encode
+  code   ("a".encode).Buf
+  is     Buf.new(97)
+  type   Buf
+  oracle rakudo-2026.07 → Buf.new(97)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0004
+  from   inventory:utf8.^methods
+  cell   Buf | "".encode
+  code   ("".encode).Buf
+  is     Buf.new()
+  type   Buf
+  oracle rakudo-2026.07 → Buf.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0005
+  from   inventory:utf8.^methods
+  cell   COMPARE(0) | "a".encode
+  code   ("a".encode).COMPARE(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0006
+  from   inventory:utf8.^methods
+  cell   COMPARE(1) | "a".encode
+  code   ("a".encode).COMPARE(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0007
+  from   inventory:utf8.^methods
+  cell   COMPARE(-1) | "a".encode
+  code   ("a".encode).COMPARE(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0008
+  from   inventory:utf8.^methods
+  cell   COMPARE("a") | "a".encode
+  code   ("a".encode).COMPARE("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0009
+  from   inventory:utf8.^methods
+  cell   COMPARE(Any) | "a".encode
+  code   ("a".encode).COMPARE(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0010
+  from   inventory:utf8.^methods
+  cell   COMPARE(0) | "".encode
+  code   ("".encode).COMPARE(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0011
+  from   inventory:utf8.^methods
+  cell   COMPARE(1) | "".encode
+  code   ("".encode).COMPARE(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0012
+  from   inventory:utf8.^methods
+  cell   COMPARE(-1) | "".encode
+  code   ("".encode).COMPARE(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0013
+  from   inventory:utf8.^methods
+  cell   COMPARE("a") | "".encode
+  code   ("".encode).COMPARE("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0014
+  from   inventory:utf8.^methods
+  cell   COMPARE(Any) | "".encode
+  code   ("".encode).COMPARE(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0015
+  from   inventory:utf8.^methods
+  cell   CREATE | "a".encode
+  code   ("a".encode).CREATE
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0016
+  from   inventory:utf8.^methods
+  cell   CREATE | "".encode
+  code   ("".encode).CREATE
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0017
+  from   inventory:utf8.^methods
+  cell   Capture | "a".encode
+  code   ("a".encode).Capture
+  is     \(97)
+  type   Capture
+  oracle rakudo-2026.07 → \(97)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0018
+  from   inventory:utf8.^methods
+  cell   Capture | "".encode
+  code   ("".encode).Capture
+  is     \()
+  type   Capture
+  oracle rakudo-2026.07 → \()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0019
+  from   inventory:utf8.^methods
+  cell   DEFINITE | "a".encode
+  code   ("a".encode).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0020
+  from   inventory:utf8.^methods
+  cell   DEFINITE | "".encode
+  code   ("".encode).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0021
+  from   inventory:utf8.^methods
+  cell   HOW | "a".encode
+  code   ("a".encode).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+
+- id     0022
+  from   inventory:utf8.^methods
+  cell   HOW | "".encode
+  code   ("".encode).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+
+- id     0023
+  from   inventory:utf8.^methods
+  cell   INSTANTIATE-GENERIC(0) | "a".encode
+  code   ("a".encode).INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0024
+  from   inventory:utf8.^methods
+  cell   INSTANTIATE-GENERIC(1) | "a".encode
+  code   ("a".encode).INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0025
+  from   inventory:utf8.^methods
+  cell   INSTANTIATE-GENERIC(-1) | "a".encode
+  code   ("a".encode).INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0026
+  from   inventory:utf8.^methods
+  cell   INSTANTIATE-GENERIC("a") | "a".encode
+  code   ("a".encode).INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0027
+  from   inventory:utf8.^methods
+  cell   INSTANTIATE-GENERIC(Any) | "a".encode
+  code   ("a".encode).INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0028
+  from   inventory:utf8.^methods
+  cell   INSTANTIATE-GENERIC(0) | "".encode
+  code   ("".encode).INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0029
+  from   inventory:utf8.^methods
+  cell   INSTANTIATE-GENERIC(1) | "".encode
+  code   ("".encode).INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0030
+  from   inventory:utf8.^methods
+  cell   INSTANTIATE-GENERIC(-1) | "".encode
+  code   ("".encode).INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0031
+  from   inventory:utf8.^methods
+  cell   INSTANTIATE-GENERIC("a") | "".encode
+  code   ("".encode).INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0032
+  from   inventory:utf8.^methods
+  cell   INSTANTIATE-GENERIC(Any) | "".encode
+  code   ("".encode).INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0033
+  from   inventory:utf8.^methods
+  cell   Int | "a".encode
+  code   ("a".encode).Int
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → Any
+
+- id     0034
+  from   inventory:utf8.^methods
+  cell   Int | "".encode
+  code   ("".encode).Int
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0035
+  from   inventory:utf8.^methods
+  cell   Numeric | "a".encode
+  code   ("a".encode).Numeric
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → Any
+
+- id     0036
+  from   inventory:utf8.^methods
+  cell   Numeric | "".encode
+  code   ("".encode).Numeric
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0037
+  from   inventory:utf8.^methods
+  cell   POPULATE(0) | "a".encode
+  code   ("a".encode).POPULATE(0)
+  is     utf8.new(97)
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new(97)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0038
+  from   inventory:utf8.^methods
+  cell   POPULATE(1) | "a".encode
+  code   ("a".encode).POPULATE(1)
+  is     utf8.new(97)
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new(97)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0039
+  from   inventory:utf8.^methods
+  cell   POPULATE(-1) | "a".encode
+  code   ("a".encode).POPULATE(-1)
+  is     utf8.new(97)
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new(97)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0040
+  from   inventory:utf8.^methods
+  cell   POPULATE("a") | "a".encode
+  code   ("a".encode).POPULATE("a")
+  is     utf8.new(97)
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new(97)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0041
+  from   inventory:utf8.^methods
+  cell   POPULATE(Any) | "a".encode
+  code   ("a".encode).POPULATE(Any)
+  is     utf8.new(97)
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new(97)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0042
+  from   inventory:utf8.^methods
+  cell   POPULATE(0) | "".encode
+  code   ("".encode).POPULATE(0)
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0043
+  from   inventory:utf8.^methods
+  cell   POPULATE(1) | "".encode
+  code   ("".encode).POPULATE(1)
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0044
+  from   inventory:utf8.^methods
+  cell   POPULATE(-1) | "".encode
+  code   ("".encode).POPULATE(-1)
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0045
+  from   inventory:utf8.^methods
+  cell   POPULATE("a") | "".encode
+  code   ("".encode).POPULATE("a")
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0046
+  from   inventory:utf8.^methods
+  cell   POPULATE(Any) | "".encode
+  code   ("".encode).POPULATE(Any)
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0047
+  from   inventory:utf8.^methods
+  cell   REPR | "a".encode
+  code   ("a".encode).REPR
+  is     "VMArray"
+  type   Str
+  oracle rakudo-2026.07 → "VMArray"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0048
+  from   inventory:utf8.^methods
+  cell   REPR | "".encode
+  code   ("".encode).REPR
+  is     "VMArray"
+  type   Str
+  oracle rakudo-2026.07 → "VMArray"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0049
+  from   inventory:utf8.^methods
+  cell   SAME(0) | "a".encode
+  code   ("a".encode).SAME(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0050
+  from   inventory:utf8.^methods
+  cell   SAME(1) | "a".encode
+  code   ("a".encode).SAME(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0051
+  from   inventory:utf8.^methods
+  cell   SAME(-1) | "a".encode
+  code   ("a".encode).SAME(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0052
+  from   inventory:utf8.^methods
+  cell   SAME("a") | "a".encode
+  code   ("a".encode).SAME("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0053
+  from   inventory:utf8.^methods
+  cell   SAME(Any) | "a".encode
+  code   ("a".encode).SAME(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0054
+  from   inventory:utf8.^methods
+  cell   SAME(0) | "".encode
+  code   ("".encode).SAME(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0055
+  from   inventory:utf8.^methods
+  cell   SAME(1) | "".encode
+  code   ("".encode).SAME(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0056
+  from   inventory:utf8.^methods
+  cell   SAME(-1) | "".encode
+  code   ("".encode).SAME(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0057
+  from   inventory:utf8.^methods
+  cell   SAME("a") | "".encode
+  code   ("".encode).SAME("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0058
+  from   inventory:utf8.^methods
+  cell   SAME(Any) | "".encode
+  code   ("".encode).SAME(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0059
+  from   inventory:utf8.^methods
+  cell   VAR | "a".encode
+  code   ("a".encode).VAR
+  is     utf8.new(97)
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new(97)
+  oracle rakupp-3.14.0 → utf8.new(97)
+
+- id     0060
+  from   inventory:utf8.^methods
+  cell   VAR | "".encode
+  code   ("".encode).VAR
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → utf8.new()
+
+- id     0061
+  from   inventory:utf8.^methods
+  cell   WHAT | "a".encode
+  code   ("a".encode).WHAT
+  is     utf8
+  type   utf8
+  oracle rakudo-2026.07 → utf8
+  oracle rakupp-3.14.0 → utf8
+
+- id     0062
+  from   inventory:utf8.^methods
+  cell   WHAT | "".encode
+  code   ("".encode).WHAT
+  is     utf8
+  type   utf8
+  oracle rakudo-2026.07 → utf8
+  oracle rakupp-3.14.0 → utf8
+
+- id     0063
+  from   inventory:utf8.^methods
+  cell   WHERE | "a".encode
+  code   ("a".encode).WHERE
+  is     2306137532504
+  type   Int
+  oracle rakudo-2026.07 → 2306137532504
+  oracle rakupp-3.14.0 → 14057692624
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0064
+  from   inventory:utf8.^methods
+  cell   WHERE | "".encode
+  code   ("".encode).WHERE
+  is     2306137915328
+  type   Int
+  oracle rakudo-2026.07 → 2306137915328
+  oracle rakupp-3.14.0 → 14057692624
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0065
+  from   inventory:utf8.^methods
+  cell   WHO | "a".encode
+  code   ("a".encode).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+
+- id     0066
+  from   inventory:utf8.^methods
+  cell   WHO | "".encode
+  code   ("".encode).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+
+- id     0067
+  from   inventory:utf8.^methods
+  cell   all | "a".encode
+  code   ("a".encode).all
+  is     all(97)
+  type   Junction
+  oracle rakudo-2026.07 → all(97)
+  oracle rakupp-3.14.0 → all(utf8.new(97))
+
+- id     0068
+  from   inventory:utf8.^methods
+  cell   all | "".encode
+  code   ("".encode).all
+  is     all()
+  type   Junction
+  oracle rakudo-2026.07 → all()
+  oracle rakupp-3.14.0 → all(utf8.new())
+
+- id     0069
+  from   inventory:utf8.^methods
+  cell   any | "a".encode
+  code   ("a".encode).any
+  is     any(97)
+  type   Junction
+  oracle rakudo-2026.07 → any(97)
+  oracle rakupp-3.14.0 → any(utf8.new(97))
+
+- id     0070
+  from   inventory:utf8.^methods
+  cell   any | "".encode
+  code   ("".encode).any
+  is     any()
+  type   Junction
+  oracle rakudo-2026.07 → any()
+  oracle rakupp-3.14.0 → any(utf8.new())
+
+- id     0071
+  from   inventory:utf8.^methods
+  cell   bless | "a".encode
+  code   ("a".encode).bless
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0072
+  from   inventory:utf8.^methods
+  cell   bless | "".encode
+  code   ("".encode).bless
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0073
+  from   inventory:utf8.^methods
+  cell   bytes | "a".encode
+  code   ("a".encode).bytes
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0074
+  from   inventory:utf8.^methods
+  cell   bytes | "".encode
+  code   ("".encode).bytes
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0075
+  from   inventory:utf8.^methods
+  cell   cache | "a".encode
+  code   ("a".encode).cache
+  is     $(97,)
+  type   List
+  oracle rakudo-2026.07 → $(97,)
+  oracle rakupp-3.14.0 → $(97,)
+
+- id     0076
+  from   inventory:utf8.^methods
+  cell   cache | "".encode
+  code   ("".encode).cache
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0077
+  from   inventory:utf8.^methods
+  cell   can(0) | "a".encode
+  code   ("a".encode).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0078
+  from   inventory:utf8.^methods
+  cell   can(1) | "a".encode
+  code   ("a".encode).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0079
+  from   inventory:utf8.^methods
+  cell   can(-1) | "a".encode
+  code   ("a".encode).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0080
+  from   inventory:utf8.^methods
+  cell   can("a") | "a".encode
+  code   ("a".encode).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0081
+  from   inventory:utf8.^methods
+  cell   can(Any) | "a".encode
+  code   ("a".encode).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0082
+  from   inventory:utf8.^methods
+  cell   can(0) | "".encode
+  code   ("".encode).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0083
+  from   inventory:utf8.^methods
+  cell   can(1) | "".encode
+  code   ("".encode).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0084
+  from   inventory:utf8.^methods
+  cell   can(-1) | "".encode
+  code   ("".encode).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0085
+  from   inventory:utf8.^methods
+  cell   can("a") | "".encode
+  code   ("".encode).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0086
+  from   inventory:utf8.^methods
+  cell   can(Any) | "".encode
+  code   ("".encode).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0087
+  from   inventory:utf8.^methods
+  cell   chars | "a".encode
+  code   ("a".encode).chars
+  throws X::Buf::AsStr
+  oracle rakudo-2026.07 → ERR:X::Buf::AsStr
+  oracle rakupp-3.14.0 → 1
+
+- id     0088
+  from   inventory:utf8.^methods
+  cell   chars | "".encode
+  code   ("".encode).chars
+  throws X::Buf::AsStr
+  oracle rakudo-2026.07 → ERR:X::Buf::AsStr
+  oracle rakupp-3.14.0 → 0
+
+- id     0089
+  from   inventory:utf8.^methods
+  cell   chrs | "a".encode
+  code   ("a".encode).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0090
+  from   inventory:utf8.^methods
+  cell   chrs | "".encode
+  code   ("".encode).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0091
+  from   inventory:utf8.^methods
+  cell   codes | "a".encode
+  code   ("a".encode).codes
+  throws X::Buf::AsStr
+  oracle rakudo-2026.07 → ERR:X::Buf::AsStr
+  oracle rakupp-3.14.0 → 1
+
+- id     0092
+  from   inventory:utf8.^methods
+  cell   codes | "".encode
+  code   ("".encode).codes
+  throws X::Buf::AsStr
+  oracle rakudo-2026.07 → ERR:X::Buf::AsStr
+  oracle rakupp-3.14.0 → 0
+
+- id     0093
+  from   inventory:utf8.^methods
+  cell   contents | "a".encode
+  code   ("a".encode).contents
+  is     $(97,)
+  type   List
+  oracle rakudo-2026.07 → $(97,)
+  oracle rakupp-3.14.0 → $()
+
+- id     0094
+  from   inventory:utf8.^methods
+  cell   contents | "".encode
+  code   ("".encode).contents
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0095
+  from   inventory:utf8.^methods
+  cell   decode-with-valid-encoding(0) | "a".encode
+  code   ("a".encode).decode-with-valid-encoding(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0096
+  from   inventory:utf8.^methods
+  cell   decode-with-valid-encoding(1) | "a".encode
+  code   ("a".encode).decode-with-valid-encoding(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0097
+  from   inventory:utf8.^methods
+  cell   decode-with-valid-encoding(-1) | "a".encode
+  code   ("a".encode).decode-with-valid-encoding(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0098
+  from   inventory:utf8.^methods
+  cell   decode-with-valid-encoding("a") | "a".encode
+  code   ("a".encode).decode-with-valid-encoding("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0099
+  from   inventory:utf8.^methods
+  cell   decode-with-valid-encoding(Any) | "a".encode
+  code   ("a".encode).decode-with-valid-encoding(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0100
+  from   inventory:utf8.^methods
+  cell   decode-with-valid-encoding(0) | "".encode
+  code   ("".encode).decode-with-valid-encoding(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0101
+  from   inventory:utf8.^methods
+  cell   decode-with-valid-encoding(1) | "".encode
+  code   ("".encode).decode-with-valid-encoding(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0102
+  from   inventory:utf8.^methods
+  cell   decode-with-valid-encoding(-1) | "".encode
+  code   ("".encode).decode-with-valid-encoding(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0103
+  from   inventory:utf8.^methods
+  cell   decode-with-valid-encoding("a") | "".encode
+  code   ("".encode).decode-with-valid-encoding("a")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0104
+  from   inventory:utf8.^methods
+  cell   decode-with-valid-encoding(Any) | "".encode
+  code   ("".encode).decode-with-valid-encoding(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0105
+  from   inventory:utf8.^methods
+  cell   does(0) | "a".encode
+  code   ("a".encode).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0106
+  from   inventory:utf8.^methods
+  cell   does(1) | "a".encode
+  code   ("a".encode).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0107
+  from   inventory:utf8.^methods
+  cell   does(-1) | "a".encode
+  code   ("a".encode).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0108
+  from   inventory:utf8.^methods
+  cell   does("a") | "a".encode
+  code   ("a".encode).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0109
+  from   inventory:utf8.^methods
+  cell   does(Any) | "a".encode
+  code   ("a".encode).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0110
+  from   inventory:utf8.^methods
+  cell   does(0) | "".encode
+  code   ("".encode).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0111
+  from   inventory:utf8.^methods
+  cell   does(1) | "".encode
+  code   ("".encode).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0112
+  from   inventory:utf8.^methods
+  cell   does(-1) | "".encode
+  code   ("".encode).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0113
+  from   inventory:utf8.^methods
+  cell   does("a") | "".encode
+  code   ("".encode).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0114
+  from   inventory:utf8.^methods
+  cell   does(Any) | "".encode
+  code   ("".encode).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0115
+  from   inventory:utf8.^methods
+  cell   encoding | "a".encode
+  code   ("a".encode).encoding
+  is     "utf-8"
+  type   Str
+  oracle rakudo-2026.07 → "utf-8"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0116
+  from   inventory:utf8.^methods
+  cell   encoding | "".encode
+  code   ("".encode).encoding
+  is     "utf-8"
+  type   Str
+  oracle rakudo-2026.07 → "utf-8"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0117
+  from   inventory:utf8.^methods
+  cell   is-generic | "a".encode
+  code   ("a".encode).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0118
+  from   inventory:utf8.^methods
+  cell   is-generic | "".encode
+  code   ("".encode).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0119
+  from   inventory:utf8.^methods
+  cell   item | "a".encode
+  code   ("a".encode).item
+  is     utf8.new(97)
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new(97)
+  oracle rakupp-3.14.0 → utf8.new(97)
+
+- id     0120
+  from   inventory:utf8.^methods
+  cell   item | "".encode
+  code   ("".encode).item
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → utf8.new()
+
+- id     0121
+  from   inventory:utf8.^methods
+  cell   join(0) | "a".encode
+  code   ("a".encode).join(0)
+  is     "97"
+  type   Str
+  oracle rakudo-2026.07 → "97"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0122
+  from   inventory:utf8.^methods
+  cell   join(1) | "a".encode
+  code   ("a".encode).join(1)
+  is     "97"
+  type   Str
+  oracle rakudo-2026.07 → "97"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0123
+  from   inventory:utf8.^methods
+  cell   join(-1) | "a".encode
+  code   ("a".encode).join(-1)
+  is     "97"
+  type   Str
+  oracle rakudo-2026.07 → "97"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0124
+  from   inventory:utf8.^methods
+  cell   join("a") | "a".encode
+  code   ("a".encode).join("a")
+  is     "97"
+  type   Str
+  oracle rakudo-2026.07 → "97"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0125
+  from   inventory:utf8.^methods
+  cell   join(Any) | "a".encode
+  code   ("a".encode).join(Any)
+  is     "97"
+  type   Str
+  oracle rakudo-2026.07 → "97"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0126
+  from   inventory:utf8.^methods
+  cell   join(0) | "".encode
+  code   ("".encode).join(0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0127
+  from   inventory:utf8.^methods
+  cell   join(1) | "".encode
+  code   ("".encode).join(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0128
+  from   inventory:utf8.^methods
+  cell   join(-1) | "".encode
+  code   ("".encode).join(-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0129
+  from   inventory:utf8.^methods
+  cell   join("a") | "".encode
+  code   ("".encode).join("a")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0130
+  from   inventory:utf8.^methods
+  cell   join(Any) | "".encode
+  code   ("".encode).join(Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0131
+  from   inventory:utf8.^methods
+  cell   lazy-if(0) | "a".encode
+  code   ("a".encode).lazy-if(0)
+  is     utf8.new(97)
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new(97)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0132
+  from   inventory:utf8.^methods
+  cell   lazy-if(1) | "a".encode
+  code   ("a".encode).lazy-if(1)
+  is     utf8.new(97)
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new(97)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0133
+  from   inventory:utf8.^methods
+  cell   lazy-if(-1) | "a".encode
+  code   ("a".encode).lazy-if(-1)
+  is     utf8.new(97)
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new(97)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0134
+  from   inventory:utf8.^methods
+  cell   lazy-if("a") | "a".encode
+  code   ("a".encode).lazy-if("a")
+  is     utf8.new(97)
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new(97)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0135
+  from   inventory:utf8.^methods
+  cell   lazy-if(Any) | "a".encode
+  code   ("a".encode).lazy-if(Any)
+  is     utf8.new(97)
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new(97)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0136
+  from   inventory:utf8.^methods
+  cell   lazy-if(0) | "".encode
+  code   ("".encode).lazy-if(0)
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0137
+  from   inventory:utf8.^methods
+  cell   lazy-if(1) | "".encode
+  code   ("".encode).lazy-if(1)
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0138
+  from   inventory:utf8.^methods
+  cell   lazy-if(-1) | "".encode
+  code   ("".encode).lazy-if(-1)
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0139
+  from   inventory:utf8.^methods
+  cell   lazy-if("a") | "".encode
+  code   ("".encode).lazy-if("a")
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0140
+  from   inventory:utf8.^methods
+  cell   lazy-if(Any) | "".encode
+  code   ("".encode).lazy-if(Any)
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0141
+  from   inventory:utf8.^methods
+  cell   nl-out | "a".encode
+  code   ("a".encode).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0142
+  from   inventory:utf8.^methods
+  cell   nl-out | "".encode
+  code   ("".encode).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0143
+  from   inventory:utf8.^methods
+  cell   none | "a".encode
+  code   ("a".encode).none
+  is     none(97)
+  type   Junction
+  oracle rakudo-2026.07 → none(97)
+  oracle rakupp-3.14.0 → none(utf8.new(97))
+
+- id     0144
+  from   inventory:utf8.^methods
+  cell   none | "".encode
+  code   ("".encode).none
+  is     none()
+  type   Junction
+  oracle rakudo-2026.07 → none()
+  oracle rakupp-3.14.0 → none(utf8.new())
+
+- id     0145
+  from   inventory:utf8.^methods
+  cell   not | "a".encode
+  code   ("a".encode).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0146
+  from   inventory:utf8.^methods
+  cell   not | "".encode
+  code   ("".encode).not
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0147
+  from   inventory:utf8.^methods
+  cell   of | "a".encode
+  code   ("a".encode).of
+  is     uint8
+  type   uint8
+  oracle rakudo-2026.07 → uint8
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0148
+  from   inventory:utf8.^methods
+  cell   of | "".encode
+  code   ("".encode).of
+  is     uint8
+  type   uint8
+  oracle rakudo-2026.07 → uint8
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0149
+  from   inventory:utf8.^methods
+  cell   one | "a".encode
+  code   ("a".encode).one
+  is     one(97)
+  type   Junction
+  oracle rakudo-2026.07 → one(97)
+  oracle rakupp-3.14.0 → one(utf8.new(97))
+
+- id     0150
+  from   inventory:utf8.^methods
+  cell   one | "".encode
+  code   ("".encode).one
+  is     one()
+  type   Junction
+  oracle rakudo-2026.07 → one()
+  oracle rakupp-3.14.0 → one(utf8.new())
+
+- id     0151
+  from   inventory:utf8.^methods
+  cell   reverse | "a".encode
+  code   ("a".encode).reverse
+  is     utf8.new(97)
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new(97)
+  oracle rakupp-3.14.0 → $(97,).Seq
+
+- id     0152
+  from   inventory:utf8.^methods
+  cell   reverse | "".encode
+  code   ("".encode).reverse
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → $().Seq
+
+- id     0153
+  from   inventory:utf8.^methods
+  cell   self | "a".encode
+  code   ("a".encode).self
+  is     utf8.new(97)
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new(97)
+  oracle rakupp-3.14.0 → utf8.new(97)
+
+- id     0154
+  from   inventory:utf8.^methods
+  cell   self | "".encode
+  code   ("".encode).self
+  is     utf8.new()
+  type   utf8
+  oracle rakudo-2026.07 → utf8.new()
+  oracle rakupp-3.14.0 → utf8.new()
+
+- id     0155
+  from   inventory:utf8.^methods
+  cell   so | "a".encode
+  code   ("a".encode).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0156
+  from   inventory:utf8.^methods
+  cell   so | "".encode
+  code   ("".encode).so
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0157
+  from   inventory:utf8.^methods
+  cell   sum | "a".encode
+  code   ("a".encode).sum
+  is     97
+  type   Int
+  oracle rakudo-2026.07 → 97
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0158
+  from   inventory:utf8.^methods
+  cell   sum | "".encode
+  code   ("".encode).sum
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0159
+  from   inventory:utf8.^methods
+  cell   take | "a".encode
+  code   ("a".encode).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → utf8.new(97)
+
+- id     0160
+  from   inventory:utf8.^methods
+  cell   take | "".encode
+  code   ("".encode).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → utf8.new()

@@ -53,7 +53,38 @@ constant %TYPES =
     'Any'      => ['Any'],
     'Signature' => [':(Int $a)', ':()'],
     'Match'    => ['("abc" ~~ /b/)'],
-    'Failure'  => ['(try { die "x" } // $!)'];
+    'Failure'  => ['(try { die "x" } // $!)'],
+
+    # --- widened: more of the value surface ---------------------------------
+    'Mix'      => ['mix(1,1,2)', 'mix()'],
+    'SetHash'  => ['SetHash.new(1,2)', 'SetHash.new'],
+    'BagHash'  => ['BagHash.new(1,1,2)', 'BagHash.new'],
+    'MixHash'  => ['MixHash.new(1)', 'MixHash.new'],
+    'Slip'     => ['slip(1,2)', 'Empty'],
+    'Code'     => ['{ 1 }', '-> $x { $x }'],
+    'Block'    => ['{ 1 }', '{ $_ }'],
+    'Regex'    => ['/a/', '/^ \\d+ $/'],
+    'Cool'     => ['1', '"a"', '1/2'],
+    'Numeric'  => ['1', '1e0', '1/2', '1+0i'],
+    'Real'     => ['1', '1e0', '1/2'],
+    'Stringy'  => ['"a"', '""'],
+    'Iterable' => ['(1,2)', '[1,2]', '(1..2)'],
+    'Positional' => ['[1,2]', '()'],
+    'Associative' => ['{a=>1}', '{}'],
+    'Callable' => ['{ 1 }', '&say'],
+    'Exception' => ['X::AdHoc.new(payload => "x")'],
+    'IntStr'   => ['<42>', '<-1>'],
+    'RatStr'   => ['<1.5>', '<0.0>'],
+    'NumStr'   => ['<1e0>'],
+    'Uni'      => ['Uni.new(97)', 'Uni.new'],
+    'utf8'     => ['"a".encode', '"".encode'],
+    'Whatever' => ['*'],
+    'WhateverCode' => ['(* + 1)', '(* > 0)'],
+    'Enumeration'  => ['Order::Less'],
+    'Attribute'    => ['(class { has $.x }).^attributes[0]'],
+    'Parameter'    => [':(Int $a)'.words[0] eq 'x' ?? ':()' !! ':(Int $a)'],
+    'Method'   => ['(class { method m() { 1 } }).^find_method("m")'],
+    'Routine'  => ['&say', '{ 1 }'];
 
 # Refused by NAME, whatever type carries them. A generated suite must not be
 # able to touch the filesystem, spawn a process, or block on something.
@@ -263,6 +294,10 @@ for %r<out>.lines -> $l {
     next unless @c >= 3;
     my ($t, $n, $count) = @c;
     next if @FORBIDDEN.first({ $_ eq $n });
+    # Raku spells identifiers with hyphens; an underscore marks an NQP-side
+    # internal (BUILD_LEAST_DERIVED, FLATTENABLE_HASH, CURSOR_NEXT), which no
+    # independent implementation owes anyone.
+    next if $n.contains('_');
     # invocant only, or invocant plus one argument we can supply from a ladder
     next unless +$count == 1 || +$count == 2;
     %arity{"$t\t$n"} = +$count;
@@ -306,15 +341,19 @@ exit 0 if @*ARGS.first({ $_ eq '--count-only' });
 
 my @obs;
 for ^@engines -> $e {
-    my %cached = cache-load(@ids[$e]);
-    if %cached && !@all.first({ !%cached{$_} }) {
-        say "# using cached observations for { @ids[$e] }";
-        @obs.push: %cached;
+    # Incremental: widening the type table or a ladder should cost only the
+    # NEW cells. Everything already on record is reused verbatim.
+    my %seen = cache-load(@ids[$e]);
+    my @todo = @all.grep({ !%seen{$_} });
+    if !@todo {
+        say "# all { @all.elems } cells already on record for { @ids[$e] }";
+        @obs.push: %seen;
         next;
     }
-    say "# probing { @ids[$e] } with $JOBS jobs …";
-    my %seen = run-parallel(@engines[$e], @all, $VALUE-PROBE, $JOBS);
-    my @missing = @all.grep({ !%seen{$_} });
+    say "# probing { @ids[$e] }: { @todo.elems } new of { @all.elems }, $JOBS jobs …";
+    my %fresh = run-parallel(@engines[$e], @todo, $VALUE-PROBE, $JOBS);
+    for %fresh.keys -> $k { %seen{$k} = %fresh{$k} }
+    my @missing = @todo.grep({ !%seen{$_} });
     if @missing {
         say "#   filling { @missing.elems } gaps one at a time …";
         my %filled = fill-gaps(@engines[$e], @missing, $VALUE-PROBE);
@@ -325,13 +364,12 @@ for ^@engines -> $e {
 }
 
 my %again = cache-load(@ids[0] ~ '-again');
-if !(%again && !@all.first({ !%again{$_} })) {
-    say "# re-probing { @ids[0] } to check the observations reproduce …";
-    %again = run-parallel(@engines[0], @all, $VALUE-PROBE, $JOBS);
+my @re = @all.grep({ !%again{$_} });
+if @re {
+    say "# re-probing { @ids[0] }: { @re.elems } cells, to check the observations reproduce …";
+    my %fresh = run-parallel(@engines[0], @re, $VALUE-PROBE, $JOBS);
+    for %fresh.keys -> $k { %again{$k} = %fresh{$k} }
     cache-save(@ids[0] ~ '-again', %again);
-}
-else {
-    say "# using cached reproducibility pass";
 }
 
 my $ref = @obs[0];

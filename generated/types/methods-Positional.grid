@@ -1,0 +1,24 @@
+atom     methods/Positional
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     of
+cols     [1,2] | ()
+
+- id     0001
+  from   inventory:Positional.^methods
+  cell   of | [1,2]
+  code   ([1,2]).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-3.14.0 → Mu
+
+- id     0002
+  from   inventory:Positional.^methods
+  cell   of | ()
+  code   (()).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-3.14.0 → Mu

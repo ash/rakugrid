@@ -1,0 +1,594 @@
+atom     methods/Attribute
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     Bool | CREATE | Capture | DEFINITE | HOW | INSTANTIATE-GENERIC | POPULATE | REPR | VAR | WHAT | WHERE | WHO | WHY | all | any | bless | cache | can | chrs | compose | container | dimensions | does | inlined | is-generic | item | join | lazy-if | nl-out | none | not | one | package | readonly | reverse | self | so | sum | take
+cols     (class { has $.x }).^attributes[0]
+
+- id     0001
+  from   inventory:Attribute.^methods
+  cell   Bool | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0002
+  from   inventory:Attribute.^methods
+  cell   CREATE | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).CREATE
+  is     Attribute.new
+  type   Attribute
+  oracle rakudo-2026.07 → Attribute.new
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0003
+  from   inventory:Attribute.^methods
+  cell   Capture | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).Capture
+  is     \()
+  type   Capture
+  oracle rakudo-2026.07 → \()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0004
+  from   inventory:Attribute.^methods
+  cell   DEFINITE | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0005
+  from   inventory:Attribute.^methods
+  cell   HOW | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+
+- id     0006
+  from   inventory:Attribute.^methods
+  cell   INSTANTIATE-GENERIC(0) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0007
+  from   inventory:Attribute.^methods
+  cell   INSTANTIATE-GENERIC(1) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0008
+  from   inventory:Attribute.^methods
+  cell   INSTANTIATE-GENERIC(-1) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0009
+  from   inventory:Attribute.^methods
+  cell   INSTANTIATE-GENERIC("a") | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0010
+  from   inventory:Attribute.^methods
+  cell   INSTANTIATE-GENERIC(Any) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0011
+  from   inventory:Attribute.^methods
+  cell   POPULATE(0) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).POPULATE(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0012
+  from   inventory:Attribute.^methods
+  cell   POPULATE(1) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).POPULATE(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0013
+  from   inventory:Attribute.^methods
+  cell   POPULATE(-1) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).POPULATE(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0014
+  from   inventory:Attribute.^methods
+  cell   POPULATE("a") | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).POPULATE("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0015
+  from   inventory:Attribute.^methods
+  cell   POPULATE(Any) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).POPULATE(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0016
+  from   inventory:Attribute.^methods
+  cell   REPR | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0017
+  from   inventory:Attribute.^methods
+  cell   VAR | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).VAR
+  is     Attribute.new
+  type   Attribute
+  oracle rakudo-2026.07 → Attribute.new
+  oracle rakupp-3.14.0 → ${:built(Bool::True), :has_accessor(Bool::True), :name("\$!x"), :package(<anon|17>), :readonly(Bool::True), :type(Mu)}
+
+- id     0018
+  from   inventory:Attribute.^methods
+  cell   WHAT | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).WHAT
+  is     Attribute
+  type   Attribute
+  oracle rakudo-2026.07 → Attribute
+  oracle rakupp-3.14.0 → Attribute
+
+- id     0019
+  from   inventory:Attribute.^methods
+  cell   WHERE | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).WHERE
+  is     6525793274184
+  type   Int
+  oracle rakudo-2026.07 → 6525793274184
+  oracle rakupp-3.14.0 → 140692675584248
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0020
+  from   inventory:Attribute.^methods
+  cell   WHO | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+
+- id     0021
+  from   inventory:Attribute.^methods
+  cell   WHY | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).WHY
+  is     Nil
+  type   Nil+{Mu::Suggestion[Attribute]}
+  oracle rakudo-2026.07 → Nil
+  oracle rakupp-3.14.0 → Any
+
+- id     0022
+  from   inventory:Attribute.^methods
+  cell   all | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).all
+  is     all(Attribute.new)
+  type   Junction
+  oracle rakudo-2026.07 → all(Attribute.new)
+  oracle rakupp-3.14.0 → all(:built(Bool::True), :has_accessor(Bool::True), :name("\$!x"), :package(<anon|22>), :readonly(Bool::True), :type(Mu))
+
+- id     0023
+  from   inventory:Attribute.^methods
+  cell   any | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).any
+  is     any(Attribute.new)
+  type   Junction
+  oracle rakudo-2026.07 → any(Attribute.new)
+  oracle rakupp-3.14.0 → any(:built(Bool::True), :has_accessor(Bool::True), :name("\$!x"), :package(<anon|23>), :readonly(Bool::True), :type(Mu))
+
+- id     0024
+  from   inventory:Attribute.^methods
+  cell   bless | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).bless
+  is     Attribute.new
+  type   Attribute
+  oracle rakudo-2026.07 → Attribute.new
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0025
+  from   inventory:Attribute.^methods
+  cell   cache | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).cache
+  is     $(Attribute.new,)
+  type   List
+  oracle rakudo-2026.07 → $(Attribute.new,)
+  oracle rakupp-3.14.0 → $(:built(Bool::True), :has_accessor(Bool::True), :name("\$!x"), :package(<anon|25>), :readonly(Bool::True), :type(Mu))
+
+- id     0026
+  from   inventory:Attribute.^methods
+  cell   can(0) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0027
+  from   inventory:Attribute.^methods
+  cell   can(1) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0028
+  from   inventory:Attribute.^methods
+  cell   can(-1) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0029
+  from   inventory:Attribute.^methods
+  cell   can("a") | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0030
+  from   inventory:Attribute.^methods
+  cell   can(Any) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0031
+  from   inventory:Attribute.^methods
+  cell   chrs | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "\0\0\0\0\0\0"
+
+- id     0032
+  from   inventory:Attribute.^methods
+  cell   compose(0) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).compose(0)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0033
+  from   inventory:Attribute.^methods
+  cell   compose(1) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).compose(1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0034
+  from   inventory:Attribute.^methods
+  cell   compose(-1) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).compose(-1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0035
+  from   inventory:Attribute.^methods
+  cell   compose("a") | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).compose("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0036
+  from   inventory:Attribute.^methods
+  cell   compose(Any) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).compose(Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0037
+  from   inventory:Attribute.^methods
+  cell   container | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).container
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → ${:built(Bool::True), :has_accessor(Bool::True), :name("\$!x"), :package(<anon|37>), :readonly(Bool::True), :type(Mu)}
+
+- id     0038
+  from   inventory:Attribute.^methods
+  cell   dimensions | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).dimensions
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0039
+  from   inventory:Attribute.^methods
+  cell   does(0) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0040
+  from   inventory:Attribute.^methods
+  cell   does(1) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0041
+  from   inventory:Attribute.^methods
+  cell   does(-1) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0042
+  from   inventory:Attribute.^methods
+  cell   does("a") | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0043
+  from   inventory:Attribute.^methods
+  cell   does(Any) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0044
+  from   inventory:Attribute.^methods
+  cell   inlined | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).inlined
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0045
+  from   inventory:Attribute.^methods
+  cell   is-generic | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0046
+  from   inventory:Attribute.^methods
+  cell   item | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).item
+  is     Attribute.new
+  type   Attribute
+  oracle rakudo-2026.07 → Attribute.new
+  oracle rakupp-3.14.0 → ${:built(Bool::True), :has_accessor(Bool::True), :name("\$!x"), :package(<anon|46>), :readonly(Bool::True), :type(Mu)}
+
+- id     0047
+  from   inventory:Attribute.^methods
+  cell   join(0) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).join(0)
+  is     "\$!x"
+  type   Str
+  oracle rakudo-2026.07 → "\$!x"
+  oracle rakupp-3.14.0 → "built\tTrue0has_accessor\tTrue0name\t\$!x0package\t0readonly\tTrue0type\t"
+
+- id     0048
+  from   inventory:Attribute.^methods
+  cell   join(1) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).join(1)
+  is     "\$!x"
+  type   Str
+  oracle rakudo-2026.07 → "\$!x"
+  oracle rakupp-3.14.0 → "built\tTrue1has_accessor\tTrue1name\t\$!x1package\t1readonly\tTrue1type\t"
+
+- id     0049
+  from   inventory:Attribute.^methods
+  cell   join(-1) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).join(-1)
+  is     "\$!x"
+  type   Str
+  oracle rakudo-2026.07 → "\$!x"
+  oracle rakupp-3.14.0 → "built\tTrue-1has_accessor\tTrue-1name\t\$!x-1package\t-1readonly\tTrue-1type\t"
+
+- id     0050
+  from   inventory:Attribute.^methods
+  cell   join("a") | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).join("a")
+  is     "\$!x"
+  type   Str
+  oracle rakudo-2026.07 → "\$!x"
+  oracle rakupp-3.14.0 → "built\tTrueahas_accessor\tTrueaname\t\$!xapackage\tareadonly\tTrueatype\t"
+
+- id     0051
+  from   inventory:Attribute.^methods
+  cell   join(Any) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → "built\tTruehas_accessor\tTruename\t\$!xpackage\treadonly\tTruetype\t"
+
+- id     0052
+  from   inventory:Attribute.^methods
+  cell   lazy-if(0) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).lazy-if(0)
+  is     Attribute.new
+  type   Attribute
+  oracle rakudo-2026.07 → Attribute.new
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0053
+  from   inventory:Attribute.^methods
+  cell   lazy-if(1) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).lazy-if(1)
+  is     Attribute.new
+  type   Attribute
+  oracle rakudo-2026.07 → Attribute.new
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0054
+  from   inventory:Attribute.^methods
+  cell   lazy-if(-1) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).lazy-if(-1)
+  is     Attribute.new
+  type   Attribute
+  oracle rakudo-2026.07 → Attribute.new
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0055
+  from   inventory:Attribute.^methods
+  cell   lazy-if("a") | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).lazy-if("a")
+  is     Attribute.new
+  type   Attribute
+  oracle rakudo-2026.07 → Attribute.new
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0056
+  from   inventory:Attribute.^methods
+  cell   lazy-if(Any) | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).lazy-if(Any)
+  is     Attribute.new
+  type   Attribute
+  oracle rakudo-2026.07 → Attribute.new
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0057
+  from   inventory:Attribute.^methods
+  cell   nl-out | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0058
+  from   inventory:Attribute.^methods
+  cell   none | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).none
+  is     none(Attribute.new)
+  type   Junction
+  oracle rakudo-2026.07 → none(Attribute.new)
+  oracle rakupp-3.14.0 → none(:built(Bool::True), :has_accessor(Bool::True), :name("\$!x"), :package(<anon|58>), :readonly(Bool::True), :type(Mu))
+
+- id     0059
+  from   inventory:Attribute.^methods
+  cell   not | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0060
+  from   inventory:Attribute.^methods
+  cell   one | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).one
+  is     one(Attribute.new)
+  type   Junction
+  oracle rakudo-2026.07 → one(Attribute.new)
+  oracle rakupp-3.14.0 → one(:built(Bool::True), :has_accessor(Bool::True), :name("\$!x"), :package(<anon|60>), :readonly(Bool::True), :type(Mu))
+
+- id     0061
+  from   inventory:Attribute.^methods
+  cell   package | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).package
+  is     <anon|61>
+  type   <anon|61>
+  oracle rakudo-2026.07 → <anon|61>
+  oracle rakupp-3.14.0 → <anon|61>
+
+- id     0062
+  from   inventory:Attribute.^methods
+  cell   readonly | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).readonly
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0063
+  from   inventory:Attribute.^methods
+  cell   reverse | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).reverse
+  is     $((Attribute.new,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Attribute.new,).Seq)
+  oracle rakupp-3.14.0 → $(:type(Mu), :readonly(Bool::True), :package(<anon|63>), :name("\$!x"), :has_accessor(Bool::True), :built(Bool::True)).Seq
+
+- id     0064
+  from   inventory:Attribute.^methods
+  cell   self | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).self
+  is     Attribute.new
+  type   Attribute
+  oracle rakudo-2026.07 → Attribute.new
+  oracle rakupp-3.14.0 → ${:built(Bool::True), :has_accessor(Bool::True), :name("\$!x"), :package(<anon|64>), :readonly(Bool::True), :type(Mu)}
+
+- id     0065
+  from   inventory:Attribute.^methods
+  cell   so | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0066
+  from   inventory:Attribute.^methods
+  cell   sum | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).sum
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0067
+  from   inventory:Attribute.^methods
+  cell   take | (class { has $.x }).^attributes[0]
+  code   ((class { has $.x }).^attributes[0]).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → ${:built(Bool::True), :has_accessor(Bool::True), :name("\$!x"), :package(<anon|67>), :readonly(Bool::True), :type(Mu)}

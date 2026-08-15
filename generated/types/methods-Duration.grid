@@ -2,7 +2,7 @@ atom     methods/Duration
 source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
-axes     AST | BUILD_LEAST_DERIVED | Bool | Bridge | CREATE | Capture | Complex | DEFINITE | EVAL | FLATTENABLE_HASH | FLATTENABLE_LIST | Failure | FatRat | HOW | INSTANTIATE-GENERIC | Int | NFC | NFD | NFKC | NFKD | Num | Order | POPULATE | REPR | Rat | VAR | Version | WHAT | WHERE | WHO | abs | acos | acosec | acosech | acosh | acotan | acotanh | all | any | asec | asech | asin | asinh | atan | atan2 | atanh | bless | byte | cache | can | ceiling | chars | chomp | chr | chrs | cis | codes | conj | cos | cosec | cosech | cosh | cotan | cotanh | does | fc | flip | floor | from-posix-nanos | indent | int | int16 | int32 | int64 | int8 | is-generic | is-prime | isNaN | item | join | lazy-if | lc | log10 | log2 | narrow | nl-out | none | not | one | ord | ords | parse-names | path | pred | rand | reverse | roots | samecase | samemark | samespace | sec | sech | self | set_why | sign | sin | sinh | so | sqrt | succ | sum | tai | take | tan | tanh | tc | tclc | to-nanos | trim | trim-leading | trim-trailing | truncate | uc | uint | uint16 | uint32 | uint64 | uint8 | uniname | uninames | uniparse | uniprop | uniprops | unival | univals | unpolar | wordcase
+axes     AST | Bool | Bridge | CREATE | Capture | Complex | DEFINITE | EVAL | Failure | FatRat | HOW | INSTANTIATE-GENERIC | Int | NFC | NFD | NFKC | NFKD | Num | Order | POPULATE | REPR | Rat | VAR | Version | WHAT | WHERE | WHO | abs | acos | acosec | acosech | acosh | acotan | acotanh | all | any | asec | asech | asin | asinh | atan | atan2 | atanh | bless | byte | cache | can | ceiling | chars | chomp | chr | chrs | cis | codes | conj | cos | cosec | cosech | cosh | cotan | cotanh | does | fc | flip | floor | from-posix-nanos | indent | int | int16 | int32 | int64 | int8 | is-generic | is-prime | isNaN | item | join | lazy-if | lc | log10 | log2 | narrow | nl-out | none | not | one | ord | ords | parse-names | path | pred | rand | reverse | roots | samecase | samemark | samespace | sec | sech | self | sign | sin | sinh | so | sqrt | succ | sum | tai | take | tan | tanh | tc | tclc | to-nanos | trim | trim-leading | trim-trailing | truncate | uc | uint | uint16 | uint32 | uint64 | uint8 | uniname | uninames | uniparse | uniprop | uniprops | unival | univals | unpolar | wordcase
 cols     Duration.new(1) | Duration.new(0)
 
 - id     0001
@@ -87,86 +87,6 @@ cols     Duration.new(1) | Duration.new(0)
 
 - id     0011
   from   inventory:Duration.^methods
-  cell   BUILD_LEAST_DERIVED(0) | Duration.new(1)
-  code   (Duration.new(1)).BUILD_LEAST_DERIVED(0)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0012
-  from   inventory:Duration.^methods
-  cell   BUILD_LEAST_DERIVED(1) | Duration.new(1)
-  code   (Duration.new(1)).BUILD_LEAST_DERIVED(1)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0013
-  from   inventory:Duration.^methods
-  cell   BUILD_LEAST_DERIVED(-1) | Duration.new(1)
-  code   (Duration.new(1)).BUILD_LEAST_DERIVED(-1)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0014
-  from   inventory:Duration.^methods
-  cell   BUILD_LEAST_DERIVED("a") | Duration.new(1)
-  code   (Duration.new(1)).BUILD_LEAST_DERIVED("a")
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0015
-  from   inventory:Duration.^methods
-  cell   BUILD_LEAST_DERIVED(Any) | Duration.new(1)
-  code   (Duration.new(1)).BUILD_LEAST_DERIVED(Any)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0016
-  from   inventory:Duration.^methods
-  cell   BUILD_LEAST_DERIVED(0) | Duration.new(0)
-  code   (Duration.new(0)).BUILD_LEAST_DERIVED(0)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0017
-  from   inventory:Duration.^methods
-  cell   BUILD_LEAST_DERIVED(1) | Duration.new(0)
-  code   (Duration.new(0)).BUILD_LEAST_DERIVED(1)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0018
-  from   inventory:Duration.^methods
-  cell   BUILD_LEAST_DERIVED(-1) | Duration.new(0)
-  code   (Duration.new(0)).BUILD_LEAST_DERIVED(-1)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0019
-  from   inventory:Duration.^methods
-  cell   BUILD_LEAST_DERIVED("a") | Duration.new(0)
-  code   (Duration.new(0)).BUILD_LEAST_DERIVED("a")
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0020
-  from   inventory:Duration.^methods
-  cell   BUILD_LEAST_DERIVED(Any) | Duration.new(0)
-  code   (Duration.new(0)).BUILD_LEAST_DERIVED(Any)
-  throws X::TypeCheck::Binding::Parameter
-  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0021
-  from   inventory:Duration.^methods
   cell   Bool | Duration.new(1)
   code   (Duration.new(1)).Bool
   is     Bool::True
@@ -174,7 +94,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0022
+- id     0012
   from   inventory:Duration.^methods
   cell   Bool | Duration.new(0)
   code   (Duration.new(0)).Bool
@@ -183,7 +103,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0023
+- id     0013
   from   inventory:Duration.^methods
   cell   Bridge | Duration.new(1)
   code   (Duration.new(1)).Bridge
@@ -192,7 +112,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → 1e0
 
-- id     0024
+- id     0014
   from   inventory:Duration.^methods
   cell   Bridge | Duration.new(0)
   code   (Duration.new(0)).Bridge
@@ -201,7 +121,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0025
+- id     0015
   from   inventory:Duration.^methods
   cell   CREATE | Duration.new(1)
   code   (Duration.new(1)).CREATE
@@ -210,7 +130,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(0.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0026
+- id     0016
   from   inventory:Duration.^methods
   cell   CREATE | Duration.new(0)
   code   (Duration.new(0)).CREATE
@@ -219,7 +139,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(0.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0027
+- id     0017
   from   inventory:Duration.^methods
   cell   Capture | Duration.new(1)
   code   (Duration.new(1)).Capture
@@ -228,7 +148,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → \(:tai(1.0))
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0028
+- id     0018
   from   inventory:Duration.^methods
   cell   Capture | Duration.new(0)
   code   (Duration.new(0)).Capture
@@ -237,7 +157,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → \(:tai(0.0))
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0029
+- id     0019
   from   inventory:Duration.^methods
   cell   Complex | Duration.new(1)
   code   (Duration.new(1)).Complex
@@ -246,7 +166,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → <1+0i>
   oracle rakupp-3.14.0 → <1+0i>
 
-- id     0030
+- id     0020
   from   inventory:Duration.^methods
   cell   Complex | Duration.new(0)
   code   (Duration.new(0)).Complex
@@ -255,7 +175,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → <0+0i>
   oracle rakupp-3.14.0 → <0+0i>
 
-- id     0031
+- id     0021
   from   inventory:Duration.^methods
   cell   DEFINITE | Duration.new(1)
   code   (Duration.new(1)).DEFINITE
@@ -264,7 +184,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0032
+- id     0022
   from   inventory:Duration.^methods
   cell   DEFINITE | Duration.new(0)
   code   (Duration.new(0)).DEFINITE
@@ -273,7 +193,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0033
+- id     0023
   from   inventory:Duration.^methods
   cell   EVAL | Duration.new(1)
   code   (Duration.new(1)).EVAL
@@ -282,7 +202,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0034
+- id     0024
   from   inventory:Duration.^methods
   cell   EVAL | Duration.new(0)
   code   (Duration.new(0)).EVAL
@@ -291,43 +211,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0035
-  from   inventory:Duration.^methods
-  cell   FLATTENABLE_HASH | Duration.new(1)
-  code   (Duration.new(1)).FLATTENABLE_HASH
-  is     ${}
-  type   Hash
-  oracle rakudo-2026.07 → ${}
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0036
-  from   inventory:Duration.^methods
-  cell   FLATTENABLE_HASH | Duration.new(0)
-  code   (Duration.new(0)).FLATTENABLE_HASH
-  is     ${}
-  type   Hash
-  oracle rakudo-2026.07 → ${}
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0037
-  from   inventory:Duration.^methods
-  cell   FLATTENABLE_LIST | Duration.new(1)
-  code   (Duration.new(1)).FLATTENABLE_LIST
-  is     $(Duration.new(1.0),)
-  type   List
-  oracle rakudo-2026.07 → $(Duration.new(1.0),)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0038
-  from   inventory:Duration.^methods
-  cell   FLATTENABLE_LIST | Duration.new(0)
-  code   (Duration.new(0)).FLATTENABLE_LIST
-  is     $(Duration.new(0.0),)
-  type   List
-  oracle rakudo-2026.07 → $(Duration.new(0.0),)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0039
+- id     0025
   from   inventory:Duration.^methods
   cell   Failure | Duration.new(1)
   code   (Duration.new(1)).Failure
@@ -335,7 +219,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0040
+- id     0026
   from   inventory:Duration.^methods
   cell   Failure | Duration.new(0)
   code   (Duration.new(0)).Failure
@@ -343,7 +227,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0041
+- id     0027
   from   inventory:Duration.^methods
   cell   FatRat | Duration.new(1)
   code   (Duration.new(1)).FatRat
@@ -352,7 +236,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → FatRat.new(1, 1)
   oracle rakupp-3.14.0 → FatRat.new(1, 1)
 
-- id     0042
+- id     0028
   from   inventory:Duration.^methods
   cell   FatRat | Duration.new(0)
   code   (Duration.new(0)).FatRat
@@ -361,7 +245,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → FatRat.new(0, 1)
   oracle rakupp-3.14.0 → FatRat.new(0, 1)
 
-- id     0043
+- id     0029
   from   inventory:Duration.^methods
   cell   HOW | Duration.new(1)
   code   (Duration.new(1)).HOW
@@ -370,7 +254,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0044
+- id     0030
   from   inventory:Duration.^methods
   cell   HOW | Duration.new(0)
   code   (Duration.new(0)).HOW
@@ -379,7 +263,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0045
+- id     0031
   from   inventory:Duration.^methods
   cell   INSTANTIATE-GENERIC(0) | Duration.new(1)
   code   (Duration.new(1)).INSTANTIATE-GENERIC(0)
@@ -387,7 +271,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0046
+- id     0032
   from   inventory:Duration.^methods
   cell   INSTANTIATE-GENERIC(1) | Duration.new(1)
   code   (Duration.new(1)).INSTANTIATE-GENERIC(1)
@@ -395,7 +279,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0047
+- id     0033
   from   inventory:Duration.^methods
   cell   INSTANTIATE-GENERIC(-1) | Duration.new(1)
   code   (Duration.new(1)).INSTANTIATE-GENERIC(-1)
@@ -403,7 +287,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0048
+- id     0034
   from   inventory:Duration.^methods
   cell   INSTANTIATE-GENERIC("a") | Duration.new(1)
   code   (Duration.new(1)).INSTANTIATE-GENERIC("a")
@@ -411,7 +295,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0049
+- id     0035
   from   inventory:Duration.^methods
   cell   INSTANTIATE-GENERIC(Any) | Duration.new(1)
   code   (Duration.new(1)).INSTANTIATE-GENERIC(Any)
@@ -419,7 +303,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0050
+- id     0036
   from   inventory:Duration.^methods
   cell   INSTANTIATE-GENERIC(0) | Duration.new(0)
   code   (Duration.new(0)).INSTANTIATE-GENERIC(0)
@@ -427,7 +311,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0051
+- id     0037
   from   inventory:Duration.^methods
   cell   INSTANTIATE-GENERIC(1) | Duration.new(0)
   code   (Duration.new(0)).INSTANTIATE-GENERIC(1)
@@ -435,7 +319,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0052
+- id     0038
   from   inventory:Duration.^methods
   cell   INSTANTIATE-GENERIC(-1) | Duration.new(0)
   code   (Duration.new(0)).INSTANTIATE-GENERIC(-1)
@@ -443,7 +327,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0053
+- id     0039
   from   inventory:Duration.^methods
   cell   INSTANTIATE-GENERIC("a") | Duration.new(0)
   code   (Duration.new(0)).INSTANTIATE-GENERIC("a")
@@ -451,7 +335,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0054
+- id     0040
   from   inventory:Duration.^methods
   cell   INSTANTIATE-GENERIC(Any) | Duration.new(0)
   code   (Duration.new(0)).INSTANTIATE-GENERIC(Any)
@@ -459,7 +343,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0055
+- id     0041
   from   inventory:Duration.^methods
   cell   Int | Duration.new(1)
   code   (Duration.new(1)).Int
@@ -468,7 +352,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0056
+- id     0042
   from   inventory:Duration.^methods
   cell   Int | Duration.new(0)
   code   (Duration.new(0)).Int
@@ -477,7 +361,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0057
+- id     0043
   from   inventory:Duration.^methods
   cell   NFC | Duration.new(1)
   code   (Duration.new(1)).NFC
@@ -486,7 +370,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Uni.new(0x0031).NFC
   oracle rakupp-3.14.0 → Uni.new(0x0031).NFC
 
-- id     0058
+- id     0044
   from   inventory:Duration.^methods
   cell   NFC | Duration.new(0)
   code   (Duration.new(0)).NFC
@@ -495,7 +379,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Uni.new(0x0030).NFC
   oracle rakupp-3.14.0 → Uni.new(0x0030).NFC
 
-- id     0059
+- id     0045
   from   inventory:Duration.^methods
   cell   NFD | Duration.new(1)
   code   (Duration.new(1)).NFD
@@ -504,7 +388,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Uni.new(0x0031).NFD
   oracle rakupp-3.14.0 → Uni.new(0x0031).NFD
 
-- id     0060
+- id     0046
   from   inventory:Duration.^methods
   cell   NFD | Duration.new(0)
   code   (Duration.new(0)).NFD
@@ -513,7 +397,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Uni.new(0x0030).NFD
   oracle rakupp-3.14.0 → Uni.new(0x0030).NFD
 
-- id     0061
+- id     0047
   from   inventory:Duration.^methods
   cell   NFKC | Duration.new(1)
   code   (Duration.new(1)).NFKC
@@ -522,7 +406,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Uni.new(0x0031).NFKC
   oracle rakupp-3.14.0 → Uni.new(0x0031).NFKC
 
-- id     0062
+- id     0048
   from   inventory:Duration.^methods
   cell   NFKC | Duration.new(0)
   code   (Duration.new(0)).NFKC
@@ -531,7 +415,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Uni.new(0x0030).NFKC
   oracle rakupp-3.14.0 → Uni.new(0x0030).NFKC
 
-- id     0063
+- id     0049
   from   inventory:Duration.^methods
   cell   NFKD | Duration.new(1)
   code   (Duration.new(1)).NFKD
@@ -540,7 +424,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Uni.new(0x0031).NFKD
   oracle rakupp-3.14.0 → Uni.new(0x0031).NFKD
 
-- id     0064
+- id     0050
   from   inventory:Duration.^methods
   cell   NFKD | Duration.new(0)
   code   (Duration.new(0)).NFKD
@@ -549,7 +433,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Uni.new(0x0030).NFKD
   oracle rakupp-3.14.0 → Uni.new(0x0030).NFKD
 
-- id     0065
+- id     0051
   from   inventory:Duration.^methods
   cell   Num | Duration.new(1)
   code   (Duration.new(1)).Num
@@ -558,7 +442,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → 1e0
 
-- id     0066
+- id     0052
   from   inventory:Duration.^methods
   cell   Num | Duration.new(0)
   code   (Duration.new(0)).Num
@@ -567,7 +451,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0067
+- id     0053
   from   inventory:Duration.^methods
   cell   Order | Duration.new(1)
   code   (Duration.new(1)).Order
@@ -576,7 +460,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Order::More
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0068
+- id     0054
   from   inventory:Duration.^methods
   cell   Order | Duration.new(0)
   code   (Duration.new(0)).Order
@@ -585,7 +469,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Order::Same
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0069
+- id     0055
   from   inventory:Duration.^methods
   cell   POPULATE(0) | Duration.new(1)
   code   (Duration.new(1)).POPULATE(0)
@@ -593,7 +477,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0070
+- id     0056
   from   inventory:Duration.^methods
   cell   POPULATE(1) | Duration.new(1)
   code   (Duration.new(1)).POPULATE(1)
@@ -601,7 +485,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0071
+- id     0057
   from   inventory:Duration.^methods
   cell   POPULATE(-1) | Duration.new(1)
   code   (Duration.new(1)).POPULATE(-1)
@@ -609,7 +493,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0072
+- id     0058
   from   inventory:Duration.^methods
   cell   POPULATE("a") | Duration.new(1)
   code   (Duration.new(1)).POPULATE("a")
@@ -617,7 +501,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0073
+- id     0059
   from   inventory:Duration.^methods
   cell   POPULATE(Any) | Duration.new(1)
   code   (Duration.new(1)).POPULATE(Any)
@@ -625,7 +509,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0074
+- id     0060
   from   inventory:Duration.^methods
   cell   POPULATE(0) | Duration.new(0)
   code   (Duration.new(0)).POPULATE(0)
@@ -633,7 +517,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0075
+- id     0061
   from   inventory:Duration.^methods
   cell   POPULATE(1) | Duration.new(0)
   code   (Duration.new(0)).POPULATE(1)
@@ -641,7 +525,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0076
+- id     0062
   from   inventory:Duration.^methods
   cell   POPULATE(-1) | Duration.new(0)
   code   (Duration.new(0)).POPULATE(-1)
@@ -649,7 +533,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0077
+- id     0063
   from   inventory:Duration.^methods
   cell   POPULATE("a") | Duration.new(0)
   code   (Duration.new(0)).POPULATE("a")
@@ -657,7 +541,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0078
+- id     0064
   from   inventory:Duration.^methods
   cell   POPULATE(Any) | Duration.new(0)
   code   (Duration.new(0)).POPULATE(Any)
@@ -665,7 +549,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0079
+- id     0065
   from   inventory:Duration.^methods
   cell   REPR | Duration.new(1)
   code   (Duration.new(1)).REPR
@@ -674,7 +558,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0080
+- id     0066
   from   inventory:Duration.^methods
   cell   REPR | Duration.new(0)
   code   (Duration.new(0)).REPR
@@ -683,7 +567,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0081
+- id     0067
   from   inventory:Duration.^methods
   cell   Rat | Duration.new(1)
   code   (Duration.new(1)).Rat
@@ -692,7 +576,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1.0
   oracle rakupp-3.14.0 → 1.0
 
-- id     0082
+- id     0068
   from   inventory:Duration.^methods
   cell   Rat | Duration.new(0)
   code   (Duration.new(0)).Rat
@@ -701,7 +585,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0.0
   oracle rakupp-3.14.0 → 0.0
 
-- id     0083
+- id     0069
   from   inventory:Duration.^methods
   cell   VAR | Duration.new(1)
   code   (Duration.new(1)).VAR
@@ -710,7 +594,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(1.0)
   oracle rakupp-3.14.0 → 1e0
 
-- id     0084
+- id     0070
   from   inventory:Duration.^methods
   cell   VAR | Duration.new(0)
   code   (Duration.new(0)).VAR
@@ -719,7 +603,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(0.0)
   oracle rakupp-3.14.0 → 0e0
 
-- id     0085
+- id     0071
   from   inventory:Duration.^methods
   cell   Version | Duration.new(1)
   code   (Duration.new(1)).Version
@@ -728,7 +612,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → v1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0086
+- id     0072
   from   inventory:Duration.^methods
   cell   Version | Duration.new(0)
   code   (Duration.new(0)).Version
@@ -737,7 +621,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → v0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0087
+- id     0073
   from   inventory:Duration.^methods
   cell   WHAT | Duration.new(1)
   code   (Duration.new(1)).WHAT
@@ -746,7 +630,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration
   oracle rakupp-3.14.0 → Duration
 
-- id     0088
+- id     0074
   from   inventory:Duration.^methods
   cell   WHAT | Duration.new(0)
   code   (Duration.new(0)).WHAT
@@ -755,7 +639,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration
   oracle rakupp-3.14.0 → Duration
 
-- id     0089
+- id     0075
   from   inventory:Duration.^methods
   cell   WHERE | Duration.new(1)
   code   (Duration.new(1)).WHERE
@@ -767,7 +651,7 @@ cols     Duration.new(1) | Duration.new(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0090
+- id     0076
   from   inventory:Duration.^methods
   cell   WHERE | Duration.new(0)
   code   (Duration.new(0)).WHERE
@@ -779,7 +663,7 @@ cols     Duration.new(1) | Duration.new(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0091
+- id     0077
   from   inventory:Duration.^methods
   cell   WHO | Duration.new(1)
   code   (Duration.new(1)).WHO
@@ -788,7 +672,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0092
+- id     0078
   from   inventory:Duration.^methods
   cell   WHO | Duration.new(0)
   code   (Duration.new(0)).WHO
@@ -797,7 +681,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0093
+- id     0079
   from   inventory:Duration.^methods
   cell   abs | Duration.new(1)
   code   (Duration.new(1)).abs
@@ -806,7 +690,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(1.0)
   oracle rakupp-3.14.0 → 1e0
 
-- id     0094
+- id     0080
   from   inventory:Duration.^methods
   cell   abs | Duration.new(0)
   code   (Duration.new(0)).abs
@@ -815,7 +699,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(0.0)
   oracle rakupp-3.14.0 → 0e0
 
-- id     0095
+- id     0081
   from   inventory:Duration.^methods
   cell   acos | Duration.new(1)
   code   (Duration.new(1)).acos
@@ -824,7 +708,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0096
+- id     0082
   from   inventory:Duration.^methods
   cell   acos | Duration.new(0)
   code   (Duration.new(0)).acos
@@ -833,7 +717,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → 1.5707963267948966e0
 
-- id     0097
+- id     0083
   from   inventory:Duration.^methods
   cell   acosec | Duration.new(1)
   code   (Duration.new(1)).acosec
@@ -842,7 +726,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → 1.5707963267948966e0
 
-- id     0098
+- id     0084
   from   inventory:Duration.^methods
   cell   acosec | Duration.new(0)
   code   (Duration.new(0)).acosec
@@ -851,7 +735,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0099
+- id     0085
   from   inventory:Duration.^methods
   cell   acosech | Duration.new(1)
   code   (Duration.new(1)).acosech
@@ -860,7 +744,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0.8813735870195429e0
   oracle rakupp-3.14.0 → 0.881373587019543e0
 
-- id     0100
+- id     0086
   from   inventory:Duration.^methods
   cell   acosech | Duration.new(0)
   code   (Duration.new(0)).acosech
@@ -868,7 +752,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
   oracle rakupp-3.14.0 → Inf
 
-- id     0101
+- id     0087
   from   inventory:Duration.^methods
   cell   acosh | Duration.new(1)
   code   (Duration.new(1)).acosh
@@ -877,7 +761,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0102
+- id     0088
   from   inventory:Duration.^methods
   cell   acosh | Duration.new(0)
   code   (Duration.new(0)).acosh
@@ -886,7 +770,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0103
+- id     0089
   from   inventory:Duration.^methods
   cell   acotan | Duration.new(1)
   code   (Duration.new(1)).acotan
@@ -895,7 +779,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0.7853981633974483e0
   oracle rakupp-3.14.0 → 0.7853981633974483e0
 
-- id     0104
+- id     0090
   from   inventory:Duration.^methods
   cell   acotan | Duration.new(0)
   code   (Duration.new(0)).acotan
@@ -904,7 +788,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → 1.5707963267948966e0
 
-- id     0105
+- id     0091
   from   inventory:Duration.^methods
   cell   acotanh | Duration.new(1)
   code   (Duration.new(1)).acotanh
@@ -913,7 +797,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → Inf
 
-- id     0106
+- id     0092
   from   inventory:Duration.^methods
   cell   acotanh | Duration.new(0)
   code   (Duration.new(0)).acotanh
@@ -921,7 +805,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
   oracle rakupp-3.14.0 → NaN
 
-- id     0107
+- id     0093
   from   inventory:Duration.^methods
   cell   all | Duration.new(1)
   code   (Duration.new(1)).all
@@ -930,7 +814,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → all(Duration.new(1.0))
   oracle rakupp-3.14.0 → all(1e0)
 
-- id     0108
+- id     0094
   from   inventory:Duration.^methods
   cell   all | Duration.new(0)
   code   (Duration.new(0)).all
@@ -939,7 +823,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → all(Duration.new(0.0))
   oracle rakupp-3.14.0 → all(0e0)
 
-- id     0109
+- id     0095
   from   inventory:Duration.^methods
   cell   any | Duration.new(1)
   code   (Duration.new(1)).any
@@ -948,7 +832,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → any(Duration.new(1.0))
   oracle rakupp-3.14.0 → any(1e0)
 
-- id     0110
+- id     0096
   from   inventory:Duration.^methods
   cell   any | Duration.new(0)
   code   (Duration.new(0)).any
@@ -957,7 +841,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → any(Duration.new(0.0))
   oracle rakupp-3.14.0 → any(0e0)
 
-- id     0111
+- id     0097
   from   inventory:Duration.^methods
   cell   asec | Duration.new(1)
   code   (Duration.new(1)).asec
@@ -966,7 +850,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0112
+- id     0098
   from   inventory:Duration.^methods
   cell   asec | Duration.new(0)
   code   (Duration.new(0)).asec
@@ -975,7 +859,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0113
+- id     0099
   from   inventory:Duration.^methods
   cell   asech | Duration.new(1)
   code   (Duration.new(1)).asech
@@ -984,7 +868,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0114
+- id     0100
   from   inventory:Duration.^methods
   cell   asech | Duration.new(0)
   code   (Duration.new(0)).asech
@@ -992,7 +876,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
   oracle rakupp-3.14.0 → Inf
 
-- id     0115
+- id     0101
   from   inventory:Duration.^methods
   cell   asin | Duration.new(1)
   code   (Duration.new(1)).asin
@@ -1001,7 +885,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → 1.5707963267948966e0
 
-- id     0116
+- id     0102
   from   inventory:Duration.^methods
   cell   asin | Duration.new(0)
   code   (Duration.new(0)).asin
@@ -1010,7 +894,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0117
+- id     0103
   from   inventory:Duration.^methods
   cell   asinh | Duration.new(1)
   code   (Duration.new(1)).asinh
@@ -1019,7 +903,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0.8813735870195429e0
   oracle rakupp-3.14.0 → 0.881373587019543e0
 
-- id     0118
+- id     0104
   from   inventory:Duration.^methods
   cell   asinh | Duration.new(0)
   code   (Duration.new(0)).asinh
@@ -1028,7 +912,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0119
+- id     0105
   from   inventory:Duration.^methods
   cell   atan | Duration.new(1)
   code   (Duration.new(1)).atan
@@ -1037,7 +921,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0.7853981633974483e0
   oracle rakupp-3.14.0 → 0.7853981633974483e0
 
-- id     0120
+- id     0106
   from   inventory:Duration.^methods
   cell   atan | Duration.new(0)
   code   (Duration.new(0)).atan
@@ -1046,7 +930,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0121
+- id     0107
   from   inventory:Duration.^methods
   cell   atan2(0) | Duration.new(1)
   code   (Duration.new(1)).atan2(0)
@@ -1055,7 +939,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → 1.5707963267948966e0
 
-- id     0122
+- id     0108
   from   inventory:Duration.^methods
   cell   atan2(1) | Duration.new(1)
   code   (Duration.new(1)).atan2(1)
@@ -1064,7 +948,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0.7853981633974483e0
   oracle rakupp-3.14.0 → 0.7853981633974483e0
 
-- id     0123
+- id     0109
   from   inventory:Duration.^methods
   cell   atan2(-1) | Duration.new(1)
   code   (Duration.new(1)).atan2(-1)
@@ -1073,7 +957,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 2.356194490192345e0
   oracle rakupp-3.14.0 → 2.356194490192345e0
 
-- id     0124
+- id     0110
   from   inventory:Duration.^methods
   cell   atan2("a") | Duration.new(1)
   code   (Duration.new(1)).atan2("a")
@@ -1081,7 +965,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → 1.5707963267948966e0
 
-- id     0125
+- id     0111
   from   inventory:Duration.^methods
   cell   atan2(Any) | Duration.new(1)
   code   (Duration.new(1)).atan2(Any)
@@ -1089,7 +973,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → 1.5707963267948966e0
 
-- id     0126
+- id     0112
   from   inventory:Duration.^methods
   cell   atan2(0) | Duration.new(0)
   code   (Duration.new(0)).atan2(0)
@@ -1098,7 +982,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0127
+- id     0113
   from   inventory:Duration.^methods
   cell   atan2(1) | Duration.new(0)
   code   (Duration.new(0)).atan2(1)
@@ -1107,7 +991,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0128
+- id     0114
   from   inventory:Duration.^methods
   cell   atan2(-1) | Duration.new(0)
   code   (Duration.new(0)).atan2(-1)
@@ -1116,7 +1000,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 3.141592653589793e0
   oracle rakupp-3.14.0 → 3.141592653589793e0
 
-- id     0129
+- id     0115
   from   inventory:Duration.^methods
   cell   atan2("a") | Duration.new(0)
   code   (Duration.new(0)).atan2("a")
@@ -1124,7 +1008,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → 0e0
 
-- id     0130
+- id     0116
   from   inventory:Duration.^methods
   cell   atan2(Any) | Duration.new(0)
   code   (Duration.new(0)).atan2(Any)
@@ -1132,7 +1016,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → 0e0
 
-- id     0131
+- id     0117
   from   inventory:Duration.^methods
   cell   atanh | Duration.new(1)
   code   (Duration.new(1)).atanh
@@ -1141,7 +1025,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → Inf
 
-- id     0132
+- id     0118
   from   inventory:Duration.^methods
   cell   atanh | Duration.new(0)
   code   (Duration.new(0)).atanh
@@ -1150,7 +1034,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0133
+- id     0119
   from   inventory:Duration.^methods
   cell   bless | Duration.new(1)
   code   (Duration.new(1)).bless
@@ -1159,7 +1043,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(0.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0134
+- id     0120
   from   inventory:Duration.^methods
   cell   bless | Duration.new(0)
   code   (Duration.new(0)).bless
@@ -1168,7 +1052,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(0.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0135
+- id     0121
   from   inventory:Duration.^methods
   cell   byte | Duration.new(1)
   code   (Duration.new(1)).byte
@@ -1177,7 +1061,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0136
+- id     0122
   from   inventory:Duration.^methods
   cell   byte | Duration.new(0)
   code   (Duration.new(0)).byte
@@ -1186,7 +1070,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0137
+- id     0123
   from   inventory:Duration.^methods
   cell   cache | Duration.new(1)
   code   (Duration.new(1)).cache
@@ -1195,7 +1079,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → $(Duration.new(1.0),)
   oracle rakupp-3.14.0 → $(1e0,)
 
-- id     0138
+- id     0124
   from   inventory:Duration.^methods
   cell   cache | Duration.new(0)
   code   (Duration.new(0)).cache
@@ -1204,7 +1088,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → $(Duration.new(0.0),)
   oracle rakupp-3.14.0 → $(0e0,)
 
-- id     0139
+- id     0125
   from   inventory:Duration.^methods
   cell   can(0) | Duration.new(1)
   code   (Duration.new(1)).can(0)
@@ -1212,7 +1096,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0140
+- id     0126
   from   inventory:Duration.^methods
   cell   can(1) | Duration.new(1)
   code   (Duration.new(1)).can(1)
@@ -1220,7 +1104,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0141
+- id     0127
   from   inventory:Duration.^methods
   cell   can(-1) | Duration.new(1)
   code   (Duration.new(1)).can(-1)
@@ -1228,7 +1112,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0142
+- id     0128
   from   inventory:Duration.^methods
   cell   can("a") | Duration.new(1)
   code   (Duration.new(1)).can("a")
@@ -1237,7 +1121,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0143
+- id     0129
   from   inventory:Duration.^methods
   cell   can(Any) | Duration.new(1)
   code   (Duration.new(1)).can(Any)
@@ -1245,7 +1129,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0144
+- id     0130
   from   inventory:Duration.^methods
   cell   can(0) | Duration.new(0)
   code   (Duration.new(0)).can(0)
@@ -1253,7 +1137,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0145
+- id     0131
   from   inventory:Duration.^methods
   cell   can(1) | Duration.new(0)
   code   (Duration.new(0)).can(1)
@@ -1261,7 +1145,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0146
+- id     0132
   from   inventory:Duration.^methods
   cell   can(-1) | Duration.new(0)
   code   (Duration.new(0)).can(-1)
@@ -1269,7 +1153,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0147
+- id     0133
   from   inventory:Duration.^methods
   cell   can("a") | Duration.new(0)
   code   (Duration.new(0)).can("a")
@@ -1278,7 +1162,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0148
+- id     0134
   from   inventory:Duration.^methods
   cell   can(Any) | Duration.new(0)
   code   (Duration.new(0)).can(Any)
@@ -1286,7 +1170,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0149
+- id     0135
   from   inventory:Duration.^methods
   cell   ceiling | Duration.new(1)
   code   (Duration.new(1)).ceiling
@@ -1295,7 +1179,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0150
+- id     0136
   from   inventory:Duration.^methods
   cell   ceiling | Duration.new(0)
   code   (Duration.new(0)).ceiling
@@ -1304,7 +1188,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0151
+- id     0137
   from   inventory:Duration.^methods
   cell   chars | Duration.new(1)
   code   (Duration.new(1)).chars
@@ -1313,7 +1197,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0152
+- id     0138
   from   inventory:Duration.^methods
   cell   chars | Duration.new(0)
   code   (Duration.new(0)).chars
@@ -1322,7 +1206,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0153
+- id     0139
   from   inventory:Duration.^methods
   cell   chomp(0) | Duration.new(1)
   code   (Duration.new(1)).chomp(0)
@@ -1331,7 +1215,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0154
+- id     0140
   from   inventory:Duration.^methods
   cell   chomp(1) | Duration.new(1)
   code   (Duration.new(1)).chomp(1)
@@ -1340,7 +1224,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → "1"
 
-- id     0155
+- id     0141
   from   inventory:Duration.^methods
   cell   chomp(-1) | Duration.new(1)
   code   (Duration.new(1)).chomp(-1)
@@ -1349,7 +1233,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0156
+- id     0142
   from   inventory:Duration.^methods
   cell   chomp("a") | Duration.new(1)
   code   (Duration.new(1)).chomp("a")
@@ -1358,7 +1242,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0157
+- id     0143
   from   inventory:Duration.^methods
   cell   chomp(Any) | Duration.new(1)
   code   (Duration.new(1)).chomp(Any)
@@ -1366,7 +1250,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "1"
 
-- id     0158
+- id     0144
   from   inventory:Duration.^methods
   cell   chomp(0) | Duration.new(0)
   code   (Duration.new(0)).chomp(0)
@@ -1375,7 +1259,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → "0"
 
-- id     0159
+- id     0145
   from   inventory:Duration.^methods
   cell   chomp(1) | Duration.new(0)
   code   (Duration.new(0)).chomp(1)
@@ -1384,7 +1268,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0160
+- id     0146
   from   inventory:Duration.^methods
   cell   chomp(-1) | Duration.new(0)
   code   (Duration.new(0)).chomp(-1)
@@ -1393,7 +1277,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0161
+- id     0147
   from   inventory:Duration.^methods
   cell   chomp("a") | Duration.new(0)
   code   (Duration.new(0)).chomp("a")
@@ -1402,7 +1286,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0162
+- id     0148
   from   inventory:Duration.^methods
   cell   chomp(Any) | Duration.new(0)
   code   (Duration.new(0)).chomp(Any)
@@ -1410,7 +1294,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "0"
 
-- id     0163
+- id     0149
   from   inventory:Duration.^methods
   cell   chr | Duration.new(1)
   code   (Duration.new(1)).chr
@@ -1419,7 +1303,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "\x[1]"
   oracle rakupp-3.14.0 → ""
 
-- id     0164
+- id     0150
   from   inventory:Duration.^methods
   cell   chr | Duration.new(0)
   code   (Duration.new(0)).chr
@@ -1428,7 +1312,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "\0"
   oracle rakupp-3.14.0 → "\0"
 
-- id     0165
+- id     0151
   from   inventory:Duration.^methods
   cell   chrs | Duration.new(1)
   code   (Duration.new(1)).chrs
@@ -1436,7 +1320,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::TypeCheck
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0166
+- id     0152
   from   inventory:Duration.^methods
   cell   chrs | Duration.new(0)
   code   (Duration.new(0)).chrs
@@ -1444,7 +1328,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::TypeCheck
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0167
+- id     0153
   from   inventory:Duration.^methods
   cell   cis | Duration.new(1)
   code   (Duration.new(1)).cis
@@ -1453,7 +1337,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
   oracle rakupp-3.14.0 → <0.5403023058681398+0.8414709848078965i>
 
-- id     0168
+- id     0154
   from   inventory:Duration.^methods
   cell   cis | Duration.new(0)
   code   (Duration.new(0)).cis
@@ -1462,7 +1346,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → <1+0i>
   oracle rakupp-3.14.0 → <1+0i>
 
-- id     0169
+- id     0155
   from   inventory:Duration.^methods
   cell   codes | Duration.new(1)
   code   (Duration.new(1)).codes
@@ -1471,7 +1355,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0170
+- id     0156
   from   inventory:Duration.^methods
   cell   codes | Duration.new(0)
   code   (Duration.new(0)).codes
@@ -1480,7 +1364,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0171
+- id     0157
   from   inventory:Duration.^methods
   cell   conj | Duration.new(1)
   code   (Duration.new(1)).conj
@@ -1489,7 +1373,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(1.0)
   oracle rakupp-3.14.0 → 1e0
 
-- id     0172
+- id     0158
   from   inventory:Duration.^methods
   cell   conj | Duration.new(0)
   code   (Duration.new(0)).conj
@@ -1498,7 +1382,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(0.0)
   oracle rakupp-3.14.0 → 0e0
 
-- id     0173
+- id     0159
   from   inventory:Duration.^methods
   cell   cos | Duration.new(1)
   code   (Duration.new(1)).cos
@@ -1507,7 +1391,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0.5403023058681398e0
   oracle rakupp-3.14.0 → 0.5403023058681398e0
 
-- id     0174
+- id     0160
   from   inventory:Duration.^methods
   cell   cos | Duration.new(0)
   code   (Duration.new(0)).cos
@@ -1516,7 +1400,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → 1e0
 
-- id     0175
+- id     0161
   from   inventory:Duration.^methods
   cell   cosec | Duration.new(1)
   code   (Duration.new(1)).cosec
@@ -1525,7 +1409,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1.1883951057781212e0
   oracle rakupp-3.14.0 → 1.1883951057781212e0
 
-- id     0176
+- id     0162
   from   inventory:Duration.^methods
   cell   cosec | Duration.new(0)
   code   (Duration.new(0)).cosec
@@ -1534,7 +1418,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → Inf
 
-- id     0177
+- id     0163
   from   inventory:Duration.^methods
   cell   cosech | Duration.new(1)
   code   (Duration.new(1)).cosech
@@ -1543,7 +1427,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0.8509181282393216e0
   oracle rakupp-3.14.0 → 0.8509181282393216e0
 
-- id     0178
+- id     0164
   from   inventory:Duration.^methods
   cell   cosech | Duration.new(0)
   code   (Duration.new(0)).cosech
@@ -1552,7 +1436,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → Inf
 
-- id     0179
+- id     0165
   from   inventory:Duration.^methods
   cell   cosh | Duration.new(1)
   code   (Duration.new(1)).cosh
@@ -1561,7 +1445,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1.5430806348152437e0
   oracle rakupp-3.14.0 → 1.5430806348152437e0
 
-- id     0180
+- id     0166
   from   inventory:Duration.^methods
   cell   cosh | Duration.new(0)
   code   (Duration.new(0)).cosh
@@ -1570,7 +1454,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → 1e0
 
-- id     0181
+- id     0167
   from   inventory:Duration.^methods
   cell   cotan | Duration.new(1)
   code   (Duration.new(1)).cotan
@@ -1579,7 +1463,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0.6420926159343308e0
   oracle rakupp-3.14.0 → 0.6420926159343308e0
 
-- id     0182
+- id     0168
   from   inventory:Duration.^methods
   cell   cotan | Duration.new(0)
   code   (Duration.new(0)).cotan
@@ -1588,7 +1472,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → Inf
 
-- id     0183
+- id     0169
   from   inventory:Duration.^methods
   cell   cotanh | Duration.new(1)
   code   (Duration.new(1)).cotanh
@@ -1597,7 +1481,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1.3130352854993315e0
   oracle rakupp-3.14.0 → 1.3130352854993315e0
 
-- id     0184
+- id     0170
   from   inventory:Duration.^methods
   cell   cotanh | Duration.new(0)
   code   (Duration.new(0)).cotanh
@@ -1606,7 +1490,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → Inf
 
-- id     0185
+- id     0171
   from   inventory:Duration.^methods
   cell   does(0) | Duration.new(1)
   code   (Duration.new(1)).does(0)
@@ -1615,7 +1499,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0186
+- id     0172
   from   inventory:Duration.^methods
   cell   does(1) | Duration.new(1)
   code   (Duration.new(1)).does(1)
@@ -1624,7 +1508,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0187
+- id     0173
   from   inventory:Duration.^methods
   cell   does(-1) | Duration.new(1)
   code   (Duration.new(1)).does(-1)
@@ -1633,7 +1517,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0188
+- id     0174
   from   inventory:Duration.^methods
   cell   does("a") | Duration.new(1)
   code   (Duration.new(1)).does("a")
@@ -1642,7 +1526,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0189
+- id     0175
   from   inventory:Duration.^methods
   cell   does(Any) | Duration.new(1)
   code   (Duration.new(1)).does(Any)
@@ -1651,7 +1535,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0190
+- id     0176
   from   inventory:Duration.^methods
   cell   does(0) | Duration.new(0)
   code   (Duration.new(0)).does(0)
@@ -1660,7 +1544,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0191
+- id     0177
   from   inventory:Duration.^methods
   cell   does(1) | Duration.new(0)
   code   (Duration.new(0)).does(1)
@@ -1669,7 +1553,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0192
+- id     0178
   from   inventory:Duration.^methods
   cell   does(-1) | Duration.new(0)
   code   (Duration.new(0)).does(-1)
@@ -1678,7 +1562,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0193
+- id     0179
   from   inventory:Duration.^methods
   cell   does("a") | Duration.new(0)
   code   (Duration.new(0)).does("a")
@@ -1687,7 +1571,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0194
+- id     0180
   from   inventory:Duration.^methods
   cell   does(Any) | Duration.new(0)
   code   (Duration.new(0)).does(Any)
@@ -1696,7 +1580,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0195
+- id     0181
   from   inventory:Duration.^methods
   cell   fc | Duration.new(1)
   code   (Duration.new(1)).fc
@@ -1705,7 +1589,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0196
+- id     0182
   from   inventory:Duration.^methods
   cell   fc | Duration.new(0)
   code   (Duration.new(0)).fc
@@ -1714,7 +1598,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0197
+- id     0183
   from   inventory:Duration.^methods
   cell   flip | Duration.new(1)
   code   (Duration.new(1)).flip
@@ -1723,7 +1607,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0198
+- id     0184
   from   inventory:Duration.^methods
   cell   flip | Duration.new(0)
   code   (Duration.new(0)).flip
@@ -1732,7 +1616,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0199
+- id     0185
   from   inventory:Duration.^methods
   cell   floor | Duration.new(1)
   code   (Duration.new(1)).floor
@@ -1741,7 +1625,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0200
+- id     0186
   from   inventory:Duration.^methods
   cell   floor | Duration.new(0)
   code   (Duration.new(0)).floor
@@ -1750,7 +1634,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0201
+- id     0187
   from   inventory:Duration.^methods
   cell   from-posix-nanos(0) | Duration.new(1)
   code   (Duration.new(1)).from-posix-nanos(0)
@@ -1758,7 +1642,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0202
+- id     0188
   from   inventory:Duration.^methods
   cell   from-posix-nanos(1) | Duration.new(1)
   code   (Duration.new(1)).from-posix-nanos(1)
@@ -1766,7 +1650,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0203
+- id     0189
   from   inventory:Duration.^methods
   cell   from-posix-nanos(-1) | Duration.new(1)
   code   (Duration.new(1)).from-posix-nanos(-1)
@@ -1774,7 +1658,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0204
+- id     0190
   from   inventory:Duration.^methods
   cell   from-posix-nanos("a") | Duration.new(1)
   code   (Duration.new(1)).from-posix-nanos("a")
@@ -1782,7 +1666,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0205
+- id     0191
   from   inventory:Duration.^methods
   cell   from-posix-nanos(Any) | Duration.new(1)
   code   (Duration.new(1)).from-posix-nanos(Any)
@@ -1790,7 +1674,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0206
+- id     0192
   from   inventory:Duration.^methods
   cell   from-posix-nanos(0) | Duration.new(0)
   code   (Duration.new(0)).from-posix-nanos(0)
@@ -1798,7 +1682,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0207
+- id     0193
   from   inventory:Duration.^methods
   cell   from-posix-nanos(1) | Duration.new(0)
   code   (Duration.new(0)).from-posix-nanos(1)
@@ -1806,7 +1690,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0208
+- id     0194
   from   inventory:Duration.^methods
   cell   from-posix-nanos(-1) | Duration.new(0)
   code   (Duration.new(0)).from-posix-nanos(-1)
@@ -1814,7 +1698,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0209
+- id     0195
   from   inventory:Duration.^methods
   cell   from-posix-nanos("a") | Duration.new(0)
   code   (Duration.new(0)).from-posix-nanos("a")
@@ -1822,7 +1706,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0210
+- id     0196
   from   inventory:Duration.^methods
   cell   from-posix-nanos(Any) | Duration.new(0)
   code   (Duration.new(0)).from-posix-nanos(Any)
@@ -1830,7 +1714,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0211
+- id     0197
   from   inventory:Duration.^methods
   cell   indent(0) | Duration.new(1)
   code   (Duration.new(1)).indent(0)
@@ -1839,7 +1723,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0212
+- id     0198
   from   inventory:Duration.^methods
   cell   indent(1) | Duration.new(1)
   code   (Duration.new(1)).indent(1)
@@ -1848,7 +1732,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → " 1"
   oracle rakupp-3.14.0 → " 1"
 
-- id     0213
+- id     0199
   from   inventory:Duration.^methods
   cell   indent(-1) | Duration.new(1)
   code   (Duration.new(1)).indent(-1)
@@ -1857,7 +1741,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0214
+- id     0200
   from   inventory:Duration.^methods
   cell   indent("a") | Duration.new(1)
   code   (Duration.new(1)).indent("a")
@@ -1865,7 +1749,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → "1"
 
-- id     0215
+- id     0201
   from   inventory:Duration.^methods
   cell   indent(Any) | Duration.new(1)
   code   (Duration.new(1)).indent(Any)
@@ -1874,7 +1758,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0216
+- id     0202
   from   inventory:Duration.^methods
   cell   indent(0) | Duration.new(0)
   code   (Duration.new(0)).indent(0)
@@ -1883,7 +1767,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0217
+- id     0203
   from   inventory:Duration.^methods
   cell   indent(1) | Duration.new(0)
   code   (Duration.new(0)).indent(1)
@@ -1892,7 +1776,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → " 0"
   oracle rakupp-3.14.0 → " 0"
 
-- id     0218
+- id     0204
   from   inventory:Duration.^methods
   cell   indent(-1) | Duration.new(0)
   code   (Duration.new(0)).indent(-1)
@@ -1901,7 +1785,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0219
+- id     0205
   from   inventory:Duration.^methods
   cell   indent("a") | Duration.new(0)
   code   (Duration.new(0)).indent("a")
@@ -1909,7 +1793,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → "0"
 
-- id     0220
+- id     0206
   from   inventory:Duration.^methods
   cell   indent(Any) | Duration.new(0)
   code   (Duration.new(0)).indent(Any)
@@ -1918,7 +1802,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0221
+- id     0207
   from   inventory:Duration.^methods
   cell   int | Duration.new(1)
   code   (Duration.new(1)).int
@@ -1927,7 +1811,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0222
+- id     0208
   from   inventory:Duration.^methods
   cell   int | Duration.new(0)
   code   (Duration.new(0)).int
@@ -1936,7 +1820,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0223
+- id     0209
   from   inventory:Duration.^methods
   cell   int16 | Duration.new(1)
   code   (Duration.new(1)).int16
@@ -1945,7 +1829,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0224
+- id     0210
   from   inventory:Duration.^methods
   cell   int16 | Duration.new(0)
   code   (Duration.new(0)).int16
@@ -1954,7 +1838,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0225
+- id     0211
   from   inventory:Duration.^methods
   cell   int32 | Duration.new(1)
   code   (Duration.new(1)).int32
@@ -1963,7 +1847,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0226
+- id     0212
   from   inventory:Duration.^methods
   cell   int32 | Duration.new(0)
   code   (Duration.new(0)).int32
@@ -1972,7 +1856,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0227
+- id     0213
   from   inventory:Duration.^methods
   cell   int64 | Duration.new(1)
   code   (Duration.new(1)).int64
@@ -1981,7 +1865,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0228
+- id     0214
   from   inventory:Duration.^methods
   cell   int64 | Duration.new(0)
   code   (Duration.new(0)).int64
@@ -1990,7 +1874,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0229
+- id     0215
   from   inventory:Duration.^methods
   cell   int8 | Duration.new(1)
   code   (Duration.new(1)).int8
@@ -1999,7 +1883,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0230
+- id     0216
   from   inventory:Duration.^methods
   cell   int8 | Duration.new(0)
   code   (Duration.new(0)).int8
@@ -2008,7 +1892,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0231
+- id     0217
   from   inventory:Duration.^methods
   cell   is-generic | Duration.new(1)
   code   (Duration.new(1)).is-generic
@@ -2017,7 +1901,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0232
+- id     0218
   from   inventory:Duration.^methods
   cell   is-generic | Duration.new(0)
   code   (Duration.new(0)).is-generic
@@ -2026,7 +1910,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0233
+- id     0219
   from   inventory:Duration.^methods
   cell   is-prime | Duration.new(1)
   code   (Duration.new(1)).is-prime
@@ -2038,7 +1922,7 @@ cols     Duration.new(1) | Duration.new(0)
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0234
+- id     0220
   from   inventory:Duration.^methods
   cell   is-prime | Duration.new(0)
   code   (Duration.new(0)).is-prime
@@ -2050,7 +1934,7 @@ cols     Duration.new(1) | Duration.new(0)
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0235
+- id     0221
   from   inventory:Duration.^methods
   cell   isNaN | Duration.new(1)
   code   (Duration.new(1)).isNaN
@@ -2062,7 +1946,7 @@ cols     Duration.new(1) | Duration.new(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0236
+- id     0222
   from   inventory:Duration.^methods
   cell   isNaN | Duration.new(0)
   code   (Duration.new(0)).isNaN
@@ -2074,7 +1958,7 @@ cols     Duration.new(1) | Duration.new(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0237
+- id     0223
   from   inventory:Duration.^methods
   cell   item | Duration.new(1)
   code   (Duration.new(1)).item
@@ -2086,7 +1970,7 @@ cols     Duration.new(1) | Duration.new(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0238
+- id     0224
   from   inventory:Duration.^methods
   cell   item | Duration.new(0)
   code   (Duration.new(0)).item
@@ -2098,7 +1982,7 @@ cols     Duration.new(1) | Duration.new(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0239
+- id     0225
   from   inventory:Duration.^methods
   cell   join(0) | Duration.new(1)
   code   (Duration.new(1)).join(0)
@@ -2110,7 +1994,7 @@ cols     Duration.new(1) | Duration.new(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0240
+- id     0226
   from   inventory:Duration.^methods
   cell   join(1) | Duration.new(1)
   code   (Duration.new(1)).join(1)
@@ -2122,7 +2006,7 @@ cols     Duration.new(1) | Duration.new(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0241
+- id     0227
   from   inventory:Duration.^methods
   cell   join(-1) | Duration.new(1)
   code   (Duration.new(1)).join(-1)
@@ -2134,7 +2018,7 @@ cols     Duration.new(1) | Duration.new(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0242
+- id     0228
   from   inventory:Duration.^methods
   cell   join("a") | Duration.new(1)
   code   (Duration.new(1)).join("a")
@@ -2146,7 +2030,7 @@ cols     Duration.new(1) | Duration.new(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0243
+- id     0229
   from   inventory:Duration.^methods
   cell   join(Any) | Duration.new(1)
   code   (Duration.new(1)).join(Any)
@@ -2154,7 +2038,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → "1"
 
-- id     0244
+- id     0230
   from   inventory:Duration.^methods
   cell   join(0) | Duration.new(0)
   code   (Duration.new(0)).join(0)
@@ -2163,7 +2047,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0245
+- id     0231
   from   inventory:Duration.^methods
   cell   join(1) | Duration.new(0)
   code   (Duration.new(0)).join(1)
@@ -2172,7 +2056,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0246
+- id     0232
   from   inventory:Duration.^methods
   cell   join(-1) | Duration.new(0)
   code   (Duration.new(0)).join(-1)
@@ -2181,7 +2065,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0247
+- id     0233
   from   inventory:Duration.^methods
   cell   join("a") | Duration.new(0)
   code   (Duration.new(0)).join("a")
@@ -2190,7 +2074,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0248
+- id     0234
   from   inventory:Duration.^methods
   cell   join(Any) | Duration.new(0)
   code   (Duration.new(0)).join(Any)
@@ -2198,7 +2082,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → "0"
 
-- id     0249
+- id     0235
   from   inventory:Duration.^methods
   cell   lazy-if(0) | Duration.new(1)
   code   (Duration.new(1)).lazy-if(0)
@@ -2207,7 +2091,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(1.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0250
+- id     0236
   from   inventory:Duration.^methods
   cell   lazy-if(1) | Duration.new(1)
   code   (Duration.new(1)).lazy-if(1)
@@ -2216,7 +2100,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(1.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0251
+- id     0237
   from   inventory:Duration.^methods
   cell   lazy-if(-1) | Duration.new(1)
   code   (Duration.new(1)).lazy-if(-1)
@@ -2225,7 +2109,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(1.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0252
+- id     0238
   from   inventory:Duration.^methods
   cell   lazy-if("a") | Duration.new(1)
   code   (Duration.new(1)).lazy-if("a")
@@ -2234,7 +2118,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(1.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0253
+- id     0239
   from   inventory:Duration.^methods
   cell   lazy-if(Any) | Duration.new(1)
   code   (Duration.new(1)).lazy-if(Any)
@@ -2243,7 +2127,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(1.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0254
+- id     0240
   from   inventory:Duration.^methods
   cell   lazy-if(0) | Duration.new(0)
   code   (Duration.new(0)).lazy-if(0)
@@ -2252,7 +2136,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(0.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0255
+- id     0241
   from   inventory:Duration.^methods
   cell   lazy-if(1) | Duration.new(0)
   code   (Duration.new(0)).lazy-if(1)
@@ -2261,7 +2145,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(0.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0256
+- id     0242
   from   inventory:Duration.^methods
   cell   lazy-if(-1) | Duration.new(0)
   code   (Duration.new(0)).lazy-if(-1)
@@ -2270,7 +2154,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(0.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0257
+- id     0243
   from   inventory:Duration.^methods
   cell   lazy-if("a") | Duration.new(0)
   code   (Duration.new(0)).lazy-if("a")
@@ -2279,7 +2163,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(0.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0258
+- id     0244
   from   inventory:Duration.^methods
   cell   lazy-if(Any) | Duration.new(0)
   code   (Duration.new(0)).lazy-if(Any)
@@ -2288,7 +2172,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(0.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0259
+- id     0245
   from   inventory:Duration.^methods
   cell   lc | Duration.new(1)
   code   (Duration.new(1)).lc
@@ -2297,7 +2181,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0260
+- id     0246
   from   inventory:Duration.^methods
   cell   lc | Duration.new(0)
   code   (Duration.new(0)).lc
@@ -2306,7 +2190,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0261
+- id     0247
   from   inventory:Duration.^methods
   cell   log10 | Duration.new(1)
   code   (Duration.new(1)).log10
@@ -2315,7 +2199,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0262
+- id     0248
   from   inventory:Duration.^methods
   cell   log10 | Duration.new(0)
   code   (Duration.new(0)).log10
@@ -2324,7 +2208,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → -Inf
   oracle rakupp-3.14.0 → -Inf
 
-- id     0263
+- id     0249
   from   inventory:Duration.^methods
   cell   log2 | Duration.new(1)
   code   (Duration.new(1)).log2
@@ -2333,7 +2217,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0264
+- id     0250
   from   inventory:Duration.^methods
   cell   log2 | Duration.new(0)
   code   (Duration.new(0)).log2
@@ -2342,7 +2226,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → -Inf
   oracle rakupp-3.14.0 → -Inf
 
-- id     0265
+- id     0251
   from   inventory:Duration.^methods
   cell   narrow | Duration.new(1)
   code   (Duration.new(1)).narrow
@@ -2351,7 +2235,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0266
+- id     0252
   from   inventory:Duration.^methods
   cell   narrow | Duration.new(0)
   code   (Duration.new(0)).narrow
@@ -2360,7 +2244,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0267
+- id     0253
   from   inventory:Duration.^methods
   cell   nl-out | Duration.new(1)
   code   (Duration.new(1)).nl-out
@@ -2369,7 +2253,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0268
+- id     0254
   from   inventory:Duration.^methods
   cell   nl-out | Duration.new(0)
   code   (Duration.new(0)).nl-out
@@ -2378,7 +2262,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0269
+- id     0255
   from   inventory:Duration.^methods
   cell   none | Duration.new(1)
   code   (Duration.new(1)).none
@@ -2387,7 +2271,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → none(Duration.new(1.0))
   oracle rakupp-3.14.0 → none(1e0)
 
-- id     0270
+- id     0256
   from   inventory:Duration.^methods
   cell   none | Duration.new(0)
   code   (Duration.new(0)).none
@@ -2396,7 +2280,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → none(Duration.new(0.0))
   oracle rakupp-3.14.0 → none(0e0)
 
-- id     0271
+- id     0257
   from   inventory:Duration.^methods
   cell   not | Duration.new(1)
   code   (Duration.new(1)).not
@@ -2405,7 +2289,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0272
+- id     0258
   from   inventory:Duration.^methods
   cell   not | Duration.new(0)
   code   (Duration.new(0)).not
@@ -2414,7 +2298,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0273
+- id     0259
   from   inventory:Duration.^methods
   cell   one | Duration.new(1)
   code   (Duration.new(1)).one
@@ -2423,7 +2307,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → one(Duration.new(1.0))
   oracle rakupp-3.14.0 → one(1e0)
 
-- id     0274
+- id     0260
   from   inventory:Duration.^methods
   cell   one | Duration.new(0)
   code   (Duration.new(0)).one
@@ -2432,7 +2316,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → one(Duration.new(0.0))
   oracle rakupp-3.14.0 → one(0e0)
 
-- id     0275
+- id     0261
   from   inventory:Duration.^methods
   cell   ord | Duration.new(1)
   code   (Duration.new(1)).ord
@@ -2441,7 +2325,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 49
   oracle rakupp-3.14.0 → 49
 
-- id     0276
+- id     0262
   from   inventory:Duration.^methods
   cell   ord | Duration.new(0)
   code   (Duration.new(0)).ord
@@ -2450,7 +2334,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 48
   oracle rakupp-3.14.0 → 48
 
-- id     0277
+- id     0263
   from   inventory:Duration.^methods
   cell   ords | Duration.new(1)
   code   (Duration.new(1)).ords
@@ -2459,7 +2343,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → $((49,).Seq)
   oracle rakupp-3.14.0 → $(49,).Seq
 
-- id     0278
+- id     0264
   from   inventory:Duration.^methods
   cell   ords | Duration.new(0)
   code   (Duration.new(0)).ords
@@ -2468,7 +2352,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → $((48,).Seq)
   oracle rakupp-3.14.0 → $(48,).Seq
 
-- id     0279
+- id     0265
   from   inventory:Duration.^methods
   cell   parse-names | Duration.new(1)
   code   (Duration.new(1)).parse-names
@@ -2476,7 +2360,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0280
+- id     0266
   from   inventory:Duration.^methods
   cell   parse-names | Duration.new(0)
   code   (Duration.new(0)).parse-names
@@ -2484,7 +2368,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0281
+- id     0267
   from   inventory:Duration.^methods
   cell   path | Duration.new(1)
   code   (Duration.new(1)).path
@@ -2493,7 +2377,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → IO::Path.new("1", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
   oracle rakupp-3.14.0 → "1"
 
-- id     0282
+- id     0268
   from   inventory:Duration.^methods
   cell   path | Duration.new(0)
   code   (Duration.new(0)).path
@@ -2502,7 +2386,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → IO::Path.new("0", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
   oracle rakupp-3.14.0 → "0"
 
-- id     0283
+- id     0269
   from   inventory:Duration.^methods
   cell   pred | Duration.new(1)
   code   (Duration.new(1)).pred
@@ -2511,7 +2395,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(0.0)
   oracle rakupp-3.14.0 → 0
 
-- id     0284
+- id     0270
   from   inventory:Duration.^methods
   cell   pred | Duration.new(0)
   code   (Duration.new(0)).pred
@@ -2520,7 +2404,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(-1.0)
   oracle rakupp-3.14.0 → -1
 
-- id     0285
+- id     0271
   from   inventory:Duration.^methods
   cell   rand | Duration.new(1)
   code   (Duration.new(1)).rand
@@ -2532,7 +2416,7 @@ cols     Duration.new(1) | Duration.new(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0286
+- id     0272
   from   inventory:Duration.^methods
   cell   rand | Duration.new(0)
   code   (Duration.new(0)).rand
@@ -2541,7 +2425,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0287
+- id     0273
   from   inventory:Duration.^methods
   cell   reverse | Duration.new(1)
   code   (Duration.new(1)).reverse
@@ -2550,7 +2434,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → $((Duration.new(1.0),).Seq)
   oracle rakupp-3.14.0 → $(1e0,).Seq
 
-- id     0288
+- id     0274
   from   inventory:Duration.^methods
   cell   reverse | Duration.new(0)
   code   (Duration.new(0)).reverse
@@ -2559,7 +2443,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → $((Duration.new(0.0),).Seq)
   oracle rakupp-3.14.0 → $(0e0,).Seq
 
-- id     0289
+- id     0275
   from   inventory:Duration.^methods
   cell   roots(0) | Duration.new(1)
   code   (Duration.new(1)).roots(0)
@@ -2568,7 +2452,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0290
+- id     0276
   from   inventory:Duration.^methods
   cell   roots(1) | Duration.new(1)
   code   (Duration.new(1)).roots(1)
@@ -2577,7 +2461,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → <1+0i>
   oracle rakupp-3.14.0 → $(<1+0i>,)
 
-- id     0291
+- id     0277
   from   inventory:Duration.^methods
   cell   roots(-1) | Duration.new(1)
   code   (Duration.new(1)).roots(-1)
@@ -2586,7 +2470,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0292
+- id     0278
   from   inventory:Duration.^methods
   cell   roots("a") | Duration.new(1)
   code   (Duration.new(1)).roots("a")
@@ -2594,7 +2478,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0293
+- id     0279
   from   inventory:Duration.^methods
   cell   roots(Any) | Duration.new(1)
   code   (Duration.new(1)).roots(Any)
@@ -2602,7 +2486,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0294
+- id     0280
   from   inventory:Duration.^methods
   cell   roots(0) | Duration.new(0)
   code   (Duration.new(0)).roots(0)
@@ -2611,7 +2495,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0295
+- id     0281
   from   inventory:Duration.^methods
   cell   roots(1) | Duration.new(0)
   code   (Duration.new(0)).roots(1)
@@ -2620,7 +2504,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → <0+0i>
   oracle rakupp-3.14.0 → $(<0+0i>,)
 
-- id     0296
+- id     0282
   from   inventory:Duration.^methods
   cell   roots(-1) | Duration.new(0)
   code   (Duration.new(0)).roots(-1)
@@ -2629,7 +2513,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0297
+- id     0283
   from   inventory:Duration.^methods
   cell   roots("a") | Duration.new(0)
   code   (Duration.new(0)).roots("a")
@@ -2637,7 +2521,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0298
+- id     0284
   from   inventory:Duration.^methods
   cell   roots(Any) | Duration.new(0)
   code   (Duration.new(0)).roots(Any)
@@ -2645,7 +2529,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0299
+- id     0285
   from   inventory:Duration.^methods
   cell   samecase(0) | Duration.new(1)
   code   (Duration.new(1)).samecase(0)
@@ -2654,7 +2538,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0300
+- id     0286
   from   inventory:Duration.^methods
   cell   samecase(1) | Duration.new(1)
   code   (Duration.new(1)).samecase(1)
@@ -2663,7 +2547,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0301
+- id     0287
   from   inventory:Duration.^methods
   cell   samecase(-1) | Duration.new(1)
   code   (Duration.new(1)).samecase(-1)
@@ -2672,7 +2556,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0302
+- id     0288
   from   inventory:Duration.^methods
   cell   samecase("a") | Duration.new(1)
   code   (Duration.new(1)).samecase("a")
@@ -2681,7 +2565,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0303
+- id     0289
   from   inventory:Duration.^methods
   cell   samecase(Any) | Duration.new(1)
   code   (Duration.new(1)).samecase(Any)
@@ -2689,7 +2573,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "1"
 
-- id     0304
+- id     0290
   from   inventory:Duration.^methods
   cell   samecase(0) | Duration.new(0)
   code   (Duration.new(0)).samecase(0)
@@ -2698,7 +2582,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0305
+- id     0291
   from   inventory:Duration.^methods
   cell   samecase(1) | Duration.new(0)
   code   (Duration.new(0)).samecase(1)
@@ -2707,7 +2591,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0306
+- id     0292
   from   inventory:Duration.^methods
   cell   samecase(-1) | Duration.new(0)
   code   (Duration.new(0)).samecase(-1)
@@ -2716,7 +2600,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0307
+- id     0293
   from   inventory:Duration.^methods
   cell   samecase("a") | Duration.new(0)
   code   (Duration.new(0)).samecase("a")
@@ -2725,7 +2609,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0308
+- id     0294
   from   inventory:Duration.^methods
   cell   samecase(Any) | Duration.new(0)
   code   (Duration.new(0)).samecase(Any)
@@ -2733,7 +2617,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "0"
 
-- id     0309
+- id     0295
   from   inventory:Duration.^methods
   cell   samemark(0) | Duration.new(1)
   code   (Duration.new(1)).samemark(0)
@@ -2742,7 +2626,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0310
+- id     0296
   from   inventory:Duration.^methods
   cell   samemark(1) | Duration.new(1)
   code   (Duration.new(1)).samemark(1)
@@ -2751,7 +2635,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0311
+- id     0297
   from   inventory:Duration.^methods
   cell   samemark(-1) | Duration.new(1)
   code   (Duration.new(1)).samemark(-1)
@@ -2760,7 +2644,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0312
+- id     0298
   from   inventory:Duration.^methods
   cell   samemark("a") | Duration.new(1)
   code   (Duration.new(1)).samemark("a")
@@ -2769,7 +2653,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0313
+- id     0299
   from   inventory:Duration.^methods
   cell   samemark(Any) | Duration.new(1)
   code   (Duration.new(1)).samemark(Any)
@@ -2777,7 +2661,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "1"
 
-- id     0314
+- id     0300
   from   inventory:Duration.^methods
   cell   samemark(0) | Duration.new(0)
   code   (Duration.new(0)).samemark(0)
@@ -2786,7 +2670,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0315
+- id     0301
   from   inventory:Duration.^methods
   cell   samemark(1) | Duration.new(0)
   code   (Duration.new(0)).samemark(1)
@@ -2795,7 +2679,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0316
+- id     0302
   from   inventory:Duration.^methods
   cell   samemark(-1) | Duration.new(0)
   code   (Duration.new(0)).samemark(-1)
@@ -2804,7 +2688,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0317
+- id     0303
   from   inventory:Duration.^methods
   cell   samemark("a") | Duration.new(0)
   code   (Duration.new(0)).samemark("a")
@@ -2813,7 +2697,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0318
+- id     0304
   from   inventory:Duration.^methods
   cell   samemark(Any) | Duration.new(0)
   code   (Duration.new(0)).samemark(Any)
@@ -2821,7 +2705,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "0"
 
-- id     0319
+- id     0305
   from   inventory:Duration.^methods
   cell   samespace(0) | Duration.new(1)
   code   (Duration.new(1)).samespace(0)
@@ -2830,7 +2714,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0320
+- id     0306
   from   inventory:Duration.^methods
   cell   samespace(1) | Duration.new(1)
   code   (Duration.new(1)).samespace(1)
@@ -2839,7 +2723,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0321
+- id     0307
   from   inventory:Duration.^methods
   cell   samespace(-1) | Duration.new(1)
   code   (Duration.new(1)).samespace(-1)
@@ -2848,7 +2732,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0322
+- id     0308
   from   inventory:Duration.^methods
   cell   samespace("a") | Duration.new(1)
   code   (Duration.new(1)).samespace("a")
@@ -2857,7 +2741,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0323
+- id     0309
   from   inventory:Duration.^methods
   cell   samespace(Any) | Duration.new(1)
   code   (Duration.new(1)).samespace(Any)
@@ -2865,7 +2749,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0324
+- id     0310
   from   inventory:Duration.^methods
   cell   samespace(0) | Duration.new(0)
   code   (Duration.new(0)).samespace(0)
@@ -2874,7 +2758,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0325
+- id     0311
   from   inventory:Duration.^methods
   cell   samespace(1) | Duration.new(0)
   code   (Duration.new(0)).samespace(1)
@@ -2883,7 +2767,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0326
+- id     0312
   from   inventory:Duration.^methods
   cell   samespace(-1) | Duration.new(0)
   code   (Duration.new(0)).samespace(-1)
@@ -2892,7 +2776,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0327
+- id     0313
   from   inventory:Duration.^methods
   cell   samespace("a") | Duration.new(0)
   code   (Duration.new(0)).samespace("a")
@@ -2901,7 +2785,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0328
+- id     0314
   from   inventory:Duration.^methods
   cell   samespace(Any) | Duration.new(0)
   code   (Duration.new(0)).samespace(Any)
@@ -2909,7 +2793,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0329
+- id     0315
   from   inventory:Duration.^methods
   cell   sec | Duration.new(1)
   code   (Duration.new(1)).sec
@@ -2918,7 +2802,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1.8508157176809255e0
   oracle rakupp-3.14.0 → 1.8508157176809255e0
 
-- id     0330
+- id     0316
   from   inventory:Duration.^methods
   cell   sec | Duration.new(0)
   code   (Duration.new(0)).sec
@@ -2927,7 +2811,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → 1e0
 
-- id     0331
+- id     0317
   from   inventory:Duration.^methods
   cell   sech | Duration.new(1)
   code   (Duration.new(1)).sech
@@ -2936,7 +2820,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0.6480542736638855e0
   oracle rakupp-3.14.0 → 0.6480542736638855e0
 
-- id     0332
+- id     0318
   from   inventory:Duration.^methods
   cell   sech | Duration.new(0)
   code   (Duration.new(0)).sech
@@ -2945,7 +2829,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → 1e0
 
-- id     0333
+- id     0319
   from   inventory:Duration.^methods
   cell   self | Duration.new(1)
   code   (Duration.new(1)).self
@@ -2954,7 +2838,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(1.0)
   oracle rakupp-3.14.0 → 1e0
 
-- id     0334
+- id     0320
   from   inventory:Duration.^methods
   cell   self | Duration.new(0)
   code   (Duration.new(0)).self
@@ -2963,97 +2847,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(0.0)
   oracle rakupp-3.14.0 → 0e0
 
-- id     0335
-  from   inventory:Duration.^methods
-  cell   set_why(0) | Duration.new(1)
-  code   (Duration.new(1)).set_why(0)
-  is     0
-  type   Int
-  oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0336
-  from   inventory:Duration.^methods
-  cell   set_why(1) | Duration.new(1)
-  code   (Duration.new(1)).set_why(1)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0337
-  from   inventory:Duration.^methods
-  cell   set_why(-1) | Duration.new(1)
-  code   (Duration.new(1)).set_why(-1)
-  is     -1
-  type   Int
-  oracle rakudo-2026.07 → -1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0338
-  from   inventory:Duration.^methods
-  cell   set_why("a") | Duration.new(1)
-  code   (Duration.new(1)).set_why("a")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0339
-  from   inventory:Duration.^methods
-  cell   set_why(Any) | Duration.new(1)
-  code   (Duration.new(1)).set_why(Any)
-  is     Any
-  type   Any
-  oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0340
-  from   inventory:Duration.^methods
-  cell   set_why(0) | Duration.new(0)
-  code   (Duration.new(0)).set_why(0)
-  is     0
-  type   Int
-  oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0341
-  from   inventory:Duration.^methods
-  cell   set_why(1) | Duration.new(0)
-  code   (Duration.new(0)).set_why(1)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0342
-  from   inventory:Duration.^methods
-  cell   set_why(-1) | Duration.new(0)
-  code   (Duration.new(0)).set_why(-1)
-  is     -1
-  type   Int
-  oracle rakudo-2026.07 → -1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0343
-  from   inventory:Duration.^methods
-  cell   set_why("a") | Duration.new(0)
-  code   (Duration.new(0)).set_why("a")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0344
-  from   inventory:Duration.^methods
-  cell   set_why(Any) | Duration.new(0)
-  code   (Duration.new(0)).set_why(Any)
-  is     Any
-  type   Any
-  oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0345
+- id     0321
   from   inventory:Duration.^methods
   cell   sign | Duration.new(1)
   code   (Duration.new(1)).sign
@@ -3062,7 +2856,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0346
+- id     0322
   from   inventory:Duration.^methods
   cell   sign | Duration.new(0)
   code   (Duration.new(0)).sign
@@ -3071,7 +2865,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0347
+- id     0323
   from   inventory:Duration.^methods
   cell   sin | Duration.new(1)
   code   (Duration.new(1)).sin
@@ -3080,7 +2874,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0.8414709848078965e0
   oracle rakupp-3.14.0 → 0.8414709848078965e0
 
-- id     0348
+- id     0324
   from   inventory:Duration.^methods
   cell   sin | Duration.new(0)
   code   (Duration.new(0)).sin
@@ -3089,7 +2883,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0349
+- id     0325
   from   inventory:Duration.^methods
   cell   sinh | Duration.new(1)
   code   (Duration.new(1)).sinh
@@ -3098,7 +2892,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1.1752011936438014e0
   oracle rakupp-3.14.0 → 1.1752011936438014e0
 
-- id     0350
+- id     0326
   from   inventory:Duration.^methods
   cell   sinh | Duration.new(0)
   code   (Duration.new(0)).sinh
@@ -3107,7 +2901,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0351
+- id     0327
   from   inventory:Duration.^methods
   cell   so | Duration.new(1)
   code   (Duration.new(1)).so
@@ -3116,7 +2910,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0352
+- id     0328
   from   inventory:Duration.^methods
   cell   so | Duration.new(0)
   code   (Duration.new(0)).so
@@ -3125,7 +2919,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0353
+- id     0329
   from   inventory:Duration.^methods
   cell   sqrt | Duration.new(1)
   code   (Duration.new(1)).sqrt
@@ -3134,7 +2928,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → 1e0
 
-- id     0354
+- id     0330
   from   inventory:Duration.^methods
   cell   sqrt | Duration.new(0)
   code   (Duration.new(0)).sqrt
@@ -3143,7 +2937,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0355
+- id     0331
   from   inventory:Duration.^methods
   cell   succ | Duration.new(1)
   code   (Duration.new(1)).succ
@@ -3152,7 +2946,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(2.0)
   oracle rakupp-3.14.0 → 2
 
-- id     0356
+- id     0332
   from   inventory:Duration.^methods
   cell   succ | Duration.new(0)
   code   (Duration.new(0)).succ
@@ -3161,7 +2955,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(1.0)
   oracle rakupp-3.14.0 → 1
 
-- id     0357
+- id     0333
   from   inventory:Duration.^methods
   cell   sum | Duration.new(1)
   code   (Duration.new(1)).sum
@@ -3170,7 +2964,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(1.0)
   oracle rakupp-3.14.0 → 1e0
 
-- id     0358
+- id     0334
   from   inventory:Duration.^methods
   cell   sum | Duration.new(0)
   code   (Duration.new(0)).sum
@@ -3179,7 +2973,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → Duration.new(0.0)
   oracle rakupp-3.14.0 → 0e0
 
-- id     0359
+- id     0335
   from   inventory:Duration.^methods
   cell   tai | Duration.new(1)
   code   (Duration.new(1)).tai
@@ -3188,7 +2982,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1.0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0360
+- id     0336
   from   inventory:Duration.^methods
   cell   tai | Duration.new(0)
   code   (Duration.new(0)).tai
@@ -3197,7 +2991,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0.0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0361
+- id     0337
   from   inventory:Duration.^methods
   cell   take | Duration.new(1)
   code   (Duration.new(1)).take
@@ -3205,7 +2999,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → 1e0
 
-- id     0362
+- id     0338
   from   inventory:Duration.^methods
   cell   take | Duration.new(0)
   code   (Duration.new(0)).take
@@ -3213,7 +3007,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → 0e0
 
-- id     0363
+- id     0339
   from   inventory:Duration.^methods
   cell   tan | Duration.new(1)
   code   (Duration.new(1)).tan
@@ -3222,7 +3016,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1.557407724654902e0
   oracle rakupp-3.14.0 → 1.557407724654902e0
 
-- id     0364
+- id     0340
   from   inventory:Duration.^methods
   cell   tan | Duration.new(0)
   code   (Duration.new(0)).tan
@@ -3231,7 +3025,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0365
+- id     0341
   from   inventory:Duration.^methods
   cell   tanh | Duration.new(1)
   code   (Duration.new(1)).tanh
@@ -3240,7 +3034,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0.7615941559557649e0
   oracle rakupp-3.14.0 → 0.7615941559557649e0
 
-- id     0366
+- id     0342
   from   inventory:Duration.^methods
   cell   tanh | Duration.new(0)
   code   (Duration.new(0)).tanh
@@ -3249,7 +3043,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0367
+- id     0343
   from   inventory:Duration.^methods
   cell   tc | Duration.new(1)
   code   (Duration.new(1)).tc
@@ -3258,7 +3052,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0368
+- id     0344
   from   inventory:Duration.^methods
   cell   tc | Duration.new(0)
   code   (Duration.new(0)).tc
@@ -3267,7 +3061,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0369
+- id     0345
   from   inventory:Duration.^methods
   cell   tclc | Duration.new(1)
   code   (Duration.new(1)).tclc
@@ -3276,7 +3070,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0370
+- id     0346
   from   inventory:Duration.^methods
   cell   tclc | Duration.new(0)
   code   (Duration.new(0)).tclc
@@ -3285,7 +3079,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0371
+- id     0347
   from   inventory:Duration.^methods
   cell   to-nanos | Duration.new(1)
   code   (Duration.new(1)).to-nanos
@@ -3294,7 +3088,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1000000000
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0372
+- id     0348
   from   inventory:Duration.^methods
   cell   to-nanos | Duration.new(0)
   code   (Duration.new(0)).to-nanos
@@ -3303,7 +3097,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0373
+- id     0349
   from   inventory:Duration.^methods
   cell   trim | Duration.new(1)
   code   (Duration.new(1)).trim
@@ -3312,7 +3106,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0374
+- id     0350
   from   inventory:Duration.^methods
   cell   trim | Duration.new(0)
   code   (Duration.new(0)).trim
@@ -3321,7 +3115,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0375
+- id     0351
   from   inventory:Duration.^methods
   cell   trim-leading | Duration.new(1)
   code   (Duration.new(1)).trim-leading
@@ -3330,7 +3124,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0376
+- id     0352
   from   inventory:Duration.^methods
   cell   trim-leading | Duration.new(0)
   code   (Duration.new(0)).trim-leading
@@ -3339,7 +3133,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0377
+- id     0353
   from   inventory:Duration.^methods
   cell   trim-trailing | Duration.new(1)
   code   (Duration.new(1)).trim-trailing
@@ -3348,7 +3142,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0378
+- id     0354
   from   inventory:Duration.^methods
   cell   trim-trailing | Duration.new(0)
   code   (Duration.new(0)).trim-trailing
@@ -3357,7 +3151,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0379
+- id     0355
   from   inventory:Duration.^methods
   cell   truncate | Duration.new(1)
   code   (Duration.new(1)).truncate
@@ -3366,7 +3160,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0380
+- id     0356
   from   inventory:Duration.^methods
   cell   truncate | Duration.new(0)
   code   (Duration.new(0)).truncate
@@ -3375,7 +3169,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0381
+- id     0357
   from   inventory:Duration.^methods
   cell   uc | Duration.new(1)
   code   (Duration.new(1)).uc
@@ -3384,7 +3178,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0382
+- id     0358
   from   inventory:Duration.^methods
   cell   uc | Duration.new(0)
   code   (Duration.new(0)).uc
@@ -3393,7 +3187,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → "0"
 
-- id     0383
+- id     0359
   from   inventory:Duration.^methods
   cell   uint | Duration.new(1)
   code   (Duration.new(1)).uint
@@ -3402,7 +3196,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0384
+- id     0360
   from   inventory:Duration.^methods
   cell   uint | Duration.new(0)
   code   (Duration.new(0)).uint
@@ -3411,7 +3205,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0385
+- id     0361
   from   inventory:Duration.^methods
   cell   uint16 | Duration.new(1)
   code   (Duration.new(1)).uint16
@@ -3420,7 +3214,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0386
+- id     0362
   from   inventory:Duration.^methods
   cell   uint16 | Duration.new(0)
   code   (Duration.new(0)).uint16
@@ -3429,7 +3223,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0387
+- id     0363
   from   inventory:Duration.^methods
   cell   uint32 | Duration.new(1)
   code   (Duration.new(1)).uint32
@@ -3438,7 +3232,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0388
+- id     0364
   from   inventory:Duration.^methods
   cell   uint32 | Duration.new(0)
   code   (Duration.new(0)).uint32
@@ -3447,7 +3241,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0389
+- id     0365
   from   inventory:Duration.^methods
   cell   uint64 | Duration.new(1)
   code   (Duration.new(1)).uint64
@@ -3456,7 +3250,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0390
+- id     0366
   from   inventory:Duration.^methods
   cell   uint64 | Duration.new(0)
   code   (Duration.new(0)).uint64
@@ -3465,7 +3259,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0391
+- id     0367
   from   inventory:Duration.^methods
   cell   uint8 | Duration.new(1)
   code   (Duration.new(1)).uint8
@@ -3474,7 +3268,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0392
+- id     0368
   from   inventory:Duration.^methods
   cell   uint8 | Duration.new(0)
   code   (Duration.new(0)).uint8
@@ -3483,7 +3277,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0393
+- id     0369
   from   inventory:Duration.^methods
   cell   uniname | Duration.new(1)
   code   (Duration.new(1)).uniname
@@ -3492,7 +3286,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "DIGIT ONE"
   oracle rakupp-3.14.0 → "DIGIT ONE"
 
-- id     0394
+- id     0370
   from   inventory:Duration.^methods
   cell   uniname | Duration.new(0)
   code   (Duration.new(0)).uniname
@@ -3501,7 +3295,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "DIGIT ZERO"
   oracle rakupp-3.14.0 → "DIGIT ZERO"
 
-- id     0395
+- id     0371
   from   inventory:Duration.^methods
   cell   uninames | Duration.new(1)
   code   (Duration.new(1)).uninames
@@ -3510,7 +3304,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → $(("DIGIT ONE",).Seq)
   oracle rakupp-3.14.0 → $("DIGIT ONE",).Seq
 
-- id     0396
+- id     0372
   from   inventory:Duration.^methods
   cell   uninames | Duration.new(0)
   code   (Duration.new(0)).uninames
@@ -3519,7 +3313,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → $(("DIGIT ZERO",).Seq)
   oracle rakupp-3.14.0 → $("DIGIT ZERO",).Seq
 
-- id     0397
+- id     0373
   from   inventory:Duration.^methods
   cell   uniparse | Duration.new(1)
   code   (Duration.new(1)).uniparse
@@ -3527,7 +3321,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0398
+- id     0374
   from   inventory:Duration.^methods
   cell   uniparse | Duration.new(0)
   code   (Duration.new(0)).uniparse
@@ -3535,7 +3329,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0399
+- id     0375
   from   inventory:Duration.^methods
   cell   uniprop(0) | Duration.new(1)
   code   (Duration.new(1)).uniprop(0)
@@ -3543,7 +3337,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0400
+- id     0376
   from   inventory:Duration.^methods
   cell   uniprop(1) | Duration.new(1)
   code   (Duration.new(1)).uniprop(1)
@@ -3551,7 +3345,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0401
+- id     0377
   from   inventory:Duration.^methods
   cell   uniprop(-1) | Duration.new(1)
   code   (Duration.new(1)).uniprop(-1)
@@ -3559,7 +3353,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0402
+- id     0378
   from   inventory:Duration.^methods
   cell   uniprop("a") | Duration.new(1)
   code   (Duration.new(1)).uniprop("a")
@@ -3568,7 +3362,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0403
+- id     0379
   from   inventory:Duration.^methods
   cell   uniprop(Any) | Duration.new(1)
   code   (Duration.new(1)).uniprop(Any)
@@ -3576,7 +3370,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0404
+- id     0380
   from   inventory:Duration.^methods
   cell   uniprop(0) | Duration.new(0)
   code   (Duration.new(0)).uniprop(0)
@@ -3584,7 +3378,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0405
+- id     0381
   from   inventory:Duration.^methods
   cell   uniprop(1) | Duration.new(0)
   code   (Duration.new(0)).uniprop(1)
@@ -3592,7 +3386,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0406
+- id     0382
   from   inventory:Duration.^methods
   cell   uniprop(-1) | Duration.new(0)
   code   (Duration.new(0)).uniprop(-1)
@@ -3600,7 +3394,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0407
+- id     0383
   from   inventory:Duration.^methods
   cell   uniprop("a") | Duration.new(0)
   code   (Duration.new(0)).uniprop("a")
@@ -3609,7 +3403,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0408
+- id     0384
   from   inventory:Duration.^methods
   cell   uniprop(Any) | Duration.new(0)
   code   (Duration.new(0)).uniprop(Any)
@@ -3617,7 +3411,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0409
+- id     0385
   from   inventory:Duration.^methods
   cell   uniprops(0) | Duration.new(1)
   code   (Duration.new(1)).uniprops(0)
@@ -3625,7 +3419,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0410
+- id     0386
   from   inventory:Duration.^methods
   cell   uniprops(1) | Duration.new(1)
   code   (Duration.new(1)).uniprops(1)
@@ -3633,7 +3427,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0411
+- id     0387
   from   inventory:Duration.^methods
   cell   uniprops(-1) | Duration.new(1)
   code   (Duration.new(1)).uniprops(-1)
@@ -3641,7 +3435,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0412
+- id     0388
   from   inventory:Duration.^methods
   cell   uniprops("a") | Duration.new(1)
   code   (Duration.new(1)).uniprops("a")
@@ -3650,7 +3444,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → $(("0",).Seq)
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0413
+- id     0389
   from   inventory:Duration.^methods
   cell   uniprops(Any) | Duration.new(1)
   code   (Duration.new(1)).uniprops(Any)
@@ -3658,7 +3452,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0414
+- id     0390
   from   inventory:Duration.^methods
   cell   uniprops(0) | Duration.new(0)
   code   (Duration.new(0)).uniprops(0)
@@ -3666,7 +3460,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0415
+- id     0391
   from   inventory:Duration.^methods
   cell   uniprops(1) | Duration.new(0)
   code   (Duration.new(0)).uniprops(1)
@@ -3674,7 +3468,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0416
+- id     0392
   from   inventory:Duration.^methods
   cell   uniprops(-1) | Duration.new(0)
   code   (Duration.new(0)).uniprops(-1)
@@ -3682,7 +3476,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0417
+- id     0393
   from   inventory:Duration.^methods
   cell   uniprops("a") | Duration.new(0)
   code   (Duration.new(0)).uniprops("a")
@@ -3691,7 +3485,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → $(("0",).Seq)
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0418
+- id     0394
   from   inventory:Duration.^methods
   cell   uniprops(Any) | Duration.new(0)
   code   (Duration.new(0)).uniprops(Any)
@@ -3699,7 +3493,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0419
+- id     0395
   from   inventory:Duration.^methods
   cell   unival | Duration.new(1)
   code   (Duration.new(1)).unival
@@ -3708,7 +3502,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → 1
 
-- id     0420
+- id     0396
   from   inventory:Duration.^methods
   cell   unival | Duration.new(0)
   code   (Duration.new(0)).unival
@@ -3717,7 +3511,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → 0
 
-- id     0421
+- id     0397
   from   inventory:Duration.^methods
   cell   univals | Duration.new(1)
   code   (Duration.new(1)).univals
@@ -3726,7 +3520,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → $((1,).Seq)
   oracle rakupp-3.14.0 → $(1,)
 
-- id     0422
+- id     0398
   from   inventory:Duration.^methods
   cell   univals | Duration.new(0)
   code   (Duration.new(0)).univals
@@ -3735,7 +3529,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → $((0,).Seq)
   oracle rakupp-3.14.0 → $(0,)
 
-- id     0423
+- id     0399
   from   inventory:Duration.^methods
   cell   unpolar(0) | Duration.new(1)
   code   (Duration.new(1)).unpolar(0)
@@ -3744,7 +3538,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → <1+0i>
   oracle rakupp-3.14.0 → <1+0i>
 
-- id     0424
+- id     0400
   from   inventory:Duration.^methods
   cell   unpolar(1) | Duration.new(1)
   code   (Duration.new(1)).unpolar(1)
@@ -3753,7 +3547,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
   oracle rakupp-3.14.0 → <0.5403023058681398+0.8414709848078965i>
 
-- id     0425
+- id     0401
   from   inventory:Duration.^methods
   cell   unpolar(-1) | Duration.new(1)
   code   (Duration.new(1)).unpolar(-1)
@@ -3762,7 +3556,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → <0.5403023058681398-0.8414709848078965i>
   oracle rakupp-3.14.0 → <0.5403023058681398-0.8414709848078965i>
 
-- id     0426
+- id     0402
   from   inventory:Duration.^methods
   cell   unpolar("a") | Duration.new(1)
   code   (Duration.new(1)).unpolar("a")
@@ -3770,7 +3564,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → <1+0i>
 
-- id     0427
+- id     0403
   from   inventory:Duration.^methods
   cell   unpolar(Any) | Duration.new(1)
   code   (Duration.new(1)).unpolar(Any)
@@ -3778,7 +3572,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → <1+0i>
 
-- id     0428
+- id     0404
   from   inventory:Duration.^methods
   cell   unpolar(0) | Duration.new(0)
   code   (Duration.new(0)).unpolar(0)
@@ -3787,7 +3581,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → <0+0i>
   oracle rakupp-3.14.0 → <0+0i>
 
-- id     0429
+- id     0405
   from   inventory:Duration.^methods
   cell   unpolar(1) | Duration.new(0)
   code   (Duration.new(0)).unpolar(1)
@@ -3796,7 +3590,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → <0+0i>
   oracle rakupp-3.14.0 → <0+0i>
 
-- id     0430
+- id     0406
   from   inventory:Duration.^methods
   cell   unpolar(-1) | Duration.new(0)
   code   (Duration.new(0)).unpolar(-1)
@@ -3805,7 +3599,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → <0-0i>
   oracle rakupp-3.14.0 → <0-0i>
 
-- id     0431
+- id     0407
   from   inventory:Duration.^methods
   cell   unpolar("a") | Duration.new(0)
   code   (Duration.new(0)).unpolar("a")
@@ -3813,7 +3607,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → <0+0i>
 
-- id     0432
+- id     0408
   from   inventory:Duration.^methods
   cell   unpolar(Any) | Duration.new(0)
   code   (Duration.new(0)).unpolar(Any)
@@ -3821,7 +3615,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → <0+0i>
 
-- id     0433
+- id     0409
   from   inventory:Duration.^methods
   cell   wordcase | Duration.new(1)
   code   (Duration.new(1)).wordcase
@@ -3830,7 +3624,7 @@ cols     Duration.new(1) | Duration.new(0)
   oracle rakudo-2026.07 → "1"
   oracle rakupp-3.14.0 → "1"
 
-- id     0434
+- id     0410
   from   inventory:Duration.^methods
   cell   wordcase | Duration.new(0)
   code   (Duration.new(0)).wordcase

@@ -93,6 +93,24 @@ from, but nothing in the suite depends on it.
 | `lib/`, `bin/` | the harness, written in Raku |
 | `docs/` | [the plan](docs/PLAN.md), [the file format](docs/FORMAT.md) |
 
+## Regenerating
+
+Generators run on **rakupp**, and every `.grid` file in this repository was
+produced by it:
+
+```sh
+rakupp gen/methods.raku  --engines=raku,/path/to/rakupp --jobs=2
+rakupp gen/ladder.raku   --engines=raku,/path/to/rakupp
+rakupp gen/laws.raku     --engines=raku,/path/to/rakupp
+rakupp gen/molecules.raku --engines=raku,/path/to/rakupp
+rakupp gen/syntax.raku   --engines=raku,/path/to/rakupp
+```
+
+`--engines` lists the implementations to record observations from; the first is
+the reference. Observations are cached per implementation under `tmp/`, so
+widening a type table or a ladder costs only the new cells. Keep `--jobs` low if
+you are using the machine — the probes are CPU-bound.
+
 ## Running it
 
 ```sh

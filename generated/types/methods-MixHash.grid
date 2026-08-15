@@ -1,0 +1,1331 @@
+atom     methods/MixHash
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     Bool | CREATE | Capture | DEFINITE | HOW | INSTANTIATE-GENERIC | Int | Map | Num | Numeric | OBJECTIFIER | POPULATE | RAW-HASH | REPR | Real | VAR | WHAT | WHERE | WHICHIFY | WHO | all | any | bless | cache | can | chrs | clone | default | does | is-generic | item | join | keyof | lazy-if | nl-out | none | not | of | one | reverse | self | so | sum | take | total
+cols     MixHash.new(1) | MixHash.new
+
+- id     0001
+  from   inventory:MixHash.^methods
+  cell   Bool | MixHash.new(1)
+  code   (MixHash.new(1)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0002
+  from   inventory:MixHash.^methods
+  cell   Bool | MixHash.new
+  code   (MixHash.new).Bool
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0003
+  from   inventory:MixHash.^methods
+  cell   CREATE | MixHash.new(1)
+  code   (MixHash.new(1)).CREATE
+  is     UNRENDERABLE
+  type   MixHash
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0004
+  from   inventory:MixHash.^methods
+  cell   CREATE | MixHash.new
+  code   (MixHash.new).CREATE
+  is     UNRENDERABLE
+  type   MixHash
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0005
+  from   inventory:MixHash.^methods
+  cell   Capture | MixHash.new(1)
+  code   (MixHash.new(1)).Capture
+  is     \("1" => 1)
+  type   Capture
+  oracle rakudo-2026.07 → \("1" => 1)
+  oracle rakupp-3.14.0 → \(:1(1))
+
+- id     0006
+  from   inventory:MixHash.^methods
+  cell   Capture | MixHash.new
+  code   (MixHash.new).Capture
+  is     \()
+  type   Capture
+  oracle rakudo-2026.07 → \()
+  oracle rakupp-3.14.0 → \()
+
+- id     0007
+  from   inventory:MixHash.^methods
+  cell   DEFINITE | MixHash.new(1)
+  code   (MixHash.new(1)).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0008
+  from   inventory:MixHash.^methods
+  cell   DEFINITE | MixHash.new
+  code   (MixHash.new).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0009
+  from   inventory:MixHash.^methods
+  cell   HOW | MixHash.new(1)
+  code   (MixHash.new(1)).HOW
+  is     UNRENDERABLE
+  type   Perl6::Metamodel::ClassHOW+{<anon>}
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0010
+  from   inventory:MixHash.^methods
+  cell   HOW | MixHash.new
+  code   (MixHash.new).HOW
+  is     UNRENDERABLE
+  type   Perl6::Metamodel::ClassHOW+{<anon>}
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0011
+  from   inventory:MixHash.^methods
+  cell   INSTANTIATE-GENERIC(0) | MixHash.new(1)
+  code   (MixHash.new(1)).INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0012
+  from   inventory:MixHash.^methods
+  cell   INSTANTIATE-GENERIC(1) | MixHash.new(1)
+  code   (MixHash.new(1)).INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0013
+  from   inventory:MixHash.^methods
+  cell   INSTANTIATE-GENERIC(-1) | MixHash.new(1)
+  code   (MixHash.new(1)).INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0014
+  from   inventory:MixHash.^methods
+  cell   INSTANTIATE-GENERIC("a") | MixHash.new(1)
+  code   (MixHash.new(1)).INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0015
+  from   inventory:MixHash.^methods
+  cell   INSTANTIATE-GENERIC(Any) | MixHash.new(1)
+  code   (MixHash.new(1)).INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0016
+  from   inventory:MixHash.^methods
+  cell   INSTANTIATE-GENERIC(0) | MixHash.new
+  code   (MixHash.new).INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0017
+  from   inventory:MixHash.^methods
+  cell   INSTANTIATE-GENERIC(1) | MixHash.new
+  code   (MixHash.new).INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0018
+  from   inventory:MixHash.^methods
+  cell   INSTANTIATE-GENERIC(-1) | MixHash.new
+  code   (MixHash.new).INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0019
+  from   inventory:MixHash.^methods
+  cell   INSTANTIATE-GENERIC("a") | MixHash.new
+  code   (MixHash.new).INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0020
+  from   inventory:MixHash.^methods
+  cell   INSTANTIATE-GENERIC(Any) | MixHash.new
+  code   (MixHash.new).INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0021
+  from   inventory:MixHash.^methods
+  cell   Int | MixHash.new(1)
+  code   (MixHash.new(1)).Int
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0022
+  from   inventory:MixHash.^methods
+  cell   Int | MixHash.new
+  code   (MixHash.new).Int
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0023
+  from   inventory:MixHash.^methods
+  cell   Map | MixHash.new(1)
+  code   (MixHash.new(1)).Map
+  is     $(Map.new(("1" => 1)))
+  type   Map
+  oracle rakudo-2026.07 → $(Map.new(("1" => 1)))
+  oracle rakupp-3.14.0 → Map.new(("1" => 1))
+
+- id     0024
+  from   inventory:MixHash.^methods
+  cell   Map | MixHash.new
+  code   (MixHash.new).Map
+  is     $(Map.new)
+  type   Map
+  oracle rakudo-2026.07 → $(Map.new)
+  oracle rakupp-3.14.0 → Map.new(())
+
+- id     0025
+  from   inventory:MixHash.^methods
+  cell   Num | MixHash.new(1)
+  code   (MixHash.new(1)).Num
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0026
+  from   inventory:MixHash.^methods
+  cell   Num | MixHash.new
+  code   (MixHash.new).Num
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0027
+  from   inventory:MixHash.^methods
+  cell   Numeric | MixHash.new(1)
+  code   (MixHash.new(1)).Numeric
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0028
+  from   inventory:MixHash.^methods
+  cell   Numeric | MixHash.new
+  code   (MixHash.new).Numeric
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0029
+  from   inventory:MixHash.^methods
+  cell   OBJECTIFIER | MixHash.new(1)
+  code   (MixHash.new(1)).OBJECTIFIER
+  is     -> $value { #`(Block|6183100949296) ... }
+  type   Block
+  oracle rakudo-2026.07 → -> $value { #`(Block|6183100949296) ... }
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0030
+  from   inventory:MixHash.^methods
+  cell   OBJECTIFIER | MixHash.new
+  code   (MixHash.new).OBJECTIFIER
+  is     -> $value { #`(Block|6183100949656) ... }
+  type   Block
+  oracle rakudo-2026.07 → -> $value { #`(Block|6183100949656) ... }
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0031
+  from   inventory:MixHash.^methods
+  cell   POPULATE(0) | MixHash.new(1)
+  code   (MixHash.new(1)).POPULATE(0)
+  is     (1=>1).MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → (1=>1).MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0032
+  from   inventory:MixHash.^methods
+  cell   POPULATE(1) | MixHash.new(1)
+  code   (MixHash.new(1)).POPULATE(1)
+  is     (1=>1).MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → (1=>1).MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0033
+  from   inventory:MixHash.^methods
+  cell   POPULATE(-1) | MixHash.new(1)
+  code   (MixHash.new(1)).POPULATE(-1)
+  is     (1=>1).MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → (1=>1).MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0034
+  from   inventory:MixHash.^methods
+  cell   POPULATE("a") | MixHash.new(1)
+  code   (MixHash.new(1)).POPULATE("a")
+  is     (1=>1).MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → (1=>1).MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0035
+  from   inventory:MixHash.^methods
+  cell   POPULATE(Any) | MixHash.new(1)
+  code   (MixHash.new(1)).POPULATE(Any)
+  is     (1=>1).MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → (1=>1).MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0036
+  from   inventory:MixHash.^methods
+  cell   POPULATE(0) | MixHash.new
+  code   (MixHash.new).POPULATE(0)
+  is     ().MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → ().MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0037
+  from   inventory:MixHash.^methods
+  cell   POPULATE(1) | MixHash.new
+  code   (MixHash.new).POPULATE(1)
+  is     ().MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → ().MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0038
+  from   inventory:MixHash.^methods
+  cell   POPULATE(-1) | MixHash.new
+  code   (MixHash.new).POPULATE(-1)
+  is     ().MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → ().MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0039
+  from   inventory:MixHash.^methods
+  cell   POPULATE("a") | MixHash.new
+  code   (MixHash.new).POPULATE("a")
+  is     ().MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → ().MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0040
+  from   inventory:MixHash.^methods
+  cell   POPULATE(Any) | MixHash.new
+  code   (MixHash.new).POPULATE(Any)
+  is     ().MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → ().MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0041
+  from   inventory:MixHash.^methods
+  cell   RAW-HASH | MixHash.new(1)
+  code   (MixHash.new(1)).RAW-HASH
+  is     Int|1
+  type   1
+  oracle rakudo-2026.07 → Int|1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0042
+  from   inventory:MixHash.^methods
+  cell   RAW-HASH | MixHash.new
+  code   (MixHash.new).RAW-HASH
+  is     
+  type   Rakudo::Internals::IterationSet
+  oracle rakudo-2026.07 → 
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0043
+  from   inventory:MixHash.^methods
+  cell   REPR | MixHash.new(1)
+  code   (MixHash.new(1)).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0044
+  from   inventory:MixHash.^methods
+  cell   REPR | MixHash.new
+  code   (MixHash.new).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0045
+  from   inventory:MixHash.^methods
+  cell   Real | MixHash.new(1)
+  code   (MixHash.new(1)).Real
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0046
+  from   inventory:MixHash.^methods
+  cell   Real | MixHash.new
+  code   (MixHash.new).Real
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0047
+  from   inventory:MixHash.^methods
+  cell   VAR | MixHash.new(1)
+  code   (MixHash.new(1)).VAR
+  is     (1=>1).MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → (1=>1).MixHash
+  oracle rakupp-3.14.0 → (1=>1).MixHash
+
+- id     0048
+  from   inventory:MixHash.^methods
+  cell   VAR | MixHash.new
+  code   (MixHash.new).VAR
+  is     ().MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → ().MixHash
+  oracle rakupp-3.14.0 → ().MixHash
+
+- id     0049
+  from   inventory:MixHash.^methods
+  cell   WHAT | MixHash.new(1)
+  code   (MixHash.new(1)).WHAT
+  is     MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → MixHash
+  oracle rakupp-3.14.0 → MixHash
+
+- id     0050
+  from   inventory:MixHash.^methods
+  cell   WHAT | MixHash.new
+  code   (MixHash.new).WHAT
+  is     MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → MixHash
+  oracle rakupp-3.14.0 → MixHash
+
+- id     0051
+  from   inventory:MixHash.^methods
+  cell   WHERE | MixHash.new(1)
+  code   (MixHash.new(1)).WHERE
+  is     6182886062240
+  type   Int
+  oracle rakudo-2026.07 → 6182886062240
+  oracle rakupp-3.14.0 → 140512944279112
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0052
+  from   inventory:MixHash.^methods
+  cell   WHERE | MixHash.new
+  code   (MixHash.new).WHERE
+  is     6182886405920
+  type   Int
+  oracle rakudo-2026.07 → 6182886405920
+  oracle rakupp-3.14.0 → 140512944279944
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0053
+  from   inventory:MixHash.^methods
+  cell   WHICHIFY(0) | MixHash.new(1)
+  code   (MixHash.new(1)).WHICHIFY(0)
+  is     ValueObjAt.new("Int|0")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Int|0")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0054
+  from   inventory:MixHash.^methods
+  cell   WHICHIFY(1) | MixHash.new(1)
+  code   (MixHash.new(1)).WHICHIFY(1)
+  is     ValueObjAt.new("Int|1")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Int|1")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0055
+  from   inventory:MixHash.^methods
+  cell   WHICHIFY(-1) | MixHash.new(1)
+  code   (MixHash.new(1)).WHICHIFY(-1)
+  is     ValueObjAt.new("Int|-1")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Int|-1")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0056
+  from   inventory:MixHash.^methods
+  cell   WHICHIFY("a") | MixHash.new(1)
+  code   (MixHash.new(1)).WHICHIFY("a")
+  is     ValueObjAt.new("Str|a")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Str|a")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0057
+  from   inventory:MixHash.^methods
+  cell   WHICHIFY(Any) | MixHash.new(1)
+  code   (MixHash.new(1)).WHICHIFY(Any)
+  is     ValueObjAt.new("Any|U6182893511032")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Any|U6182893511032")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0058
+  from   inventory:MixHash.^methods
+  cell   WHICHIFY(0) | MixHash.new
+  code   (MixHash.new).WHICHIFY(0)
+  is     ValueObjAt.new("Int|0")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Int|0")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0059
+  from   inventory:MixHash.^methods
+  cell   WHICHIFY(1) | MixHash.new
+  code   (MixHash.new).WHICHIFY(1)
+  is     ValueObjAt.new("Int|1")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Int|1")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0060
+  from   inventory:MixHash.^methods
+  cell   WHICHIFY(-1) | MixHash.new
+  code   (MixHash.new).WHICHIFY(-1)
+  is     ValueObjAt.new("Int|-1")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Int|-1")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0061
+  from   inventory:MixHash.^methods
+  cell   WHICHIFY("a") | MixHash.new
+  code   (MixHash.new).WHICHIFY("a")
+  is     ValueObjAt.new("Str|a")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Str|a")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0062
+  from   inventory:MixHash.^methods
+  cell   WHICHIFY(Any) | MixHash.new
+  code   (MixHash.new).WHICHIFY(Any)
+  is     ValueObjAt.new("Any|U6182893511032")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Any|U6182893511032")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0063
+  from   inventory:MixHash.^methods
+  cell   WHO | MixHash.new(1)
+  code   (MixHash.new(1)).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+
+- id     0064
+  from   inventory:MixHash.^methods
+  cell   WHO | MixHash.new
+  code   (MixHash.new).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+
+- id     0065
+  from   inventory:MixHash.^methods
+  cell   all | MixHash.new(1)
+  code   (MixHash.new(1)).all
+  is     all(1 => 1)
+  type   Junction
+  oracle rakudo-2026.07 → all(1 => 1)
+  oracle rakupp-3.14.0 → all(1 => 1)
+
+- id     0066
+  from   inventory:MixHash.^methods
+  cell   all | MixHash.new
+  code   (MixHash.new).all
+  is     all()
+  type   Junction
+  oracle rakudo-2026.07 → all()
+  oracle rakupp-3.14.0 → all()
+
+- id     0067
+  from   inventory:MixHash.^methods
+  cell   any | MixHash.new(1)
+  code   (MixHash.new(1)).any
+  is     any(1 => 1)
+  type   Junction
+  oracle rakudo-2026.07 → any(1 => 1)
+  oracle rakupp-3.14.0 → any(1 => 1)
+
+- id     0068
+  from   inventory:MixHash.^methods
+  cell   any | MixHash.new
+  code   (MixHash.new).any
+  is     any()
+  type   Junction
+  oracle rakudo-2026.07 → any()
+  oracle rakupp-3.14.0 → any()
+
+- id     0069
+  from   inventory:MixHash.^methods
+  cell   bless | MixHash.new(1)
+  code   (MixHash.new(1)).bless
+  is     UNRENDERABLE
+  type   MixHash
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0070
+  from   inventory:MixHash.^methods
+  cell   bless | MixHash.new
+  code   (MixHash.new).bless
+  is     UNRENDERABLE
+  type   MixHash
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0071
+  from   inventory:MixHash.^methods
+  cell   cache | MixHash.new(1)
+  code   (MixHash.new(1)).cache
+  is     $(1 => 1,)
+  type   List
+  oracle rakudo-2026.07 → $(1 => 1,)
+  oracle rakupp-3.14.0 → $(1 => 1,)
+
+- id     0072
+  from   inventory:MixHash.^methods
+  cell   cache | MixHash.new
+  code   (MixHash.new).cache
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0073
+  from   inventory:MixHash.^methods
+  cell   can(0) | MixHash.new(1)
+  code   (MixHash.new(1)).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0074
+  from   inventory:MixHash.^methods
+  cell   can(1) | MixHash.new(1)
+  code   (MixHash.new(1)).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0075
+  from   inventory:MixHash.^methods
+  cell   can(-1) | MixHash.new(1)
+  code   (MixHash.new(1)).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0076
+  from   inventory:MixHash.^methods
+  cell   can("a") | MixHash.new(1)
+  code   (MixHash.new(1)).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0077
+  from   inventory:MixHash.^methods
+  cell   can(Any) | MixHash.new(1)
+  code   (MixHash.new(1)).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0078
+  from   inventory:MixHash.^methods
+  cell   can(0) | MixHash.new
+  code   (MixHash.new).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0079
+  from   inventory:MixHash.^methods
+  cell   can(1) | MixHash.new
+  code   (MixHash.new).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0080
+  from   inventory:MixHash.^methods
+  cell   can(-1) | MixHash.new
+  code   (MixHash.new).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0081
+  from   inventory:MixHash.^methods
+  cell   can("a") | MixHash.new
+  code   (MixHash.new).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0082
+  from   inventory:MixHash.^methods
+  cell   can(Any) | MixHash.new
+  code   (MixHash.new).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0083
+  from   inventory:MixHash.^methods
+  cell   chrs | MixHash.new(1)
+  code   (MixHash.new(1)).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "\0"
+
+- id     0084
+  from   inventory:MixHash.^methods
+  cell   chrs | MixHash.new
+  code   (MixHash.new).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ""
+
+- id     0085
+  from   inventory:MixHash.^methods
+  cell   clone | MixHash.new(1)
+  code   (MixHash.new(1)).clone
+  is     (1=>1).MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → (1=>1).MixHash
+  oracle rakupp-3.14.0 → (1=>1).MixHash
+
+- id     0086
+  from   inventory:MixHash.^methods
+  cell   clone | MixHash.new
+  code   (MixHash.new).clone
+  is     ().MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → ().MixHash
+  oracle rakupp-3.14.0 → ().MixHash
+
+- id     0087
+  from   inventory:MixHash.^methods
+  cell   default | MixHash.new(1)
+  code   (MixHash.new(1)).default
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0088
+  from   inventory:MixHash.^methods
+  cell   default | MixHash.new
+  code   (MixHash.new).default
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0089
+  from   inventory:MixHash.^methods
+  cell   does(0) | MixHash.new(1)
+  code   (MixHash.new(1)).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0090
+  from   inventory:MixHash.^methods
+  cell   does(1) | MixHash.new(1)
+  code   (MixHash.new(1)).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0091
+  from   inventory:MixHash.^methods
+  cell   does(-1) | MixHash.new(1)
+  code   (MixHash.new(1)).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0092
+  from   inventory:MixHash.^methods
+  cell   does("a") | MixHash.new(1)
+  code   (MixHash.new(1)).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0093
+  from   inventory:MixHash.^methods
+  cell   does(Any) | MixHash.new(1)
+  code   (MixHash.new(1)).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0094
+  from   inventory:MixHash.^methods
+  cell   does(0) | MixHash.new
+  code   (MixHash.new).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0095
+  from   inventory:MixHash.^methods
+  cell   does(1) | MixHash.new
+  code   (MixHash.new).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0096
+  from   inventory:MixHash.^methods
+  cell   does(-1) | MixHash.new
+  code   (MixHash.new).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0097
+  from   inventory:MixHash.^methods
+  cell   does("a") | MixHash.new
+  code   (MixHash.new).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0098
+  from   inventory:MixHash.^methods
+  cell   does(Any) | MixHash.new
+  code   (MixHash.new).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0099
+  from   inventory:MixHash.^methods
+  cell   is-generic | MixHash.new(1)
+  code   (MixHash.new(1)).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0100
+  from   inventory:MixHash.^methods
+  cell   is-generic | MixHash.new
+  code   (MixHash.new).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0101
+  from   inventory:MixHash.^methods
+  cell   item | MixHash.new(1)
+  code   (MixHash.new(1)).item
+  is     (1=>1).MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → (1=>1).MixHash
+  oracle rakupp-3.14.0 → (1=>1).MixHash
+
+- id     0102
+  from   inventory:MixHash.^methods
+  cell   item | MixHash.new
+  code   (MixHash.new).item
+  is     ().MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → ().MixHash
+  oracle rakupp-3.14.0 → ().MixHash
+
+- id     0103
+  from   inventory:MixHash.^methods
+  cell   join(0) | MixHash.new(1)
+  code   (MixHash.new(1)).join(0)
+  is     "1\t1"
+  type   Str
+  oracle rakudo-2026.07 → "1\t1"
+  oracle rakupp-3.14.0 → "1\t1"
+
+- id     0104
+  from   inventory:MixHash.^methods
+  cell   join(1) | MixHash.new(1)
+  code   (MixHash.new(1)).join(1)
+  is     "1\t1"
+  type   Str
+  oracle rakudo-2026.07 → "1\t1"
+  oracle rakupp-3.14.0 → "1\t1"
+
+- id     0105
+  from   inventory:MixHash.^methods
+  cell   join(-1) | MixHash.new(1)
+  code   (MixHash.new(1)).join(-1)
+  is     "1\t1"
+  type   Str
+  oracle rakudo-2026.07 → "1\t1"
+  oracle rakupp-3.14.0 → "1\t1"
+
+- id     0106
+  from   inventory:MixHash.^methods
+  cell   join("a") | MixHash.new(1)
+  code   (MixHash.new(1)).join("a")
+  is     "1\t1"
+  type   Str
+  oracle rakudo-2026.07 → "1\t1"
+  oracle rakupp-3.14.0 → "1\t1"
+
+- id     0107
+  from   inventory:MixHash.^methods
+  cell   join(Any) | MixHash.new(1)
+  code   (MixHash.new(1)).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → "1\t1"
+
+- id     0108
+  from   inventory:MixHash.^methods
+  cell   join(0) | MixHash.new
+  code   (MixHash.new).join(0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0109
+  from   inventory:MixHash.^methods
+  cell   join(1) | MixHash.new
+  code   (MixHash.new).join(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0110
+  from   inventory:MixHash.^methods
+  cell   join(-1) | MixHash.new
+  code   (MixHash.new).join(-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0111
+  from   inventory:MixHash.^methods
+  cell   join("a") | MixHash.new
+  code   (MixHash.new).join("a")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0112
+  from   inventory:MixHash.^methods
+  cell   join(Any) | MixHash.new
+  code   (MixHash.new).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ""
+
+- id     0113
+  from   inventory:MixHash.^methods
+  cell   keyof | MixHash.new(1)
+  code   (MixHash.new(1)).keyof
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-3.14.0 → Mu
+
+- id     0114
+  from   inventory:MixHash.^methods
+  cell   keyof | MixHash.new
+  code   (MixHash.new).keyof
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-3.14.0 → Mu
+
+- id     0115
+  from   inventory:MixHash.^methods
+  cell   lazy-if(0) | MixHash.new(1)
+  code   (MixHash.new(1)).lazy-if(0)
+  is     (1=>1).MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → (1=>1).MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0116
+  from   inventory:MixHash.^methods
+  cell   lazy-if(1) | MixHash.new(1)
+  code   (MixHash.new(1)).lazy-if(1)
+  is     (1=>1).MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → (1=>1).MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0117
+  from   inventory:MixHash.^methods
+  cell   lazy-if(-1) | MixHash.new(1)
+  code   (MixHash.new(1)).lazy-if(-1)
+  is     (1=>1).MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → (1=>1).MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0118
+  from   inventory:MixHash.^methods
+  cell   lazy-if("a") | MixHash.new(1)
+  code   (MixHash.new(1)).lazy-if("a")
+  is     (1=>1).MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → (1=>1).MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0119
+  from   inventory:MixHash.^methods
+  cell   lazy-if(Any) | MixHash.new(1)
+  code   (MixHash.new(1)).lazy-if(Any)
+  is     (1=>1).MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → (1=>1).MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0120
+  from   inventory:MixHash.^methods
+  cell   lazy-if(0) | MixHash.new
+  code   (MixHash.new).lazy-if(0)
+  is     ().MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → ().MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0121
+  from   inventory:MixHash.^methods
+  cell   lazy-if(1) | MixHash.new
+  code   (MixHash.new).lazy-if(1)
+  is     ().MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → ().MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0122
+  from   inventory:MixHash.^methods
+  cell   lazy-if(-1) | MixHash.new
+  code   (MixHash.new).lazy-if(-1)
+  is     ().MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → ().MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0123
+  from   inventory:MixHash.^methods
+  cell   lazy-if("a") | MixHash.new
+  code   (MixHash.new).lazy-if("a")
+  is     ().MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → ().MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0124
+  from   inventory:MixHash.^methods
+  cell   lazy-if(Any) | MixHash.new
+  code   (MixHash.new).lazy-if(Any)
+  is     ().MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → ().MixHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0125
+  from   inventory:MixHash.^methods
+  cell   nl-out | MixHash.new(1)
+  code   (MixHash.new(1)).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0126
+  from   inventory:MixHash.^methods
+  cell   nl-out | MixHash.new
+  code   (MixHash.new).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0127
+  from   inventory:MixHash.^methods
+  cell   none | MixHash.new(1)
+  code   (MixHash.new(1)).none
+  is     none(1 => 1)
+  type   Junction
+  oracle rakudo-2026.07 → none(1 => 1)
+  oracle rakupp-3.14.0 → none(1 => 1)
+
+- id     0128
+  from   inventory:MixHash.^methods
+  cell   none | MixHash.new
+  code   (MixHash.new).none
+  is     none()
+  type   Junction
+  oracle rakudo-2026.07 → none()
+  oracle rakupp-3.14.0 → none()
+
+- id     0129
+  from   inventory:MixHash.^methods
+  cell   not | MixHash.new(1)
+  code   (MixHash.new(1)).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0130
+  from   inventory:MixHash.^methods
+  cell   not | MixHash.new
+  code   (MixHash.new).not
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0131
+  from   inventory:MixHash.^methods
+  cell   of | MixHash.new(1)
+  code   (MixHash.new(1)).of
+  is     Real
+  type   Real
+  oracle rakudo-2026.07 → Real
+  oracle rakupp-3.14.0 → Real
+
+- id     0132
+  from   inventory:MixHash.^methods
+  cell   of | MixHash.new
+  code   (MixHash.new).of
+  is     Real
+  type   Real
+  oracle rakudo-2026.07 → Real
+  oracle rakupp-3.14.0 → Real
+
+- id     0133
+  from   inventory:MixHash.^methods
+  cell   one | MixHash.new(1)
+  code   (MixHash.new(1)).one
+  is     one(1 => 1)
+  type   Junction
+  oracle rakudo-2026.07 → one(1 => 1)
+  oracle rakupp-3.14.0 → one(1 => 1)
+
+- id     0134
+  from   inventory:MixHash.^methods
+  cell   one | MixHash.new
+  code   (MixHash.new).one
+  is     one()
+  type   Junction
+  oracle rakudo-2026.07 → one()
+  oracle rakupp-3.14.0 → one()
+
+- id     0135
+  from   inventory:MixHash.^methods
+  cell   reverse | MixHash.new(1)
+  code   (MixHash.new(1)).reverse
+  is     $((1 => 1,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1 => 1,).Seq)
+  oracle rakupp-3.14.0 → $(1 => 1,).Seq
+
+- id     0136
+  from   inventory:MixHash.^methods
+  cell   reverse | MixHash.new
+  code   (MixHash.new).reverse
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-3.14.0 → $().Seq
+
+- id     0137
+  from   inventory:MixHash.^methods
+  cell   self | MixHash.new(1)
+  code   (MixHash.new(1)).self
+  is     (1=>1).MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → (1=>1).MixHash
+  oracle rakupp-3.14.0 → (1=>1).MixHash
+
+- id     0138
+  from   inventory:MixHash.^methods
+  cell   self | MixHash.new
+  code   (MixHash.new).self
+  is     ().MixHash
+  type   MixHash
+  oracle rakudo-2026.07 → ().MixHash
+  oracle rakupp-3.14.0 → ().MixHash
+
+- id     0139
+  from   inventory:MixHash.^methods
+  cell   so | MixHash.new(1)
+  code   (MixHash.new(1)).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0140
+  from   inventory:MixHash.^methods
+  cell   so | MixHash.new
+  code   (MixHash.new).so
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0141
+  from   inventory:MixHash.^methods
+  cell   sum | MixHash.new(1)
+  code   (MixHash.new(1)).sum
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0142
+  from   inventory:MixHash.^methods
+  cell   sum | MixHash.new
+  code   (MixHash.new).sum
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0143
+  from   inventory:MixHash.^methods
+  cell   take | MixHash.new(1)
+  code   (MixHash.new(1)).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → (1=>1).MixHash
+
+- id     0144
+  from   inventory:MixHash.^methods
+  cell   take | MixHash.new
+  code   (MixHash.new).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → ().MixHash
+
+- id     0145
+  from   inventory:MixHash.^methods
+  cell   total | MixHash.new(1)
+  code   (MixHash.new(1)).total
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0146
+  from   inventory:MixHash.^methods
+  cell   total | MixHash.new
+  code   (MixHash.new).total
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
