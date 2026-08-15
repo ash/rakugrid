@@ -1,0 +1,14 @@
+atom     hangs/str-encode-invalid-argument
+source   curated
+kind     termination — the assertion is that the program ends, not what it returns
+
+- id     0001
+  from   generator:gen/methods.raku · review:2026-08-15
+  budget 10s
+  code   "".encode(0)
+  finishes 5s
+  oracle rakudo-2026.07 → TIMEOUT after 6s
+  oracle rakupp-3.14.0 → utf8:0x<>
+  verdict impl-bug
+  why    an encoding name that is not a string must fail, and no argument makes non-termination correct; the reference spins forever instead of rejecting it, which is what turned one bad cell into an 87-minute stall while generating the method matrix
+  ruled  2026-08-15 against rakudo-2026.07

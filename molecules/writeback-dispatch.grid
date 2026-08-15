@@ -1,0 +1,318 @@
+atom     molecules/writeback-dispatch
+source   generated
+gen      gen/molecules.raku
+facets   writeback × dispatch
+axes     sub | multi | method | code-ref | scalar-ref | dot-amp | pointy | through-two
+cols     plain | is-rw | is-copy | is-raw
+
+- id     0001
+  from   molecule:writeback-dispatch
+  cell   sub | plain
+  facets row=sub col=plain
+  code   do { sub f($v ) { $v = "set" }; my $x = "orig"; f($x); $x }
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0002
+  from   molecule:writeback-dispatch
+  cell   sub | is-rw
+  facets row=sub col=is-rw
+  code   do { sub f($v is rw) { $v = "set" }; my $x = "orig"; f($x); $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "set"
+
+- id     0003
+  from   molecule:writeback-dispatch
+  cell   sub | is-copy
+  facets row=sub col=is-copy
+  code   do { sub f($v is copy) { $v = "set" }; my $x = "orig"; f($x); $x }
+  is     "orig"
+  type   Str
+  oracle rakudo-2026.07 → "orig"
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0004
+  from   molecule:writeback-dispatch
+  cell   sub | is-raw
+  facets row=sub col=is-raw
+  code   do { sub f($v is raw) { $v = "set" }; my $x = "orig"; f($x); $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "set"
+
+- id     0005
+  from   molecule:writeback-dispatch
+  cell   multi | plain
+  facets row=multi col=plain
+  code   do { multi gwriteback_dispatch_multi_plain($v ) { $v = "set" }; my $x = "orig"; gwriteback_dispatch_multi_plain($x); $x }
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0006
+  from   molecule:writeback-dispatch
+  cell   multi | is-rw
+  facets row=multi col=is-rw
+  code   do { multi gwriteback_dispatch_multi_is_rw($v is rw) { $v = "set" }; my $x = "orig"; gwriteback_dispatch_multi_is_rw($x); $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "set"
+
+- id     0007
+  from   molecule:writeback-dispatch
+  cell   multi | is-copy
+  facets row=multi col=is-copy
+  code   do { multi gwriteback_dispatch_multi_is_copy($v is copy) { $v = "set" }; my $x = "orig"; gwriteback_dispatch_multi_is_copy($x); $x }
+  is     "orig"
+  type   Str
+  oracle rakudo-2026.07 → "orig"
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0008
+  from   molecule:writeback-dispatch
+  cell   multi | is-raw
+  facets row=multi col=is-raw
+  code   do { multi gwriteback_dispatch_multi_is_raw($v is raw) { $v = "set" }; my $x = "orig"; gwriteback_dispatch_multi_is_raw($x); $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "set"
+
+- id     0009
+  from   molecule:writeback-dispatch
+  cell   method | plain
+  facets row=method col=plain
+  code   do { class Kwriteback_dispatch_method_plain { method m($v ) { $v = "set" } }; my $x = "orig"; Kwriteback_dispatch_method_plain.new.m($x); $x }
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0010
+  from   molecule:writeback-dispatch
+  cell   method | is-rw
+  facets row=method col=is-rw
+  code   do { class Kwriteback_dispatch_method_is_rw { method m($v is rw) { $v = "set" } }; my $x = "orig"; Kwriteback_dispatch_method_is_rw.new.m($x); $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "set"
+
+- id     0011
+  from   molecule:writeback-dispatch
+  cell   method | is-copy
+  facets row=method col=is-copy
+  code   do { class Kwriteback_dispatch_method_is_copy { method m($v is copy) { $v = "set" } }; my $x = "orig"; Kwriteback_dispatch_method_is_copy.new.m($x); $x }
+  is     "orig"
+  type   Str
+  oracle rakudo-2026.07 → "orig"
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0012
+  from   molecule:writeback-dispatch
+  cell   method | is-raw
+  facets row=method col=is-raw
+  code   do { class Kwriteback_dispatch_method_is_raw { method m($v is raw) { $v = "set" } }; my $x = "orig"; Kwriteback_dispatch_method_is_raw.new.m($x); $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "set"
+
+- id     0013
+  from   molecule:writeback-dispatch
+  cell   code-ref | plain
+  facets row=code-ref col=plain
+  code   do { sub f($v ) { $v = "set" }; my $x = "orig"; my &c = &f; c($x); $x }
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0014
+  from   molecule:writeback-dispatch
+  cell   code-ref | is-rw
+  facets row=code-ref col=is-rw
+  code   do { sub f($v is rw) { $v = "set" }; my $x = "orig"; my &c = &f; c($x); $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "set"
+
+- id     0015
+  from   molecule:writeback-dispatch
+  cell   code-ref | is-copy
+  facets row=code-ref col=is-copy
+  code   do { sub f($v is copy) { $v = "set" }; my $x = "orig"; my &c = &f; c($x); $x }
+  is     "orig"
+  type   Str
+  oracle rakudo-2026.07 → "orig"
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0016
+  from   molecule:writeback-dispatch
+  cell   code-ref | is-raw
+  facets row=code-ref col=is-raw
+  code   do { sub f($v is raw) { $v = "set" }; my $x = "orig"; my &c = &f; c($x); $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "set"
+
+- id     0017
+  from   molecule:writeback-dispatch
+  cell   scalar-ref | plain
+  facets row=scalar-ref col=plain
+  code   do { sub f($v ) { $v = "set" }; my $x = "orig"; my $c = &f; $c($x); $x }
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0018
+  from   molecule:writeback-dispatch
+  cell   scalar-ref | is-rw
+  facets row=scalar-ref col=is-rw
+  code   do { sub f($v is rw) { $v = "set" }; my $x = "orig"; my $c = &f; $c($x); $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "set"
+
+- id     0019
+  from   molecule:writeback-dispatch
+  cell   scalar-ref | is-copy
+  facets row=scalar-ref col=is-copy
+  code   do { sub f($v is copy) { $v = "set" }; my $x = "orig"; my $c = &f; $c($x); $x }
+  is     "orig"
+  type   Str
+  oracle rakudo-2026.07 → "orig"
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0020
+  from   molecule:writeback-dispatch
+  cell   scalar-ref | is-raw
+  facets row=scalar-ref col=is-raw
+  code   do { sub f($v is raw) { $v = "set" }; my $x = "orig"; my $c = &f; $c($x); $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "set"
+
+- id     0021
+  from   molecule:writeback-dispatch
+  cell   dot-amp | plain
+  facets row=dot-amp col=plain
+  code   do { sub f($v ) { $v = "set" }; my $x = "orig"; $x.&f; $x }
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0022
+  from   molecule:writeback-dispatch
+  cell   dot-amp | is-rw
+  facets row=dot-amp col=is-rw
+  code   do { sub f($v is rw) { $v = "set" }; my $x = "orig"; $x.&f; $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0023
+  from   molecule:writeback-dispatch
+  cell   dot-amp | is-copy
+  facets row=dot-amp col=is-copy
+  code   do { sub f($v is copy) { $v = "set" }; my $x = "orig"; $x.&f; $x }
+  is     "orig"
+  type   Str
+  oracle rakudo-2026.07 → "orig"
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0024
+  from   molecule:writeback-dispatch
+  cell   dot-amp | is-raw
+  facets row=dot-amp col=is-raw
+  code   do { sub f($v is raw) { $v = "set" }; my $x = "orig"; $x.&f; $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0025
+  from   molecule:writeback-dispatch
+  cell   pointy | plain
+  facets row=pointy col=plain
+  code   do { my &b = -> $v  { $v = "set" }; my $x = "orig"; b($x); $x }
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0026
+  from   molecule:writeback-dispatch
+  cell   pointy | is-rw
+  facets row=pointy col=is-rw
+  code   do { my &b = -> $v is rw { $v = "set" }; my $x = "orig"; b($x); $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "set"
+
+- id     0027
+  from   molecule:writeback-dispatch
+  cell   pointy | is-copy
+  facets row=pointy col=is-copy
+  code   do { my &b = -> $v is copy { $v = "set" }; my $x = "orig"; b($x); $x }
+  is     "orig"
+  type   Str
+  oracle rakudo-2026.07 → "orig"
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0028
+  from   molecule:writeback-dispatch
+  cell   pointy | is-raw
+  facets row=pointy col=is-raw
+  code   do { my &b = -> $v is raw { $v = "set" }; my $x = "orig"; b($x); $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "set"
+
+- id     0029
+  from   molecule:writeback-dispatch
+  cell   through-two | plain
+  facets row=through-two col=plain
+  code   do { sub inner($v ) { $v = "set" }; sub outer($w ) { inner($w) }; my $x = "orig"; outer($x); $x }
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0030
+  from   molecule:writeback-dispatch
+  cell   through-two | is-rw
+  facets row=through-two col=is-rw
+  code   do { sub inner($v is rw) { $v = "set" }; sub outer($w is rw) { inner($w) }; my $x = "orig"; outer($x); $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "set"
+
+- id     0031
+  from   molecule:writeback-dispatch
+  cell   through-two | is-copy
+  facets row=through-two col=is-copy
+  code   do { sub inner($v is copy) { $v = "set" }; sub outer($w is copy) { inner($w) }; my $x = "orig"; outer($x); $x }
+  is     "orig"
+  type   Str
+  oracle rakudo-2026.07 → "orig"
+  oracle rakupp-3.14.0 → "orig"
+
+- id     0032
+  from   molecule:writeback-dispatch
+  cell   through-two | is-raw
+  facets row=through-two col=is-raw
+  code   do { sub inner($v is raw) { $v = "set" }; sub outer($w is raw) { inner($w) }; my $x = "orig"; outer($x); $x }
+  is     "set"
+  type   Str
+  oracle rakudo-2026.07 → "set"
+  oracle rakupp-3.14.0 → "set"

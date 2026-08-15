@@ -1,0 +1,17 @@
+atom     io/path-absolute-returns-str
+source   curated
+kind     return type — the value is the same, the type is not
+
+- id     0001
+  from   review:2026-08-15 · found while making the harness engine-neutral
+  code   "/tmp".IO.absolute.WHAT.^name
+  is     "Str"
+  oracle rakudo-2026.07 → "Str"
+  oracle rakupp-3.14.0 → "IO::Path"
+
+- id     0002
+  from   review:2026-08-15
+  code   "/tmp".IO.absolute ~~ Str
+  is     Bool::True
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::False

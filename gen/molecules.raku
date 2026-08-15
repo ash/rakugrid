@@ -25,36 +25,95 @@ my $GUARD = 0;
 
 # Where the exit happens. `{X}` is the exit statement; each skeleton is an
 # EXPRESSION, so its value is what the crossing actually produced.
-constant @NESTING =
-    { name => 'sub-body',      form => 'do { sub f() { {X}; "fell" }; f() }' },
-    { name => 'method-body',   form => 'do { class C{U} { method m() { {X}; "fell" } }; C{U}.new.m }' },
-    { name => 'bare-block',    form => 'do { {X}; "fell" }' },
-    { name => 'loop-body',     form => 'do { my @r; for 1..3 { {X}; @r.push("b") }; @r.join(",") }' },
-    { name => 'loop-in-sub',   form => 'do { sub f() { for 1..3 { {X} }; "end" }; f() }' },
-    { name => 'gather',        form => 'do { gather { {X}; take "after" }.list.raku }' },
-    { name => 'catch',         form => 'do { sub f() { die "boom"; CATCH { default { {X} } } }; f() }' },
-    { name => 'map-body',      form => 'do { (1..3).map({ {X}; $_ }).list.raku }' },
-    { name => 'map-in-loop',   form => 'do { my @r; for 1..2 { @r.push((1..3).map({ {X}; $_ }).elems) }; @r.join(",") }' },
-    { name => 'given-when',    form => 'do { given 1 { when 1 { {X}; "w" }; "after" } }' },
-    { name => 'leave-phaser',  form => 'do { sub f() { LEAVE { {X} }; "body" }; f() }' },
-    { name => 'thunk-rhs',     form => 'do { my $v = False || do { {X}; "x" }; $v }' },
-    { name => 'sort-callback', form => 'do { (3,1,2).sort({ {X}; $^a <=> $^b }).list.raku }' },
-    { name => 'nested-blocks', form => 'do { my $v = do { do { {X}; "inner" } }; $v }' };
+# A crossing is two axes: `rows` carry the skeleton with a `{X}` hole, `cols`
+# carry what goes in it. `{U}` becomes a per-cell unique suffix so cells cannot
+# collide once they are packed into one file.
+constant @CROSSINGS =
 
-# How control leaves. `succeed` only means anything under `when`, `take` only
-# under `gather`, `emit` only under a supply — which is the point: the illegal
-# crossings must fail, and fail in a stated way.
-constant @EXIT =
-    { name => 'fall-through', stmt => '1'          },
-    { name => 'return',       stmt => 'return "R"' },
-    { name => 'last',         stmt => 'last'       },
-    { name => 'next',         stmt => 'next'       },
-    { name => 'die',          stmt => 'die "D"'    },
-    { name => 'take',         stmt => 'take "T"'   },
-    { name => 'fail',         stmt => 'fail "F"'   },
-    { name => 'succeed',      stmt => 'succeed "S"' },
-    { name => 'emit',         stmt => 'emit "E"'   },
-    { name => 'warn',         stmt => 'warn "W"'   };
+# ---------------------------------------------------------------------------
+# Exit × Nesting — the two axes behind most of the defect record: `return`
+# inside CATCH yielding Nil, `next` in .map escaping to the enclosing loop, a
+# method losing `return` inside a loop.
+{
+    name => 'exit-nesting',
+    rows => [
+        { name => 'sub-body',      form => 'do { sub f() { {X}; "fell" }; f() }' },
+        { name => 'method-body',   form => 'do { class C{U} { method m() { {X}; "fell" } }; C{U}.new.m }' },
+        { name => 'bare-block',    form => 'do { {X}; "fell" }' },
+        { name => 'loop-body',     form => 'do { my @r; for 1..3 { {X}; @r.push("b") }; @r.join(",") }' },
+        { name => 'loop-in-sub',   form => 'do { sub f() { for 1..3 { {X} }; "end" }; f() }' },
+        { name => 'gather',        form => 'do { gather { {X}; take "after" }.list.raku }' },
+        { name => 'catch',         form => 'do { sub f() { die "boom"; CATCH { default { {X} } } }; f() }' },
+        { name => 'map-body',      form => 'do { (1..3).map({ {X}; $_ }).list.raku }' },
+        { name => 'map-in-loop',   form => 'do { my @r; for 1..2 { @r.push((1..3).map({ {X}; $_ }).elems) }; @r.join(",") }' },
+        { name => 'given-when',    form => 'do { given 1 { when 1 { {X}; "w" }; "after" } }' },
+        { name => 'leave-phaser',  form => 'do { sub f() { LEAVE { {X} }; "body" }; f() }' },
+        { name => 'thunk-rhs',     form => 'do { my $v = False || do { {X}; "x" }; $v }' },
+        { name => 'sort-callback', form => 'do { (3,1,2).sort({ {X}; $^a <=> $^b }).list.raku }' },
+        { name => 'nested-blocks', form => 'do { my $v = do { do { {X}; "inner" } }; $v }' },
+    ],
+    cols => [
+        { name => 'fall-through', stmt => '1'           },
+        { name => 'return',       stmt => 'return "R"'  },
+        { name => 'last',         stmt => 'last'        },
+        { name => 'next',         stmt => 'next'        },
+        { name => 'die',          stmt => 'die "D"'     },
+        { name => 'take',         stmt => 'take "T"'    },
+        { name => 'fail',         stmt => 'fail "F"'    },
+        { name => 'succeed',      stmt => 'succeed "S"' },
+        { name => 'emit',         stmt => 'emit "E"'    },
+        { name => 'warn',         stmt => 'warn "W"'    },
+    ],
+},
+
+# ---------------------------------------------------------------------------
+# Container × Dispatch — does a writable parameter write back, and does the
+# answer survive the call form? This is the family behind "rw params do not
+# write back through multis": the parameter mode works, the dispatch works, and
+# the crossing does not.
+{
+    name => 'writeback-dispatch',
+    rows => [
+        { name => 'sub',        form => 'do { sub f($v {X}) { $v = "set" }; my $x = "orig"; f($x); $x }' },
+        { name => 'multi',      form => 'do { multi g{U}($v {X}) { $v = "set" }; my $x = "orig"; g{U}($x); $x }' },
+        { name => 'method',     form => 'do { class K{U} { method m($v {X}) { $v = "set" } }; my $x = "orig"; K{U}.new.m($x); $x }' },
+        { name => 'code-ref',   form => 'do { sub f($v {X}) { $v = "set" }; my $x = "orig"; my &c = &f; c($x); $x }' },
+        { name => 'scalar-ref', form => 'do { sub f($v {X}) { $v = "set" }; my $x = "orig"; my $c = &f; $c($x); $x }' },
+        { name => 'dot-amp',    form => 'do { sub f($v {X}) { $v = "set" }; my $x = "orig"; $x.&f; $x }' },
+        { name => 'pointy',     form => 'do { my &b = -> $v {X} { $v = "set" }; my $x = "orig"; b($x); $x }' },
+        { name => 'through-two', form => 'do { sub inner($v {X}) { $v = "set" }; sub outer($w {X}) { inner($w) }; my $x = "orig"; outer($x); $x }' },
+    ],
+    cols => [
+        { name => 'plain',    stmt => ''         },
+        { name => 'is-rw',    stmt => 'is rw'    },
+        { name => 'is-copy',  stmt => 'is copy'  },
+        { name => 'is-raw',   stmt => 'is raw'   },
+    ],
+},
+
+# ---------------------------------------------------------------------------
+# Declarator × Nesting — a `state` variable keeps its value between calls, and
+# where it is DECLARED decides which calls those are. The same question for
+# `my`, `our`, a constant and a dynamic.
+{
+    name => 'declarator-nesting',
+    rows => [
+        { name => 'sub-body',    form => 'do { sub f() { {X} $n{U} = 0; $n{U}++; $n{U} }; f(); f() }' },
+        { name => 'method-body', form => 'do { class D{U} { method m() { {X} $n{U} = 0; $n{U}++; $n{U} } }; my $o = D{U}.new; $o.m; $o.m }' },
+        { name => 'bare-block',  form => 'do { my $r; for 1..2 { {X} $n{U} = 0; $n{U}++; $r = $n{U} }; $r }' },
+        { name => 'loop-body',   form => 'do { my @r; for 1..3 { {X} $n{U} = 0; $n{U}++; @r.push($n{U}) }; @r.join(",") }' },
+        { name => 'map-body',    form => 'do { (1..3).map({ {X} $n{U} = 0; $n{U}++; $n{U} }).list.raku }' },
+        { name => 'nested-sub',  form => 'do { sub outer() { sub inner() { {X} $n{U} = 0; $n{U}++; $n{U} }; inner(); inner() }; outer() }' },
+        { name => 'gather',      form => 'do { gather { for 1..2 { {X} $n{U} = 0; $n{U}++; take $n{U} } }.list.raku }' },
+        { name => 'thunk-rhs',   form => 'do { my @r; for 1..2 { @r.push(False || do { {X} $n{U} = 0; $n{U}++; $n{U} }) }; @r.join(",") }' },
+    ],
+    cols => [
+        { name => 'state',    stmt => 'state'    },
+        { name => 'my',       stmt => 'my'       },
+        { name => 'our',      stmt => 'our'      },
+        { name => 'constant', stmt => 'constant' },
+    ],
+};
 
 # --- probing ----------------------------------------------------------------
 
@@ -172,8 +231,8 @@ sub probe-file($cmd, $expr) {
 # skeleton introduces must be unique to its cell. `class C` in ten cells is ten
 # redeclarations, and the tests then fail on each other rather than on the
 # language.
-sub expr-for(%n, %x) {
-    my $u = (%n<name> ~ '_' ~ %x<name>).subst('-', '_', :g);
+sub expr-for(%c, %n, %x) {
+    my $u = (%c<name> ~ '_' ~ %n<name> ~ '_' ~ %x<name>).subst('-', '_', :g);
     return %n<form>.subst('{X}', %x<stmt>, :g).subst('{U}', $u, :g);
 }
 
@@ -202,16 +261,20 @@ for @*ARGS -> $a {
 }
 my @ids = @engines.map({ engine-id($_) });
 
-my @cells;
-for @NESTING -> %n {
-    for @EXIT -> %x {
-        @cells.push: { nesting => %n<name>, exit => %x<name>,
-                       expr => expr-for(%n, %x) };
+my @all;
+for @CROSSINGS -> %c {
+    for %c<rows>.list -> %n {
+        for %c<cols>.list -> %x {
+            @all.push: expr-for(%c, %n, %x);
+        }
     }
 }
-my @all = @cells.map(*<expr>).unique;
+@all = @all.unique;
 
-say "# { @NESTING.elems } nestings × { @EXIT.elems } exits = { @cells.elems } crossings";
+say "# { @CROSSINGS.elems } crossings, { @all.elems } cells";
+for @CROSSINGS -> %c {
+    say "#   { %c<name> }: { %c<rows>.elems } × { %c<cols>.elems }";
+}
 say "# engines: { @ids.join(', ') }";
 
 my @obs;
@@ -254,78 +317,80 @@ for @candidates -> $e {
 }
 
 my $ref = @obs[0];
-# ONE atom, not one per nesting: the crossing IS the thing under test, so the
-# whole 14 × 10 grid belongs in a single file where `rakugrid matrix` can render
-# it and a hole is visible at a glance.
+# ONE atom per crossing: the crossing IS the thing under test, so its whole
+# grid belongs in a single file where `rakugrid matrix` can render it and a hole
+# is visible at a glance.
 my $outdir = $ROOT.add('molecules');
 $outdir.mkdir unless $outdir.e;
 
 my $written = 0;
 my $parked  = 0;
 
-my @out;
-@out.push: "atom     molecules/exit-nesting";
-@out.push: "source   generated";
-@out.push: "gen      gen/molecules.raku";
-@out.push: "facets   nesting × exit";
-@out.push: "axes     { @NESTING.map(*<name>).join(' | ') }";
-@out.push: "cols     { @EXIT.map(*<name>).join(' | ') }";
-@out.push: '';
+for @CROSSINGS -> %c {
+    my @out;
+    @out.push: "atom     molecules/{ %c<name> }";
+    @out.push: "source   generated";
+    @out.push: "gen      gen/molecules.raku";
+    @out.push: "facets   { %c<name>.subst('-', ' × ') }";
+    @out.push: "axes     { %c<rows>.map(*<name>).join(' | ') }";
+    @out.push: "cols     { %c<cols>.map(*<name>).join(' | ') }";
+    @out.push: '';
 
-my $i = 0;
-for @NESTING -> %n {
-    for @EXIT -> %x {
-        $i++;
-        my $expr = expr-for(%n, %x);
-        my $r = $ref{$expr};
-        next unless $r;
+    my $i = 0;
+    for %c<rows>.list -> %n {
+        for %c<cols>.list -> %x {
+            $i++;
+            my $expr = expr-for(%c, %n, %x);
+            my $r = $ref{$expr};
+            next unless $r;
 
-        @out.push: "- id     { sprintf('%04d', $i) }";
-        @out.push: "  from   molecule:exit×nesting";
-        @out.push: "  cell   { %n<name> } | { %x<name> }";
-        @out.push: "  facets nesting={ %n<name> } exit={ %x<name> }";
+            @out.push: "- id     { sprintf('%04d', $i) }";
+            @out.push: "  from   molecule:{ %c<name> }";
+            @out.push: "  cell   { %n<name> } | { %x<name> }";
+            @out.push: "  facets row={ %n<name> } col={ %x<name> }";
 
-        my $answered = !($r<value>.starts-with('CRASH') || $r<value> eq 'HANG');
-        my $stable   = %again{$expr} && %again{$expr}<value> eq $r<value>;
+            my $answered = !($r<value>.starts-with('CRASH') || $r<value> eq 'HANG');
+            my $stable   = %again{$expr} && %again{$expr}<value> eq $r<value>;
 
-        if $r<value> eq 'NOCOMPILE' {
-            @out.push: "  code   sub \{ $expr \}";
-            @out.push: "  no-parse the crossing does not compile";
-        }
-        elsif $r<value>.starts-with('ERR:') {
-            @out.push: "  code   $expr";
-            @out.push: "  throws { $r<value>.substr(4) }";
-        }
-        else {
-            @out.push: "  code   $expr";
-            @out.push: "  is     { $r<value> }";
-            @out.push: "  type   { $r<type> }";
-        }
+            if $r<value> eq 'NOCOMPILE' {
+                @out.push: "  code   sub \{ $expr \}";
+                @out.push: "  no-parse the crossing does not compile";
+            }
+            elsif $r<value>.starts-with('ERR:') {
+                @out.push: "  code   $expr";
+                @out.push: "  throws { $r<value>.substr(4) }";
+            }
+            else {
+                @out.push: "  code   $expr";
+                @out.push: "  is     { $r<value> }";
+                @out.push: "  type   { $r<type> }";
+            }
 
-        for ^@engines -> $e {
-            my $o = @obs[$e]{$expr};
-            next unless $o;
-            my $obs = $o<value> eq 'NOCOMPILE' && $o<msg> ?? 'NOCOMPILE: ' ~ $o<msg> !! $o<value>;
-            @out.push: "  oracle { @ids[$e] } → $obs";
-        }
+            for ^@engines -> $e {
+                my $o = @obs[$e]{$expr};
+                next unless $o;
+                my $obs = $o<value> eq 'NOCOMPILE' && $o<msg> ?? 'NOCOMPILE: ' ~ $o<msg> !! $o<value>;
+                @out.push: "  oracle { @ids[$e] } → $obs";
+            }
 
-        if !$answered {
-            @out.push: "  verdict disputed";
-            @out.push: "  why    the reference produced no usable answer for this crossing (it crashed or did not terminate)";
-            @out.push: "  ruled  2026-08-14 against { @ids[0] }";
-            $parked++;
+            if !$answered {
+                @out.push: "  verdict disputed";
+                @out.push: "  why    the reference produced no usable answer for this crossing (it crashed or did not terminate)";
+                @out.push: "  ruled  2026-08-14 against { @ids[0] }";
+                $parked++;
+            }
+            elsif !$stable {
+                @out.push: "  verdict disputed";
+                @out.push: "  why    the reference answers differently on two identical runs, so there is nothing stable to assert";
+                @out.push: "  ruled  2026-08-14 against { @ids[0] }";
+                $parked++;
+            }
+            @out.push: '';
+            $written++;
         }
-        elsif !$stable {
-            @out.push: "  verdict disputed";
-            @out.push: "  why    the reference answers differently on two identical runs, so there is nothing stable to assert";
-            @out.push: "  ruled  2026-08-14 against { @ids[0] }";
-            $parked++;
-        }
-        @out.push: '';
-        $written++;
     }
-}
 
-$outdir.add('exit-nesting.grid').spurt(@out.join("\n"));
+    $outdir.add("{ %c<name> }.grid").spurt(@out.join("\n"));
+}
 
 say "# wrote $written crossings, $parked parked";

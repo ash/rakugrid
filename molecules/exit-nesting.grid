@@ -1,14 +1,14 @@
 atom     molecules/exit-nesting
 source   generated
 gen      gen/molecules.raku
-facets   nesting × exit
+facets   exit × nesting
 axes     sub-body | method-body | bare-block | loop-body | loop-in-sub | gather | catch | map-body | map-in-loop | given-when | leave-phaser | thunk-rhs | sort-callback | nested-blocks
 cols     fall-through | return | last | next | die | take | fail | succeed | emit | warn
 
 - id     0001
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sub-body | fall-through
-  facets nesting=sub-body exit=fall-through
+  facets row=sub-body col=fall-through
   code   do { sub f() { 1; "fell" }; f() }
   is     "fell"
   type   Str
@@ -16,9 +16,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "fell"
 
 - id     0002
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sub-body | return
-  facets nesting=sub-body exit=return
+  facets row=sub-body col=return
   code   do { sub f() { return "R"; "fell" }; f() }
   is     "R"
   type   Str
@@ -26,72 +26,72 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "R"
 
 - id     0003
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sub-body | last
-  facets nesting=sub-body exit=last
+  facets row=sub-body col=last
   code   do { sub f() { last; "fell" }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → CRASH:1
 
 - id     0004
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sub-body | next
-  facets nesting=sub-body exit=next
+  facets row=sub-body col=next
   code   do { sub f() { next; "fell" }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → CRASH:1
 
 - id     0005
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sub-body | die
-  facets nesting=sub-body exit=die
+  facets row=sub-body col=die
   code   do { sub f() { die "D"; "fell" }; f() }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0006
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sub-body | take
-  facets nesting=sub-body exit=take
+  facets row=sub-body col=take
   code   do { sub f() { take "T"; "fell" }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "fell"
 
 - id     0007
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sub-body | fail
-  facets nesting=sub-body exit=fail
+  facets row=sub-body col=fail
   code   do { sub f() { fail "F"; "fell" }; f() }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0008
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sub-body | succeed
-  facets nesting=sub-body exit=succeed
+  facets row=sub-body col=succeed
   code   do { sub f() { succeed "S"; "fell" }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "S"
 
 - id     0009
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sub-body | emit
-  facets nesting=sub-body exit=emit
+  facets row=sub-body col=emit
   code   do { sub f() { emit "E"; "fell" }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "fell"
 
 - id     0010
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sub-body | warn
-  facets nesting=sub-body exit=warn
+  facets row=sub-body col=warn
   code   do { sub f() { warn "W"; "fell" }; f() }
   is     "fell"
   type   Str
@@ -99,102 +99,102 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "fell"
 
 - id     0011
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   method-body | fall-through
-  facets nesting=method-body exit=fall-through
-  code   do { class Cmethod_body_fall_through { method m() { 1; "fell" } }; Cmethod_body_fall_through.new.m }
+  facets row=method-body col=fall-through
+  code   do { class Cexit_nesting_method_body_fall_through { method m() { 1; "fell" } }; Cexit_nesting_method_body_fall_through.new.m }
   is     "fell"
   type   Str
   oracle rakudo-2026.07 → "fell"
   oracle rakupp-3.14.0 → "fell"
 
 - id     0012
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   method-body | return
-  facets nesting=method-body exit=return
-  code   do { class Cmethod_body_return { method m() { return "R"; "fell" } }; Cmethod_body_return.new.m }
+  facets row=method-body col=return
+  code   do { class Cexit_nesting_method_body_return { method m() { return "R"; "fell" } }; Cexit_nesting_method_body_return.new.m }
   is     "R"
   type   Str
   oracle rakudo-2026.07 → "R"
   oracle rakupp-3.14.0 → "R"
 
 - id     0013
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   method-body | last
-  facets nesting=method-body exit=last
-  code   do { class Cmethod_body_last { method m() { last; "fell" } }; Cmethod_body_last.new.m }
+  facets row=method-body col=last
+  code   do { class Cexit_nesting_method_body_last { method m() { last; "fell" } }; Cexit_nesting_method_body_last.new.m }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → CRASH:1
 
 - id     0014
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   method-body | next
-  facets nesting=method-body exit=next
-  code   do { class Cmethod_body_next { method m() { next; "fell" } }; Cmethod_body_next.new.m }
+  facets row=method-body col=next
+  code   do { class Cexit_nesting_method_body_next { method m() { next; "fell" } }; Cexit_nesting_method_body_next.new.m }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → CRASH:1
 
 - id     0015
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   method-body | die
-  facets nesting=method-body exit=die
-  code   do { class Cmethod_body_die { method m() { die "D"; "fell" } }; Cmethod_body_die.new.m }
+  facets row=method-body col=die
+  code   do { class Cexit_nesting_method_body_die { method m() { die "D"; "fell" } }; Cexit_nesting_method_body_die.new.m }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0016
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   method-body | take
-  facets nesting=method-body exit=take
-  code   do { class Cmethod_body_take { method m() { take "T"; "fell" } }; Cmethod_body_take.new.m }
+  facets row=method-body col=take
+  code   do { class Cexit_nesting_method_body_take { method m() { take "T"; "fell" } }; Cexit_nesting_method_body_take.new.m }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "fell"
 
 - id     0017
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   method-body | fail
-  facets nesting=method-body exit=fail
-  code   do { class Cmethod_body_fail { method m() { fail "F"; "fell" } }; Cmethod_body_fail.new.m }
+  facets row=method-body col=fail
+  code   do { class Cexit_nesting_method_body_fail { method m() { fail "F"; "fell" } }; Cexit_nesting_method_body_fail.new.m }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0018
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   method-body | succeed
-  facets nesting=method-body exit=succeed
-  code   do { class Cmethod_body_succeed { method m() { succeed "S"; "fell" } }; Cmethod_body_succeed.new.m }
+  facets row=method-body col=succeed
+  code   do { class Cexit_nesting_method_body_succeed { method m() { succeed "S"; "fell" } }; Cexit_nesting_method_body_succeed.new.m }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "S"
 
 - id     0019
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   method-body | emit
-  facets nesting=method-body exit=emit
-  code   do { class Cmethod_body_emit { method m() { emit "E"; "fell" } }; Cmethod_body_emit.new.m }
+  facets row=method-body col=emit
+  code   do { class Cexit_nesting_method_body_emit { method m() { emit "E"; "fell" } }; Cexit_nesting_method_body_emit.new.m }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "fell"
 
 - id     0020
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   method-body | warn
-  facets nesting=method-body exit=warn
-  code   do { class Cmethod_body_warn { method m() { warn "W"; "fell" } }; Cmethod_body_warn.new.m }
+  facets row=method-body col=warn
+  code   do { class Cexit_nesting_method_body_warn { method m() { warn "W"; "fell" } }; Cexit_nesting_method_body_warn.new.m }
   is     "fell"
   type   Str
   oracle rakudo-2026.07 → "fell"
   oracle rakupp-3.14.0 → "fell"
 
 - id     0021
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   bare-block | fall-through
-  facets nesting=bare-block exit=fall-through
+  facets row=bare-block col=fall-through
   code   do { 1; "fell" }
   is     "fell"
   type   Str
@@ -202,81 +202,81 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "fell"
 
 - id     0022
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   bare-block | return
-  facets nesting=bare-block exit=return
+  facets row=bare-block col=return
   code   do { return "R"; "fell" }
   throws X::ControlFlow::Return
   oracle rakudo-2026.07 → ERR:X::ControlFlow::Return
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0023
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   bare-block | last
-  facets nesting=bare-block exit=last
+  facets row=bare-block col=last
   code   do { last; "fell" }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → CRASH:1
 
 - id     0024
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   bare-block | next
-  facets nesting=bare-block exit=next
+  facets row=bare-block col=next
   code   do { next; "fell" }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → CRASH:1
 
 - id     0025
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   bare-block | die
-  facets nesting=bare-block exit=die
+  facets row=bare-block col=die
   code   do { die "D"; "fell" }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0026
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   bare-block | take
-  facets nesting=bare-block exit=take
+  facets row=bare-block col=take
   code   do { take "T"; "fell" }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "fell"
 
 - id     0027
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   bare-block | fail
-  facets nesting=bare-block exit=fail
+  facets row=bare-block col=fail
   code   do { fail "F"; "fell" }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0028
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   bare-block | succeed
-  facets nesting=bare-block exit=succeed
+  facets row=bare-block col=succeed
   code   do { succeed "S"; "fell" }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "S"
 
 - id     0029
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   bare-block | emit
-  facets nesting=bare-block exit=emit
+  facets row=bare-block col=emit
   code   do { emit "E"; "fell" }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "fell"
 
 - id     0030
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   bare-block | warn
-  facets nesting=bare-block exit=warn
+  facets row=bare-block col=warn
   code   do { warn "W"; "fell" }
   is     "fell"
   type   Str
@@ -284,9 +284,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "fell"
 
 - id     0031
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-body | fall-through
-  facets nesting=loop-body exit=fall-through
+  facets row=loop-body col=fall-through
   code   do { my @r; for 1..3 { 1; @r.push("b") }; @r.join(",") }
   is     "b,b,b"
   type   Str
@@ -294,18 +294,18 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "b,b,b"
 
 - id     0032
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-body | return
-  facets nesting=loop-body exit=return
+  facets row=loop-body col=return
   code   do { my @r; for 1..3 { return "R"; @r.push("b") }; @r.join(",") }
   throws X::ControlFlow::Return
   oracle rakudo-2026.07 → ERR:X::ControlFlow::Return
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0033
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-body | last
-  facets nesting=loop-body exit=last
+  facets row=loop-body col=last
   code   do { my @r; for 1..3 { last; @r.push("b") }; @r.join(",") }
   is     ""
   type   Str
@@ -313,9 +313,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → ""
 
 - id     0034
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-body | next
-  facets nesting=loop-body exit=next
+  facets row=loop-body col=next
   code   do { my @r; for 1..3 { next; @r.push("b") }; @r.join(",") }
   is     ""
   type   Str
@@ -323,54 +323,54 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → ""
 
 - id     0035
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-body | die
-  facets nesting=loop-body exit=die
+  facets row=loop-body col=die
   code   do { my @r; for 1..3 { die "D"; @r.push("b") }; @r.join(",") }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0036
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-body | take
-  facets nesting=loop-body exit=take
+  facets row=loop-body col=take
   code   do { my @r; for 1..3 { take "T"; @r.push("b") }; @r.join(",") }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "b,b,b"
 
 - id     0037
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-body | fail
-  facets nesting=loop-body exit=fail
+  facets row=loop-body col=fail
   code   do { my @r; for 1..3 { fail "F"; @r.push("b") }; @r.join(",") }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0038
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-body | succeed
-  facets nesting=loop-body exit=succeed
+  facets row=loop-body col=succeed
   code   do { my @r; for 1..3 { succeed "S"; @r.push("b") }; @r.join(",") }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → ""
 
 - id     0039
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-body | emit
-  facets nesting=loop-body exit=emit
+  facets row=loop-body col=emit
   code   do { my @r; for 1..3 { emit "E"; @r.push("b") }; @r.join(",") }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "b,b,b"
 
 - id     0040
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-body | warn
-  facets nesting=loop-body exit=warn
+  facets row=loop-body col=warn
   code   do { my @r; for 1..3 { warn "W"; @r.push("b") }; @r.join(",") }
   is     "b,b,b"
   type   Str
@@ -378,9 +378,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "b,b,b"
 
 - id     0041
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-in-sub | fall-through
-  facets nesting=loop-in-sub exit=fall-through
+  facets row=loop-in-sub col=fall-through
   code   do { sub f() { for 1..3 { 1 }; "end" }; f() }
   is     "end"
   type   Str
@@ -388,9 +388,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "end"
 
 - id     0042
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-in-sub | return
-  facets nesting=loop-in-sub exit=return
+  facets row=loop-in-sub col=return
   code   do { sub f() { for 1..3 { return "R" }; "end" }; f() }
   is     "R"
   type   Str
@@ -398,9 +398,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "R"
 
 - id     0043
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-in-sub | last
-  facets nesting=loop-in-sub exit=last
+  facets row=loop-in-sub col=last
   code   do { sub f() { for 1..3 { last }; "end" }; f() }
   is     "end"
   type   Str
@@ -408,9 +408,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "end"
 
 - id     0044
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-in-sub | next
-  facets nesting=loop-in-sub exit=next
+  facets row=loop-in-sub col=next
   code   do { sub f() { for 1..3 { next }; "end" }; f() }
   is     "end"
   type   Str
@@ -418,54 +418,54 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "end"
 
 - id     0045
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-in-sub | die
-  facets nesting=loop-in-sub exit=die
+  facets row=loop-in-sub col=die
   code   do { sub f() { for 1..3 { die "D" }; "end" }; f() }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0046
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-in-sub | take
-  facets nesting=loop-in-sub exit=take
+  facets row=loop-in-sub col=take
   code   do { sub f() { for 1..3 { take "T" }; "end" }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "end"
 
 - id     0047
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-in-sub | fail
-  facets nesting=loop-in-sub exit=fail
+  facets row=loop-in-sub col=fail
   code   do { sub f() { for 1..3 { fail "F" }; "end" }; f() }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0048
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-in-sub | succeed
-  facets nesting=loop-in-sub exit=succeed
+  facets row=loop-in-sub col=succeed
   code   do { sub f() { for 1..3 { succeed "S" }; "end" }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "end"
 
 - id     0049
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-in-sub | emit
-  facets nesting=loop-in-sub exit=emit
+  facets row=loop-in-sub col=emit
   code   do { sub f() { for 1..3 { emit "E" }; "end" }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "end"
 
 - id     0050
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   loop-in-sub | warn
-  facets nesting=loop-in-sub exit=warn
+  facets row=loop-in-sub col=warn
   code   do { sub f() { for 1..3 { warn "W" }; "end" }; f() }
   is     "end"
   type   Str
@@ -473,9 +473,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "end"
 
 - id     0051
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   gather | fall-through
-  facets nesting=gather exit=fall-through
+  facets row=gather col=fall-through
   code   do { gather { 1; take "after" }.list.raku }
   is     "(\"after\",)"
   type   Str
@@ -483,18 +483,18 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "(\"after\",)"
 
 - id     0052
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   gather | return
-  facets nesting=gather exit=return
+  facets row=gather col=return
   code   do { gather { return "R"; take "after" }.list.raku }
   throws X::ControlFlow::Return
   oracle rakudo-2026.07 → ERR:X::ControlFlow::Return
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0053
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   gather | last
-  facets nesting=gather exit=last
+  facets row=gather col=last
   code   do { gather { last; take "after" }.list.raku }
   is     "()"
   type   Str
@@ -502,9 +502,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → ERR:X::ControlFlow
 
 - id     0054
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   gather | next
-  facets nesting=gather exit=next
+  facets row=gather col=next
   code   do { gather { next; take "after" }.list.raku }
   is     CRASH:137
   type   -
@@ -515,18 +515,18 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   ruled  2026-08-14 against rakudo-2026.07
 
 - id     0055
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   gather | die
-  facets nesting=gather exit=die
+  facets row=gather col=die
   code   do { gather { die "D"; take "after" }.list.raku }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0056
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   gather | take
-  facets nesting=gather exit=take
+  facets row=gather col=take
   code   do { gather { take "T"; take "after" }.list.raku }
   is     "(\"T\", \"after\")"
   type   Str
@@ -534,36 +534,36 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "(\"T\", \"after\")"
 
 - id     0057
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   gather | fail
-  facets nesting=gather exit=fail
+  facets row=gather col=fail
   code   do { gather { fail "F"; take "after" }.list.raku }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0058
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   gather | succeed
-  facets nesting=gather exit=succeed
+  facets row=gather col=succeed
   code   do { gather { succeed "S"; take "after" }.list.raku }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "()"
 
 - id     0059
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   gather | emit
-  facets nesting=gather exit=emit
+  facets row=gather col=emit
   code   do { gather { emit "E"; take "after" }.list.raku }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "(\"after\",)"
 
 - id     0060
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   gather | warn
-  facets nesting=gather exit=warn
+  facets row=gather col=warn
   code   do { gather { warn "W"; take "after" }.list.raku }
   is     "(\"after\",)"
   type   Str
@@ -571,9 +571,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "(\"after\",)"
 
 - id     0061
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   catch | fall-through
-  facets nesting=catch exit=fall-through
+  facets row=catch col=fall-through
   code   do { sub f() { die "boom"; CATCH { default { 1 } } }; f() }
   is     Any
   type   Any
@@ -581,9 +581,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → Any
 
 - id     0062
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   catch | return
-  facets nesting=catch exit=return
+  facets row=catch col=return
   code   do { sub f() { die "boom"; CATCH { default { return "R" } } }; f() }
   is     "R"
   type   Str
@@ -591,54 +591,54 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "R"
 
 - id     0063
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   catch | last
-  facets nesting=catch exit=last
+  facets row=catch col=last
   code   do { sub f() { die "boom"; CATCH { default { last } } }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → CRASH:1
 
 - id     0064
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   catch | next
-  facets nesting=catch exit=next
+  facets row=catch col=next
   code   do { sub f() { die "boom"; CATCH { default { next } } }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → CRASH:1
 
 - id     0065
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   catch | die
-  facets nesting=catch exit=die
+  facets row=catch col=die
   code   do { sub f() { die "boom"; CATCH { default { die "D" } } }; f() }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0066
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   catch | take
-  facets nesting=catch exit=take
+  facets row=catch col=take
   code   do { sub f() { die "boom"; CATCH { default { take "T" } } }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → Any
 
 - id     0067
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   catch | fail
-  facets nesting=catch exit=fail
+  facets row=catch col=fail
   code   do { sub f() { die "boom"; CATCH { default { fail "F" } } }; f() }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0068
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   catch | succeed
-  facets nesting=catch exit=succeed
+  facets row=catch col=succeed
   code   do { sub f() { die "boom"; CATCH { default { succeed "S" } } }; f() }
   is     Any
   type   Any
@@ -646,18 +646,18 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → Any
 
 - id     0069
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   catch | emit
-  facets nesting=catch exit=emit
+  facets row=catch col=emit
   code   do { sub f() { die "boom"; CATCH { default { emit "E" } } }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → Any
 
 - id     0070
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   catch | warn
-  facets nesting=catch exit=warn
+  facets row=catch col=warn
   code   do { sub f() { die "boom"; CATCH { default { warn "W" } } }; f() }
   is     Any
   type   Any
@@ -665,9 +665,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → Any
 
 - id     0071
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-body | fall-through
-  facets nesting=map-body exit=fall-through
+  facets row=map-body col=fall-through
   code   do { (1..3).map({ 1; $_ }).list.raku }
   is     "(1, 2, 3)"
   type   Str
@@ -675,18 +675,18 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "(1, 2, 3)"
 
 - id     0072
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-body | return
-  facets nesting=map-body exit=return
+  facets row=map-body col=return
   code   do { (1..3).map({ return "R"; $_ }).list.raku }
   throws X::ControlFlow::Return
   oracle rakudo-2026.07 → ERR:X::ControlFlow::Return
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0073
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-body | last
-  facets nesting=map-body exit=last
+  facets row=map-body col=last
   code   do { (1..3).map({ last; $_ }).list.raku }
   is     "()"
   type   Str
@@ -694,9 +694,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "()"
 
 - id     0074
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-body | next
-  facets nesting=map-body exit=next
+  facets row=map-body col=next
   code   do { (1..3).map({ next; $_ }).list.raku }
   is     "()"
   type   Str
@@ -704,54 +704,54 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "()"
 
 - id     0075
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-body | die
-  facets nesting=map-body exit=die
+  facets row=map-body col=die
   code   do { (1..3).map({ die "D"; $_ }).list.raku }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0076
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-body | take
-  facets nesting=map-body exit=take
+  facets row=map-body col=take
   code   do { (1..3).map({ take "T"; $_ }).list.raku }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "(1, 2, 3)"
 
 - id     0077
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-body | fail
-  facets nesting=map-body exit=fail
+  facets row=map-body col=fail
   code   do { (1..3).map({ fail "F"; $_ }).list.raku }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0078
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-body | succeed
-  facets nesting=map-body exit=succeed
+  facets row=map-body col=succeed
   code   do { (1..3).map({ succeed "S"; $_ }).list.raku }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "(\"S\", \"S\", \"S\")"
 
 - id     0079
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-body | emit
-  facets nesting=map-body exit=emit
+  facets row=map-body col=emit
   code   do { (1..3).map({ emit "E"; $_ }).list.raku }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "(1, 2, 3)"
 
 - id     0080
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-body | warn
-  facets nesting=map-body exit=warn
+  facets row=map-body col=warn
   code   do { (1..3).map({ warn "W"; $_ }).list.raku }
   is     "(1, 2, 3)"
   type   Str
@@ -759,9 +759,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "(1, 2, 3)"
 
 - id     0081
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-in-loop | fall-through
-  facets nesting=map-in-loop exit=fall-through
+  facets row=map-in-loop col=fall-through
   code   do { my @r; for 1..2 { @r.push((1..3).map({ 1; $_ }).elems) }; @r.join(",") }
   is     "3,3"
   type   Str
@@ -769,18 +769,18 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "3,3"
 
 - id     0082
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-in-loop | return
-  facets nesting=map-in-loop exit=return
+  facets row=map-in-loop col=return
   code   do { my @r; for 1..2 { @r.push((1..3).map({ return "R"; $_ }).elems) }; @r.join(",") }
   throws X::ControlFlow::Return
   oracle rakudo-2026.07 → ERR:X::ControlFlow::Return
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0083
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-in-loop | last
-  facets nesting=map-in-loop exit=last
+  facets row=map-in-loop col=last
   code   do { my @r; for 1..2 { @r.push((1..3).map({ last; $_ }).elems) }; @r.join(",") }
   is     "0,0"
   type   Str
@@ -788,9 +788,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "0,0"
 
 - id     0084
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-in-loop | next
-  facets nesting=map-in-loop exit=next
+  facets row=map-in-loop col=next
   code   do { my @r; for 1..2 { @r.push((1..3).map({ next; $_ }).elems) }; @r.join(",") }
   is     "0,0"
   type   Str
@@ -798,54 +798,54 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "0,0"
 
 - id     0085
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-in-loop | die
-  facets nesting=map-in-loop exit=die
+  facets row=map-in-loop col=die
   code   do { my @r; for 1..2 { @r.push((1..3).map({ die "D"; $_ }).elems) }; @r.join(",") }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0086
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-in-loop | take
-  facets nesting=map-in-loop exit=take
+  facets row=map-in-loop col=take
   code   do { my @r; for 1..2 { @r.push((1..3).map({ take "T"; $_ }).elems) }; @r.join(",") }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "3,3"
 
 - id     0087
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-in-loop | fail
-  facets nesting=map-in-loop exit=fail
+  facets row=map-in-loop col=fail
   code   do { my @r; for 1..2 { @r.push((1..3).map({ fail "F"; $_ }).elems) }; @r.join(",") }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0088
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-in-loop | succeed
-  facets nesting=map-in-loop exit=succeed
+  facets row=map-in-loop col=succeed
   code   do { my @r; for 1..2 { @r.push((1..3).map({ succeed "S"; $_ }).elems) }; @r.join(",") }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "3,3"
 
 - id     0089
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-in-loop | emit
-  facets nesting=map-in-loop exit=emit
+  facets row=map-in-loop col=emit
   code   do { my @r; for 1..2 { @r.push((1..3).map({ emit "E"; $_ }).elems) }; @r.join(",") }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "3,3"
 
 - id     0090
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   map-in-loop | warn
-  facets nesting=map-in-loop exit=warn
+  facets row=map-in-loop col=warn
   code   do { my @r; for 1..2 { @r.push((1..3).map({ warn "W"; $_ }).elems) }; @r.join(",") }
   is     "3,3"
   type   Str
@@ -853,9 +853,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "3,3"
 
 - id     0091
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   given-when | fall-through
-  facets nesting=given-when exit=fall-through
+  facets row=given-when col=fall-through
   code   do { given 1 { when 1 { 1; "w" }; "after" } }
   is     "w"
   type   Str
@@ -863,63 +863,63 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "w"
 
 - id     0092
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   given-when | return
-  facets nesting=given-when exit=return
+  facets row=given-when col=return
   code   do { given 1 { when 1 { return "R"; "w" }; "after" } }
   throws X::ControlFlow::Return
   oracle rakudo-2026.07 → ERR:X::ControlFlow::Return
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0093
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   given-when | last
-  facets nesting=given-when exit=last
+  facets row=given-when col=last
   code   do { given 1 { when 1 { last; "w" }; "after" } }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → CRASH:1
 
 - id     0094
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   given-when | next
-  facets nesting=given-when exit=next
+  facets row=given-when col=next
   code   do { given 1 { when 1 { next; "w" }; "after" } }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → CRASH:1
 
 - id     0095
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   given-when | die
-  facets nesting=given-when exit=die
+  facets row=given-when col=die
   code   do { given 1 { when 1 { die "D"; "w" }; "after" } }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0096
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   given-when | take
-  facets nesting=given-when exit=take
+  facets row=given-when col=take
   code   do { given 1 { when 1 { take "T"; "w" }; "after" } }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "w"
 
 - id     0097
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   given-when | fail
-  facets nesting=given-when exit=fail
+  facets row=given-when col=fail
   code   do { given 1 { when 1 { fail "F"; "w" }; "after" } }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0098
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   given-when | succeed
-  facets nesting=given-when exit=succeed
+  facets row=given-when col=succeed
   code   do { given 1 { when 1 { succeed "S"; "w" }; "after" } }
   is     "S"
   type   Str
@@ -927,18 +927,18 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "S"
 
 - id     0099
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   given-when | emit
-  facets nesting=given-when exit=emit
+  facets row=given-when col=emit
   code   do { given 1 { when 1 { emit "E"; "w" }; "after" } }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "w"
 
 - id     0100
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   given-when | warn
-  facets nesting=given-when exit=warn
+  facets row=given-when col=warn
   code   do { given 1 { when 1 { warn "W"; "w" }; "after" } }
   is     "w"
   type   Str
@@ -946,9 +946,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "w"
 
 - id     0101
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   leave-phaser | fall-through
-  facets nesting=leave-phaser exit=fall-through
+  facets row=leave-phaser col=fall-through
   code   do { sub f() { LEAVE { 1 }; "body" }; f() }
   is     "body"
   type   Str
@@ -956,9 +956,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "body"
 
 - id     0102
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   leave-phaser | return
-  facets nesting=leave-phaser exit=return
+  facets row=leave-phaser col=return
   code   do { sub f() { LEAVE { return "R" }; "body" }; f() }
   is     "R"
   type   Str
@@ -966,72 +966,72 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "body"
 
 - id     0103
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   leave-phaser | last
-  facets nesting=leave-phaser exit=last
+  facets row=leave-phaser col=last
   code   do { sub f() { LEAVE { last }; "body" }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "body"
 
 - id     0104
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   leave-phaser | next
-  facets nesting=leave-phaser exit=next
+  facets row=leave-phaser col=next
   code   do { sub f() { LEAVE { next }; "body" }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "body"
 
 - id     0105
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   leave-phaser | die
-  facets nesting=leave-phaser exit=die
+  facets row=leave-phaser col=die
   code   do { sub f() { LEAVE { die "D" }; "body" }; f() }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "body"
 
 - id     0106
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   leave-phaser | take
-  facets nesting=leave-phaser exit=take
+  facets row=leave-phaser col=take
   code   do { sub f() { LEAVE { take "T" }; "body" }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "body"
 
 - id     0107
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   leave-phaser | fail
-  facets nesting=leave-phaser exit=fail
+  facets row=leave-phaser col=fail
   code   do { sub f() { LEAVE { fail "F" }; "body" }; f() }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "body"
 
 - id     0108
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   leave-phaser | succeed
-  facets nesting=leave-phaser exit=succeed
+  facets row=leave-phaser col=succeed
   code   do { sub f() { LEAVE { succeed "S" }; "body" }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "body"
 
 - id     0109
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   leave-phaser | emit
-  facets nesting=leave-phaser exit=emit
+  facets row=leave-phaser col=emit
   code   do { sub f() { LEAVE { emit "E" }; "body" }; f() }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "body"
 
 - id     0110
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   leave-phaser | warn
-  facets nesting=leave-phaser exit=warn
+  facets row=leave-phaser col=warn
   code   do { sub f() { LEAVE { warn "W" }; "body" }; f() }
   is     "body"
   type   Str
@@ -1039,9 +1039,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "body"
 
 - id     0111
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   thunk-rhs | fall-through
-  facets nesting=thunk-rhs exit=fall-through
+  facets row=thunk-rhs col=fall-through
   code   do { my $v = False || do { 1; "x" }; $v }
   is     "x"
   type   Str
@@ -1049,81 +1049,81 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "x"
 
 - id     0112
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   thunk-rhs | return
-  facets nesting=thunk-rhs exit=return
+  facets row=thunk-rhs col=return
   code   do { my $v = False || do { return "R"; "x" }; $v }
   throws X::ControlFlow::Return
   oracle rakudo-2026.07 → ERR:X::ControlFlow::Return
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0113
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   thunk-rhs | last
-  facets nesting=thunk-rhs exit=last
+  facets row=thunk-rhs col=last
   code   do { my $v = False || do { last; "x" }; $v }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → CRASH:1
 
 - id     0114
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   thunk-rhs | next
-  facets nesting=thunk-rhs exit=next
+  facets row=thunk-rhs col=next
   code   do { my $v = False || do { next; "x" }; $v }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → CRASH:1
 
 - id     0115
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   thunk-rhs | die
-  facets nesting=thunk-rhs exit=die
+  facets row=thunk-rhs col=die
   code   do { my $v = False || do { die "D"; "x" }; $v }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0116
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   thunk-rhs | take
-  facets nesting=thunk-rhs exit=take
+  facets row=thunk-rhs col=take
   code   do { my $v = False || do { take "T"; "x" }; $v }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "x"
 
 - id     0117
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   thunk-rhs | fail
-  facets nesting=thunk-rhs exit=fail
+  facets row=thunk-rhs col=fail
   code   do { my $v = False || do { fail "F"; "x" }; $v }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0118
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   thunk-rhs | succeed
-  facets nesting=thunk-rhs exit=succeed
+  facets row=thunk-rhs col=succeed
   code   do { my $v = False || do { succeed "S"; "x" }; $v }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "S"
 
 - id     0119
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   thunk-rhs | emit
-  facets nesting=thunk-rhs exit=emit
+  facets row=thunk-rhs col=emit
   code   do { my $v = False || do { emit "E"; "x" }; $v }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "x"
 
 - id     0120
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   thunk-rhs | warn
-  facets nesting=thunk-rhs exit=warn
+  facets row=thunk-rhs col=warn
   code   do { my $v = False || do { warn "W"; "x" }; $v }
   is     "x"
   type   Str
@@ -1131,9 +1131,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "x"
 
 - id     0121
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sort-callback | fall-through
-  facets nesting=sort-callback exit=fall-through
+  facets row=sort-callback col=fall-through
   code   do { (3,1,2).sort({ 1; $^a <=> $^b }).list.raku }
   is     "(1, 2, 3)"
   type   Str
@@ -1141,18 +1141,18 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "(1, 2, 3)"
 
 - id     0122
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sort-callback | return
-  facets nesting=sort-callback exit=return
+  facets row=sort-callback col=return
   code   do { (3,1,2).sort({ return "R"; $^a <=> $^b }).list.raku }
   throws X::ControlFlow::Return
   oracle rakudo-2026.07 → ERR:X::ControlFlow::Return
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0123
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sort-callback | last
-  facets nesting=sort-callback exit=last
+  facets row=sort-callback col=last
   code   do { (3,1,2).sort({ last; $^a <=> $^b }).list.raku }
   is     "(3, 1, 2)"
   type   Str
@@ -1160,9 +1160,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → ERR:X::ControlFlow
 
 - id     0124
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sort-callback | next
-  facets nesting=sort-callback exit=next
+  facets row=sort-callback col=next
   code   do { (3,1,2).sort({ next; $^a <=> $^b }).list.raku }
   is     "(3, 1, 2)"
   type   Str
@@ -1170,54 +1170,54 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → ERR:X::ControlFlow
 
 - id     0125
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sort-callback | die
-  facets nesting=sort-callback exit=die
+  facets row=sort-callback col=die
   code   do { (3,1,2).sort({ die "D"; $^a <=> $^b }).list.raku }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0126
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sort-callback | take
-  facets nesting=sort-callback exit=take
+  facets row=sort-callback col=take
   code   do { (3,1,2).sort({ take "T"; $^a <=> $^b }).list.raku }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "(1, 2, 3)"
 
 - id     0127
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sort-callback | fail
-  facets nesting=sort-callback exit=fail
+  facets row=sort-callback col=fail
   code   do { (3,1,2).sort({ fail "F"; $^a <=> $^b }).list.raku }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0128
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sort-callback | succeed
-  facets nesting=sort-callback exit=succeed
+  facets row=sort-callback col=succeed
   code   do { (3,1,2).sort({ succeed "S"; $^a <=> $^b }).list.raku }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "(3, 1, 2)"
 
 - id     0129
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sort-callback | emit
-  facets nesting=sort-callback exit=emit
+  facets row=sort-callback col=emit
   code   do { (3,1,2).sort({ emit "E"; $^a <=> $^b }).list.raku }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "(1, 2, 3)"
 
 - id     0130
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   sort-callback | warn
-  facets nesting=sort-callback exit=warn
+  facets row=sort-callback col=warn
   code   do { (3,1,2).sort({ warn "W"; $^a <=> $^b }).list.raku }
   is     "(1, 2, 3)"
   type   Str
@@ -1225,9 +1225,9 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "(1, 2, 3)"
 
 - id     0131
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   nested-blocks | fall-through
-  facets nesting=nested-blocks exit=fall-through
+  facets row=nested-blocks col=fall-through
   code   do { my $v = do { do { 1; "inner" } }; $v }
   is     "inner"
   type   Str
@@ -1235,81 +1235,81 @@ cols     fall-through | return | last | next | die | take | fail | succeed | emi
   oracle rakupp-3.14.0 → "inner"
 
 - id     0132
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   nested-blocks | return
-  facets nesting=nested-blocks exit=return
+  facets row=nested-blocks col=return
   code   do { my $v = do { do { return "R"; "inner" } }; $v }
   throws X::ControlFlow::Return
   oracle rakudo-2026.07 → ERR:X::ControlFlow::Return
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0133
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   nested-blocks | last
-  facets nesting=nested-blocks exit=last
+  facets row=nested-blocks col=last
   code   do { my $v = do { do { last; "inner" } }; $v }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → CRASH:1
 
 - id     0134
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   nested-blocks | next
-  facets nesting=nested-blocks exit=next
+  facets row=nested-blocks col=next
   code   do { my $v = do { do { next; "inner" } }; $v }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → CRASH:1
 
 - id     0135
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   nested-blocks | die
-  facets nesting=nested-blocks exit=die
+  facets row=nested-blocks col=die
   code   do { my $v = do { do { die "D"; "inner" } }; $v }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
 - id     0136
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   nested-blocks | take
-  facets nesting=nested-blocks exit=take
+  facets row=nested-blocks col=take
   code   do { my $v = do { do { take "T"; "inner" } }; $v }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "inner"
 
 - id     0137
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   nested-blocks | fail
-  facets nesting=nested-blocks exit=fail
+  facets row=nested-blocks col=fail
   code   do { my $v = do { do { fail "F"; "inner" } }; $v }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::ControlFlow::Return
 
 - id     0138
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   nested-blocks | succeed
-  facets nesting=nested-blocks exit=succeed
+  facets row=nested-blocks col=succeed
   code   do { my $v = do { do { succeed "S"; "inner" } }; $v }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "S"
 
 - id     0139
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   nested-blocks | emit
-  facets nesting=nested-blocks exit=emit
+  facets row=nested-blocks col=emit
   code   do { my $v = do { do { emit "E"; "inner" } }; $v }
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → "inner"
 
 - id     0140
-  from   molecule:exit×nesting
+  from   molecule:exit-nesting
   cell   nested-blocks | warn
-  facets nesting=nested-blocks exit=warn
+  facets row=nested-blocks col=warn
   code   do { my $v = do { do { warn "W"; "inner" } }; $v }
   is     "inner"
   type   Str

@@ -1,0 +1,318 @@
+atom     molecules/declarator-nesting
+source   generated
+gen      gen/molecules.raku
+facets   declarator × nesting
+axes     sub-body | method-body | bare-block | loop-body | map-body | nested-sub | gather | thunk-rhs
+cols     state | my | our | constant
+
+- id     0001
+  from   molecule:declarator-nesting
+  cell   sub-body | state
+  facets row=sub-body col=state
+  code   do { sub f() { state $ndeclarator_nesting_sub_body_state = 0; $ndeclarator_nesting_sub_body_state++; $ndeclarator_nesting_sub_body_state }; f(); f() }
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
+
+- id     0002
+  from   molecule:declarator-nesting
+  cell   sub-body | my
+  facets row=sub-body col=my
+  code   do { sub f() { my $ndeclarator_nesting_sub_body_my = 0; $ndeclarator_nesting_sub_body_my++; $ndeclarator_nesting_sub_body_my }; f(); f() }
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0003
+  from   molecule:declarator-nesting
+  cell   sub-body | our
+  facets row=sub-body col=our
+  code   do { sub f() { our $ndeclarator_nesting_sub_body_our = 0; $ndeclarator_nesting_sub_body_our++; $ndeclarator_nesting_sub_body_our }; f(); f() }
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0004
+  from   molecule:declarator-nesting
+  cell   sub-body | constant
+  facets row=sub-body col=constant
+  code   do { sub f() { constant $ndeclarator_nesting_sub_body_constant = 0; $ndeclarator_nesting_sub_body_constant++; $ndeclarator_nesting_sub_body_constant }; f(); f() }
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → 1
+
+- id     0005
+  from   molecule:declarator-nesting
+  cell   method-body | state
+  facets row=method-body col=state
+  code   do { class Ddeclarator_nesting_method_body_state { method m() { state $ndeclarator_nesting_method_body_state = 0; $ndeclarator_nesting_method_body_state++; $ndeclarator_nesting_method_body_state } }; my $o = Ddeclarator_nesting_method_body_state.new; $o.m; $o.m }
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
+
+- id     0006
+  from   molecule:declarator-nesting
+  cell   method-body | my
+  facets row=method-body col=my
+  code   do { class Ddeclarator_nesting_method_body_my { method m() { my $ndeclarator_nesting_method_body_my = 0; $ndeclarator_nesting_method_body_my++; $ndeclarator_nesting_method_body_my } }; my $o = Ddeclarator_nesting_method_body_my.new; $o.m; $o.m }
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0007
+  from   molecule:declarator-nesting
+  cell   method-body | our
+  facets row=method-body col=our
+  code   do { class Ddeclarator_nesting_method_body_our { method m() { our $ndeclarator_nesting_method_body_our = 0; $ndeclarator_nesting_method_body_our++; $ndeclarator_nesting_method_body_our } }; my $o = Ddeclarator_nesting_method_body_our.new; $o.m; $o.m }
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0008
+  from   molecule:declarator-nesting
+  cell   method-body | constant
+  facets row=method-body col=constant
+  code   do { class Ddeclarator_nesting_method_body_constant { method m() { constant $ndeclarator_nesting_method_body_constant = 0; $ndeclarator_nesting_method_body_constant++; $ndeclarator_nesting_method_body_constant } }; my $o = Ddeclarator_nesting_method_body_constant.new; $o.m; $o.m }
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → 1
+
+- id     0009
+  from   molecule:declarator-nesting
+  cell   bare-block | state
+  facets row=bare-block col=state
+  code   do { my $r; for 1..2 { state $ndeclarator_nesting_bare_block_state = 0; $ndeclarator_nesting_bare_block_state++; $r = $ndeclarator_nesting_bare_block_state }; $r }
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
+
+- id     0010
+  from   molecule:declarator-nesting
+  cell   bare-block | my
+  facets row=bare-block col=my
+  code   do { my $r; for 1..2 { my $ndeclarator_nesting_bare_block_my = 0; $ndeclarator_nesting_bare_block_my++; $r = $ndeclarator_nesting_bare_block_my }; $r }
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0011
+  from   molecule:declarator-nesting
+  cell   bare-block | our
+  facets row=bare-block col=our
+  code   do { my $r; for 1..2 { our $ndeclarator_nesting_bare_block_our = 0; $ndeclarator_nesting_bare_block_our++; $r = $ndeclarator_nesting_bare_block_our }; $r }
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0012
+  from   molecule:declarator-nesting
+  cell   bare-block | constant
+  facets row=bare-block col=constant
+  code   do { my $r; for 1..2 { constant $ndeclarator_nesting_bare_block_constant = 0; $ndeclarator_nesting_bare_block_constant++; $r = $ndeclarator_nesting_bare_block_constant }; $r }
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → 1
+
+- id     0013
+  from   molecule:declarator-nesting
+  cell   loop-body | state
+  facets row=loop-body col=state
+  code   do { my @r; for 1..3 { state $ndeclarator_nesting_loop_body_state = 0; $ndeclarator_nesting_loop_body_state++; @r.push($ndeclarator_nesting_loop_body_state) }; @r.join(",") }
+  is     "1,2,3"
+  type   Str
+  oracle rakudo-2026.07 → "1,2,3"
+  oracle rakupp-3.14.0 → "1,2,3"
+
+- id     0014
+  from   molecule:declarator-nesting
+  cell   loop-body | my
+  facets row=loop-body col=my
+  code   do { my @r; for 1..3 { my $ndeclarator_nesting_loop_body_my = 0; $ndeclarator_nesting_loop_body_my++; @r.push($ndeclarator_nesting_loop_body_my) }; @r.join(",") }
+  is     "1,1,1"
+  type   Str
+  oracle rakudo-2026.07 → "1,1,1"
+  oracle rakupp-3.14.0 → "1,1,1"
+
+- id     0015
+  from   molecule:declarator-nesting
+  cell   loop-body | our
+  facets row=loop-body col=our
+  code   do { my @r; for 1..3 { our $ndeclarator_nesting_loop_body_our = 0; $ndeclarator_nesting_loop_body_our++; @r.push($ndeclarator_nesting_loop_body_our) }; @r.join(",") }
+  is     "1,1,1"
+  type   Str
+  oracle rakudo-2026.07 → "1,1,1"
+  oracle rakupp-3.14.0 → "1,1,1"
+
+- id     0016
+  from   molecule:declarator-nesting
+  cell   loop-body | constant
+  facets row=loop-body col=constant
+  code   do { my @r; for 1..3 { constant $ndeclarator_nesting_loop_body_constant = 0; $ndeclarator_nesting_loop_body_constant++; @r.push($ndeclarator_nesting_loop_body_constant) }; @r.join(",") }
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "1,1,1"
+
+- id     0017
+  from   molecule:declarator-nesting
+  cell   map-body | state
+  facets row=map-body col=state
+  code   do { (1..3).map({ state $ndeclarator_nesting_map_body_state = 0; $ndeclarator_nesting_map_body_state++; $ndeclarator_nesting_map_body_state }).list.raku }
+  is     "(3, 3, 3)"
+  type   Str
+  oracle rakudo-2026.07 → "(3, 3, 3)"
+  oracle rakupp-3.14.0 → "(1, 2, 3)"
+
+- id     0018
+  from   molecule:declarator-nesting
+  cell   map-body | my
+  facets row=map-body col=my
+  code   do { (1..3).map({ my $ndeclarator_nesting_map_body_my = 0; $ndeclarator_nesting_map_body_my++; $ndeclarator_nesting_map_body_my }).list.raku }
+  is     "(1, 1, 1)"
+  type   Str
+  oracle rakudo-2026.07 → "(1, 1, 1)"
+  oracle rakupp-3.14.0 → "(1, 1, 1)"
+
+- id     0019
+  from   molecule:declarator-nesting
+  cell   map-body | our
+  facets row=map-body col=our
+  code   do { (1..3).map({ our $ndeclarator_nesting_map_body_our = 0; $ndeclarator_nesting_map_body_our++; $ndeclarator_nesting_map_body_our }).list.raku }
+  is     "(1, 1, 1)"
+  type   Str
+  oracle rakudo-2026.07 → "(1, 1, 1)"
+  oracle rakupp-3.14.0 → "(1, 1, 1)"
+
+- id     0020
+  from   molecule:declarator-nesting
+  cell   map-body | constant
+  facets row=map-body col=constant
+  code   do { (1..3).map({ constant $ndeclarator_nesting_map_body_constant = 0; $ndeclarator_nesting_map_body_constant++; $ndeclarator_nesting_map_body_constant }).list.raku }
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "(1, 1, 1)"
+
+- id     0021
+  from   molecule:declarator-nesting
+  cell   nested-sub | state
+  facets row=nested-sub col=state
+  code   do { sub outer() { sub inner() { state $ndeclarator_nesting_nested_sub_state = 0; $ndeclarator_nesting_nested_sub_state++; $ndeclarator_nesting_nested_sub_state }; inner(); inner() }; outer() }
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
+
+- id     0022
+  from   molecule:declarator-nesting
+  cell   nested-sub | my
+  facets row=nested-sub col=my
+  code   do { sub outer() { sub inner() { my $ndeclarator_nesting_nested_sub_my = 0; $ndeclarator_nesting_nested_sub_my++; $ndeclarator_nesting_nested_sub_my }; inner(); inner() }; outer() }
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0023
+  from   molecule:declarator-nesting
+  cell   nested-sub | our
+  facets row=nested-sub col=our
+  code   do { sub outer() { sub inner() { our $ndeclarator_nesting_nested_sub_our = 0; $ndeclarator_nesting_nested_sub_our++; $ndeclarator_nesting_nested_sub_our }; inner(); inner() }; outer() }
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0024
+  from   molecule:declarator-nesting
+  cell   nested-sub | constant
+  facets row=nested-sub col=constant
+  code   do { sub outer() { sub inner() { constant $ndeclarator_nesting_nested_sub_constant = 0; $ndeclarator_nesting_nested_sub_constant++; $ndeclarator_nesting_nested_sub_constant }; inner(); inner() }; outer() }
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → 1
+
+- id     0025
+  from   molecule:declarator-nesting
+  cell   gather | state
+  facets row=gather col=state
+  code   do { gather { for 1..2 { state $ndeclarator_nesting_gather_state = 0; $ndeclarator_nesting_gather_state++; take $ndeclarator_nesting_gather_state } }.list.raku }
+  is     "(1, 2)"
+  type   Str
+  oracle rakudo-2026.07 → "(1, 2)"
+  oracle rakupp-3.14.0 → "(1, 2)"
+
+- id     0026
+  from   molecule:declarator-nesting
+  cell   gather | my
+  facets row=gather col=my
+  code   do { gather { for 1..2 { my $ndeclarator_nesting_gather_my = 0; $ndeclarator_nesting_gather_my++; take $ndeclarator_nesting_gather_my } }.list.raku }
+  is     "(1, 1)"
+  type   Str
+  oracle rakudo-2026.07 → "(1, 1)"
+  oracle rakupp-3.14.0 → "(1, 1)"
+
+- id     0027
+  from   molecule:declarator-nesting
+  cell   gather | our
+  facets row=gather col=our
+  code   do { gather { for 1..2 { our $ndeclarator_nesting_gather_our = 0; $ndeclarator_nesting_gather_our++; take $ndeclarator_nesting_gather_our } }.list.raku }
+  is     "(1, 1)"
+  type   Str
+  oracle rakudo-2026.07 → "(1, 1)"
+  oracle rakupp-3.14.0 → "(1, 1)"
+
+- id     0028
+  from   molecule:declarator-nesting
+  cell   gather | constant
+  facets row=gather col=constant
+  code   do { gather { for 1..2 { constant $ndeclarator_nesting_gather_constant = 0; $ndeclarator_nesting_gather_constant++; take $ndeclarator_nesting_gather_constant } }.list.raku }
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "(1, 1)"
+
+- id     0029
+  from   molecule:declarator-nesting
+  cell   thunk-rhs | state
+  facets row=thunk-rhs col=state
+  code   do { my @r; for 1..2 { @r.push(False || do { state $ndeclarator_nesting_thunk_rhs_state = 0; $ndeclarator_nesting_thunk_rhs_state++; $ndeclarator_nesting_thunk_rhs_state }) }; @r.join(",") }
+  is     "1,1"
+  type   Str
+  oracle rakudo-2026.07 → "1,1"
+  oracle rakupp-3.14.0 → "1,1"
+
+- id     0030
+  from   molecule:declarator-nesting
+  cell   thunk-rhs | my
+  facets row=thunk-rhs col=my
+  code   do { my @r; for 1..2 { @r.push(False || do { my $ndeclarator_nesting_thunk_rhs_my = 0; $ndeclarator_nesting_thunk_rhs_my++; $ndeclarator_nesting_thunk_rhs_my }) }; @r.join(",") }
+  is     "1,1"
+  type   Str
+  oracle rakudo-2026.07 → "1,1"
+  oracle rakupp-3.14.0 → "1,1"
+
+- id     0031
+  from   molecule:declarator-nesting
+  cell   thunk-rhs | our
+  facets row=thunk-rhs col=our
+  code   do { my @r; for 1..2 { @r.push(False || do { our $ndeclarator_nesting_thunk_rhs_our = 0; $ndeclarator_nesting_thunk_rhs_our++; $ndeclarator_nesting_thunk_rhs_our }) }; @r.join(",") }
+  is     "1,1"
+  type   Str
+  oracle rakudo-2026.07 → "1,1"
+  oracle rakupp-3.14.0 → "1,1"
+
+- id     0032
+  from   molecule:declarator-nesting
+  cell   thunk-rhs | constant
+  facets row=thunk-rhs col=constant
+  code   do { my @r; for 1..2 { @r.push(False || do { constant $ndeclarator_nesting_thunk_rhs_constant = 0; $ndeclarator_nesting_thunk_rhs_constant++; $ndeclarator_nesting_thunk_rhs_constant }) }; @r.join(",") }
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "1,1"

@@ -1,0 +1,1603 @@
+atom     methods/Set
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     ATTRIBUTE-new | BUILD_LEAST_DERIVED | Bool | CREATE | Capture | DEFINITE | FLATTENABLE_HASH | FLATTENABLE_LIST | HOW | INSTANTIATE-GENERIC | Int | Map | Num | Numeric | OBJECTIFIER | POPULATE | RAW-HASH | REPR | Real | VAR | WHAT | WHERE | WHICHIFY | WHO | all | any | bless | cache | can | chrs | default | does | is-generic | item | iterator | join | keyof | lazy-if | nl-out | none | not | of | one | reverse | self | set_why | so | sum | take | total
+cols     set(1,2) | set()
+
+- id     0001
+  from   inventory:Set.^methods
+  cell   ATTRIBUTE-new | set(1,2)
+  code   (set(1,2)).ATTRIBUTE-new
+  is     Set.new()
+  type   Set
+  oracle rakudo-2026.07 → Set.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0002
+  from   inventory:Set.^methods
+  cell   ATTRIBUTE-new | set()
+  code   (set()).ATTRIBUTE-new
+  is     Set.new()
+  type   Set
+  oracle rakudo-2026.07 → Set.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0003
+  from   inventory:Set.^methods
+  cell   BUILD_LEAST_DERIVED(0) | set(1,2)
+  code   (set(1,2)).BUILD_LEAST_DERIVED(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0004
+  from   inventory:Set.^methods
+  cell   BUILD_LEAST_DERIVED(1) | set(1,2)
+  code   (set(1,2)).BUILD_LEAST_DERIVED(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0005
+  from   inventory:Set.^methods
+  cell   BUILD_LEAST_DERIVED(-1) | set(1,2)
+  code   (set(1,2)).BUILD_LEAST_DERIVED(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0006
+  from   inventory:Set.^methods
+  cell   BUILD_LEAST_DERIVED("a") | set(1,2)
+  code   (set(1,2)).BUILD_LEAST_DERIVED("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0007
+  from   inventory:Set.^methods
+  cell   BUILD_LEAST_DERIVED(Any) | set(1,2)
+  code   (set(1,2)).BUILD_LEAST_DERIVED(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0008
+  from   inventory:Set.^methods
+  cell   BUILD_LEAST_DERIVED(0) | set()
+  code   (set()).BUILD_LEAST_DERIVED(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0009
+  from   inventory:Set.^methods
+  cell   BUILD_LEAST_DERIVED(1) | set()
+  code   (set()).BUILD_LEAST_DERIVED(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0010
+  from   inventory:Set.^methods
+  cell   BUILD_LEAST_DERIVED(-1) | set()
+  code   (set()).BUILD_LEAST_DERIVED(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0011
+  from   inventory:Set.^methods
+  cell   BUILD_LEAST_DERIVED("a") | set()
+  code   (set()).BUILD_LEAST_DERIVED("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0012
+  from   inventory:Set.^methods
+  cell   BUILD_LEAST_DERIVED(Any) | set()
+  code   (set()).BUILD_LEAST_DERIVED(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0013
+  from   inventory:Set.^methods
+  cell   Bool | set(1,2)
+  code   (set(1,2)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0014
+  from   inventory:Set.^methods
+  cell   Bool | set()
+  code   (set()).Bool
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0015
+  from   inventory:Set.^methods
+  cell   CREATE | set(1,2)
+  code   (set(1,2)).CREATE
+  is     UNRENDERABLE
+  type   Set
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0016
+  from   inventory:Set.^methods
+  cell   CREATE | set()
+  code   (set()).CREATE
+  is     UNRENDERABLE
+  type   Set
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0017
+  from   inventory:Set.^methods
+  cell   Capture | set(1,2)
+  code   (set(1,2)).Capture
+  is     \("1" => Bool::True, "2" => Bool::True)
+  type   Capture
+  oracle rakudo-2026.07 → \("1" => Bool::True, "2" => Bool::True)
+  oracle rakupp-3.14.0 → \(:1(Bool::True), :2(Bool::True))
+
+- id     0018
+  from   inventory:Set.^methods
+  cell   Capture | set()
+  code   (set()).Capture
+  is     \()
+  type   Capture
+  oracle rakudo-2026.07 → \()
+  oracle rakupp-3.14.0 → \()
+
+- id     0019
+  from   inventory:Set.^methods
+  cell   DEFINITE | set(1,2)
+  code   (set(1,2)).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0020
+  from   inventory:Set.^methods
+  cell   DEFINITE | set()
+  code   (set()).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0021
+  from   inventory:Set.^methods
+  cell   FLATTENABLE_HASH | set(1,2)
+  code   (set(1,2)).FLATTENABLE_HASH
+  is     ${}
+  type   Hash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0022
+  from   inventory:Set.^methods
+  cell   FLATTENABLE_HASH | set()
+  code   (set()).FLATTENABLE_HASH
+  is     ${}
+  type   Hash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0023
+  from   inventory:Set.^methods
+  cell   FLATTENABLE_LIST | set(1,2)
+  code   (set(1,2)).FLATTENABLE_LIST
+  is     (1 => Bool::True, 2 => Bool::True).IterationBuffer
+  type   IterationBuffer
+  oracle rakudo-2026.07 → (1 => Bool::True, 2 => Bool::True).IterationBuffer
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0024
+  from   inventory:Set.^methods
+  cell   FLATTENABLE_LIST | set()
+  code   (set()).FLATTENABLE_LIST
+  is     ().IterationBuffer
+  type   IterationBuffer
+  oracle rakudo-2026.07 → ().IterationBuffer
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0025
+  from   inventory:Set.^methods
+  cell   HOW | set(1,2)
+  code   (set(1,2)).HOW
+  is     UNRENDERABLE
+  type   Perl6::Metamodel::ClassHOW+{<anon>}
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0026
+  from   inventory:Set.^methods
+  cell   HOW | set()
+  code   (set()).HOW
+  is     UNRENDERABLE
+  type   Perl6::Metamodel::ClassHOW+{<anon>}
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0027
+  from   inventory:Set.^methods
+  cell   INSTANTIATE-GENERIC(0) | set(1,2)
+  code   (set(1,2)).INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0028
+  from   inventory:Set.^methods
+  cell   INSTANTIATE-GENERIC(1) | set(1,2)
+  code   (set(1,2)).INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0029
+  from   inventory:Set.^methods
+  cell   INSTANTIATE-GENERIC(-1) | set(1,2)
+  code   (set(1,2)).INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0030
+  from   inventory:Set.^methods
+  cell   INSTANTIATE-GENERIC("a") | set(1,2)
+  code   (set(1,2)).INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0031
+  from   inventory:Set.^methods
+  cell   INSTANTIATE-GENERIC(Any) | set(1,2)
+  code   (set(1,2)).INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0032
+  from   inventory:Set.^methods
+  cell   INSTANTIATE-GENERIC(0) | set()
+  code   (set()).INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0033
+  from   inventory:Set.^methods
+  cell   INSTANTIATE-GENERIC(1) | set()
+  code   (set()).INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0034
+  from   inventory:Set.^methods
+  cell   INSTANTIATE-GENERIC(-1) | set()
+  code   (set()).INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0035
+  from   inventory:Set.^methods
+  cell   INSTANTIATE-GENERIC("a") | set()
+  code   (set()).INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0036
+  from   inventory:Set.^methods
+  cell   INSTANTIATE-GENERIC(Any) | set()
+  code   (set()).INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0037
+  from   inventory:Set.^methods
+  cell   Int | set(1,2)
+  code   (set(1,2)).Int
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
+
+- id     0038
+  from   inventory:Set.^methods
+  cell   Int | set()
+  code   (set()).Int
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0039
+  from   inventory:Set.^methods
+  cell   Map | set(1,2)
+  code   (set(1,2)).Map
+  is     $(Map.new(("1" => Bool::True,"2" => Bool::True)))
+  type   Map
+  oracle rakudo-2026.07 → $(Map.new(("1" => Bool::True,"2" => Bool::True)))
+  oracle rakupp-3.14.0 → Map.new(("1" => Bool::True,"2" => Bool::True))
+
+- id     0040
+  from   inventory:Set.^methods
+  cell   Map | set()
+  code   (set()).Map
+  is     $(Map.new)
+  type   Map
+  oracle rakudo-2026.07 → $(Map.new)
+  oracle rakupp-3.14.0 → Map.new(())
+
+- id     0041
+  from   inventory:Set.^methods
+  cell   Num | set(1,2)
+  code   (set(1,2)).Num
+  is     2e0
+  type   Num
+  oracle rakudo-2026.07 → 2e0
+  oracle rakupp-3.14.0 → 2e0
+
+- id     0042
+  from   inventory:Set.^methods
+  cell   Num | set()
+  code   (set()).Num
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0043
+  from   inventory:Set.^methods
+  cell   Numeric | set(1,2)
+  code   (set(1,2)).Numeric
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2e0
+
+- id     0044
+  from   inventory:Set.^methods
+  cell   Numeric | set()
+  code   (set()).Numeric
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0045
+  from   inventory:Set.^methods
+  cell   OBJECTIFIER | set(1,2)
+  code   (set(1,2)).OBJECTIFIER
+  is     -> $value { #`(Block|4071112831432) ... }
+  type   Block
+  oracle rakudo-2026.07 → -> $value { #`(Block|4071112831432) ... }
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0046
+  from   inventory:Set.^methods
+  cell   OBJECTIFIER | set()
+  code   (set()).OBJECTIFIER
+  is     -> $value { #`(Block|4071112831792) ... }
+  type   Block
+  oracle rakudo-2026.07 → -> $value { #`(Block|4071112831792) ... }
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0047
+  from   inventory:Set.^methods
+  cell   POPULATE(0) | set(1,2)
+  code   (set(1,2)).POPULATE(0)
+  is     Set.new(1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0048
+  from   inventory:Set.^methods
+  cell   POPULATE(1) | set(1,2)
+  code   (set(1,2)).POPULATE(1)
+  is     Set.new(2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,1)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0049
+  from   inventory:Set.^methods
+  cell   POPULATE(-1) | set(1,2)
+  code   (set(1,2)).POPULATE(-1)
+  is     Set.new(2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,1)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0050
+  from   inventory:Set.^methods
+  cell   POPULATE("a") | set(1,2)
+  code   (set(1,2)).POPULATE("a")
+  is     Set.new(1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0051
+  from   inventory:Set.^methods
+  cell   POPULATE(Any) | set(1,2)
+  code   (set(1,2)).POPULATE(Any)
+  is     Set.new(2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,1)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0052
+  from   inventory:Set.^methods
+  cell   POPULATE(0) | set()
+  code   (set()).POPULATE(0)
+  is     set()
+  type   Set
+  oracle rakudo-2026.07 → set()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0053
+  from   inventory:Set.^methods
+  cell   POPULATE(1) | set()
+  code   (set()).POPULATE(1)
+  is     set()
+  type   Set
+  oracle rakudo-2026.07 → set()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0054
+  from   inventory:Set.^methods
+  cell   POPULATE(-1) | set()
+  code   (set()).POPULATE(-1)
+  is     set()
+  type   Set
+  oracle rakudo-2026.07 → set()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0055
+  from   inventory:Set.^methods
+  cell   POPULATE("a") | set()
+  code   (set()).POPULATE("a")
+  is     set()
+  type   Set
+  oracle rakudo-2026.07 → set()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0056
+  from   inventory:Set.^methods
+  cell   POPULATE(Any) | set()
+  code   (set()).POPULATE(Any)
+  is     set()
+  type   Set
+  oracle rakudo-2026.07 → set()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0057
+  from   inventory:Set.^methods
+  cell   RAW-HASH | set(1,2)
+  code   (set(1,2)).RAW-HASH
+  is     Int|1
+  type   1
+  oracle rakudo-2026.07 → Int|1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0058
+  from   inventory:Set.^methods
+  cell   RAW-HASH | set()
+  code   (set()).RAW-HASH
+  is     
+  type   Rakudo::Internals::IterationSet
+  oracle rakudo-2026.07 → 
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0059
+  from   inventory:Set.^methods
+  cell   REPR | set(1,2)
+  code   (set(1,2)).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0060
+  from   inventory:Set.^methods
+  cell   REPR | set()
+  code   (set()).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0061
+  from   inventory:Set.^methods
+  cell   Real | set(1,2)
+  code   (set(1,2)).Real
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2e0
+
+- id     0062
+  from   inventory:Set.^methods
+  cell   Real | set()
+  code   (set()).Real
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0063
+  from   inventory:Set.^methods
+  cell   VAR | set(1,2)
+  code   (set(1,2)).VAR
+  is     Set.new(1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2)
+  oracle rakupp-3.14.0 → Set.new(1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0064
+  from   inventory:Set.^methods
+  cell   VAR | set()
+  code   (set()).VAR
+  is     set()
+  type   Set
+  oracle rakudo-2026.07 → set()
+  oracle rakupp-3.14.0 → Set.new()
+
+- id     0065
+  from   inventory:Set.^methods
+  cell   WHAT | set(1,2)
+  code   (set(1,2)).WHAT
+  is     Set
+  type   Set
+  oracle rakudo-2026.07 → Set
+  oracle rakupp-3.14.0 → Set
+
+- id     0066
+  from   inventory:Set.^methods
+  cell   WHAT | set()
+  code   (set()).WHAT
+  is     Set
+  type   Set
+  oracle rakudo-2026.07 → Set
+  oracle rakupp-3.14.0 → Set
+
+- id     0067
+  from   inventory:Set.^methods
+  cell   WHERE | set(1,2)
+  code   (set(1,2)).WHERE
+  is     4071092459304
+  type   Int
+  oracle rakudo-2026.07 → 4071092459304
+  oracle rakupp-3.14.0 → 140478287770136
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0068
+  from   inventory:Set.^methods
+  cell   WHERE | set()
+  code   (set()).WHERE
+  is     4071056930976
+  type   Int
+  oracle rakudo-2026.07 → 4071056930976
+  oracle rakupp-3.14.0 → 140478287770920
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0069
+  from   inventory:Set.^methods
+  cell   WHICHIFY(0) | set(1,2)
+  code   (set(1,2)).WHICHIFY(0)
+  is     ValueObjAt.new("Int|0")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Int|0")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0070
+  from   inventory:Set.^methods
+  cell   WHICHIFY(1) | set(1,2)
+  code   (set(1,2)).WHICHIFY(1)
+  is     ValueObjAt.new("Int|1")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Int|1")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0071
+  from   inventory:Set.^methods
+  cell   WHICHIFY(-1) | set(1,2)
+  code   (set(1,2)).WHICHIFY(-1)
+  is     ValueObjAt.new("Int|-1")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Int|-1")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0072
+  from   inventory:Set.^methods
+  cell   WHICHIFY("a") | set(1,2)
+  code   (set(1,2)).WHICHIFY("a")
+  is     ValueObjAt.new("Str|a")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Str|a")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0073
+  from   inventory:Set.^methods
+  cell   WHICHIFY(Any) | set(1,2)
+  code   (set(1,2)).WHICHIFY(Any)
+  is     ValueObjAt.new("Any|U4070952395128")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Any|U4070952395128")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0074
+  from   inventory:Set.^methods
+  cell   WHICHIFY(0) | set()
+  code   (set()).WHICHIFY(0)
+  is     ValueObjAt.new("Int|0")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Int|0")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0075
+  from   inventory:Set.^methods
+  cell   WHICHIFY(1) | set()
+  code   (set()).WHICHIFY(1)
+  is     ValueObjAt.new("Int|1")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Int|1")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0076
+  from   inventory:Set.^methods
+  cell   WHICHIFY(-1) | set()
+  code   (set()).WHICHIFY(-1)
+  is     ValueObjAt.new("Int|-1")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Int|-1")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0077
+  from   inventory:Set.^methods
+  cell   WHICHIFY("a") | set()
+  code   (set()).WHICHIFY("a")
+  is     ValueObjAt.new("Str|a")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Str|a")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0078
+  from   inventory:Set.^methods
+  cell   WHICHIFY(Any) | set()
+  code   (set()).WHICHIFY(Any)
+  is     ValueObjAt.new("Any|U4070952395128")
+  type   ValueObjAt
+  oracle rakudo-2026.07 → ValueObjAt.new("Any|U4070952395128")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0079
+  from   inventory:Set.^methods
+  cell   WHO | set(1,2)
+  code   (set(1,2)).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+
+- id     0080
+  from   inventory:Set.^methods
+  cell   WHO | set()
+  code   (set()).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+
+- id     0081
+  from   inventory:Set.^methods
+  cell   all | set(1,2)
+  code   (set(1,2)).all
+  is     all(2 => Bool::True, 1 => Bool::True)
+  type   Junction
+  oracle rakudo-2026.07 → all(2 => Bool::True, 1 => Bool::True)
+  oracle rakupp-3.14.0 → all(1 => Bool::True, 2 => Bool::True)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0082
+  from   inventory:Set.^methods
+  cell   all | set()
+  code   (set()).all
+  is     all()
+  type   Junction
+  oracle rakudo-2026.07 → all()
+  oracle rakupp-3.14.0 → all()
+
+- id     0083
+  from   inventory:Set.^methods
+  cell   any | set(1,2)
+  code   (set(1,2)).any
+  is     any(1 => Bool::True, 2 => Bool::True)
+  type   Junction
+  oracle rakudo-2026.07 → any(1 => Bool::True, 2 => Bool::True)
+  oracle rakupp-3.14.0 → any(1 => Bool::True, 2 => Bool::True)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0084
+  from   inventory:Set.^methods
+  cell   any | set()
+  code   (set()).any
+  is     any()
+  type   Junction
+  oracle rakudo-2026.07 → any()
+  oracle rakupp-3.14.0 → any()
+
+- id     0085
+  from   inventory:Set.^methods
+  cell   bless | set(1,2)
+  code   (set(1,2)).bless
+  is     UNRENDERABLE
+  type   Set
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0086
+  from   inventory:Set.^methods
+  cell   bless | set()
+  code   (set()).bless
+  is     UNRENDERABLE
+  type   Set
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0087
+  from   inventory:Set.^methods
+  cell   cache | set(1,2)
+  code   (set(1,2)).cache
+  is     $(1 => Bool::True, 2 => Bool::True)
+  type   List
+  oracle rakudo-2026.07 → $(1 => Bool::True, 2 => Bool::True)
+  oracle rakupp-3.14.0 → $(1 => Bool::True, 2 => Bool::True)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0088
+  from   inventory:Set.^methods
+  cell   cache | set()
+  code   (set()).cache
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0089
+  from   inventory:Set.^methods
+  cell   can(0) | set(1,2)
+  code   (set(1,2)).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0090
+  from   inventory:Set.^methods
+  cell   can(1) | set(1,2)
+  code   (set(1,2)).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0091
+  from   inventory:Set.^methods
+  cell   can(-1) | set(1,2)
+  code   (set(1,2)).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0092
+  from   inventory:Set.^methods
+  cell   can("a") | set(1,2)
+  code   (set(1,2)).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0093
+  from   inventory:Set.^methods
+  cell   can(Any) | set(1,2)
+  code   (set(1,2)).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0094
+  from   inventory:Set.^methods
+  cell   can(0) | set()
+  code   (set()).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0095
+  from   inventory:Set.^methods
+  cell   can(1) | set()
+  code   (set()).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0096
+  from   inventory:Set.^methods
+  cell   can(-1) | set()
+  code   (set()).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0097
+  from   inventory:Set.^methods
+  cell   can("a") | set()
+  code   (set()).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0098
+  from   inventory:Set.^methods
+  cell   can(Any) | set()
+  code   (set()).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0099
+  from   inventory:Set.^methods
+  cell   chrs | set(1,2)
+  code   (set(1,2)).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "\0\0"
+
+- id     0100
+  from   inventory:Set.^methods
+  cell   chrs | set()
+  code   (set()).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ""
+
+- id     0101
+  from   inventory:Set.^methods
+  cell   default | set(1,2)
+  code   (set(1,2)).default
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0102
+  from   inventory:Set.^methods
+  cell   default | set()
+  code   (set()).default
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0103
+  from   inventory:Set.^methods
+  cell   does(0) | set(1,2)
+  code   (set(1,2)).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0104
+  from   inventory:Set.^methods
+  cell   does(1) | set(1,2)
+  code   (set(1,2)).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0105
+  from   inventory:Set.^methods
+  cell   does(-1) | set(1,2)
+  code   (set(1,2)).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0106
+  from   inventory:Set.^methods
+  cell   does("a") | set(1,2)
+  code   (set(1,2)).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0107
+  from   inventory:Set.^methods
+  cell   does(Any) | set(1,2)
+  code   (set(1,2)).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0108
+  from   inventory:Set.^methods
+  cell   does(0) | set()
+  code   (set()).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0109
+  from   inventory:Set.^methods
+  cell   does(1) | set()
+  code   (set()).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0110
+  from   inventory:Set.^methods
+  cell   does(-1) | set()
+  code   (set()).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0111
+  from   inventory:Set.^methods
+  cell   does("a") | set()
+  code   (set()).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0112
+  from   inventory:Set.^methods
+  cell   does(Any) | set()
+  code   (set()).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0113
+  from   inventory:Set.^methods
+  cell   is-generic | set(1,2)
+  code   (set(1,2)).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0114
+  from   inventory:Set.^methods
+  cell   is-generic | set()
+  code   (set()).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0115
+  from   inventory:Set.^methods
+  cell   item | set(1,2)
+  code   (set(1,2)).item
+  is     Set.new(1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2)
+  oracle rakupp-3.14.0 → Set.new(1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0116
+  from   inventory:Set.^methods
+  cell   item | set()
+  code   (set()).item
+  is     set()
+  type   Set
+  oracle rakudo-2026.07 → set()
+  oracle rakupp-3.14.0 → Set.new()
+
+- id     0117
+  from   inventory:Set.^methods
+  cell   iterator | set(1,2)
+  code   (set(1,2)).iterator
+  is     Set::Iterate.new
+  type   Set::Iterate
+  oracle rakudo-2026.07 → Set::Iterate.new
+  oracle rakupp-3.14.0 → ${:items($[1 => Bool::True, 2 => Bool::True]), :nondeterministic(Bool::True), :pos(0)}
+
+- id     0118
+  from   inventory:Set.^methods
+  cell   iterator | set()
+  code   (set()).iterator
+  is     Rakudo::Iterator::Empty.new
+  type   Rakudo::Iterator::Empty
+  oracle rakudo-2026.07 → Rakudo::Iterator::Empty.new
+  oracle rakupp-3.14.0 → ${:items($[]), :nondeterministic(Bool::True), :pos(0)}
+
+- id     0119
+  from   inventory:Set.^methods
+  cell   join(0) | set(1,2)
+  code   (set(1,2)).join(0)
+  is     "1\tTrue02\tTrue"
+  type   Str
+  oracle rakudo-2026.07 → "1\tTrue02\tTrue"
+  oracle rakupp-3.14.0 → "1\tTrue02\tTrue"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0120
+  from   inventory:Set.^methods
+  cell   join(1) | set(1,2)
+  code   (set(1,2)).join(1)
+  is     "2\tTrue11\tTrue"
+  type   Str
+  oracle rakudo-2026.07 → "2\tTrue11\tTrue"
+  oracle rakupp-3.14.0 → "1\tTrue12\tTrue"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0121
+  from   inventory:Set.^methods
+  cell   join(-1) | set(1,2)
+  code   (set(1,2)).join(-1)
+  is     "2\tTrue-11\tTrue"
+  type   Str
+  oracle rakudo-2026.07 → "2\tTrue-11\tTrue"
+  oracle rakupp-3.14.0 → "1\tTrue-12\tTrue"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0122
+  from   inventory:Set.^methods
+  cell   join("a") | set(1,2)
+  code   (set(1,2)).join("a")
+  is     "2\tTruea1\tTrue"
+  type   Str
+  oracle rakudo-2026.07 → "2\tTruea1\tTrue"
+  oracle rakupp-3.14.0 → "1\tTruea2\tTrue"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0123
+  from   inventory:Set.^methods
+  cell   join(Any) | set(1,2)
+  code   (set(1,2)).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → "1\tTrue2\tTrue"
+
+- id     0124
+  from   inventory:Set.^methods
+  cell   join(0) | set()
+  code   (set()).join(0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0125
+  from   inventory:Set.^methods
+  cell   join(1) | set()
+  code   (set()).join(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0126
+  from   inventory:Set.^methods
+  cell   join(-1) | set()
+  code   (set()).join(-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0127
+  from   inventory:Set.^methods
+  cell   join("a") | set()
+  code   (set()).join("a")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0128
+  from   inventory:Set.^methods
+  cell   join(Any) | set()
+  code   (set()).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ""
+
+- id     0129
+  from   inventory:Set.^methods
+  cell   keyof | set(1,2)
+  code   (set(1,2)).keyof
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-3.14.0 → Mu
+
+- id     0130
+  from   inventory:Set.^methods
+  cell   keyof | set()
+  code   (set()).keyof
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-3.14.0 → Mu
+
+- id     0131
+  from   inventory:Set.^methods
+  cell   lazy-if(0) | set(1,2)
+  code   (set(1,2)).lazy-if(0)
+  is     Set.new(2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,1)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0132
+  from   inventory:Set.^methods
+  cell   lazy-if(1) | set(1,2)
+  code   (set(1,2)).lazy-if(1)
+  is     Set.new(1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0133
+  from   inventory:Set.^methods
+  cell   lazy-if(-1) | set(1,2)
+  code   (set(1,2)).lazy-if(-1)
+  is     Set.new(2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,1)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0134
+  from   inventory:Set.^methods
+  cell   lazy-if("a") | set(1,2)
+  code   (set(1,2)).lazy-if("a")
+  is     Set.new(1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0135
+  from   inventory:Set.^methods
+  cell   lazy-if(Any) | set(1,2)
+  code   (set(1,2)).lazy-if(Any)
+  is     Set.new(2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,1)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0136
+  from   inventory:Set.^methods
+  cell   lazy-if(0) | set()
+  code   (set()).lazy-if(0)
+  is     set()
+  type   Set
+  oracle rakudo-2026.07 → set()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0137
+  from   inventory:Set.^methods
+  cell   lazy-if(1) | set()
+  code   (set()).lazy-if(1)
+  is     set()
+  type   Set
+  oracle rakudo-2026.07 → set()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0138
+  from   inventory:Set.^methods
+  cell   lazy-if(-1) | set()
+  code   (set()).lazy-if(-1)
+  is     set()
+  type   Set
+  oracle rakudo-2026.07 → set()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0139
+  from   inventory:Set.^methods
+  cell   lazy-if("a") | set()
+  code   (set()).lazy-if("a")
+  is     set()
+  type   Set
+  oracle rakudo-2026.07 → set()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0140
+  from   inventory:Set.^methods
+  cell   lazy-if(Any) | set()
+  code   (set()).lazy-if(Any)
+  is     set()
+  type   Set
+  oracle rakudo-2026.07 → set()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0141
+  from   inventory:Set.^methods
+  cell   nl-out | set(1,2)
+  code   (set(1,2)).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0142
+  from   inventory:Set.^methods
+  cell   nl-out | set()
+  code   (set()).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0143
+  from   inventory:Set.^methods
+  cell   none | set(1,2)
+  code   (set(1,2)).none
+  is     none(2 => Bool::True, 1 => Bool::True)
+  type   Junction
+  oracle rakudo-2026.07 → none(2 => Bool::True, 1 => Bool::True)
+  oracle rakupp-3.14.0 → none(1 => Bool::True, 2 => Bool::True)
+
+- id     0144
+  from   inventory:Set.^methods
+  cell   none | set()
+  code   (set()).none
+  is     none()
+  type   Junction
+  oracle rakudo-2026.07 → none()
+  oracle rakupp-3.14.0 → none()
+
+- id     0145
+  from   inventory:Set.^methods
+  cell   not | set(1,2)
+  code   (set(1,2)).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0146
+  from   inventory:Set.^methods
+  cell   not | set()
+  code   (set()).not
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0147
+  from   inventory:Set.^methods
+  cell   of | set(1,2)
+  code   (set(1,2)).of
+  is     Bool
+  type   Bool
+  oracle rakudo-2026.07 → Bool
+  oracle rakupp-3.14.0 → Bool
+
+- id     0148
+  from   inventory:Set.^methods
+  cell   of | set()
+  code   (set()).of
+  is     Bool
+  type   Bool
+  oracle rakudo-2026.07 → Bool
+  oracle rakupp-3.14.0 → Bool
+
+- id     0149
+  from   inventory:Set.^methods
+  cell   one | set(1,2)
+  code   (set(1,2)).one
+  is     one(1 => Bool::True, 2 => Bool::True)
+  type   Junction
+  oracle rakudo-2026.07 → one(1 => Bool::True, 2 => Bool::True)
+  oracle rakupp-3.14.0 → one(1 => Bool::True, 2 => Bool::True)
+
+- id     0150
+  from   inventory:Set.^methods
+  cell   one | set()
+  code   (set()).one
+  is     one()
+  type   Junction
+  oracle rakudo-2026.07 → one()
+  oracle rakupp-3.14.0 → one()
+
+- id     0151
+  from   inventory:Set.^methods
+  cell   reverse | set(1,2)
+  code   (set(1,2)).reverse
+  is     $((1 => Bool::True, 2 => Bool::True).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1 => Bool::True, 2 => Bool::True).Seq)
+  oracle rakupp-3.14.0 → $(2 => Bool::True, 1 => Bool::True).Seq
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0152
+  from   inventory:Set.^methods
+  cell   reverse | set()
+  code   (set()).reverse
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-3.14.0 → $().Seq
+
+- id     0153
+  from   inventory:Set.^methods
+  cell   self | set(1,2)
+  code   (set(1,2)).self
+  is     Set.new(1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2)
+  oracle rakupp-3.14.0 → Set.new(1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0154
+  from   inventory:Set.^methods
+  cell   self | set()
+  code   (set()).self
+  is     set()
+  type   Set
+  oracle rakudo-2026.07 → set()
+  oracle rakupp-3.14.0 → Set.new()
+
+- id     0155
+  from   inventory:Set.^methods
+  cell   set_why(0) | set(1,2)
+  code   (set(1,2)).set_why(0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0156
+  from   inventory:Set.^methods
+  cell   set_why(1) | set(1,2)
+  code   (set(1,2)).set_why(1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0157
+  from   inventory:Set.^methods
+  cell   set_why(-1) | set(1,2)
+  code   (set(1,2)).set_why(-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0158
+  from   inventory:Set.^methods
+  cell   set_why("a") | set(1,2)
+  code   (set(1,2)).set_why("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0159
+  from   inventory:Set.^methods
+  cell   set_why(Any) | set(1,2)
+  code   (set(1,2)).set_why(Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0160
+  from   inventory:Set.^methods
+  cell   set_why(0) | set()
+  code   (set()).set_why(0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0161
+  from   inventory:Set.^methods
+  cell   set_why(1) | set()
+  code   (set()).set_why(1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0162
+  from   inventory:Set.^methods
+  cell   set_why(-1) | set()
+  code   (set()).set_why(-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0163
+  from   inventory:Set.^methods
+  cell   set_why("a") | set()
+  code   (set()).set_why("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0164
+  from   inventory:Set.^methods
+  cell   set_why(Any) | set()
+  code   (set()).set_why(Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0165
+  from   inventory:Set.^methods
+  cell   so | set(1,2)
+  code   (set(1,2)).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0166
+  from   inventory:Set.^methods
+  cell   so | set()
+  code   (set()).so
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0167
+  from   inventory:Set.^methods
+  cell   sum | set(1,2)
+  code   (set(1,2)).sum
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0168
+  from   inventory:Set.^methods
+  cell   sum | set()
+  code   (set()).sum
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0169
+  from   inventory:Set.^methods
+  cell   take | set(1,2)
+  code   (set(1,2)).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → Set.new(1,2)
+
+- id     0170
+  from   inventory:Set.^methods
+  cell   take | set()
+  code   (set()).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → Set.new()
+
+- id     0171
+  from   inventory:Set.^methods
+  cell   total | set(1,2)
+  code   (set(1,2)).total
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
+
+- id     0172
+  from   inventory:Set.^methods
+  cell   total | set()
+  code   (set()).total
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0

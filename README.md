@@ -12,11 +12,11 @@ Rakugrid is built from what those bugs taught us.
 
 | | |
 |---|---|
-| **atoms** | 402 |
-| **tests** | 8,479 — 8,219 generated, 260 curated |
+| **atoms** | 404 |
+| **tests** | 8,543 — 8,283 generated, 260 curated |
 | **engines on record** | `rakudo-2026.07`, `rakupp-3.14.0` |
-| **divergences** | 1,273 observations in 152 clusters |
-| **crashes on record** | 24 |
+| **divergences** | 1,363 observations in 183 clusters |
+| **crashes on record** | 40 |
 | **signed rulings** | 147 |
 
 <sub>Refresh with `rakugrid stats` — these are printed, not hand-maintained.</sub>
@@ -53,6 +53,15 @@ Rakugrid is built from what those bugs taught us.
   ladders in both directions: corner against corner, and corner against
   ordinary. An atom with a hole in its ladder is reported as uncovered no matter
   how many tests it has.
+
+## What each implementation is for
+
+Rakudo is consulted for **one thing only**: knowing what a piece of code does.
+It is an observation source, not a runtime dependency. The generators run on
+`rakupp`, the harness runs on whichever implementation you invoke it with, and
+the engine under test defaults to that same one — `rakupp bin/rakugrid fire`
+tests rakupp, `raku bin/rakugrid fire` tests Rakudo, and `--engine=` overrides
+either. Nothing in the suite requires a particular implementation to be present.
 
 ## Rakudo is the oracle, but not the arbiter
 
@@ -108,7 +117,7 @@ Phase 0. Working: the `.grid` parser, `fire` (in-process assertions — `is`,
 `adjudications`, and four generators: `gen/ladder.raku` (edge-ladder crosses
 for operators and methods), `gen/syntax.raku` (the parse grid — which spellings
 compile), `gen/laws.raku` (algebraic laws asserted with `same-as`, needing no
-oracle), `gen/molecules.raku` (the interaction layer — Exit × Nesting) and
+oracle), `gen/molecules.raku` (the interaction layer — three crossings) and
 `gen/import-regression.raku` (whole-program repros imported with
 provenance, fixtures included). Two engines on record throughout.
 

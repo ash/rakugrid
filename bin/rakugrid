@@ -14,7 +14,12 @@
 # tests. See docs/FORMAT.md for the .grid format this parses.
 
 my $ROOT   = $*PROGRAM.IO.absolute.IO.parent.parent;
-my $ENGINE = %*ENV<RAKUGRID_ENGINE> // 'raku';
+# The engine under test defaults to THE ONE RUNNING THE HARNESS. Rakugrid is
+# engine-neutral by design, so there is no correct implementation to hard-code;
+# `rakupp bin/rakugrid fire` tests rakupp, `raku bin/rakugrid fire` tests Rakudo,
+# and --engine= overrides either. `.Str` rather than `.absolute`, which returns
+# an IO::Path on one engine and a Str on the other.
+my $ENGINE = %*ENV<RAKUGRID_ENGINE> // $*EXECUTABLE.Str;
 my $KEEP   = False;
 my $GUARD  = 0;
 my $VERB   = False;
@@ -359,11 +364,50 @@ sub emit-record(%parsed, %r, $kind) {
 my $SEQ = 0;
 my $BAD = 0;
 my $PARKED = 0;
+my $RULED = 0;
 
-sub report($ok, $desc, $diag = '') {
+# Which implementation are we testing? Needed to tell an ordinary failure from
+# one we have already ruled on: a record that says the reference is wrong is
+# SUPPOSED to fail against the reference.
+my $ENGINE-ID = '';
+sub engine-id() {
+    return $ENGINE-ID if $ENGINE-ID;
+    my $p = run($ENGINE, '-e', 'print $*RAKU.compiler.name', :out, :err);
+    my $name = $p.out.slurp(:close).trim;
+    $p.err.slurp(:close);
+    if $name.contains('Raku++') || $name.lc.contains('rakupp') {
+        my $v = run($ENGINE, '--version', :out, :err);
+        my $text = $v.out.slurp(:close);
+        $v.err.slurp(:close);
+        my $ver = $text ~~ /(\d+ '.' \d+ '.' \d+)/ ?? ~$0 !! 'unknown';
+        return $ENGINE-ID = "rakupp-$ver";
+    }
+    my $p2 = run($ENGINE, '-e', 'print $*RAKU.compiler.version', :out, :err);
+    my $ver = $p2.out.slurp(:close).trim;
+    $p2.err.slurp(:close);
+    return $ENGINE-ID = ($name || 'unknown') ~ '-' ~ ($ver || 'unknown');
+}
+
+# A signed ruling that names THIS implementation means we expect it to differ.
+# Reported as a TAP TODO: visible, counted, and not a build failure.
+sub expected-to-fail(%r) {
+    my $v = %r<verdict> // '';
+    return False unless $v;
+    return False if $v eq 'disputed';
+    my $ruled = %r<ruled> // '';
+    return False unless $ruled ~~ / 'against' \s+ (\S+) /;
+    return ~$0 eq engine-id();
+}
+
+sub report($ok, $desc, $diag = '', $todo = '') {
     $SEQ++;
     if $ok {
         say "ok $SEQ - $desc";
+    }
+    elsif $todo {
+        say "not ok $SEQ - $desc # TODO ruled: $todo";
+        $RULED++;
+        say "# $_" for $diag.lines.grep({ .trim }).head(2);
     }
     else {
         say "not ok $SEQ - $desc";
@@ -404,6 +448,8 @@ sub fire-one(%parsed, %r) {
 
     my $subject = (%r<setup> ?? %r<setup> ~ "\n" !! '') ~ (%r<code> // '');
 
+    my $todo = expected-to-fail(%r) ?? (%r<verdict> // '') !! '';
+
     if $kind eq 'parses' | 'no-parse' {
         # Named after the atom, not `one.raku`: a whole-program record can read
     # $?FILE or $*PROGRAM, and a generic temp name changes what it sees.
@@ -417,14 +463,14 @@ sub fire-one(%parsed, %r) {
         my $compiled = %g<exit> == 0;
 
         if $kind eq 'parses' {
-            report($compiled, $id, %g<err>);
+            report($compiled, $id, %g<err>, $todo);
         }
         else {
             my $want = %r<error> // '';
             my $said = %g<out> ~ %g<err>;
             report(!$compiled && (!$want || $said.contains($want)), $id,
                    $compiled ?? "compiled, expected a parse failure"
-                             !! "reported: { $said.lines.head(2).join(' ') }");
+                             !! "reported: { $said.lines.head(2).join(' ') }", $todo);
         }
         return;
     }
@@ -449,7 +495,7 @@ sub fire-one(%parsed, %r) {
     if $kind eq 'finishes' {
         report(!%g<timeout> && %g<exit> == 0, $id,
                %g<timeout> ?? "did not finish within {$secs}s"
-                           !! "exit { %g<exit> }: { %g<err>.lines.head(2).join(' ') }");
+                           !! "exit { %g<exit> }: { %g<err>.lines.head(2).join(' ') }", $todo);
         return;
     }
 
@@ -458,7 +504,7 @@ sub fire-one(%parsed, %r) {
         my $got  = %g<out>.chomp;
         report(!%g<timeout> && $got eq $want.chomp, $id,
                %g<timeout> ?? "did not finish within {$secs}s"
-                           !! "got: { $got.lines.head(2).join(' ') }");
+                           !! "got: { $got.lines.head(2).join(' ') }", $todo);
         return;
     }
 
@@ -468,11 +514,11 @@ sub fire-one(%parsed, %r) {
         my $why = %g<timeout>
             ?? "did not finish within {$secs}s"
             !! "no result (exit { %g<exit> }): { (%g<err> ~ %g<out>).lines.grep({ .trim }).head(2).join(' ') }";
-        report(False, $id, $why);
+        report(False, $id, $why, $todo);
         return;
     }
     report($line.starts-with('ok '), $id,
-           %g<out>.lines.grep({ .starts-with('# ') }).head(2).join("\n").subst('# ', ''));
+           %g<out>.lines.grep({ .starts-with('# ') }).head(2).join("\n").subst('# ', ''), $todo);
 }
 
 sub cmd-fire(@selector) {
@@ -530,7 +576,8 @@ sub cmd-fire(@selector) {
             for @dense -> %r {
                 my $id = id-of(%parsed, %r);
                 if %result{$id}:exists {
-                    report(%result{$id}<ok>, $id, %result{$id}<diag>);
+                    report(%result{$id}<ok>, $id, %result{$id}<diag>,
+                           expected-to-fail(%r) ?? (%r<verdict> // '') !! '');
                 }
                 else {
                     @lost.push: %r;
@@ -551,7 +598,8 @@ sub cmd-fire(@selector) {
 
     my $note = $recovered ?? ", $recovered re-run individually after a dense-run failure" !! '';
     my $park = $PARKED ?? ", $PARKED parked on an unresolved ruling" !! '';
-    say "# $SEQ ran, $BAD failed$note$park";
+    my $rule = $RULED  ?? ", $RULED failed as ruled"                  !! '';
+    say "# $SEQ ran, $BAD failed$note$park$rule";
     exit $BAD ?? 1 !! 0;
 }
 

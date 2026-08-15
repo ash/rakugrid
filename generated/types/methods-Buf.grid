@@ -1,0 +1,108 @@
+atom     methods/Buf
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     Blob | reallocate
+cols     Buf.new(1,2,3) | Buf.new()
+
+- id     0001
+  from   inventory:Buf.^methods
+  cell   Blob | Buf.new(1,2,3)
+  code   (Buf.new(1,2,3)).Blob
+  is     Blob.new(1,2,3)
+  type   Blob
+  oracle rakudo-2026.07 → Blob.new(1,2,3)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0002
+  from   inventory:Buf.^methods
+  cell   Blob | Buf.new()
+  code   (Buf.new()).Blob
+  is     Blob.new()
+  type   Blob
+  oracle rakudo-2026.07 → Blob.new()
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0003
+  from   inventory:Buf.^methods
+  cell   reallocate(0) | Buf.new(1,2,3)
+  code   (Buf.new(1,2,3)).reallocate(0)
+  is     Buf.new()
+  type   Buf
+  oracle rakudo-2026.07 → Buf.new()
+  oracle rakupp-3.14.0 → ERR:X::Assignment::RO
+
+- id     0004
+  from   inventory:Buf.^methods
+  cell   reallocate(1) | Buf.new(1,2,3)
+  code   (Buf.new(1,2,3)).reallocate(1)
+  is     Buf.new(1)
+  type   Buf
+  oracle rakudo-2026.07 → Buf.new(1)
+  oracle rakupp-3.14.0 → ERR:X::Assignment::RO
+
+- id     0005
+  from   inventory:Buf.^methods
+  cell   reallocate(-1) | Buf.new(1,2,3)
+  code   (Buf.new(1,2,3)).reallocate(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Assignment::RO
+
+- id     0006
+  from   inventory:Buf.^methods
+  cell   reallocate("a") | Buf.new(1,2,3)
+  code   (Buf.new(1,2,3)).reallocate("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Assignment::RO
+
+- id     0007
+  from   inventory:Buf.^methods
+  cell   reallocate(Any) | Buf.new(1,2,3)
+  code   (Buf.new(1,2,3)).reallocate(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Assignment::RO
+
+- id     0008
+  from   inventory:Buf.^methods
+  cell   reallocate(0) | Buf.new()
+  code   (Buf.new()).reallocate(0)
+  is     Buf.new()
+  type   Buf
+  oracle rakudo-2026.07 → Buf.new()
+  oracle rakupp-3.14.0 → ERR:X::Assignment::RO
+
+- id     0009
+  from   inventory:Buf.^methods
+  cell   reallocate(1) | Buf.new()
+  code   (Buf.new()).reallocate(1)
+  is     Buf.new(0)
+  type   Buf
+  oracle rakudo-2026.07 → Buf.new(0)
+  oracle rakupp-3.14.0 → ERR:X::Assignment::RO
+
+- id     0010
+  from   inventory:Buf.^methods
+  cell   reallocate(-1) | Buf.new()
+  code   (Buf.new()).reallocate(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Assignment::RO
+
+- id     0011
+  from   inventory:Buf.^methods
+  cell   reallocate("a") | Buf.new()
+  code   (Buf.new()).reallocate("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Assignment::RO
+
+- id     0012
+  from   inventory:Buf.^methods
+  cell   reallocate(Any) | Buf.new()
+  code   (Buf.new()).reallocate(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Assignment::RO

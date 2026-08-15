@@ -1,0 +1,1988 @@
+atom     methods/Match
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     AST | BUILD_LEAST_DERIVED | Bool | CREATE | CURSOR_MORE | CURSOR_NEXT | CURSOR_OVERLAP | Capture | Complex | DEFINITE | DYNQUANT_LIMITS | EVAL | FLATTENABLE_HASH | FLATTENABLE_LIST | Failure | FatRat | HOW | INSTANTIATE-GENERIC | Int | MATCH | NFC | NFD | NFKC | NFKD | Num | Order | POPULATE | RECURSE | REPR | Rat | STR | Str | VAR | Version | WHAT | WHERE | WHO | abs | acos | acosec | acosech | acosh | acotan | acotanh | all | any | asec | asech | asin | asinh | ast | atan | atan2 | atanh | bless | byte | cache | can | caps | ceiling | chars | chomp | chr | chrs | chunks | cis | clone | codes | conj | cos | cosec | cosech | cosh | cotan | cotanh | does | fc | flip | floor | hash | indent | int | int16 | int32 | int64 | int8 | is-generic | is-prime | item | join | lazy-if | lc | list | log10 | log2 | made | nl-out | none | not | one | ord | ords | parse-names | path | postmatch | prematch | rand | replace-with | reverse | roots | samecase | samemark | samespace | sec | sech | self | set_why | sign | sin | sinh | so | sqrt | sum | take | tan | tanh | tc | tclc | trim | trim-leading | trim-trailing | truncate | uc | uint | uint16 | uint32 | uint64 | uint8 | uniname | uninames | uniparse | uniprop | uniprops | unival | univals | unpolar | wordcase
+cols     ("abc" ~~ /b/)
+
+- id     0001
+  from   inventory:Match.^methods
+  cell   AST(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).AST(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0002
+  from   inventory:Match.^methods
+  cell   AST(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).AST(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0003
+  from   inventory:Match.^methods
+  cell   AST(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).AST(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0004
+  from   inventory:Match.^methods
+  cell   AST("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).AST("a")
+  throws X::CompUnit::UnsatisfiedDependency+{X::Comp}
+  oracle rakudo-2026.07 → ERR:X::CompUnit::UnsatisfiedDependency+{X::Comp}
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0005
+  from   inventory:Match.^methods
+  cell   AST(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).AST(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0006
+  from   inventory:Match.^methods
+  cell   BUILD_LEAST_DERIVED(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).BUILD_LEAST_DERIVED(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0007
+  from   inventory:Match.^methods
+  cell   BUILD_LEAST_DERIVED(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).BUILD_LEAST_DERIVED(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0008
+  from   inventory:Match.^methods
+  cell   BUILD_LEAST_DERIVED(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).BUILD_LEAST_DERIVED(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0009
+  from   inventory:Match.^methods
+  cell   BUILD_LEAST_DERIVED("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).BUILD_LEAST_DERIVED("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0010
+  from   inventory:Match.^methods
+  cell   BUILD_LEAST_DERIVED(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).BUILD_LEAST_DERIVED(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0011
+  from   inventory:Match.^methods
+  cell   Bool | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0012
+  from   inventory:Match.^methods
+  cell   CREATE | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).CREATE
+  is     UNRENDERABLE
+  type   Match
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0013
+  from   inventory:Match.^methods
+  cell   CURSOR_MORE | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).CURSOR_MORE
+  is     Match.new(:orig("abc"), :from(2), :pos(-3))
+  type   Match
+  oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(2), :pos(-3))
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0014
+  from   inventory:Match.^methods
+  cell   CURSOR_NEXT | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).CURSOR_NEXT
+  is     Match.new(:orig("abc"), :from(1), :pos(-3))
+  type   Match
+  oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(-3))
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0015
+  from   inventory:Match.^methods
+  cell   CURSOR_OVERLAP | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).CURSOR_OVERLAP
+  is     Match.new(:orig("abc"), :from(2), :pos(-3))
+  type   Match
+  oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(2), :pos(-3))
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0016
+  from   inventory:Match.^methods
+  cell   Capture | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).Capture
+  is     Match.new(:orig("abc"), :from(1), :pos(2))
+  type   Match
+  oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0017
+  from   inventory:Match.^methods
+  cell   Complex | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).Complex
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0018
+  from   inventory:Match.^methods
+  cell   DEFINITE | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0019
+  from   inventory:Match.^methods
+  cell   DYNQUANT_LIMITS(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).DYNQUANT_LIMITS(0)
+  is     UNRENDERABLE
+  type   BOOTIntArray
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0020
+  from   inventory:Match.^methods
+  cell   DYNQUANT_LIMITS(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).DYNQUANT_LIMITS(1)
+  is     UNRENDERABLE
+  type   BOOTIntArray
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0021
+  from   inventory:Match.^methods
+  cell   DYNQUANT_LIMITS(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).DYNQUANT_LIMITS(-1)
+  is     UNRENDERABLE
+  type   BOOTIntArray
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0022
+  from   inventory:Match.^methods
+  cell   DYNQUANT_LIMITS("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).DYNQUANT_LIMITS("a")
+  throws X::Syntax::Regex::QuantifierValue
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::QuantifierValue
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0023
+  from   inventory:Match.^methods
+  cell   DYNQUANT_LIMITS(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).DYNQUANT_LIMITS(Any)
+  is     UNRENDERABLE
+  type   BOOTIntArray
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0024
+  from   inventory:Match.^methods
+  cell   EVAL | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).EVAL
+  throws X::Undeclared::Symbols
+  oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0025
+  from   inventory:Match.^methods
+  cell   FLATTENABLE_HASH | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).FLATTENABLE_HASH
+  is     ${}
+  type   Hash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0026
+  from   inventory:Match.^methods
+  cell   FLATTENABLE_LIST | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).FLATTENABLE_LIST
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0027
+  from   inventory:Match.^methods
+  cell   Failure | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).Failure
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0028
+  from   inventory:Match.^methods
+  cell   FatRat | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).FatRat
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → FatRat.new(0, 1)
+
+- id     0029
+  from   inventory:Match.^methods
+  cell   HOW | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+
+- id     0030
+  from   inventory:Match.^methods
+  cell   INSTANTIATE-GENERIC(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0031
+  from   inventory:Match.^methods
+  cell   INSTANTIATE-GENERIC(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0032
+  from   inventory:Match.^methods
+  cell   INSTANTIATE-GENERIC(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0033
+  from   inventory:Match.^methods
+  cell   INSTANTIATE-GENERIC("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0034
+  from   inventory:Match.^methods
+  cell   INSTANTIATE-GENERIC(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0035
+  from   inventory:Match.^methods
+  cell   Int | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).Int
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Any
+
+- id     0036
+  from   inventory:Match.^methods
+  cell   MATCH | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).MATCH
+  is     Match.new(:orig("abc"), :from(1), :pos(2))
+  type   Match
+  oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0037
+  from   inventory:Match.^methods
+  cell   NFC | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).NFC
+  is     Uni.new(0x0062).NFC
+  type   NFC
+  oracle rakudo-2026.07 → Uni.new(0x0062).NFC
+  oracle rakupp-3.14.0 → Uni.new(0x0062).NFC
+
+- id     0038
+  from   inventory:Match.^methods
+  cell   NFD | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).NFD
+  is     Uni.new(0x0062).NFD
+  type   NFD
+  oracle rakudo-2026.07 → Uni.new(0x0062).NFD
+  oracle rakupp-3.14.0 → Uni.new(0x0062).NFD
+
+- id     0039
+  from   inventory:Match.^methods
+  cell   NFKC | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).NFKC
+  is     Uni.new(0x0062).NFKC
+  type   NFKC
+  oracle rakudo-2026.07 → Uni.new(0x0062).NFKC
+  oracle rakupp-3.14.0 → Uni.new(0x0062).NFKC
+
+- id     0040
+  from   inventory:Match.^methods
+  cell   NFKD | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).NFKD
+  is     Uni.new(0x0062).NFKD
+  type   NFKD
+  oracle rakudo-2026.07 → Uni.new(0x0062).NFKD
+  oracle rakupp-3.14.0 → Uni.new(0x0062).NFKD
+
+- id     0041
+  from   inventory:Match.^methods
+  cell   Num | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).Num
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → Any
+
+- id     0042
+  from   inventory:Match.^methods
+  cell   Order | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).Order
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0043
+  from   inventory:Match.^methods
+  cell   POPULATE(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).POPULATE(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0044
+  from   inventory:Match.^methods
+  cell   POPULATE(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).POPULATE(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0045
+  from   inventory:Match.^methods
+  cell   POPULATE(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).POPULATE(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0046
+  from   inventory:Match.^methods
+  cell   POPULATE("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).POPULATE("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0047
+  from   inventory:Match.^methods
+  cell   POPULATE(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).POPULATE(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0048
+  from   inventory:Match.^methods
+  cell   RECURSE | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).RECURSE
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0049
+  from   inventory:Match.^methods
+  cell   REPR | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0050
+  from   inventory:Match.^methods
+  cell   Rat | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).Rat
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0.0
+
+- id     0051
+  from   inventory:Match.^methods
+  cell   STR | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).STR
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0052
+  from   inventory:Match.^methods
+  cell   Str | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).Str
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0053
+  from   inventory:Match.^methods
+  cell   VAR | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).VAR
+  is     Match.new(:orig("abc"), :from(1), :pos(2))
+  type   Match
+  oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
+  oracle rakupp-3.14.0 → Match.new(:orig("abc"), :from(1), :pos(2))
+
+- id     0054
+  from   inventory:Match.^methods
+  cell   Version | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).Version
+  is     Version.new('b')
+  type   Version
+  oracle rakudo-2026.07 → Version.new('b')
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0055
+  from   inventory:Match.^methods
+  cell   WHAT | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).WHAT
+  is     Match
+  type   Match
+  oracle rakudo-2026.07 → Match
+  oracle rakupp-3.14.0 → Match
+
+- id     0056
+  from   inventory:Match.^methods
+  cell   WHERE | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).WHERE
+  is     3081557495544
+  type   Int
+  oracle rakudo-2026.07 → 3081557495544
+  oracle rakupp-3.14.0 → 14185213728
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0057
+  from   inventory:Match.^methods
+  cell   WHO | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+
+- id     0058
+  from   inventory:Match.^methods
+  cell   abs | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).abs
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0059
+  from   inventory:Match.^methods
+  cell   acos | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).acos
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0060
+  from   inventory:Match.^methods
+  cell   acosec | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).acosec
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0061
+  from   inventory:Match.^methods
+  cell   acosech | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).acosech
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0062
+  from   inventory:Match.^methods
+  cell   acosh | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).acosh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0063
+  from   inventory:Match.^methods
+  cell   acotan | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).acotan
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0064
+  from   inventory:Match.^methods
+  cell   acotanh | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).acotanh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0065
+  from   inventory:Match.^methods
+  cell   all | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).all
+  is     all()
+  type   Junction
+  oracle rakudo-2026.07 → all()
+  oracle rakupp-3.14.0 → all(Match.new(:orig("abc"), :from(1), :pos(2)))
+
+- id     0066
+  from   inventory:Match.^methods
+  cell   any | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).any
+  is     any()
+  type   Junction
+  oracle rakudo-2026.07 → any()
+  oracle rakupp-3.14.0 → any(Match.new(:orig("abc"), :from(1), :pos(2)))
+
+- id     0067
+  from   inventory:Match.^methods
+  cell   asec | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).asec
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0068
+  from   inventory:Match.^methods
+  cell   asech | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).asech
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0069
+  from   inventory:Match.^methods
+  cell   asin | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).asin
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0070
+  from   inventory:Match.^methods
+  cell   asinh | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).asinh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0071
+  from   inventory:Match.^methods
+  cell   ast | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).ast
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0072
+  from   inventory:Match.^methods
+  cell   atan | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).atan
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0073
+  from   inventory:Match.^methods
+  cell   atan2(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).atan2(0)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0074
+  from   inventory:Match.^methods
+  cell   atan2(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).atan2(1)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0075
+  from   inventory:Match.^methods
+  cell   atan2(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).atan2(-1)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0076
+  from   inventory:Match.^methods
+  cell   atan2("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).atan2("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0077
+  from   inventory:Match.^methods
+  cell   atan2(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).atan2(Any)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0078
+  from   inventory:Match.^methods
+  cell   atanh | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).atanh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0079
+  from   inventory:Match.^methods
+  cell   bless | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).bless
+  is     Match.new(:orig(""), :from(0), :pos(0))
+  type   Match
+  oracle rakudo-2026.07 → Match.new(:orig(""), :from(0), :pos(0))
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0080
+  from   inventory:Match.^methods
+  cell   byte | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).byte
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0081
+  from   inventory:Match.^methods
+  cell   cache | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).cache
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0082
+  from   inventory:Match.^methods
+  cell   can(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0083
+  from   inventory:Match.^methods
+  cell   can(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0084
+  from   inventory:Match.^methods
+  cell   can(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0085
+  from   inventory:Match.^methods
+  cell   can("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0086
+  from   inventory:Match.^methods
+  cell   can(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0087
+  from   inventory:Match.^methods
+  cell   caps | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).caps
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0088
+  from   inventory:Match.^methods
+  cell   ceiling | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).ceiling
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0
+
+- id     0089
+  from   inventory:Match.^methods
+  cell   chars | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).chars
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0090
+  from   inventory:Match.^methods
+  cell   chomp(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).chomp(0)
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0091
+  from   inventory:Match.^methods
+  cell   chomp(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).chomp(1)
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0092
+  from   inventory:Match.^methods
+  cell   chomp(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).chomp(-1)
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0093
+  from   inventory:Match.^methods
+  cell   chomp("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).chomp("a")
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0094
+  from   inventory:Match.^methods
+  cell   chomp(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).chomp(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "b"
+
+- id     0095
+  from   inventory:Match.^methods
+  cell   chr | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).chr
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → "\0"
+
+- id     0096
+  from   inventory:Match.^methods
+  cell   chrs | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).chrs
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0097
+  from   inventory:Match.^methods
+  cell   chunks | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).chunks
+  is     $(("~" => "b",).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("~" => "b",).Seq)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0098
+  from   inventory:Match.^methods
+  cell   cis | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).cis
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0099
+  from   inventory:Match.^methods
+  cell   clone | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).clone
+  is     Match.new(:orig("abc"), :from(1), :pos(2))
+  type   Match
+  oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
+  oracle rakupp-3.14.0 → Match.new(:orig("abc"), :from(1), :pos(2))
+
+- id     0100
+  from   inventory:Match.^methods
+  cell   codes | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).codes
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0101
+  from   inventory:Match.^methods
+  cell   conj | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).conj
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0102
+  from   inventory:Match.^methods
+  cell   cos | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).cos
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 1e0
+
+- id     0103
+  from   inventory:Match.^methods
+  cell   cosec | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).cosec
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0104
+  from   inventory:Match.^methods
+  cell   cosech | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).cosech
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0105
+  from   inventory:Match.^methods
+  cell   cosh | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).cosh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0106
+  from   inventory:Match.^methods
+  cell   cotan | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).cotan
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0107
+  from   inventory:Match.^methods
+  cell   cotanh | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).cotanh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0108
+  from   inventory:Match.^methods
+  cell   does(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0109
+  from   inventory:Match.^methods
+  cell   does(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0110
+  from   inventory:Match.^methods
+  cell   does(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0111
+  from   inventory:Match.^methods
+  cell   does("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0112
+  from   inventory:Match.^methods
+  cell   does(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0113
+  from   inventory:Match.^methods
+  cell   fc | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).fc
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0114
+  from   inventory:Match.^methods
+  cell   flip | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).flip
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0115
+  from   inventory:Match.^methods
+  cell   floor | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).floor
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0
+
+- id     0116
+  from   inventory:Match.^methods
+  cell   hash | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).hash
+  is     $(Map.new)
+  type   Map
+  oracle rakudo-2026.07 → $(Map.new)
+  oracle rakupp-3.14.0 → ${}
+
+- id     0117
+  from   inventory:Match.^methods
+  cell   indent(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).indent(0)
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0118
+  from   inventory:Match.^methods
+  cell   indent(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).indent(1)
+  is     " b"
+  type   Str
+  oracle rakudo-2026.07 → " b"
+  oracle rakupp-3.14.0 → " b"
+
+- id     0119
+  from   inventory:Match.^methods
+  cell   indent(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).indent(-1)
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0120
+  from   inventory:Match.^methods
+  cell   indent("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).indent("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → "b"
+
+- id     0121
+  from   inventory:Match.^methods
+  cell   indent(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).indent(Any)
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0122
+  from   inventory:Match.^methods
+  cell   int | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).int
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0123
+  from   inventory:Match.^methods
+  cell   int16 | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).int16
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0124
+  from   inventory:Match.^methods
+  cell   int32 | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).int32
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0125
+  from   inventory:Match.^methods
+  cell   int64 | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).int64
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0126
+  from   inventory:Match.^methods
+  cell   int8 | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).int8
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0127
+  from   inventory:Match.^methods
+  cell   is-generic | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0128
+  from   inventory:Match.^methods
+  cell   is-prime | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).is-prime
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0129
+  from   inventory:Match.^methods
+  cell   item | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).item
+  is     Match.new(:orig("abc"), :from(1), :pos(2))
+  type   Match
+  oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
+  oracle rakupp-3.14.0 → Match.new(:orig("abc"), :from(1), :pos(2))
+
+- id     0130
+  from   inventory:Match.^methods
+  cell   join(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).join(0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0131
+  from   inventory:Match.^methods
+  cell   join(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).join(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0132
+  from   inventory:Match.^methods
+  cell   join(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).join(-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0133
+  from   inventory:Match.^methods
+  cell   join("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).join("a")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-3.14.0 → ""
+
+- id     0134
+  from   inventory:Match.^methods
+  cell   join(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ""
+
+- id     0135
+  from   inventory:Match.^methods
+  cell   lazy-if(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).lazy-if(0)
+  is     Match.new(:orig("abc"), :from(1), :pos(2))
+  type   Match
+  oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0136
+  from   inventory:Match.^methods
+  cell   lazy-if(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).lazy-if(1)
+  is     Match.new(:orig("abc"), :from(1), :pos(2))
+  type   Match
+  oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0137
+  from   inventory:Match.^methods
+  cell   lazy-if(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).lazy-if(-1)
+  is     Match.new(:orig("abc"), :from(1), :pos(2))
+  type   Match
+  oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0138
+  from   inventory:Match.^methods
+  cell   lazy-if("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).lazy-if("a")
+  is     Match.new(:orig("abc"), :from(1), :pos(2))
+  type   Match
+  oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0139
+  from   inventory:Match.^methods
+  cell   lazy-if(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).lazy-if(Any)
+  is     Match.new(:orig("abc"), :from(1), :pos(2))
+  type   Match
+  oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0140
+  from   inventory:Match.^methods
+  cell   lc | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).lc
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0141
+  from   inventory:Match.^methods
+  cell   list | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).list
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0142
+  from   inventory:Match.^methods
+  cell   log10 | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).log10
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0143
+  from   inventory:Match.^methods
+  cell   log2 | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).log2
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → -Inf
+
+- id     0144
+  from   inventory:Match.^methods
+  cell   made | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).made
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → Any
+
+- id     0145
+  from   inventory:Match.^methods
+  cell   nl-out | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0146
+  from   inventory:Match.^methods
+  cell   none | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).none
+  is     none()
+  type   Junction
+  oracle rakudo-2026.07 → none()
+  oracle rakupp-3.14.0 → none(Match.new(:orig("abc"), :from(1), :pos(2)))
+
+- id     0147
+  from   inventory:Match.^methods
+  cell   not | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0148
+  from   inventory:Match.^methods
+  cell   one | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).one
+  is     one()
+  type   Junction
+  oracle rakudo-2026.07 → one()
+  oracle rakupp-3.14.0 → one(Match.new(:orig("abc"), :from(1), :pos(2)))
+
+- id     0149
+  from   inventory:Match.^methods
+  cell   ord | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).ord
+  is     98
+  type   Int
+  oracle rakudo-2026.07 → 98
+  oracle rakupp-3.14.0 → 98
+
+- id     0150
+  from   inventory:Match.^methods
+  cell   ords | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).ords
+  is     $((98,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((98,).Seq)
+  oracle rakupp-3.14.0 → $(98,).Seq
+
+- id     0151
+  from   inventory:Match.^methods
+  cell   parse-names | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).parse-names
+  throws X::Str::InvalidCharName
+  oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0152
+  from   inventory:Match.^methods
+  cell   path | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).path
+  is     IO::Path.new("b", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  type   IO::Path
+  oracle rakudo-2026.07 → IO::Path.new("b", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  oracle rakupp-3.14.0 → "b"
+
+- id     0153
+  from   inventory:Match.^methods
+  cell   postmatch | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).postmatch
+  is     "c"
+  type   Str
+  oracle rakudo-2026.07 → "c"
+  oracle rakupp-3.14.0 → "c"
+
+- id     0154
+  from   inventory:Match.^methods
+  cell   prematch | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).prematch
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → "a"
+
+- id     0155
+  from   inventory:Match.^methods
+  cell   rand | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).rand
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0156
+  from   inventory:Match.^methods
+  cell   replace-with(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).replace-with(0)
+  is     "a0c"
+  type   Str
+  oracle rakudo-2026.07 → "a0c"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0157
+  from   inventory:Match.^methods
+  cell   replace-with(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).replace-with(1)
+  is     "a1c"
+  type   Str
+  oracle rakudo-2026.07 → "a1c"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0158
+  from   inventory:Match.^methods
+  cell   replace-with(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).replace-with(-1)
+  is     "a-1c"
+  type   Str
+  oracle rakudo-2026.07 → "a-1c"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0159
+  from   inventory:Match.^methods
+  cell   replace-with("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).replace-with("a")
+  is     "aac"
+  type   Str
+  oracle rakudo-2026.07 → "aac"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0160
+  from   inventory:Match.^methods
+  cell   replace-with(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).replace-with(Any)
+  is     "ac"
+  type   Str
+  oracle rakudo-2026.07 → "ac"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0161
+  from   inventory:Match.^methods
+  cell   reverse | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).reverse
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-3.14.0 → $().Seq
+
+- id     0162
+  from   inventory:Match.^methods
+  cell   roots(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).roots(0)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0163
+  from   inventory:Match.^methods
+  cell   roots(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).roots(1)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0164
+  from   inventory:Match.^methods
+  cell   roots(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).roots(-1)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0165
+  from   inventory:Match.^methods
+  cell   roots("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0166
+  from   inventory:Match.^methods
+  cell   roots(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0167
+  from   inventory:Match.^methods
+  cell   samecase(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).samecase(0)
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0168
+  from   inventory:Match.^methods
+  cell   samecase(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).samecase(1)
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0169
+  from   inventory:Match.^methods
+  cell   samecase(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).samecase(-1)
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0170
+  from   inventory:Match.^methods
+  cell   samecase("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).samecase("a")
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0171
+  from   inventory:Match.^methods
+  cell   samecase(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).samecase(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "b"
+
+- id     0172
+  from   inventory:Match.^methods
+  cell   samemark(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).samemark(0)
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0173
+  from   inventory:Match.^methods
+  cell   samemark(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).samemark(1)
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0174
+  from   inventory:Match.^methods
+  cell   samemark(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).samemark(-1)
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0175
+  from   inventory:Match.^methods
+  cell   samemark("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).samemark("a")
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0176
+  from   inventory:Match.^methods
+  cell   samemark(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).samemark(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "b"
+
+- id     0177
+  from   inventory:Match.^methods
+  cell   samespace(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).samespace(0)
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0178
+  from   inventory:Match.^methods
+  cell   samespace(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).samespace(1)
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0179
+  from   inventory:Match.^methods
+  cell   samespace(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).samespace(-1)
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0180
+  from   inventory:Match.^methods
+  cell   samespace("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).samespace("a")
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0181
+  from   inventory:Match.^methods
+  cell   samespace(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).samespace(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0182
+  from   inventory:Match.^methods
+  cell   sec | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).sec
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0183
+  from   inventory:Match.^methods
+  cell   sech | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).sech
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0184
+  from   inventory:Match.^methods
+  cell   self | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).self
+  is     Match.new(:orig("abc"), :from(1), :pos(2))
+  type   Match
+  oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
+  oracle rakupp-3.14.0 → Match.new(:orig("abc"), :from(1), :pos(2))
+
+- id     0185
+  from   inventory:Match.^methods
+  cell   set_why(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).set_why(0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0186
+  from   inventory:Match.^methods
+  cell   set_why(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).set_why(1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0187
+  from   inventory:Match.^methods
+  cell   set_why(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).set_why(-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0188
+  from   inventory:Match.^methods
+  cell   set_why("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).set_why("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0189
+  from   inventory:Match.^methods
+  cell   set_why(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).set_why(Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0190
+  from   inventory:Match.^methods
+  cell   sign | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).sign
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0
+
+- id     0191
+  from   inventory:Match.^methods
+  cell   sin | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).sin
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0192
+  from   inventory:Match.^methods
+  cell   sinh | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).sinh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0193
+  from   inventory:Match.^methods
+  cell   so | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0194
+  from   inventory:Match.^methods
+  cell   sqrt | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).sqrt
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0195
+  from   inventory:Match.^methods
+  cell   sum | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).sum
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0196
+  from   inventory:Match.^methods
+  cell   take | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → Match.new(:orig("abc"), :from(1), :pos(2))
+
+- id     0197
+  from   inventory:Match.^methods
+  cell   tan | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).tan
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0198
+  from   inventory:Match.^methods
+  cell   tanh | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).tanh
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0199
+  from   inventory:Match.^methods
+  cell   tc | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).tc
+  is     "B"
+  type   Str
+  oracle rakudo-2026.07 → "B"
+  oracle rakupp-3.14.0 → "B"
+
+- id     0200
+  from   inventory:Match.^methods
+  cell   tclc | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).tclc
+  is     "B"
+  type   Str
+  oracle rakudo-2026.07 → "B"
+  oracle rakupp-3.14.0 → "B"
+
+- id     0201
+  from   inventory:Match.^methods
+  cell   trim | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).trim
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0202
+  from   inventory:Match.^methods
+  cell   trim-leading | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).trim-leading
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0203
+  from   inventory:Match.^methods
+  cell   trim-trailing | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).trim-trailing
+  is     "b"
+  type   Str
+  oracle rakudo-2026.07 → "b"
+  oracle rakupp-3.14.0 → "b"
+
+- id     0204
+  from   inventory:Match.^methods
+  cell   truncate | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).truncate
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → 0
+
+- id     0205
+  from   inventory:Match.^methods
+  cell   uc | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uc
+  is     "B"
+  type   Str
+  oracle rakudo-2026.07 → "B"
+  oracle rakupp-3.14.0 → "B"
+
+- id     0206
+  from   inventory:Match.^methods
+  cell   uint | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uint
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0207
+  from   inventory:Match.^methods
+  cell   uint16 | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uint16
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0208
+  from   inventory:Match.^methods
+  cell   uint32 | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uint32
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0209
+  from   inventory:Match.^methods
+  cell   uint64 | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uint64
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0210
+  from   inventory:Match.^methods
+  cell   uint8 | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uint8
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0211
+  from   inventory:Match.^methods
+  cell   uniname | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uniname
+  is     "LATIN SMALL LETTER B"
+  type   Str
+  oracle rakudo-2026.07 → "LATIN SMALL LETTER B"
+  oracle rakupp-3.14.0 → "LATIN SMALL LETTER B"
+
+- id     0212
+  from   inventory:Match.^methods
+  cell   uninames | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uninames
+  is     $(("LATIN SMALL LETTER B",).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("LATIN SMALL LETTER B",).Seq)
+  oracle rakupp-3.14.0 → $("LATIN SMALL LETTER B",).Seq
+
+- id     0213
+  from   inventory:Match.^methods
+  cell   uniparse | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uniparse
+  throws X::Str::InvalidCharName
+  oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
+  oracle rakupp-3.14.0 → ERR:X::Str::InvalidCharName
+
+- id     0214
+  from   inventory:Match.^methods
+  cell   uniprop(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uniprop(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0215
+  from   inventory:Match.^methods
+  cell   uniprop(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uniprop(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0216
+  from   inventory:Match.^methods
+  cell   uniprop(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uniprop(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0217
+  from   inventory:Match.^methods
+  cell   uniprop("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uniprop("a")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0218
+  from   inventory:Match.^methods
+  cell   uniprop(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uniprop(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0219
+  from   inventory:Match.^methods
+  cell   uniprops(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uniprops(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False,).Seq
+
+- id     0220
+  from   inventory:Match.^methods
+  cell   uniprops(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uniprops(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False,).Seq
+
+- id     0221
+  from   inventory:Match.^methods
+  cell   uniprops(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uniprops(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False,).Seq
+
+- id     0222
+  from   inventory:Match.^methods
+  cell   uniprops("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uniprops("a")
+  is     $(("0",).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("0",).Seq)
+  oracle rakupp-3.14.0 → $(Bool::False,).Seq
+
+- id     0223
+  from   inventory:Match.^methods
+  cell   uniprops(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).uniprops(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → $(Bool::False,).Seq
+
+- id     0224
+  from   inventory:Match.^methods
+  cell   unival | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).unival
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → NaN
+
+- id     0225
+  from   inventory:Match.^methods
+  cell   univals | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).univals
+  is     $((NaN,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((NaN,).Seq)
+  oracle rakupp-3.14.0 → $(NaN,)
+
+- id     0226
+  from   inventory:Match.^methods
+  cell   unpolar(0) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).unpolar(0)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0227
+  from   inventory:Match.^methods
+  cell   unpolar(1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).unpolar(1)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0228
+  from   inventory:Match.^methods
+  cell   unpolar(-1) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).unpolar(-1)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0229
+  from   inventory:Match.^methods
+  cell   unpolar("a") | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).unpolar("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0230
+  from   inventory:Match.^methods
+  cell   unpolar(Any) | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).unpolar(Any)
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0231
+  from   inventory:Match.^methods
+  cell   wordcase | ("abc" ~~ /b/)
+  code   (("abc" ~~ /b/)).wordcase
+  is     "B"
+  type   Str
+  oracle rakudo-2026.07 → "B"
+  oracle rakupp-3.14.0 → "B"

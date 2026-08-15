@@ -1,0 +1,1187 @@
+atom     methods/DateTime
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     BUILD_LEAST_DERIVED | Bool | CREATE | Capture | DEFINITE | Date | DateTime | FLATTENABLE_HASH | FLATTENABLE_LIST | HOW | INSTANTIATE-GENERIC | IO | Instant | POPULATE | REPR | VAR | WHAT | WHERE | WHO | all | any | bless | cache | can | chrs | clone | day | day-fraction | day-of-month | day-of-week | day-of-year | daycount | dd-mm-yyyy | does | formatter | hh-mm-ss | hour | in-timezone | is-generic | is-leap-year | item | join | julian-date | lazy-if | local | minute | mm-dd | mm-dd-yyyy | modified-julian-date | month | nl-out | none | not | now | offset | offset-in-hours | offset-in-minutes | one | reverse | second | self | set_why | so | sum | take | timezone | truncated-to | utc | week | week-number | week-year | weekday-of-month | whole-second | year | yyyy-mm | yyyy-mm-dd
+cols     DateTime.new(2000,1,1,0,0,0)
+
+- id     0001
+  from   inventory:DateTime.^methods
+  cell   BUILD_LEAST_DERIVED(0) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).BUILD_LEAST_DERIVED(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0002
+  from   inventory:DateTime.^methods
+  cell   BUILD_LEAST_DERIVED(1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).BUILD_LEAST_DERIVED(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0003
+  from   inventory:DateTime.^methods
+  cell   BUILD_LEAST_DERIVED(-1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).BUILD_LEAST_DERIVED(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0004
+  from   inventory:DateTime.^methods
+  cell   BUILD_LEAST_DERIVED("a") | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).BUILD_LEAST_DERIVED("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0005
+  from   inventory:DateTime.^methods
+  cell   BUILD_LEAST_DERIVED(Any) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).BUILD_LEAST_DERIVED(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0006
+  from   inventory:DateTime.^methods
+  cell   Bool | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0007
+  from   inventory:DateTime.^methods
+  cell   CREATE | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).CREATE
+  is     DateTime.new(0,0,0,0,0,)
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(0,0,0,0,0,)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0008
+  from   inventory:DateTime.^methods
+  cell   Capture | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).Capture
+  is     \(:day(1), :daycount(51544), :formatter(Callable), :hour(0), :minute(0), :month(1), :second(0), :timezone(0), :year(2000))
+  type   Capture
+  oracle rakudo-2026.07 → \(:day(1), :daycount(51544), :formatter(Callable), :hour(0), :minute(0), :month(1), :second(0), :timezone(0), :year(2000))
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0009
+  from   inventory:DateTime.^methods
+  cell   DEFINITE | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0010
+  from   inventory:DateTime.^methods
+  cell   Date | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).Date
+  is     Date.new(2000,1,1)
+  type   Date
+  oracle rakudo-2026.07 → Date.new(2000,1,1)
+  oracle rakupp-3.14.0 → ${:day(1), :month(1), :year(2000)}
+
+- id     0011
+  from   inventory:DateTime.^methods
+  cell   DateTime | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).DateTime
+  is     DateTime.new(2000,1,1,0,0,0)
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+
+- id     0012
+  from   inventory:DateTime.^methods
+  cell   FLATTENABLE_HASH | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).FLATTENABLE_HASH
+  is     ${}
+  type   Hash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0013
+  from   inventory:DateTime.^methods
+  cell   FLATTENABLE_LIST | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).FLATTENABLE_LIST
+  is     $(DateTime.new(2000,1,1,0,0,0),)
+  type   List
+  oracle rakudo-2026.07 → $(DateTime.new(2000,1,1,0,0,0),)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0014
+  from   inventory:DateTime.^methods
+  cell   HOW | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+
+- id     0015
+  from   inventory:DateTime.^methods
+  cell   INSTANTIATE-GENERIC(0) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0016
+  from   inventory:DateTime.^methods
+  cell   INSTANTIATE-GENERIC(1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0017
+  from   inventory:DateTime.^methods
+  cell   INSTANTIATE-GENERIC(-1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0018
+  from   inventory:DateTime.^methods
+  cell   INSTANTIATE-GENERIC("a") | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0019
+  from   inventory:DateTime.^methods
+  cell   INSTANTIATE-GENERIC(Any) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0020
+  from   inventory:DateTime.^methods
+  cell   IO | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).IO
+  is     IO::Path.new("2000-01-01T00:00:00Z", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  type   IO::Path
+  oracle rakudo-2026.07 → IO::Path.new("2000-01-01T00:00:00Z", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  oracle rakupp-3.14.0 → IO::Path.new("2000-01-01T00:00:00Z", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+
+- id     0021
+  from   inventory:DateTime.^methods
+  cell   Instant | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).Instant
+  is     Instant.from-posix(946684800.0)
+  type   Instant
+  oracle rakudo-2026.07 → Instant.from-posix(946684800.0)
+  oracle rakupp-3.14.0 → 946684800e0
+
+- id     0022
+  from   inventory:DateTime.^methods
+  cell   POPULATE(0) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).POPULATE(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0023
+  from   inventory:DateTime.^methods
+  cell   POPULATE(1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).POPULATE(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0024
+  from   inventory:DateTime.^methods
+  cell   POPULATE(-1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).POPULATE(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0025
+  from   inventory:DateTime.^methods
+  cell   POPULATE("a") | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).POPULATE("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0026
+  from   inventory:DateTime.^methods
+  cell   POPULATE(Any) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).POPULATE(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0027
+  from   inventory:DateTime.^methods
+  cell   REPR | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0028
+  from   inventory:DateTime.^methods
+  cell   VAR | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).VAR
+  is     DateTime.new(2000,1,1,0,0,0)
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+
+- id     0029
+  from   inventory:DateTime.^methods
+  cell   WHAT | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).WHAT
+  is     DateTime
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime
+  oracle rakupp-3.14.0 → DateTime
+
+- id     0030
+  from   inventory:DateTime.^methods
+  cell   WHERE | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).WHERE
+  is     2555388524400
+  type   Int
+  oracle rakudo-2026.07 → 2555388524400
+  oracle rakupp-3.14.0 → 140288790233928
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0031
+  from   inventory:DateTime.^methods
+  cell   WHO | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+
+- id     0032
+  from   inventory:DateTime.^methods
+  cell   all | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).all
+  is     all(DateTime.new(2000,1,1,0,0,0))
+  type   Junction
+  oracle rakudo-2026.07 → all(DateTime.new(2000,1,1,0,0,0))
+  oracle rakupp-3.14.0 → all(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :timezone(0), :year(2000))
+
+- id     0033
+  from   inventory:DateTime.^methods
+  cell   any | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).any
+  is     any(DateTime.new(2000,1,1,0,0,0))
+  type   Junction
+  oracle rakudo-2026.07 → any(DateTime.new(2000,1,1,0,0,0))
+  oracle rakupp-3.14.0 → any(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :timezone(0), :year(2000))
+
+- id     0034
+  from   inventory:DateTime.^methods
+  cell   bless | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).bless
+  is     DateTime.new(0,0,0,0,0,)
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(0,0,0,0,0,)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0035
+  from   inventory:DateTime.^methods
+  cell   cache | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).cache
+  is     $(DateTime.new(2000,1,1,0,0,0),)
+  type   List
+  oracle rakudo-2026.07 → $(DateTime.new(2000,1,1,0,0,0),)
+  oracle rakupp-3.14.0 → $(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :timezone(0), :year(2000))
+
+- id     0036
+  from   inventory:DateTime.^methods
+  cell   can(0) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0037
+  from   inventory:DateTime.^methods
+  cell   can(1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0038
+  from   inventory:DateTime.^methods
+  cell   can(-1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0039
+  from   inventory:DateTime.^methods
+  cell   can("a") | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0040
+  from   inventory:DateTime.^methods
+  cell   can(Any) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0041
+  from   inventory:DateTime.^methods
+  cell   chrs | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → "\0\0\0\0\0\0\0\0"
+
+- id     0042
+  from   inventory:DateTime.^methods
+  cell   clone | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).clone
+  is     DateTime.new(2000,1,1,0,0,0)
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+
+- id     0043
+  from   inventory:DateTime.^methods
+  cell   day | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).day
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0044
+  from   inventory:DateTime.^methods
+  cell   day-fraction | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).day-fraction
+  is     0.0
+  type   Rat
+  oracle rakudo-2026.07 → 0.0
+  oracle rakupp-3.14.0 → 0.0
+
+- id     0045
+  from   inventory:DateTime.^methods
+  cell   day-of-month | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).day-of-month
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0046
+  from   inventory:DateTime.^methods
+  cell   day-of-week | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).day-of-week
+  is     6
+  type   Int
+  oracle rakudo-2026.07 → 6
+  oracle rakupp-3.14.0 → 6
+
+- id     0047
+  from   inventory:DateTime.^methods
+  cell   day-of-year | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).day-of-year
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0048
+  from   inventory:DateTime.^methods
+  cell   daycount | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).daycount
+  is     51544
+  type   Int
+  oracle rakudo-2026.07 → 51544
+  oracle rakupp-3.14.0 → 51544
+
+- id     0049
+  from   inventory:DateTime.^methods
+  cell   dd-mm-yyyy(0) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).dd-mm-yyyy(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "01-01-2000"
+
+- id     0050
+  from   inventory:DateTime.^methods
+  cell   dd-mm-yyyy(1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).dd-mm-yyyy(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "01-01-2000"
+
+- id     0051
+  from   inventory:DateTime.^methods
+  cell   dd-mm-yyyy(-1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).dd-mm-yyyy(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "01-01-2000"
+
+- id     0052
+  from   inventory:DateTime.^methods
+  cell   dd-mm-yyyy("a") | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).dd-mm-yyyy("a")
+  is     "01a01a2000"
+  type   Str
+  oracle rakudo-2026.07 → "01a01a2000"
+  oracle rakupp-3.14.0 → "01-01-2000"
+
+- id     0053
+  from   inventory:DateTime.^methods
+  cell   dd-mm-yyyy(Any) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).dd-mm-yyyy(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "01-01-2000"
+
+- id     0054
+  from   inventory:DateTime.^methods
+  cell   does(0) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0055
+  from   inventory:DateTime.^methods
+  cell   does(1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0056
+  from   inventory:DateTime.^methods
+  cell   does(-1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0057
+  from   inventory:DateTime.^methods
+  cell   does("a") | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0058
+  from   inventory:DateTime.^methods
+  cell   does(Any) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0059
+  from   inventory:DateTime.^methods
+  cell   formatter | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).formatter
+  is     Callable
+  type   Callable
+  oracle rakudo-2026.07 → Callable
+  oracle rakupp-3.14.0 → Callable
+
+- id     0060
+  from   inventory:DateTime.^methods
+  cell   hh-mm-ss | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).hh-mm-ss
+  is     "00:00:00"
+  type   Str
+  oracle rakudo-2026.07 → "00:00:00"
+  oracle rakupp-3.14.0 → "00:00:00"
+
+- id     0061
+  from   inventory:DateTime.^methods
+  cell   hour | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).hour
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0062
+  from   inventory:DateTime.^methods
+  cell   in-timezone(0) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).in-timezone(0)
+  is     DateTime.new(2000,1,1,0,0,0)
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+
+- id     0063
+  from   inventory:DateTime.^methods
+  cell   in-timezone(1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).in-timezone(1)
+  is     DateTime.new(2000,1,1,0,0,1,:timezone(1))
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,1,:timezone(1))
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(1), :timezone(1))
+
+- id     0064
+  from   inventory:DateTime.^methods
+  cell   in-timezone(-1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).in-timezone(-1)
+  is     DateTime.new(1999,12,31,23,59,59,:timezone(-1))
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(1999,12,31,23,59,59,:timezone(-1))
+  oracle rakupp-3.14.0 → DateTime.new(:year(1999), :month(12), :day(31), :hour(23), :minute(59), :second(59), :timezone(-1))
+
+- id     0065
+  from   inventory:DateTime.^methods
+  cell   in-timezone("a") | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).in-timezone("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+
+- id     0066
+  from   inventory:DateTime.^methods
+  cell   in-timezone(Any) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).in-timezone(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+
+- id     0067
+  from   inventory:DateTime.^methods
+  cell   is-generic | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0068
+  from   inventory:DateTime.^methods
+  cell   is-leap-year | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).is-leap-year
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0069
+  from   inventory:DateTime.^methods
+  cell   item | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).item
+  is     DateTime.new(2000,1,1,0,0,0)
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+
+- id     0070
+  from   inventory:DateTime.^methods
+  cell   join(0) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).join(0)
+  is     "2000-01-01T00:00:00Z"
+  type   Str
+  oracle rakudo-2026.07 → "2000-01-01T00:00:00Z"
+  oracle rakupp-3.14.0 → "day\t10hour\t00minute\t00month\t10posix\t9466848000second\t00timezone\t00year\t2000"
+
+- id     0071
+  from   inventory:DateTime.^methods
+  cell   join(1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).join(1)
+  is     "2000-01-01T00:00:00Z"
+  type   Str
+  oracle rakudo-2026.07 → "2000-01-01T00:00:00Z"
+  oracle rakupp-3.14.0 → "day\t11hour\t01minute\t01month\t11posix\t9466848001second\t01timezone\t01year\t2000"
+
+- id     0072
+  from   inventory:DateTime.^methods
+  cell   join(-1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).join(-1)
+  is     "2000-01-01T00:00:00Z"
+  type   Str
+  oracle rakudo-2026.07 → "2000-01-01T00:00:00Z"
+  oracle rakupp-3.14.0 → "day\t1-1hour\t0-1minute\t0-1month\t1-1posix\t946684800-1second\t0-1timezone\t0-1year\t2000"
+
+- id     0073
+  from   inventory:DateTime.^methods
+  cell   join("a") | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).join("a")
+  is     "2000-01-01T00:00:00Z"
+  type   Str
+  oracle rakudo-2026.07 → "2000-01-01T00:00:00Z"
+  oracle rakupp-3.14.0 → "day\t1ahour\t0aminute\t0amonth\t1aposix\t946684800asecond\t0atimezone\t0ayear\t2000"
+
+- id     0074
+  from   inventory:DateTime.^methods
+  cell   join(Any) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → "day\t1hour\t0minute\t0month\t1posix\t946684800second\t0timezone\t0year\t2000"
+
+- id     0075
+  from   inventory:DateTime.^methods
+  cell   julian-date | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).julian-date
+  is     2451544.5
+  type   Rat
+  oracle rakudo-2026.07 → 2451544.5
+  oracle rakupp-3.14.0 → 2451544.5
+
+- id     0076
+  from   inventory:DateTime.^methods
+  cell   lazy-if(0) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).lazy-if(0)
+  is     DateTime.new(2000,1,1,0,0,0)
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0077
+  from   inventory:DateTime.^methods
+  cell   lazy-if(1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).lazy-if(1)
+  is     DateTime.new(2000,1,1,0,0,0)
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0078
+  from   inventory:DateTime.^methods
+  cell   lazy-if(-1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).lazy-if(-1)
+  is     DateTime.new(2000,1,1,0,0,0)
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0079
+  from   inventory:DateTime.^methods
+  cell   lazy-if("a") | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).lazy-if("a")
+  is     DateTime.new(2000,1,1,0,0,0)
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0080
+  from   inventory:DateTime.^methods
+  cell   lazy-if(Any) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).lazy-if(Any)
+  is     DateTime.new(2000,1,1,0,0,0)
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0081
+  from   inventory:DateTime.^methods
+  cell   local | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).local
+  is     DateTime.new(2000,1,1,2,0,0,:timezone(7200))
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(2000,1,1,2,0,0,:timezone(7200))
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(2), :minute(0), :second(0), :timezone(7200))
+
+- id     0082
+  from   inventory:DateTime.^methods
+  cell   minute | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).minute
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0083
+  from   inventory:DateTime.^methods
+  cell   mm-dd(0) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).mm-dd(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0084
+  from   inventory:DateTime.^methods
+  cell   mm-dd(1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).mm-dd(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0085
+  from   inventory:DateTime.^methods
+  cell   mm-dd(-1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).mm-dd(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0086
+  from   inventory:DateTime.^methods
+  cell   mm-dd("a") | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).mm-dd("a")
+  is     "01a01"
+  type   Str
+  oracle rakudo-2026.07 → "01a01"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0087
+  from   inventory:DateTime.^methods
+  cell   mm-dd(Any) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).mm-dd(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0088
+  from   inventory:DateTime.^methods
+  cell   mm-dd-yyyy(0) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).mm-dd-yyyy(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "01-01-2000"
+
+- id     0089
+  from   inventory:DateTime.^methods
+  cell   mm-dd-yyyy(1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).mm-dd-yyyy(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "01-01-2000"
+
+- id     0090
+  from   inventory:DateTime.^methods
+  cell   mm-dd-yyyy(-1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).mm-dd-yyyy(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "01-01-2000"
+
+- id     0091
+  from   inventory:DateTime.^methods
+  cell   mm-dd-yyyy("a") | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).mm-dd-yyyy("a")
+  is     "01a01a2000"
+  type   Str
+  oracle rakudo-2026.07 → "01a01a2000"
+  oracle rakupp-3.14.0 → "01-01-2000"
+
+- id     0092
+  from   inventory:DateTime.^methods
+  cell   mm-dd-yyyy(Any) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).mm-dd-yyyy(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "01-01-2000"
+
+- id     0093
+  from   inventory:DateTime.^methods
+  cell   modified-julian-date | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).modified-julian-date
+  is     51544.0
+  type   Rat
+  oracle rakudo-2026.07 → 51544.0
+  oracle rakupp-3.14.0 → 51544.0
+
+- id     0094
+  from   inventory:DateTime.^methods
+  cell   month | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).month
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0095
+  from   inventory:DateTime.^methods
+  cell   nl-out | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0096
+  from   inventory:DateTime.^methods
+  cell   none | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).none
+  is     none(DateTime.new(2000,1,1,0,0,0))
+  type   Junction
+  oracle rakudo-2026.07 → none(DateTime.new(2000,1,1,0,0,0))
+  oracle rakupp-3.14.0 → none(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :timezone(0), :year(2000))
+
+- id     0097
+  from   inventory:DateTime.^methods
+  cell   not | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0098
+  from   inventory:DateTime.^methods
+  cell   now | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).now
+  is     DateTime.new(2026,8,15,14,37,17.300212621688843,:timezone(7200))
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(2026,8,15,14,37,17.300212621688843,:timezone(7200))
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0099
+  from   inventory:DateTime.^methods
+  cell   offset | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).offset
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0100
+  from   inventory:DateTime.^methods
+  cell   offset-in-hours | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).offset-in-hours
+  is     0.0
+  type   Rat
+  oracle rakudo-2026.07 → 0.0
+  oracle rakupp-3.14.0 → 0.0
+
+- id     0101
+  from   inventory:DateTime.^methods
+  cell   offset-in-minutes | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).offset-in-minutes
+  is     0.0
+  type   Rat
+  oracle rakudo-2026.07 → 0.0
+  oracle rakupp-3.14.0 → 0.0
+
+- id     0102
+  from   inventory:DateTime.^methods
+  cell   one | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).one
+  is     one(DateTime.new(2000,1,1,0,0,0))
+  type   Junction
+  oracle rakudo-2026.07 → one(DateTime.new(2000,1,1,0,0,0))
+  oracle rakupp-3.14.0 → one(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :timezone(0), :year(2000))
+
+- id     0103
+  from   inventory:DateTime.^methods
+  cell   reverse | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).reverse
+  is     $((DateTime.new(2000,1,1,0,0,0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((DateTime.new(2000,1,1,0,0,0),).Seq)
+  oracle rakupp-3.14.0 → $(:year(2000), :timezone(0), :second(0), :posix(946684800), :month(1), :minute(0), :hour(0), :day(1)).Seq
+
+- id     0104
+  from   inventory:DateTime.^methods
+  cell   second | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).second
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0105
+  from   inventory:DateTime.^methods
+  cell   self | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).self
+  is     DateTime.new(2000,1,1,0,0,0)
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+
+- id     0106
+  from   inventory:DateTime.^methods
+  cell   set_why(0) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).set_why(0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0107
+  from   inventory:DateTime.^methods
+  cell   set_why(1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).set_why(1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0108
+  from   inventory:DateTime.^methods
+  cell   set_why(-1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).set_why(-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0109
+  from   inventory:DateTime.^methods
+  cell   set_why("a") | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).set_why("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0110
+  from   inventory:DateTime.^methods
+  cell   set_why(Any) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).set_why(Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0111
+  from   inventory:DateTime.^methods
+  cell   so | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0112
+  from   inventory:DateTime.^methods
+  cell   sum | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).sum
+  is     Instant.from-posix(946684800.0)
+  type   Instant
+  oracle rakudo-2026.07 → Instant.from-posix(946684800.0)
+  oracle rakupp-3.14.0 → 0e0
+
+- id     0113
+  from   inventory:DateTime.^methods
+  cell   take | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+
+- id     0114
+  from   inventory:DateTime.^methods
+  cell   timezone | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).timezone
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0115
+  from   inventory:DateTime.^methods
+  cell   truncated-to(0) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).truncated-to(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+
+- id     0116
+  from   inventory:DateTime.^methods
+  cell   truncated-to(1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).truncated-to(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+
+- id     0117
+  from   inventory:DateTime.^methods
+  cell   truncated-to(-1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).truncated-to(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+
+- id     0118
+  from   inventory:DateTime.^methods
+  cell   truncated-to("a") | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).truncated-to("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+
+- id     0119
+  from   inventory:DateTime.^methods
+  cell   truncated-to(Any) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).truncated-to(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+
+- id     0120
+  from   inventory:DateTime.^methods
+  cell   utc | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).utc
+  is     DateTime.new(2000,1,1,0,0,0)
+  type   DateTime
+  oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
+  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+
+- id     0121
+  from   inventory:DateTime.^methods
+  cell   week | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).week
+  is     $(1999, 52)
+  type   List
+  oracle rakudo-2026.07 → $(1999, 52)
+  oracle rakupp-3.14.0 → $(1999, 52)
+
+- id     0122
+  from   inventory:DateTime.^methods
+  cell   week-number | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).week-number
+  is     52
+  type   Int
+  oracle rakudo-2026.07 → 52
+  oracle rakupp-3.14.0 → 52
+
+- id     0123
+  from   inventory:DateTime.^methods
+  cell   week-year | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).week-year
+  is     1999
+  type   Int
+  oracle rakudo-2026.07 → 1999
+  oracle rakupp-3.14.0 → 1999
+
+- id     0124
+  from   inventory:DateTime.^methods
+  cell   weekday-of-month | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).weekday-of-month
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
+
+- id     0125
+  from   inventory:DateTime.^methods
+  cell   whole-second | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).whole-second
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → 0
+
+- id     0126
+  from   inventory:DateTime.^methods
+  cell   year | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).year
+  is     2000
+  type   Int
+  oracle rakudo-2026.07 → 2000
+  oracle rakupp-3.14.0 → 2000
+
+- id     0127
+  from   inventory:DateTime.^methods
+  cell   yyyy-mm(0) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0128
+  from   inventory:DateTime.^methods
+  cell   yyyy-mm(1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0129
+  from   inventory:DateTime.^methods
+  cell   yyyy-mm(-1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0130
+  from   inventory:DateTime.^methods
+  cell   yyyy-mm("a") | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm("a")
+  is     "2000a01"
+  type   Str
+  oracle rakudo-2026.07 → "2000a01"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0131
+  from   inventory:DateTime.^methods
+  cell   yyyy-mm(Any) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0132
+  from   inventory:DateTime.^methods
+  cell   yyyy-mm-dd(0) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm-dd(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "2000-01-01"
+
+- id     0133
+  from   inventory:DateTime.^methods
+  cell   yyyy-mm-dd(1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm-dd(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "2000-01-01"
+
+- id     0134
+  from   inventory:DateTime.^methods
+  cell   yyyy-mm-dd(-1) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm-dd(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "2000-01-01"
+
+- id     0135
+  from   inventory:DateTime.^methods
+  cell   yyyy-mm-dd("a") | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm-dd("a")
+  is     "2000a01a01"
+  type   Str
+  oracle rakudo-2026.07 → "2000a01a01"
+  oracle rakupp-3.14.0 → "2000-01-01"
+
+- id     0136
+  from   inventory:DateTime.^methods
+  cell   yyyy-mm-dd(Any) | DateTime.new(2000,1,1,0,0,0)
+  code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm-dd(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → "2000-01-01"

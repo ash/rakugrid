@@ -1,0 +1,598 @@
+atom     methods/Failure
+source   generated
+gen      gen/methods.raku
+kind     method matrix — every nullary method the type reports
+axes     BUILD_LEAST_DERIVED | Bool | CREATE | Capture | DEFINITE | FLATTENABLE_HASH | FLATTENABLE_LIST | HOW | INSTANTIATE-GENERIC | POPULATE | REPR | VAR | WHAT | WHERE | WHO | all | any | bless | cache | can | chrs | does | is-generic | item | join | lazy-if | nl-out | none | not | one | reverse | self | set_why | so | sum | take
+cols     (try { die "x" } // $!)
+
+- id     0001
+  from   inventory:Failure.^methods
+  cell   BUILD_LEAST_DERIVED(0) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).BUILD_LEAST_DERIVED(0)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0002
+  from   inventory:Failure.^methods
+  cell   BUILD_LEAST_DERIVED(1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).BUILD_LEAST_DERIVED(1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0003
+  from   inventory:Failure.^methods
+  cell   BUILD_LEAST_DERIVED(-1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).BUILD_LEAST_DERIVED(-1)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0004
+  from   inventory:Failure.^methods
+  cell   BUILD_LEAST_DERIVED("a") | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).BUILD_LEAST_DERIVED("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0005
+  from   inventory:Failure.^methods
+  cell   BUILD_LEAST_DERIVED(Any) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).BUILD_LEAST_DERIVED(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0006
+  from   inventory:Failure.^methods
+  cell   Bool | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0007
+  from   inventory:Failure.^methods
+  cell   CREATE | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).CREATE
+  is     X::AdHoc.new(payload => Nil)
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => Nil)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0008
+  from   inventory:Failure.^methods
+  cell   Capture | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).Capture
+  is     \(:payload("x"))
+  type   Capture
+  oracle rakudo-2026.07 → \(:payload("x"))
+  oracle rakupp-3.14.0 → \(:message("x"), :payload("x"))
+
+- id     0009
+  from   inventory:Failure.^methods
+  cell   DEFINITE | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0010
+  from   inventory:Failure.^methods
+  cell   FLATTENABLE_HASH | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).FLATTENABLE_HASH
+  is     ${}
+  type   Hash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0011
+  from   inventory:Failure.^methods
+  cell   FLATTENABLE_LIST | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).FLATTENABLE_LIST
+  is     $(X::AdHoc.new(payload => "x"),)
+  type   List
+  oracle rakudo-2026.07 → $(X::AdHoc.new(payload => "x"),)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0012
+  from   inventory:Failure.^methods
+  cell   HOW | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-3.14.0 → Metamodel::ClassHOW.new
+
+- id     0013
+  from   inventory:Failure.^methods
+  cell   INSTANTIATE-GENERIC(0) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).INSTANTIATE-GENERIC(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0014
+  from   inventory:Failure.^methods
+  cell   INSTANTIATE-GENERIC(1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).INSTANTIATE-GENERIC(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0015
+  from   inventory:Failure.^methods
+  cell   INSTANTIATE-GENERIC(-1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).INSTANTIATE-GENERIC(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0016
+  from   inventory:Failure.^methods
+  cell   INSTANTIATE-GENERIC("a") | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).INSTANTIATE-GENERIC("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0017
+  from   inventory:Failure.^methods
+  cell   INSTANTIATE-GENERIC(Any) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).INSTANTIATE-GENERIC(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0018
+  from   inventory:Failure.^methods
+  cell   POPULATE(0) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).POPULATE(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0019
+  from   inventory:Failure.^methods
+  cell   POPULATE(1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).POPULATE(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0020
+  from   inventory:Failure.^methods
+  cell   POPULATE(-1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).POPULATE(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0021
+  from   inventory:Failure.^methods
+  cell   POPULATE("a") | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).POPULATE("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0022
+  from   inventory:Failure.^methods
+  cell   POPULATE(Any) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).POPULATE(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0023
+  from   inventory:Failure.^methods
+  cell   REPR | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0024
+  from   inventory:Failure.^methods
+  cell   VAR | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).VAR
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → X::AdHoc.new(payload => "x", message => "x")
+
+- id     0025
+  from   inventory:Failure.^methods
+  cell   WHAT | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).WHAT
+  is     X::AdHoc
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc
+  oracle rakupp-3.14.0 → X::AdHoc
+
+- id     0026
+  from   inventory:Failure.^methods
+  cell   WHERE | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).WHERE
+  is     2776270716440
+  type   Int
+  oracle rakudo-2026.07 → 2776270716440
+  oracle rakupp-3.14.0 → 140341420394360
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0027
+  from   inventory:Failure.^methods
+  cell   WHO | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-3.14.0 → ${}
+
+- id     0028
+  from   inventory:Failure.^methods
+  cell   all | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).all
+  is     all(X::AdHoc.new(payload => "x"))
+  type   Junction
+  oracle rakudo-2026.07 → all(X::AdHoc.new(payload => "x"))
+  oracle rakupp-3.14.0 → all(X::AdHoc.new(payload => "x", message => "x"))
+
+- id     0029
+  from   inventory:Failure.^methods
+  cell   any | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).any
+  is     any(X::AdHoc.new(payload => "x"))
+  type   Junction
+  oracle rakudo-2026.07 → any(X::AdHoc.new(payload => "x"))
+  oracle rakupp-3.14.0 → any(X::AdHoc.new(payload => "x", message => "x"))
+
+- id     0030
+  from   inventory:Failure.^methods
+  cell   bless | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).bless
+  is     X::AdHoc.new(payload => "Unexplained error")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "Unexplained error")
+  oracle rakupp-3.14.0 → X::AdHoc.new(payload => Any, message => Any)
+
+- id     0031
+  from   inventory:Failure.^methods
+  cell   cache | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).cache
+  is     $(X::AdHoc.new(payload => "x"),)
+  type   List
+  oracle rakudo-2026.07 → $(X::AdHoc.new(payload => "x"),)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0032
+  from   inventory:Failure.^methods
+  cell   can(0) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0033
+  from   inventory:Failure.^methods
+  cell   can(1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0034
+  from   inventory:Failure.^methods
+  cell   can(-1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0035
+  from   inventory:Failure.^methods
+  cell   can("a") | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-3.14.0 → $()
+
+- id     0036
+  from   inventory:Failure.^methods
+  cell   can(Any) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-3.14.0 → $()
+
+- id     0037
+  from   inventory:Failure.^methods
+  cell   chrs | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0038
+  from   inventory:Failure.^methods
+  cell   does(0) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0039
+  from   inventory:Failure.^methods
+  cell   does(1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0040
+  from   inventory:Failure.^methods
+  cell   does(-1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0041
+  from   inventory:Failure.^methods
+  cell   does("a") | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0042
+  from   inventory:Failure.^methods
+  cell   does(Any) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0043
+  from   inventory:Failure.^methods
+  cell   is-generic | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0044
+  from   inventory:Failure.^methods
+  cell   item | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).item
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → X::AdHoc.new(payload => "x", message => "x")
+
+- id     0045
+  from   inventory:Failure.^methods
+  cell   join(0) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).join(0)
+  is     "x"
+  type   Str
+  oracle rakudo-2026.07 → "x"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0046
+  from   inventory:Failure.^methods
+  cell   join(1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).join(1)
+  is     "x"
+  type   Str
+  oracle rakudo-2026.07 → "x"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0047
+  from   inventory:Failure.^methods
+  cell   join(-1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).join(-1)
+  is     "x"
+  type   Str
+  oracle rakudo-2026.07 → "x"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0048
+  from   inventory:Failure.^methods
+  cell   join("a") | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).join("a")
+  is     "x"
+  type   Str
+  oracle rakudo-2026.07 → "x"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0049
+  from   inventory:Failure.^methods
+  cell   join(Any) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0050
+  from   inventory:Failure.^methods
+  cell   lazy-if(0) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).lazy-if(0)
+  is     X::AdHoc.new(payload => "x")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0051
+  from   inventory:Failure.^methods
+  cell   lazy-if(1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).lazy-if(1)
+  is     X::AdHoc.new(payload => "x")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0052
+  from   inventory:Failure.^methods
+  cell   lazy-if(-1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).lazy-if(-1)
+  is     X::AdHoc.new(payload => "x")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0053
+  from   inventory:Failure.^methods
+  cell   lazy-if("a") | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).lazy-if("a")
+  is     X::AdHoc.new(payload => "x")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0054
+  from   inventory:Failure.^methods
+  cell   lazy-if(Any) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).lazy-if(Any)
+  is     X::AdHoc.new(payload => "x")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0055
+  from   inventory:Failure.^methods
+  cell   nl-out | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0056
+  from   inventory:Failure.^methods
+  cell   none | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).none
+  is     none(X::AdHoc.new(payload => "x"))
+  type   Junction
+  oracle rakudo-2026.07 → none(X::AdHoc.new(payload => "x"))
+  oracle rakupp-3.14.0 → none(X::AdHoc.new(payload => "x", message => "x"))
+
+- id     0057
+  from   inventory:Failure.^methods
+  cell   not | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-3.14.0 → Bool::False
+
+- id     0058
+  from   inventory:Failure.^methods
+  cell   one | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).one
+  is     one(X::AdHoc.new(payload => "x"))
+  type   Junction
+  oracle rakudo-2026.07 → one(X::AdHoc.new(payload => "x"))
+  oracle rakupp-3.14.0 → one(X::AdHoc.new(payload => "x", message => "x"))
+
+- id     0059
+  from   inventory:Failure.^methods
+  cell   reverse | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).reverse
+  is     $((X::AdHoc.new(payload => "x"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((X::AdHoc.new(payload => "x"),).Seq)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0060
+  from   inventory:Failure.^methods
+  cell   self | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).self
+  is     X::AdHoc.new(payload => "x")
+  type   X::AdHoc
+  oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
+  oracle rakupp-3.14.0 → X::AdHoc.new(payload => "x", message => "x")
+
+- id     0061
+  from   inventory:Failure.^methods
+  cell   set_why(0) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).set_why(0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0062
+  from   inventory:Failure.^methods
+  cell   set_why(1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).set_why(1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0063
+  from   inventory:Failure.^methods
+  cell   set_why(-1) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).set_why(-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0064
+  from   inventory:Failure.^methods
+  cell   set_why("a") | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).set_why("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0065
+  from   inventory:Failure.^methods
+  cell   set_why(Any) | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).set_why(Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0066
+  from   inventory:Failure.^methods
+  cell   so | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-3.14.0 → Bool::True
+
+- id     0067
+  from   inventory:Failure.^methods
+  cell   sum | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).sum
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0068
+  from   inventory:Failure.^methods
+  cell   take | (try { die "x" } // $!)
+  code   ((try { die "x" } // $!)).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-3.14.0 → X::AdHoc.new(payload => "x", message => "x")
