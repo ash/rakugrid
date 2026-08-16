@@ -13,7 +13,7 @@ cols     state | my | our | constant
   is     2
   type   Int
   oracle rakudo-2026.07 → 2
-  oracle rakupp-3.14.0 → 2
+  oracle rakupp-3.14.0+20260816 → 2
 
 - id     0002
   from   molecule:declarator-nesting
@@ -23,7 +23,7 @@ cols     state | my | our | constant
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0003
   from   molecule:declarator-nesting
@@ -33,7 +33,7 @@ cols     state | my | our | constant
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0004
   from   molecule:declarator-nesting
@@ -42,7 +42,7 @@ cols     state | my | our | constant
   code   do { sub f() { constant $ndeclarator_nesting_sub_body_constant = 0; $ndeclarator_nesting_sub_body_constant++; $ndeclarator_nesting_sub_body_constant }; f(); f() }
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0005
   from   molecule:declarator-nesting
@@ -52,7 +52,7 @@ cols     state | my | our | constant
   is     2
   type   Int
   oracle rakudo-2026.07 → 2
-  oracle rakupp-3.14.0 → 2
+  oracle rakupp-3.14.0+20260816 → 2
 
 - id     0006
   from   molecule:declarator-nesting
@@ -62,7 +62,7 @@ cols     state | my | our | constant
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0007
   from   molecule:declarator-nesting
@@ -72,7 +72,7 @@ cols     state | my | our | constant
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0008
   from   molecule:declarator-nesting
@@ -81,7 +81,7 @@ cols     state | my | our | constant
   code   do { class Ddeclarator_nesting_method_body_constant { method m() { constant $ndeclarator_nesting_method_body_constant = 0; $ndeclarator_nesting_method_body_constant++; $ndeclarator_nesting_method_body_constant } }; my $o = Ddeclarator_nesting_method_body_constant.new; $o.m; $o.m }
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0009
   from   molecule:declarator-nesting
@@ -91,7 +91,7 @@ cols     state | my | our | constant
   is     2
   type   Int
   oracle rakudo-2026.07 → 2
-  oracle rakupp-3.14.0 → 2
+  oracle rakupp-3.14.0+20260816 → 2
 
 - id     0010
   from   molecule:declarator-nesting
@@ -101,7 +101,7 @@ cols     state | my | our | constant
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0011
   from   molecule:declarator-nesting
@@ -111,7 +111,7 @@ cols     state | my | our | constant
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0012
   from   molecule:declarator-nesting
@@ -120,7 +120,7 @@ cols     state | my | our | constant
   code   do { my $r; for 1..2 { constant $ndeclarator_nesting_bare_block_constant = 0; $ndeclarator_nesting_bare_block_constant++; $r = $ndeclarator_nesting_bare_block_constant }; $r }
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0013
   from   molecule:declarator-nesting
@@ -130,7 +130,7 @@ cols     state | my | our | constant
   is     "1,2,3"
   type   Str
   oracle rakudo-2026.07 → "1,2,3"
-  oracle rakupp-3.14.0 → "1,2,3"
+  oracle rakupp-3.14.0+20260816 → "1,2,3"
 
 - id     0014
   from   molecule:declarator-nesting
@@ -140,7 +140,7 @@ cols     state | my | our | constant
   is     "1,1,1"
   type   Str
   oracle rakudo-2026.07 → "1,1,1"
-  oracle rakupp-3.14.0 → "1,1,1"
+  oracle rakupp-3.14.0+20260816 → "1,1,1"
 
 - id     0015
   from   molecule:declarator-nesting
@@ -150,7 +150,7 @@ cols     state | my | our | constant
   is     "1,1,1"
   type   Str
   oracle rakudo-2026.07 → "1,1,1"
-  oracle rakupp-3.14.0 → "1,1,1"
+  oracle rakupp-3.14.0+20260816 → "1,1,1"
 
 - id     0016
   from   molecule:declarator-nesting
@@ -159,7 +159,7 @@ cols     state | my | our | constant
   code   do { my @r; for 1..3 { constant $ndeclarator_nesting_loop_body_constant = 0; $ndeclarator_nesting_loop_body_constant++; @r.push($ndeclarator_nesting_loop_body_constant) }; @r.join(",") }
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → "1,1,1"
+  oracle rakupp-3.14.0+20260816 → "1,1,1"
 
 - id     0017
   from   molecule:declarator-nesting
@@ -169,7 +169,7 @@ cols     state | my | our | constant
   is     "(3, 3, 3)"
   type   Str
   oracle rakudo-2026.07 → "(3, 3, 3)"
-  oracle rakupp-3.14.0 → "(1, 2, 3)"
+  oracle rakupp-3.14.0+20260816 → "(1, 2, 3)"
 
 - id     0018
   from   molecule:declarator-nesting
@@ -179,7 +179,7 @@ cols     state | my | our | constant
   is     "(1, 1, 1)"
   type   Str
   oracle rakudo-2026.07 → "(1, 1, 1)"
-  oracle rakupp-3.14.0 → "(1, 1, 1)"
+  oracle rakupp-3.14.0+20260816 → "(1, 1, 1)"
 
 - id     0019
   from   molecule:declarator-nesting
@@ -189,7 +189,7 @@ cols     state | my | our | constant
   is     "(1, 1, 1)"
   type   Str
   oracle rakudo-2026.07 → "(1, 1, 1)"
-  oracle rakupp-3.14.0 → "(1, 1, 1)"
+  oracle rakupp-3.14.0+20260816 → "(1, 1, 1)"
 
 - id     0020
   from   molecule:declarator-nesting
@@ -198,7 +198,7 @@ cols     state | my | our | constant
   code   do { (1..3).map({ constant $ndeclarator_nesting_map_body_constant = 0; $ndeclarator_nesting_map_body_constant++; $ndeclarator_nesting_map_body_constant }).list.raku }
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → "(1, 1, 1)"
+  oracle rakupp-3.14.0+20260816 → "(1, 1, 1)"
 
 - id     0021
   from   molecule:declarator-nesting
@@ -208,7 +208,7 @@ cols     state | my | our | constant
   is     2
   type   Int
   oracle rakudo-2026.07 → 2
-  oracle rakupp-3.14.0 → 2
+  oracle rakupp-3.14.0+20260816 → 2
 
 - id     0022
   from   molecule:declarator-nesting
@@ -218,7 +218,7 @@ cols     state | my | our | constant
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0023
   from   molecule:declarator-nesting
@@ -228,7 +228,7 @@ cols     state | my | our | constant
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0024
   from   molecule:declarator-nesting
@@ -237,7 +237,7 @@ cols     state | my | our | constant
   code   do { sub outer() { sub inner() { constant $ndeclarator_nesting_nested_sub_constant = 0; $ndeclarator_nesting_nested_sub_constant++; $ndeclarator_nesting_nested_sub_constant }; inner(); inner() }; outer() }
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0025
   from   molecule:declarator-nesting
@@ -247,7 +247,7 @@ cols     state | my | our | constant
   is     "(1, 2)"
   type   Str
   oracle rakudo-2026.07 → "(1, 2)"
-  oracle rakupp-3.14.0 → "(1, 2)"
+  oracle rakupp-3.14.0+20260816 → "(1, 2)"
 
 - id     0026
   from   molecule:declarator-nesting
@@ -257,7 +257,7 @@ cols     state | my | our | constant
   is     "(1, 1)"
   type   Str
   oracle rakudo-2026.07 → "(1, 1)"
-  oracle rakupp-3.14.0 → "(1, 1)"
+  oracle rakupp-3.14.0+20260816 → "(1, 1)"
 
 - id     0027
   from   molecule:declarator-nesting
@@ -267,7 +267,7 @@ cols     state | my | our | constant
   is     "(1, 1)"
   type   Str
   oracle rakudo-2026.07 → "(1, 1)"
-  oracle rakupp-3.14.0 → "(1, 1)"
+  oracle rakupp-3.14.0+20260816 → "(1, 1)"
 
 - id     0028
   from   molecule:declarator-nesting
@@ -276,7 +276,7 @@ cols     state | my | our | constant
   code   do { gather { for 1..2 { constant $ndeclarator_nesting_gather_constant = 0; $ndeclarator_nesting_gather_constant++; take $ndeclarator_nesting_gather_constant } }.list.raku }
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → "(1, 1)"
+  oracle rakupp-3.14.0+20260816 → "(1, 1)"
 
 - id     0029
   from   molecule:declarator-nesting
@@ -286,7 +286,7 @@ cols     state | my | our | constant
   is     "1,1"
   type   Str
   oracle rakudo-2026.07 → "1,1"
-  oracle rakupp-3.14.0 → "1,1"
+  oracle rakupp-3.14.0+20260816 → "1,1"
 
 - id     0030
   from   molecule:declarator-nesting
@@ -296,7 +296,7 @@ cols     state | my | our | constant
   is     "1,1"
   type   Str
   oracle rakudo-2026.07 → "1,1"
-  oracle rakupp-3.14.0 → "1,1"
+  oracle rakupp-3.14.0+20260816 → "1,1"
 
 - id     0031
   from   molecule:declarator-nesting
@@ -306,7 +306,7 @@ cols     state | my | our | constant
   is     "1,1"
   type   Str
   oracle rakudo-2026.07 → "1,1"
-  oracle rakupp-3.14.0 → "1,1"
+  oracle rakupp-3.14.0+20260816 → "1,1"
 
 - id     0032
   from   molecule:declarator-nesting
@@ -315,4 +315,4 @@ cols     state | my | our | constant
   code   do { my @r; for 1..2 { @r.push(False || do { constant $ndeclarator_nesting_thunk_rhs_constant = 0; $ndeclarator_nesting_thunk_rhs_constant++; $ndeclarator_nesting_thunk_rhs_constant }) }; @r.join(",") }
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → "1,1"
+  oracle rakupp-3.14.0+20260816 → "1,1"

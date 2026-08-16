@@ -12,7 +12,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0 → Bool::True
+  oracle rakupp-3.14.0+20260816 → Bool::True
 
 - id     0002
   from   inventory:DateTime.^methods
@@ -21,7 +21,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     \(:day(1), :daycount(51544), :formatter(Callable), :hour(0), :minute(0), :month(1), :second(0), :timezone(0), :year(2000))
   type   Capture
   oracle rakudo-2026.07 → \(:day(1), :daycount(51544), :formatter(Callable), :hour(0), :minute(0), :month(1), :second(0), :timezone(0), :year(2000))
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Cannot::Capture
 
 - id     0003
   from   inventory:DateTime.^methods
@@ -30,7 +30,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0 → Bool::True
+  oracle rakupp-3.14.0+20260816 → Bool::True
 
 - id     0004
   from   inventory:DateTime.^methods
@@ -39,7 +39,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
-  oracle rakupp-3.14.0 → ${:day(1), :month(1), :year(2000)}
+  oracle rakupp-3.14.0+20260816 → ${:day(1), :month(1), :year(2000)}
 
 - id     0005
   from   inventory:DateTime.^methods
@@ -48,7 +48,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(2000,1,1,0,0,0)
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
 
 - id     0006
   from   inventory:DateTime.^methods
@@ -57,7 +57,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Perl6::Metamodel::ClassHOW.new
   type   Perl6::Metamodel::ClassHOW
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
-  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+  oracle rakupp-3.14.0+20260816 → Metamodel::ClassHOW
 
 - id     0007
   from   inventory:DateTime.^methods
@@ -66,7 +66,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     IO::Path.new("2000-01-01T00:00:00Z", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
   type   IO::Path
   oracle rakudo-2026.07 → IO::Path.new("2000-01-01T00:00:00Z", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
-  oracle rakupp-3.14.0 → IO::Path.new("2000-01-01T00:00:00Z", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  oracle rakupp-3.14.0+20260816 → IO::Path.new("2000-01-01T00:00:00Z", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
   verdict disputed
   why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
   ruled  2026-08-16 against rakudo-2026.07
@@ -78,7 +78,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Instant.from-posix(946684800.0)
   type   Instant
   oracle rakudo-2026.07 → Instant.from-posix(946684800.0)
-  oracle rakupp-3.14.0 → 946684800e0
+  oracle rakupp-3.14.0+20260816 → 946684800e0
 
 - id     0009
   from   inventory:DateTime.^methods
@@ -87,7 +87,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     "P6opaque"
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0010
   from   inventory:DateTime.^methods
@@ -96,7 +96,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(2000,1,1,0,0,0)
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
 
 - id     0011
   from   inventory:DateTime.^methods
@@ -105,7 +105,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime
   type   DateTime
   oracle rakudo-2026.07 → DateTime
-  oracle rakupp-3.14.0 → DateTime
+  oracle rakupp-3.14.0+20260816 → DateTime
 
 - id     0012
   from   inventory:DateTime.^methods
@@ -114,7 +114,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     ${}
   type   Stash
   oracle rakudo-2026.07 → ${}
-  oracle rakupp-3.14.0 → ${}
+  oracle rakupp-3.14.0+20260816 → ${}
 
 - id     0013
   from   inventory:DateTime.^methods
@@ -123,7 +123,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     all(DateTime.new(2000,1,1,0,0,0))
   type   Junction
   oracle rakudo-2026.07 → all(DateTime.new(2000,1,1,0,0,0))
-  oracle rakupp-3.14.0 → all(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :timezone(0), :year(2000))
+  oracle rakupp-3.14.0+20260816 → all(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :timezone(0), :year(2000))
 
 - id     0014
   from   inventory:DateTime.^methods
@@ -132,7 +132,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     any(DateTime.new(2000,1,1,0,0,0))
   type   Junction
   oracle rakudo-2026.07 → any(DateTime.new(2000,1,1,0,0,0))
-  oracle rakupp-3.14.0 → any(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :timezone(0), :year(2000))
+  oracle rakupp-3.14.0+20260816 → any(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :timezone(0), :year(2000))
 
 - id     0015
   from   inventory:DateTime.^methods
@@ -141,7 +141,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(0,0,0,0,0,)
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(0,0,0,0,0,)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Temporal
 
 - id     0016
   from   inventory:DateTime.^methods
@@ -150,7 +150,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     $(DateTime.new(2000,1,1,0,0,0),)
   type   List
   oracle rakudo-2026.07 → $(DateTime.new(2000,1,1,0,0,0),)
-  oracle rakupp-3.14.0 → $(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :timezone(0), :year(2000))
+  oracle rakupp-3.14.0+20260816 → $(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :timezone(0), :year(2000))
 
 - id     0017
   from   inventory:DateTime.^methods
@@ -158,7 +158,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0018
   from   inventory:DateTime.^methods
@@ -166,7 +166,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0019
   from   inventory:DateTime.^methods
@@ -174,7 +174,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0020
   from   inventory:DateTime.^methods
@@ -183,7 +183,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0021
   from   inventory:DateTime.^methods
@@ -191,7 +191,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0022
   from   inventory:DateTime.^methods
@@ -199,7 +199,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).chrs
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → "\0\0\0\0\0\0\0\0"
+  oracle rakupp-3.14.0+20260816 → "\0\0\0\0\0\0\0\0"
 
 - id     0023
   from   inventory:DateTime.^methods
@@ -208,7 +208,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(2000,1,1,0,0,0)
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
 
 - id     0024
   from   inventory:DateTime.^methods
@@ -217,7 +217,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0025
   from   inventory:DateTime.^methods
@@ -226,7 +226,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     0.0
   type   Rat
   oracle rakudo-2026.07 → 0.0
-  oracle rakupp-3.14.0 → 0.0
+  oracle rakupp-3.14.0+20260816 → 0.0
 
 - id     0026
   from   inventory:DateTime.^methods
@@ -235,7 +235,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0027
   from   inventory:DateTime.^methods
@@ -244,7 +244,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     6
   type   Int
   oracle rakudo-2026.07 → 6
-  oracle rakupp-3.14.0 → 6
+  oracle rakupp-3.14.0+20260816 → 6
 
 - id     0028
   from   inventory:DateTime.^methods
@@ -253,7 +253,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0029
   from   inventory:DateTime.^methods
@@ -262,7 +262,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     51544
   type   Int
   oracle rakudo-2026.07 → 51544
-  oracle rakupp-3.14.0 → 51544
+  oracle rakupp-3.14.0+20260816 → 51544
 
 - id     0030
   from   inventory:DateTime.^methods
@@ -270,7 +270,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).dd-mm-yyyy(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → "01-01-2000"
+  oracle rakupp-3.14.0+20260816 → "01-01-2000"
 
 - id     0031
   from   inventory:DateTime.^methods
@@ -278,7 +278,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).dd-mm-yyyy(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → "01-01-2000"
+  oracle rakupp-3.14.0+20260816 → "01-01-2000"
 
 - id     0032
   from   inventory:DateTime.^methods
@@ -286,7 +286,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).dd-mm-yyyy(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → "01-01-2000"
+  oracle rakupp-3.14.0+20260816 → "01-01-2000"
 
 - id     0033
   from   inventory:DateTime.^methods
@@ -295,7 +295,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     "01a01a2000"
   type   Str
   oracle rakudo-2026.07 → "01a01a2000"
-  oracle rakupp-3.14.0 → "01-01-2000"
+  oracle rakupp-3.14.0+20260816 → "01-01-2000"
 
 - id     0034
   from   inventory:DateTime.^methods
@@ -303,7 +303,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).dd-mm-yyyy(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → "01-01-2000"
+  oracle rakupp-3.14.0+20260816 → "01-01-2000"
 
 - id     0035
   from   inventory:DateTime.^methods
@@ -312,7 +312,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0036
   from   inventory:DateTime.^methods
@@ -321,7 +321,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0037
   from   inventory:DateTime.^methods
@@ -330,7 +330,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0038
   from   inventory:DateTime.^methods
@@ -339,7 +339,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0039
   from   inventory:DateTime.^methods
@@ -348,7 +348,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0 → Bool::True
+  oracle rakupp-3.14.0+20260816 → Bool::True
 
 - id     0040
   from   inventory:DateTime.^methods
@@ -357,7 +357,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Callable
   type   Callable
   oracle rakudo-2026.07 → Callable
-  oracle rakupp-3.14.0 → Callable
+  oracle rakupp-3.14.0+20260816 → Callable
 
 - id     0041
   from   inventory:DateTime.^methods
@@ -366,7 +366,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     "00:00:00"
   type   Str
   oracle rakudo-2026.07 → "00:00:00"
-  oracle rakupp-3.14.0 → "00:00:00"
+  oracle rakupp-3.14.0+20260816 → "00:00:00"
 
 - id     0042
   from   inventory:DateTime.^methods
@@ -375,7 +375,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0 → 0
+  oracle rakupp-3.14.0+20260816 → 0
 
 - id     0043
   from   inventory:DateTime.^methods
@@ -384,7 +384,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(2000,1,1,0,0,0)
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
 
 - id     0044
   from   inventory:DateTime.^methods
@@ -393,7 +393,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(2000,1,1,0,0,1,:timezone(1))
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,1,:timezone(1))
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(1), :timezone(1))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(1), :timezone(1))
 
 - id     0045
   from   inventory:DateTime.^methods
@@ -402,7 +402,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(1999,12,31,23,59,59,:timezone(-1))
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(1999,12,31,23,59,59,:timezone(-1))
-  oracle rakupp-3.14.0 → DateTime.new(:year(1999), :month(12), :day(31), :hour(23), :minute(59), :second(59), :timezone(-1))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(1999), :month(12), :day(31), :hour(23), :minute(59), :second(59), :timezone(-1))
 
 - id     0046
   from   inventory:DateTime.^methods
@@ -410,7 +410,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).in-timezone("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
 
 - id     0047
   from   inventory:DateTime.^methods
@@ -418,7 +418,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).in-timezone(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
 
 - id     0048
   from   inventory:DateTime.^methods
@@ -427,7 +427,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0049
   from   inventory:DateTime.^methods
@@ -436,7 +436,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0 → Bool::True
+  oracle rakupp-3.14.0+20260816 → Bool::True
 
 - id     0050
   from   inventory:DateTime.^methods
@@ -445,7 +445,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(2000,1,1,0,0,0)
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
 
 - id     0051
   from   inventory:DateTime.^methods
@@ -454,7 +454,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     "2000-01-01T00:00:00Z"
   type   Str
   oracle rakudo-2026.07 → "2000-01-01T00:00:00Z"
-  oracle rakupp-3.14.0 → "day\t10hour\t00minute\t00month\t10posix\t9466848000second\t00timezone\t00year\t2000"
+  oracle rakupp-3.14.0+20260816 → "day\t10hour\t00minute\t00month\t10posix\t9466848000second\t00timezone\t00year\t2000"
 
 - id     0052
   from   inventory:DateTime.^methods
@@ -463,7 +463,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     "2000-01-01T00:00:00Z"
   type   Str
   oracle rakudo-2026.07 → "2000-01-01T00:00:00Z"
-  oracle rakupp-3.14.0 → "day\t11hour\t01minute\t01month\t11posix\t9466848001second\t01timezone\t01year\t2000"
+  oracle rakupp-3.14.0+20260816 → "day\t11hour\t01minute\t01month\t11posix\t9466848001second\t01timezone\t01year\t2000"
 
 - id     0053
   from   inventory:DateTime.^methods
@@ -472,7 +472,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     "2000-01-01T00:00:00Z"
   type   Str
   oracle rakudo-2026.07 → "2000-01-01T00:00:00Z"
-  oracle rakupp-3.14.0 → "day\t1-1hour\t0-1minute\t0-1month\t1-1posix\t946684800-1second\t0-1timezone\t0-1year\t2000"
+  oracle rakupp-3.14.0+20260816 → "day\t1-1hour\t0-1minute\t0-1month\t1-1posix\t946684800-1second\t0-1timezone\t0-1year\t2000"
 
 - id     0054
   from   inventory:DateTime.^methods
@@ -481,7 +481,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     "2000-01-01T00:00:00Z"
   type   Str
   oracle rakudo-2026.07 → "2000-01-01T00:00:00Z"
-  oracle rakupp-3.14.0 → "day\t1ahour\t0aminute\t0amonth\t1aposix\t946684800asecond\t0atimezone\t0ayear\t2000"
+  oracle rakupp-3.14.0+20260816 → "day\t1ahour\t0aminute\t0amonth\t1aposix\t946684800asecond\t0atimezone\t0ayear\t2000"
 
 - id     0055
   from   inventory:DateTime.^methods
@@ -489,7 +489,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).join(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → "day\t1hour\t0minute\t0month\t1posix\t946684800second\t0timezone\t0year\t2000"
+  oracle rakupp-3.14.0+20260816 → ERR:X::TypeCheck::Binding::Parameter
 
 - id     0056
   from   inventory:DateTime.^methods
@@ -498,7 +498,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     2451544.5
   type   Rat
   oracle rakudo-2026.07 → 2451544.5
-  oracle rakupp-3.14.0 → 2451544.5
+  oracle rakupp-3.14.0+20260816 → 2451544.5
 
 - id     0057
   from   inventory:DateTime.^methods
@@ -507,7 +507,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(2000,1,1,0,0,0)
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0058
   from   inventory:DateTime.^methods
@@ -516,7 +516,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(2000,1,1,0,0,0)
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0059
   from   inventory:DateTime.^methods
@@ -525,7 +525,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(2000,1,1,0,0,0)
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0060
   from   inventory:DateTime.^methods
@@ -534,7 +534,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(2000,1,1,0,0,0)
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0061
   from   inventory:DateTime.^methods
@@ -543,7 +543,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(2000,1,1,0,0,0)
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0062
   from   inventory:DateTime.^methods
@@ -552,7 +552,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(2000,1,1,2,0,0,:timezone(7200))
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,2,0,0,:timezone(7200))
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(2), :minute(0), :second(0), :timezone(7200))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(2), :minute(0), :second(0), :timezone(7200))
 
 - id     0063
   from   inventory:DateTime.^methods
@@ -561,7 +561,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0 → 0
+  oracle rakupp-3.14.0+20260816 → 0
 
 - id     0064
   from   inventory:DateTime.^methods
@@ -569,7 +569,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).mm-dd(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0065
   from   inventory:DateTime.^methods
@@ -577,7 +577,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).mm-dd(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0066
   from   inventory:DateTime.^methods
@@ -585,7 +585,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).mm-dd(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0067
   from   inventory:DateTime.^methods
@@ -594,7 +594,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     "01a01"
   type   Str
   oracle rakudo-2026.07 → "01a01"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0068
   from   inventory:DateTime.^methods
@@ -602,7 +602,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).mm-dd(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0069
   from   inventory:DateTime.^methods
@@ -610,7 +610,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).mm-dd-yyyy(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → "01-01-2000"
+  oracle rakupp-3.14.0+20260816 → "01-01-2000"
 
 - id     0070
   from   inventory:DateTime.^methods
@@ -618,7 +618,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).mm-dd-yyyy(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → "01-01-2000"
+  oracle rakupp-3.14.0+20260816 → "01-01-2000"
 
 - id     0071
   from   inventory:DateTime.^methods
@@ -626,7 +626,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).mm-dd-yyyy(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → "01-01-2000"
+  oracle rakupp-3.14.0+20260816 → "01-01-2000"
 
 - id     0072
   from   inventory:DateTime.^methods
@@ -635,7 +635,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     "01a01a2000"
   type   Str
   oracle rakudo-2026.07 → "01a01a2000"
-  oracle rakupp-3.14.0 → "01-01-2000"
+  oracle rakupp-3.14.0+20260816 → "01-01-2000"
 
 - id     0073
   from   inventory:DateTime.^methods
@@ -643,7 +643,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).mm-dd-yyyy(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → "01-01-2000"
+  oracle rakupp-3.14.0+20260816 → "01-01-2000"
 
 - id     0074
   from   inventory:DateTime.^methods
@@ -652,7 +652,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     51544.0
   type   Rat
   oracle rakudo-2026.07 → 51544.0
-  oracle rakupp-3.14.0 → 51544.0
+  oracle rakupp-3.14.0+20260816 → 51544.0
 
 - id     0075
   from   inventory:DateTime.^methods
@@ -661,7 +661,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0076
   from   inventory:DateTime.^methods
@@ -670,7 +670,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     "\n"
   type   Str
   oracle rakudo-2026.07 → "\n"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0077
   from   inventory:DateTime.^methods
@@ -679,7 +679,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     none(DateTime.new(2000,1,1,0,0,0))
   type   Junction
   oracle rakudo-2026.07 → none(DateTime.new(2000,1,1,0,0,0))
-  oracle rakupp-3.14.0 → none(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :timezone(0), :year(2000))
+  oracle rakupp-3.14.0+20260816 → none(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :timezone(0), :year(2000))
 
 - id     0078
   from   inventory:DateTime.^methods
@@ -688,7 +688,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0079
   from   inventory:DateTime.^methods
@@ -697,7 +697,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(2026,8,15,21,46,51.69666337966919,:timezone(7200))
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2026,8,15,21,46,51.69666337966919,:timezone(7200))
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -709,7 +709,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0 → 0
+  oracle rakupp-3.14.0+20260816 → 0
 
 - id     0081
   from   inventory:DateTime.^methods
@@ -718,7 +718,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     0.0
   type   Rat
   oracle rakudo-2026.07 → 0.0
-  oracle rakupp-3.14.0 → 0.0
+  oracle rakupp-3.14.0+20260816 → 0.0
 
 - id     0082
   from   inventory:DateTime.^methods
@@ -727,7 +727,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     0.0
   type   Rat
   oracle rakudo-2026.07 → 0.0
-  oracle rakupp-3.14.0 → 0.0
+  oracle rakupp-3.14.0+20260816 → 0.0
 
 - id     0083
   from   inventory:DateTime.^methods
@@ -736,7 +736,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     one(DateTime.new(2000,1,1,0,0,0))
   type   Junction
   oracle rakudo-2026.07 → one(DateTime.new(2000,1,1,0,0,0))
-  oracle rakupp-3.14.0 → one(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :timezone(0), :year(2000))
+  oracle rakupp-3.14.0+20260816 → one(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :timezone(0), :year(2000))
 
 - id     0084
   from   inventory:DateTime.^methods
@@ -745,7 +745,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     $((DateTime.new(2000,1,1,0,0,0),).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((DateTime.new(2000,1,1,0,0,0),).Seq)
-  oracle rakupp-3.14.0 → $(:year(2000), :timezone(0), :second(0), :posix(946684800), :month(1), :minute(0), :hour(0), :day(1)).Seq
+  oracle rakupp-3.14.0+20260816 → $((:year(2000), :timezone(0), :second(0), :posix(946684800), :month(1), :minute(0), :hour(0), :day(1)).Seq)
 
 - id     0085
   from   inventory:DateTime.^methods
@@ -754,7 +754,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0 → 0
+  oracle rakupp-3.14.0+20260816 → 0
 
 - id     0086
   from   inventory:DateTime.^methods
@@ -763,7 +763,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(2000,1,1,0,0,0)
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
 
 - id     0087
   from   inventory:DateTime.^methods
@@ -772,7 +772,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0 → Bool::True
+  oracle rakupp-3.14.0+20260816 → Bool::True
 
 - id     0088
   from   inventory:DateTime.^methods
@@ -781,7 +781,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     Instant.from-posix(946684800.0)
   type   Instant
   oracle rakudo-2026.07 → Instant.from-posix(946684800.0)
-  oracle rakupp-3.14.0 → 0e0
+  oracle rakupp-3.14.0+20260816 → 0e0
 
 - id     0089
   from   inventory:DateTime.^methods
@@ -789,7 +789,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-3.14.0+20260816 → ERR:X::ControlFlow
 
 - id     0090
   from   inventory:DateTime.^methods
@@ -798,7 +798,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0 → 0
+  oracle rakupp-3.14.0+20260816 → 0
 
 - id     0091
   from   inventory:DateTime.^methods
@@ -806,7 +806,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).truncated-to(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
 
 - id     0092
   from   inventory:DateTime.^methods
@@ -814,7 +814,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).truncated-to(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
 
 - id     0093
   from   inventory:DateTime.^methods
@@ -822,7 +822,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).truncated-to(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
 
 - id     0094
   from   inventory:DateTime.^methods
@@ -830,7 +830,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).truncated-to("a")
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
 
 - id     0095
   from   inventory:DateTime.^methods
@@ -838,7 +838,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).truncated-to(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
 
 - id     0096
   from   inventory:DateTime.^methods
@@ -847,7 +847,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     DateTime.new(2000,1,1,0,0,0)
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
-  oracle rakupp-3.14.0 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-3.14.0+20260816 → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
 
 - id     0097
   from   inventory:DateTime.^methods
@@ -856,7 +856,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     $(1999, 52)
   type   List
   oracle rakudo-2026.07 → $(1999, 52)
-  oracle rakupp-3.14.0 → $(1999, 52)
+  oracle rakupp-3.14.0+20260816 → $(1999, 52)
 
 - id     0098
   from   inventory:DateTime.^methods
@@ -865,7 +865,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     52
   type   Int
   oracle rakudo-2026.07 → 52
-  oracle rakupp-3.14.0 → 52
+  oracle rakupp-3.14.0+20260816 → 52
 
 - id     0099
   from   inventory:DateTime.^methods
@@ -874,7 +874,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     1999
   type   Int
   oracle rakudo-2026.07 → 1999
-  oracle rakupp-3.14.0 → 1999
+  oracle rakupp-3.14.0+20260816 → 1999
 
 - id     0100
   from   inventory:DateTime.^methods
@@ -883,7 +883,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → 1
+  oracle rakupp-3.14.0+20260816 → 1
 
 - id     0101
   from   inventory:DateTime.^methods
@@ -892,7 +892,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0 → 0
+  oracle rakupp-3.14.0+20260816 → 0
 
 - id     0102
   from   inventory:DateTime.^methods
@@ -901,7 +901,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     2000
   type   Int
   oracle rakudo-2026.07 → 2000
-  oracle rakupp-3.14.0 → 2000
+  oracle rakupp-3.14.0+20260816 → 2000
 
 - id     0103
   from   inventory:DateTime.^methods
@@ -909,7 +909,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0104
   from   inventory:DateTime.^methods
@@ -917,7 +917,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0105
   from   inventory:DateTime.^methods
@@ -925,7 +925,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0106
   from   inventory:DateTime.^methods
@@ -934,7 +934,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     "2000a01"
   type   Str
   oracle rakudo-2026.07 → "2000a01"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0107
   from   inventory:DateTime.^methods
@@ -942,7 +942,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0108
   from   inventory:DateTime.^methods
@@ -950,7 +950,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm-dd(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → "2000-01-01"
+  oracle rakupp-3.14.0+20260816 → "2000-01-01"
 
 - id     0109
   from   inventory:DateTime.^methods
@@ -958,7 +958,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm-dd(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → "2000-01-01"
+  oracle rakupp-3.14.0+20260816 → "2000-01-01"
 
 - id     0110
   from   inventory:DateTime.^methods
@@ -966,7 +966,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm-dd(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → "2000-01-01"
+  oracle rakupp-3.14.0+20260816 → "2000-01-01"
 
 - id     0111
   from   inventory:DateTime.^methods
@@ -975,7 +975,7 @@ cols     DateTime.new(2000,1,1,0,0,0)
   is     "2000a01a01"
   type   Str
   oracle rakudo-2026.07 → "2000a01a01"
-  oracle rakupp-3.14.0 → "2000-01-01"
+  oracle rakupp-3.14.0+20260816 → "2000-01-01"
 
 - id     0112
   from   inventory:DateTime.^methods
@@ -983,4 +983,4 @@ cols     DateTime.new(2000,1,1,0,0,0)
   code   (DateTime.new(2000,1,1,0,0,0)).yyyy-mm-dd(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → "2000-01-01"
+  oracle rakupp-3.14.0+20260816 → "2000-01-01"

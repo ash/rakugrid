@@ -12,7 +12,7 @@ cols     &say | { 1 }
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0 → Bool::True
+  oracle rakupp-3.14.0+20260816 → Bool::True
 
 - id     0002
   from   inventory:Routine.^methods
@@ -21,7 +21,7 @@ cols     &say | { 1 }
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0 → Bool::True
+  oracle rakupp-3.14.0+20260816 → Bool::True
 
 - id     0003
   from   inventory:Routine.^methods
@@ -29,7 +29,7 @@ cols     &say | { 1 }
   code   (&say).Capture
   throws X::Cannot::Capture
   oracle rakudo-2026.07 → ERR:X::Cannot::Capture
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Cannot::Capture
 
 - id     0004
   from   inventory:Routine.^methods
@@ -37,7 +37,7 @@ cols     &say | { 1 }
   code   ({ 1 }).Capture
   throws X::Cannot::Capture
   oracle rakudo-2026.07 → ERR:X::Cannot::Capture
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Cannot::Capture
 
 - id     0005
   from   inventory:Routine.^methods
@@ -46,7 +46,7 @@ cols     &say | { 1 }
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0 → Bool::True
+  oracle rakupp-3.14.0+20260816 → Bool::True
 
 - id     0006
   from   inventory:Routine.^methods
@@ -55,7 +55,7 @@ cols     &say | { 1 }
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0 → Bool::True
+  oracle rakupp-3.14.0+20260816 → Bool::True
 
 - id     0007
   from   inventory:Routine.^methods
@@ -64,7 +64,7 @@ cols     &say | { 1 }
   is     Perl6::Metamodel::ClassHOW.new
   type   Perl6::Metamodel::ClassHOW
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
-  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+  oracle rakupp-3.14.0+20260816 → Metamodel::ClassHOW
 
 - id     0008
   from   inventory:Routine.^methods
@@ -73,7 +73,7 @@ cols     &say | { 1 }
   is     UNRENDERABLE
   type   Perl6::Metamodel::ClassHOW
   oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-3.14.0 → Metamodel::ClassHOW
+  oracle rakupp-3.14.0+20260816 → Metamodel::ClassHOW
   verdict disputed
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
@@ -85,7 +85,7 @@ cols     &say | { 1 }
   is     "P6opaque"
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0010
   from   inventory:Routine.^methods
@@ -94,7 +94,7 @@ cols     &say | { 1 }
   is     "P6opaque"
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0011
   from   inventory:Routine.^methods
@@ -103,7 +103,7 @@ cols     &say | { 1 }
   is     proto sub say (|) {*}
   type   Sub
   oracle rakudo-2026.07 → proto sub say (|) {*}
-  oracle rakupp-3.14.0 → &say
+  oracle rakupp-3.14.0+20260816 → &say
 
 - id     0012
   from   inventory:Routine.^methods
@@ -112,7 +112,7 @@ cols     &say | { 1 }
   is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880382504) ... }
   type   Block
   oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880382504) ... }
-  oracle rakupp-3.14.0 → sub { ... }
+  oracle rakupp-3.14.0+20260816 → sub { ... }
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -124,7 +124,7 @@ cols     &say | { 1 }
   is     Sub
   type   Sub
   oracle rakudo-2026.07 → Sub
-  oracle rakupp-3.14.0 → Sub
+  oracle rakupp-3.14.0+20260816 → Sub
 
 - id     0014
   from   inventory:Routine.^methods
@@ -133,7 +133,7 @@ cols     &say | { 1 }
   is     Block
   type   Block
   oracle rakudo-2026.07 → Block
-  oracle rakupp-3.14.0 → Block
+  oracle rakupp-3.14.0+20260816 → Block
 
 - id     0015
   from   inventory:Routine.^methods
@@ -142,7 +142,7 @@ cols     &say | { 1 }
   is     ${}
   type   Stash
   oracle rakudo-2026.07 → ${}
-  oracle rakupp-3.14.0 → ${}
+  oracle rakupp-3.14.0+20260816 → ${}
 
 - id     0016
   from   inventory:Routine.^methods
@@ -151,7 +151,7 @@ cols     &say | { 1 }
   is     ${}
   type   Stash
   oracle rakudo-2026.07 → ${}
-  oracle rakupp-3.14.0 → ${}
+  oracle rakupp-3.14.0+20260816 → ${}
 
 - id     0017
   from   inventory:Routine.^methods
@@ -160,7 +160,7 @@ cols     &say | { 1 }
   is     Nil
   type   Nil+{Mu::Suggestion[Sub]}
   oracle rakudo-2026.07 → Nil
-  oracle rakupp-3.14.0 → Any
+  oracle rakupp-3.14.0+20260816 → Any
 
 - id     0018
   from   inventory:Routine.^methods
@@ -169,7 +169,7 @@ cols     &say | { 1 }
   is     Nil
   type   Nil+{Mu::Suggestion[Block]}
   oracle rakudo-2026.07 → Nil
-  oracle rakupp-3.14.0 → Any
+  oracle rakupp-3.14.0+20260816 → Any
 
 - id     0019
   from   inventory:Routine.^methods
@@ -178,7 +178,7 @@ cols     &say | { 1 }
   is     all(proto sub say (|) {*})
   type   Junction
   oracle rakudo-2026.07 → all(proto sub say (|) {*})
-  oracle rakupp-3.14.0 → all(&say)
+  oracle rakupp-3.14.0+20260816 → all(&say)
 
 - id     0020
   from   inventory:Routine.^methods
@@ -187,7 +187,7 @@ cols     &say | { 1 }
   is     all(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880422672) ... })
   type   Junction
   oracle rakudo-2026.07 → all(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880422672) ... })
-  oracle rakupp-3.14.0 → all(sub { ... })
+  oracle rakupp-3.14.0+20260816 → all(sub { ... })
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -199,7 +199,7 @@ cols     &say | { 1 }
   is     any(proto sub say (|) {*})
   type   Junction
   oracle rakudo-2026.07 → any(proto sub say (|) {*})
-  oracle rakupp-3.14.0 → any(&say)
+  oracle rakupp-3.14.0+20260816 → any(&say)
 
 - id     0022
   from   inventory:Routine.^methods
@@ -208,7 +208,7 @@ cols     &say | { 1 }
   is     any(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880423536) ... })
   type   Junction
   oracle rakudo-2026.07 → any(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880423536) ... })
-  oracle rakupp-3.14.0 → any(sub { ... })
+  oracle rakupp-3.14.0+20260816 → any(sub { ... })
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -220,7 +220,7 @@ cols     &say | { 1 }
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0 → 0
+  oracle rakupp-3.14.0+20260816 → 0
 
 - id     0024
   from   inventory:Routine.^methods
@@ -229,7 +229,7 @@ cols     &say | { 1 }
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0 → 0
+  oracle rakupp-3.14.0+20260816 → 0
 
 - id     0025
   from   inventory:Routine.^methods
@@ -237,7 +237,7 @@ cols     &say | { 1 }
   code   (&say).assoc(0)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0026
   from   inventory:Routine.^methods
@@ -245,7 +245,7 @@ cols     &say | { 1 }
   code   (&say).assoc(1)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0027
   from   inventory:Routine.^methods
@@ -253,7 +253,7 @@ cols     &say | { 1 }
   code   (&say).assoc(-1)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0028
   from   inventory:Routine.^methods
@@ -262,7 +262,7 @@ cols     &say | { 1 }
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0029
   from   inventory:Routine.^methods
@@ -270,7 +270,7 @@ cols     &say | { 1 }
   code   (&say).assoc(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0030
   from   inventory:Routine.^methods
@@ -278,7 +278,7 @@ cols     &say | { 1 }
   code   ({ 1 }).assoc(0)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0031
   from   inventory:Routine.^methods
@@ -286,7 +286,7 @@ cols     &say | { 1 }
   code   ({ 1 }).assoc(1)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0032
   from   inventory:Routine.^methods
@@ -294,7 +294,7 @@ cols     &say | { 1 }
   code   ({ 1 }).assoc(-1)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0033
   from   inventory:Routine.^methods
@@ -302,7 +302,7 @@ cols     &say | { 1 }
   code   ({ 1 }).assoc("a")
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0034
   from   inventory:Routine.^methods
@@ -310,7 +310,7 @@ cols     &say | { 1 }
   code   ({ 1 }).assoc(Any)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0035
   from   inventory:Routine.^methods
@@ -319,7 +319,7 @@ cols     &say | { 1 }
   is     "a"
   type   Str
   oracle rakudo-2026.07 → "a"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0036
   from   inventory:Routine.^methods
@@ -328,7 +328,7 @@ cols     &say | { 1 }
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0037
   from   inventory:Routine.^methods
@@ -337,7 +337,7 @@ cols     &say | { 1 }
   is     UNRENDERABLE
   type   Sub
   oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
@@ -349,7 +349,7 @@ cols     &say | { 1 }
   is     -> gnatur { #`(Block|6342880451032) ... }
   type   Block
   oracle rakudo-2026.07 → -> gnatur { #`(Block|6342880451032) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -361,7 +361,7 @@ cols     &say | { 1 }
   is     30
   type   Int
   oracle rakudo-2026.07 → 30
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0040
   from   inventory:Routine.^methods
@@ -370,7 +370,7 @@ cols     &say | { 1 }
   is     50
   type   Int
   oracle rakudo-2026.07 → 50
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0041
   from   inventory:Routine.^methods
@@ -379,7 +379,7 @@ cols     &say | { 1 }
   is     $(proto sub say (|) {*},)
   type   List
   oracle rakudo-2026.07 → $(proto sub say (|) {*},)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0042
   from   inventory:Routine.^methods
@@ -388,7 +388,7 @@ cols     &say | { 1 }
   is     $(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880452688) ... },)
   type   List
   oracle rakudo-2026.07 → $(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880452688) ... },)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -399,7 +399,7 @@ cols     &say | { 1 }
   code   (&say).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0044
   from   inventory:Routine.^methods
@@ -407,7 +407,7 @@ cols     &say | { 1 }
   code   (&say).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0045
   from   inventory:Routine.^methods
@@ -415,7 +415,7 @@ cols     &say | { 1 }
   code   (&say).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0046
   from   inventory:Routine.^methods
@@ -424,7 +424,7 @@ cols     &say | { 1 }
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0047
   from   inventory:Routine.^methods
@@ -432,7 +432,7 @@ cols     &say | { 1 }
   code   (&say).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0048
   from   inventory:Routine.^methods
@@ -440,7 +440,7 @@ cols     &say | { 1 }
   code   ({ 1 }).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0049
   from   inventory:Routine.^methods
@@ -448,7 +448,7 @@ cols     &say | { 1 }
   code   ({ 1 }).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0050
   from   inventory:Routine.^methods
@@ -456,7 +456,7 @@ cols     &say | { 1 }
   code   ({ 1 }).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0051
   from   inventory:Routine.^methods
@@ -465,7 +465,7 @@ cols     &say | { 1 }
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0052
   from   inventory:Routine.^methods
@@ -473,7 +473,7 @@ cols     &say | { 1 }
   code   ({ 1 }).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0053
   from   inventory:Routine.^methods
@@ -482,7 +482,7 @@ cols     &say | { 1 }
   is     $(multi sub say { #`(Sub|6324666361512) ... }, multi sub say (\x) { #`(Sub|6324666361648) ... }, multi sub say (|) { #`(Sub|6324666361784) ... })
   type   List
   oracle rakudo-2026.07 → $(multi sub say { #`(Sub|6324666361512) ... }, multi sub say (\x) { #`(Sub|6324666361648) ... }, multi sub say (|) { #`(Sub|6324666361784) ... })
-  oracle rakupp-3.14.0 → $(&say,)
+  oracle rakupp-3.14.0+20260816 → $(&say,)
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -493,7 +493,7 @@ cols     &say | { 1 }
   code   ({ 1 }).candidates
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → $(sub { ... },)
+  oracle rakupp-3.14.0+20260816 → $(sub { ... },)
 
 - id     0055
   from   inventory:Routine.^methods
@@ -502,7 +502,7 @@ cols     &say | { 1 }
   is     $(multi sub say (\x) { #`(Sub|6324666361648) ... }, multi sub say (|) { #`(Sub|6324666361784) ... })
   type   List
   oracle rakudo-2026.07 → $(multi sub say (\x) { #`(Sub|6324666361648) ... }, multi sub say (|) { #`(Sub|6324666361784) ... })
-  oracle rakupp-3.14.0 → $(&say,)
+  oracle rakupp-3.14.0+20260816 → $(&say,)
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -514,7 +514,7 @@ cols     &say | { 1 }
   is     $(multi sub say (\x) { #`(Sub|6324666361648) ... }, multi sub say (|) { #`(Sub|6324666361784) ... })
   type   List
   oracle rakudo-2026.07 → $(multi sub say (\x) { #`(Sub|6324666361648) ... }, multi sub say (|) { #`(Sub|6324666361784) ... })
-  oracle rakupp-3.14.0 → $(&say,)
+  oracle rakupp-3.14.0+20260816 → $(&say,)
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -526,7 +526,7 @@ cols     &say | { 1 }
   is     $(multi sub say (\x) { #`(Sub|6324666361648) ... }, multi sub say (|) { #`(Sub|6324666361784) ... })
   type   List
   oracle rakudo-2026.07 → $(multi sub say (\x) { #`(Sub|6324666361648) ... }, multi sub say (|) { #`(Sub|6324666361784) ... })
-  oracle rakupp-3.14.0 → $(&say,)
+  oracle rakupp-3.14.0+20260816 → $(&say,)
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -538,7 +538,7 @@ cols     &say | { 1 }
   is     $(multi sub say (\x) { #`(Sub|6324666361648) ... }, multi sub say (|) { #`(Sub|6324666361784) ... })
   type   List
   oracle rakudo-2026.07 → $(multi sub say (\x) { #`(Sub|6324666361648) ... }, multi sub say (|) { #`(Sub|6324666361784) ... })
-  oracle rakupp-3.14.0 → $(&say,)
+  oracle rakupp-3.14.0+20260816 → $(&say,)
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -550,7 +550,7 @@ cols     &say | { 1 }
   is     $(multi sub say (\x) { #`(Sub|6324666361648) ... }, multi sub say (|) { #`(Sub|6324666361784) ... })
   type   List
   oracle rakudo-2026.07 → $(multi sub say (\x) { #`(Sub|6324666361648) ... }, multi sub say (|) { #`(Sub|6324666361784) ... })
-  oracle rakupp-3.14.0 → $(&say,)
+  oracle rakupp-3.14.0+20260816 → $(&say,)
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -561,7 +561,7 @@ cols     &say | { 1 }
   code   ({ 1 }).cando(0)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0061
   from   inventory:Routine.^methods
@@ -569,7 +569,7 @@ cols     &say | { 1 }
   code   ({ 1 }).cando(1)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0062
   from   inventory:Routine.^methods
@@ -577,7 +577,7 @@ cols     &say | { 1 }
   code   ({ 1 }).cando(-1)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0063
   from   inventory:Routine.^methods
@@ -585,7 +585,7 @@ cols     &say | { 1 }
   code   ({ 1 }).cando("a")
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0064
   from   inventory:Routine.^methods
@@ -593,7 +593,7 @@ cols     &say | { 1 }
   code   ({ 1 }).cando(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → $()
+  oracle rakupp-3.14.0+20260816 → $( )
 
 - id     0065
   from   inventory:Routine.^methods
@@ -601,7 +601,7 @@ cols     &say | { 1 }
   code   (&say).chrs
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0066
   from   inventory:Routine.^methods
@@ -609,7 +609,7 @@ cols     &say | { 1 }
   code   ({ 1 }).chrs
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0067
   from   inventory:Routine.^methods
@@ -618,7 +618,7 @@ cols     &say | { 1 }
   is     Inf
   type   Num
   oracle rakudo-2026.07 → Inf
-  oracle rakupp-3.14.0 → 0
+  oracle rakupp-3.14.0+20260816 → 0
 
 - id     0068
   from   inventory:Routine.^methods
@@ -627,7 +627,7 @@ cols     &say | { 1 }
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → 0
+  oracle rakupp-3.14.0+20260816 → 0
 
 - id     0069
   from   inventory:Routine.^methods
@@ -636,7 +636,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0070
   from   inventory:Routine.^methods
@@ -645,7 +645,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0071
   from   inventory:Routine.^methods
@@ -654,7 +654,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0072
   from   inventory:Routine.^methods
@@ -663,7 +663,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0073
   from   inventory:Routine.^methods
@@ -672,7 +672,7 @@ cols     &say | { 1 }
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0 → Bool::True
+  oracle rakupp-3.14.0+20260816 → Bool::True
 
 - id     0074
   from   inventory:Routine.^methods
@@ -681,7 +681,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0075
   from   inventory:Routine.^methods
@@ -690,7 +690,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0076
   from   inventory:Routine.^methods
@@ -699,7 +699,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0077
   from   inventory:Routine.^methods
@@ -708,7 +708,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0078
   from   inventory:Routine.^methods
@@ -717,7 +717,7 @@ cols     &say | { 1 }
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0 → Bool::True
+  oracle rakupp-3.14.0+20260816 → Bool::True
 
 - id     0079
   from   inventory:Routine.^methods
@@ -725,7 +725,7 @@ cols     &say | { 1 }
   code   (&say).equiv(0)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0080
   from   inventory:Routine.^methods
@@ -733,7 +733,7 @@ cols     &say | { 1 }
   code   (&say).equiv(1)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0081
   from   inventory:Routine.^methods
@@ -741,7 +741,7 @@ cols     &say | { 1 }
   code   (&say).equiv(-1)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0082
   from   inventory:Routine.^methods
@@ -749,7 +749,7 @@ cols     &say | { 1 }
   code   (&say).equiv("a")
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0083
   from   inventory:Routine.^methods
@@ -757,7 +757,7 @@ cols     &say | { 1 }
   code   (&say).equiv(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0084
   from   inventory:Routine.^methods
@@ -765,7 +765,7 @@ cols     &say | { 1 }
   code   ({ 1 }).equiv(0)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0085
   from   inventory:Routine.^methods
@@ -773,7 +773,7 @@ cols     &say | { 1 }
   code   ({ 1 }).equiv(1)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0086
   from   inventory:Routine.^methods
@@ -781,7 +781,7 @@ cols     &say | { 1 }
   code   ({ 1 }).equiv(-1)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0087
   from   inventory:Routine.^methods
@@ -789,7 +789,7 @@ cols     &say | { 1 }
   code   ({ 1 }).equiv("a")
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0088
   from   inventory:Routine.^methods
@@ -797,7 +797,7 @@ cols     &say | { 1 }
   code   ({ 1 }).equiv(Any)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0089
   from   inventory:Routine.^methods
@@ -806,7 +806,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0090
   from   inventory:Routine.^methods
@@ -815,7 +815,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0091
   from   inventory:Routine.^methods
@@ -823,7 +823,7 @@ cols     &say | { 1 }
   code   (&say).has-phaser(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0092
   from   inventory:Routine.^methods
@@ -831,7 +831,7 @@ cols     &say | { 1 }
   code   (&say).has-phaser(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0093
   from   inventory:Routine.^methods
@@ -839,7 +839,7 @@ cols     &say | { 1 }
   code   (&say).has-phaser(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0094
   from   inventory:Routine.^methods
@@ -848,7 +848,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0095
   from   inventory:Routine.^methods
@@ -856,7 +856,7 @@ cols     &say | { 1 }
   code   (&say).has-phaser(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0096
   from   inventory:Routine.^methods
@@ -864,7 +864,7 @@ cols     &say | { 1 }
   code   ({ 1 }).has-phaser(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0097
   from   inventory:Routine.^methods
@@ -872,7 +872,7 @@ cols     &say | { 1 }
   code   ({ 1 }).has-phaser(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0098
   from   inventory:Routine.^methods
@@ -880,7 +880,7 @@ cols     &say | { 1 }
   code   ({ 1 }).has-phaser(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0099
   from   inventory:Routine.^methods
@@ -889,7 +889,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0100
   from   inventory:Routine.^methods
@@ -897,7 +897,7 @@ cols     &say | { 1 }
   code   ({ 1 }).has-phaser(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0101
   from   inventory:Routine.^methods
@@ -906,7 +906,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0102
   from   inventory:Routine.^methods
@@ -915,7 +915,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0103
   from   inventory:Routine.^methods
@@ -924,7 +924,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0104
   from   inventory:Routine.^methods
@@ -933,7 +933,7 @@ cols     &say | { 1 }
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0105
   from   inventory:Routine.^methods
@@ -942,7 +942,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0106
   from   inventory:Routine.^methods
@@ -951,7 +951,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0107
   from   inventory:Routine.^methods
@@ -960,7 +960,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0108
   from   inventory:Routine.^methods
@@ -969,7 +969,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0109
   from   inventory:Routine.^methods
@@ -978,7 +978,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0110
   from   inventory:Routine.^methods
@@ -986,7 +986,7 @@ cols     &say | { 1 }
   code   ({ 1 }).is-wrapped
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0111
   from   inventory:Routine.^methods
@@ -995,7 +995,7 @@ cols     &say | { 1 }
   is     proto sub say (|) {*}
   type   Sub
   oracle rakudo-2026.07 → proto sub say (|) {*}
-  oracle rakupp-3.14.0 → &say
+  oracle rakupp-3.14.0+20260816 → &say
 
 - id     0112
   from   inventory:Routine.^methods
@@ -1004,7 +1004,7 @@ cols     &say | { 1 }
   is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880697008) ... }
   type   Block
   oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880697008) ... }
-  oracle rakupp-3.14.0 → sub { ... }
+  oracle rakupp-3.14.0+20260816 → sub { ... }
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -1016,7 +1016,7 @@ cols     &say | { 1 }
   is     Rakudo::Iterator::OneValue.new
   type   Rakudo::Iterator::OneValue
   oracle rakudo-2026.07 → Rakudo::Iterator::OneValue.new
-  oracle rakupp-3.14.0 → ${:items($[&say]), :pos(0)}
+  oracle rakupp-3.14.0+20260816 → ${:items($[&say]), :pos(0)}
 
 - id     0114
   from   inventory:Routine.^methods
@@ -1025,7 +1025,7 @@ cols     &say | { 1 }
   is     Rakudo::Iterator::ReifiedListIterator.new
   type   Rakudo::Iterator::ReifiedListIterator
   oracle rakudo-2026.07 → Rakudo::Iterator::ReifiedListIterator.new
-  oracle rakupp-3.14.0 → ${:items($[sub { ... }]), :pos(0)}
+  oracle rakupp-3.14.0+20260816 → ${:items($[sub { ... }]), :pos(0)}
 
 - id     0115
   from   inventory:Routine.^methods
@@ -1034,7 +1034,7 @@ cols     &say | { 1 }
   is     "say"
   type   Str
   oracle rakudo-2026.07 → "say"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ""
 
 - id     0116
   from   inventory:Routine.^methods
@@ -1043,7 +1043,7 @@ cols     &say | { 1 }
   is     "say"
   type   Str
   oracle rakudo-2026.07 → "say"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ""
 
 - id     0117
   from   inventory:Routine.^methods
@@ -1052,7 +1052,7 @@ cols     &say | { 1 }
   is     "say"
   type   Str
   oracle rakudo-2026.07 → "say"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ""
 
 - id     0118
   from   inventory:Routine.^methods
@@ -1061,7 +1061,7 @@ cols     &say | { 1 }
   is     "say"
   type   Str
   oracle rakudo-2026.07 → "say"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ""
 
 - id     0119
   from   inventory:Routine.^methods
@@ -1069,7 +1069,7 @@ cols     &say | { 1 }
   code   (&say).join(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::TypeCheck::Binding::Parameter
 
 - id     0120
   from   inventory:Routine.^methods
@@ -1078,7 +1078,7 @@ cols     &say | { 1 }
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ""
 
 - id     0121
   from   inventory:Routine.^methods
@@ -1087,7 +1087,7 @@ cols     &say | { 1 }
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ""
 
 - id     0122
   from   inventory:Routine.^methods
@@ -1096,7 +1096,7 @@ cols     &say | { 1 }
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ""
 
 - id     0123
   from   inventory:Routine.^methods
@@ -1105,7 +1105,7 @@ cols     &say | { 1 }
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ""
 
 - id     0124
   from   inventory:Routine.^methods
@@ -1113,7 +1113,7 @@ cols     &say | { 1 }
   code   ({ 1 }).join(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::TypeCheck::Binding::Parameter
 
 - id     0125
   from   inventory:Routine.^methods
@@ -1122,7 +1122,7 @@ cols     &say | { 1 }
   is     proto sub say (|) {*}
   type   Sub
   oracle rakudo-2026.07 → proto sub say (|) {*}
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0126
   from   inventory:Routine.^methods
@@ -1131,7 +1131,7 @@ cols     &say | { 1 }
   is     proto sub say (|) {*}
   type   Sub
   oracle rakudo-2026.07 → proto sub say (|) {*}
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0127
   from   inventory:Routine.^methods
@@ -1140,7 +1140,7 @@ cols     &say | { 1 }
   is     proto sub say (|) {*}
   type   Sub
   oracle rakudo-2026.07 → proto sub say (|) {*}
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0128
   from   inventory:Routine.^methods
@@ -1149,7 +1149,7 @@ cols     &say | { 1 }
   is     proto sub say (|) {*}
   type   Sub
   oracle rakudo-2026.07 → proto sub say (|) {*}
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0129
   from   inventory:Routine.^methods
@@ -1158,7 +1158,7 @@ cols     &say | { 1 }
   is     proto sub say (|) {*}
   type   Sub
   oracle rakudo-2026.07 → proto sub say (|) {*}
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0130
   from   inventory:Routine.^methods
@@ -1167,7 +1167,7 @@ cols     &say | { 1 }
   is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880769608) ... }
   type   Block
   oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880769608) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -1179,7 +1179,7 @@ cols     &say | { 1 }
   is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880770040) ... }
   type   Block
   oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880770040) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -1191,7 +1191,7 @@ cols     &say | { 1 }
   is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880770472) ... }
   type   Block
   oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880770472) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -1203,7 +1203,7 @@ cols     &say | { 1 }
   is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880770904) ... }
   type   Block
   oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880770904) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -1215,7 +1215,7 @@ cols     &say | { 1 }
   is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880771336) ... }
   type   Block
   oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880771336) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -1226,7 +1226,7 @@ cols     &say | { 1 }
   code   (&say).looser(0)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0136
   from   inventory:Routine.^methods
@@ -1234,7 +1234,7 @@ cols     &say | { 1 }
   code   (&say).looser(1)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0137
   from   inventory:Routine.^methods
@@ -1242,7 +1242,7 @@ cols     &say | { 1 }
   code   (&say).looser(-1)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0138
   from   inventory:Routine.^methods
@@ -1250,7 +1250,7 @@ cols     &say | { 1 }
   code   (&say).looser("a")
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0139
   from   inventory:Routine.^methods
@@ -1258,7 +1258,7 @@ cols     &say | { 1 }
   code   (&say).looser(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0140
   from   inventory:Routine.^methods
@@ -1266,7 +1266,7 @@ cols     &say | { 1 }
   code   ({ 1 }).looser(0)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0141
   from   inventory:Routine.^methods
@@ -1274,7 +1274,7 @@ cols     &say | { 1 }
   code   ({ 1 }).looser(1)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0142
   from   inventory:Routine.^methods
@@ -1282,7 +1282,7 @@ cols     &say | { 1 }
   code   ({ 1 }).looser(-1)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0143
   from   inventory:Routine.^methods
@@ -1290,7 +1290,7 @@ cols     &say | { 1 }
   code   ({ 1 }).looser("a")
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0144
   from   inventory:Routine.^methods
@@ -1298,7 +1298,7 @@ cols     &say | { 1 }
   code   ({ 1 }).looser(Any)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0145
   from   inventory:Routine.^methods
@@ -1307,7 +1307,7 @@ cols     &say | { 1 }
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0146
   from   inventory:Routine.^methods
@@ -1315,7 +1315,7 @@ cols     &say | { 1 }
   code   ({ 1 }).multi
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0147
   from   inventory:Routine.^methods
@@ -1324,7 +1324,7 @@ cols     &say | { 1 }
   is     "\n"
   type   Str
   oracle rakudo-2026.07 → "\n"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0148
   from   inventory:Routine.^methods
@@ -1333,7 +1333,7 @@ cols     &say | { 1 }
   is     "\n"
   type   Str
   oracle rakudo-2026.07 → "\n"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0149
   from   inventory:Routine.^methods
@@ -1342,7 +1342,7 @@ cols     &say | { 1 }
   is     none(proto sub say (|) {*})
   type   Junction
   oracle rakudo-2026.07 → none(proto sub say (|) {*})
-  oracle rakupp-3.14.0 → none(&say)
+  oracle rakupp-3.14.0+20260816 → none(&say)
 
 - id     0150
   from   inventory:Routine.^methods
@@ -1351,7 +1351,7 @@ cols     &say | { 1 }
   is     none(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933788864) ... })
   type   Junction
   oracle rakudo-2026.07 → none(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933788864) ... })
-  oracle rakupp-3.14.0 → none(sub { ... })
+  oracle rakupp-3.14.0+20260816 → none(sub { ... })
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -1363,7 +1363,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0152
   from   inventory:Routine.^methods
@@ -1372,7 +1372,7 @@ cols     &say | { 1 }
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0 → Bool::False
+  oracle rakupp-3.14.0+20260816 → Bool::False
 
 - id     0153
   from   inventory:Routine.^methods
@@ -1381,7 +1381,7 @@ cols     &say | { 1 }
   is     Mu
   type   Mu
   oracle rakudo-2026.07 → Mu
-  oracle rakupp-3.14.0 → Mu
+  oracle rakupp-3.14.0+20260816 → Mu
 
 - id     0154
   from   inventory:Routine.^methods
@@ -1390,7 +1390,7 @@ cols     &say | { 1 }
   is     Mu
   type   Mu
   oracle rakudo-2026.07 → Mu
-  oracle rakupp-3.14.0 → Mu
+  oracle rakupp-3.14.0+20260816 → Mu
 
 - id     0155
   from   inventory:Routine.^methods
@@ -1399,7 +1399,7 @@ cols     &say | { 1 }
   is     one(proto sub say (|) {*})
   type   Junction
   oracle rakudo-2026.07 → one(proto sub say (|) {*})
-  oracle rakupp-3.14.0 → one(&say)
+  oracle rakupp-3.14.0+20260816 → one(&say)
 
 - id     0156
   from   inventory:Routine.^methods
@@ -1408,7 +1408,7 @@ cols     &say | { 1 }
   is     one(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933791168) ... })
   type   Junction
   oracle rakudo-2026.07 → one(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933791168) ... })
-  oracle rakupp-3.14.0 → one(sub { ... })
+  oracle rakupp-3.14.0+20260816 → one(sub { ... })
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -1420,7 +1420,7 @@ cols     &say | { 1 }
   is     Mu
   type   Mu
   oracle rakudo-2026.07 → Mu
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0158
   from   inventory:Routine.^methods
@@ -1429,7 +1429,7 @@ cols     &say | { 1 }
   is     ->  { #`(Block|6342933792032) ... }
   type   Block
   oracle rakudo-2026.07 → ->  { #`(Block|6342933792032) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -1441,7 +1441,7 @@ cols     &say | { 1 }
   is     UNRENDERABLE
   type   GLOBAL
   oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-3.14.0 → GLOBAL
+  oracle rakupp-3.14.0+20260816 → GLOBAL
   verdict disputed
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
@@ -1452,7 +1452,7 @@ cols     &say | { 1 }
   code   ({ 1 }).package
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → GLOBAL
+  oracle rakupp-3.14.0+20260816 → GLOBAL
 
 - id     0161
   from   inventory:Routine.^methods
@@ -1460,7 +1460,7 @@ cols     &say | { 1 }
   code   (&say).phasers(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0162
   from   inventory:Routine.^methods
@@ -1468,7 +1468,7 @@ cols     &say | { 1 }
   code   (&say).phasers(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0163
   from   inventory:Routine.^methods
@@ -1476,7 +1476,7 @@ cols     &say | { 1 }
   code   (&say).phasers(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0164
   from   inventory:Routine.^methods
@@ -1485,7 +1485,7 @@ cols     &say | { 1 }
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0165
   from   inventory:Routine.^methods
@@ -1493,7 +1493,7 @@ cols     &say | { 1 }
   code   (&say).phasers(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0166
   from   inventory:Routine.^methods
@@ -1501,7 +1501,7 @@ cols     &say | { 1 }
   code   ({ 1 }).phasers(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0167
   from   inventory:Routine.^methods
@@ -1509,7 +1509,7 @@ cols     &say | { 1 }
   code   ({ 1 }).phasers(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0168
   from   inventory:Routine.^methods
@@ -1517,7 +1517,7 @@ cols     &say | { 1 }
   code   ({ 1 }).phasers(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0169
   from   inventory:Routine.^methods
@@ -1526,7 +1526,7 @@ cols     &say | { 1 }
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0170
   from   inventory:Routine.^methods
@@ -1534,7 +1534,7 @@ cols     &say | { 1 }
   code   ({ 1 }).phasers(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0171
   from   inventory:Routine.^methods
@@ -1543,7 +1543,7 @@ cols     &say | { 1 }
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0172
   from   inventory:Routine.^methods
@@ -1552,7 +1552,7 @@ cols     &say | { 1 }
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0173
   from   inventory:Routine.^methods
@@ -1561,7 +1561,7 @@ cols     &say | { 1 }
   is     proto sub METAOP_REDUCE_LEFT (|) {*}
   type   Sub+{is-implementation-detail}
   oracle rakudo-2026.07 → proto sub METAOP_REDUCE_LEFT (|) {*}
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0174
   from   inventory:Routine.^methods
@@ -1570,7 +1570,7 @@ cols     &say | { 1 }
   is     proto sub METAOP_REDUCE_LEFT (|) {*}
   type   Sub+{is-implementation-detail}
   oracle rakudo-2026.07 → proto sub METAOP_REDUCE_LEFT (|) {*}
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0175
   from   inventory:Routine.^methods
@@ -1579,7 +1579,7 @@ cols     &say | { 1 }
   is     Mu
   type   Mu
   oracle rakudo-2026.07 → Mu
-  oracle rakupp-3.14.0 → Mu
+  oracle rakupp-3.14.0+20260816 → Mu
 
 - id     0176
   from   inventory:Routine.^methods
@@ -1588,7 +1588,7 @@ cols     &say | { 1 }
   is     Mu
   type   Mu
   oracle rakudo-2026.07 → Mu
-  oracle rakupp-3.14.0 → Mu
+  oracle rakupp-3.14.0+20260816 → Mu
 
 - id     0177
   from   inventory:Routine.^methods
@@ -1597,7 +1597,7 @@ cols     &say | { 1 }
   is     $((proto sub say (|) {*},).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((proto sub say (|) {*},).Seq)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0178
   from   inventory:Routine.^methods
@@ -1606,7 +1606,7 @@ cols     &say | { 1 }
   is     $((-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933913904) ... },).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933913904) ... },).Seq)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -1618,7 +1618,7 @@ cols     &say | { 1 }
   is     proto sub say (|) {*}
   type   Sub
   oracle rakudo-2026.07 → proto sub say (|) {*}
-  oracle rakupp-3.14.0 → &say
+  oracle rakupp-3.14.0+20260816 → &say
 
 - id     0180
   from   inventory:Routine.^methods
@@ -1627,7 +1627,7 @@ cols     &say | { 1 }
   is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933914768) ... }
   type   Block
   oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933914768) ... }
-  oracle rakupp-3.14.0 → sub { ... }
+  oracle rakupp-3.14.0+20260816 → sub { ... }
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -1639,7 +1639,7 @@ cols     &say | { 1 }
   is     :(|)
   type   Signature
   oracle rakudo-2026.07 → :(|)
-  oracle rakupp-3.14.0 → :()
+  oracle rakupp-3.14.0+20260816 → :()
 
 - id     0182
   from   inventory:Routine.^methods
@@ -1648,7 +1648,7 @@ cols     &say | { 1 }
   is     :(;; $_? is raw = OUTER::<$_>)
   type   Signature
   oracle rakudo-2026.07 → :(;; $_? is raw = OUTER::<$_>)
-  oracle rakupp-3.14.0 → :(;; $_? is raw = OUTER::<$_>)
+  oracle rakupp-3.14.0+20260816 → :(;; $_? is raw = OUTER::<$_>)
 
 - id     0183
   from   inventory:Routine.^methods
@@ -1657,7 +1657,7 @@ cols     &say | { 1 }
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0 → Bool::True
+  oracle rakupp-3.14.0+20260816 → Bool::True
 
 - id     0184
   from   inventory:Routine.^methods
@@ -1666,7 +1666,7 @@ cols     &say | { 1 }
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0 → Bool::True
+  oracle rakupp-3.14.0+20260816 → Bool::True
 
 - id     0185
   from   inventory:Routine.^methods
@@ -1675,7 +1675,7 @@ cols     &say | { 1 }
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0186
   from   inventory:Routine.^methods
@@ -1683,7 +1683,7 @@ cols     &say | { 1 }
   code   ({ 1 }).soft
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0187
   from   inventory:Routine.^methods
@@ -1691,7 +1691,7 @@ cols     &say | { 1 }
   code   (&say).sum
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0188
   from   inventory:Routine.^methods
@@ -1699,7 +1699,7 @@ cols     &say | { 1 }
   code   ({ 1 }).sum
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0189
   from   inventory:Routine.^methods
@@ -1707,7 +1707,7 @@ cols     &say | { 1 }
   code   (&say).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
-  oracle rakupp-3.14.0 → &say
+  oracle rakupp-3.14.0+20260816 → ERR:X::ControlFlow
 
 - id     0190
   from   inventory:Routine.^methods
@@ -1715,7 +1715,7 @@ cols     &say | { 1 }
   code   ({ 1 }).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
-  oracle rakupp-3.14.0 → sub { ... }
+  oracle rakupp-3.14.0+20260816 → ERR:X::ControlFlow
 
 - id     0191
   from   inventory:Routine.^methods
@@ -1724,7 +1724,7 @@ cols     &say | { 1 }
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0192
   from   inventory:Routine.^methods
@@ -1733,7 +1733,7 @@ cols     &say | { 1 }
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0193
   from   inventory:Routine.^methods
@@ -1741,7 +1741,7 @@ cols     &say | { 1 }
   code   (&say).tighter(0)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0194
   from   inventory:Routine.^methods
@@ -1749,7 +1749,7 @@ cols     &say | { 1 }
   code   (&say).tighter(1)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0195
   from   inventory:Routine.^methods
@@ -1757,7 +1757,7 @@ cols     &say | { 1 }
   code   (&say).tighter(-1)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0196
   from   inventory:Routine.^methods
@@ -1765,7 +1765,7 @@ cols     &say | { 1 }
   code   (&say).tighter("a")
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0197
   from   inventory:Routine.^methods
@@ -1773,7 +1773,7 @@ cols     &say | { 1 }
   code   (&say).tighter(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0198
   from   inventory:Routine.^methods
@@ -1781,7 +1781,7 @@ cols     &say | { 1 }
   code   ({ 1 }).tighter(0)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0199
   from   inventory:Routine.^methods
@@ -1789,7 +1789,7 @@ cols     &say | { 1 }
   code   ({ 1 }).tighter(1)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0200
   from   inventory:Routine.^methods
@@ -1797,7 +1797,7 @@ cols     &say | { 1 }
   code   ({ 1 }).tighter(-1)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0201
   from   inventory:Routine.^methods
@@ -1805,7 +1805,7 @@ cols     &say | { 1 }
   code   ({ 1 }).tighter("a")
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0202
   from   inventory:Routine.^methods
@@ -1813,7 +1813,7 @@ cols     &say | { 1 }
   code   ({ 1 }).tighter(Any)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
 
 - id     0203
   from   inventory:Routine.^methods
@@ -1821,7 +1821,7 @@ cols     &say | { 1 }
   code   (&say).unwrap(0)
   throws X::Routine::Unwrap
   oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
-  oracle rakupp-3.14.0 → &say
+  oracle rakupp-3.14.0+20260816 → &say
 
 - id     0204
   from   inventory:Routine.^methods
@@ -1829,7 +1829,7 @@ cols     &say | { 1 }
   code   (&say).unwrap(1)
   throws X::Routine::Unwrap
   oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
-  oracle rakupp-3.14.0 → &say
+  oracle rakupp-3.14.0+20260816 → &say
 
 - id     0205
   from   inventory:Routine.^methods
@@ -1837,7 +1837,7 @@ cols     &say | { 1 }
   code   (&say).unwrap(-1)
   throws X::Routine::Unwrap
   oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
-  oracle rakupp-3.14.0 → &say
+  oracle rakupp-3.14.0+20260816 → &say
 
 - id     0206
   from   inventory:Routine.^methods
@@ -1845,7 +1845,7 @@ cols     &say | { 1 }
   code   (&say).unwrap("a")
   throws X::Routine::Unwrap
   oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
-  oracle rakupp-3.14.0 → &say
+  oracle rakupp-3.14.0+20260816 → &say
 
 - id     0207
   from   inventory:Routine.^methods
@@ -1853,7 +1853,7 @@ cols     &say | { 1 }
   code   (&say).unwrap(Any)
   throws X::Routine::Unwrap
   oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
-  oracle rakupp-3.14.0 → &say
+  oracle rakupp-3.14.0+20260816 → &say
 
 - id     0208
   from   inventory:Routine.^methods
@@ -1861,7 +1861,7 @@ cols     &say | { 1 }
   code   ({ 1 }).unwrap(0)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → sub { ... }
+  oracle rakupp-3.14.0+20260816 → sub { ... }
 
 - id     0209
   from   inventory:Routine.^methods
@@ -1869,7 +1869,7 @@ cols     &say | { 1 }
   code   ({ 1 }).unwrap(1)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → sub { ... }
+  oracle rakupp-3.14.0+20260816 → sub { ... }
 
 - id     0210
   from   inventory:Routine.^methods
@@ -1877,7 +1877,7 @@ cols     &say | { 1 }
   code   ({ 1 }).unwrap(-1)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → sub { ... }
+  oracle rakupp-3.14.0+20260816 → sub { ... }
 
 - id     0211
   from   inventory:Routine.^methods
@@ -1885,7 +1885,7 @@ cols     &say | { 1 }
   code   ({ 1 }).unwrap("a")
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → sub { ... }
+  oracle rakupp-3.14.0+20260816 → sub { ... }
 
 - id     0212
   from   inventory:Routine.^methods
@@ -1893,7 +1893,7 @@ cols     &say | { 1 }
   code   ({ 1 }).unwrap(Any)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → sub { ... }
+  oracle rakupp-3.14.0+20260816 → sub { ... }
 
 - id     0213
   from   inventory:Routine.^methods
@@ -1901,7 +1901,7 @@ cols     &say | { 1 }
   code   (&say).wrap(0)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → CRASH:1
+  oracle rakupp-3.14.0+20260816 → CRASH:1
 
 - id     0214
   from   inventory:Routine.^methods
@@ -1909,7 +1909,7 @@ cols     &say | { 1 }
   code   (&say).wrap(1)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → CRASH:1
+  oracle rakupp-3.14.0+20260816 → CRASH:1
 
 - id     0215
   from   inventory:Routine.^methods
@@ -1917,7 +1917,7 @@ cols     &say | { 1 }
   code   (&say).wrap(-1)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → CRASH:1
+  oracle rakupp-3.14.0+20260816 → CRASH:1
 
 - id     0216
   from   inventory:Routine.^methods
@@ -1925,7 +1925,7 @@ cols     &say | { 1 }
   code   (&say).wrap("a")
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → CRASH:1
+  oracle rakupp-3.14.0+20260816 → CRASH:1
 
 - id     0217
   from   inventory:Routine.^methods
@@ -1933,7 +1933,7 @@ cols     &say | { 1 }
   code   (&say).wrap(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → CRASH:1
+  oracle rakupp-3.14.0+20260816 → CRASH:1
 
 - id     0218
   from   inventory:Routine.^methods
@@ -1941,7 +1941,7 @@ cols     &say | { 1 }
   code   ({ 1 }).wrap(0)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ${:routine(sub { ... }), :wrapper(0)}
+  oracle rakupp-3.14.0+20260816 → ${:routine(sub { ... }), :wrapper(0)}
 
 - id     0219
   from   inventory:Routine.^methods
@@ -1949,7 +1949,7 @@ cols     &say | { 1 }
   code   ({ 1 }).wrap(1)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ${:routine(sub { ... }), :wrapper(1)}
+  oracle rakupp-3.14.0+20260816 → ${:routine(sub { ... }), :wrapper(1)}
 
 - id     0220
   from   inventory:Routine.^methods
@@ -1957,7 +1957,7 @@ cols     &say | { 1 }
   code   ({ 1 }).wrap(-1)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ${:routine(sub { ... }), :wrapper(-1)}
+  oracle rakupp-3.14.0+20260816 → ${:routine(sub { ... }), :wrapper(-1)}
 
 - id     0221
   from   inventory:Routine.^methods
@@ -1965,7 +1965,7 @@ cols     &say | { 1 }
   code   ({ 1 }).wrap("a")
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ${:routine(sub { ... }), :wrapper("a")}
+  oracle rakupp-3.14.0+20260816 → ${:routine(sub { ... }), :wrapper("a")}
 
 - id     0222
   from   inventory:Routine.^methods
@@ -1973,4 +1973,4 @@ cols     &say | { 1 }
   code   ({ 1 }).wrap(Any)
   throws X::Method::NotFound
   oracle rakudo-2026.07 → ERR:X::Method::NotFound
-  oracle rakupp-3.14.0 → ${:routine(sub { ... }), :wrapper(Any)}
+  oracle rakupp-3.14.0+20260816 → ${:routine(sub { ... }), :wrapper(Any)}

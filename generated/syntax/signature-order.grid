@@ -8,81 +8,81 @@ kind     parse grid — compiled with -c, never run
   code   sub f($a, $b) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0002
   from   syntax:$a?, $b
   code   sub f($a?, $b) { }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-378.raku
-  oracle rakupp-3.14.0 → rejected: ===SORRY!=== Parse error at line 1: Cannot put required parameter $b after optional parameters
+  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot put required parameter $b after optional parameters
 
 - id     0003
   from   syntax:$a, $b?
   code   sub f($a, $b?) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0004
   from   syntax:*@a, $b
   code   sub f(*@a, $b) { }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-380.raku
-  oracle rakupp-3.14.0 → rejected: ===SORRY!=== Parse error at line 1: Cannot put required parameter $b after variadic parameters
+  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot put required parameter $b after variadic parameters
 
 - id     0005
   from   syntax:$a, *@b
   code   sub f($a, *@b) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0006
   from   syntax::$a, $b
   code   sub f(:$a, $b) { }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-382.raku
-  oracle rakupp-3.14.0 → rejected: ===SORRY!=== Parse error at line 1: Cannot put required parameter $b after named parameters
+  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot put required parameter $b after named parameters
 
 - id     0007
   from   syntax:$a, :$b
   code   sub f($a, :$b) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0008
   from   syntax:*%h, $a
   code   sub f(*%h, $a) { }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-384.raku
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0009
   from   syntax:$a, *%h
   code   sub f($a, *%h) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0010
   from   syntax:|c, $a
   code   sub f(|c, $a) { }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-386.raku
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0011
   from   syntax:$a, |c
   code   sub f($a, |c) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0012
   from   syntax:\a, $b
   code   sub f(\a, $b) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles

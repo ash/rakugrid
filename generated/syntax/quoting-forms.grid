@@ -8,81 +8,81 @@ kind     parse grid — compiled with -c, never run
   code   my @x = <a b>;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0002
   from   syntax:<<a b>>
   code   my @x = <<a b>>;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0003
   from   syntax:«a b»
   code   my @x = «a b»;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0004
   from   syntax:qw/a b/
   code   my @x = qw/a b/;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0005
   from   syntax:qww/a b/
   code   my @x = qww/a b/;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0006
   from   syntax:q:w/a b/
   code   my @x = q:w/a b/;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0007
   from   syntax:Q:b/a\nb/
   code   my @x = Q:b/a\nb/;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0008
   from   syntax:q[a]
   code   my @x = q[a];
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0009
   from   syntax:q{a}
   code   my @x = q{a};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0010
   from   syntax:q(a)
   code   my @x = q(a);
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-364.raku
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0011
   from   syntax:q!a!
   code   my @x = q!a!;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0012
   from   syntax:q«a»
   code   my @x = q«a»;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles

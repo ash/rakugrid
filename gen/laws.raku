@@ -143,7 +143,17 @@ sub engine-id($cmd) {
         my $text = $v.out.slurp(:close);
         $v.err.slurp(:close);
         my $ver = $text ~~ /(\d+ '.' \d+ '.' \d+)/ ?? ~$0 !! 'unknown';
-        return "rakupp-$ver";
+        # A development build changes behaviour without changing its version, so
+        # `rakupp-3.14.0` alone cannot tell yesterday's snapshot from today's.
+        # Stamp it with the binary's build date: observations accumulate, and two
+        # observations of the same engine must be distinguishable or the record
+        # silently claims a fixed engine still has the old bug.
+        my $stamp = '';
+        if $cmd.IO.e {
+            my $d = DateTime.new($cmd.IO.modified);
+            $stamp = sprintf('%04d%02d%02d', $d.year, $d.month, $d.day);
+        }
+        return $stamp ?? "rakupp-$ver+$stamp" !! "rakupp-$ver";
     }
     my $p2 = run($cmd, '-e', 'print $*RAKU.compiler.version', :out, :err);
     my $ver = $p2.out.slurp(:close).trim;

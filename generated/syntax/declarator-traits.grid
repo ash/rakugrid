@@ -8,109 +8,109 @@ kind     parse grid — compiled with -c, never run
   code   my $x is rw;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-206.raku
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0002
   from   syntax:my … is readonly
   code   my $x is readonly;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-207.raku
-  oracle rakupp-3.14.0 → rejected: ===SORRY!=== Parse error at line 1: Can't use unknown trait 'is readonly' in a variable declaration (got 'readonly')
+  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Can't use unknown trait 'is readonly' in a variable declaration (got 'readonly')
 
 - id     0003
   from   syntax:my … is default(1)
   code   my $x is default(1);
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0004
   from   syntax:my … is required
   code   my $x is required;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-209.raku
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0005
   from   syntax:my … is built
   code   my $x is built;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-210.raku
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0006
   from   syntax:my … is DEPRECATED
   code   my $x is DEPRECATED;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-211.raku
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0007
   from   syntax:my … is Awkward
   code   my $x is Awkward;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-212.raku
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0008
   from   syntax:my … is rw is default(1)
   code   my $x is rw is default(1);
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-213.raku
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0009
   from   syntax:has … is rw
   code   class C { has $x is rw; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0010
   from   syntax:has … is readonly
   code   class C { has $x is readonly; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0011
   from   syntax:has … is default(1)
   code   class C { has $x is default(1); }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0012
   from   syntax:has … is required
   code   class C { has $x is required; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0013
   from   syntax:has … is built
   code   class C { has $x is built; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0014
   from   syntax:has … is DEPRECATED
   code   class C { has $x is DEPRECATED; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0015
   from   syntax:has … is Awkward
   code   class C { has $x is Awkward; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-220.raku
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
 
 - id     0016
   from   syntax:has … is rw is default(1)
   code   class C { has $x is rw is default(1); }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0 → compiles
+  oracle rakupp-3.14.0+20260816 → compiles
