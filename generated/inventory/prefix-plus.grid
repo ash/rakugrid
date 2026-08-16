@@ -1,0 +1,112 @@
+atom     operators/prefix-plus
+source   generated
+gen      gen/operators.raku
+from-inventory prefix +
+ladder   mixed
+
+- id     0001
+  from   inventory:prefix:+
+  cell   0
+  code   +(0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
+
+- id     0002
+  from   inventory:prefix:+
+  cell   1
+  code   +(1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+
+- id     0003
+  from   inventory:prefix:+
+  cell   -1
+  code   +(-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
+
+- id     0004
+  from   inventory:prefix:+
+  cell   1/2
+  code   +(1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
+
+- id     0005
+  from   inventory:prefix:+
+  cell   0e0
+  code   +(0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
+
+- id     0006
+  from   inventory:prefix:+
+  cell   NaN
+  code   +(NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+
+- id     0007
+  from   inventory:prefix:+
+  cell   ""
+  code   +("")
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
+
+- id     0008
+  from   inventory:prefix:+
+  cell   "a"
+  code   +("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+
+- id     0009
+  from   inventory:prefix:+
+  cell   True
+  code   +(True)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+
+- id     0010
+  from   inventory:prefix:+
+  cell   Any
+  code   +(Any)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
+
+- id     0011
+  from   inventory:prefix:+
+  cell   (1,2)
+  code   +((1,2))
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 2
+
+- id     0012
+  from   inventory:prefix:+
+  cell   {a=>1}
+  code   +({a=>1})
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1

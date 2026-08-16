@@ -1,0 +1,113 @@
+atom     operators/prefix-u7c
+source   generated
+gen      gen/operators.raku
+from-inventory prefix |
+ladder   mixed
+
+- id     0001
+  from   inventory:prefix:|
+  cell   0
+  code   |(0)
+  is     $(slip(0,))
+  type   Slip
+  oracle rakudo-2026.07 → $(slip(0,))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(0,)
+
+- id     0002
+  from   inventory:prefix:|
+  cell   1
+  code   |(1)
+  is     $(slip(1,))
+  type   Slip
+  oracle rakudo-2026.07 → $(slip(1,))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1,)
+
+- id     0003
+  from   inventory:prefix:|
+  cell   -1
+  code   |(-1)
+  is     $(slip(-1,))
+  type   Slip
+  oracle rakudo-2026.07 → $(slip(-1,))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(-1,)
+
+- id     0004
+  from   inventory:prefix:|
+  cell   1/2
+  code   |(1/2)
+  is     $(slip(0.5,))
+  type   Slip
+  oracle rakudo-2026.07 → $(slip(0.5,))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(0.5,)
+
+- id     0005
+  from   inventory:prefix:|
+  cell   0e0
+  code   |(0e0)
+  is     $(slip(0e0,))
+  type   Slip
+  oracle rakudo-2026.07 → $(slip(0e0,))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(0e0,)
+
+- id     0006
+  from   inventory:prefix:|
+  cell   NaN
+  code   |(NaN)
+  is     $(slip(NaN,))
+  type   Slip
+  oracle rakudo-2026.07 → $(slip(NaN,))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(NaN,)
+
+- id     0007
+  from   inventory:prefix:|
+  cell   ""
+  code   |("")
+  is     $(slip("",))
+  type   Slip
+  oracle rakudo-2026.07 → $(slip("",))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $("",)
+
+- id     0008
+  from   inventory:prefix:|
+  cell   "a"
+  code   |("a")
+  is     $(slip("a",))
+  type   Slip
+  oracle rakudo-2026.07 → $(slip("a",))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $("a",)
+
+- id     0009
+  from   inventory:prefix:|
+  cell   True
+  code   |(True)
+  is     $(slip(Bool::True,))
+  type   Slip
+  oracle rakudo-2026.07 → $(slip(Bool::True,))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(Bool::True,)
+
+- id     0010
+  from   inventory:prefix:|
+  cell   Any
+  code   |(Any)
+  is     $(slip(Any,))
+  type   Slip
+  oracle rakudo-2026.07 → $(slip(Any,))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(Any,)
+
+- id     0011
+  from   inventory:prefix:|
+  cell   (1,2)
+  code   |((1,2))
+  is     $(slip(1, 2))
+  type   Slip
+  oracle rakudo-2026.07 → $(slip(1, 2))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
+
+- id     0012
+  from   inventory:prefix:|
+  cell   {a=>1}
+  code   |({a=>1})
+  is     $(slip(:a(1),))
+  type   Slip
+  oracle rakudo-2026.07 → $(slip(:a(1),))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}

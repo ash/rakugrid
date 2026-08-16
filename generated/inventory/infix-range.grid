@@ -1,0 +1,1296 @@
+atom     operators/infix-range
+source   generated
+gen      gen/operators.raku
+from-inventory infix ..
+ladder   mixed
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
+
+- id     0001
+  from   inventory:infix:..
+  cell   0 | 0
+  code   (0) .. (0)
+  is     0..0
+  type   Range
+  oracle rakudo-2026.07 → 0..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0002
+  from   inventory:infix:..
+  cell   0 | 1
+  code   (0) .. (1)
+  is     0..1
+  type   Range
+  oracle rakudo-2026.07 → 0..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0003
+  from   inventory:infix:..
+  cell   0 | -1
+  code   (0) .. (-1)
+  is     0..-1
+  type   Range
+  oracle rakudo-2026.07 → 0..-1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..-1
+
+- id     0004
+  from   inventory:infix:..
+  cell   0 | 1/2
+  code   (0) .. (1/2)
+  is     0..0.5
+  type   Range
+  oracle rakudo-2026.07 → 0..0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0005
+  from   inventory:infix:..
+  cell   0 | 0e0
+  code   (0) .. (0e0)
+  is     0..0e0
+  type   Range
+  oracle rakudo-2026.07 → 0..0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0006
+  from   inventory:infix:..
+  cell   0 | NaN
+  code   (0) .. (NaN)
+  is     0..NaN
+  type   Range
+  oracle rakudo-2026.07 → 0..NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0007
+  from   inventory:infix:..
+  cell   0 | ""
+  code   (0) .. ("")
+  is     0..0
+  type   Range
+  oracle rakudo-2026.07 → 0..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0008
+  from   inventory:infix:..
+  cell   0 | "a"
+  code   (0) .. ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0009
+  from   inventory:infix:..
+  cell   0 | True
+  code   (0) .. (True)
+  is     0..Bool::True
+  type   Range
+  oracle rakudo-2026.07 → 0..Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0010
+  from   inventory:infix:..
+  cell   0 | Any
+  code   (0) .. (Any)
+  is     0..Any
+  type   Range
+  oracle rakudo-2026.07 → 0..Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0011
+  from   inventory:infix:..
+  cell   0 | (1,2)
+  code   (0) .. ((1,2))
+  is     0..2
+  type   Range
+  oracle rakudo-2026.07 → 0..2
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..2
+
+- id     0012
+  from   inventory:infix:..
+  cell   0 | {a=>1}
+  code   (0) .. ({a=>1})
+  is     0..1
+  type   Range
+  oracle rakudo-2026.07 → 0..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0013
+  from   inventory:infix:..
+  cell   1 | 0
+  code   (1) .. (0)
+  is     1..0
+  type   Range
+  oracle rakudo-2026.07 → 1..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0014
+  from   inventory:infix:..
+  cell   1 | 1
+  code   (1) .. (1)
+  is     1..1
+  type   Range
+  oracle rakudo-2026.07 → 1..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..1
+
+- id     0015
+  from   inventory:infix:..
+  cell   1 | -1
+  code   (1) .. (-1)
+  is     1..-1
+  type   Range
+  oracle rakudo-2026.07 → 1..-1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..-1
+
+- id     0016
+  from   inventory:infix:..
+  cell   1 | 1/2
+  code   (1) .. (1/2)
+  is     1..0.5
+  type   Range
+  oracle rakudo-2026.07 → 1..0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0017
+  from   inventory:infix:..
+  cell   1 | 0e0
+  code   (1) .. (0e0)
+  is     1..0e0
+  type   Range
+  oracle rakudo-2026.07 → 1..0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0018
+  from   inventory:infix:..
+  cell   1 | NaN
+  code   (1) .. (NaN)
+  is     1..NaN
+  type   Range
+  oracle rakudo-2026.07 → 1..NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0019
+  from   inventory:infix:..
+  cell   1 | ""
+  code   (1) .. ("")
+  is     1..0
+  type   Range
+  oracle rakudo-2026.07 → 1..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0020
+  from   inventory:infix:..
+  cell   1 | "a"
+  code   (1) .. ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0021
+  from   inventory:infix:..
+  cell   1 | True
+  code   (1) .. (True)
+  is     1..Bool::True
+  type   Range
+  oracle rakudo-2026.07 → 1..Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..1
+
+- id     0022
+  from   inventory:infix:..
+  cell   1 | Any
+  code   (1) .. (Any)
+  is     1..Any
+  type   Range
+  oracle rakudo-2026.07 → 1..Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0023
+  from   inventory:infix:..
+  cell   1 | (1,2)
+  code   (1) .. ((1,2))
+  is     1..2
+  type   Range
+  oracle rakudo-2026.07 → 1..2
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..2
+
+- id     0024
+  from   inventory:infix:..
+  cell   1 | {a=>1}
+  code   (1) .. ({a=>1})
+  is     1..1
+  type   Range
+  oracle rakudo-2026.07 → 1..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..1
+
+- id     0025
+  from   inventory:infix:..
+  cell   -1 | 0
+  code   (-1) .. (0)
+  is     -1..0
+  type   Range
+  oracle rakudo-2026.07 → -1..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1..0
+
+- id     0026
+  from   inventory:infix:..
+  cell   -1 | 1
+  code   (-1) .. (1)
+  is     -1..1
+  type   Range
+  oracle rakudo-2026.07 → -1..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1..1
+
+- id     0027
+  from   inventory:infix:..
+  cell   -1 | -1
+  code   (-1) .. (-1)
+  is     -1..-1
+  type   Range
+  oracle rakudo-2026.07 → -1..-1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1..-1
+
+- id     0028
+  from   inventory:infix:..
+  cell   -1 | 1/2
+  code   (-1) .. (1/2)
+  is     -1..0.5
+  type   Range
+  oracle rakudo-2026.07 → -1..0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1..0
+
+- id     0029
+  from   inventory:infix:..
+  cell   -1 | 0e0
+  code   (-1) .. (0e0)
+  is     -1..0e0
+  type   Range
+  oracle rakudo-2026.07 → -1..0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1..0
+
+- id     0030
+  from   inventory:infix:..
+  cell   -1 | NaN
+  code   (-1) .. (NaN)
+  is     -1..NaN
+  type   Range
+  oracle rakudo-2026.07 → -1..NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1..0
+
+- id     0031
+  from   inventory:infix:..
+  cell   -1 | ""
+  code   (-1) .. ("")
+  is     -1..0
+  type   Range
+  oracle rakudo-2026.07 → -1..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1..0
+
+- id     0032
+  from   inventory:infix:..
+  cell   -1 | "a"
+  code   (-1) .. ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1..0
+
+- id     0033
+  from   inventory:infix:..
+  cell   -1 | True
+  code   (-1) .. (True)
+  is     -1..Bool::True
+  type   Range
+  oracle rakudo-2026.07 → -1..Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1..1
+
+- id     0034
+  from   inventory:infix:..
+  cell   -1 | Any
+  code   (-1) .. (Any)
+  is     -1..Any
+  type   Range
+  oracle rakudo-2026.07 → -1..Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1..0
+
+- id     0035
+  from   inventory:infix:..
+  cell   -1 | (1,2)
+  code   (-1) .. ((1,2))
+  is     -1..2
+  type   Range
+  oracle rakudo-2026.07 → -1..2
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1..2
+
+- id     0036
+  from   inventory:infix:..
+  cell   -1 | {a=>1}
+  code   (-1) .. ({a=>1})
+  is     -1..1
+  type   Range
+  oracle rakudo-2026.07 → -1..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1..1
+
+- id     0037
+  from   inventory:infix:..
+  cell   1/2 | 0
+  code   (1/2) .. (0)
+  is     0.5..0
+  type   Range
+  oracle rakudo-2026.07 → 0.5..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0038
+  from   inventory:infix:..
+  cell   1/2 | 1
+  code   (1/2) .. (1)
+  is     0.5..1
+  type   Range
+  oracle rakudo-2026.07 → 0.5..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0039
+  from   inventory:infix:..
+  cell   1/2 | -1
+  code   (1/2) .. (-1)
+  is     0.5..-1
+  type   Range
+  oracle rakudo-2026.07 → 0.5..-1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..-1
+
+- id     0040
+  from   inventory:infix:..
+  cell   1/2 | 1/2
+  code   (1/2) .. (1/2)
+  is     0.5..0.5
+  type   Range
+  oracle rakudo-2026.07 → 0.5..0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0041
+  from   inventory:infix:..
+  cell   1/2 | 0e0
+  code   (1/2) .. (0e0)
+  is     0.5..0e0
+  type   Range
+  oracle rakudo-2026.07 → 0.5..0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0042
+  from   inventory:infix:..
+  cell   1/2 | NaN
+  code   (1/2) .. (NaN)
+  is     0.5..NaN
+  type   Range
+  oracle rakudo-2026.07 → 0.5..NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0043
+  from   inventory:infix:..
+  cell   1/2 | ""
+  code   (1/2) .. ("")
+  is     0.5..0
+  type   Range
+  oracle rakudo-2026.07 → 0.5..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0044
+  from   inventory:infix:..
+  cell   1/2 | "a"
+  code   (1/2) .. ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0045
+  from   inventory:infix:..
+  cell   1/2 | True
+  code   (1/2) .. (True)
+  is     0.5..Bool::True
+  type   Range
+  oracle rakudo-2026.07 → 0.5..Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0046
+  from   inventory:infix:..
+  cell   1/2 | Any
+  code   (1/2) .. (Any)
+  is     0.5..Any
+  type   Range
+  oracle rakudo-2026.07 → 0.5..Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0047
+  from   inventory:infix:..
+  cell   1/2 | (1,2)
+  code   (1/2) .. ((1,2))
+  is     0.5..2
+  type   Range
+  oracle rakudo-2026.07 → 0.5..2
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..2
+
+- id     0048
+  from   inventory:infix:..
+  cell   1/2 | {a=>1}
+  code   (1/2) .. ({a=>1})
+  is     0.5..1
+  type   Range
+  oracle rakudo-2026.07 → 0.5..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0049
+  from   inventory:infix:..
+  cell   0e0 | 0
+  code   (0e0) .. (0)
+  is     0e0..0
+  type   Range
+  oracle rakudo-2026.07 → 0e0..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0050
+  from   inventory:infix:..
+  cell   0e0 | 1
+  code   (0e0) .. (1)
+  is     0e0..1
+  type   Range
+  oracle rakudo-2026.07 → 0e0..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0051
+  from   inventory:infix:..
+  cell   0e0 | -1
+  code   (0e0) .. (-1)
+  is     0e0..-1
+  type   Range
+  oracle rakudo-2026.07 → 0e0..-1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..-1
+
+- id     0052
+  from   inventory:infix:..
+  cell   0e0 | 1/2
+  code   (0e0) .. (1/2)
+  is     0e0..0.5
+  type   Range
+  oracle rakudo-2026.07 → 0e0..0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0053
+  from   inventory:infix:..
+  cell   0e0 | 0e0
+  code   (0e0) .. (0e0)
+  is     0e0..0e0
+  type   Range
+  oracle rakudo-2026.07 → 0e0..0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0054
+  from   inventory:infix:..
+  cell   0e0 | NaN
+  code   (0e0) .. (NaN)
+  is     0e0..NaN
+  type   Range
+  oracle rakudo-2026.07 → 0e0..NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0055
+  from   inventory:infix:..
+  cell   0e0 | ""
+  code   (0e0) .. ("")
+  is     0e0..0
+  type   Range
+  oracle rakudo-2026.07 → 0e0..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0056
+  from   inventory:infix:..
+  cell   0e0 | "a"
+  code   (0e0) .. ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0057
+  from   inventory:infix:..
+  cell   0e0 | True
+  code   (0e0) .. (True)
+  is     0e0..Bool::True
+  type   Range
+  oracle rakudo-2026.07 → 0e0..Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0058
+  from   inventory:infix:..
+  cell   0e0 | Any
+  code   (0e0) .. (Any)
+  is     0e0..Any
+  type   Range
+  oracle rakudo-2026.07 → 0e0..Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0059
+  from   inventory:infix:..
+  cell   0e0 | (1,2)
+  code   (0e0) .. ((1,2))
+  is     0e0..2
+  type   Range
+  oracle rakudo-2026.07 → 0e0..2
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..2
+
+- id     0060
+  from   inventory:infix:..
+  cell   0e0 | {a=>1}
+  code   (0e0) .. ({a=>1})
+  is     0e0..1
+  type   Range
+  oracle rakudo-2026.07 → 0e0..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0061
+  from   inventory:infix:..
+  cell   NaN | 0
+  code   (NaN) .. (0)
+  is     NaN..0
+  type   Range
+  oracle rakudo-2026.07 → NaN..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0062
+  from   inventory:infix:..
+  cell   NaN | 1
+  code   (NaN) .. (1)
+  is     NaN..1
+  type   Range
+  oracle rakudo-2026.07 → NaN..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0063
+  from   inventory:infix:..
+  cell   NaN | -1
+  code   (NaN) .. (-1)
+  is     NaN..-1
+  type   Range
+  oracle rakudo-2026.07 → NaN..-1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..-1
+
+- id     0064
+  from   inventory:infix:..
+  cell   NaN | 1/2
+  code   (NaN) .. (1/2)
+  is     NaN..0.5
+  type   Range
+  oracle rakudo-2026.07 → NaN..0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0065
+  from   inventory:infix:..
+  cell   NaN | 0e0
+  code   (NaN) .. (0e0)
+  is     NaN..0e0
+  type   Range
+  oracle rakudo-2026.07 → NaN..0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0066
+  from   inventory:infix:..
+  cell   NaN | NaN
+  code   (NaN) .. (NaN)
+  is     NaN..NaN
+  type   Range
+  oracle rakudo-2026.07 → NaN..NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0067
+  from   inventory:infix:..
+  cell   NaN | ""
+  code   (NaN) .. ("")
+  is     NaN..0
+  type   Range
+  oracle rakudo-2026.07 → NaN..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0068
+  from   inventory:infix:..
+  cell   NaN | "a"
+  code   (NaN) .. ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0069
+  from   inventory:infix:..
+  cell   NaN | True
+  code   (NaN) .. (True)
+  is     NaN..Bool::True
+  type   Range
+  oracle rakudo-2026.07 → NaN..Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0070
+  from   inventory:infix:..
+  cell   NaN | Any
+  code   (NaN) .. (Any)
+  is     NaN..Any
+  type   Range
+  oracle rakudo-2026.07 → NaN..Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0071
+  from   inventory:infix:..
+  cell   NaN | (1,2)
+  code   (NaN) .. ((1,2))
+  is     NaN..2
+  type   Range
+  oracle rakudo-2026.07 → NaN..2
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..2
+
+- id     0072
+  from   inventory:infix:..
+  cell   NaN | {a=>1}
+  code   (NaN) .. ({a=>1})
+  is     NaN..1
+  type   Range
+  oracle rakudo-2026.07 → NaN..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0073
+  from   inventory:infix:..
+  cell   "" | 0
+  code   ("") .. (0)
+  is     ""..0
+  type   Range
+  oracle rakudo-2026.07 → ""..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0074
+  from   inventory:infix:..
+  cell   "" | 1
+  code   ("") .. (1)
+  is     ""..1
+  type   Range
+  oracle rakudo-2026.07 → ""..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0075
+  from   inventory:infix:..
+  cell   "" | -1
+  code   ("") .. (-1)
+  is     ""..-1
+  type   Range
+  oracle rakudo-2026.07 → ""..-1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..-1
+
+- id     0076
+  from   inventory:infix:..
+  cell   "" | 1/2
+  code   ("") .. (1/2)
+  is     ""..0.5
+  type   Range
+  oracle rakudo-2026.07 → ""..0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0077
+  from   inventory:infix:..
+  cell   "" | 0e0
+  code   ("") .. (0e0)
+  is     ""..0e0
+  type   Range
+  oracle rakudo-2026.07 → ""..0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0078
+  from   inventory:infix:..
+  cell   "" | NaN
+  code   ("") .. (NaN)
+  is     ""..NaN
+  type   Range
+  oracle rakudo-2026.07 → ""..NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0079
+  from   inventory:infix:..
+  cell   "" | ""
+  code   ("") .. ("")
+  is     ""..""
+  type   Range
+  oracle rakudo-2026.07 → ""..""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $("",)
+
+- id     0080
+  from   inventory:infix:..
+  cell   "" | "a"
+  code   ("") .. ("a")
+  is     "".."a"
+  type   Range
+  oracle rakudo-2026.07 → "".."a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $("",)
+
+- id     0081
+  from   inventory:infix:..
+  cell   "" | True
+  code   ("") .. (True)
+  is     ""..Bool::True
+  type   Range
+  oracle rakudo-2026.07 → ""..Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0082
+  from   inventory:infix:..
+  cell   "" | Any
+  code   ("") .. (Any)
+  is     ""..Any
+  type   Range
+  oracle rakudo-2026.07 → ""..Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0083
+  from   inventory:infix:..
+  cell   "" | (1,2)
+  code   ("") .. ((1,2))
+  is     ""..(1, 2)
+  type   Range
+  oracle rakudo-2026.07 → ""..(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..2
+
+- id     0084
+  from   inventory:infix:..
+  cell   "" | {a=>1}
+  code   ("") .. ({a=>1})
+  is     ""..{:a(1)}
+  type   Range
+  oracle rakudo-2026.07 → ""..{:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0085
+  from   inventory:infix:..
+  cell   "a" | 0
+  code   ("a") .. (0)
+  is     "a"..0
+  type   Range
+  oracle rakudo-2026.07 → "a"..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0086
+  from   inventory:infix:..
+  cell   "a" | 1
+  code   ("a") .. (1)
+  is     "a"..1
+  type   Range
+  oracle rakudo-2026.07 → "a"..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0087
+  from   inventory:infix:..
+  cell   "a" | -1
+  code   ("a") .. (-1)
+  is     "a"..-1
+  type   Range
+  oracle rakudo-2026.07 → "a"..-1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..-1
+
+- id     0088
+  from   inventory:infix:..
+  cell   "a" | 1/2
+  code   ("a") .. (1/2)
+  is     "a"..0.5
+  type   Range
+  oracle rakudo-2026.07 → "a"..0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0089
+  from   inventory:infix:..
+  cell   "a" | 0e0
+  code   ("a") .. (0e0)
+  is     "a"..0e0
+  type   Range
+  oracle rakudo-2026.07 → "a"..0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0090
+  from   inventory:infix:..
+  cell   "a" | NaN
+  code   ("a") .. (NaN)
+  is     "a"..NaN
+  type   Range
+  oracle rakudo-2026.07 → "a"..NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0091
+  from   inventory:infix:..
+  cell   "a" | ""
+  code   ("a") .. ("")
+  is     "a"..""
+  type   Range
+  oracle rakudo-2026.07 → "a"..""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $( )
+
+- id     0092
+  from   inventory:infix:..
+  cell   "a" | "a"
+  code   ("a") .. ("a")
+  is     "a".."a"
+  type   Range
+  oracle rakudo-2026.07 → "a".."a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a".."a"
+
+- id     0093
+  from   inventory:infix:..
+  cell   "a" | True
+  code   ("a") .. (True)
+  is     "a"..Bool::True
+  type   Range
+  oracle rakudo-2026.07 → "a"..Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0094
+  from   inventory:infix:..
+  cell   "a" | Any
+  code   ("a") .. (Any)
+  is     "a"..Any
+  type   Range
+  oracle rakudo-2026.07 → "a"..Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0095
+  from   inventory:infix:..
+  cell   "a" | (1,2)
+  code   ("a") .. ((1,2))
+  is     "a"..(1, 2)
+  type   Range
+  oracle rakudo-2026.07 → "a"..(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..2
+
+- id     0096
+  from   inventory:infix:..
+  cell   "a" | {a=>1}
+  code   ("a") .. ({a=>1})
+  is     "a"..{:a(1)}
+  type   Range
+  oracle rakudo-2026.07 → "a"..{:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0097
+  from   inventory:infix:..
+  cell   True | 0
+  code   (True) .. (0)
+  is     Bool::True..0
+  type   Range
+  oracle rakudo-2026.07 → Bool::True..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0098
+  from   inventory:infix:..
+  cell   True | 1
+  code   (True) .. (1)
+  is     Bool::True..1
+  type   Range
+  oracle rakudo-2026.07 → Bool::True..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..1
+
+- id     0099
+  from   inventory:infix:..
+  cell   True | -1
+  code   (True) .. (-1)
+  is     Bool::True..-1
+  type   Range
+  oracle rakudo-2026.07 → Bool::True..-1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..-1
+
+- id     0100
+  from   inventory:infix:..
+  cell   True | 1/2
+  code   (True) .. (1/2)
+  is     Bool::True..0.5
+  type   Range
+  oracle rakudo-2026.07 → Bool::True..0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0101
+  from   inventory:infix:..
+  cell   True | 0e0
+  code   (True) .. (0e0)
+  is     Bool::True..0e0
+  type   Range
+  oracle rakudo-2026.07 → Bool::True..0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0102
+  from   inventory:infix:..
+  cell   True | NaN
+  code   (True) .. (NaN)
+  is     Bool::True..NaN
+  type   Range
+  oracle rakudo-2026.07 → Bool::True..NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0103
+  from   inventory:infix:..
+  cell   True | ""
+  code   (True) .. ("")
+  is     Bool::True..0
+  type   Range
+  oracle rakudo-2026.07 → Bool::True..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0104
+  from   inventory:infix:..
+  cell   True | "a"
+  code   (True) .. ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0105
+  from   inventory:infix:..
+  cell   True | True
+  code   (True) .. (True)
+  is     Bool::True..Bool::True
+  type   Range
+  oracle rakudo-2026.07 → Bool::True..Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..1
+
+- id     0106
+  from   inventory:infix:..
+  cell   True | Any
+  code   (True) .. (Any)
+  is     Bool::True..Any
+  type   Range
+  oracle rakudo-2026.07 → Bool::True..Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0107
+  from   inventory:infix:..
+  cell   True | (1,2)
+  code   (True) .. ((1,2))
+  is     Bool::True..2
+  type   Range
+  oracle rakudo-2026.07 → Bool::True..2
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..2
+
+- id     0108
+  from   inventory:infix:..
+  cell   True | {a=>1}
+  code   (True) .. ({a=>1})
+  is     Bool::True..1
+  type   Range
+  oracle rakudo-2026.07 → Bool::True..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..1
+
+- id     0109
+  from   inventory:infix:..
+  cell   Any | 0
+  code   (Any) .. (0)
+  is     Any..0
+  type   Range
+  oracle rakudo-2026.07 → Any..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0110
+  from   inventory:infix:..
+  cell   Any | 1
+  code   (Any) .. (1)
+  is     Any..1
+  type   Range
+  oracle rakudo-2026.07 → Any..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0111
+  from   inventory:infix:..
+  cell   Any | -1
+  code   (Any) .. (-1)
+  is     Any..-1
+  type   Range
+  oracle rakudo-2026.07 → Any..-1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..-1
+
+- id     0112
+  from   inventory:infix:..
+  cell   Any | 1/2
+  code   (Any) .. (1/2)
+  is     Any..0.5
+  type   Range
+  oracle rakudo-2026.07 → Any..0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0113
+  from   inventory:infix:..
+  cell   Any | 0e0
+  code   (Any) .. (0e0)
+  is     Any..0e0
+  type   Range
+  oracle rakudo-2026.07 → Any..0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0114
+  from   inventory:infix:..
+  cell   Any | NaN
+  code   (Any) .. (NaN)
+  is     Any..NaN
+  type   Range
+  oracle rakudo-2026.07 → Any..NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0115
+  from   inventory:infix:..
+  cell   Any | ""
+  code   (Any) .. ("")
+  is     Any..""
+  type   Range
+  oracle rakudo-2026.07 → Any..""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0116
+  from   inventory:infix:..
+  cell   Any | "a"
+  code   (Any) .. ("a")
+  is     Any.."a"
+  type   Range
+  oracle rakudo-2026.07 → Any.."a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0117
+  from   inventory:infix:..
+  cell   Any | True
+  code   (Any) .. (True)
+  is     Any..Bool::True
+  type   Range
+  oracle rakudo-2026.07 → Any..Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0118
+  from   inventory:infix:..
+  cell   Any | Any
+  code   (Any) .. (Any)
+  is     Any..Any
+  type   Range
+  oracle rakudo-2026.07 → Any..Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..0
+
+- id     0119
+  from   inventory:infix:..
+  cell   Any | (1,2)
+  code   (Any) .. ((1,2))
+  is     Any..(1, 2)
+  type   Range
+  oracle rakudo-2026.07 → Any..(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..2
+
+- id     0120
+  from   inventory:infix:..
+  cell   Any | {a=>1}
+  code   (Any) .. ({a=>1})
+  is     Any..{:a(1)}
+  type   Range
+  oracle rakudo-2026.07 → Any..{:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0..1
+
+- id     0121
+  from   inventory:infix:..
+  cell   (1,2) | 0
+  code   ((1,2)) .. (0)
+  is     2..0
+  type   Range
+  oracle rakudo-2026.07 → 2..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 2..0
+
+- id     0122
+  from   inventory:infix:..
+  cell   (1,2) | 1
+  code   ((1,2)) .. (1)
+  is     2..1
+  type   Range
+  oracle rakudo-2026.07 → 2..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 2..1
+
+- id     0123
+  from   inventory:infix:..
+  cell   (1,2) | -1
+  code   ((1,2)) .. (-1)
+  is     2..-1
+  type   Range
+  oracle rakudo-2026.07 → 2..-1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 2..-1
+
+- id     0124
+  from   inventory:infix:..
+  cell   (1,2) | 1/2
+  code   ((1,2)) .. (1/2)
+  is     2..0.5
+  type   Range
+  oracle rakudo-2026.07 → 2..0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 2..0
+
+- id     0125
+  from   inventory:infix:..
+  cell   (1,2) | 0e0
+  code   ((1,2)) .. (0e0)
+  is     2..0e0
+  type   Range
+  oracle rakudo-2026.07 → 2..0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 2..0
+
+- id     0126
+  from   inventory:infix:..
+  cell   (1,2) | NaN
+  code   ((1,2)) .. (NaN)
+  is     2..NaN
+  type   Range
+  oracle rakudo-2026.07 → 2..NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 2..0
+
+- id     0127
+  from   inventory:infix:..
+  cell   (1,2) | ""
+  code   ((1,2)) .. ("")
+  is     2..""
+  type   Range
+  oracle rakudo-2026.07 → 2..""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 2..0
+
+- id     0128
+  from   inventory:infix:..
+  cell   (1,2) | "a"
+  code   ((1,2)) .. ("a")
+  is     2.."a"
+  type   Range
+  oracle rakudo-2026.07 → 2.."a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 2..0
+
+- id     0129
+  from   inventory:infix:..
+  cell   (1,2) | True
+  code   ((1,2)) .. (True)
+  is     2..Bool::True
+  type   Range
+  oracle rakudo-2026.07 → 2..Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 2..1
+
+- id     0130
+  from   inventory:infix:..
+  cell   (1,2) | Any
+  code   ((1,2)) .. (Any)
+  is     2..Any
+  type   Range
+  oracle rakudo-2026.07 → 2..Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 2..0
+
+- id     0131
+  from   inventory:infix:..
+  cell   (1,2) | (1,2)
+  code   ((1,2)) .. ((1,2))
+  is     2..2
+  type   Range
+  oracle rakudo-2026.07 → 2..2
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 2..2
+
+- id     0132
+  from   inventory:infix:..
+  cell   (1,2) | {a=>1}
+  code   ((1,2)) .. ({a=>1})
+  is     2..{:a(1)}
+  type   Range
+  oracle rakudo-2026.07 → 2..{:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 2..1
+
+- id     0133
+  from   inventory:infix:..
+  cell   {a=>1} | 0
+  code   ({a=>1}) .. (0)
+  is     {:a(1)}..0
+  type   Range
+  oracle rakudo-2026.07 → {:a(1)}..0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0134
+  from   inventory:infix:..
+  cell   {a=>1} | 1
+  code   ({a=>1}) .. (1)
+  is     {:a(1)}..1
+  type   Range
+  oracle rakudo-2026.07 → {:a(1)}..1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..1
+
+- id     0135
+  from   inventory:infix:..
+  cell   {a=>1} | -1
+  code   ({a=>1}) .. (-1)
+  is     {:a(1)}..-1
+  type   Range
+  oracle rakudo-2026.07 → {:a(1)}..-1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..-1
+
+- id     0136
+  from   inventory:infix:..
+  cell   {a=>1} | 1/2
+  code   ({a=>1}) .. (1/2)
+  is     {:a(1)}..0.5
+  type   Range
+  oracle rakudo-2026.07 → {:a(1)}..0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0137
+  from   inventory:infix:..
+  cell   {a=>1} | 0e0
+  code   ({a=>1}) .. (0e0)
+  is     {:a(1)}..0e0
+  type   Range
+  oracle rakudo-2026.07 → {:a(1)}..0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0138
+  from   inventory:infix:..
+  cell   {a=>1} | NaN
+  code   ({a=>1}) .. (NaN)
+  is     {:a(1)}..NaN
+  type   Range
+  oracle rakudo-2026.07 → {:a(1)}..NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0139
+  from   inventory:infix:..
+  cell   {a=>1} | ""
+  code   ({a=>1}) .. ("")
+  is     {:a(1)}..""
+  type   Range
+  oracle rakudo-2026.07 → {:a(1)}..""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0140
+  from   inventory:infix:..
+  cell   {a=>1} | "a"
+  code   ({a=>1}) .. ("a")
+  is     {:a(1)}.."a"
+  type   Range
+  oracle rakudo-2026.07 → {:a(1)}.."a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0141
+  from   inventory:infix:..
+  cell   {a=>1} | True
+  code   ({a=>1}) .. (True)
+  is     {:a(1)}..Bool::True
+  type   Range
+  oracle rakudo-2026.07 → {:a(1)}..Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..1
+
+- id     0142
+  from   inventory:infix:..
+  cell   {a=>1} | Any
+  code   ({a=>1}) .. (Any)
+  is     {:a(1)}..Any
+  type   Range
+  oracle rakudo-2026.07 → {:a(1)}..Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..0
+
+- id     0143
+  from   inventory:infix:..
+  cell   {a=>1} | (1,2)
+  code   ({a=>1}) .. ((1,2))
+  is     {:a(1)}..(1, 2)
+  type   Range
+  oracle rakudo-2026.07 → {:a(1)}..(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..2
+
+- id     0144
+  from   inventory:infix:..
+  cell   {a=>1} | {a=>1}
+  code   ({a=>1}) .. ({a=>1})
+  is     {:a(1)}..{:a(1)}
+  type   Range
+  oracle rakudo-2026.07 → {:a(1)}..{:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1..1

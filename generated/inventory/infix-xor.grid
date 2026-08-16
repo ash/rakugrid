@@ -1,0 +1,1303 @@
+atom     operators/infix-xor
+source   generated
+gen      gen/operators.raku
+from-inventory infix xor
+ladder   mixed
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
+
+- id     0001
+  from   inventory:infix:xor
+  cell   0 | 0
+  code   (0) xor (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
+
+- id     0002
+  from   inventory:infix:xor
+  cell   0 | 1
+  code   (0) xor (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+
+- id     0003
+  from   inventory:infix:xor
+  cell   0 | -1
+  code   (0) xor (-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
+
+- id     0004
+  from   inventory:infix:xor
+  cell   0 | 1/2
+  code   (0) xor (1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
+
+- id     0005
+  from   inventory:infix:xor
+  cell   0 | 0e0
+  code   (0) xor (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
+
+- id     0006
+  from   inventory:infix:xor
+  cell   0 | NaN
+  code   (0) xor (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+
+- id     0007
+  from   inventory:infix:xor
+  cell   0 | ""
+  code   (0) xor ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0008
+  from   inventory:infix:xor
+  cell   0 | "a"
+  code   (0) xor ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+
+- id     0009
+  from   inventory:infix:xor
+  cell   0 | True
+  code   (0) xor (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0010
+  from   inventory:infix:xor
+  cell   0 | Any
+  code   (0) xor (Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0011
+  from   inventory:infix:xor
+  cell   0 | (1,2)
+  code   (0) xor ((1,2))
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
+
+- id     0012
+  from   inventory:infix:xor
+  cell   0 | {a=>1}
+  code   (0) xor ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
+
+- id     0013
+  from   inventory:infix:xor
+  cell   1 | 0
+  code   (1) xor (0)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+
+- id     0014
+  from   inventory:infix:xor
+  cell   1 | 1
+  code   (1) xor (1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0015
+  from   inventory:infix:xor
+  cell   1 | -1
+  code   (1) xor (-1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0016
+  from   inventory:infix:xor
+  cell   1 | 1/2
+  code   (1) xor (1/2)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0017
+  from   inventory:infix:xor
+  cell   1 | 0e0
+  code   (1) xor (0e0)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+
+- id     0018
+  from   inventory:infix:xor
+  cell   1 | NaN
+  code   (1) xor (NaN)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0019
+  from   inventory:infix:xor
+  cell   1 | ""
+  code   (1) xor ("")
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+
+- id     0020
+  from   inventory:infix:xor
+  cell   1 | "a"
+  code   (1) xor ("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0021
+  from   inventory:infix:xor
+  cell   1 | True
+  code   (1) xor (True)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0022
+  from   inventory:infix:xor
+  cell   1 | Any
+  code   (1) xor (Any)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+
+- id     0023
+  from   inventory:infix:xor
+  cell   1 | (1,2)
+  code   (1) xor ((1,2))
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0024
+  from   inventory:infix:xor
+  cell   1 | {a=>1}
+  code   (1) xor ({a=>1})
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0025
+  from   inventory:infix:xor
+  cell   -1 | 0
+  code   (-1) xor (0)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
+
+- id     0026
+  from   inventory:infix:xor
+  cell   -1 | 1
+  code   (-1) xor (1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0027
+  from   inventory:infix:xor
+  cell   -1 | -1
+  code   (-1) xor (-1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0028
+  from   inventory:infix:xor
+  cell   -1 | 1/2
+  code   (-1) xor (1/2)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0029
+  from   inventory:infix:xor
+  cell   -1 | 0e0
+  code   (-1) xor (0e0)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
+
+- id     0030
+  from   inventory:infix:xor
+  cell   -1 | NaN
+  code   (-1) xor (NaN)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0031
+  from   inventory:infix:xor
+  cell   -1 | ""
+  code   (-1) xor ("")
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
+
+- id     0032
+  from   inventory:infix:xor
+  cell   -1 | "a"
+  code   (-1) xor ("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0033
+  from   inventory:infix:xor
+  cell   -1 | True
+  code   (-1) xor (True)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0034
+  from   inventory:infix:xor
+  cell   -1 | Any
+  code   (-1) xor (Any)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
+
+- id     0035
+  from   inventory:infix:xor
+  cell   -1 | (1,2)
+  code   (-1) xor ((1,2))
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0036
+  from   inventory:infix:xor
+  cell   -1 | {a=>1}
+  code   (-1) xor ({a=>1})
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0037
+  from   inventory:infix:xor
+  cell   1/2 | 0
+  code   (1/2) xor (0)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
+
+- id     0038
+  from   inventory:infix:xor
+  cell   1/2 | 1
+  code   (1/2) xor (1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0039
+  from   inventory:infix:xor
+  cell   1/2 | -1
+  code   (1/2) xor (-1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0040
+  from   inventory:infix:xor
+  cell   1/2 | 1/2
+  code   (1/2) xor (1/2)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0041
+  from   inventory:infix:xor
+  cell   1/2 | 0e0
+  code   (1/2) xor (0e0)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
+
+- id     0042
+  from   inventory:infix:xor
+  cell   1/2 | NaN
+  code   (1/2) xor (NaN)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0043
+  from   inventory:infix:xor
+  cell   1/2 | ""
+  code   (1/2) xor ("")
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
+
+- id     0044
+  from   inventory:infix:xor
+  cell   1/2 | "a"
+  code   (1/2) xor ("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0045
+  from   inventory:infix:xor
+  cell   1/2 | True
+  code   (1/2) xor (True)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0046
+  from   inventory:infix:xor
+  cell   1/2 | Any
+  code   (1/2) xor (Any)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
+
+- id     0047
+  from   inventory:infix:xor
+  cell   1/2 | (1,2)
+  code   (1/2) xor ((1,2))
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0048
+  from   inventory:infix:xor
+  cell   1/2 | {a=>1}
+  code   (1/2) xor ({a=>1})
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0049
+  from   inventory:infix:xor
+  cell   0e0 | 0
+  code   (0e0) xor (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
+
+- id     0050
+  from   inventory:infix:xor
+  cell   0e0 | 1
+  code   (0e0) xor (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+
+- id     0051
+  from   inventory:infix:xor
+  cell   0e0 | -1
+  code   (0e0) xor (-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
+
+- id     0052
+  from   inventory:infix:xor
+  cell   0e0 | 1/2
+  code   (0e0) xor (1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
+
+- id     0053
+  from   inventory:infix:xor
+  cell   0e0 | 0e0
+  code   (0e0) xor (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
+
+- id     0054
+  from   inventory:infix:xor
+  cell   0e0 | NaN
+  code   (0e0) xor (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+
+- id     0055
+  from   inventory:infix:xor
+  cell   0e0 | ""
+  code   (0e0) xor ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0056
+  from   inventory:infix:xor
+  cell   0e0 | "a"
+  code   (0e0) xor ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+
+- id     0057
+  from   inventory:infix:xor
+  cell   0e0 | True
+  code   (0e0) xor (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0058
+  from   inventory:infix:xor
+  cell   0e0 | Any
+  code   (0e0) xor (Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0059
+  from   inventory:infix:xor
+  cell   0e0 | (1,2)
+  code   (0e0) xor ((1,2))
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
+
+- id     0060
+  from   inventory:infix:xor
+  cell   0e0 | {a=>1}
+  code   (0e0) xor ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
+
+- id     0061
+  from   inventory:infix:xor
+  cell   NaN | 0
+  code   (NaN) xor (0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+
+- id     0062
+  from   inventory:infix:xor
+  cell   NaN | 1
+  code   (NaN) xor (1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0063
+  from   inventory:infix:xor
+  cell   NaN | -1
+  code   (NaN) xor (-1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0064
+  from   inventory:infix:xor
+  cell   NaN | 1/2
+  code   (NaN) xor (1/2)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0065
+  from   inventory:infix:xor
+  cell   NaN | 0e0
+  code   (NaN) xor (0e0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+
+- id     0066
+  from   inventory:infix:xor
+  cell   NaN | NaN
+  code   (NaN) xor (NaN)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0067
+  from   inventory:infix:xor
+  cell   NaN | ""
+  code   (NaN) xor ("")
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+
+- id     0068
+  from   inventory:infix:xor
+  cell   NaN | "a"
+  code   (NaN) xor ("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0069
+  from   inventory:infix:xor
+  cell   NaN | True
+  code   (NaN) xor (True)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0070
+  from   inventory:infix:xor
+  cell   NaN | Any
+  code   (NaN) xor (Any)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+
+- id     0071
+  from   inventory:infix:xor
+  cell   NaN | (1,2)
+  code   (NaN) xor ((1,2))
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0072
+  from   inventory:infix:xor
+  cell   NaN | {a=>1}
+  code   (NaN) xor ({a=>1})
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0073
+  from   inventory:infix:xor
+  cell   "" | 0
+  code   ("") xor (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
+
+- id     0074
+  from   inventory:infix:xor
+  cell   "" | 1
+  code   ("") xor (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+
+- id     0075
+  from   inventory:infix:xor
+  cell   "" | -1
+  code   ("") xor (-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
+
+- id     0076
+  from   inventory:infix:xor
+  cell   "" | 1/2
+  code   ("") xor (1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
+
+- id     0077
+  from   inventory:infix:xor
+  cell   "" | 0e0
+  code   ("") xor (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
+
+- id     0078
+  from   inventory:infix:xor
+  cell   "" | NaN
+  code   ("") xor (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+
+- id     0079
+  from   inventory:infix:xor
+  cell   "" | ""
+  code   ("") xor ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0080
+  from   inventory:infix:xor
+  cell   "" | "a"
+  code   ("") xor ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+
+- id     0081
+  from   inventory:infix:xor
+  cell   "" | True
+  code   ("") xor (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0082
+  from   inventory:infix:xor
+  cell   "" | Any
+  code   ("") xor (Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0083
+  from   inventory:infix:xor
+  cell   "" | (1,2)
+  code   ("") xor ((1,2))
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
+
+- id     0084
+  from   inventory:infix:xor
+  cell   "" | {a=>1}
+  code   ("") xor ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
+
+- id     0085
+  from   inventory:infix:xor
+  cell   "a" | 0
+  code   ("a") xor (0)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+
+- id     0086
+  from   inventory:infix:xor
+  cell   "a" | 1
+  code   ("a") xor (1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0087
+  from   inventory:infix:xor
+  cell   "a" | -1
+  code   ("a") xor (-1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0088
+  from   inventory:infix:xor
+  cell   "a" | 1/2
+  code   ("a") xor (1/2)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0089
+  from   inventory:infix:xor
+  cell   "a" | 0e0
+  code   ("a") xor (0e0)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+
+- id     0090
+  from   inventory:infix:xor
+  cell   "a" | NaN
+  code   ("a") xor (NaN)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0091
+  from   inventory:infix:xor
+  cell   "a" | ""
+  code   ("a") xor ("")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+
+- id     0092
+  from   inventory:infix:xor
+  cell   "a" | "a"
+  code   ("a") xor ("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0093
+  from   inventory:infix:xor
+  cell   "a" | True
+  code   ("a") xor (True)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0094
+  from   inventory:infix:xor
+  cell   "a" | Any
+  code   ("a") xor (Any)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+
+- id     0095
+  from   inventory:infix:xor
+  cell   "a" | (1,2)
+  code   ("a") xor ((1,2))
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0096
+  from   inventory:infix:xor
+  cell   "a" | {a=>1}
+  code   ("a") xor ({a=>1})
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0097
+  from   inventory:infix:xor
+  cell   True | 0
+  code   (True) xor (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0098
+  from   inventory:infix:xor
+  cell   True | 1
+  code   (True) xor (1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0099
+  from   inventory:infix:xor
+  cell   True | -1
+  code   (True) xor (-1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0100
+  from   inventory:infix:xor
+  cell   True | 1/2
+  code   (True) xor (1/2)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0101
+  from   inventory:infix:xor
+  cell   True | 0e0
+  code   (True) xor (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0102
+  from   inventory:infix:xor
+  cell   True | NaN
+  code   (True) xor (NaN)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0103
+  from   inventory:infix:xor
+  cell   True | ""
+  code   (True) xor ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0104
+  from   inventory:infix:xor
+  cell   True | "a"
+  code   (True) xor ("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0105
+  from   inventory:infix:xor
+  cell   True | True
+  code   (True) xor (True)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0106
+  from   inventory:infix:xor
+  cell   True | Any
+  code   (True) xor (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0107
+  from   inventory:infix:xor
+  cell   True | (1,2)
+  code   (True) xor ((1,2))
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0108
+  from   inventory:infix:xor
+  cell   True | {a=>1}
+  code   (True) xor ({a=>1})
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0109
+  from   inventory:infix:xor
+  cell   Any | 0
+  code   (Any) xor (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
+
+- id     0110
+  from   inventory:infix:xor
+  cell   Any | 1
+  code   (Any) xor (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+
+- id     0111
+  from   inventory:infix:xor
+  cell   Any | -1
+  code   (Any) xor (-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
+
+- id     0112
+  from   inventory:infix:xor
+  cell   Any | 1/2
+  code   (Any) xor (1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
+
+- id     0113
+  from   inventory:infix:xor
+  cell   Any | 0e0
+  code   (Any) xor (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
+
+- id     0114
+  from   inventory:infix:xor
+  cell   Any | NaN
+  code   (Any) xor (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+
+- id     0115
+  from   inventory:infix:xor
+  cell   Any | ""
+  code   (Any) xor ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0116
+  from   inventory:infix:xor
+  cell   Any | "a"
+  code   (Any) xor ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+
+- id     0117
+  from   inventory:infix:xor
+  cell   Any | True
+  code   (Any) xor (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0118
+  from   inventory:infix:xor
+  cell   Any | Any
+  code   (Any) xor (Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0119
+  from   inventory:infix:xor
+  cell   Any | (1,2)
+  code   (Any) xor ((1,2))
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
+
+- id     0120
+  from   inventory:infix:xor
+  cell   Any | {a=>1}
+  code   (Any) xor ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
+
+- id     0121
+  from   inventory:infix:xor
+  cell   (1,2) | 0
+  code   ((1,2)) xor (0)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
+
+- id     0122
+  from   inventory:infix:xor
+  cell   (1,2) | 1
+  code   ((1,2)) xor (1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0123
+  from   inventory:infix:xor
+  cell   (1,2) | -1
+  code   ((1,2)) xor (-1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0124
+  from   inventory:infix:xor
+  cell   (1,2) | 1/2
+  code   ((1,2)) xor (1/2)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0125
+  from   inventory:infix:xor
+  cell   (1,2) | 0e0
+  code   ((1,2)) xor (0e0)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
+
+- id     0126
+  from   inventory:infix:xor
+  cell   (1,2) | NaN
+  code   ((1,2)) xor (NaN)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0127
+  from   inventory:infix:xor
+  cell   (1,2) | ""
+  code   ((1,2)) xor ("")
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
+
+- id     0128
+  from   inventory:infix:xor
+  cell   (1,2) | "a"
+  code   ((1,2)) xor ("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0129
+  from   inventory:infix:xor
+  cell   (1,2) | True
+  code   ((1,2)) xor (True)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0130
+  from   inventory:infix:xor
+  cell   (1,2) | Any
+  code   ((1,2)) xor (Any)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
+
+- id     0131
+  from   inventory:infix:xor
+  cell   (1,2) | (1,2)
+  code   ((1,2)) xor ((1,2))
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0132
+  from   inventory:infix:xor
+  cell   (1,2) | {a=>1}
+  code   ((1,2)) xor ({a=>1})
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0133
+  from   inventory:infix:xor
+  cell   {a=>1} | 0
+  code   ({a=>1}) xor (0)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
+
+- id     0134
+  from   inventory:infix:xor
+  cell   {a=>1} | 1
+  code   ({a=>1}) xor (1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0135
+  from   inventory:infix:xor
+  cell   {a=>1} | -1
+  code   ({a=>1}) xor (-1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0136
+  from   inventory:infix:xor
+  cell   {a=>1} | 1/2
+  code   ({a=>1}) xor (1/2)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0137
+  from   inventory:infix:xor
+  cell   {a=>1} | 0e0
+  code   ({a=>1}) xor (0e0)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
+
+- id     0138
+  from   inventory:infix:xor
+  cell   {a=>1} | NaN
+  code   ({a=>1}) xor (NaN)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0139
+  from   inventory:infix:xor
+  cell   {a=>1} | ""
+  code   ({a=>1}) xor ("")
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
+
+- id     0140
+  from   inventory:infix:xor
+  cell   {a=>1} | "a"
+  code   ({a=>1}) xor ("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0141
+  from   inventory:infix:xor
+  cell   {a=>1} | True
+  code   ({a=>1}) xor (True)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0142
+  from   inventory:infix:xor
+  cell   {a=>1} | Any
+  code   ({a=>1}) xor (Any)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
+
+- id     0143
+  from   inventory:infix:xor
+  cell   {a=>1} | (1,2)
+  code   ({a=>1}) xor ((1,2))
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0144
+  from   inventory:infix:xor
+  cell   {a=>1} | {a=>1}
+  code   ({a=>1}) xor ({a=>1})
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any

@@ -1,0 +1,113 @@
+atom     operators/prefix-not
+source   generated
+gen      gen/operators.raku
+from-inventory prefix not
+ladder   mixed
+
+- id     0001
+  from   inventory:prefix:not
+  cell   0
+  code   not(0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0002
+  from   inventory:prefix:not
+  cell   1
+  code   not(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0003
+  from   inventory:prefix:not
+  cell   -1
+  code   not(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0004
+  from   inventory:prefix:not
+  cell   1/2
+  code   not(1/2)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0005
+  from   inventory:prefix:not
+  cell   0e0
+  code   not(0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0006
+  from   inventory:prefix:not
+  cell   NaN
+  code   not(NaN)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0007
+  from   inventory:prefix:not
+  cell   ""
+  code   not("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0008
+  from   inventory:prefix:not
+  cell   "a"
+  code   not("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0009
+  from   inventory:prefix:not
+  cell   True
+  code   not(True)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0010
+  from   inventory:prefix:not
+  cell   Any
+  code   not(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0011
+  from   inventory:prefix:not
+  cell   (1,2)
+  code   not((1,2))
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0012
+  from   inventory:prefix:not
+  cell   {a=>1}
+  code   not({a=>1})
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False

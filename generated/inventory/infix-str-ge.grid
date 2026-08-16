@@ -1,0 +1,1303 @@
+atom     operators/infix-str-ge
+source   generated
+gen      gen/operators.raku
+from-inventory infix ge
+ladder   mixed
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
+
+- id     0001
+  from   inventory:infix:ge
+  cell   0 | 0
+  code   (0) ge (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0002
+  from   inventory:infix:ge
+  cell   0 | 1
+  code   (0) ge (1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0003
+  from   inventory:infix:ge
+  cell   0 | -1
+  code   (0) ge (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0004
+  from   inventory:infix:ge
+  cell   0 | 1/2
+  code   (0) ge (1/2)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0005
+  from   inventory:infix:ge
+  cell   0 | 0e0
+  code   (0) ge (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0006
+  from   inventory:infix:ge
+  cell   0 | NaN
+  code   (0) ge (NaN)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0007
+  from   inventory:infix:ge
+  cell   0 | ""
+  code   (0) ge ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0008
+  from   inventory:infix:ge
+  cell   0 | "a"
+  code   (0) ge ("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0009
+  from   inventory:infix:ge
+  cell   0 | True
+  code   (0) ge (True)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0010
+  from   inventory:infix:ge
+  cell   0 | Any
+  code   (0) ge (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0011
+  from   inventory:infix:ge
+  cell   0 | (1,2)
+  code   (0) ge ((1,2))
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0012
+  from   inventory:infix:ge
+  cell   0 | {a=>1}
+  code   (0) ge ({a=>1})
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0013
+  from   inventory:infix:ge
+  cell   1 | 0
+  code   (1) ge (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0014
+  from   inventory:infix:ge
+  cell   1 | 1
+  code   (1) ge (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0015
+  from   inventory:infix:ge
+  cell   1 | -1
+  code   (1) ge (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0016
+  from   inventory:infix:ge
+  cell   1 | 1/2
+  code   (1) ge (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0017
+  from   inventory:infix:ge
+  cell   1 | 0e0
+  code   (1) ge (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0018
+  from   inventory:infix:ge
+  cell   1 | NaN
+  code   (1) ge (NaN)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0019
+  from   inventory:infix:ge
+  cell   1 | ""
+  code   (1) ge ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0020
+  from   inventory:infix:ge
+  cell   1 | "a"
+  code   (1) ge ("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0021
+  from   inventory:infix:ge
+  cell   1 | True
+  code   (1) ge (True)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0022
+  from   inventory:infix:ge
+  cell   1 | Any
+  code   (1) ge (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0023
+  from   inventory:infix:ge
+  cell   1 | (1,2)
+  code   (1) ge ((1,2))
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0024
+  from   inventory:infix:ge
+  cell   1 | {a=>1}
+  code   (1) ge ({a=>1})
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0025
+  from   inventory:infix:ge
+  cell   -1 | 0
+  code   (-1) ge (0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0026
+  from   inventory:infix:ge
+  cell   -1 | 1
+  code   (-1) ge (1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0027
+  from   inventory:infix:ge
+  cell   -1 | -1
+  code   (-1) ge (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0028
+  from   inventory:infix:ge
+  cell   -1 | 1/2
+  code   (-1) ge (1/2)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0029
+  from   inventory:infix:ge
+  cell   -1 | 0e0
+  code   (-1) ge (0e0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0030
+  from   inventory:infix:ge
+  cell   -1 | NaN
+  code   (-1) ge (NaN)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0031
+  from   inventory:infix:ge
+  cell   -1 | ""
+  code   (-1) ge ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0032
+  from   inventory:infix:ge
+  cell   -1 | "a"
+  code   (-1) ge ("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0033
+  from   inventory:infix:ge
+  cell   -1 | True
+  code   (-1) ge (True)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0034
+  from   inventory:infix:ge
+  cell   -1 | Any
+  code   (-1) ge (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0035
+  from   inventory:infix:ge
+  cell   -1 | (1,2)
+  code   (-1) ge ((1,2))
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0036
+  from   inventory:infix:ge
+  cell   -1 | {a=>1}
+  code   (-1) ge ({a=>1})
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0037
+  from   inventory:infix:ge
+  cell   1/2 | 0
+  code   (1/2) ge (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0038
+  from   inventory:infix:ge
+  cell   1/2 | 1
+  code   (1/2) ge (1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0039
+  from   inventory:infix:ge
+  cell   1/2 | -1
+  code   (1/2) ge (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0040
+  from   inventory:infix:ge
+  cell   1/2 | 1/2
+  code   (1/2) ge (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0041
+  from   inventory:infix:ge
+  cell   1/2 | 0e0
+  code   (1/2) ge (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0042
+  from   inventory:infix:ge
+  cell   1/2 | NaN
+  code   (1/2) ge (NaN)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0043
+  from   inventory:infix:ge
+  cell   1/2 | ""
+  code   (1/2) ge ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0044
+  from   inventory:infix:ge
+  cell   1/2 | "a"
+  code   (1/2) ge ("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0045
+  from   inventory:infix:ge
+  cell   1/2 | True
+  code   (1/2) ge (True)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0046
+  from   inventory:infix:ge
+  cell   1/2 | Any
+  code   (1/2) ge (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0047
+  from   inventory:infix:ge
+  cell   1/2 | (1,2)
+  code   (1/2) ge ((1,2))
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0048
+  from   inventory:infix:ge
+  cell   1/2 | {a=>1}
+  code   (1/2) ge ({a=>1})
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0049
+  from   inventory:infix:ge
+  cell   0e0 | 0
+  code   (0e0) ge (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0050
+  from   inventory:infix:ge
+  cell   0e0 | 1
+  code   (0e0) ge (1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0051
+  from   inventory:infix:ge
+  cell   0e0 | -1
+  code   (0e0) ge (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0052
+  from   inventory:infix:ge
+  cell   0e0 | 1/2
+  code   (0e0) ge (1/2)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0053
+  from   inventory:infix:ge
+  cell   0e0 | 0e0
+  code   (0e0) ge (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0054
+  from   inventory:infix:ge
+  cell   0e0 | NaN
+  code   (0e0) ge (NaN)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0055
+  from   inventory:infix:ge
+  cell   0e0 | ""
+  code   (0e0) ge ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0056
+  from   inventory:infix:ge
+  cell   0e0 | "a"
+  code   (0e0) ge ("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0057
+  from   inventory:infix:ge
+  cell   0e0 | True
+  code   (0e0) ge (True)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0058
+  from   inventory:infix:ge
+  cell   0e0 | Any
+  code   (0e0) ge (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0059
+  from   inventory:infix:ge
+  cell   0e0 | (1,2)
+  code   (0e0) ge ((1,2))
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0060
+  from   inventory:infix:ge
+  cell   0e0 | {a=>1}
+  code   (0e0) ge ({a=>1})
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0061
+  from   inventory:infix:ge
+  cell   NaN | 0
+  code   (NaN) ge (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0062
+  from   inventory:infix:ge
+  cell   NaN | 1
+  code   (NaN) ge (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0063
+  from   inventory:infix:ge
+  cell   NaN | -1
+  code   (NaN) ge (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0064
+  from   inventory:infix:ge
+  cell   NaN | 1/2
+  code   (NaN) ge (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0065
+  from   inventory:infix:ge
+  cell   NaN | 0e0
+  code   (NaN) ge (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0066
+  from   inventory:infix:ge
+  cell   NaN | NaN
+  code   (NaN) ge (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0067
+  from   inventory:infix:ge
+  cell   NaN | ""
+  code   (NaN) ge ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0068
+  from   inventory:infix:ge
+  cell   NaN | "a"
+  code   (NaN) ge ("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0069
+  from   inventory:infix:ge
+  cell   NaN | True
+  code   (NaN) ge (True)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0070
+  from   inventory:infix:ge
+  cell   NaN | Any
+  code   (NaN) ge (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0071
+  from   inventory:infix:ge
+  cell   NaN | (1,2)
+  code   (NaN) ge ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0072
+  from   inventory:infix:ge
+  cell   NaN | {a=>1}
+  code   (NaN) ge ({a=>1})
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0073
+  from   inventory:infix:ge
+  cell   "" | 0
+  code   ("") ge (0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0074
+  from   inventory:infix:ge
+  cell   "" | 1
+  code   ("") ge (1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0075
+  from   inventory:infix:ge
+  cell   "" | -1
+  code   ("") ge (-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0076
+  from   inventory:infix:ge
+  cell   "" | 1/2
+  code   ("") ge (1/2)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0077
+  from   inventory:infix:ge
+  cell   "" | 0e0
+  code   ("") ge (0e0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0078
+  from   inventory:infix:ge
+  cell   "" | NaN
+  code   ("") ge (NaN)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0079
+  from   inventory:infix:ge
+  cell   "" | ""
+  code   ("") ge ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0080
+  from   inventory:infix:ge
+  cell   "" | "a"
+  code   ("") ge ("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0081
+  from   inventory:infix:ge
+  cell   "" | True
+  code   ("") ge (True)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0082
+  from   inventory:infix:ge
+  cell   "" | Any
+  code   ("") ge (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0083
+  from   inventory:infix:ge
+  cell   "" | (1,2)
+  code   ("") ge ((1,2))
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0084
+  from   inventory:infix:ge
+  cell   "" | {a=>1}
+  code   ("") ge ({a=>1})
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0085
+  from   inventory:infix:ge
+  cell   "a" | 0
+  code   ("a") ge (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0086
+  from   inventory:infix:ge
+  cell   "a" | 1
+  code   ("a") ge (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0087
+  from   inventory:infix:ge
+  cell   "a" | -1
+  code   ("a") ge (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0088
+  from   inventory:infix:ge
+  cell   "a" | 1/2
+  code   ("a") ge (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0089
+  from   inventory:infix:ge
+  cell   "a" | 0e0
+  code   ("a") ge (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0090
+  from   inventory:infix:ge
+  cell   "a" | NaN
+  code   ("a") ge (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0091
+  from   inventory:infix:ge
+  cell   "a" | ""
+  code   ("a") ge ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0092
+  from   inventory:infix:ge
+  cell   "a" | "a"
+  code   ("a") ge ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0093
+  from   inventory:infix:ge
+  cell   "a" | True
+  code   ("a") ge (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0094
+  from   inventory:infix:ge
+  cell   "a" | Any
+  code   ("a") ge (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0095
+  from   inventory:infix:ge
+  cell   "a" | (1,2)
+  code   ("a") ge ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0096
+  from   inventory:infix:ge
+  cell   "a" | {a=>1}
+  code   ("a") ge ({a=>1})
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0097
+  from   inventory:infix:ge
+  cell   True | 0
+  code   (True) ge (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0098
+  from   inventory:infix:ge
+  cell   True | 1
+  code   (True) ge (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0099
+  from   inventory:infix:ge
+  cell   True | -1
+  code   (True) ge (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0100
+  from   inventory:infix:ge
+  cell   True | 1/2
+  code   (True) ge (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0101
+  from   inventory:infix:ge
+  cell   True | 0e0
+  code   (True) ge (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0102
+  from   inventory:infix:ge
+  cell   True | NaN
+  code   (True) ge (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0103
+  from   inventory:infix:ge
+  cell   True | ""
+  code   (True) ge ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0104
+  from   inventory:infix:ge
+  cell   True | "a"
+  code   (True) ge ("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0105
+  from   inventory:infix:ge
+  cell   True | True
+  code   (True) ge (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0106
+  from   inventory:infix:ge
+  cell   True | Any
+  code   (True) ge (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0107
+  from   inventory:infix:ge
+  cell   True | (1,2)
+  code   (True) ge ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0108
+  from   inventory:infix:ge
+  cell   True | {a=>1}
+  code   (True) ge ({a=>1})
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0109
+  from   inventory:infix:ge
+  cell   Any | 0
+  code   (Any) ge (0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0110
+  from   inventory:infix:ge
+  cell   Any | 1
+  code   (Any) ge (1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0111
+  from   inventory:infix:ge
+  cell   Any | -1
+  code   (Any) ge (-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0112
+  from   inventory:infix:ge
+  cell   Any | 1/2
+  code   (Any) ge (1/2)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0113
+  from   inventory:infix:ge
+  cell   Any | 0e0
+  code   (Any) ge (0e0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0114
+  from   inventory:infix:ge
+  cell   Any | NaN
+  code   (Any) ge (NaN)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0115
+  from   inventory:infix:ge
+  cell   Any | ""
+  code   (Any) ge ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0116
+  from   inventory:infix:ge
+  cell   Any | "a"
+  code   (Any) ge ("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0117
+  from   inventory:infix:ge
+  cell   Any | True
+  code   (Any) ge (True)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0118
+  from   inventory:infix:ge
+  cell   Any | Any
+  code   (Any) ge (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0119
+  from   inventory:infix:ge
+  cell   Any | (1,2)
+  code   (Any) ge ((1,2))
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0120
+  from   inventory:infix:ge
+  cell   Any | {a=>1}
+  code   (Any) ge ({a=>1})
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0121
+  from   inventory:infix:ge
+  cell   (1,2) | 0
+  code   ((1,2)) ge (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0122
+  from   inventory:infix:ge
+  cell   (1,2) | 1
+  code   ((1,2)) ge (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0123
+  from   inventory:infix:ge
+  cell   (1,2) | -1
+  code   ((1,2)) ge (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0124
+  from   inventory:infix:ge
+  cell   (1,2) | 1/2
+  code   ((1,2)) ge (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0125
+  from   inventory:infix:ge
+  cell   (1,2) | 0e0
+  code   ((1,2)) ge (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0126
+  from   inventory:infix:ge
+  cell   (1,2) | NaN
+  code   ((1,2)) ge (NaN)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0127
+  from   inventory:infix:ge
+  cell   (1,2) | ""
+  code   ((1,2)) ge ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0128
+  from   inventory:infix:ge
+  cell   (1,2) | "a"
+  code   ((1,2)) ge ("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0129
+  from   inventory:infix:ge
+  cell   (1,2) | True
+  code   ((1,2)) ge (True)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0130
+  from   inventory:infix:ge
+  cell   (1,2) | Any
+  code   ((1,2)) ge (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0131
+  from   inventory:infix:ge
+  cell   (1,2) | (1,2)
+  code   ((1,2)) ge ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0132
+  from   inventory:infix:ge
+  cell   (1,2) | {a=>1}
+  code   ((1,2)) ge ({a=>1})
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+
+- id     0133
+  from   inventory:infix:ge
+  cell   {a=>1} | 0
+  code   ({a=>1}) ge (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0134
+  from   inventory:infix:ge
+  cell   {a=>1} | 1
+  code   ({a=>1}) ge (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0135
+  from   inventory:infix:ge
+  cell   {a=>1} | -1
+  code   ({a=>1}) ge (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0136
+  from   inventory:infix:ge
+  cell   {a=>1} | 1/2
+  code   ({a=>1}) ge (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0137
+  from   inventory:infix:ge
+  cell   {a=>1} | 0e0
+  code   ({a=>1}) ge (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0138
+  from   inventory:infix:ge
+  cell   {a=>1} | NaN
+  code   ({a=>1}) ge (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0139
+  from   inventory:infix:ge
+  cell   {a=>1} | ""
+  code   ({a=>1}) ge ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0140
+  from   inventory:infix:ge
+  cell   {a=>1} | "a"
+  code   ({a=>1}) ge ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0141
+  from   inventory:infix:ge
+  cell   {a=>1} | True
+  code   ({a=>1}) ge (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0142
+  from   inventory:infix:ge
+  cell   {a=>1} | Any
+  code   ({a=>1}) ge (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0143
+  from   inventory:infix:ge
+  cell   {a=>1} | (1,2)
+  code   ({a=>1}) ge ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0144
+  from   inventory:infix:ge
+  cell   {a=>1} | {a=>1}
+  code   ({a=>1}) ge ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True

@@ -1,0 +1,1279 @@
+atom     operators/infix-repeat
+source   generated
+gen      gen/operators.raku
+from-inventory infix x
+ladder   mixed
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
+
+- id     0001
+  from   inventory:infix:x
+  cell   0 | 0
+  code   (0) x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0002
+  from   inventory:infix:x
+  cell   0 | 1
+  code   (0) x (1)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "0"
+
+- id     0003
+  from   inventory:infix:x
+  cell   0 | -1
+  code   (0) x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0004
+  from   inventory:infix:x
+  cell   0 | 1/2
+  code   (0) x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0005
+  from   inventory:infix:x
+  cell   0 | 0e0
+  code   (0) x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0006
+  from   inventory:infix:x
+  cell   0 | NaN
+  code   (0) x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0007
+  from   inventory:infix:x
+  cell   0 | ""
+  code   (0) x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0008
+  from   inventory:infix:x
+  cell   0 | "a"
+  code   (0) x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+
+- id     0009
+  from   inventory:infix:x
+  cell   0 | True
+  code   (0) x (True)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "0"
+
+- id     0010
+  from   inventory:infix:x
+  cell   0 | Any
+  code   (0) x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0011
+  from   inventory:infix:x
+  cell   0 | (1,2)
+  code   (0) x ((1,2))
+  is     "00"
+  type   Str
+  oracle rakudo-2026.07 → "00"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "00"
+
+- id     0012
+  from   inventory:infix:x
+  cell   0 | {a=>1}
+  code   (0) x ({a=>1})
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "0"
+
+- id     0013
+  from   inventory:infix:x
+  cell   1 | 0
+  code   (1) x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0014
+  from   inventory:infix:x
+  cell   1 | 1
+  code   (1) x (1)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "1"
+
+- id     0015
+  from   inventory:infix:x
+  cell   1 | -1
+  code   (1) x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0016
+  from   inventory:infix:x
+  cell   1 | 1/2
+  code   (1) x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0017
+  from   inventory:infix:x
+  cell   1 | 0e0
+  code   (1) x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0018
+  from   inventory:infix:x
+  cell   1 | NaN
+  code   (1) x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0019
+  from   inventory:infix:x
+  cell   1 | ""
+  code   (1) x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0020
+  from   inventory:infix:x
+  cell   1 | "a"
+  code   (1) x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+
+- id     0021
+  from   inventory:infix:x
+  cell   1 | True
+  code   (1) x (True)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "1"
+
+- id     0022
+  from   inventory:infix:x
+  cell   1 | Any
+  code   (1) x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0023
+  from   inventory:infix:x
+  cell   1 | (1,2)
+  code   (1) x ((1,2))
+  is     "11"
+  type   Str
+  oracle rakudo-2026.07 → "11"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "11"
+
+- id     0024
+  from   inventory:infix:x
+  cell   1 | {a=>1}
+  code   (1) x ({a=>1})
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "1"
+
+- id     0025
+  from   inventory:infix:x
+  cell   -1 | 0
+  code   (-1) x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0026
+  from   inventory:infix:x
+  cell   -1 | 1
+  code   (-1) x (1)
+  is     "-1"
+  type   Str
+  oracle rakudo-2026.07 → "-1"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "-1"
+
+- id     0027
+  from   inventory:infix:x
+  cell   -1 | -1
+  code   (-1) x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0028
+  from   inventory:infix:x
+  cell   -1 | 1/2
+  code   (-1) x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0029
+  from   inventory:infix:x
+  cell   -1 | 0e0
+  code   (-1) x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0030
+  from   inventory:infix:x
+  cell   -1 | NaN
+  code   (-1) x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0031
+  from   inventory:infix:x
+  cell   -1 | ""
+  code   (-1) x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0032
+  from   inventory:infix:x
+  cell   -1 | "a"
+  code   (-1) x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+
+- id     0033
+  from   inventory:infix:x
+  cell   -1 | True
+  code   (-1) x (True)
+  is     "-1"
+  type   Str
+  oracle rakudo-2026.07 → "-1"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "-1"
+
+- id     0034
+  from   inventory:infix:x
+  cell   -1 | Any
+  code   (-1) x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0035
+  from   inventory:infix:x
+  cell   -1 | (1,2)
+  code   (-1) x ((1,2))
+  is     "-1-1"
+  type   Str
+  oracle rakudo-2026.07 → "-1-1"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "-1-1"
+
+- id     0036
+  from   inventory:infix:x
+  cell   -1 | {a=>1}
+  code   (-1) x ({a=>1})
+  is     "-1"
+  type   Str
+  oracle rakudo-2026.07 → "-1"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "-1"
+
+- id     0037
+  from   inventory:infix:x
+  cell   1/2 | 0
+  code   (1/2) x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0038
+  from   inventory:infix:x
+  cell   1/2 | 1
+  code   (1/2) x (1)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "0.5"
+
+- id     0039
+  from   inventory:infix:x
+  cell   1/2 | -1
+  code   (1/2) x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0040
+  from   inventory:infix:x
+  cell   1/2 | 1/2
+  code   (1/2) x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0041
+  from   inventory:infix:x
+  cell   1/2 | 0e0
+  code   (1/2) x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0042
+  from   inventory:infix:x
+  cell   1/2 | NaN
+  code   (1/2) x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0043
+  from   inventory:infix:x
+  cell   1/2 | ""
+  code   (1/2) x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0044
+  from   inventory:infix:x
+  cell   1/2 | "a"
+  code   (1/2) x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+
+- id     0045
+  from   inventory:infix:x
+  cell   1/2 | True
+  code   (1/2) x (True)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "0.5"
+
+- id     0046
+  from   inventory:infix:x
+  cell   1/2 | Any
+  code   (1/2) x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0047
+  from   inventory:infix:x
+  cell   1/2 | (1,2)
+  code   (1/2) x ((1,2))
+  is     "0.50.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.50.5"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "0.50.5"
+
+- id     0048
+  from   inventory:infix:x
+  cell   1/2 | {a=>1}
+  code   (1/2) x ({a=>1})
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "0.5"
+
+- id     0049
+  from   inventory:infix:x
+  cell   0e0 | 0
+  code   (0e0) x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0050
+  from   inventory:infix:x
+  cell   0e0 | 1
+  code   (0e0) x (1)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "0"
+
+- id     0051
+  from   inventory:infix:x
+  cell   0e0 | -1
+  code   (0e0) x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0052
+  from   inventory:infix:x
+  cell   0e0 | 1/2
+  code   (0e0) x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0053
+  from   inventory:infix:x
+  cell   0e0 | 0e0
+  code   (0e0) x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0054
+  from   inventory:infix:x
+  cell   0e0 | NaN
+  code   (0e0) x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0055
+  from   inventory:infix:x
+  cell   0e0 | ""
+  code   (0e0) x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0056
+  from   inventory:infix:x
+  cell   0e0 | "a"
+  code   (0e0) x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+
+- id     0057
+  from   inventory:infix:x
+  cell   0e0 | True
+  code   (0e0) x (True)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "0"
+
+- id     0058
+  from   inventory:infix:x
+  cell   0e0 | Any
+  code   (0e0) x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0059
+  from   inventory:infix:x
+  cell   0e0 | (1,2)
+  code   (0e0) x ((1,2))
+  is     "00"
+  type   Str
+  oracle rakudo-2026.07 → "00"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "00"
+
+- id     0060
+  from   inventory:infix:x
+  cell   0e0 | {a=>1}
+  code   (0e0) x ({a=>1})
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "0"
+
+- id     0061
+  from   inventory:infix:x
+  cell   NaN | 0
+  code   (NaN) x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0062
+  from   inventory:infix:x
+  cell   NaN | 1
+  code   (NaN) x (1)
+  is     "NaN"
+  type   Str
+  oracle rakudo-2026.07 → "NaN"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "NaN"
+
+- id     0063
+  from   inventory:infix:x
+  cell   NaN | -1
+  code   (NaN) x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0064
+  from   inventory:infix:x
+  cell   NaN | 1/2
+  code   (NaN) x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0065
+  from   inventory:infix:x
+  cell   NaN | 0e0
+  code   (NaN) x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0066
+  from   inventory:infix:x
+  cell   NaN | NaN
+  code   (NaN) x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0067
+  from   inventory:infix:x
+  cell   NaN | ""
+  code   (NaN) x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0068
+  from   inventory:infix:x
+  cell   NaN | "a"
+  code   (NaN) x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+
+- id     0069
+  from   inventory:infix:x
+  cell   NaN | True
+  code   (NaN) x (True)
+  is     "NaN"
+  type   Str
+  oracle rakudo-2026.07 → "NaN"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "NaN"
+
+- id     0070
+  from   inventory:infix:x
+  cell   NaN | Any
+  code   (NaN) x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0071
+  from   inventory:infix:x
+  cell   NaN | (1,2)
+  code   (NaN) x ((1,2))
+  is     "NaNNaN"
+  type   Str
+  oracle rakudo-2026.07 → "NaNNaN"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "NaNNaN"
+
+- id     0072
+  from   inventory:infix:x
+  cell   NaN | {a=>1}
+  code   (NaN) x ({a=>1})
+  is     "NaN"
+  type   Str
+  oracle rakudo-2026.07 → "NaN"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "NaN"
+
+- id     0073
+  from   inventory:infix:x
+  cell   "" | 0
+  code   ("") x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0074
+  from   inventory:infix:x
+  cell   "" | 1
+  code   ("") x (1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0075
+  from   inventory:infix:x
+  cell   "" | -1
+  code   ("") x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0076
+  from   inventory:infix:x
+  cell   "" | 1/2
+  code   ("") x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0077
+  from   inventory:infix:x
+  cell   "" | 0e0
+  code   ("") x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0078
+  from   inventory:infix:x
+  cell   "" | NaN
+  code   ("") x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0079
+  from   inventory:infix:x
+  cell   "" | ""
+  code   ("") x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0080
+  from   inventory:infix:x
+  cell   "" | "a"
+  code   ("") x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+
+- id     0081
+  from   inventory:infix:x
+  cell   "" | True
+  code   ("") x (True)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0082
+  from   inventory:infix:x
+  cell   "" | Any
+  code   ("") x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0083
+  from   inventory:infix:x
+  cell   "" | (1,2)
+  code   ("") x ((1,2))
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0084
+  from   inventory:infix:x
+  cell   "" | {a=>1}
+  code   ("") x ({a=>1})
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0085
+  from   inventory:infix:x
+  cell   "a" | 0
+  code   ("a") x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0086
+  from   inventory:infix:x
+  cell   "a" | 1
+  code   ("a") x (1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+
+- id     0087
+  from   inventory:infix:x
+  cell   "a" | -1
+  code   ("a") x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0088
+  from   inventory:infix:x
+  cell   "a" | 1/2
+  code   ("a") x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0089
+  from   inventory:infix:x
+  cell   "a" | 0e0
+  code   ("a") x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0090
+  from   inventory:infix:x
+  cell   "a" | NaN
+  code   ("a") x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0091
+  from   inventory:infix:x
+  cell   "a" | ""
+  code   ("a") x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0092
+  from   inventory:infix:x
+  cell   "a" | "a"
+  code   ("a") x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+
+- id     0093
+  from   inventory:infix:x
+  cell   "a" | True
+  code   ("a") x (True)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+
+- id     0094
+  from   inventory:infix:x
+  cell   "a" | Any
+  code   ("a") x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0095
+  from   inventory:infix:x
+  cell   "a" | (1,2)
+  code   ("a") x ((1,2))
+  is     "aa"
+  type   Str
+  oracle rakudo-2026.07 → "aa"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "aa"
+
+- id     0096
+  from   inventory:infix:x
+  cell   "a" | {a=>1}
+  code   ("a") x ({a=>1})
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+
+- id     0097
+  from   inventory:infix:x
+  cell   True | 0
+  code   (True) x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0098
+  from   inventory:infix:x
+  cell   True | 1
+  code   (True) x (1)
+  is     "True"
+  type   Str
+  oracle rakudo-2026.07 → "True"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "True"
+
+- id     0099
+  from   inventory:infix:x
+  cell   True | -1
+  code   (True) x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0100
+  from   inventory:infix:x
+  cell   True | 1/2
+  code   (True) x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0101
+  from   inventory:infix:x
+  cell   True | 0e0
+  code   (True) x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0102
+  from   inventory:infix:x
+  cell   True | NaN
+  code   (True) x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0103
+  from   inventory:infix:x
+  cell   True | ""
+  code   (True) x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0104
+  from   inventory:infix:x
+  cell   True | "a"
+  code   (True) x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+
+- id     0105
+  from   inventory:infix:x
+  cell   True | True
+  code   (True) x (True)
+  is     "True"
+  type   Str
+  oracle rakudo-2026.07 → "True"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "True"
+
+- id     0106
+  from   inventory:infix:x
+  cell   True | Any
+  code   (True) x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0107
+  from   inventory:infix:x
+  cell   True | (1,2)
+  code   (True) x ((1,2))
+  is     "TrueTrue"
+  type   Str
+  oracle rakudo-2026.07 → "TrueTrue"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "TrueTrue"
+
+- id     0108
+  from   inventory:infix:x
+  cell   True | {a=>1}
+  code   (True) x ({a=>1})
+  is     "True"
+  type   Str
+  oracle rakudo-2026.07 → "True"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "True"
+
+- id     0109
+  from   inventory:infix:x
+  cell   Any | 0
+  code   (Any) x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0110
+  from   inventory:infix:x
+  cell   Any | 1
+  code   (Any) x (1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0111
+  from   inventory:infix:x
+  cell   Any | -1
+  code   (Any) x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0112
+  from   inventory:infix:x
+  cell   Any | 1/2
+  code   (Any) x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0113
+  from   inventory:infix:x
+  cell   Any | 0e0
+  code   (Any) x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0114
+  from   inventory:infix:x
+  cell   Any | NaN
+  code   (Any) x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0115
+  from   inventory:infix:x
+  cell   Any | ""
+  code   (Any) x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0116
+  from   inventory:infix:x
+  cell   Any | "a"
+  code   (Any) x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+
+- id     0117
+  from   inventory:infix:x
+  cell   Any | True
+  code   (Any) x (True)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0118
+  from   inventory:infix:x
+  cell   Any | Any
+  code   (Any) x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0119
+  from   inventory:infix:x
+  cell   Any | (1,2)
+  code   (Any) x ((1,2))
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0120
+  from   inventory:infix:x
+  cell   Any | {a=>1}
+  code   (Any) x ({a=>1})
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0121
+  from   inventory:infix:x
+  cell   (1,2) | 0
+  code   ((1,2)) x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0122
+  from   inventory:infix:x
+  cell   (1,2) | 1
+  code   ((1,2)) x (1)
+  is     "1 2"
+  type   Str
+  oracle rakudo-2026.07 → "1 2"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "1 2"
+
+- id     0123
+  from   inventory:infix:x
+  cell   (1,2) | -1
+  code   ((1,2)) x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0124
+  from   inventory:infix:x
+  cell   (1,2) | 1/2
+  code   ((1,2)) x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0125
+  from   inventory:infix:x
+  cell   (1,2) | 0e0
+  code   ((1,2)) x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0126
+  from   inventory:infix:x
+  cell   (1,2) | NaN
+  code   ((1,2)) x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0127
+  from   inventory:infix:x
+  cell   (1,2) | ""
+  code   ((1,2)) x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0128
+  from   inventory:infix:x
+  cell   (1,2) | "a"
+  code   ((1,2)) x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+
+- id     0129
+  from   inventory:infix:x
+  cell   (1,2) | True
+  code   ((1,2)) x (True)
+  is     "1 2"
+  type   Str
+  oracle rakudo-2026.07 → "1 2"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "1 2"
+
+- id     0130
+  from   inventory:infix:x
+  cell   (1,2) | Any
+  code   ((1,2)) x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0131
+  from   inventory:infix:x
+  cell   (1,2) | (1,2)
+  code   ((1,2)) x ((1,2))
+  is     "1 21 2"
+  type   Str
+  oracle rakudo-2026.07 → "1 21 2"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "1 21 2"
+
+- id     0132
+  from   inventory:infix:x
+  cell   (1,2) | {a=>1}
+  code   ((1,2)) x ({a=>1})
+  is     "1 2"
+  type   Str
+  oracle rakudo-2026.07 → "1 2"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "1 2"
+
+- id     0133
+  from   inventory:infix:x
+  cell   {a=>1} | 0
+  code   ({a=>1}) x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0134
+  from   inventory:infix:x
+  cell   {a=>1} | 1
+  code   ({a=>1}) x (1)
+  is     "a\t1"
+  type   Str
+  oracle rakudo-2026.07 → "a\t1"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a\t1"
+
+- id     0135
+  from   inventory:infix:x
+  cell   {a=>1} | -1
+  code   ({a=>1}) x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0136
+  from   inventory:infix:x
+  cell   {a=>1} | 1/2
+  code   ({a=>1}) x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0137
+  from   inventory:infix:x
+  cell   {a=>1} | 0e0
+  code   ({a=>1}) x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0138
+  from   inventory:infix:x
+  cell   {a=>1} | NaN
+  code   ({a=>1}) x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0139
+  from   inventory:infix:x
+  cell   {a=>1} | ""
+  code   ({a=>1}) x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0140
+  from   inventory:infix:x
+  cell   {a=>1} | "a"
+  code   ({a=>1}) x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+
+- id     0141
+  from   inventory:infix:x
+  cell   {a=>1} | True
+  code   ({a=>1}) x (True)
+  is     "a\t1"
+  type   Str
+  oracle rakudo-2026.07 → "a\t1"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a\t1"
+
+- id     0142
+  from   inventory:infix:x
+  cell   {a=>1} | Any
+  code   ({a=>1}) x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0143
+  from   inventory:infix:x
+  cell   {a=>1} | (1,2)
+  code   ({a=>1}) x ((1,2))
+  is     "a\t1a\t1"
+  type   Str
+  oracle rakudo-2026.07 → "a\t1a\t1"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a\t1a\t1"
+
+- id     0144
+  from   inventory:infix:x
+  cell   {a=>1} | {a=>1}
+  code   ({a=>1}) x ({a=>1})
+  is     "a\t1"
+  type   Str
+  oracle rakudo-2026.07 → "a\t1"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a\t1"

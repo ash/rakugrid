@@ -1,0 +1,1214 @@
+atom     operators/infix-does
+source   generated
+gen      gen/operators.raku
+from-inventory infix does
+ladder   mixed
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
+
+- id     0001
+  from   inventory:infix:does
+  cell   0 | 0
+  code   (0) does (0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0002
+  from   inventory:infix:does
+  cell   0 | 1
+  code   (0) does (1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0003
+  from   inventory:infix:does
+  cell   0 | -1
+  code   (0) does (-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0004
+  from   inventory:infix:does
+  cell   0 | 1/2
+  code   (0) does (1/2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0005
+  from   inventory:infix:does
+  cell   0 | 0e0
+  code   (0) does (0e0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0006
+  from   inventory:infix:does
+  cell   0 | NaN
+  code   (0) does (NaN)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0007
+  from   inventory:infix:does
+  cell   0 | ""
+  code   (0) does ("")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0008
+  from   inventory:infix:does
+  cell   0 | "a"
+  code   (0) does ("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0009
+  from   inventory:infix:does
+  cell   0 | True
+  code   (0) does (True)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0010
+  from   inventory:infix:does
+  cell   0 | Any
+  code   (0) does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
+
+- id     0011
+  from   inventory:infix:does
+  cell   0 | (1,2)
+  code   (0) does ((1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
+
+- id     0012
+  from   inventory:infix:does
+  cell   0 | {a=>1}
+  code   (0) does ({a=>1})
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
+
+- id     0013
+  from   inventory:infix:does
+  cell   1 | 0
+  code   (1) does (0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0014
+  from   inventory:infix:does
+  cell   1 | 1
+  code   (1) does (1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0015
+  from   inventory:infix:does
+  cell   1 | -1
+  code   (1) does (-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0016
+  from   inventory:infix:does
+  cell   1 | 1/2
+  code   (1) does (1/2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0017
+  from   inventory:infix:does
+  cell   1 | 0e0
+  code   (1) does (0e0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0018
+  from   inventory:infix:does
+  cell   1 | NaN
+  code   (1) does (NaN)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0019
+  from   inventory:infix:does
+  cell   1 | ""
+  code   (1) does ("")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0020
+  from   inventory:infix:does
+  cell   1 | "a"
+  code   (1) does ("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0021
+  from   inventory:infix:does
+  cell   1 | True
+  code   (1) does (True)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0022
+  from   inventory:infix:does
+  cell   1 | Any
+  code   (1) does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+
+- id     0023
+  from   inventory:infix:does
+  cell   1 | (1,2)
+  code   (1) does ((1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+
+- id     0024
+  from   inventory:infix:does
+  cell   1 | {a=>1}
+  code   (1) does ({a=>1})
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+
+- id     0025
+  from   inventory:infix:does
+  cell   -1 | 0
+  code   (-1) does (0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0026
+  from   inventory:infix:does
+  cell   -1 | 1
+  code   (-1) does (1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0027
+  from   inventory:infix:does
+  cell   -1 | -1
+  code   (-1) does (-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0028
+  from   inventory:infix:does
+  cell   -1 | 1/2
+  code   (-1) does (1/2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0029
+  from   inventory:infix:does
+  cell   -1 | 0e0
+  code   (-1) does (0e0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0030
+  from   inventory:infix:does
+  cell   -1 | NaN
+  code   (-1) does (NaN)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0031
+  from   inventory:infix:does
+  cell   -1 | ""
+  code   (-1) does ("")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0032
+  from   inventory:infix:does
+  cell   -1 | "a"
+  code   (-1) does ("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0033
+  from   inventory:infix:does
+  cell   -1 | True
+  code   (-1) does (True)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0034
+  from   inventory:infix:does
+  cell   -1 | Any
+  code   (-1) does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
+
+- id     0035
+  from   inventory:infix:does
+  cell   -1 | (1,2)
+  code   (-1) does ((1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
+
+- id     0036
+  from   inventory:infix:does
+  cell   -1 | {a=>1}
+  code   (-1) does ({a=>1})
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
+
+- id     0037
+  from   inventory:infix:does
+  cell   1/2 | 0
+  code   (1/2) does (0)
+  is     <1/2>
+  type   Rat+{<anon|1>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0038
+  from   inventory:infix:does
+  cell   1/2 | 1
+  code   (1/2) does (1)
+  is     <1/2>
+  type   Rat+{<anon|2>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0039
+  from   inventory:infix:does
+  cell   1/2 | -1
+  code   (1/2) does (-1)
+  is     <1/2>
+  type   Rat+{<anon|3>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0040
+  from   inventory:infix:does
+  cell   1/2 | 1/2
+  code   (1/2) does (1/2)
+  is     <1/2>
+  type   Rat+{<anon|4>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0041
+  from   inventory:infix:does
+  cell   1/2 | 0e0
+  code   (1/2) does (0e0)
+  is     <1/2>
+  type   Rat+{<anon|5>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0042
+  from   inventory:infix:does
+  cell   1/2 | NaN
+  code   (1/2) does (NaN)
+  is     <1/2>
+  type   Rat+{<anon|6>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0043
+  from   inventory:infix:does
+  cell   1/2 | ""
+  code   (1/2) does ("")
+  is     <1/2>
+  type   Rat+{<anon|7>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0044
+  from   inventory:infix:does
+  cell   1/2 | "a"
+  code   (1/2) does ("a")
+  is     <1/2>
+  type   Rat+{<anon|8>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0045
+  from   inventory:infix:does
+  cell   1/2 | True
+  code   (1/2) does (True)
+  is     <1/2>
+  type   Rat+{<anon|9>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0046
+  from   inventory:infix:does
+  cell   1/2 | Any
+  code   (1/2) does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
+
+- id     0047
+  from   inventory:infix:does
+  cell   1/2 | (1,2)
+  code   (1/2) does ((1,2))
+  is     <1/2>
+  type   Rat+{<anon|10>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
+
+- id     0048
+  from   inventory:infix:does
+  cell   1/2 | {a=>1}
+  code   (1/2) does ({a=>1})
+  is     <1/2>
+  type   Rat+{<anon|11>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
+
+- id     0049
+  from   inventory:infix:does
+  cell   0e0 | 0
+  code   (0e0) does (0)
+  is     0e0
+  type   Num+{<anon|12>}
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0050
+  from   inventory:infix:does
+  cell   0e0 | 1
+  code   (0e0) does (1)
+  is     0e0
+  type   Num+{<anon|13>}
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0051
+  from   inventory:infix:does
+  cell   0e0 | -1
+  code   (0e0) does (-1)
+  is     0e0
+  type   Num+{<anon|14>}
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0052
+  from   inventory:infix:does
+  cell   0e0 | 1/2
+  code   (0e0) does (1/2)
+  is     0e0
+  type   Num+{<anon|15>}
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0053
+  from   inventory:infix:does
+  cell   0e0 | 0e0
+  code   (0e0) does (0e0)
+  is     0e0
+  type   Num+{<anon|16>}
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0054
+  from   inventory:infix:does
+  cell   0e0 | NaN
+  code   (0e0) does (NaN)
+  is     0e0
+  type   Num+{<anon|17>}
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0055
+  from   inventory:infix:does
+  cell   0e0 | ""
+  code   (0e0) does ("")
+  is     e0
+  type   Num+{<anon|18>}
+  oracle rakudo-2026.07 → e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0056
+  from   inventory:infix:does
+  cell   0e0 | "a"
+  code   (0e0) does ("a")
+  is     ae0
+  type   Num+{<anon|19>}
+  oracle rakudo-2026.07 → ae0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0057
+  from   inventory:infix:does
+  cell   0e0 | True
+  code   (0e0) does (True)
+  is     0e0
+  type   Num+{<anon|20>}
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0058
+  from   inventory:infix:does
+  cell   0e0 | Any
+  code   (0e0) does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
+
+- id     0059
+  from   inventory:infix:does
+  cell   0e0 | (1,2)
+  code   (0e0) does ((1,2))
+  is     0e0
+  type   Num+{<anon|21>}
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
+
+- id     0060
+  from   inventory:infix:does
+  cell   0e0 | {a=>1}
+  code   (0e0) does ({a=>1})
+  is     0e0
+  type   Num+{<anon|22>}
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
+
+- id     0061
+  from   inventory:infix:does
+  cell   NaN | 0
+  code   (NaN) does (0)
+  is     NaN
+  type   Num+{<anon|23>}
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0062
+  from   inventory:infix:does
+  cell   NaN | 1
+  code   (NaN) does (1)
+  is     NaN
+  type   Num+{<anon|24>}
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0063
+  from   inventory:infix:does
+  cell   NaN | -1
+  code   (NaN) does (-1)
+  is     NaN
+  type   Num+{<anon|25>}
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0064
+  from   inventory:infix:does
+  cell   NaN | 1/2
+  code   (NaN) does (1/2)
+  is     NaN
+  type   Num+{<anon|26>}
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0065
+  from   inventory:infix:does
+  cell   NaN | 0e0
+  code   (NaN) does (0e0)
+  is     NaN
+  type   Num+{<anon|27>}
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0066
+  from   inventory:infix:does
+  cell   NaN | NaN
+  code   (NaN) does (NaN)
+  is     NaN
+  type   Num+{<anon|28>}
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0067
+  from   inventory:infix:does
+  cell   NaN | ""
+  code   (NaN) does ("")
+  is     
+  type   Num+{<anon|29>}
+  oracle rakudo-2026.07 → 
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0068
+  from   inventory:infix:does
+  cell   NaN | "a"
+  code   (NaN) does ("a")
+  is     a
+  type   Num+{<anon|30>}
+  oracle rakudo-2026.07 → a
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0069
+  from   inventory:infix:does
+  cell   NaN | True
+  code   (NaN) does (True)
+  is     NaN
+  type   Num+{<anon|31>}
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0070
+  from   inventory:infix:does
+  cell   NaN | Any
+  code   (NaN) does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+
+- id     0071
+  from   inventory:infix:does
+  cell   NaN | (1,2)
+  code   (NaN) does ((1,2))
+  is     NaN
+  type   Num+{<anon|32>}
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+
+- id     0072
+  from   inventory:infix:does
+  cell   NaN | {a=>1}
+  code   (NaN) does ({a=>1})
+  is     NaN
+  type   Num+{<anon|33>}
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+
+- id     0073
+  from   inventory:infix:does
+  cell   "" | 0
+  code   ("") does (0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0074
+  from   inventory:infix:does
+  cell   "" | 1
+  code   ("") does (1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0075
+  from   inventory:infix:does
+  cell   "" | -1
+  code   ("") does (-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0076
+  from   inventory:infix:does
+  cell   "" | 1/2
+  code   ("") does (1/2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0077
+  from   inventory:infix:does
+  cell   "" | 0e0
+  code   ("") does (0e0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0078
+  from   inventory:infix:does
+  cell   "" | NaN
+  code   ("") does (NaN)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0079
+  from   inventory:infix:does
+  cell   "" | ""
+  code   ("") does ("")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0080
+  from   inventory:infix:does
+  cell   "" | "a"
+  code   ("") does ("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0081
+  from   inventory:infix:does
+  cell   "" | True
+  code   ("") does (True)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0082
+  from   inventory:infix:does
+  cell   "" | Any
+  code   ("") does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0083
+  from   inventory:infix:does
+  cell   "" | (1,2)
+  code   ("") does ((1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0084
+  from   inventory:infix:does
+  cell   "" | {a=>1}
+  code   ("") does ({a=>1})
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+
+- id     0085
+  from   inventory:infix:does
+  cell   "a" | 0
+  code   ("a") does (0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0086
+  from   inventory:infix:does
+  cell   "a" | 1
+  code   ("a") does (1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0087
+  from   inventory:infix:does
+  cell   "a" | -1
+  code   ("a") does (-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0088
+  from   inventory:infix:does
+  cell   "a" | 1/2
+  code   ("a") does (1/2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0089
+  from   inventory:infix:does
+  cell   "a" | 0e0
+  code   ("a") does (0e0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0090
+  from   inventory:infix:does
+  cell   "a" | NaN
+  code   ("a") does (NaN)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0091
+  from   inventory:infix:does
+  cell   "a" | ""
+  code   ("a") does ("")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0092
+  from   inventory:infix:does
+  cell   "a" | "a"
+  code   ("a") does ("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0093
+  from   inventory:infix:does
+  cell   "a" | True
+  code   ("a") does (True)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0094
+  from   inventory:infix:does
+  cell   "a" | Any
+  code   ("a") does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+
+- id     0095
+  from   inventory:infix:does
+  cell   "a" | (1,2)
+  code   ("a") does ((1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+
+- id     0096
+  from   inventory:infix:does
+  cell   "a" | {a=>1}
+  code   ("a") does ({a=>1})
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+
+- id     0097
+  from   inventory:infix:does
+  cell   True | 0
+  code   (True) does (0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0098
+  from   inventory:infix:does
+  cell   True | 1
+  code   (True) does (1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0099
+  from   inventory:infix:does
+  cell   True | -1
+  code   (True) does (-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0100
+  from   inventory:infix:does
+  cell   True | 1/2
+  code   (True) does (1/2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0101
+  from   inventory:infix:does
+  cell   True | 0e0
+  code   (True) does (0e0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0102
+  from   inventory:infix:does
+  cell   True | NaN
+  code   (True) does (NaN)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0103
+  from   inventory:infix:does
+  cell   True | ""
+  code   (True) does ("")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0104
+  from   inventory:infix:does
+  cell   True | "a"
+  code   (True) does ("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0105
+  from   inventory:infix:does
+  cell   True | True
+  code   (True) does (True)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0106
+  from   inventory:infix:does
+  cell   True | Any
+  code   (True) does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0107
+  from   inventory:infix:does
+  cell   True | (1,2)
+  code   (True) does ((1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0108
+  from   inventory:infix:does
+  cell   True | {a=>1}
+  code   (True) does ({a=>1})
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+
+- id     0109
+  from   inventory:infix:does
+  cell   Any | 0
+  code   (Any) does (0)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0110
+  from   inventory:infix:does
+  cell   Any | 1
+  code   (Any) does (1)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0111
+  from   inventory:infix:does
+  cell   Any | -1
+  code   (Any) does (-1)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0112
+  from   inventory:infix:does
+  cell   Any | 1/2
+  code   (Any) does (1/2)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0113
+  from   inventory:infix:does
+  cell   Any | 0e0
+  code   (Any) does (0e0)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0114
+  from   inventory:infix:does
+  cell   Any | NaN
+  code   (Any) does (NaN)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0115
+  from   inventory:infix:does
+  cell   Any | ""
+  code   (Any) does ("")
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0116
+  from   inventory:infix:does
+  cell   Any | "a"
+  code   (Any) does ("a")
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0117
+  from   inventory:infix:does
+  cell   Any | True
+  code   (Any) does (True)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0118
+  from   inventory:infix:does
+  cell   Any | Any
+  code   (Any) does (Any)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0119
+  from   inventory:infix:does
+  cell   Any | (1,2)
+  code   (Any) does ((1,2))
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0120
+  from   inventory:infix:does
+  cell   Any | {a=>1}
+  code   (Any) does ({a=>1})
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+
+- id     0121
+  from   inventory:infix:does
+  cell   (1,2) | 0
+  code   ((1,2)) does (0)
+  is     $(1, 2)
+  type   List+{<anon|34>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0122
+  from   inventory:infix:does
+  cell   (1,2) | 1
+  code   ((1,2)) does (1)
+  is     $(1, 2)
+  type   List+{<anon|35>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0123
+  from   inventory:infix:does
+  cell   (1,2) | -1
+  code   ((1,2)) does (-1)
+  is     $(1, 2)
+  type   List+{<anon|36>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0124
+  from   inventory:infix:does
+  cell   (1,2) | 1/2
+  code   ((1,2)) does (1/2)
+  is     $(1, 2)
+  type   List+{<anon|37>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0125
+  from   inventory:infix:does
+  cell   (1,2) | 0e0
+  code   ((1,2)) does (0e0)
+  is     $(1, 2)
+  type   List+{<anon|38>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0126
+  from   inventory:infix:does
+  cell   (1,2) | NaN
+  code   ((1,2)) does (NaN)
+  is     $(1, 2)
+  type   List+{<anon|39>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0127
+  from   inventory:infix:does
+  cell   (1,2) | ""
+  code   ((1,2)) does ("")
+  is     $(1, 2)
+  type   List+{<anon|40>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0128
+  from   inventory:infix:does
+  cell   (1,2) | "a"
+  code   ((1,2)) does ("a")
+  is     $(1, 2)
+  type   List+{<anon|41>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0129
+  from   inventory:infix:does
+  cell   (1,2) | True
+  code   ((1,2)) does (True)
+  is     $(1, 2)
+  type   List+{<anon|42>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0130
+  from   inventory:infix:does
+  cell   (1,2) | Any
+  code   ((1,2)) does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → (1, 2)
+
+- id     0131
+  from   inventory:infix:does
+  cell   (1,2) | (1,2)
+  code   ((1,2)) does ((1,2))
+  is     $(1, 2)
+  type   List+{<anon|43>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → (1, 2)
+
+- id     0132
+  from   inventory:infix:does
+  cell   (1,2) | {a=>1}
+  code   ((1,2)) does ({a=>1})
+  is     $(1, 2)
+  type   List+{<anon|44>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → (1, 2)
+
+- id     0133
+  from   inventory:infix:does
+  cell   {a=>1} | 0
+  code   ({a=>1}) does (0)
+  is     ${:a(1)}
+  type   Hash+{<anon|45>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0134
+  from   inventory:infix:does
+  cell   {a=>1} | 1
+  code   ({a=>1}) does (1)
+  is     ${:a(1)}
+  type   Hash+{<anon|46>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0135
+  from   inventory:infix:does
+  cell   {a=>1} | -1
+  code   ({a=>1}) does (-1)
+  is     ${:a(1)}
+  type   Hash+{<anon|47>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0136
+  from   inventory:infix:does
+  cell   {a=>1} | 1/2
+  code   ({a=>1}) does (1/2)
+  is     ${:a(1)}
+  type   Hash+{<anon|48>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0137
+  from   inventory:infix:does
+  cell   {a=>1} | 0e0
+  code   ({a=>1}) does (0e0)
+  is     ${:a(1)}
+  type   Hash+{<anon|49>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0138
+  from   inventory:infix:does
+  cell   {a=>1} | NaN
+  code   ({a=>1}) does (NaN)
+  is     ${:a(1)}
+  type   Hash+{<anon|50>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0139
+  from   inventory:infix:does
+  cell   {a=>1} | ""
+  code   ({a=>1}) does ("")
+  is     ${:a(1)}
+  type   Hash+{<anon|51>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0140
+  from   inventory:infix:does
+  cell   {a=>1} | "a"
+  code   ({a=>1}) does ("a")
+  is     ${:a(1)}
+  type   Hash+{<anon|52>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0141
+  from   inventory:infix:does
+  cell   {a=>1} | True
+  code   ({a=>1}) does (True)
+  is     ${:a(1)}
+  type   Hash+{<anon|53>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+
+- id     0142
+  from   inventory:infix:does
+  cell   {a=>1} | Any
+  code   ({a=>1}) does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → {:a(1)}
+
+- id     0143
+  from   inventory:infix:does
+  cell   {a=>1} | (1,2)
+  code   ({a=>1}) does ((1,2))
+  is     ${:a(1)}
+  type   Hash+{<anon|54>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → {:a(1)}
+
+- id     0144
+  from   inventory:infix:does
+  cell   {a=>1} | {a=>1}
+  code   ({a=>1}) does ({a=>1})
+  is     ${:a(1)}
+  type   Hash+{<anon|55>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → {:a(1)}
