@@ -12,7 +12,7 @@ cols     plain | is-rw | is-copy | is-raw
   code   do { sub f($v ) { $v = "set" }; my $x = "orig"; f($x); $x }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0002
   from   molecule:writeback-dispatch
@@ -22,7 +22,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "set"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "set"
 
 - id     0003
   from   molecule:writeback-dispatch
@@ -32,7 +32,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "orig"
   type   Str
   oracle rakudo-2026.07 → "orig"
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0004
   from   molecule:writeback-dispatch
@@ -42,7 +42,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "set"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "set"
 
 - id     0005
   from   molecule:writeback-dispatch
@@ -51,7 +51,7 @@ cols     plain | is-rw | is-copy | is-raw
   code   do { multi gwriteback_dispatch_multi_plain($v ) { $v = "set" }; my $x = "orig"; gwriteback_dispatch_multi_plain($x); $x }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0006
   from   molecule:writeback-dispatch
@@ -61,7 +61,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "set"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "set"
 
 - id     0007
   from   molecule:writeback-dispatch
@@ -71,7 +71,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "orig"
   type   Str
   oracle rakudo-2026.07 → "orig"
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0008
   from   molecule:writeback-dispatch
@@ -81,7 +81,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "set"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "set"
 
 - id     0009
   from   molecule:writeback-dispatch
@@ -90,7 +90,7 @@ cols     plain | is-rw | is-copy | is-raw
   code   do { class Kwriteback_dispatch_method_plain { method m($v ) { $v = "set" } }; my $x = "orig"; Kwriteback_dispatch_method_plain.new.m($x); $x }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0010
   from   molecule:writeback-dispatch
@@ -100,7 +100,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "set"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "set"
 
 - id     0011
   from   molecule:writeback-dispatch
@@ -110,7 +110,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "orig"
   type   Str
   oracle rakudo-2026.07 → "orig"
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0012
   from   molecule:writeback-dispatch
@@ -120,7 +120,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "set"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "set"
 
 - id     0013
   from   molecule:writeback-dispatch
@@ -129,7 +129,7 @@ cols     plain | is-rw | is-copy | is-raw
   code   do { sub f($v ) { $v = "set" }; my $x = "orig"; my &c = &f; c($x); $x }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0014
   from   molecule:writeback-dispatch
@@ -139,7 +139,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "set"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "set"
 
 - id     0015
   from   molecule:writeback-dispatch
@@ -149,7 +149,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "orig"
   type   Str
   oracle rakudo-2026.07 → "orig"
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0016
   from   molecule:writeback-dispatch
@@ -159,7 +159,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "set"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "set"
 
 - id     0017
   from   molecule:writeback-dispatch
@@ -168,7 +168,7 @@ cols     plain | is-rw | is-copy | is-raw
   code   do { sub f($v ) { $v = "set" }; my $x = "orig"; my $c = &f; $c($x); $x }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0018
   from   molecule:writeback-dispatch
@@ -178,7 +178,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "set"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "set"
 
 - id     0019
   from   molecule:writeback-dispatch
@@ -188,7 +188,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "orig"
   type   Str
   oracle rakudo-2026.07 → "orig"
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0020
   from   molecule:writeback-dispatch
@@ -198,7 +198,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "set"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "set"
 
 - id     0021
   from   molecule:writeback-dispatch
@@ -207,7 +207,7 @@ cols     plain | is-rw | is-copy | is-raw
   code   do { sub f($v ) { $v = "set" }; my $x = "orig"; $x.&f; $x }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0022
   from   molecule:writeback-dispatch
@@ -217,7 +217,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0023
   from   molecule:writeback-dispatch
@@ -227,7 +227,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "orig"
   type   Str
   oracle rakudo-2026.07 → "orig"
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0024
   from   molecule:writeback-dispatch
@@ -237,7 +237,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0025
   from   molecule:writeback-dispatch
@@ -246,7 +246,7 @@ cols     plain | is-rw | is-copy | is-raw
   code   do { my &b = -> $v  { $v = "set" }; my $x = "orig"; b($x); $x }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0026
   from   molecule:writeback-dispatch
@@ -256,7 +256,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "set"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "set"
 
 - id     0027
   from   molecule:writeback-dispatch
@@ -266,7 +266,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "orig"
   type   Str
   oracle rakudo-2026.07 → "orig"
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0028
   from   molecule:writeback-dispatch
@@ -276,7 +276,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "set"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "set"
 
 - id     0029
   from   molecule:writeback-dispatch
@@ -285,7 +285,7 @@ cols     plain | is-rw | is-copy | is-raw
   code   do { sub inner($v ) { $v = "set" }; sub outer($w ) { inner($w) }; my $x = "orig"; outer($x); $x }
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0030
   from   molecule:writeback-dispatch
@@ -295,7 +295,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "set"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "set"
 
 - id     0031
   from   molecule:writeback-dispatch
@@ -305,7 +305,7 @@ cols     plain | is-rw | is-copy | is-raw
   is     "orig"
   type   Str
   oracle rakudo-2026.07 → "orig"
-  oracle rakupp-3.14.0+20260816 → "orig"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "orig"
 
 - id     0032
   from   molecule:writeback-dispatch
@@ -315,4 +315,4 @@ cols     plain | is-rw | is-copy | is-raw
   is     "set"
   type   Str
   oracle rakudo-2026.07 → "set"
-  oracle rakupp-3.14.0+20260816 → "set"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "set"

@@ -10,7 +10,7 @@ ladder   list, arity 1
   code   (()).reverse.reverse
   same-as (()).list
   oracle rakudo-2026.07 → DIFFER: $(().Seq) vs $( )
-  oracle rakupp-3.14.0+20260816 → DIFFER: $(().Seq) vs $( )
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → DIFFER: $(().Seq) vs $( )
   verdict disputed
   why    the reference itself breaks this law at this cell ($(().Seq) vs $( )) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
   ruled  2026-08-14 against rakudo-2026.07
@@ -21,7 +21,7 @@ ladder   list, arity 1
   code   ((1,)).reverse.reverse
   same-as ((1,)).list
   oracle rakudo-2026.07 → DIFFER: $((1,).Seq) vs $(1,)
-  oracle rakupp-3.14.0+20260816 → DIFFER: $((1,).Seq) vs $(1,)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → DIFFER: $((1,).Seq) vs $(1,)
   verdict disputed
   why    the reference itself breaks this law at this cell ($((1,).Seq) vs $(1,)) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
   ruled  2026-08-14 against rakudo-2026.07
@@ -32,7 +32,7 @@ ladder   list, arity 1
   code   ((1,2,3)).reverse.reverse
   same-as ((1,2,3)).list
   oracle rakudo-2026.07 → DIFFER: $((1, 2, 3).Seq) vs $(1, 2, 3)
-  oracle rakupp-3.14.0+20260816 → DIFFER: $((1, 2, 3).Seq) vs $(1, 2, 3)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → DIFFER: $((1, 2, 3).Seq) vs $(1, 2, 3)
   verdict disputed
   why    the reference itself breaks this law at this cell ($((1, 2, 3).Seq) vs $(1, 2, 3)) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
   ruled  2026-08-14 against rakudo-2026.07
@@ -43,7 +43,7 @@ ladder   list, arity 1
   code   ([1,2,3]).reverse.reverse
   same-as ([1,2,3]).list
   oracle rakudo-2026.07 → DIFFER: $((1, 2, 3).Seq) vs $[1, 2, 3]
-  oracle rakupp-3.14.0+20260816 → DIFFER: $((1, 2, 3).Seq) vs $(1, 2, 3)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → DIFFER: $((1, 2, 3).Seq) vs $(1, 2, 3)
   verdict disputed
   why    the reference itself breaks this law at this cell ($((1, 2, 3).Seq) vs $[1, 2, 3]) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
   ruled  2026-08-14 against rakudo-2026.07
@@ -54,7 +54,7 @@ ladder   list, arity 1
   code   ((1..3)).reverse.reverse
   same-as ((1..3)).list
   oracle rakudo-2026.07 → DIFFER: $((1, 2, 3).Seq) vs $(1, 2, 3)
-  oracle rakupp-3.14.0+20260816 → DIFFER: $((1, 2, 3).Seq) vs $(1, 2, 3)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → DIFFER: $((1, 2, 3).Seq) vs $(1, 2, 3)
   verdict disputed
   why    the reference itself breaks this law at this cell ($((1, 2, 3).Seq) vs $(1, 2, 3)) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
   ruled  2026-08-14 against rakudo-2026.07
@@ -65,7 +65,7 @@ ladder   list, arity 1
   code   ((3,1,2)).reverse.reverse
   same-as ((3,1,2)).list
   oracle rakudo-2026.07 → DIFFER: $((3, 1, 2).Seq) vs $(3, 1, 2)
-  oracle rakupp-3.14.0+20260816 → DIFFER: $((3, 1, 2).Seq) vs $(3, 1, 2)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → DIFFER: $((3, 1, 2).Seq) vs $(3, 1, 2)
   verdict disputed
   why    the reference itself breaks this law at this cell ($((3, 1, 2).Seq) vs $(3, 1, 2)) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
   ruled  2026-08-14 against rakudo-2026.07
@@ -76,7 +76,7 @@ ladder   list, arity 1
   code   (<a b>).reverse.reverse
   same-as (<a b>).list
   oracle rakudo-2026.07 → DIFFER: $(("a", "b").Seq) vs $("a", "b")
-  oracle rakupp-3.14.0+20260816 → DIFFER: $(("a", "b").Seq) vs $("a", "b")
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → DIFFER: $(("a", "b").Seq) vs $("a", "b")
   verdict disputed
   why    the reference itself breaks this law at this cell ($(("a", "b").Seq) vs $("a", "b")) — either a defect or a genuine subtlety, and it needs a ruling before it can be asserted
   ruled  2026-08-14 against rakudo-2026.07

@@ -47,6 +47,22 @@ sub engine-id($cmd) {
     my $name = $p.out.slurp(:close).trim;
     $p.err.slurp(:close);
 
+    # Prefer what the engine says about its BUILD over what it says about its
+    # version. A development build changes behaviour without changing its
+    # version, and `$*RAKU.compiler.build` is a git describe — tag, distance,
+    # commit, and a `-dirty` flag when the tree was not clean. That last part
+    # matters: it says the build is not reproducible from the commit alone, so
+    # an observation recorded against it should be read with that in mind.
+    my $b = run($cmd, '-e', 'print (try $*RAKU.compiler.build) // ""', :out, :err);
+    my $build = $b.out.slurp(:close).trim;
+    $b.err.slurp(:close);
+
+    my $short = $name.contains('Raku++') || $name.lc.contains('rakupp')
+        ?? 'rakupp'
+        !! ($name || 'unknown');
+
+    return "$short-$build" if $build;
+
     if $name.contains('Raku++') || $name.lc.contains('rakupp') {
         my $v = run($cmd, '--version', :out, :err);
         my $text = $v.out.slurp(:close);

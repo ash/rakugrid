@@ -8,396 +8,396 @@ kind     parse grid — compiled with -c, never run
   code   my $x = q{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0002
   from   syntax:q:s
   code   my $x = q:s{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0003
   from   syntax:q:!s
   code   my $x = q:!s{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0004
   from   syntax:q:c
   code   my $x = q:c{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0005
   from   syntax:q:!c
   code   my $x = q:!c{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0006
   from   syntax:q:b
   code   my $x = q:b{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0007
   from   syntax:q:!b
   code   my $x = q:!b{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0008
   from   syntax:q:a
   code   my $x = q:a{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0009
   from   syntax:q:h
   code   my $x = q:h{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0010
   from   syntax:q:f
   code   my $x = q:f{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0011
   from   syntax:q:x
   code   my $x = q:x{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0012
   from   syntax:q:w
   code   my $x = q:w{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0013
   from   syntax:q:ww
   code   my $x = q:ww{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0014
   from   syntax:q:v
   code   my $x = q:v{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0015
   from   syntax:q:to
   code   my $x = q:to{abc};
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-312.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 2: Ending delimiter abc not found for heredoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 2: Ending delimiter abc not found for heredoc
 
 - id     0016
   from   syntax:q:q
   code   my $x = q:q{abc};
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-313.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0017
   from   syntax:q:qq
   code   my $x = q:qq{abc};
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-314.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0018
   from   syntax:q:s:c
   code   my $x = q:s:c{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0019
   from   syntax:q:w:v
   code   my $x = q:w:v{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0020
   from   syntax:qq
   code   my $x = qq{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0021
   from   syntax:qq:s
   code   my $x = qq:s{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0022
   from   syntax:qq:!s
   code   my $x = qq:!s{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0023
   from   syntax:qq:c
   code   my $x = qq:c{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0024
   from   syntax:qq:!c
   code   my $x = qq:!c{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0025
   from   syntax:qq:b
   code   my $x = qq:b{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0026
   from   syntax:qq:!b
   code   my $x = qq:!b{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0027
   from   syntax:qq:a
   code   my $x = qq:a{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0028
   from   syntax:qq:h
   code   my $x = qq:h{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0029
   from   syntax:qq:f
   code   my $x = qq:f{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0030
   from   syntax:qq:x
   code   my $x = qq:x{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0031
   from   syntax:qq:w
   code   my $x = qq:w{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0032
   from   syntax:qq:ww
   code   my $x = qq:ww{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0033
   from   syntax:qq:v
   code   my $x = qq:v{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0034
   from   syntax:qq:to
   code   my $x = qq:to{abc};
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-331.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 2: Ending delimiter abc not found for heredoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 2: Ending delimiter abc not found for heredoc
 
 - id     0035
   from   syntax:qq:q
   code   my $x = qq:q{abc};
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-332.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0036
   from   syntax:qq:qq
   code   my $x = qq:qq{abc};
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-333.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0037
   from   syntax:qq:s:c
   code   my $x = qq:s:c{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0038
   from   syntax:qq:w:v
   code   my $x = qq:w:v{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0039
   from   syntax:Q
   code   my $x = Q{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0040
   from   syntax:Q:s
   code   my $x = Q:s{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0041
   from   syntax:Q:!s
   code   my $x = Q:!s{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0042
   from   syntax:Q:c
   code   my $x = Q:c{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0043
   from   syntax:Q:!c
   code   my $x = Q:!c{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0044
   from   syntax:Q:b
   code   my $x = Q:b{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0045
   from   syntax:Q:!b
   code   my $x = Q:!b{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0046
   from   syntax:Q:a
   code   my $x = Q:a{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0047
   from   syntax:Q:h
   code   my $x = Q:h{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0048
   from   syntax:Q:f
   code   my $x = Q:f{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0049
   from   syntax:Q:x
   code   my $x = Q:x{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0050
   from   syntax:Q:w
   code   my $x = Q:w{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0051
   from   syntax:Q:ww
   code   my $x = Q:ww{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0052
   from   syntax:Q:v
   code   my $x = Q:v{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0053
   from   syntax:Q:to
   code   my $x = Q:to{abc};
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-350.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 2: Ending delimiter abc not found for heredoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 2: Ending delimiter abc not found for heredoc
 
 - id     0054
   from   syntax:Q:q
   code   my $x = Q:q{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0055
   from   syntax:Q:qq
   code   my $x = Q:qq{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0056
   from   syntax:Q:s:c
   code   my $x = Q:s:c{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0057
   from   syntax:Q:w:v
   code   my $x = Q:w:v{abc};
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles

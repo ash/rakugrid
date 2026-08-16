@@ -8,235 +8,235 @@ kind     parse grid — compiled with -c, never run
   code   sub f($a) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0002
   from   syntax:$a?
   code   sub f($a?) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0003
   from   syntax:$a = 1
   code   sub f($a = 1) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0004
   from   syntax:$a is rw
   code   sub f($a is rw) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0005
   from   syntax:$a is copy
   code   sub f($a is copy) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0006
   from   syntax:$a is raw
   code   sub f($a is raw) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0007
   from   syntax:Int $a
   code   sub f(Int $a) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0008
   from   syntax:Int:D $a
   code   sub f(Int:D $a) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0009
   from   syntax:Int:U $a
   code   sub f(Int:U $a) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0010
   from   syntax:Int:_ $a
   code   sub f(Int:_ $a) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0011
   from   syntax:$a where * > 0
   code   sub f($a where * > 0) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0012
   from   syntax::$a
   code   sub f(:$a) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0013
   from   syntax::$a!
   code   sub f(:$a!) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0014
   from   syntax::$a = 1
   code   sub f(:$a = 1) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0015
   from   syntax::a($b)
   code   sub f(:a($b)) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0016
   from   syntax::$a is copy
   code   sub f(:$a is copy) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0017
   from   syntax:*@a
   code   sub f(*@a) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0018
   from   syntax:**@a
   code   sub f(**@a) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0019
   from   syntax:+@a
   code   sub f(+@a) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0020
   from   syntax:*%h
   code   sub f(*%h) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0021
   from   syntax:|c
   code   sub f(|c) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0022
   from   syntax:\a
   code   sub f(\a) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0023
   from   syntax:@a
   code   sub f(@a) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0024
   from   syntax:%h
   code   sub f(%h) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0025
   from   syntax:&f
   code   sub f(&f) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0026
   from   syntax:&f:(Int)
   code   sub f(&f:(Int)) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0027
   from   syntax:[$a, $b]
   code   sub f([$a, $b]) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0028
   from   syntax:$ 
   code   sub f($ ) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0029
   from   syntax:@
   code   sub f(@) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0030
   from   syntax:Int
   code   sub f(Int) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0031
   from   syntax:Int $
   code   sub f(Int $) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0032
   from   syntax:::T $a
   code   sub f(::T $a) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0033
   from   syntax:T
   code   sub f(T) { }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-421.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0034
   from   syntax:$a where { $_ > 0 }
   code   sub f($a where { $_ > 0 }) { }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles

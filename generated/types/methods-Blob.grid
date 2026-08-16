@@ -12,7 +12,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     Buf.new(1,2,3)
   type   Buf
   oracle rakudo-2026.07 → Buf.new(1,2,3)
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0002
   from   inventory:Blob.^methods
@@ -21,7 +21,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     Buf.new()
   type   Buf
   oracle rakudo-2026.07 → Buf.new()
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0003
   from   inventory:Blob.^methods
@@ -30,7 +30,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     \(1, 2, 3)
   type   Capture
   oracle rakudo-2026.07 → \(1, 2, 3)
-  oracle rakupp-3.14.0+20260816 → \(1, 2, 3)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → \(1, 2, 3)
 
 - id     0004
   from   inventory:Blob.^methods
@@ -39,7 +39,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-3.14.0+20260816 → \()
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → \()
 
 - id     0005
   from   inventory:Blob.^methods
@@ -48,7 +48,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     3
   type   Int
   oracle rakudo-2026.07 → 3
-  oracle rakupp-3.14.0+20260816 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
 
 - id     0006
   from   inventory:Blob.^methods
@@ -57,7 +57,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0+20260816 → 0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
 
 - id     0007
   from   inventory:Blob.^methods
@@ -66,7 +66,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     3
   type   Int
   oracle rakudo-2026.07 → 3
-  oracle rakupp-3.14.0+20260816 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
 
 - id     0008
   from   inventory:Blob.^methods
@@ -75,7 +75,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0+20260816 → 0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
 
 - id     0009
   from   inventory:Blob.^methods
@@ -84,7 +84,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     3
   type   Int
   oracle rakudo-2026.07 → 3
-  oracle rakupp-3.14.0+20260816 → 3
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 3
 
 - id     0010
   from   inventory:Blob.^methods
@@ -93,7 +93,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-3.14.0+20260816 → 0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
 
 - id     0011
   from   inventory:Blob.^methods
@@ -101,7 +101,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   code   (Blob.new(1,2,3)).chars
   throws X::Buf::AsStr
   oracle rakudo-2026.07 → ERR:X::Buf::AsStr
-  oracle rakupp-3.14.0+20260816 → 3
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 3
 
 - id     0012
   from   inventory:Blob.^methods
@@ -109,7 +109,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   code   (Blob.new()).chars
   throws X::Buf::AsStr
   oracle rakudo-2026.07 → ERR:X::Buf::AsStr
-  oracle rakupp-3.14.0+20260816 → 0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
 
 - id     0013
   from   inventory:Blob.^methods
@@ -117,7 +117,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   code   (Blob.new(1,2,3)).codes
   throws X::Buf::AsStr
   oracle rakudo-2026.07 → ERR:X::Buf::AsStr
-  oracle rakupp-3.14.0+20260816 → 3
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 3
 
 - id     0014
   from   inventory:Blob.^methods
@@ -125,7 +125,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   code   (Blob.new()).codes
   throws X::Buf::AsStr
   oracle rakudo-2026.07 → ERR:X::Buf::AsStr
-  oracle rakupp-3.14.0+20260816 → 0
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
 
 - id     0015
   from   inventory:Blob.^methods
@@ -134,7 +134,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     $(1, 2, 3)
   type   List
   oracle rakudo-2026.07 → $(1, 2, 3)
-  oracle rakupp-3.14.0+20260816 → $( )
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $( )
 
 - id     0016
   from   inventory:Blob.^methods
@@ -143,7 +143,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-3.14.0+20260816 → $( )
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $( )
 
 - id     0017
   from   inventory:Blob.^methods
@@ -151,7 +151,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   code   (Blob.new(1,2,3)).decode-with-valid-encoding(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0018
   from   inventory:Blob.^methods
@@ -159,7 +159,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   code   (Blob.new(1,2,3)).decode-with-valid-encoding(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0019
   from   inventory:Blob.^methods
@@ -167,7 +167,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   code   (Blob.new(1,2,3)).decode-with-valid-encoding(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0020
   from   inventory:Blob.^methods
@@ -175,7 +175,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   code   (Blob.new(1,2,3)).decode-with-valid-encoding("a")
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0021
   from   inventory:Blob.^methods
@@ -183,7 +183,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   code   (Blob.new(1,2,3)).decode-with-valid-encoding(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0022
   from   inventory:Blob.^methods
@@ -191,7 +191,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   code   (Blob.new()).decode-with-valid-encoding(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0023
   from   inventory:Blob.^methods
@@ -199,7 +199,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   code   (Blob.new()).decode-with-valid-encoding(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0024
   from   inventory:Blob.^methods
@@ -207,7 +207,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   code   (Blob.new()).decode-with-valid-encoding(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0025
   from   inventory:Blob.^methods
@@ -216,7 +216,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0026
   from   inventory:Blob.^methods
@@ -224,7 +224,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   code   (Blob.new()).decode-with-valid-encoding(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0027
   from   inventory:Blob.^methods
@@ -233,7 +233,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0028
   from   inventory:Blob.^methods
@@ -242,4 +242,4 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound

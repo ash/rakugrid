@@ -12,7 +12,7 @@ cols     (try { die "x" } // $!)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0+20260816 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
 
 - id     0002
   from   inventory:Failure.^methods
@@ -21,7 +21,7 @@ cols     (try { die "x" } // $!)
   is     \(:payload("x"))
   type   Capture
   oracle rakudo-2026.07 → \(:payload("x"))
-  oracle rakupp-3.14.0+20260816 → \(:message("x"), :payload("x"))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → \(:message("x"), :payload("x"))
 
 - id     0003
   from   inventory:Failure.^methods
@@ -30,7 +30,7 @@ cols     (try { die "x" } // $!)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0+20260816 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
 
 - id     0004
   from   inventory:Failure.^methods
@@ -39,7 +39,7 @@ cols     (try { die "x" } // $!)
   is     Perl6::Metamodel::ClassHOW.new
   type   Perl6::Metamodel::ClassHOW
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
-  oracle rakupp-3.14.0+20260816 → Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Metamodel::ClassHOW.new
 
 - id     0005
   from   inventory:Failure.^methods
@@ -48,7 +48,7 @@ cols     (try { die "x" } // $!)
   is     "P6opaque"
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0006
   from   inventory:Failure.^methods
@@ -57,7 +57,7 @@ cols     (try { die "x" } // $!)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0+20260816 → X::AdHoc.new(payload => "x", message => "x")
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → X::AdHoc.new(payload => "x", message => "x")
 
 - id     0007
   from   inventory:Failure.^methods
@@ -66,7 +66,7 @@ cols     (try { die "x" } // $!)
   is     X::AdHoc
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc
-  oracle rakupp-3.14.0+20260816 → X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → X::AdHoc
 
 - id     0008
   from   inventory:Failure.^methods
@@ -75,7 +75,7 @@ cols     (try { die "x" } // $!)
   is     ${}
   type   Stash
   oracle rakudo-2026.07 → ${}
-  oracle rakupp-3.14.0+20260816 → ${}
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${}
 
 - id     0009
   from   inventory:Failure.^methods
@@ -84,7 +84,7 @@ cols     (try { die "x" } // $!)
   is     all(X::AdHoc.new(payload => "x"))
   type   Junction
   oracle rakudo-2026.07 → all(X::AdHoc.new(payload => "x"))
-  oracle rakupp-3.14.0+20260816 → all(X::AdHoc.new(payload => "x", message => "x"))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → all(X::AdHoc.new(payload => "x", message => "x"))
 
 - id     0010
   from   inventory:Failure.^methods
@@ -93,7 +93,7 @@ cols     (try { die "x" } // $!)
   is     any(X::AdHoc.new(payload => "x"))
   type   Junction
   oracle rakudo-2026.07 → any(X::AdHoc.new(payload => "x"))
-  oracle rakupp-3.14.0+20260816 → any(X::AdHoc.new(payload => "x", message => "x"))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → any(X::AdHoc.new(payload => "x", message => "x"))
 
 - id     0011
   from   inventory:Failure.^methods
@@ -102,7 +102,7 @@ cols     (try { die "x" } // $!)
   is     X::AdHoc.new(payload => "Unexplained error")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "Unexplained error")
-  oracle rakupp-3.14.0+20260816 → X::AdHoc.new(payload => Any, message => Any)
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → X::AdHoc.new(payload => Any, message => Any)
 
 - id     0012
   from   inventory:Failure.^methods
@@ -111,7 +111,7 @@ cols     (try { die "x" } // $!)
   is     $(X::AdHoc.new(payload => "x"),)
   type   List
   oracle rakudo-2026.07 → $(X::AdHoc.new(payload => "x"),)
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0013
   from   inventory:Failure.^methods
@@ -119,7 +119,7 @@ cols     (try { die "x" } // $!)
   code   ((try { die "x" } // $!)).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → $( )
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $( )
 
 - id     0014
   from   inventory:Failure.^methods
@@ -127,7 +127,7 @@ cols     (try { die "x" } // $!)
   code   ((try { die "x" } // $!)).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → $( )
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $( )
 
 - id     0015
   from   inventory:Failure.^methods
@@ -135,7 +135,7 @@ cols     (try { die "x" } // $!)
   code   ((try { die "x" } // $!)).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → $( )
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $( )
 
 - id     0016
   from   inventory:Failure.^methods
@@ -144,7 +144,7 @@ cols     (try { die "x" } // $!)
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-3.14.0+20260816 → $( )
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $( )
 
 - id     0017
   from   inventory:Failure.^methods
@@ -152,7 +152,7 @@ cols     (try { die "x" } // $!)
   code   ((try { die "x" } // $!)).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0+20260816 → $( )
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → $( )
 
 - id     0018
   from   inventory:Failure.^methods
@@ -160,7 +160,7 @@ cols     (try { die "x" } // $!)
   code   ((try { die "x" } // $!)).chrs
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0019
   from   inventory:Failure.^methods
@@ -169,7 +169,7 @@ cols     (try { die "x" } // $!)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0+20260816 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
 
 - id     0020
   from   inventory:Failure.^methods
@@ -178,7 +178,7 @@ cols     (try { die "x" } // $!)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0+20260816 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
 
 - id     0021
   from   inventory:Failure.^methods
@@ -187,7 +187,7 @@ cols     (try { die "x" } // $!)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0+20260816 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
 
 - id     0022
   from   inventory:Failure.^methods
@@ -196,7 +196,7 @@ cols     (try { die "x" } // $!)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0+20260816 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
 
 - id     0023
   from   inventory:Failure.^methods
@@ -205,7 +205,7 @@ cols     (try { die "x" } // $!)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0+20260816 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
 
 - id     0024
   from   inventory:Failure.^methods
@@ -214,7 +214,7 @@ cols     (try { die "x" } // $!)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0025
   from   inventory:Failure.^methods
@@ -223,7 +223,7 @@ cols     (try { die "x" } // $!)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0+20260816 → X::AdHoc.new(payload => "x", message => "x")
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → X::AdHoc.new(payload => "x", message => "x")
 
 - id     0026
   from   inventory:Failure.^methods
@@ -232,7 +232,7 @@ cols     (try { die "x" } // $!)
   is     "x"
   type   Str
   oracle rakudo-2026.07 → "x"
-  oracle rakupp-3.14.0+20260816 → "x"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "x"
 
 - id     0027
   from   inventory:Failure.^methods
@@ -241,7 +241,7 @@ cols     (try { die "x" } // $!)
   is     "x"
   type   Str
   oracle rakudo-2026.07 → "x"
-  oracle rakupp-3.14.0+20260816 → "x"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "x"
 
 - id     0028
   from   inventory:Failure.^methods
@@ -250,7 +250,7 @@ cols     (try { die "x" } // $!)
   is     "x"
   type   Str
   oracle rakudo-2026.07 → "x"
-  oracle rakupp-3.14.0+20260816 → "x"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "x"
 
 - id     0029
   from   inventory:Failure.^methods
@@ -259,7 +259,7 @@ cols     (try { die "x" } // $!)
   is     "x"
   type   Str
   oracle rakudo-2026.07 → "x"
-  oracle rakupp-3.14.0+20260816 → "x"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "x"
 
 - id     0030
   from   inventory:Failure.^methods
@@ -267,7 +267,7 @@ cols     (try { die "x" } // $!)
   code   ((try { die "x" } // $!)).join(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0+20260816 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::TypeCheck::Binding::Parameter
 
 - id     0031
   from   inventory:Failure.^methods
@@ -276,7 +276,7 @@ cols     (try { die "x" } // $!)
   is     X::AdHoc.new(payload => "x")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0032
   from   inventory:Failure.^methods
@@ -285,7 +285,7 @@ cols     (try { die "x" } // $!)
   is     X::AdHoc.new(payload => "x")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0033
   from   inventory:Failure.^methods
@@ -294,7 +294,7 @@ cols     (try { die "x" } // $!)
   is     X::AdHoc.new(payload => "x")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0034
   from   inventory:Failure.^methods
@@ -303,7 +303,7 @@ cols     (try { die "x" } // $!)
   is     X::AdHoc.new(payload => "x")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0035
   from   inventory:Failure.^methods
@@ -312,7 +312,7 @@ cols     (try { die "x" } // $!)
   is     X::AdHoc.new(payload => "x")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0036
   from   inventory:Failure.^methods
@@ -321,7 +321,7 @@ cols     (try { die "x" } // $!)
   is     "\n"
   type   Str
   oracle rakudo-2026.07 → "\n"
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0037
   from   inventory:Failure.^methods
@@ -330,7 +330,7 @@ cols     (try { die "x" } // $!)
   is     none(X::AdHoc.new(payload => "x"))
   type   Junction
   oracle rakudo-2026.07 → none(X::AdHoc.new(payload => "x"))
-  oracle rakupp-3.14.0+20260816 → none(X::AdHoc.new(payload => "x", message => "x"))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → none(X::AdHoc.new(payload => "x", message => "x"))
 
 - id     0038
   from   inventory:Failure.^methods
@@ -339,7 +339,7 @@ cols     (try { die "x" } // $!)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-3.14.0+20260816 → Bool::False
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
 
 - id     0039
   from   inventory:Failure.^methods
@@ -348,7 +348,7 @@ cols     (try { die "x" } // $!)
   is     one(X::AdHoc.new(payload => "x"))
   type   Junction
   oracle rakudo-2026.07 → one(X::AdHoc.new(payload => "x"))
-  oracle rakupp-3.14.0+20260816 → one(X::AdHoc.new(payload => "x", message => "x"))
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → one(X::AdHoc.new(payload => "x", message => "x"))
 
 - id     0040
   from   inventory:Failure.^methods
@@ -357,7 +357,7 @@ cols     (try { die "x" } // $!)
   is     $((X::AdHoc.new(payload => "x"),).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((X::AdHoc.new(payload => "x"),).Seq)
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0041
   from   inventory:Failure.^methods
@@ -366,7 +366,7 @@ cols     (try { die "x" } // $!)
   is     X::AdHoc.new(payload => "x")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
-  oracle rakupp-3.14.0+20260816 → X::AdHoc.new(payload => "x", message => "x")
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → X::AdHoc.new(payload => "x", message => "x")
 
 - id     0042
   from   inventory:Failure.^methods
@@ -375,7 +375,7 @@ cols     (try { die "x" } // $!)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-3.14.0+20260816 → Bool::True
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
 
 - id     0043
   from   inventory:Failure.^methods
@@ -383,7 +383,7 @@ cols     (try { die "x" } // $!)
   code   ((try { die "x" } // $!)).sum
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-3.14.0+20260816 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
 
 - id     0044
   from   inventory:Failure.^methods
@@ -391,4 +391,4 @@ cols     (try { die "x" } // $!)
   code   ((try { die "x" } // $!)).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
-  oracle rakupp-3.14.0+20260816 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::ControlFlow

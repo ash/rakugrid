@@ -8,1341 +8,1341 @@ kind     parse grid — compiled with -c, never run
   code   my $x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0002
   from   syntax:my $
   code   my Int $x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0003
   from   syntax:my $!
   code   my $!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-16.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
 
 - id     0004
   from   syntax:my $!
   code   my Int $!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-17.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
 
 - id     0005
   from   syntax:my $.
   code   my $.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0006
   from   syntax:my $.
   code   my Int $.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0007
   from   syntax:my $*
   code   my $*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0008
   from   syntax:my $*
   code   my Int $*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0009
   from   syntax:my $?
   code   my $?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-22.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
 
 - id     0010
   from   syntax:my $?
   code   my Int $?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-23.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
 
 - id     0011
   from   syntax:my $^
   code   my $^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-24.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0012
   from   syntax:my $^
   code   my Int $^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-25.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0013
   from   syntax:my @
   code   my @x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0014
   from   syntax:my @
   code   my Int @x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0015
   from   syntax:my @!
   code   my @!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-28.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
 
 - id     0016
   from   syntax:my @!
   code   my Int @!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-29.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
 
 - id     0017
   from   syntax:my @.
   code   my @.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0018
   from   syntax:my @.
   code   my Int @.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0019
   from   syntax:my @*
   code   my @*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0020
   from   syntax:my @*
   code   my Int @*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0021
   from   syntax:my @?
   code   my @?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-34.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
 
 - id     0022
   from   syntax:my @?
   code   my Int @?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-35.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
 
 - id     0023
   from   syntax:my @^
   code   my @^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-36.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0024
   from   syntax:my @^
   code   my Int @^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-37.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0025
   from   syntax:my %
   code   my %x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0026
   from   syntax:my %
   code   my Int %x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0027
   from   syntax:my %!
   code   my %!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-40.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
 
 - id     0028
   from   syntax:my %!
   code   my Int %!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-41.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
 
 - id     0029
   from   syntax:my %.
   code   my %.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0030
   from   syntax:my %.
   code   my Int %.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0031
   from   syntax:my %*
   code   my %*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0032
   from   syntax:my %*
   code   my Int %*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0033
   from   syntax:my %?
   code   my %?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-46.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
 
 - id     0034
   from   syntax:my %?
   code   my Int %?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-47.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
 
 - id     0035
   from   syntax:my %^
   code   my %^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-48.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0036
   from   syntax:my %^
   code   my Int %^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-49.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0037
   from   syntax:my &
   code   my &x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0038
   from   syntax:my &
   code   my Int &x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0039
   from   syntax:my &!
   code   my &!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-52.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
 
 - id     0040
   from   syntax:my &!
   code   my Int &!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-53.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'my'-scoped variable
 
 - id     0041
   from   syntax:my &.
   code   my &.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0042
   from   syntax:my &.
   code   my Int &.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0043
   from   syntax:my &*
   code   my &*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0044
   from   syntax:my &*
   code   my Int &*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0045
   from   syntax:my &?
   code   my &?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-58.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
 
 - id     0046
   from   syntax:my &?
   code   my Int &?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-59.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'my'-scoped variable
 
 - id     0047
   from   syntax:my &^
   code   my &^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-60.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0048
   from   syntax:my &^
   code   my Int &^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-61.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0049
   from   syntax:our $
   code   our $x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0050
   from   syntax:our $
   code   our Int $x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-63.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0051
   from   syntax:our $!
   code   our $!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-64.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
 
 - id     0052
   from   syntax:our $!
   code   our Int $!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-65.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
 
 - id     0053
   from   syntax:our $.
   code   our $.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0054
   from   syntax:our $.
   code   our Int $.x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-67.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0055
   from   syntax:our $*
   code   our $*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0056
   from   syntax:our $*
   code   our Int $*x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-69.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0057
   from   syntax:our $?
   code   our $?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-70.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
 
 - id     0058
   from   syntax:our $?
   code   our Int $?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-71.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
 
 - id     0059
   from   syntax:our $^
   code   our $^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-72.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0060
   from   syntax:our $^
   code   our Int $^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-73.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0061
   from   syntax:our @
   code   our @x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0062
   from   syntax:our @
   code   our Int @x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-75.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0063
   from   syntax:our @!
   code   our @!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-76.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
 
 - id     0064
   from   syntax:our @!
   code   our Int @!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-77.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
 
 - id     0065
   from   syntax:our @.
   code   our @.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0066
   from   syntax:our @.
   code   our Int @.x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-79.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0067
   from   syntax:our @*
   code   our @*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0068
   from   syntax:our @*
   code   our Int @*x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-81.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0069
   from   syntax:our @?
   code   our @?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-82.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
 
 - id     0070
   from   syntax:our @?
   code   our Int @?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-83.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
 
 - id     0071
   from   syntax:our @^
   code   our @^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-84.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0072
   from   syntax:our @^
   code   our Int @^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-85.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0073
   from   syntax:our %
   code   our %x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0074
   from   syntax:our %
   code   our Int %x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-87.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0075
   from   syntax:our %!
   code   our %!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-88.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
 
 - id     0076
   from   syntax:our %!
   code   our Int %!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-89.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
 
 - id     0077
   from   syntax:our %.
   code   our %.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0078
   from   syntax:our %.
   code   our Int %.x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-91.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0079
   from   syntax:our %*
   code   our %*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0080
   from   syntax:our %*
   code   our Int %*x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-93.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0081
   from   syntax:our %?
   code   our %?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-94.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
 
 - id     0082
   from   syntax:our %?
   code   our Int %?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-95.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
 
 - id     0083
   from   syntax:our %^
   code   our %^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-96.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0084
   from   syntax:our %^
   code   our Int %^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-97.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0085
   from   syntax:our &
   code   our &x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0086
   from   syntax:our &
   code   our Int &x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-99.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0087
   from   syntax:our &!
   code   our &!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-100.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
 
 - id     0088
   from   syntax:our &!
   code   our Int &!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-101.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'our'-scoped variable
 
 - id     0089
   from   syntax:our &.
   code   our &.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0090
   from   syntax:our &.
   code   our Int &.x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-103.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0091
   from   syntax:our &*
   code   our &*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0092
   from   syntax:our &*
   code   our Int &*x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-105.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0093
   from   syntax:our &?
   code   our &?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-106.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
 
 - id     0094
   from   syntax:our &?
   code   our Int &?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-107.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'our'-scoped variable
 
 - id     0095
   from   syntax:our &^
   code   our &^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-108.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0096
   from   syntax:our &^
   code   our Int &^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-109.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0097
   from   syntax:state $
   code   state $x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0098
   from   syntax:state $
   code   state Int $x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0099
   from   syntax:state $!
   code   state $!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-112.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
 
 - id     0100
   from   syntax:state $!
   code   state Int $!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-113.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
 
 - id     0101
   from   syntax:state $.
   code   state $.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0102
   from   syntax:state $.
   code   state Int $.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0103
   from   syntax:state $*
   code   state $*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0104
   from   syntax:state $*
   code   state Int $*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0105
   from   syntax:state $?
   code   state $?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-118.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
 
 - id     0106
   from   syntax:state $?
   code   state Int $?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-119.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
 
 - id     0107
   from   syntax:state $^
   code   state $^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-120.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0108
   from   syntax:state $^
   code   state Int $^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-121.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0109
   from   syntax:state @
   code   state @x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0110
   from   syntax:state @
   code   state Int @x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0111
   from   syntax:state @!
   code   state @!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-124.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
 
 - id     0112
   from   syntax:state @!
   code   state Int @!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-125.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
 
 - id     0113
   from   syntax:state @.
   code   state @.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0114
   from   syntax:state @.
   code   state Int @.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0115
   from   syntax:state @*
   code   state @*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0116
   from   syntax:state @*
   code   state Int @*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0117
   from   syntax:state @?
   code   state @?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-130.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
 
 - id     0118
   from   syntax:state @?
   code   state Int @?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-131.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
 
 - id     0119
   from   syntax:state @^
   code   state @^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-132.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0120
   from   syntax:state @^
   code   state Int @^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-133.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0121
   from   syntax:state %
   code   state %x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0122
   from   syntax:state %
   code   state Int %x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0123
   from   syntax:state %!
   code   state %!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-136.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
 
 - id     0124
   from   syntax:state %!
   code   state Int %!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-137.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
 
 - id     0125
   from   syntax:state %.
   code   state %.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0126
   from   syntax:state %.
   code   state Int %.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0127
   from   syntax:state %*
   code   state %*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0128
   from   syntax:state %*
   code   state Int %*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0129
   from   syntax:state %?
   code   state %?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-142.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
 
 - id     0130
   from   syntax:state %?
   code   state Int %?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-143.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
 
 - id     0131
   from   syntax:state %^
   code   state %^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-144.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0132
   from   syntax:state %^
   code   state Int %^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-145.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0133
   from   syntax:state &
   code   state &x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0134
   from   syntax:state &
   code   state Int &x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0135
   from   syntax:state &!
   code   state &!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-148.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
 
 - id     0136
   from   syntax:state &!
   code   state Int &!x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-149.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '!' on a 'state'-scoped variable
 
 - id     0137
   from   syntax:state &.
   code   state &.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0138
   from   syntax:state &.
   code   state Int &.x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0139
   from   syntax:state &*
   code   state &*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0140
   from   syntax:state &*
   code   state Int &*x;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0141
   from   syntax:state &?
   code   state &?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-154.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
 
 - id     0142
   from   syntax:state &?
   code   state Int &?x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-155.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: Cannot use twigil '?' on a 'state'-scoped variable
 
 - id     0143
   from   syntax:state &^
   code   state &^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-156.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0144
   from   syntax:state &^
   code   state Int &^x;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-157.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0145
   from   syntax:has $
   code   class C { has $x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0146
   from   syntax:has $
   code   class C { has Int $x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0147
   from   syntax:has $!
   code   class C { has $!x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0148
   from   syntax:has $!
   code   class C { has Int $!x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0149
   from   syntax:has $.
   code   class C { has $.x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0150
   from   syntax:has $.
   code   class C { has Int $.x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0151
   from   syntax:has $*
   code   class C { has $*x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0152
   from   syntax:has $*
   code   class C { has Int $*x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0153
   from   syntax:has $?
   code   class C { has $?x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-166.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0154
   from   syntax:has $?
   code   class C { has Int $?x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-167.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0155
   from   syntax:has $^
   code   class C { has $^x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-168.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0156
   from   syntax:has $^
   code   class C { has Int $^x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-169.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0157
   from   syntax:has @
   code   class C { has @x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0158
   from   syntax:has @
   code   class C { has Int @x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0159
   from   syntax:has @!
   code   class C { has @!x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0160
   from   syntax:has @!
   code   class C { has Int @!x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0161
   from   syntax:has @.
   code   class C { has @.x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0162
   from   syntax:has @.
   code   class C { has Int @.x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0163
   from   syntax:has @*
   code   class C { has @*x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0164
   from   syntax:has @*
   code   class C { has Int @*x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0165
   from   syntax:has @?
   code   class C { has @?x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-178.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0166
   from   syntax:has @?
   code   class C { has Int @?x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-179.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0167
   from   syntax:has @^
   code   class C { has @^x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-180.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0168
   from   syntax:has @^
   code   class C { has Int @^x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-181.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0169
   from   syntax:has %
   code   class C { has %x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0170
   from   syntax:has %
   code   class C { has Int %x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0171
   from   syntax:has %!
   code   class C { has %!x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0172
   from   syntax:has %!
   code   class C { has Int %!x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0173
   from   syntax:has %.
   code   class C { has %.x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0174
   from   syntax:has %.
   code   class C { has Int %.x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0175
   from   syntax:has %*
   code   class C { has %*x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0176
   from   syntax:has %*
   code   class C { has Int %*x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0177
   from   syntax:has %?
   code   class C { has %?x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-190.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0178
   from   syntax:has %?
   code   class C { has Int %?x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-191.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0179
   from   syntax:has %^
   code   class C { has %^x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-192.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0180
   from   syntax:has %^
   code   class C { has Int %^x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-193.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0181
   from   syntax:has &
   code   class C { has &x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0182
   from   syntax:has &
   code   class C { has Int &x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0183
   from   syntax:has &!
   code   class C { has &!x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0184
   from   syntax:has &!
   code   class C { has Int &!x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0185
   from   syntax:has &.
   code   class C { has &.x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0186
   from   syntax:has &.
   code   class C { has Int &.x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0187
   from   syntax:has &*
   code   class C { has &*x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0188
   from   syntax:has &*
   code   class C { has Int &*x; }
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0189
   from   syntax:has &?
   code   class C { has &?x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-202.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0190
   from   syntax:has &?
   code   class C { has Int &?x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-203.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0191
   from   syntax:has &^
   code   class C { has &^x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-204.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0192
   from   syntax:has &^
   code   class C { has Int &^x; }
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-205.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles

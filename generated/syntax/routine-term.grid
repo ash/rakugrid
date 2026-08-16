@@ -8,67 +8,67 @@ kind     parse grid — compiled with -c, never run
   code   my $x = &infix:<+>;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0002
   from   syntax:&prefix:<->
   code   my $x = &prefix:<->;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0003
   from   syntax:&postfix:<++>
   code   my $x = &postfix:<++>;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0004
   from   syntax:&circumfix:<[ ]>
   code   my $x = &circumfix:<[ ]>;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0005
   from   syntax:&postcircumfix:<[ ]>
   code   my $x = &postcircumfix:<[ ]>;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0006
   from   syntax:&infix:«+»
   code   my $x = &infix:«+»;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0007
   from   syntax:&term:<foo>
   code   my $x = &term:<foo>;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-373.raku
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0008
   from   syntax:&infix:<does>
   code   my $x = &infix:<does>;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0009
   from   syntax:&infix:<+>(1,2)
   code   my $x = &infix:<+>(1,2);
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0010
   from   syntax:(&infix:<+>)(1,2)
   code   my $x = (&infix:<+>)(1,2);
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles

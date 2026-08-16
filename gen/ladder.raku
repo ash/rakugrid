@@ -14,6 +14,8 @@
 # reads as `1/(2**2)` and the cell would silently test something else.
 
 my $ROOT = $*PROGRAM.IO.absolute.IO.parent.parent;
+my $TMP-DIR = $ROOT.add('tmp');
+$TMP-DIR.mkdir unless $TMP-DIR.e;
 
 constant %LADDERS =
     # the numeric corners: both bignum boundaries, the Rat→Num boundary,
@@ -215,10 +217,46 @@ constant $PROBE = q:to/END/;
     }
     END
 
+sub cache-load($id) {
+    my $f = $TMP-DIR.add("ladder-cache-$id.tsv");
+    return {} unless $f.e;
+    my %c;
+    for $f.slurp.lines -> $l {
+        my @p = $l.split("\t");
+        next unless @p >= 3;
+        %c{@p[0]} = { value => @p[1], type => @p[2], msg => (@p[3] // '') };
+    }
+    return %c;
+}
+
+sub cache-save($id, %seen) {
+    my @lines;
+    for %seen.keys.sort -> $k {
+        @lines.push: join("\t", $k, %seen{$k}<value>, %seen{$k}<type>, %seen{$k}<msg> // '');
+    }
+    $TMP-DIR.add("ladder-cache-$id.tsv").spurt(@lines.join("\n") ~ "\n");
+}
+
 sub engine-id($cmd) {
     my $p = run($cmd, '-e', 'print $*RAKU.compiler.name', :out, :err);
     my $name = $p.out.slurp(:close).trim;
     $p.err.slurp(:close);
+
+    # Prefer what the engine says about its BUILD over what it says about its
+    # version. A development build changes behaviour without changing its
+    # version, and `$*RAKU.compiler.build` is a git describe — tag, distance,
+    # commit, and a `-dirty` flag when the tree was not clean. That last part
+    # matters: it says the build is not reproducible from the commit alone, so
+    # an observation recorded against it should be read with that in mind.
+    my $b = run($cmd, '-e', 'print (try $*RAKU.compiler.build) // ""', :out, :err);
+    my $build = $b.out.slurp(:close).trim;
+    $b.err.slurp(:close);
+
+    my $short = $name.contains('Raku++') || $name.lc.contains('rakupp')
+        ?? 'rakupp'
+        !! ($name || 'unknown');
+
+    return "$short-$build" if $build;
 
     if $name.contains('Raku++') || $name.lc.contains('rakupp') {
         # rakupp reports Rakudo's version through $*RAKU; take its own instead.
@@ -393,10 +431,24 @@ for @SPECS -> %spec {
 say "# { @SPECS.elems } atoms, { @all.elems } distinct expressions";
 
 my @ids = @engines.map({ engine-id($_) });
+# Incremental, so re-measuring one engine costs nothing for the other. The
+# reference does not move between runs; a development build of the engine under
+# test moves every morning, and only its cells need re-probing.
+my @ids-early = @engines.map({ engine-id($_) });
 my @obs;
-for @engines -> $e {
-    say "# probing $e …";
-    @obs.push: observe($e, @all, $tmp);
+for ^@engines -> $e {
+    my %seen = cache-load(@ids-early[$e]);
+    my @todo = @all.grep({ !%seen{$_} });
+    if !@todo {
+        say "# all { @all.elems } cells already on record for { @ids-early[$e] }";
+        @obs.push: %seen;
+        next;
+    }
+    say "# probing { @ids-early[$e] }: { @todo.elems } new of { @all.elems } …";
+    my %fresh = observe(@engines[$e], @todo, $tmp);
+    for %fresh.keys -> $k { %seen{$k} = %fresh{$k} }
+    cache-save(@ids-early[$e], %seen);
+    @obs.push: %seen;
 }
 my $ref = @obs[0];
 
@@ -424,8 +476,14 @@ if @candidates {
     say "#   $overturned were EVAL artefacts, not compile failures" if $overturned;
 }
 
-say "# re-probing { @engines[0] } to check the observations reproduce …";
-my %again = observe(@engines[0], @all, $tmp);
+my %again = cache-load(@ids-early[0] ~ '-again');
+my @re = @all.grep({ !%again{$_} });
+if @re {
+    say "# re-probing { @ids-early[0] }: { @re.elems } cells, to check the observations reproduce …";
+    my %fresh = observe(@engines[0], @re, $tmp);
+    for %fresh.keys -> $k { %again{$k} = %fresh{$k} }
+    cache-save(@ids-early[0] ~ '-again', %again);
+}
 for @candidates -> $expr {
     %again{$expr} = @obs[0]{$expr};      # already confirmed against a real file
 }

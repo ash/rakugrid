@@ -8,81 +8,81 @@ kind     parse grid — compiled with -c, never run
   code   my $x; $x = 1 if 1;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0002
   from   syntax:unless 0
   code   my $x; $x = 1 unless 0;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0003
   from   syntax:while 0
   code   my $x; $x = 1 while 0;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0004
   from   syntax:until 1
   code   my $x; $x = 1 until 1;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0005
   from   syntax:for 1..2
   code   my $x; $x = 1 for 1..2;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0006
   from   syntax:given 1
   code   my $x; $x = 1 given 1;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0007
   from   syntax:with 1
   code   my $x; $x = 1 with 1;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0008
   from   syntax:without Nil
   code   my $x; $x = 1 without Nil;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0009
   from   syntax:if 1 for 1..2
   code   my $x; $x = 1 if 1 for 1..2;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0010
   from   syntax:for 1..2 if 1
   code   my $x; $x = 1 for 1..2 if 1;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-432.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: expected { (got ';')
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: expected { (got ';')
 
 - id     0011
   from   syntax:when 1
   code   my $x; $x = 1 when 1;
   parses yes
   oracle rakudo-2026.07 → compiles
-  oracle rakupp-3.14.0+20260816 → compiles
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → compiles
 
 - id     0012
   from   syntax:orwith 1
   code   my $x; $x = 1 orwith 1;
   no-parse the reference rejects this spelling
   oracle rakudo-2026.07 → rejected: ===SORRY!=== Error while compiling /Users/ash/rakugrid/tmp/frag-434.raku
-  oracle rakupp-3.14.0+20260816 → rejected: ===SORRY!=== Parse error at line 1: expected { (got ';')
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → rejected: ===SORRY!=== Parse error at line 1: expected { (got ';')

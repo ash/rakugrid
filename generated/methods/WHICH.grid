@@ -11,7 +11,7 @@ ladder   mixed
   is     "Int|0"
   type   Str
   oracle rakudo-2026.07 → "Int|0"
-  oracle rakupp-3.14.0 → "Int|0"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "Int|0"
 
 - id     0002
   from   ladder:mixed
@@ -20,7 +20,7 @@ ladder   mixed
   is     "Int|1"
   type   Str
   oracle rakudo-2026.07 → "Int|1"
-  oracle rakupp-3.14.0 → "Int|1"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "Int|1"
 
 - id     0003
   from   ladder:mixed
@@ -29,7 +29,7 @@ ladder   mixed
   is     "Int|-1"
   type   Str
   oracle rakudo-2026.07 → "Int|-1"
-  oracle rakupp-3.14.0 → "Int|-1"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "Int|-1"
 
 - id     0004
   from   ladder:mixed
@@ -38,7 +38,7 @@ ladder   mixed
   is     "Num|0"
   type   Str
   oracle rakudo-2026.07 → "Num|0"
-  oracle rakupp-3.14.0 → "Num|0"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "Num|0"
 
 - id     0005
   from   ladder:mixed
@@ -47,7 +47,7 @@ ladder   mixed
   is     "Num|NaN"
   type   Str
   oracle rakudo-2026.07 → "Num|NaN"
-  oracle rakupp-3.14.0 → "Num|NaN"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "Num|NaN"
 
 - id     0006
   from   ladder:mixed
@@ -56,7 +56,7 @@ ladder   mixed
   is     "Str|"
   type   Str
   oracle rakudo-2026.07 → "Str|"
-  oracle rakupp-3.14.0 → "Str|"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "Str|"
 
 - id     0007
   from   ladder:mixed
@@ -65,7 +65,7 @@ ladder   mixed
   is     "Str|0"
   type   Str
   oracle rakudo-2026.07 → "Str|0"
-  oracle rakupp-3.14.0 → "Str|0"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "Str|0"
 
 - id     0008
   from   ladder:mixed
@@ -74,7 +74,7 @@ ladder   mixed
   is     "Str|a"
   type   Str
   oracle rakudo-2026.07 → "Str|a"
-  oracle rakupp-3.14.0 → "Str|a"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "Str|a"
 
 - id     0009
   from   ladder:mixed
@@ -83,7 +83,7 @@ ladder   mixed
   is     "Bool|1"
   type   Str
   oracle rakudo-2026.07 → "Bool|1"
-  oracle rakupp-3.14.0 → "Bool|1"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "Bool|1"
 
 - id     0010
   from   ladder:mixed
@@ -92,16 +92,16 @@ ladder   mixed
   is     "Bool|0"
   type   Str
   oracle rakudo-2026.07 → "Bool|0"
-  oracle rakupp-3.14.0 → "Bool|0"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "Bool|0"
 
 - id     0011
   from   ladder:mixed
   cell   Nil
   code   (Nil).WHICH.Str
-  is     "Nil|U6292419371936"
+  is     "Nil|U4411387274144"
   type   Str
-  oracle rakudo-2026.07 → "Nil|U6292419371936"
-  oracle rakupp-3.14.0 → "Nil|"
+  oracle rakudo-2026.07 → "Nil|U4411387274144"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "Nil|"
   verdict disputed
   why    the reference gives a different answer on two identical runs, so there is nothing stable to assert — typically an address inside .WHICH or an unordered container
   ruled  2026-08-14 against rakudo-2026.07
@@ -110,10 +110,10 @@ ladder   mixed
   from   ladder:mixed
   cell   Any
   code   (Any).WHICH.Str
-  is     "Any|U6292419371384"
+  is     "Any|U4411387273592"
   type   Str
-  oracle rakudo-2026.07 → "Any|U6292419371384"
-  oracle rakupp-3.14.0 → "Any|"
+  oracle rakudo-2026.07 → "Any|U4411387273592"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "Any|"
   verdict disputed
   why    the reference gives a different answer on two identical runs, so there is nothing stable to assert — typically an address inside .WHICH or an unordered container
   ruled  2026-08-14 against rakudo-2026.07
@@ -122,10 +122,10 @@ ladder   mixed
   from   ladder:mixed
   cell   ()
   code   (()).WHICH.Str
-  is     "List|6293233354128"
+  is     "List|4412199718944"
   type   Str
-  oracle rakudo-2026.07 → "List|6293233354128"
-  oracle rakupp-3.14.0 → "List|"
+  oracle rakudo-2026.07 → "List|4412199718944"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "List|"
   verdict disputed
   why    the reference gives a different answer on two identical runs, so there is nothing stable to assert — typically an address inside .WHICH or an unordered container
   ruled  2026-08-14 against rakudo-2026.07
@@ -134,10 +134,10 @@ ladder   mixed
   from   ladder:mixed
   cell   (1,)
   code   ((1,)).WHICH.Str
-  is     "List|6293233357632"
+  is     "List|4412199722448"
   type   Str
-  oracle rakudo-2026.07 → "List|6293233357632"
-  oracle rakupp-3.14.0 → "List|1"
+  oracle rakudo-2026.07 → "List|4412199722448"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "List|1"
   verdict disputed
   why    the reference gives a different answer on two identical runs, so there is nothing stable to assert — typically an address inside .WHICH or an unordered container
   ruled  2026-08-14 against rakudo-2026.07
@@ -146,10 +146,10 @@ ladder   mixed
   from   ladder:mixed
   cell   {}
   code   ({}).WHICH.Str
-  is     "Hash|6293233361280"
+  is     "Hash|4412199726096"
   type   Str
-  oracle rakudo-2026.07 → "Hash|6293233361280"
-  oracle rakupp-3.14.0 → "Hash|"
+  oracle rakudo-2026.07 → "Hash|4412199726096"
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → "Hash|"
   verdict disputed
   why    the reference gives a different answer on two identical runs, so there is nothing stable to assert — typically an address inside .WHICH or an unordered container
   ruled  2026-08-14 against rakudo-2026.07
