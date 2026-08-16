@@ -91,7 +91,7 @@ from, but nothing in the suite depends on it.
 | `oracle/` | frozen oracle snapshots, one per reference-implementation version |
 | `adjudications/` | signed rulings where `expect` diverges from `oracle` |
 | `lib/`, `bin/` | the harness, written in Raku |
-| `docs/` | [the plan](docs/PLAN.md), [the file format](docs/FORMAT.md) |
+| `docs/` | [the plan](docs/PLAN.md), [the file format](docs/FORMAT.md), [how the generators work](docs/GENERATORS.md) |
 
 ## Regenerating
 
@@ -107,7 +107,8 @@ rakupp gen/syntax.raku   --engines=raku,/path/to/rakupp
 ```
 
 `--engines` lists the implementations to record observations from; the first is
-the reference. Observations are cached per implementation under `tmp/`, so
+the reference. [docs/GENERATORS.md](docs/GENERATORS.md) explains how they work
+and why each safeguard is there. Observations are cached per implementation under `tmp/`, so
 widening a type table or a ladder costs only the new cells. Keep `--jobs` low if
 you are using the machine — the probes are CPU-bound.
 

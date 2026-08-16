@@ -2,37 +2,22 @@ atom     methods/Mix
 source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
-axes     ATTRIBUTE-new | Bool | CREATE | Capture | DEFINITE | HOW | INSTANTIATE-GENERIC | Int | Map | Num | Numeric | OBJECTIFIER | POPULATE | RAW-HASH | REPR | Real | VAR | WHAT | WHERE | WHICHIFY | WHO | all | any | bless | cache | can | chrs | default | does | is-generic | item | join | keyof | lazy-if | nl-out | none | not | of | one | reverse | self | so | sum | take | total
-cols     mix(1,1,2) | mix()
+axes     Bool | Capture | DEFINITE | HOW | Int | Map | Num | Numeric | REPR | Real | VAR | WHAT | WHO | all | any | bless | cache | can | chrs | default | does | is-generic | item | join | keyof | lazy-if | nl-out | none | not | of | one | reverse | self | so | sum | take | total
+cols     mix(1,1) | mix()
 
 - id     0001
   from   inventory:Mix.^methods
-  cell   ATTRIBUTE-new | mix(1,1,2)
-  code   (mix(1,1,2)).ATTRIBUTE-new
-  is     ().Mix
-  type   Mix
-  oracle rakudo-2026.07 → ().Mix
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0002
-  from   inventory:Mix.^methods
-  cell   ATTRIBUTE-new | mix()
-  code   (mix()).ATTRIBUTE-new
-  is     ().Mix
-  type   Mix
-  oracle rakudo-2026.07 → ().Mix
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0003
-  from   inventory:Mix.^methods
-  cell   Bool | mix(1,1,2)
-  code   (mix(1,1,2)).Bool
+  cell   Bool | mix(1,1)
+  code   (mix(1,1)).Bool
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0004
+- id     0002
   from   inventory:Mix.^methods
   cell   Bool | mix()
   code   (mix()).Bool
@@ -41,40 +26,19 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0005
+- id     0003
   from   inventory:Mix.^methods
-  cell   CREATE | mix(1,1,2)
-  code   (mix(1,1,2)).CREATE
-  is     UNRENDERABLE
-  type   Mix
-  oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference produced no usable answer for this cell
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0006
-  from   inventory:Mix.^methods
-  cell   CREATE | mix()
-  code   (mix()).CREATE
-  is     UNRENDERABLE
-  type   Mix
-  oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference produced no usable answer for this cell
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0007
-  from   inventory:Mix.^methods
-  cell   Capture | mix(1,1,2)
-  code   (mix(1,1,2)).Capture
-  is     \("1" => 2, "2" => 1)
+  cell   Capture | mix(1,1)
+  code   (mix(1,1)).Capture
+  is     \("1" => 2)
   type   Capture
-  oracle rakudo-2026.07 → \("1" => 2, "2" => 1)
-  oracle rakupp-3.14.0 → \(:1(2), :2(1))
+  oracle rakudo-2026.07 → \("1" => 2)
+  oracle rakupp-3.14.0 → \(:1(2))
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0008
+- id     0004
   from   inventory:Mix.^methods
   cell   Capture | mix()
   code   (mix()).Capture
@@ -83,16 +47,19 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → \()
   oracle rakupp-3.14.0 → \()
 
-- id     0009
+- id     0005
   from   inventory:Mix.^methods
-  cell   DEFINITE | mix(1,1,2)
-  code   (mix(1,1,2)).DEFINITE
+  cell   DEFINITE | mix(1,1)
+  code   (mix(1,1)).DEFINITE
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0010
+- id     0006
   from   inventory:Mix.^methods
   cell   DEFINITE | mix()
   code   (mix()).DEFINITE
@@ -101,10 +68,10 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0011
+- id     0007
   from   inventory:Mix.^methods
-  cell   HOW | mix(1,1,2)
-  code   (mix(1,1,2)).HOW
+  cell   HOW | mix(1,1)
+  code   (mix(1,1)).HOW
   is     UNRENDERABLE
   type   Perl6::Metamodel::ClassHOW+{<anon>}
   oracle rakudo-2026.07 → UNRENDERABLE
@@ -113,7 +80,7 @@ cols     mix(1,1,2) | mix()
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0012
+- id     0008
   from   inventory:Mix.^methods
   cell   HOW | mix()
   code   (mix()).HOW
@@ -125,96 +92,19 @@ cols     mix(1,1,2) | mix()
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0013
+- id     0009
   from   inventory:Mix.^methods
-  cell   INSTANTIATE-GENERIC(0) | mix(1,1,2)
-  code   (mix(1,1,2)).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0014
-  from   inventory:Mix.^methods
-  cell   INSTANTIATE-GENERIC(1) | mix(1,1,2)
-  code   (mix(1,1,2)).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0015
-  from   inventory:Mix.^methods
-  cell   INSTANTIATE-GENERIC(-1) | mix(1,1,2)
-  code   (mix(1,1,2)).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0016
-  from   inventory:Mix.^methods
-  cell   INSTANTIATE-GENERIC("a") | mix(1,1,2)
-  code   (mix(1,1,2)).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0017
-  from   inventory:Mix.^methods
-  cell   INSTANTIATE-GENERIC(Any) | mix(1,1,2)
-  code   (mix(1,1,2)).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0018
-  from   inventory:Mix.^methods
-  cell   INSTANTIATE-GENERIC(0) | mix()
-  code   (mix()).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0019
-  from   inventory:Mix.^methods
-  cell   INSTANTIATE-GENERIC(1) | mix()
-  code   (mix()).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0020
-  from   inventory:Mix.^methods
-  cell   INSTANTIATE-GENERIC(-1) | mix()
-  code   (mix()).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0021
-  from   inventory:Mix.^methods
-  cell   INSTANTIATE-GENERIC("a") | mix()
-  code   (mix()).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0022
-  from   inventory:Mix.^methods
-  cell   INSTANTIATE-GENERIC(Any) | mix()
-  code   (mix()).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0023
-  from   inventory:Mix.^methods
-  cell   Int | mix(1,1,2)
-  code   (mix(1,1,2)).Int
-  is     3
+  cell   Int | mix(1,1)
+  code   (mix(1,1)).Int
+  is     2
   type   Int
-  oracle rakudo-2026.07 → 3
-  oracle rakupp-3.14.0 → 3
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0024
+- id     0010
   from   inventory:Mix.^methods
   cell   Int | mix()
   code   (mix()).Int
@@ -223,16 +113,19 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0025
+- id     0011
   from   inventory:Mix.^methods
-  cell   Map | mix(1,1,2)
-  code   (mix(1,1,2)).Map
-  is     $(Map.new(("1" => 2,"2" => 1)))
+  cell   Map | mix(1,1)
+  code   (mix(1,1)).Map
+  is     $(Map.new(("1" => 2)))
   type   Map
-  oracle rakudo-2026.07 → $(Map.new(("1" => 2,"2" => 1)))
-  oracle rakupp-3.14.0 → Map.new(("1" => 2,"2" => 1))
+  oracle rakudo-2026.07 → $(Map.new(("1" => 2)))
+  oracle rakupp-3.14.0 → Map.new(("1" => 2))
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0026
+- id     0012
   from   inventory:Mix.^methods
   cell   Map | mix()
   code   (mix()).Map
@@ -241,16 +134,19 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → $(Map.new)
   oracle rakupp-3.14.0 → Map.new(())
 
-- id     0027
+- id     0013
   from   inventory:Mix.^methods
-  cell   Num | mix(1,1,2)
-  code   (mix(1,1,2)).Num
-  is     3e0
+  cell   Num | mix(1,1)
+  code   (mix(1,1)).Num
+  is     2e0
   type   Num
-  oracle rakudo-2026.07 → 3e0
-  oracle rakupp-3.14.0 → 3e0
+  oracle rakudo-2026.07 → 2e0
+  oracle rakupp-3.14.0 → 2e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0028
+- id     0014
   from   inventory:Mix.^methods
   cell   Num | mix()
   code   (mix()).Num
@@ -259,16 +155,19 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0029
+- id     0015
   from   inventory:Mix.^methods
-  cell   Numeric | mix(1,1,2)
-  code   (mix(1,1,2)).Numeric
-  is     3
+  cell   Numeric | mix(1,1)
+  code   (mix(1,1)).Numeric
+  is     2
   type   Int
-  oracle rakudo-2026.07 → 3
-  oracle rakupp-3.14.0 → 3e0
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0030
+- id     0016
   from   inventory:Mix.^methods
   cell   Numeric | mix()
   code   (mix()).Numeric
@@ -277,157 +176,19 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0031
+- id     0017
   from   inventory:Mix.^methods
-  cell   OBJECTIFIER | mix(1,1,2)
-  code   (mix(1,1,2)).OBJECTIFIER
-  is     -> $value { #`(Block|6107613240000) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> $value { #`(Block|6107613240000) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0032
-  from   inventory:Mix.^methods
-  cell   OBJECTIFIER | mix()
-  code   (mix()).OBJECTIFIER
-  is     -> $value { #`(Block|6107613240360) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> $value { #`(Block|6107613240360) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0033
-  from   inventory:Mix.^methods
-  cell   POPULATE(0) | mix(1,1,2)
-  code   (mix(1,1,2)).POPULATE(0)
-  is     (2=>1,1=>2).Mix
-  type   Mix
-  oracle rakudo-2026.07 → (2=>1,1=>2).Mix
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0034
-  from   inventory:Mix.^methods
-  cell   POPULATE(1) | mix(1,1,2)
-  code   (mix(1,1,2)).POPULATE(1)
-  is     (2=>1,1=>2).Mix
-  type   Mix
-  oracle rakudo-2026.07 → (2=>1,1=>2).Mix
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0035
-  from   inventory:Mix.^methods
-  cell   POPULATE(-1) | mix(1,1,2)
-  code   (mix(1,1,2)).POPULATE(-1)
-  is     (2=>1,1=>2).Mix
-  type   Mix
-  oracle rakudo-2026.07 → (2=>1,1=>2).Mix
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0036
-  from   inventory:Mix.^methods
-  cell   POPULATE("a") | mix(1,1,2)
-  code   (mix(1,1,2)).POPULATE("a")
-  is     (1=>2,2=>1).Mix
-  type   Mix
-  oracle rakudo-2026.07 → (1=>2,2=>1).Mix
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0037
-  from   inventory:Mix.^methods
-  cell   POPULATE(Any) | mix(1,1,2)
-  code   (mix(1,1,2)).POPULATE(Any)
-  is     (2=>1,1=>2).Mix
-  type   Mix
-  oracle rakudo-2026.07 → (2=>1,1=>2).Mix
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0038
-  from   inventory:Mix.^methods
-  cell   POPULATE(0) | mix()
-  code   (mix()).POPULATE(0)
-  is     mix()
-  type   Mix
-  oracle rakudo-2026.07 → mix()
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0039
-  from   inventory:Mix.^methods
-  cell   POPULATE(1) | mix()
-  code   (mix()).POPULATE(1)
-  is     mix()
-  type   Mix
-  oracle rakudo-2026.07 → mix()
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0040
-  from   inventory:Mix.^methods
-  cell   POPULATE(-1) | mix()
-  code   (mix()).POPULATE(-1)
-  is     mix()
-  type   Mix
-  oracle rakudo-2026.07 → mix()
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0041
-  from   inventory:Mix.^methods
-  cell   POPULATE("a") | mix()
-  code   (mix()).POPULATE("a")
-  is     mix()
-  type   Mix
-  oracle rakudo-2026.07 → mix()
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0042
-  from   inventory:Mix.^methods
-  cell   POPULATE(Any) | mix()
-  code   (mix()).POPULATE(Any)
-  is     mix()
-  type   Mix
-  oracle rakudo-2026.07 → mix()
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0043
-  from   inventory:Mix.^methods
-  cell   RAW-HASH | mix(1,1,2)
-  code   (mix(1,1,2)).RAW-HASH
-  is     Int|1
-  type   1
-  oracle rakudo-2026.07 → Int|1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0044
-  from   inventory:Mix.^methods
-  cell   RAW-HASH | mix()
-  code   (mix()).RAW-HASH
-  is     
-  type   Rakudo::Internals::IterationSet
-  oracle rakudo-2026.07 → 
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0045
-  from   inventory:Mix.^methods
-  cell   REPR | mix(1,1,2)
-  code   (mix(1,1,2)).REPR
+  cell   REPR | mix(1,1)
+  code   (mix(1,1)).REPR
   is     "P6opaque"
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0046
+- id     0018
   from   inventory:Mix.^methods
   cell   REPR | mix()
   code   (mix()).REPR
@@ -436,16 +197,19 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0047
+- id     0019
   from   inventory:Mix.^methods
-  cell   Real | mix(1,1,2)
-  code   (mix(1,1,2)).Real
-  is     3
+  cell   Real | mix(1,1)
+  code   (mix(1,1)).Real
+  is     2
   type   Int
-  oracle rakudo-2026.07 → 3
-  oracle rakupp-3.14.0 → 3e0
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0048
+- id     0020
   from   inventory:Mix.^methods
   cell   Real | mix()
   code   (mix()).Real
@@ -454,19 +218,19 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0049
+- id     0021
   from   inventory:Mix.^methods
-  cell   VAR | mix(1,1,2)
-  code   (mix(1,1,2)).VAR
-  is     (1=>2,2=>1).Mix
+  cell   VAR | mix(1,1)
+  code   (mix(1,1)).VAR
+  is     (1=>2).Mix
   type   Mix
-  oracle rakudo-2026.07 → (1=>2,2=>1).Mix
-  oracle rakupp-3.14.0 → (1=>2,2=>1).Mix
+  oracle rakudo-2026.07 → (1=>2).Mix
+  oracle rakupp-3.14.0 → (1=>2).Mix
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0050
+- id     0022
   from   inventory:Mix.^methods
   cell   VAR | mix()
   code   (mix()).VAR
@@ -475,16 +239,19 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → mix()
   oracle rakupp-3.14.0 → ().Mix
 
-- id     0051
+- id     0023
   from   inventory:Mix.^methods
-  cell   WHAT | mix(1,1,2)
-  code   (mix(1,1,2)).WHAT
+  cell   WHAT | mix(1,1)
+  code   (mix(1,1)).WHAT
   is     Mix
   type   Mix
   oracle rakudo-2026.07 → Mix
   oracle rakupp-3.14.0 → Mix
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0052
+- id     0024
   from   inventory:Mix.^methods
   cell   WHAT | mix()
   code   (mix()).WHAT
@@ -493,136 +260,19 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → Mix
   oracle rakupp-3.14.0 → Mix
 
-- id     0053
+- id     0025
   from   inventory:Mix.^methods
-  cell   WHERE | mix(1,1,2)
-  code   (mix(1,1,2)).WHERE
-  is     6182885847464
-  type   Int
-  oracle rakudo-2026.07 → 6182885847464
-  oracle rakupp-3.14.0 → 140512944229160
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0054
-  from   inventory:Mix.^methods
-  cell   WHERE | mix()
-  code   (mix()).WHERE
-  is     6182902554112
-  type   Int
-  oracle rakudo-2026.07 → 6182902554112
-  oracle rakupp-3.14.0 → 140512944229928
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0055
-  from   inventory:Mix.^methods
-  cell   WHICHIFY(0) | mix(1,1,2)
-  code   (mix(1,1,2)).WHICHIFY(0)
-  is     ValueObjAt.new("Int|0")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|0")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0056
-  from   inventory:Mix.^methods
-  cell   WHICHIFY(1) | mix(1,1,2)
-  code   (mix(1,1,2)).WHICHIFY(1)
-  is     ValueObjAt.new("Int|1")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|1")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0057
-  from   inventory:Mix.^methods
-  cell   WHICHIFY(-1) | mix(1,1,2)
-  code   (mix(1,1,2)).WHICHIFY(-1)
-  is     ValueObjAt.new("Int|-1")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|-1")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0058
-  from   inventory:Mix.^methods
-  cell   WHICHIFY("a") | mix(1,1,2)
-  code   (mix(1,1,2)).WHICHIFY("a")
-  is     ValueObjAt.new("Str|a")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Str|a")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0059
-  from   inventory:Mix.^methods
-  cell   WHICHIFY(Any) | mix(1,1,2)
-  code   (mix(1,1,2)).WHICHIFY(Any)
-  is     ValueObjAt.new("Any|U6182893511032")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Any|U6182893511032")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0060
-  from   inventory:Mix.^methods
-  cell   WHICHIFY(0) | mix()
-  code   (mix()).WHICHIFY(0)
-  is     ValueObjAt.new("Int|0")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|0")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0061
-  from   inventory:Mix.^methods
-  cell   WHICHIFY(1) | mix()
-  code   (mix()).WHICHIFY(1)
-  is     ValueObjAt.new("Int|1")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|1")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0062
-  from   inventory:Mix.^methods
-  cell   WHICHIFY(-1) | mix()
-  code   (mix()).WHICHIFY(-1)
-  is     ValueObjAt.new("Int|-1")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|-1")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0063
-  from   inventory:Mix.^methods
-  cell   WHICHIFY("a") | mix()
-  code   (mix()).WHICHIFY("a")
-  is     ValueObjAt.new("Str|a")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Str|a")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0064
-  from   inventory:Mix.^methods
-  cell   WHICHIFY(Any) | mix()
-  code   (mix()).WHICHIFY(Any)
-  is     ValueObjAt.new("Any|U6182893511032")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Any|U6182893511032")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0065
-  from   inventory:Mix.^methods
-  cell   WHO | mix(1,1,2)
-  code   (mix(1,1,2)).WHO
+  cell   WHO | mix(1,1)
+  code   (mix(1,1)).WHO
   is     ${}
   type   Stash
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0066
+- id     0026
   from   inventory:Mix.^methods
   cell   WHO | mix()
   code   (mix()).WHO
@@ -631,19 +281,19 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0067
+- id     0027
   from   inventory:Mix.^methods
-  cell   all | mix(1,1,2)
-  code   (mix(1,1,2)).all
-  is     all(2 => 1, 1 => 2)
+  cell   all | mix(1,1)
+  code   (mix(1,1)).all
+  is     all(1 => 2)
   type   Junction
-  oracle rakudo-2026.07 → all(2 => 1, 1 => 2)
-  oracle rakupp-3.14.0 → all(1 => 2, 2 => 1)
+  oracle rakudo-2026.07 → all(1 => 2)
+  oracle rakupp-3.14.0 → all(1 => 2)
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0068
+- id     0028
   from   inventory:Mix.^methods
   cell   all | mix()
   code   (mix()).all
@@ -652,16 +302,19 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → all()
   oracle rakupp-3.14.0 → all()
 
-- id     0069
+- id     0029
   from   inventory:Mix.^methods
-  cell   any | mix(1,1,2)
-  code   (mix(1,1,2)).any
-  is     any(1 => 2, 2 => 1)
+  cell   any | mix(1,1)
+  code   (mix(1,1)).any
+  is     any(1 => 2)
   type   Junction
-  oracle rakudo-2026.07 → any(1 => 2, 2 => 1)
-  oracle rakupp-3.14.0 → any(1 => 2, 2 => 1)
+  oracle rakudo-2026.07 → any(1 => 2)
+  oracle rakupp-3.14.0 → any(1 => 2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0070
+- id     0030
   from   inventory:Mix.^methods
   cell   any | mix()
   code   (mix()).any
@@ -670,10 +323,10 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → any()
   oracle rakupp-3.14.0 → any()
 
-- id     0071
+- id     0031
   from   inventory:Mix.^methods
-  cell   bless | mix(1,1,2)
-  code   (mix(1,1,2)).bless
+  cell   bless | mix(1,1)
+  code   (mix(1,1)).bless
   is     UNRENDERABLE
   type   Mix
   oracle rakudo-2026.07 → UNRENDERABLE
@@ -682,7 +335,7 @@ cols     mix(1,1,2) | mix()
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0072
+- id     0032
   from   inventory:Mix.^methods
   cell   bless | mix()
   code   (mix()).bless
@@ -694,16 +347,19 @@ cols     mix(1,1,2) | mix()
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0073
+- id     0033
   from   inventory:Mix.^methods
-  cell   cache | mix(1,1,2)
-  code   (mix(1,1,2)).cache
-  is     $(2 => 1, 1 => 2)
+  cell   cache | mix(1,1)
+  code   (mix(1,1)).cache
+  is     $(1 => 2,)
   type   List
-  oracle rakudo-2026.07 → $(2 => 1, 1 => 2)
-  oracle rakupp-3.14.0 → $(1 => 2, 2 => 1)
+  oracle rakudo-2026.07 → $(1 => 2,)
+  oracle rakupp-3.14.0 → $(1 => 2,)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0074
+- id     0034
   from   inventory:Mix.^methods
   cell   cache | mix()
   code   (mix()).cache
@@ -712,48 +368,63 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0075
+- id     0035
   from   inventory:Mix.^methods
-  cell   can(0) | mix(1,1,2)
-  code   (mix(1,1,2)).can(0)
+  cell   can(0) | mix(1,1)
+  code   (mix(1,1)).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0076
+- id     0036
   from   inventory:Mix.^methods
-  cell   can(1) | mix(1,1,2)
-  code   (mix(1,1,2)).can(1)
+  cell   can(1) | mix(1,1)
+  code   (mix(1,1)).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0077
+- id     0037
   from   inventory:Mix.^methods
-  cell   can(-1) | mix(1,1,2)
-  code   (mix(1,1,2)).can(-1)
+  cell   can(-1) | mix(1,1)
+  code   (mix(1,1)).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0078
+- id     0038
   from   inventory:Mix.^methods
-  cell   can("a") | mix(1,1,2)
-  code   (mix(1,1,2)).can("a")
+  cell   can("a") | mix(1,1)
+  code   (mix(1,1)).can("a")
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0079
+- id     0039
   from   inventory:Mix.^methods
-  cell   can(Any) | mix(1,1,2)
-  code   (mix(1,1,2)).can(Any)
+  cell   can(Any) | mix(1,1)
+  code   (mix(1,1)).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0080
+- id     0040
   from   inventory:Mix.^methods
   cell   can(0) | mix()
   code   (mix()).can(0)
@@ -761,7 +432,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0081
+- id     0041
   from   inventory:Mix.^methods
   cell   can(1) | mix()
   code   (mix()).can(1)
@@ -769,7 +440,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0082
+- id     0042
   from   inventory:Mix.^methods
   cell   can(-1) | mix()
   code   (mix()).can(-1)
@@ -777,7 +448,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0083
+- id     0043
   from   inventory:Mix.^methods
   cell   can("a") | mix()
   code   (mix()).can("a")
@@ -786,7 +457,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0084
+- id     0044
   from   inventory:Mix.^methods
   cell   can(Any) | mix()
   code   (mix()).can(Any)
@@ -794,15 +465,18 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0085
+- id     0045
   from   inventory:Mix.^methods
-  cell   chrs | mix(1,1,2)
-  code   (mix(1,1,2)).chrs
+  cell   chrs | mix(1,1)
+  code   (mix(1,1)).chrs
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → "\0\0"
+  oracle rakupp-3.14.0 → "\0"
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0086
+- id     0046
   from   inventory:Mix.^methods
   cell   chrs | mix()
   code   (mix()).chrs
@@ -810,16 +484,19 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0087
+- id     0047
   from   inventory:Mix.^methods
-  cell   default | mix(1,1,2)
-  code   (mix(1,1,2)).default
+  cell   default | mix(1,1)
+  code   (mix(1,1)).default
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0088
+- id     0048
   from   inventory:Mix.^methods
   cell   default | mix()
   code   (mix()).default
@@ -828,52 +505,67 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0089
+- id     0049
   from   inventory:Mix.^methods
-  cell   does(0) | mix(1,1,2)
-  code   (mix(1,1,2)).does(0)
+  cell   does(0) | mix(1,1)
+  code   (mix(1,1)).does(0)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0090
+- id     0050
   from   inventory:Mix.^methods
-  cell   does(1) | mix(1,1,2)
-  code   (mix(1,1,2)).does(1)
+  cell   does(1) | mix(1,1)
+  code   (mix(1,1)).does(1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0091
+- id     0051
   from   inventory:Mix.^methods
-  cell   does(-1) | mix(1,1,2)
-  code   (mix(1,1,2)).does(-1)
+  cell   does(-1) | mix(1,1)
+  code   (mix(1,1)).does(-1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0092
+- id     0052
   from   inventory:Mix.^methods
-  cell   does("a") | mix(1,1,2)
-  code   (mix(1,1,2)).does("a")
+  cell   does("a") | mix(1,1)
+  code   (mix(1,1)).does("a")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0093
+- id     0053
   from   inventory:Mix.^methods
-  cell   does(Any) | mix(1,1,2)
-  code   (mix(1,1,2)).does(Any)
+  cell   does(Any) | mix(1,1)
+  code   (mix(1,1)).does(Any)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0094
+- id     0054
   from   inventory:Mix.^methods
   cell   does(0) | mix()
   code   (mix()).does(0)
@@ -882,7 +574,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0095
+- id     0055
   from   inventory:Mix.^methods
   cell   does(1) | mix()
   code   (mix()).does(1)
@@ -891,7 +583,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0096
+- id     0056
   from   inventory:Mix.^methods
   cell   does(-1) | mix()
   code   (mix()).does(-1)
@@ -900,7 +592,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0097
+- id     0057
   from   inventory:Mix.^methods
   cell   does("a") | mix()
   code   (mix()).does("a")
@@ -909,7 +601,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0098
+- id     0058
   from   inventory:Mix.^methods
   cell   does(Any) | mix()
   code   (mix()).does(Any)
@@ -918,16 +610,19 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0099
+- id     0059
   from   inventory:Mix.^methods
-  cell   is-generic | mix(1,1,2)
-  code   (mix(1,1,2)).is-generic
+  cell   is-generic | mix(1,1)
+  code   (mix(1,1)).is-generic
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0100
+- id     0060
   from   inventory:Mix.^methods
   cell   is-generic | mix()
   code   (mix()).is-generic
@@ -936,19 +631,19 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0101
+- id     0061
   from   inventory:Mix.^methods
-  cell   item | mix(1,1,2)
-  code   (mix(1,1,2)).item
-  is     (2=>1,1=>2).Mix
+  cell   item | mix(1,1)
+  code   (mix(1,1)).item
+  is     (1=>2).Mix
   type   Mix
-  oracle rakudo-2026.07 → (2=>1,1=>2).Mix
-  oracle rakupp-3.14.0 → (1=>2,2=>1).Mix
+  oracle rakudo-2026.07 → (1=>2).Mix
+  oracle rakupp-3.14.0 → (1=>2).Mix
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0102
+- id     0062
   from   inventory:Mix.^methods
   cell   item | mix()
   code   (mix()).item
@@ -957,60 +652,51 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → mix()
   oracle rakupp-3.14.0 → ().Mix
 
-- id     0103
+- id     0063
   from   inventory:Mix.^methods
-  cell   join(0) | mix(1,1,2)
-  code   (mix(1,1,2)).join(0)
-  is     "2\t101\t2"
+  cell   join(0) | mix(1,1)
+  code   (mix(1,1)).join(0)
+  is     "1\t2"
   type   Str
-  oracle rakudo-2026.07 → "2\t101\t2"
-  oracle rakupp-3.14.0 → "1\t202\t1"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  oracle rakudo-2026.07 → "1\t2"
+  oracle rakupp-3.14.0 → "1\t2"
 
-- id     0104
+- id     0064
   from   inventory:Mix.^methods
-  cell   join(1) | mix(1,1,2)
-  code   (mix(1,1,2)).join(1)
-  is     "1\t212\t1"
+  cell   join(1) | mix(1,1)
+  code   (mix(1,1)).join(1)
+  is     "1\t2"
   type   Str
-  oracle rakudo-2026.07 → "1\t212\t1"
-  oracle rakupp-3.14.0 → "1\t212\t1"
+  oracle rakudo-2026.07 → "1\t2"
+  oracle rakupp-3.14.0 → "1\t2"
 
-- id     0105
+- id     0065
   from   inventory:Mix.^methods
-  cell   join(-1) | mix(1,1,2)
-  code   (mix(1,1,2)).join(-1)
-  is     "2\t1-11\t2"
+  cell   join(-1) | mix(1,1)
+  code   (mix(1,1)).join(-1)
+  is     "1\t2"
   type   Str
-  oracle rakudo-2026.07 → "2\t1-11\t2"
-  oracle rakupp-3.14.0 → "1\t2-12\t1"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  oracle rakudo-2026.07 → "1\t2"
+  oracle rakupp-3.14.0 → "1\t2"
 
-- id     0106
+- id     0066
   from   inventory:Mix.^methods
-  cell   join("a") | mix(1,1,2)
-  code   (mix(1,1,2)).join("a")
-  is     "1\t2a2\t1"
+  cell   join("a") | mix(1,1)
+  code   (mix(1,1)).join("a")
+  is     "1\t2"
   type   Str
-  oracle rakudo-2026.07 → "1\t2a2\t1"
-  oracle rakupp-3.14.0 → "1\t2a2\t1"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  oracle rakudo-2026.07 → "1\t2"
+  oracle rakupp-3.14.0 → "1\t2"
 
-- id     0107
+- id     0067
   from   inventory:Mix.^methods
-  cell   join(Any) | mix(1,1,2)
-  code   (mix(1,1,2)).join(Any)
+  cell   join(Any) | mix(1,1)
+  code   (mix(1,1)).join(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → "1\t22\t1"
+  oracle rakupp-3.14.0 → "1\t2"
 
-- id     0108
+- id     0068
   from   inventory:Mix.^methods
   cell   join(0) | mix()
   code   (mix()).join(0)
@@ -1019,7 +705,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0109
+- id     0069
   from   inventory:Mix.^methods
   cell   join(1) | mix()
   code   (mix()).join(1)
@@ -1028,7 +714,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0110
+- id     0070
   from   inventory:Mix.^methods
   cell   join(-1) | mix()
   code   (mix()).join(-1)
@@ -1037,7 +723,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0111
+- id     0071
   from   inventory:Mix.^methods
   cell   join("a") | mix()
   code   (mix()).join("a")
@@ -1046,7 +732,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0112
+- id     0072
   from   inventory:Mix.^methods
   cell   join(Any) | mix()
   code   (mix()).join(Any)
@@ -1054,16 +740,16 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ""
 
-- id     0113
+- id     0073
   from   inventory:Mix.^methods
-  cell   keyof | mix(1,1,2)
-  code   (mix(1,1,2)).keyof
+  cell   keyof | mix(1,1)
+  code   (mix(1,1)).keyof
   is     Mu
   type   Mu
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0114
+- id     0074
   from   inventory:Mix.^methods
   cell   keyof | mix()
   code   (mix()).keyof
@@ -1072,61 +758,52 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0115
+- id     0075
   from   inventory:Mix.^methods
-  cell   lazy-if(0) | mix(1,1,2)
-  code   (mix(1,1,2)).lazy-if(0)
-  is     (2=>1,1=>2).Mix
+  cell   lazy-if(0) | mix(1,1)
+  code   (mix(1,1)).lazy-if(0)
+  is     (1=>2).Mix
   type   Mix
-  oracle rakudo-2026.07 → (2=>1,1=>2).Mix
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0116
-  from   inventory:Mix.^methods
-  cell   lazy-if(1) | mix(1,1,2)
-  code   (mix(1,1,2)).lazy-if(1)
-  is     (1=>2,2=>1).Mix
-  type   Mix
-  oracle rakudo-2026.07 → (1=>2,2=>1).Mix
+  oracle rakudo-2026.07 → (1=>2).Mix
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0117
+- id     0076
   from   inventory:Mix.^methods
-  cell   lazy-if(-1) | mix(1,1,2)
-  code   (mix(1,1,2)).lazy-if(-1)
-  is     (2=>1,1=>2).Mix
+  cell   lazy-if(1) | mix(1,1)
+  code   (mix(1,1)).lazy-if(1)
+  is     (1=>2).Mix
   type   Mix
-  oracle rakudo-2026.07 → (2=>1,1=>2).Mix
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0118
-  from   inventory:Mix.^methods
-  cell   lazy-if("a") | mix(1,1,2)
-  code   (mix(1,1,2)).lazy-if("a")
-  is     (1=>2,2=>1).Mix
-  type   Mix
-  oracle rakudo-2026.07 → (1=>2,2=>1).Mix
+  oracle rakudo-2026.07 → (1=>2).Mix
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0119
+- id     0077
   from   inventory:Mix.^methods
-  cell   lazy-if(Any) | mix(1,1,2)
-  code   (mix(1,1,2)).lazy-if(Any)
-  is     (1=>2,2=>1).Mix
+  cell   lazy-if(-1) | mix(1,1)
+  code   (mix(1,1)).lazy-if(-1)
+  is     (1=>2).Mix
   type   Mix
-  oracle rakudo-2026.07 → (1=>2,2=>1).Mix
+  oracle rakudo-2026.07 → (1=>2).Mix
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0120
+- id     0078
+  from   inventory:Mix.^methods
+  cell   lazy-if("a") | mix(1,1)
+  code   (mix(1,1)).lazy-if("a")
+  is     (1=>2).Mix
+  type   Mix
+  oracle rakudo-2026.07 → (1=>2).Mix
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0079
+  from   inventory:Mix.^methods
+  cell   lazy-if(Any) | mix(1,1)
+  code   (mix(1,1)).lazy-if(Any)
+  is     (1=>2).Mix
+  type   Mix
+  oracle rakudo-2026.07 → (1=>2).Mix
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0080
   from   inventory:Mix.^methods
   cell   lazy-if(0) | mix()
   code   (mix()).lazy-if(0)
@@ -1135,7 +812,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → mix()
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0121
+- id     0081
   from   inventory:Mix.^methods
   cell   lazy-if(1) | mix()
   code   (mix()).lazy-if(1)
@@ -1144,7 +821,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → mix()
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0122
+- id     0082
   from   inventory:Mix.^methods
   cell   lazy-if(-1) | mix()
   code   (mix()).lazy-if(-1)
@@ -1153,7 +830,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → mix()
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0123
+- id     0083
   from   inventory:Mix.^methods
   cell   lazy-if("a") | mix()
   code   (mix()).lazy-if("a")
@@ -1162,7 +839,7 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → mix()
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0124
+- id     0084
   from   inventory:Mix.^methods
   cell   lazy-if(Any) | mix()
   code   (mix()).lazy-if(Any)
@@ -1171,16 +848,16 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → mix()
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0125
+- id     0085
   from   inventory:Mix.^methods
-  cell   nl-out | mix(1,1,2)
-  code   (mix(1,1,2)).nl-out
+  cell   nl-out | mix(1,1)
+  code   (mix(1,1)).nl-out
   is     "\n"
   type   Str
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0126
+- id     0086
   from   inventory:Mix.^methods
   cell   nl-out | mix()
   code   (mix()).nl-out
@@ -1189,16 +866,16 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0127
+- id     0087
   from   inventory:Mix.^methods
-  cell   none | mix(1,1,2)
-  code   (mix(1,1,2)).none
-  is     none(2 => 1, 1 => 2)
+  cell   none | mix(1,1)
+  code   (mix(1,1)).none
+  is     none(1 => 2)
   type   Junction
-  oracle rakudo-2026.07 → none(2 => 1, 1 => 2)
-  oracle rakupp-3.14.0 → none(1 => 2, 2 => 1)
+  oracle rakudo-2026.07 → none(1 => 2)
+  oracle rakupp-3.14.0 → none(1 => 2)
 
-- id     0128
+- id     0088
   from   inventory:Mix.^methods
   cell   none | mix()
   code   (mix()).none
@@ -1207,16 +884,16 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → none()
   oracle rakupp-3.14.0 → none()
 
-- id     0129
+- id     0089
   from   inventory:Mix.^methods
-  cell   not | mix(1,1,2)
-  code   (mix(1,1,2)).not
+  cell   not | mix(1,1)
+  code   (mix(1,1)).not
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0130
+- id     0090
   from   inventory:Mix.^methods
   cell   not | mix()
   code   (mix()).not
@@ -1225,16 +902,16 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0131
+- id     0091
   from   inventory:Mix.^methods
-  cell   of | mix(1,1,2)
-  code   (mix(1,1,2)).of
+  cell   of | mix(1,1)
+  code   (mix(1,1)).of
   is     Real
   type   Real
   oracle rakudo-2026.07 → Real
   oracle rakupp-3.14.0 → Real
 
-- id     0132
+- id     0092
   from   inventory:Mix.^methods
   cell   of | mix()
   code   (mix()).of
@@ -1243,16 +920,16 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → Real
   oracle rakupp-3.14.0 → Real
 
-- id     0133
+- id     0093
   from   inventory:Mix.^methods
-  cell   one | mix(1,1,2)
-  code   (mix(1,1,2)).one
-  is     one(1 => 2, 2 => 1)
+  cell   one | mix(1,1)
+  code   (mix(1,1)).one
+  is     one(1 => 2)
   type   Junction
-  oracle rakudo-2026.07 → one(1 => 2, 2 => 1)
-  oracle rakupp-3.14.0 → one(1 => 2, 2 => 1)
+  oracle rakudo-2026.07 → one(1 => 2)
+  oracle rakupp-3.14.0 → one(1 => 2)
 
-- id     0134
+- id     0094
   from   inventory:Mix.^methods
   cell   one | mix()
   code   (mix()).one
@@ -1261,19 +938,16 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → one()
   oracle rakupp-3.14.0 → one()
 
-- id     0135
+- id     0095
   from   inventory:Mix.^methods
-  cell   reverse | mix(1,1,2)
-  code   (mix(1,1,2)).reverse
-  is     $((2 => 1, 1 => 2).Seq)
+  cell   reverse | mix(1,1)
+  code   (mix(1,1)).reverse
+  is     $((1 => 2,).Seq)
   type   Seq
-  oracle rakudo-2026.07 → $((2 => 1, 1 => 2).Seq)
-  oracle rakupp-3.14.0 → $(2 => 1, 1 => 2).Seq
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  oracle rakudo-2026.07 → $((1 => 2,).Seq)
+  oracle rakupp-3.14.0 → $(1 => 2,).Seq
 
-- id     0136
+- id     0096
   from   inventory:Mix.^methods
   cell   reverse | mix()
   code   (mix()).reverse
@@ -1282,16 +956,16 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0137
+- id     0097
   from   inventory:Mix.^methods
-  cell   self | mix(1,1,2)
-  code   (mix(1,1,2)).self
-  is     (1=>2,2=>1).Mix
+  cell   self | mix(1,1)
+  code   (mix(1,1)).self
+  is     (1=>2).Mix
   type   Mix
-  oracle rakudo-2026.07 → (1=>2,2=>1).Mix
-  oracle rakupp-3.14.0 → (1=>2,2=>1).Mix
+  oracle rakudo-2026.07 → (1=>2).Mix
+  oracle rakupp-3.14.0 → (1=>2).Mix
 
-- id     0138
+- id     0098
   from   inventory:Mix.^methods
   cell   self | mix()
   code   (mix()).self
@@ -1300,16 +974,16 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → mix()
   oracle rakupp-3.14.0 → ().Mix
 
-- id     0139
+- id     0099
   from   inventory:Mix.^methods
-  cell   so | mix(1,1,2)
-  code   (mix(1,1,2)).so
+  cell   so | mix(1,1)
+  code   (mix(1,1)).so
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0140
+- id     0100
   from   inventory:Mix.^methods
   cell   so | mix()
   code   (mix()).so
@@ -1318,15 +992,15 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0141
+- id     0101
   from   inventory:Mix.^methods
-  cell   sum | mix(1,1,2)
-  code   (mix(1,1,2)).sum
+  cell   sum | mix(1,1)
+  code   (mix(1,1)).sum
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → 0e0
 
-- id     0142
+- id     0102
   from   inventory:Mix.^methods
   cell   sum | mix()
   code   (mix()).sum
@@ -1335,15 +1009,15 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0143
+- id     0103
   from   inventory:Mix.^methods
-  cell   take | mix(1,1,2)
-  code   (mix(1,1,2)).take
+  cell   take | mix(1,1)
+  code   (mix(1,1)).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
-  oracle rakupp-3.14.0 → (1=>2,2=>1).Mix
+  oracle rakupp-3.14.0 → (1=>2).Mix
 
-- id     0144
+- id     0104
   from   inventory:Mix.^methods
   cell   take | mix()
   code   (mix()).take
@@ -1351,16 +1025,16 @@ cols     mix(1,1,2) | mix()
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → ().Mix
 
-- id     0145
+- id     0105
   from   inventory:Mix.^methods
-  cell   total | mix(1,1,2)
-  code   (mix(1,1,2)).total
-  is     3
+  cell   total | mix(1,1)
+  code   (mix(1,1)).total
+  is     2
   type   Int
-  oracle rakudo-2026.07 → 3
-  oracle rakupp-3.14.0 → 3
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
 
-- id     0146
+- id     0106
   from   inventory:Mix.^methods
   cell   total | mix()
   code   (mix()).total

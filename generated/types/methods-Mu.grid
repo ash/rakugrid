@@ -2,7 +2,7 @@ atom     methods/Mu
 source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
-axes     Bool | CREATE | Capture | DEFINITE | HOW | INSTANTIATE-GENERIC | POPULATE | REPR | VAR | WHAT | WHERE | WHO | bless | can | does | is-generic | item | not | self | so | take
+axes     Bool | Capture | DEFINITE | HOW | REPR | VAR | WHAT | WHO | bless | can | does | is-generic | item | not | self | so | take
 cols     Mu
 
 - id     0001
@@ -16,15 +16,6 @@ cols     Mu
 
 - id     0002
   from   inventory:Mu.^methods
-  cell   CREATE | Mu
-  code   (Mu).CREATE
-  is     Mu.new
-  type   Mu
-  oracle rakudo-2026.07 → Mu.new
-  oracle rakupp-3.14.0 → Object
-
-- id     0003
-  from   inventory:Mu.^methods
   cell   Capture | Mu
   code   (Mu).Capture
   is     \()
@@ -32,7 +23,7 @@ cols     Mu
   oracle rakudo-2026.07 → \()
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0004
+- id     0003
   from   inventory:Mu.^methods
   cell   DEFINITE | Mu
   code   (Mu).DEFINITE
@@ -41,7 +32,7 @@ cols     Mu
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0005
+- id     0004
   from   inventory:Mu.^methods
   cell   HOW | Mu
   code   (Mu).HOW
@@ -50,87 +41,7 @@ cols     Mu
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0006
-  from   inventory:Mu.^methods
-  cell   INSTANTIATE-GENERIC(0) | Mu
-  code   (Mu).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0007
-  from   inventory:Mu.^methods
-  cell   INSTANTIATE-GENERIC(1) | Mu
-  code   (Mu).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0008
-  from   inventory:Mu.^methods
-  cell   INSTANTIATE-GENERIC(-1) | Mu
-  code   (Mu).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0009
-  from   inventory:Mu.^methods
-  cell   INSTANTIATE-GENERIC("a") | Mu
-  code   (Mu).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0010
-  from   inventory:Mu.^methods
-  cell   INSTANTIATE-GENERIC(Any) | Mu
-  code   (Mu).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0011
-  from   inventory:Mu.^methods
-  cell   POPULATE(0) | Mu
-  code   (Mu).POPULATE(0)
-  throws X::Parameter::InvalidConcreteness
-  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0012
-  from   inventory:Mu.^methods
-  cell   POPULATE(1) | Mu
-  code   (Mu).POPULATE(1)
-  throws X::Parameter::InvalidConcreteness
-  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0013
-  from   inventory:Mu.^methods
-  cell   POPULATE(-1) | Mu
-  code   (Mu).POPULATE(-1)
-  throws X::Parameter::InvalidConcreteness
-  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0014
-  from   inventory:Mu.^methods
-  cell   POPULATE("a") | Mu
-  code   (Mu).POPULATE("a")
-  throws X::Parameter::InvalidConcreteness
-  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0015
-  from   inventory:Mu.^methods
-  cell   POPULATE(Any) | Mu
-  code   (Mu).POPULATE(Any)
-  throws X::Parameter::InvalidConcreteness
-  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0016
+- id     0005
   from   inventory:Mu.^methods
   cell   REPR | Mu
   code   (Mu).REPR
@@ -139,7 +50,7 @@ cols     Mu
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0017
+- id     0006
   from   inventory:Mu.^methods
   cell   VAR | Mu
   code   (Mu).VAR
@@ -148,7 +59,7 @@ cols     Mu
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0018
+- id     0007
   from   inventory:Mu.^methods
   cell   WHAT | Mu
   code   (Mu).WHAT
@@ -157,19 +68,7 @@ cols     Mu
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0019
-  from   inventory:Mu.^methods
-  cell   WHERE | Mu
-  code   (Mu).WHERE
-  is     5861706294152
-  type   Int
-  oracle rakudo-2026.07 → 5861706294152
-  oracle rakupp-3.14.0 → 14110002976
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0020
+- id     0008
   from   inventory:Mu.^methods
   cell   WHO | Mu
   code   (Mu).WHO
@@ -178,7 +77,7 @@ cols     Mu
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0021
+- id     0009
   from   inventory:Mu.^methods
   cell   bless | Mu
   code   (Mu).bless
@@ -187,7 +86,7 @@ cols     Mu
   oracle rakudo-2026.07 → Mu.new
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0022
+- id     0010
   from   inventory:Mu.^methods
   cell   can(0) | Mu
   code   (Mu).can(0)
@@ -195,7 +94,7 @@ cols     Mu
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0023
+- id     0011
   from   inventory:Mu.^methods
   cell   can(1) | Mu
   code   (Mu).can(1)
@@ -203,7 +102,7 @@ cols     Mu
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0024
+- id     0012
   from   inventory:Mu.^methods
   cell   can(-1) | Mu
   code   (Mu).can(-1)
@@ -211,7 +110,7 @@ cols     Mu
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0025
+- id     0013
   from   inventory:Mu.^methods
   cell   can("a") | Mu
   code   (Mu).can("a")
@@ -220,7 +119,7 @@ cols     Mu
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0026
+- id     0014
   from   inventory:Mu.^methods
   cell   can(Any) | Mu
   code   (Mu).can(Any)
@@ -228,7 +127,7 @@ cols     Mu
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0027
+- id     0015
   from   inventory:Mu.^methods
   cell   does(0) | Mu
   code   (Mu).does(0)
@@ -237,7 +136,7 @@ cols     Mu
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0028
+- id     0016
   from   inventory:Mu.^methods
   cell   does(1) | Mu
   code   (Mu).does(1)
@@ -246,7 +145,7 @@ cols     Mu
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0029
+- id     0017
   from   inventory:Mu.^methods
   cell   does(-1) | Mu
   code   (Mu).does(-1)
@@ -255,7 +154,7 @@ cols     Mu
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0030
+- id     0018
   from   inventory:Mu.^methods
   cell   does("a") | Mu
   code   (Mu).does("a")
@@ -264,7 +163,7 @@ cols     Mu
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0031
+- id     0019
   from   inventory:Mu.^methods
   cell   does(Any) | Mu
   code   (Mu).does(Any)
@@ -273,7 +172,7 @@ cols     Mu
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0032
+- id     0020
   from   inventory:Mu.^methods
   cell   is-generic | Mu
   code   (Mu).is-generic
@@ -282,7 +181,7 @@ cols     Mu
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0033
+- id     0021
   from   inventory:Mu.^methods
   cell   item | Mu
   code   (Mu).item
@@ -291,7 +190,7 @@ cols     Mu
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0034
+- id     0022
   from   inventory:Mu.^methods
   cell   not | Mu
   code   (Mu).not
@@ -300,7 +199,7 @@ cols     Mu
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0035
+- id     0023
   from   inventory:Mu.^methods
   cell   self | Mu
   code   (Mu).self
@@ -309,7 +208,7 @@ cols     Mu
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0036
+- id     0024
   from   inventory:Mu.^methods
   cell   so | Mu
   code   (Mu).so
@@ -318,7 +217,7 @@ cols     Mu
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0037
+- id     0025
   from   inventory:Mu.^methods
   cell   take | Mu
   code   (Mu).take

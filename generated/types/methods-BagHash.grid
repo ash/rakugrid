@@ -2,13 +2,13 @@ atom     methods/BagHash
 source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
-axes     Bool | CREATE | Capture | DEFINITE | HOW | INSTANTIATE-GENERIC | Int | Map | Num | Numeric | OBJECTIFIER | POPULATE | RAW-HASH | REPR | Real | VAR | WHAT | WHERE | WHICHIFY | WHO | add | all | any | bless | cache | can | chrs | clone | default | does | is-generic | item | join | keyof | lazy-if | nl-out | none | not | of | one | remove | reverse | self | so | sum | take | total
-cols     BagHash.new(1,1,2) | BagHash.new
+axes     Bool | Capture | DEFINITE | HOW | Int | Map | Num | Numeric | REPR | Real | VAR | WHAT | WHO | add | all | any | bless | cache | can | chrs | clone | default | does | is-generic | item | join | keyof | lazy-if | nl-out | none | not | of | one | remove | reverse | self | so | sum | take | total
+cols     BagHash.new(1,1) | BagHash.new
 
 - id     0001
   from   inventory:BagHash.^methods
-  cell   Bool | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).Bool
+  cell   Bool | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).Bool
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
@@ -25,38 +25,14 @@ cols     BagHash.new(1,1,2) | BagHash.new
 
 - id     0003
   from   inventory:BagHash.^methods
-  cell   CREATE | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).CREATE
-  is     UNRENDERABLE
-  type   BagHash
-  oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference produced no usable answer for this cell
-  ruled  2026-08-15 against rakudo-2026.07
+  cell   Capture | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).Capture
+  is     \("1" => 2)
+  type   Capture
+  oracle rakudo-2026.07 → \("1" => 2)
+  oracle rakupp-3.14.0 → \(:1(2))
 
 - id     0004
-  from   inventory:BagHash.^methods
-  cell   CREATE | BagHash.new
-  code   (BagHash.new).CREATE
-  is     UNRENDERABLE
-  type   BagHash
-  oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference produced no usable answer for this cell
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0005
-  from   inventory:BagHash.^methods
-  cell   Capture | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).Capture
-  is     \("1" => 2, "2" => 1)
-  type   Capture
-  oracle rakudo-2026.07 → \("1" => 2, "2" => 1)
-  oracle rakupp-3.14.0 → \(:1(2), :2(1))
-
-- id     0006
   from   inventory:BagHash.^methods
   cell   Capture | BagHash.new
   code   (BagHash.new).Capture
@@ -65,16 +41,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → \()
   oracle rakupp-3.14.0 → \()
 
-- id     0007
+- id     0005
   from   inventory:BagHash.^methods
-  cell   DEFINITE | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).DEFINITE
+  cell   DEFINITE | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).DEFINITE
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0008
+- id     0006
   from   inventory:BagHash.^methods
   cell   DEFINITE | BagHash.new
   code   (BagHash.new).DEFINITE
@@ -83,10 +59,10 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0009
+- id     0007
   from   inventory:BagHash.^methods
-  cell   HOW | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).HOW
+  cell   HOW | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).HOW
   is     UNRENDERABLE
   type   Perl6::Metamodel::ClassHOW+{<anon>}
   oracle rakudo-2026.07 → UNRENDERABLE
@@ -95,7 +71,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0010
+- id     0008
   from   inventory:BagHash.^methods
   cell   HOW | BagHash.new
   code   (BagHash.new).HOW
@@ -107,96 +83,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0011
+- id     0009
   from   inventory:BagHash.^methods
-  cell   INSTANTIATE-GENERIC(0) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0012
-  from   inventory:BagHash.^methods
-  cell   INSTANTIATE-GENERIC(1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0013
-  from   inventory:BagHash.^methods
-  cell   INSTANTIATE-GENERIC(-1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0014
-  from   inventory:BagHash.^methods
-  cell   INSTANTIATE-GENERIC("a") | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0015
-  from   inventory:BagHash.^methods
-  cell   INSTANTIATE-GENERIC(Any) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0016
-  from   inventory:BagHash.^methods
-  cell   INSTANTIATE-GENERIC(0) | BagHash.new
-  code   (BagHash.new).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0017
-  from   inventory:BagHash.^methods
-  cell   INSTANTIATE-GENERIC(1) | BagHash.new
-  code   (BagHash.new).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0018
-  from   inventory:BagHash.^methods
-  cell   INSTANTIATE-GENERIC(-1) | BagHash.new
-  code   (BagHash.new).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0019
-  from   inventory:BagHash.^methods
-  cell   INSTANTIATE-GENERIC("a") | BagHash.new
-  code   (BagHash.new).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0020
-  from   inventory:BagHash.^methods
-  cell   INSTANTIATE-GENERIC(Any) | BagHash.new
-  code   (BagHash.new).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0021
-  from   inventory:BagHash.^methods
-  cell   Int | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).Int
-  is     3
+  cell   Int | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).Int
+  is     2
   type   Int
-  oracle rakudo-2026.07 → 3
-  oracle rakupp-3.14.0 → 3
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
 
-- id     0022
+- id     0010
   from   inventory:BagHash.^methods
   cell   Int | BagHash.new
   code   (BagHash.new).Int
@@ -205,16 +101,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0023
+- id     0011
   from   inventory:BagHash.^methods
-  cell   Map | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).Map
-  is     $(Map.new(("1" => 2,"2" => 1)))
+  cell   Map | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).Map
+  is     $(Map.new(("1" => 2)))
   type   Map
-  oracle rakudo-2026.07 → $(Map.new(("1" => 2,"2" => 1)))
-  oracle rakupp-3.14.0 → Map.new(("1" => 2,"2" => 1))
+  oracle rakudo-2026.07 → $(Map.new(("1" => 2)))
+  oracle rakupp-3.14.0 → Map.new(("1" => 2))
 
-- id     0024
+- id     0012
   from   inventory:BagHash.^methods
   cell   Map | BagHash.new
   code   (BagHash.new).Map
@@ -223,16 +119,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → $(Map.new)
   oracle rakupp-3.14.0 → Map.new(())
 
-- id     0025
+- id     0013
   from   inventory:BagHash.^methods
-  cell   Num | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).Num
-  is     3e0
+  cell   Num | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).Num
+  is     2e0
   type   Num
-  oracle rakudo-2026.07 → 3e0
-  oracle rakupp-3.14.0 → 3e0
+  oracle rakudo-2026.07 → 2e0
+  oracle rakupp-3.14.0 → 2e0
 
-- id     0026
+- id     0014
   from   inventory:BagHash.^methods
   cell   Num | BagHash.new
   code   (BagHash.new).Num
@@ -241,16 +137,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0027
+- id     0015
   from   inventory:BagHash.^methods
-  cell   Numeric | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).Numeric
-  is     3
+  cell   Numeric | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).Numeric
+  is     2
   type   Int
-  oracle rakudo-2026.07 → 3
-  oracle rakupp-3.14.0 → 3e0
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2e0
 
-- id     0028
+- id     0016
   from   inventory:BagHash.^methods
   cell   Numeric | BagHash.new
   code   (BagHash.new).Numeric
@@ -259,154 +155,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0029
+- id     0017
   from   inventory:BagHash.^methods
-  cell   OBJECTIFIER | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).OBJECTIFIER
-  is     -> $value { #`(Block|6525978621568) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> $value { #`(Block|6525978621568) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0030
-  from   inventory:BagHash.^methods
-  cell   OBJECTIFIER | BagHash.new
-  code   (BagHash.new).OBJECTIFIER
-  is     -> $value { #`(Block|6525978661160) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> $value { #`(Block|6525978661160) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0031
-  from   inventory:BagHash.^methods
-  cell   POPULATE(0) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).POPULATE(0)
-  is     (1=>2,2=>1).BagHash
-  type   BagHash
-  oracle rakudo-2026.07 → (1=>2,2=>1).BagHash
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0032
-  from   inventory:BagHash.^methods
-  cell   POPULATE(1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).POPULATE(1)
-  is     (1=>2,2=>1).BagHash
-  type   BagHash
-  oracle rakudo-2026.07 → (1=>2,2=>1).BagHash
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0033
-  from   inventory:BagHash.^methods
-  cell   POPULATE(-1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).POPULATE(-1)
-  is     (1=>2,2=>1).BagHash
-  type   BagHash
-  oracle rakudo-2026.07 → (1=>2,2=>1).BagHash
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0034
-  from   inventory:BagHash.^methods
-  cell   POPULATE("a") | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).POPULATE("a")
-  is     (2=>1,1=>2).BagHash
-  type   BagHash
-  oracle rakudo-2026.07 → (2=>1,1=>2).BagHash
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0035
-  from   inventory:BagHash.^methods
-  cell   POPULATE(Any) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).POPULATE(Any)
-  is     (1=>2,2=>1).BagHash
-  type   BagHash
-  oracle rakudo-2026.07 → (1=>2,2=>1).BagHash
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0036
-  from   inventory:BagHash.^methods
-  cell   POPULATE(0) | BagHash.new
-  code   (BagHash.new).POPULATE(0)
-  is     ().BagHash
-  type   BagHash
-  oracle rakudo-2026.07 → ().BagHash
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0037
-  from   inventory:BagHash.^methods
-  cell   POPULATE(1) | BagHash.new
-  code   (BagHash.new).POPULATE(1)
-  is     ().BagHash
-  type   BagHash
-  oracle rakudo-2026.07 → ().BagHash
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0038
-  from   inventory:BagHash.^methods
-  cell   POPULATE(-1) | BagHash.new
-  code   (BagHash.new).POPULATE(-1)
-  is     ().BagHash
-  type   BagHash
-  oracle rakudo-2026.07 → ().BagHash
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0039
-  from   inventory:BagHash.^methods
-  cell   POPULATE("a") | BagHash.new
-  code   (BagHash.new).POPULATE("a")
-  is     ().BagHash
-  type   BagHash
-  oracle rakudo-2026.07 → ().BagHash
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0040
-  from   inventory:BagHash.^methods
-  cell   POPULATE(Any) | BagHash.new
-  code   (BagHash.new).POPULATE(Any)
-  is     ().BagHash
-  type   BagHash
-  oracle rakudo-2026.07 → ().BagHash
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0041
-  from   inventory:BagHash.^methods
-  cell   RAW-HASH | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).RAW-HASH
-  is     Int|1
-  type   1
-  oracle rakudo-2026.07 → Int|1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0042
-  from   inventory:BagHash.^methods
-  cell   RAW-HASH | BagHash.new
-  code   (BagHash.new).RAW-HASH
-  is     
-  type   Rakudo::Internals::IterationSet
-  oracle rakudo-2026.07 → 
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0043
-  from   inventory:BagHash.^methods
-  cell   REPR | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).REPR
+  cell   REPR | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).REPR
   is     "P6opaque"
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0044
+- id     0018
   from   inventory:BagHash.^methods
   cell   REPR | BagHash.new
   code   (BagHash.new).REPR
@@ -415,16 +173,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0045
+- id     0019
   from   inventory:BagHash.^methods
-  cell   Real | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).Real
-  is     3
+  cell   Real | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).Real
+  is     2
   type   Int
-  oracle rakudo-2026.07 → 3
-  oracle rakupp-3.14.0 → 3e0
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2e0
 
-- id     0046
+- id     0020
   from   inventory:BagHash.^methods
   cell   Real | BagHash.new
   code   (BagHash.new).Real
@@ -433,19 +191,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0047
+- id     0021
   from   inventory:BagHash.^methods
-  cell   VAR | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).VAR
-  is     (1=>2,2=>1).BagHash
+  cell   VAR | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).VAR
+  is     (1=>2).BagHash
   type   BagHash
-  oracle rakudo-2026.07 → (1=>2,2=>1).BagHash
-  oracle rakupp-3.14.0 → (1=>2,2=>1).BagHash
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  oracle rakudo-2026.07 → (1=>2).BagHash
+  oracle rakupp-3.14.0 → (1=>2).BagHash
 
-- id     0048
+- id     0022
   from   inventory:BagHash.^methods
   cell   VAR | BagHash.new
   code   (BagHash.new).VAR
@@ -454,16 +209,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ().BagHash
   oracle rakupp-3.14.0 → ().BagHash
 
-- id     0049
+- id     0023
   from   inventory:BagHash.^methods
-  cell   WHAT | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).WHAT
+  cell   WHAT | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).WHAT
   is     BagHash
   type   BagHash
   oracle rakudo-2026.07 → BagHash
   oracle rakupp-3.14.0 → BagHash
 
-- id     0050
+- id     0024
   from   inventory:BagHash.^methods
   cell   WHAT | BagHash.new
   code   (BagHash.new).WHAT
@@ -472,136 +227,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → BagHash
   oracle rakupp-3.14.0 → BagHash
 
-- id     0051
+- id     0025
   from   inventory:BagHash.^methods
-  cell   WHERE | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).WHERE
-  is     6525750144048
-  type   Int
-  oracle rakudo-2026.07 → 6525750144048
-  oracle rakupp-3.14.0 → 140692685958616
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0052
-  from   inventory:BagHash.^methods
-  cell   WHERE | BagHash.new
-  code   (BagHash.new).WHERE
-  is     6525750488336
-  type   Int
-  oracle rakudo-2026.07 → 6525750488336
-  oracle rakupp-3.14.0 → 140692685958616
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0053
-  from   inventory:BagHash.^methods
-  cell   WHICHIFY(0) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).WHICHIFY(0)
-  is     ValueObjAt.new("Int|0")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|0")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0054
-  from   inventory:BagHash.^methods
-  cell   WHICHIFY(1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).WHICHIFY(1)
-  is     ValueObjAt.new("Int|1")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|1")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0055
-  from   inventory:BagHash.^methods
-  cell   WHICHIFY(-1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).WHICHIFY(-1)
-  is     ValueObjAt.new("Int|-1")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|-1")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0056
-  from   inventory:BagHash.^methods
-  cell   WHICHIFY("a") | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).WHICHIFY("a")
-  is     ValueObjAt.new("Str|a")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Str|a")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0057
-  from   inventory:BagHash.^methods
-  cell   WHICHIFY(Any) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).WHICHIFY(Any)
-  is     ValueObjAt.new("Any|U6525756891512")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Any|U6525756891512")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0058
-  from   inventory:BagHash.^methods
-  cell   WHICHIFY(0) | BagHash.new
-  code   (BagHash.new).WHICHIFY(0)
-  is     ValueObjAt.new("Int|0")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|0")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0059
-  from   inventory:BagHash.^methods
-  cell   WHICHIFY(1) | BagHash.new
-  code   (BagHash.new).WHICHIFY(1)
-  is     ValueObjAt.new("Int|1")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|1")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0060
-  from   inventory:BagHash.^methods
-  cell   WHICHIFY(-1) | BagHash.new
-  code   (BagHash.new).WHICHIFY(-1)
-  is     ValueObjAt.new("Int|-1")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|-1")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0061
-  from   inventory:BagHash.^methods
-  cell   WHICHIFY("a") | BagHash.new
-  code   (BagHash.new).WHICHIFY("a")
-  is     ValueObjAt.new("Str|a")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Str|a")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0062
-  from   inventory:BagHash.^methods
-  cell   WHICHIFY(Any) | BagHash.new
-  code   (BagHash.new).WHICHIFY(Any)
-  is     ValueObjAt.new("Any|U6525756891512")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Any|U6525756891512")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0063
-  from   inventory:BagHash.^methods
-  cell   WHO | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).WHO
+  cell   WHO | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).WHO
   is     ${}
   type   Stash
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0064
+- id     0026
   from   inventory:BagHash.^methods
   cell   WHO | BagHash.new
   code   (BagHash.new).WHO
@@ -610,52 +245,52 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0065
+- id     0027
   from   inventory:BagHash.^methods
-  cell   add(0) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).add(0)
+  cell   add(0) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).add(0)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0 → IO::Path.new("1(2) 2/0", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  oracle rakupp-3.14.0 → IO::Path.new("1(2)/0", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
 
-- id     0066
+- id     0028
   from   inventory:BagHash.^methods
-  cell   add(1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).add(1)
+  cell   add(1) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).add(1)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0 → IO::Path.new("1(2) 2/1", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  oracle rakupp-3.14.0 → IO::Path.new("1(2)/1", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
 
-- id     0067
+- id     0029
   from   inventory:BagHash.^methods
-  cell   add(-1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).add(-1)
+  cell   add(-1) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).add(-1)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0 → IO::Path.new("1(2) 2/-1", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  oracle rakupp-3.14.0 → IO::Path.new("1(2)/-1", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
 
-- id     0068
+- id     0030
   from   inventory:BagHash.^methods
-  cell   add("a") | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).add("a")
+  cell   add("a") | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).add("a")
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0 → IO::Path.new("1(2) 2/a", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  oracle rakupp-3.14.0 → IO::Path.new("1(2)/a", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
 
-- id     0069
+- id     0031
   from   inventory:BagHash.^methods
-  cell   add(Any) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).add(Any)
+  cell   add(Any) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).add(Any)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-3.14.0 → IO::Path.new("1(2) 2/", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  oracle rakupp-3.14.0 → IO::Path.new("1(2)/", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
 
-- id     0070
+- id     0032
   from   inventory:BagHash.^methods
   cell   add(0) | BagHash.new
   code   (BagHash.new).add(0)
@@ -664,7 +299,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → IO::Path.new("/0", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
 
-- id     0071
+- id     0033
   from   inventory:BagHash.^methods
   cell   add(1) | BagHash.new
   code   (BagHash.new).add(1)
@@ -673,7 +308,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → IO::Path.new("/1", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
 
-- id     0072
+- id     0034
   from   inventory:BagHash.^methods
   cell   add(-1) | BagHash.new
   code   (BagHash.new).add(-1)
@@ -682,7 +317,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → IO::Path.new("/-1", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
 
-- id     0073
+- id     0035
   from   inventory:BagHash.^methods
   cell   add("a") | BagHash.new
   code   (BagHash.new).add("a")
@@ -691,7 +326,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → IO::Path.new("/a", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
 
-- id     0074
+- id     0036
   from   inventory:BagHash.^methods
   cell   add(Any) | BagHash.new
   code   (BagHash.new).add(Any)
@@ -700,16 +335,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → IO::Path.new("/", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
 
-- id     0075
+- id     0037
   from   inventory:BagHash.^methods
-  cell   all | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).all
-  is     all(1 => 2, 2 => 1)
+  cell   all | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).all
+  is     all(1 => 2)
   type   Junction
-  oracle rakudo-2026.07 → all(1 => 2, 2 => 1)
-  oracle rakupp-3.14.0 → all(1 => 2, 2 => 1)
+  oracle rakudo-2026.07 → all(1 => 2)
+  oracle rakupp-3.14.0 → all(1 => 2)
 
-- id     0076
+- id     0038
   from   inventory:BagHash.^methods
   cell   all | BagHash.new
   code   (BagHash.new).all
@@ -718,16 +353,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → all()
   oracle rakupp-3.14.0 → all()
 
-- id     0077
+- id     0039
   from   inventory:BagHash.^methods
-  cell   any | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).any
-  is     any(2 => 1, 1 => 2)
+  cell   any | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).any
+  is     any(1 => 2)
   type   Junction
-  oracle rakudo-2026.07 → any(2 => 1, 1 => 2)
-  oracle rakupp-3.14.0 → any(1 => 2, 2 => 1)
+  oracle rakudo-2026.07 → any(1 => 2)
+  oracle rakupp-3.14.0 → any(1 => 2)
 
-- id     0078
+- id     0040
   from   inventory:BagHash.^methods
   cell   any | BagHash.new
   code   (BagHash.new).any
@@ -736,10 +371,10 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → any()
   oracle rakupp-3.14.0 → any()
 
-- id     0079
+- id     0041
   from   inventory:BagHash.^methods
-  cell   bless | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).bless
+  cell   bless | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).bless
   is     UNRENDERABLE
   type   BagHash
   oracle rakudo-2026.07 → UNRENDERABLE
@@ -748,7 +383,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0080
+- id     0042
   from   inventory:BagHash.^methods
   cell   bless | BagHash.new
   code   (BagHash.new).bless
@@ -760,16 +395,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0081
+- id     0043
   from   inventory:BagHash.^methods
-  cell   cache | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).cache
-  is     $(2 => 1, 1 => 2)
+  cell   cache | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).cache
+  is     $(1 => 2,)
   type   List
-  oracle rakudo-2026.07 → $(2 => 1, 1 => 2)
-  oracle rakupp-3.14.0 → $(1 => 2, 2 => 1)
+  oracle rakudo-2026.07 → $(1 => 2,)
+  oracle rakupp-3.14.0 → $(1 => 2,)
 
-- id     0082
+- id     0044
   from   inventory:BagHash.^methods
   cell   cache | BagHash.new
   code   (BagHash.new).cache
@@ -778,48 +413,48 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0083
+- id     0045
   from   inventory:BagHash.^methods
-  cell   can(0) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).can(0)
+  cell   can(0) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0084
+- id     0046
   from   inventory:BagHash.^methods
-  cell   can(1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).can(1)
+  cell   can(1) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0085
+- id     0047
   from   inventory:BagHash.^methods
-  cell   can(-1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).can(-1)
+  cell   can(-1) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0086
+- id     0048
   from   inventory:BagHash.^methods
-  cell   can("a") | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).can("a")
+  cell   can("a") | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).can("a")
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0087
+- id     0049
   from   inventory:BagHash.^methods
-  cell   can(Any) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).can(Any)
+  cell   can(Any) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0088
+- id     0050
   from   inventory:BagHash.^methods
   cell   can(0) | BagHash.new
   code   (BagHash.new).can(0)
@@ -827,7 +462,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0089
+- id     0051
   from   inventory:BagHash.^methods
   cell   can(1) | BagHash.new
   code   (BagHash.new).can(1)
@@ -835,7 +470,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0090
+- id     0052
   from   inventory:BagHash.^methods
   cell   can(-1) | BagHash.new
   code   (BagHash.new).can(-1)
@@ -843,7 +478,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0091
+- id     0053
   from   inventory:BagHash.^methods
   cell   can("a") | BagHash.new
   code   (BagHash.new).can("a")
@@ -852,7 +487,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0092
+- id     0054
   from   inventory:BagHash.^methods
   cell   can(Any) | BagHash.new
   code   (BagHash.new).can(Any)
@@ -860,15 +495,15 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0093
+- id     0055
   from   inventory:BagHash.^methods
-  cell   chrs | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).chrs
+  cell   chrs | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).chrs
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → "\0\0"
+  oracle rakupp-3.14.0 → "\0"
 
-- id     0094
+- id     0056
   from   inventory:BagHash.^methods
   cell   chrs | BagHash.new
   code   (BagHash.new).chrs
@@ -876,16 +511,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0095
+- id     0057
   from   inventory:BagHash.^methods
-  cell   clone | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).clone
-  is     (1=>2,2=>1).BagHash
+  cell   clone | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).clone
+  is     (1=>2).BagHash
   type   BagHash
-  oracle rakudo-2026.07 → (1=>2,2=>1).BagHash
-  oracle rakupp-3.14.0 → (1=>2,2=>1).BagHash
+  oracle rakudo-2026.07 → (1=>2).BagHash
+  oracle rakupp-3.14.0 → (1=>2).BagHash
 
-- id     0096
+- id     0058
   from   inventory:BagHash.^methods
   cell   clone | BagHash.new
   code   (BagHash.new).clone
@@ -894,16 +529,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ().BagHash
   oracle rakupp-3.14.0 → ().BagHash
 
-- id     0097
+- id     0059
   from   inventory:BagHash.^methods
-  cell   default | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).default
+  cell   default | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).default
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0098
+- id     0060
   from   inventory:BagHash.^methods
   cell   default | BagHash.new
   code   (BagHash.new).default
@@ -912,52 +547,52 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0099
+- id     0061
   from   inventory:BagHash.^methods
-  cell   does(0) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).does(0)
+  cell   does(0) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).does(0)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0100
+- id     0062
   from   inventory:BagHash.^methods
-  cell   does(1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).does(1)
+  cell   does(1) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).does(1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0101
+- id     0063
   from   inventory:BagHash.^methods
-  cell   does(-1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).does(-1)
+  cell   does(-1) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).does(-1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0102
+- id     0064
   from   inventory:BagHash.^methods
-  cell   does("a") | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).does("a")
+  cell   does("a") | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).does("a")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0103
+- id     0065
   from   inventory:BagHash.^methods
-  cell   does(Any) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).does(Any)
+  cell   does(Any) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).does(Any)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0104
+- id     0066
   from   inventory:BagHash.^methods
   cell   does(0) | BagHash.new
   code   (BagHash.new).does(0)
@@ -966,7 +601,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0105
+- id     0067
   from   inventory:BagHash.^methods
   cell   does(1) | BagHash.new
   code   (BagHash.new).does(1)
@@ -975,7 +610,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0106
+- id     0068
   from   inventory:BagHash.^methods
   cell   does(-1) | BagHash.new
   code   (BagHash.new).does(-1)
@@ -984,7 +619,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0107
+- id     0069
   from   inventory:BagHash.^methods
   cell   does("a") | BagHash.new
   code   (BagHash.new).does("a")
@@ -993,7 +628,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0108
+- id     0070
   from   inventory:BagHash.^methods
   cell   does(Any) | BagHash.new
   code   (BagHash.new).does(Any)
@@ -1002,16 +637,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0109
+- id     0071
   from   inventory:BagHash.^methods
-  cell   is-generic | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).is-generic
+  cell   is-generic | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).is-generic
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0110
+- id     0072
   from   inventory:BagHash.^methods
   cell   is-generic | BagHash.new
   code   (BagHash.new).is-generic
@@ -1020,19 +655,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0111
+- id     0073
   from   inventory:BagHash.^methods
-  cell   item | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).item
-  is     (2=>1,1=>2).BagHash
+  cell   item | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).item
+  is     (1=>2).BagHash
   type   BagHash
-  oracle rakudo-2026.07 → (2=>1,1=>2).BagHash
-  oracle rakupp-3.14.0 → (1=>2,2=>1).BagHash
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  oracle rakudo-2026.07 → (1=>2).BagHash
+  oracle rakupp-3.14.0 → (1=>2).BagHash
 
-- id     0112
+- id     0074
   from   inventory:BagHash.^methods
   cell   item | BagHash.new
   code   (BagHash.new).item
@@ -1041,57 +673,51 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ().BagHash
   oracle rakupp-3.14.0 → ().BagHash
 
-- id     0113
+- id     0075
   from   inventory:BagHash.^methods
-  cell   join(0) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).join(0)
-  is     "2\t101\t2"
+  cell   join(0) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).join(0)
+  is     "1\t2"
   type   Str
-  oracle rakudo-2026.07 → "2\t101\t2"
-  oracle rakupp-3.14.0 → "1\t202\t1"
+  oracle rakudo-2026.07 → "1\t2"
+  oracle rakupp-3.14.0 → "1\t2"
 
-- id     0114
+- id     0076
   from   inventory:BagHash.^methods
-  cell   join(1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).join(1)
-  is     "2\t111\t2"
+  cell   join(1) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).join(1)
+  is     "1\t2"
   type   Str
-  oracle rakudo-2026.07 → "2\t111\t2"
-  oracle rakupp-3.14.0 → "1\t212\t1"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  oracle rakudo-2026.07 → "1\t2"
+  oracle rakupp-3.14.0 → "1\t2"
 
-- id     0115
+- id     0077
   from   inventory:BagHash.^methods
-  cell   join(-1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).join(-1)
-  is     "2\t1-11\t2"
+  cell   join(-1) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).join(-1)
+  is     "1\t2"
   type   Str
-  oracle rakudo-2026.07 → "2\t1-11\t2"
-  oracle rakupp-3.14.0 → "1\t2-12\t1"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  oracle rakudo-2026.07 → "1\t2"
+  oracle rakupp-3.14.0 → "1\t2"
 
-- id     0116
+- id     0078
   from   inventory:BagHash.^methods
-  cell   join("a") | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).join("a")
-  is     "1\t2a2\t1"
+  cell   join("a") | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).join("a")
+  is     "1\t2"
   type   Str
-  oracle rakudo-2026.07 → "1\t2a2\t1"
-  oracle rakupp-3.14.0 → "1\t2a2\t1"
+  oracle rakudo-2026.07 → "1\t2"
+  oracle rakupp-3.14.0 → "1\t2"
 
-- id     0117
+- id     0079
   from   inventory:BagHash.^methods
-  cell   join(Any) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).join(Any)
+  cell   join(Any) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).join(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → "1\t22\t1"
+  oracle rakupp-3.14.0 → "1\t2"
 
-- id     0118
+- id     0080
   from   inventory:BagHash.^methods
   cell   join(0) | BagHash.new
   code   (BagHash.new).join(0)
@@ -1100,7 +726,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0119
+- id     0081
   from   inventory:BagHash.^methods
   cell   join(1) | BagHash.new
   code   (BagHash.new).join(1)
@@ -1109,7 +735,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0120
+- id     0082
   from   inventory:BagHash.^methods
   cell   join(-1) | BagHash.new
   code   (BagHash.new).join(-1)
@@ -1118,7 +744,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0121
+- id     0083
   from   inventory:BagHash.^methods
   cell   join("a") | BagHash.new
   code   (BagHash.new).join("a")
@@ -1127,7 +753,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0122
+- id     0084
   from   inventory:BagHash.^methods
   cell   join(Any) | BagHash.new
   code   (BagHash.new).join(Any)
@@ -1135,16 +761,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ""
 
-- id     0123
+- id     0085
   from   inventory:BagHash.^methods
-  cell   keyof | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).keyof
+  cell   keyof | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).keyof
   is     Mu
   type   Mu
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0124
+- id     0086
   from   inventory:BagHash.^methods
   cell   keyof | BagHash.new
   code   (BagHash.new).keyof
@@ -1153,58 +779,52 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0125
+- id     0087
   from   inventory:BagHash.^methods
-  cell   lazy-if(0) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).lazy-if(0)
-  is     (2=>1,1=>2).BagHash
+  cell   lazy-if(0) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).lazy-if(0)
+  is     (1=>2).BagHash
   type   BagHash
-  oracle rakudo-2026.07 → (2=>1,1=>2).BagHash
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0126
-  from   inventory:BagHash.^methods
-  cell   lazy-if(1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).lazy-if(1)
-  is     (1=>2,2=>1).BagHash
-  type   BagHash
-  oracle rakudo-2026.07 → (1=>2,2=>1).BagHash
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0127
-  from   inventory:BagHash.^methods
-  cell   lazy-if(-1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).lazy-if(-1)
-  is     (2=>1,1=>2).BagHash
-  type   BagHash
-  oracle rakudo-2026.07 → (2=>1,1=>2).BagHash
+  oracle rakudo-2026.07 → (1=>2).BagHash
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0128
+- id     0088
   from   inventory:BagHash.^methods
-  cell   lazy-if("a") | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).lazy-if("a")
-  is     (2=>1,1=>2).BagHash
+  cell   lazy-if(1) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).lazy-if(1)
+  is     (1=>2).BagHash
   type   BagHash
-  oracle rakudo-2026.07 → (2=>1,1=>2).BagHash
+  oracle rakudo-2026.07 → (1=>2).BagHash
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0129
+- id     0089
   from   inventory:BagHash.^methods
-  cell   lazy-if(Any) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).lazy-if(Any)
-  is     (2=>1,1=>2).BagHash
+  cell   lazy-if(-1) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).lazy-if(-1)
+  is     (1=>2).BagHash
   type   BagHash
-  oracle rakudo-2026.07 → (2=>1,1=>2).BagHash
+  oracle rakudo-2026.07 → (1=>2).BagHash
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0130
+- id     0090
+  from   inventory:BagHash.^methods
+  cell   lazy-if("a") | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).lazy-if("a")
+  is     (1=>2).BagHash
+  type   BagHash
+  oracle rakudo-2026.07 → (1=>2).BagHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0091
+  from   inventory:BagHash.^methods
+  cell   lazy-if(Any) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).lazy-if(Any)
+  is     (1=>2).BagHash
+  type   BagHash
+  oracle rakudo-2026.07 → (1=>2).BagHash
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0092
   from   inventory:BagHash.^methods
   cell   lazy-if(0) | BagHash.new
   code   (BagHash.new).lazy-if(0)
@@ -1213,7 +833,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ().BagHash
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0131
+- id     0093
   from   inventory:BagHash.^methods
   cell   lazy-if(1) | BagHash.new
   code   (BagHash.new).lazy-if(1)
@@ -1222,7 +842,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ().BagHash
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0132
+- id     0094
   from   inventory:BagHash.^methods
   cell   lazy-if(-1) | BagHash.new
   code   (BagHash.new).lazy-if(-1)
@@ -1231,7 +851,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ().BagHash
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0133
+- id     0095
   from   inventory:BagHash.^methods
   cell   lazy-if("a") | BagHash.new
   code   (BagHash.new).lazy-if("a")
@@ -1240,7 +860,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ().BagHash
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0134
+- id     0096
   from   inventory:BagHash.^methods
   cell   lazy-if(Any) | BagHash.new
   code   (BagHash.new).lazy-if(Any)
@@ -1249,16 +869,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ().BagHash
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0135
+- id     0097
   from   inventory:BagHash.^methods
-  cell   nl-out | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).nl-out
+  cell   nl-out | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).nl-out
   is     "\n"
   type   Str
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0136
+- id     0098
   from   inventory:BagHash.^methods
   cell   nl-out | BagHash.new
   code   (BagHash.new).nl-out
@@ -1267,19 +887,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0137
+- id     0099
   from   inventory:BagHash.^methods
-  cell   none | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).none
-  is     none(1 => 2, 2 => 1)
+  cell   none | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).none
+  is     none(1 => 2)
   type   Junction
-  oracle rakudo-2026.07 → none(1 => 2, 2 => 1)
-  oracle rakupp-3.14.0 → none(1 => 2, 2 => 1)
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  oracle rakudo-2026.07 → none(1 => 2)
+  oracle rakupp-3.14.0 → none(1 => 2)
 
-- id     0138
+- id     0100
   from   inventory:BagHash.^methods
   cell   none | BagHash.new
   code   (BagHash.new).none
@@ -1288,16 +905,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → none()
   oracle rakupp-3.14.0 → none()
 
-- id     0139
+- id     0101
   from   inventory:BagHash.^methods
-  cell   not | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).not
+  cell   not | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).not
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0140
+- id     0102
   from   inventory:BagHash.^methods
   cell   not | BagHash.new
   code   (BagHash.new).not
@@ -1306,16 +923,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0141
+- id     0103
   from   inventory:BagHash.^methods
-  cell   of | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).of
+  cell   of | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).of
   is     UInt
   type   UInt
   oracle rakudo-2026.07 → UInt
   oracle rakupp-3.14.0 → UInt
 
-- id     0142
+- id     0104
   from   inventory:BagHash.^methods
   cell   of | BagHash.new
   code   (BagHash.new).of
@@ -1324,19 +941,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → UInt
   oracle rakupp-3.14.0 → UInt
 
-- id     0143
+- id     0105
   from   inventory:BagHash.^methods
-  cell   one | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).one
-  is     one(2 => 1, 1 => 2)
+  cell   one | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).one
+  is     one(1 => 2)
   type   Junction
-  oracle rakudo-2026.07 → one(2 => 1, 1 => 2)
-  oracle rakupp-3.14.0 → one(1 => 2, 2 => 1)
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  oracle rakudo-2026.07 → one(1 => 2)
+  oracle rakupp-3.14.0 → one(1 => 2)
 
-- id     0144
+- id     0106
   from   inventory:BagHash.^methods
   cell   one | BagHash.new
   code   (BagHash.new).one
@@ -1345,52 +959,52 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → one()
   oracle rakupp-3.14.0 → one()
 
-- id     0145
+- id     0107
   from   inventory:BagHash.^methods
-  cell   remove(0) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).remove(0)
+  cell   remove(0) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).remove(0)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0146
+- id     0108
   from   inventory:BagHash.^methods
-  cell   remove(1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).remove(1)
+  cell   remove(1) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).remove(1)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0147
+- id     0109
   from   inventory:BagHash.^methods
-  cell   remove(-1) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).remove(-1)
+  cell   remove(-1) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).remove(-1)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0148
+- id     0110
   from   inventory:BagHash.^methods
-  cell   remove("a") | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).remove("a")
+  cell   remove("a") | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).remove("a")
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0149
+- id     0111
   from   inventory:BagHash.^methods
-  cell   remove(Any) | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).remove(Any)
+  cell   remove(Any) | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).remove(Any)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0150
+- id     0112
   from   inventory:BagHash.^methods
   cell   remove(0) | BagHash.new
   code   (BagHash.new).remove(0)
@@ -1399,7 +1013,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0151
+- id     0113
   from   inventory:BagHash.^methods
   cell   remove(1) | BagHash.new
   code   (BagHash.new).remove(1)
@@ -1408,7 +1022,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0152
+- id     0114
   from   inventory:BagHash.^methods
   cell   remove(-1) | BagHash.new
   code   (BagHash.new).remove(-1)
@@ -1417,7 +1031,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0153
+- id     0115
   from   inventory:BagHash.^methods
   cell   remove("a") | BagHash.new
   code   (BagHash.new).remove("a")
@@ -1426,7 +1040,7 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0154
+- id     0116
   from   inventory:BagHash.^methods
   cell   remove(Any) | BagHash.new
   code   (BagHash.new).remove(Any)
@@ -1435,16 +1049,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0155
+- id     0117
   from   inventory:BagHash.^methods
-  cell   reverse | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).reverse
-  is     $((2 => 1, 1 => 2).Seq)
+  cell   reverse | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).reverse
+  is     $((1 => 2,).Seq)
   type   Seq
-  oracle rakudo-2026.07 → $((2 => 1, 1 => 2).Seq)
-  oracle rakupp-3.14.0 → $(2 => 1, 1 => 2).Seq
+  oracle rakudo-2026.07 → $((1 => 2,).Seq)
+  oracle rakupp-3.14.0 → $(1 => 2,).Seq
 
-- id     0156
+- id     0118
   from   inventory:BagHash.^methods
   cell   reverse | BagHash.new
   code   (BagHash.new).reverse
@@ -1453,16 +1067,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0157
+- id     0119
   from   inventory:BagHash.^methods
-  cell   self | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).self
-  is     (1=>2,2=>1).BagHash
+  cell   self | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).self
+  is     (1=>2).BagHash
   type   BagHash
-  oracle rakudo-2026.07 → (1=>2,2=>1).BagHash
-  oracle rakupp-3.14.0 → (1=>2,2=>1).BagHash
+  oracle rakudo-2026.07 → (1=>2).BagHash
+  oracle rakupp-3.14.0 → (1=>2).BagHash
 
-- id     0158
+- id     0120
   from   inventory:BagHash.^methods
   cell   self | BagHash.new
   code   (BagHash.new).self
@@ -1471,16 +1085,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ().BagHash
   oracle rakupp-3.14.0 → ().BagHash
 
-- id     0159
+- id     0121
   from   inventory:BagHash.^methods
-  cell   so | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).so
+  cell   so | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).so
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0160
+- id     0122
   from   inventory:BagHash.^methods
   cell   so | BagHash.new
   code   (BagHash.new).so
@@ -1489,15 +1103,15 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0161
+- id     0123
   from   inventory:BagHash.^methods
-  cell   sum | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).sum
+  cell   sum | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).sum
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → 0e0
 
-- id     0162
+- id     0124
   from   inventory:BagHash.^methods
   cell   sum | BagHash.new
   code   (BagHash.new).sum
@@ -1506,15 +1120,15 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0163
+- id     0125
   from   inventory:BagHash.^methods
-  cell   take | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).take
+  cell   take | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
-  oracle rakupp-3.14.0 → (1=>2,2=>1).BagHash
+  oracle rakupp-3.14.0 → (1=>2).BagHash
 
-- id     0164
+- id     0126
   from   inventory:BagHash.^methods
   cell   take | BagHash.new
   code   (BagHash.new).take
@@ -1522,16 +1136,16 @@ cols     BagHash.new(1,1,2) | BagHash.new
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → ().BagHash
 
-- id     0165
+- id     0127
   from   inventory:BagHash.^methods
-  cell   total | BagHash.new(1,1,2)
-  code   (BagHash.new(1,1,2)).total
-  is     3
+  cell   total | BagHash.new(1,1)
+  code   (BagHash.new(1,1)).total
+  is     2
   type   Int
-  oracle rakudo-2026.07 → 3
-  oracle rakupp-3.14.0 → 3
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-3.14.0 → 2
 
-- id     0166
+- id     0128
   from   inventory:BagHash.^methods
   cell   total | BagHash.new
   code   (BagHash.new).total

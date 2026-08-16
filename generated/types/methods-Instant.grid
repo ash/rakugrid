@@ -2,7 +2,7 @@ atom     methods/Instant
 source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
-axes     AST | Bool | Bridge | CREATE | Capture | Complex | DEFINITE | Date | EVAL | Failure | FatRat | HOW | INSTANTIATE-GENERIC | Instant | Int | NFC | NFD | NFKC | NFKD | Num | Order | POPULATE | REPR | Rat | VAR | Version | WHAT | WHERE | WHO | abs | acos | acosec | acosech | acosh | acotan | acotanh | all | any | asec | asech | asin | asinh | atan | atan2 | atanh | bless | byte | cache | can | ceiling | chars | chomp | chr | chrs | cis | codes | conj | cos | cosec | cosech | cosh | cotan | cotanh | does | fc | flip | floor | from-posix-nanos | indent | int | int16 | int32 | int64 | int8 | is-generic | is-prime | isNaN | item | join | lazy-if | lc | log10 | log2 | narrow | nl-out | none | not | one | ord | ords | parse-names | path | pred | rand | reverse | roots | samecase | samemark | samespace | sec | sech | self | sign | sin | sinh | so | sqrt | succ | sum | tai | take | tan | tanh | tc | tclc | to-nanos | to-posix | trim | trim-leading | trim-trailing | truncate | uc | uint | uint16 | uint32 | uint64 | uint8 | uniname | uninames | uniparse | uniprop | uniprops | unival | univals | unpolar | wordcase
+axes     AST | Bool | Bridge | Capture | Complex | DEFINITE | Date | EVAL | Failure | FatRat | HOW | Instant | Int | Num | Order | REPR | Rat | VAR | Version | WHAT | WHO | abs | acos | acosec | acosech | acosh | acotan | acotanh | all | any | asec | asech | asin | asinh | atan | atan2 | atanh | bless | byte | cache | can | ceiling | chars | chomp | chr | chrs | cis | codes | conj | cos | cosec | cosech | cosh | cotan | cotanh | does | fc | flip | floor | from-posix-nanos | indent | int | int16 | int32 | int64 | int8 | is-generic | is-prime | isNaN | item | join | lazy-if | lc | log10 | log2 | narrow | nl-out | none | not | one | ord | ords | parse-names | path | pred | rand | reverse | roots | samecase | samemark | samespace | sec | sech | self | sign | sin | sinh | so | sqrt | succ | sum | tai | take | tan | tanh | tc | tclc | to-nanos | to-posix | trim | trim-leading | trim-trailing | truncate | uc | uint | uint16 | uint32 | uint64 | uint8 | uniname | uninames | uniparse | uniprop | uniprops | unival | univals | unpolar | wordcase
 cols     Instant.from-posix(0)
 
 - id     0001
@@ -65,15 +65,6 @@ cols     Instant.from-posix(0)
 
 - id     0008
   from   inventory:Instant.^methods
-  cell   CREATE | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).CREATE
-  is     Instant.from-posix(-10.0)
-  type   Instant
-  oracle rakudo-2026.07 → Instant.from-posix(-10.0)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0009
-  from   inventory:Instant.^methods
   cell   Capture | Instant.from-posix(0)
   code   (Instant.from-posix(0)).Capture
   is     \(:tai(10.0))
@@ -81,7 +72,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → \(:tai(10.0))
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0010
+- id     0009
   from   inventory:Instant.^methods
   cell   Complex | Instant.from-posix(0)
   code   (Instant.from-posix(0)).Complex
@@ -90,7 +81,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → <10+0i>
   oracle rakupp-3.14.0 → <10+0i>
 
-- id     0011
+- id     0010
   from   inventory:Instant.^methods
   cell   DEFINITE | Instant.from-posix(0)
   code   (Instant.from-posix(0)).DEFINITE
@@ -99,7 +90,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0012
+- id     0011
   from   inventory:Instant.^methods
   cell   Date | Instant.from-posix(0)
   code   (Instant.from-posix(0)).Date
@@ -108,7 +99,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Date.new(1970,1,1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0013
+- id     0012
   from   inventory:Instant.^methods
   cell   EVAL | Instant.from-posix(0)
   code   (Instant.from-posix(0)).EVAL
@@ -116,7 +107,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::Syntax::Confused
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0014
+- id     0013
   from   inventory:Instant.^methods
   cell   Failure | Instant.from-posix(0)
   code   (Instant.from-posix(0)).Failure
@@ -124,7 +115,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0015
+- id     0014
   from   inventory:Instant.^methods
   cell   FatRat | Instant.from-posix(0)
   code   (Instant.from-posix(0)).FatRat
@@ -133,7 +124,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → FatRat.new(10, 1)
   oracle rakupp-3.14.0 → FatRat.new(10, 1)
 
-- id     0016
+- id     0015
   from   inventory:Instant.^methods
   cell   HOW | Instant.from-posix(0)
   code   (Instant.from-posix(0)).HOW
@@ -142,47 +133,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0017
-  from   inventory:Instant.^methods
-  cell   INSTANTIATE-GENERIC(0) | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0018
-  from   inventory:Instant.^methods
-  cell   INSTANTIATE-GENERIC(1) | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0019
-  from   inventory:Instant.^methods
-  cell   INSTANTIATE-GENERIC(-1) | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0020
-  from   inventory:Instant.^methods
-  cell   INSTANTIATE-GENERIC("a") | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0021
-  from   inventory:Instant.^methods
-  cell   INSTANTIATE-GENERIC(Any) | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0022
+- id     0016
   from   inventory:Instant.^methods
   cell   Instant | Instant.from-posix(0)
   code   (Instant.from-posix(0)).Instant
@@ -191,7 +142,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Instant.from-posix(0.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0023
+- id     0017
   from   inventory:Instant.^methods
   cell   Int | Instant.from-posix(0)
   code   (Instant.from-posix(0)).Int
@@ -200,43 +151,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → 10
 
-- id     0024
-  from   inventory:Instant.^methods
-  cell   NFC | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).NFC
-  is     Uni.new(0x0049, 0x006e, 0x0073, 0x0074, 0x0061, 0x006e, 0x0074, 0x003a, 0x0031, 0x0030).NFC
-  type   NFC
-  oracle rakudo-2026.07 → Uni.new(0x0049, 0x006e, 0x0073, 0x0074, 0x0061, 0x006e, 0x0074, 0x003a, 0x0031, 0x0030).NFC
-  oracle rakupp-3.14.0 → Uni.new(0x0031, 0x0030).NFC
-
-- id     0025
-  from   inventory:Instant.^methods
-  cell   NFD | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).NFD
-  is     Uni.new(0x0049, 0x006e, 0x0073, 0x0074, 0x0061, 0x006e, 0x0074, 0x003a, 0x0031, 0x0030).NFD
-  type   NFD
-  oracle rakudo-2026.07 → Uni.new(0x0049, 0x006e, 0x0073, 0x0074, 0x0061, 0x006e, 0x0074, 0x003a, 0x0031, 0x0030).NFD
-  oracle rakupp-3.14.0 → Uni.new(0x0031, 0x0030).NFD
-
-- id     0026
-  from   inventory:Instant.^methods
-  cell   NFKC | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).NFKC
-  is     Uni.new(0x0049, 0x006e, 0x0073, 0x0074, 0x0061, 0x006e, 0x0074, 0x003a, 0x0031, 0x0030).NFKC
-  type   NFKC
-  oracle rakudo-2026.07 → Uni.new(0x0049, 0x006e, 0x0073, 0x0074, 0x0061, 0x006e, 0x0074, 0x003a, 0x0031, 0x0030).NFKC
-  oracle rakupp-3.14.0 → Uni.new(0x0031, 0x0030).NFKC
-
-- id     0027
-  from   inventory:Instant.^methods
-  cell   NFKD | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).NFKD
-  is     Uni.new(0x0049, 0x006e, 0x0073, 0x0074, 0x0061, 0x006e, 0x0074, 0x003a, 0x0031, 0x0030).NFKD
-  type   NFKD
-  oracle rakudo-2026.07 → Uni.new(0x0049, 0x006e, 0x0073, 0x0074, 0x0061, 0x006e, 0x0074, 0x003a, 0x0031, 0x0030).NFKD
-  oracle rakupp-3.14.0 → Uni.new(0x0031, 0x0030).NFKD
-
-- id     0028
+- id     0018
   from   inventory:Instant.^methods
   cell   Num | Instant.from-posix(0)
   code   (Instant.from-posix(0)).Num
@@ -245,7 +160,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 10e0
   oracle rakupp-3.14.0 → 10e0
 
-- id     0029
+- id     0019
   from   inventory:Instant.^methods
   cell   Order | Instant.from-posix(0)
   code   (Instant.from-posix(0)).Order
@@ -254,47 +169,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Order::More
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0030
-  from   inventory:Instant.^methods
-  cell   POPULATE(0) | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).POPULATE(0)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0031
-  from   inventory:Instant.^methods
-  cell   POPULATE(1) | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).POPULATE(1)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0032
-  from   inventory:Instant.^methods
-  cell   POPULATE(-1) | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).POPULATE(-1)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0033
-  from   inventory:Instant.^methods
-  cell   POPULATE("a") | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).POPULATE("a")
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0034
-  from   inventory:Instant.^methods
-  cell   POPULATE(Any) | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).POPULATE(Any)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0035
+- id     0020
   from   inventory:Instant.^methods
   cell   REPR | Instant.from-posix(0)
   code   (Instant.from-posix(0)).REPR
@@ -303,7 +178,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0036
+- id     0021
   from   inventory:Instant.^methods
   cell   Rat | Instant.from-posix(0)
   code   (Instant.from-posix(0)).Rat
@@ -312,7 +187,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 10.0
   oracle rakupp-3.14.0 → 10.0
 
-- id     0037
+- id     0022
   from   inventory:Instant.^methods
   cell   VAR | Instant.from-posix(0)
   code   (Instant.from-posix(0)).VAR
@@ -321,7 +196,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Instant.from-posix(0.0)
   oracle rakupp-3.14.0 → 10e0
 
-- id     0038
+- id     0023
   from   inventory:Instant.^methods
   cell   Version | Instant.from-posix(0)
   code   (Instant.from-posix(0)).Version
@@ -330,7 +205,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Version.new('Instant.10')
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0039
+- id     0024
   from   inventory:Instant.^methods
   cell   WHAT | Instant.from-posix(0)
   code   (Instant.from-posix(0)).WHAT
@@ -339,19 +214,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Instant
   oracle rakupp-3.14.0 → Instant
 
-- id     0040
-  from   inventory:Instant.^methods
-  cell   WHERE | Instant.from-posix(0)
-  code   (Instant.from-posix(0)).WHERE
-  is     3775308742680
-  type   Int
-  oracle rakudo-2026.07 → 3775308742680
-  oracle rakupp-3.14.0 → 14195343136
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0041
+- id     0025
   from   inventory:Instant.^methods
   cell   WHO | Instant.from-posix(0)
   code   (Instant.from-posix(0)).WHO
@@ -360,7 +223,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0042
+- id     0026
   from   inventory:Instant.^methods
   cell   abs | Instant.from-posix(0)
   code   (Instant.from-posix(0)).abs
@@ -369,7 +232,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Instant.from-posix(0.0)
   oracle rakupp-3.14.0 → 10e0
 
-- id     0043
+- id     0027
   from   inventory:Instant.^methods
   cell   acos | Instant.from-posix(0)
   code   (Instant.from-posix(0)).acos
@@ -378,7 +241,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0044
+- id     0028
   from   inventory:Instant.^methods
   cell   acosec | Instant.from-posix(0)
   code   (Instant.from-posix(0)).acosec
@@ -387,7 +250,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 0.1001674211615598e0
   oracle rakupp-3.14.0 → 0.1001674211615598e0
 
-- id     0045
+- id     0029
   from   inventory:Instant.^methods
   cell   acosech | Instant.from-posix(0)
   code   (Instant.from-posix(0)).acosech
@@ -396,7 +259,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 0.09983407889920758e0
   oracle rakupp-3.14.0 → 0.09983407889920758e0
 
-- id     0046
+- id     0030
   from   inventory:Instant.^methods
   cell   acosh | Instant.from-posix(0)
   code   (Instant.from-posix(0)).acosh
@@ -405,7 +268,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 2.993222846126381e0
   oracle rakupp-3.14.0 → 2.993222846126381e0
 
-- id     0047
+- id     0031
   from   inventory:Instant.^methods
   cell   acotan | Instant.from-posix(0)
   code   (Instant.from-posix(0)).acotan
@@ -414,7 +277,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 0.09966865249116204e0
   oracle rakupp-3.14.0 → 0.09966865249116204e0
 
-- id     0048
+- id     0032
   from   inventory:Instant.^methods
   cell   acotanh | Instant.from-posix(0)
   code   (Instant.from-posix(0)).acotanh
@@ -423,7 +286,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 0.10033534773107562e0
   oracle rakupp-3.14.0 → 0.10033534773107558e0
 
-- id     0049
+- id     0033
   from   inventory:Instant.^methods
   cell   all | Instant.from-posix(0)
   code   (Instant.from-posix(0)).all
@@ -432,7 +295,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → all(Instant.from-posix(0.0))
   oracle rakupp-3.14.0 → all(10e0)
 
-- id     0050
+- id     0034
   from   inventory:Instant.^methods
   cell   any | Instant.from-posix(0)
   code   (Instant.from-posix(0)).any
@@ -441,7 +304,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → any(Instant.from-posix(0.0))
   oracle rakupp-3.14.0 → any(10e0)
 
-- id     0051
+- id     0035
   from   inventory:Instant.^methods
   cell   asec | Instant.from-posix(0)
   code   (Instant.from-posix(0)).asec
@@ -450,7 +313,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 1.4706289056333368e0
   oracle rakupp-3.14.0 → 1.4706289056333368e0
 
-- id     0052
+- id     0036
   from   inventory:Instant.^methods
   cell   asech | Instant.from-posix(0)
   code   (Instant.from-posix(0)).asech
@@ -459,7 +322,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0053
+- id     0037
   from   inventory:Instant.^methods
   cell   asin | Instant.from-posix(0)
   code   (Instant.from-posix(0)).asin
@@ -468,7 +331,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0054
+- id     0038
   from   inventory:Instant.^methods
   cell   asinh | Instant.from-posix(0)
   code   (Instant.from-posix(0)).asinh
@@ -477,7 +340,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 2.99822295029797e0
   oracle rakupp-3.14.0 → 2.99822295029797e0
 
-- id     0055
+- id     0039
   from   inventory:Instant.^methods
   cell   atan | Instant.from-posix(0)
   code   (Instant.from-posix(0)).atan
@@ -486,7 +349,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 1.4711276743037345e0
   oracle rakupp-3.14.0 → 1.4711276743037345e0
 
-- id     0056
+- id     0040
   from   inventory:Instant.^methods
   cell   atan2(0) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).atan2(0)
@@ -495,7 +358,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → 1.5707963267948966e0
 
-- id     0057
+- id     0041
   from   inventory:Instant.^methods
   cell   atan2(1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).atan2(1)
@@ -504,7 +367,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 1.4711276743037347e0
   oracle rakupp-3.14.0 → 1.4711276743037347e0
 
-- id     0058
+- id     0042
   from   inventory:Instant.^methods
   cell   atan2(-1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).atan2(-1)
@@ -513,7 +376,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 1.6704649792860586e0
   oracle rakupp-3.14.0 → 1.6704649792860586e0
 
-- id     0059
+- id     0043
   from   inventory:Instant.^methods
   cell   atan2("a") | Instant.from-posix(0)
   code   (Instant.from-posix(0)).atan2("a")
@@ -521,7 +384,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → 1.5707963267948966e0
 
-- id     0060
+- id     0044
   from   inventory:Instant.^methods
   cell   atan2(Any) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).atan2(Any)
@@ -529,7 +392,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → 1.5707963267948966e0
 
-- id     0061
+- id     0045
   from   inventory:Instant.^methods
   cell   atanh | Instant.from-posix(0)
   code   (Instant.from-posix(0)).atanh
@@ -538,7 +401,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0062
+- id     0046
   from   inventory:Instant.^methods
   cell   bless | Instant.from-posix(0)
   code   (Instant.from-posix(0)).bless
@@ -547,7 +410,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Instant.from-posix(-10.0)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0063
+- id     0047
   from   inventory:Instant.^methods
   cell   byte | Instant.from-posix(0)
   code   (Instant.from-posix(0)).byte
@@ -556,7 +419,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0064
+- id     0048
   from   inventory:Instant.^methods
   cell   cache | Instant.from-posix(0)
   code   (Instant.from-posix(0)).cache
@@ -565,7 +428,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → $(Instant.from-posix(0.0),)
   oracle rakupp-3.14.0 → $(10e0,)
 
-- id     0065
+- id     0049
   from   inventory:Instant.^methods
   cell   can(0) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).can(0)
@@ -573,7 +436,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0066
+- id     0050
   from   inventory:Instant.^methods
   cell   can(1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).can(1)
@@ -581,7 +444,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0067
+- id     0051
   from   inventory:Instant.^methods
   cell   can(-1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).can(-1)
@@ -589,7 +452,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0068
+- id     0052
   from   inventory:Instant.^methods
   cell   can("a") | Instant.from-posix(0)
   code   (Instant.from-posix(0)).can("a")
@@ -598,7 +461,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0069
+- id     0053
   from   inventory:Instant.^methods
   cell   can(Any) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).can(Any)
@@ -606,7 +469,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0070
+- id     0054
   from   inventory:Instant.^methods
   cell   ceiling | Instant.from-posix(0)
   code   (Instant.from-posix(0)).ceiling
@@ -615,7 +478,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → 10
 
-- id     0071
+- id     0055
   from   inventory:Instant.^methods
   cell   chars | Instant.from-posix(0)
   code   (Instant.from-posix(0)).chars
@@ -624,7 +487,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → 2
 
-- id     0072
+- id     0056
   from   inventory:Instant.^methods
   cell   chomp(0) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).chomp(0)
@@ -633,7 +496,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → "Instant:1"
   oracle rakupp-3.14.0 → "10"
 
-- id     0073
+- id     0057
   from   inventory:Instant.^methods
   cell   chomp(1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).chomp(1)
@@ -642,7 +505,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
 
-- id     0074
+- id     0058
   from   inventory:Instant.^methods
   cell   chomp(-1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).chomp(-1)
@@ -651,7 +514,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
 
-- id     0075
+- id     0059
   from   inventory:Instant.^methods
   cell   chomp("a") | Instant.from-posix(0)
   code   (Instant.from-posix(0)).chomp("a")
@@ -660,7 +523,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
 
-- id     0076
+- id     0060
   from   inventory:Instant.^methods
   cell   chomp(Any) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).chomp(Any)
@@ -668,7 +531,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "10"
 
-- id     0077
+- id     0061
   from   inventory:Instant.^methods
   cell   chr | Instant.from-posix(0)
   code   (Instant.from-posix(0)).chr
@@ -677,7 +540,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → "\n"
 
-- id     0078
+- id     0062
   from   inventory:Instant.^methods
   cell   chrs | Instant.from-posix(0)
   code   (Instant.from-posix(0)).chrs
@@ -685,7 +548,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::TypeCheck
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0079
+- id     0063
   from   inventory:Instant.^methods
   cell   cis | Instant.from-posix(0)
   code   (Instant.from-posix(0)).cis
@@ -694,7 +557,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → <-0.8390715290764524-0.5440211108893699i>
   oracle rakupp-3.14.0 → <-0.8390715290764524-0.5440211108893699i>
 
-- id     0080
+- id     0064
   from   inventory:Instant.^methods
   cell   codes | Instant.from-posix(0)
   code   (Instant.from-posix(0)).codes
@@ -703,7 +566,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → 2
 
-- id     0081
+- id     0065
   from   inventory:Instant.^methods
   cell   conj | Instant.from-posix(0)
   code   (Instant.from-posix(0)).conj
@@ -712,7 +575,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Instant.from-posix(0.0)
   oracle rakupp-3.14.0 → 10e0
 
-- id     0082
+- id     0066
   from   inventory:Instant.^methods
   cell   cos | Instant.from-posix(0)
   code   (Instant.from-posix(0)).cos
@@ -721,7 +584,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → -0.8390715290764524e0
   oracle rakupp-3.14.0 → -0.8390715290764524e0
 
-- id     0083
+- id     0067
   from   inventory:Instant.^methods
   cell   cosec | Instant.from-posix(0)
   code   (Instant.from-posix(0)).cosec
@@ -730,7 +593,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → -1.8381639608896654e0
   oracle rakupp-3.14.0 → -1.8381639608896654e0
 
-- id     0084
+- id     0068
   from   inventory:Instant.^methods
   cell   cosech | Instant.from-posix(0)
   code   (Instant.from-posix(0)).cosech
@@ -739,7 +602,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 9.079985971212217e-05
   oracle rakupp-3.14.0 → 9.079985971212217e-05
 
-- id     0085
+- id     0069
   from   inventory:Instant.^methods
   cell   cosh | Instant.from-posix(0)
   code   (Instant.from-posix(0)).cosh
@@ -748,7 +611,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 11013.232920103323e0
   oracle rakupp-3.14.0 → 11013.232920103323e0
 
-- id     0086
+- id     0070
   from   inventory:Instant.^methods
   cell   cotan | Instant.from-posix(0)
   code   (Instant.from-posix(0)).cotan
@@ -757,7 +620,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 1.5423510453569198e0
   oracle rakupp-3.14.0 → 1.5423510453569198e0
 
-- id     0087
+- id     0071
   from   inventory:Instant.^methods
   cell   cotanh | Instant.from-posix(0)
   code   (Instant.from-posix(0)).cotanh
@@ -766,7 +629,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 1.0000000041223074e0
   oracle rakupp-3.14.0 → 1.0000000041223074e0
 
-- id     0088
+- id     0072
   from   inventory:Instant.^methods
   cell   does(0) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).does(0)
@@ -775,7 +638,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0089
+- id     0073
   from   inventory:Instant.^methods
   cell   does(1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).does(1)
@@ -784,7 +647,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0090
+- id     0074
   from   inventory:Instant.^methods
   cell   does(-1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).does(-1)
@@ -793,7 +656,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0091
+- id     0075
   from   inventory:Instant.^methods
   cell   does("a") | Instant.from-posix(0)
   code   (Instant.from-posix(0)).does("a")
@@ -802,7 +665,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0092
+- id     0076
   from   inventory:Instant.^methods
   cell   does(Any) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).does(Any)
@@ -811,7 +674,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0093
+- id     0077
   from   inventory:Instant.^methods
   cell   fc | Instant.from-posix(0)
   code   (Instant.from-posix(0)).fc
@@ -820,7 +683,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → "instant:10"
   oracle rakupp-3.14.0 → "10"
 
-- id     0094
+- id     0078
   from   inventory:Instant.^methods
   cell   flip | Instant.from-posix(0)
   code   (Instant.from-posix(0)).flip
@@ -829,7 +692,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → "01:tnatsnI"
   oracle rakupp-3.14.0 → "01"
 
-- id     0095
+- id     0079
   from   inventory:Instant.^methods
   cell   floor | Instant.from-posix(0)
   code   (Instant.from-posix(0)).floor
@@ -838,7 +701,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → 10
 
-- id     0096
+- id     0080
   from   inventory:Instant.^methods
   cell   from-posix-nanos(0) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).from-posix-nanos(0)
@@ -846,7 +709,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0097
+- id     0081
   from   inventory:Instant.^methods
   cell   from-posix-nanos(1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).from-posix-nanos(1)
@@ -854,7 +717,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0098
+- id     0082
   from   inventory:Instant.^methods
   cell   from-posix-nanos(-1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).from-posix-nanos(-1)
@@ -862,7 +725,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0099
+- id     0083
   from   inventory:Instant.^methods
   cell   from-posix-nanos("a") | Instant.from-posix(0)
   code   (Instant.from-posix(0)).from-posix-nanos("a")
@@ -870,7 +733,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0100
+- id     0084
   from   inventory:Instant.^methods
   cell   from-posix-nanos(Any) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).from-posix-nanos(Any)
@@ -878,7 +741,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0101
+- id     0085
   from   inventory:Instant.^methods
   cell   indent(0) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).indent(0)
@@ -887,7 +750,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
 
-- id     0102
+- id     0086
   from   inventory:Instant.^methods
   cell   indent(1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).indent(1)
@@ -896,7 +759,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → " Instant:10"
   oracle rakupp-3.14.0 → " 10"
 
-- id     0103
+- id     0087
   from   inventory:Instant.^methods
   cell   indent(-1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).indent(-1)
@@ -905,7 +768,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
 
-- id     0104
+- id     0088
   from   inventory:Instant.^methods
   cell   indent("a") | Instant.from-posix(0)
   code   (Instant.from-posix(0)).indent("a")
@@ -913,7 +776,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → "10"
 
-- id     0105
+- id     0089
   from   inventory:Instant.^methods
   cell   indent(Any) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).indent(Any)
@@ -922,7 +785,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
 
-- id     0106
+- id     0090
   from   inventory:Instant.^methods
   cell   int | Instant.from-posix(0)
   code   (Instant.from-posix(0)).int
@@ -931,7 +794,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0107
+- id     0091
   from   inventory:Instant.^methods
   cell   int16 | Instant.from-posix(0)
   code   (Instant.from-posix(0)).int16
@@ -940,7 +803,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0108
+- id     0092
   from   inventory:Instant.^methods
   cell   int32 | Instant.from-posix(0)
   code   (Instant.from-posix(0)).int32
@@ -949,7 +812,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0109
+- id     0093
   from   inventory:Instant.^methods
   cell   int64 | Instant.from-posix(0)
   code   (Instant.from-posix(0)).int64
@@ -958,7 +821,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0110
+- id     0094
   from   inventory:Instant.^methods
   cell   int8 | Instant.from-posix(0)
   code   (Instant.from-posix(0)).int8
@@ -967,7 +830,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0111
+- id     0095
   from   inventory:Instant.^methods
   cell   is-generic | Instant.from-posix(0)
   code   (Instant.from-posix(0)).is-generic
@@ -976,7 +839,7 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0112
+- id     0096
   from   inventory:Instant.^methods
   cell   is-prime | Instant.from-posix(0)
   code   (Instant.from-posix(0)).is-prime
@@ -988,7 +851,7 @@ cols     Instant.from-posix(0)
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0113
+- id     0097
   from   inventory:Instant.^methods
   cell   isNaN | Instant.from-posix(0)
   code   (Instant.from-posix(0)).isNaN
@@ -1000,7 +863,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0114
+- id     0098
   from   inventory:Instant.^methods
   cell   item | Instant.from-posix(0)
   code   (Instant.from-posix(0)).item
@@ -1012,7 +875,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0115
+- id     0099
   from   inventory:Instant.^methods
   cell   join(0) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).join(0)
@@ -1024,7 +887,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0116
+- id     0100
   from   inventory:Instant.^methods
   cell   join(1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).join(1)
@@ -1036,7 +899,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0117
+- id     0101
   from   inventory:Instant.^methods
   cell   join(-1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).join(-1)
@@ -1048,7 +911,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0118
+- id     0102
   from   inventory:Instant.^methods
   cell   join("a") | Instant.from-posix(0)
   code   (Instant.from-posix(0)).join("a")
@@ -1060,7 +923,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0119
+- id     0103
   from   inventory:Instant.^methods
   cell   join(Any) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).join(Any)
@@ -1071,7 +934,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0120
+- id     0104
   from   inventory:Instant.^methods
   cell   lazy-if(0) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).lazy-if(0)
@@ -1083,7 +946,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0121
+- id     0105
   from   inventory:Instant.^methods
   cell   lazy-if(1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).lazy-if(1)
@@ -1095,7 +958,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0122
+- id     0106
   from   inventory:Instant.^methods
   cell   lazy-if(-1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).lazy-if(-1)
@@ -1107,7 +970,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0123
+- id     0107
   from   inventory:Instant.^methods
   cell   lazy-if("a") | Instant.from-posix(0)
   code   (Instant.from-posix(0)).lazy-if("a")
@@ -1119,7 +982,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0124
+- id     0108
   from   inventory:Instant.^methods
   cell   lazy-if(Any) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).lazy-if(Any)
@@ -1131,7 +994,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0125
+- id     0109
   from   inventory:Instant.^methods
   cell   lc | Instant.from-posix(0)
   code   (Instant.from-posix(0)).lc
@@ -1143,7 +1006,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0126
+- id     0110
   from   inventory:Instant.^methods
   cell   log10 | Instant.from-posix(0)
   code   (Instant.from-posix(0)).log10
@@ -1155,7 +1018,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0127
+- id     0111
   from   inventory:Instant.^methods
   cell   log2 | Instant.from-posix(0)
   code   (Instant.from-posix(0)).log2
@@ -1167,7 +1030,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0128
+- id     0112
   from   inventory:Instant.^methods
   cell   narrow | Instant.from-posix(0)
   code   (Instant.from-posix(0)).narrow
@@ -1179,7 +1042,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0129
+- id     0113
   from   inventory:Instant.^methods
   cell   nl-out | Instant.from-posix(0)
   code   (Instant.from-posix(0)).nl-out
@@ -1191,7 +1054,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0130
+- id     0114
   from   inventory:Instant.^methods
   cell   none | Instant.from-posix(0)
   code   (Instant.from-posix(0)).none
@@ -1203,7 +1066,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0131
+- id     0115
   from   inventory:Instant.^methods
   cell   not | Instant.from-posix(0)
   code   (Instant.from-posix(0)).not
@@ -1215,7 +1078,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0132
+- id     0116
   from   inventory:Instant.^methods
   cell   one | Instant.from-posix(0)
   code   (Instant.from-posix(0)).one
@@ -1227,7 +1090,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0133
+- id     0117
   from   inventory:Instant.^methods
   cell   ord | Instant.from-posix(0)
   code   (Instant.from-posix(0)).ord
@@ -1239,7 +1102,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0134
+- id     0118
   from   inventory:Instant.^methods
   cell   ords | Instant.from-posix(0)
   code   (Instant.from-posix(0)).ords
@@ -1251,7 +1114,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0135
+- id     0119
   from   inventory:Instant.^methods
   cell   parse-names | Instant.from-posix(0)
   code   (Instant.from-posix(0)).parse-names
@@ -1262,7 +1125,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0136
+- id     0120
   from   inventory:Instant.^methods
   cell   path | Instant.from-posix(0)
   code   (Instant.from-posix(0)).path
@@ -1271,10 +1134,10 @@ cols     Instant.from-posix(0)
   oracle rakudo-2026.07 → IO::Path.new("Instant:10", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
   oracle rakupp-3.14.0 → "10"
   verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
+  ruled  2026-08-16 against rakudo-2026.07
 
-- id     0137
+- id     0121
   from   inventory:Instant.^methods
   cell   pred | Instant.from-posix(0)
   code   (Instant.from-posix(0)).pred
@@ -1286,19 +1149,19 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0138
+- id     0122
   from   inventory:Instant.^methods
   cell   rand | Instant.from-posix(0)
   code   (Instant.from-posix(0)).rand
-  is     1.0768398736012852e0
+  is     7.988472261666292e0
   type   Num
-  oracle rakudo-2026.07 → 1.0768398736012852e0
-  oracle rakupp-3.14.0 → 4.762905694876309e0
+  oracle rakudo-2026.07 → 7.988472261666292e0
+  oracle rakupp-3.14.0 → 0.5401679893029865e0
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0139
+- id     0123
   from   inventory:Instant.^methods
   cell   reverse | Instant.from-posix(0)
   code   (Instant.from-posix(0)).reverse
@@ -1310,7 +1173,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0140
+- id     0124
   from   inventory:Instant.^methods
   cell   roots(0) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).roots(0)
@@ -1322,7 +1185,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0141
+- id     0125
   from   inventory:Instant.^methods
   cell   roots(1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).roots(1)
@@ -1334,7 +1197,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0142
+- id     0126
   from   inventory:Instant.^methods
   cell   roots(-1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).roots(-1)
@@ -1346,7 +1209,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0143
+- id     0127
   from   inventory:Instant.^methods
   cell   roots("a") | Instant.from-posix(0)
   code   (Instant.from-posix(0)).roots("a")
@@ -1357,7 +1220,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0144
+- id     0128
   from   inventory:Instant.^methods
   cell   roots(Any) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).roots(Any)
@@ -1368,7 +1231,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0145
+- id     0129
   from   inventory:Instant.^methods
   cell   samecase(0) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).samecase(0)
@@ -1380,7 +1243,7 @@ cols     Instant.from-posix(0)
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0146
+- id     0130
   from   inventory:Instant.^methods
   cell   samecase(1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).samecase(1)
@@ -1388,11 +1251,8 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0147
+- id     0131
   from   inventory:Instant.^methods
   cell   samecase(-1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).samecase(-1)
@@ -1400,11 +1260,8 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0148
+- id     0132
   from   inventory:Instant.^methods
   cell   samecase("a") | Instant.from-posix(0)
   code   (Instant.from-posix(0)).samecase("a")
@@ -1412,22 +1269,16 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "instant:10"
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0149
+- id     0133
   from   inventory:Instant.^methods
   cell   samecase(Any) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).samecase(Any)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0150
+- id     0134
   from   inventory:Instant.^methods
   cell   samemark(0) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).samemark(0)
@@ -1435,11 +1286,8 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0151
+- id     0135
   from   inventory:Instant.^methods
   cell   samemark(1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).samemark(1)
@@ -1447,11 +1295,8 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0152
+- id     0136
   from   inventory:Instant.^methods
   cell   samemark(-1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).samemark(-1)
@@ -1459,11 +1304,8 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0153
+- id     0137
   from   inventory:Instant.^methods
   cell   samemark("a") | Instant.from-posix(0)
   code   (Instant.from-posix(0)).samemark("a")
@@ -1471,22 +1313,16 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0154
+- id     0138
   from   inventory:Instant.^methods
   cell   samemark(Any) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).samemark(Any)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0155
+- id     0139
   from   inventory:Instant.^methods
   cell   samespace(0) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).samespace(0)
@@ -1494,11 +1330,8 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0156
+- id     0140
   from   inventory:Instant.^methods
   cell   samespace(1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).samespace(1)
@@ -1506,11 +1339,8 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0157
+- id     0141
   from   inventory:Instant.^methods
   cell   samespace(-1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).samespace(-1)
@@ -1518,11 +1348,8 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0158
+- id     0142
   from   inventory:Instant.^methods
   cell   samespace("a") | Instant.from-posix(0)
   code   (Instant.from-posix(0)).samespace("a")
@@ -1530,22 +1357,16 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0159
+- id     0143
   from   inventory:Instant.^methods
   cell   samespace(Any) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).samespace(Any)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0160
+- id     0144
   from   inventory:Instant.^methods
   cell   sec | Instant.from-posix(0)
   code   (Instant.from-posix(0)).sec
@@ -1553,11 +1374,8 @@ cols     Instant.from-posix(0)
   type   Num
   oracle rakudo-2026.07 → -1.1917935066878957e0
   oracle rakupp-3.14.0 → -1.1917935066878957e0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0161
+- id     0145
   from   inventory:Instant.^methods
   cell   sech | Instant.from-posix(0)
   code   (Instant.from-posix(0)).sech
@@ -1565,11 +1383,8 @@ cols     Instant.from-posix(0)
   type   Num
   oracle rakudo-2026.07 → 9.079985933781725e-05
   oracle rakupp-3.14.0 → 9.079985933781725e-05
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0162
+- id     0146
   from   inventory:Instant.^methods
   cell   self | Instant.from-posix(0)
   code   (Instant.from-posix(0)).self
@@ -1577,11 +1392,8 @@ cols     Instant.from-posix(0)
   type   Instant
   oracle rakudo-2026.07 → Instant.from-posix(0.0)
   oracle rakupp-3.14.0 → 10e0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0163
+- id     0147
   from   inventory:Instant.^methods
   cell   sign | Instant.from-posix(0)
   code   (Instant.from-posix(0)).sign
@@ -1589,11 +1401,8 @@ cols     Instant.from-posix(0)
   type   Int
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0164
+- id     0148
   from   inventory:Instant.^methods
   cell   sin | Instant.from-posix(0)
   code   (Instant.from-posix(0)).sin
@@ -1601,11 +1410,8 @@ cols     Instant.from-posix(0)
   type   Num
   oracle rakudo-2026.07 → -0.5440211108893699e0
   oracle rakupp-3.14.0 → -0.5440211108893699e0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0165
+- id     0149
   from   inventory:Instant.^methods
   cell   sinh | Instant.from-posix(0)
   code   (Instant.from-posix(0)).sinh
@@ -1613,11 +1419,8 @@ cols     Instant.from-posix(0)
   type   Num
   oracle rakudo-2026.07 → 11013.232874703393e0
   oracle rakupp-3.14.0 → 11013.232874703393e0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0166
+- id     0150
   from   inventory:Instant.^methods
   cell   so | Instant.from-posix(0)
   code   (Instant.from-posix(0)).so
@@ -1625,11 +1428,8 @@ cols     Instant.from-posix(0)
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0167
+- id     0151
   from   inventory:Instant.^methods
   cell   sqrt | Instant.from-posix(0)
   code   (Instant.from-posix(0)).sqrt
@@ -1637,11 +1437,8 @@ cols     Instant.from-posix(0)
   type   Num
   oracle rakudo-2026.07 → 3.1622776601683795e0
   oracle rakupp-3.14.0 → 3.1622776601683795e0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0168
+- id     0152
   from   inventory:Instant.^methods
   cell   succ | Instant.from-posix(0)
   code   (Instant.from-posix(0)).succ
@@ -1649,11 +1446,8 @@ cols     Instant.from-posix(0)
   type   Instant
   oracle rakudo-2026.07 → Instant.from-posix(1.0)
   oracle rakupp-3.14.0 → 11
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0169
+- id     0153
   from   inventory:Instant.^methods
   cell   sum | Instant.from-posix(0)
   code   (Instant.from-posix(0)).sum
@@ -1661,11 +1455,8 @@ cols     Instant.from-posix(0)
   type   Instant
   oracle rakudo-2026.07 → Instant.from-posix(0.0)
   oracle rakupp-3.14.0 → 10e0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0170
+- id     0154
   from   inventory:Instant.^methods
   cell   tai | Instant.from-posix(0)
   code   (Instant.from-posix(0)).tai
@@ -1673,22 +1464,16 @@ cols     Instant.from-posix(0)
   type   Rat
   oracle rakudo-2026.07 → 10.0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0171
+- id     0155
   from   inventory:Instant.^methods
   cell   take | Instant.from-posix(0)
   code   (Instant.from-posix(0)).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → 10e0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0172
+- id     0156
   from   inventory:Instant.^methods
   cell   tan | Instant.from-posix(0)
   code   (Instant.from-posix(0)).tan
@@ -1696,11 +1481,8 @@ cols     Instant.from-posix(0)
   type   Num
   oracle rakudo-2026.07 → 0.6483608274590867e0
   oracle rakupp-3.14.0 → 0.6483608274590867e0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0173
+- id     0157
   from   inventory:Instant.^methods
   cell   tanh | Instant.from-posix(0)
   code   (Instant.from-posix(0)).tanh
@@ -1708,11 +1490,8 @@ cols     Instant.from-posix(0)
   type   Num
   oracle rakudo-2026.07 → 0.9999999958776927e0
   oracle rakupp-3.14.0 → 0.9999999958776927e0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0174
+- id     0158
   from   inventory:Instant.^methods
   cell   tc | Instant.from-posix(0)
   code   (Instant.from-posix(0)).tc
@@ -1720,11 +1499,8 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0175
+- id     0159
   from   inventory:Instant.^methods
   cell   tclc | Instant.from-posix(0)
   code   (Instant.from-posix(0)).tclc
@@ -1732,11 +1508,8 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0176
+- id     0160
   from   inventory:Instant.^methods
   cell   to-nanos | Instant.from-posix(0)
   code   (Instant.from-posix(0)).to-nanos
@@ -1744,11 +1517,8 @@ cols     Instant.from-posix(0)
   type   Int
   oracle rakudo-2026.07 → 10000000000
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0177
+- id     0161
   from   inventory:Instant.^methods
   cell   to-posix | Instant.from-posix(0)
   code   (Instant.from-posix(0)).to-posix
@@ -1756,11 +1526,8 @@ cols     Instant.from-posix(0)
   type   List
   oracle rakudo-2026.07 → $(0.0, Bool::False)
   oracle rakupp-3.14.0 → $(0e0, Bool::False)
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0178
+- id     0162
   from   inventory:Instant.^methods
   cell   trim | Instant.from-posix(0)
   code   (Instant.from-posix(0)).trim
@@ -1768,11 +1535,8 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0179
+- id     0163
   from   inventory:Instant.^methods
   cell   trim-leading | Instant.from-posix(0)
   code   (Instant.from-posix(0)).trim-leading
@@ -1780,11 +1544,8 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0180
+- id     0164
   from   inventory:Instant.^methods
   cell   trim-trailing | Instant.from-posix(0)
   code   (Instant.from-posix(0)).trim-trailing
@@ -1792,11 +1553,8 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0181
+- id     0165
   from   inventory:Instant.^methods
   cell   truncate | Instant.from-posix(0)
   code   (Instant.from-posix(0)).truncate
@@ -1804,11 +1562,8 @@ cols     Instant.from-posix(0)
   type   Int
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → 10
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0182
+- id     0166
   from   inventory:Instant.^methods
   cell   uc | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uc
@@ -1816,11 +1571,8 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "INSTANT:10"
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0183
+- id     0167
   from   inventory:Instant.^methods
   cell   uint | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uint
@@ -1828,11 +1580,8 @@ cols     Instant.from-posix(0)
   type   Int
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0184
+- id     0168
   from   inventory:Instant.^methods
   cell   uint16 | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uint16
@@ -1840,11 +1589,8 @@ cols     Instant.from-posix(0)
   type   Int
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0185
+- id     0169
   from   inventory:Instant.^methods
   cell   uint32 | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uint32
@@ -1852,11 +1598,8 @@ cols     Instant.from-posix(0)
   type   Int
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0186
+- id     0170
   from   inventory:Instant.^methods
   cell   uint64 | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uint64
@@ -1864,11 +1607,8 @@ cols     Instant.from-posix(0)
   type   Int
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0187
+- id     0171
   from   inventory:Instant.^methods
   cell   uint8 | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uint8
@@ -1876,11 +1616,8 @@ cols     Instant.from-posix(0)
   type   Int
   oracle rakudo-2026.07 → 10
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0188
+- id     0172
   from   inventory:Instant.^methods
   cell   uniname | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uniname
@@ -1888,11 +1625,8 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "LATIN CAPITAL LETTER I"
   oracle rakupp-3.14.0 → "DIGIT ONE"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0189
+- id     0173
   from   inventory:Instant.^methods
   cell   uninames | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uninames
@@ -1900,55 +1634,40 @@ cols     Instant.from-posix(0)
   type   Seq
   oracle rakudo-2026.07 → $(("LATIN CAPITAL LETTER I", "LATIN SMALL LETTER N", "LATIN SMALL LETTER S", "LATIN SMALL LETTER T", "LATIN SMALL LETTER A", "LATIN SMALL LETTER N", "LATIN SMALL LETTER T", "COLON", "DIGIT ONE", "DIGIT ZERO").Seq)
   oracle rakupp-3.14.0 → $("DIGIT ONE", "DIGIT ZERO").Seq
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0190
+- id     0174
   from   inventory:Instant.^methods
   cell   uniparse | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uniparse
   throws X::Str::InvalidCharName
   oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0191
+- id     0175
   from   inventory:Instant.^methods
   cell   uniprop(0) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uniprop(0)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0192
+- id     0176
   from   inventory:Instant.^methods
   cell   uniprop(1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uniprop(1)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0193
+- id     0177
   from   inventory:Instant.^methods
   cell   uniprop(-1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uniprop(-1)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0194
+- id     0178
   from   inventory:Instant.^methods
   cell   uniprop("a") | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uniprop("a")
@@ -1956,55 +1675,40 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → Bool::False
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0195
+- id     0179
   from   inventory:Instant.^methods
   cell   uniprop(Any) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uniprop(Any)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0196
+- id     0180
   from   inventory:Instant.^methods
   cell   uniprops(0) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uniprops(0)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False, Bool::False).Seq
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0197
+- id     0181
   from   inventory:Instant.^methods
   cell   uniprops(1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uniprops(1)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False, Bool::False).Seq
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0198
+- id     0182
   from   inventory:Instant.^methods
   cell   uniprops(-1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uniprops(-1)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False, Bool::False).Seq
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0199
+- id     0183
   from   inventory:Instant.^methods
   cell   uniprops("a") | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uniprops("a")
@@ -2012,22 +1716,16 @@ cols     Instant.from-posix(0)
   type   Seq
   oracle rakudo-2026.07 → $(("0", "0", "0", "0", "0", "0", "0", "0", "0", "0").Seq)
   oracle rakupp-3.14.0 → $(Bool::False, Bool::False).Seq
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0200
+- id     0184
   from   inventory:Instant.^methods
   cell   uniprops(Any) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).uniprops(Any)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False, Bool::False).Seq
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0201
+- id     0185
   from   inventory:Instant.^methods
   cell   unival | Instant.from-posix(0)
   code   (Instant.from-posix(0)).unival
@@ -2035,11 +1733,8 @@ cols     Instant.from-posix(0)
   type   Num
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → 1
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0202
+- id     0186
   from   inventory:Instant.^methods
   cell   univals | Instant.from-posix(0)
   code   (Instant.from-posix(0)).univals
@@ -2047,11 +1742,8 @@ cols     Instant.from-posix(0)
   type   Seq
   oracle rakudo-2026.07 → $((NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, 1, 0).Seq)
   oracle rakupp-3.14.0 → $(1, 0)
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0203
+- id     0187
   from   inventory:Instant.^methods
   cell   unpolar(0) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).unpolar(0)
@@ -2059,11 +1751,8 @@ cols     Instant.from-posix(0)
   type   Complex
   oracle rakudo-2026.07 → <10+0i>
   oracle rakupp-3.14.0 → <10+0i>
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0204
+- id     0188
   from   inventory:Instant.^methods
   cell   unpolar(1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).unpolar(1)
@@ -2071,11 +1760,8 @@ cols     Instant.from-posix(0)
   type   Complex
   oracle rakudo-2026.07 → <5.403023058681398+8.414709848078965i>
   oracle rakupp-3.14.0 → <5.403023058681398+8.414709848078965i>
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0205
+- id     0189
   from   inventory:Instant.^methods
   cell   unpolar(-1) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).unpolar(-1)
@@ -2083,33 +1769,24 @@ cols     Instant.from-posix(0)
   type   Complex
   oracle rakudo-2026.07 → <5.403023058681398-8.414709848078965i>
   oracle rakupp-3.14.0 → <5.403023058681398-8.414709848078965i>
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0206
+- id     0190
   from   inventory:Instant.^methods
   cell   unpolar("a") | Instant.from-posix(0)
   code   (Instant.from-posix(0)).unpolar("a")
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → <10+0i>
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0207
+- id     0191
   from   inventory:Instant.^methods
   cell   unpolar(Any) | Instant.from-posix(0)
   code   (Instant.from-posix(0)).unpolar(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → <10+0i>
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0208
+- id     0192
   from   inventory:Instant.^methods
   cell   wordcase | Instant.from-posix(0)
   code   (Instant.from-posix(0)).wordcase
@@ -2117,6 +1794,3 @@ cols     Instant.from-posix(0)
   type   Str
   oracle rakudo-2026.07 → "Instant:10"
   oracle rakupp-3.14.0 → "10"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07

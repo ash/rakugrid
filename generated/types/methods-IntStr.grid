@@ -2,7 +2,7 @@ atom     methods/IntStr
 source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
-axes     AST | Bool | Bridge | CREATE | Capture | Complex | DEFINITE | Date | DateTime | EVAL | Failure | FatRat | HOW | INSTANTIATE-GENERIC | Int | NFC | NFD | NFKC | NFKD | Num | Order | POPULATE | REPR | Range | Rat | Str | VAR | Version | WHAT | WHERE | WHO | abs | acos | acosec | acosech | acosh | acotan | acotanh | all | any | asec | asech | asin | asinh | atan | atan2 | atanh | bits | bless | byte | cache | can | ceiling | chars | chomp | chr | chrs | cis | codes | conj | cos | cosec | cosech | cosh | cotan | cotanh | does | fc | flip | floor | indent | int | int16 | int32 | int64 | int8 | is-generic | is-prime | is-whitespace | isNaN | item | join | lazy-if | lc | leading-whitespace | log10 | log2 | lsb | msb | naive-word-wrapper | narrow | nl-out | no-zero-arg | none | not | one | ord | ords | parse-names | path | power-down | power-up | pred | rand | reverse | roots | samecase | samemark | samespace | sec | sech | self | sign | sin | sinh | so | sqrt | succ | sum | take | tan | tanh | tc | tclc | trailing-whitespace | trim | trim-leading | trim-trailing | truncate | uc | uint | uint16 | uint32 | uint64 | uint8 | uniname | uninames | uniparse | uniprop | uniprops | unival | univals | unpolar | wordcase
+axes     AST | Bool | Bridge | Capture | Complex | DEFINITE | Date | DateTime | EVAL | Failure | FatRat | HOW | Int | Num | Order | REPR | Range | Rat | Str | VAR | Version | WHAT | WHO | abs | acos | acosec | acosech | acosh | acotan | acotanh | all | any | asec | asech | asin | asinh | atan | atan2 | atanh | bits | bless | byte | cache | can | ceiling | chars | chomp | chr | chrs | cis | codes | conj | cos | cosec | cosech | cosh | cotan | cotanh | does | fc | flip | floor | indent | int | int16 | int32 | int64 | int8 | is-generic | is-prime | is-whitespace | isNaN | item | join | lazy-if | lc | leading-whitespace | log10 | log2 | lsb | msb | naive-word-wrapper | narrow | nl-out | no-zero-arg | none | not | one | ord | ords | parse-names | path | power-down | power-up | pred | rand | reverse | roots | samecase | samemark | samespace | sec | sech | self | sign | sin | sinh | so | sqrt | succ | sum | take | tan | tanh | tc | tclc | trailing-whitespace | trim | trim-leading | trim-trailing | truncate | uc | uint | uint16 | uint32 | uint64 | uint8 | uniname | uninames | uniparse | uniprop | uniprops | unival | univals | unpolar | wordcase
 cols     <42> | <-1>
 
 - id     0001
@@ -12,9 +12,6 @@ cols     <42> | <-1>
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
 - id     0002
   from   inventory:IntStr.^methods
@@ -23,9 +20,6 @@ cols     <42> | <-1>
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
 - id     0003
   from   inventory:IntStr.^methods
@@ -34,9 +28,6 @@ cols     <42> | <-1>
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
 - id     0004
   from   inventory:IntStr.^methods
@@ -45,9 +36,6 @@ cols     <42> | <-1>
   throws X::CompUnit::UnsatisfiedDependency+{X::Comp}
   oracle rakudo-2026.07 → ERR:X::CompUnit::UnsatisfiedDependency+{X::Comp}
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
 - id     0005
   from   inventory:IntStr.^methods
@@ -56,9 +44,6 @@ cols     <42> | <-1>
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
 - id     0006
   from   inventory:IntStr.^methods
@@ -67,9 +52,6 @@ cols     <42> | <-1>
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
 - id     0007
   from   inventory:IntStr.^methods
@@ -78,9 +60,6 @@ cols     <42> | <-1>
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
 - id     0008
   from   inventory:IntStr.^methods
@@ -89,9 +68,6 @@ cols     <42> | <-1>
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
 - id     0009
   from   inventory:IntStr.^methods
@@ -100,9 +76,6 @@ cols     <42> | <-1>
   throws X::CompUnit::UnsatisfiedDependency+{X::Comp}
   oracle rakudo-2026.07 → ERR:X::CompUnit::UnsatisfiedDependency+{X::Comp}
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
 - id     0010
   from   inventory:IntStr.^methods
@@ -111,9 +84,6 @@ cols     <42> | <-1>
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
 - id     0011
   from   inventory:IntStr.^methods
@@ -123,9 +93,6 @@ cols     <42> | <-1>
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
 - id     0012
   from   inventory:IntStr.^methods
@@ -135,9 +102,6 @@ cols     <42> | <-1>
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
 - id     0013
   from   inventory:IntStr.^methods
@@ -147,9 +111,6 @@ cols     <42> | <-1>
   type   Num
   oracle rakudo-2026.07 → 42e0
   oracle rakupp-3.14.0 → 42e0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
 - id     0014
   from   inventory:IntStr.^methods
@@ -159,57 +120,24 @@ cols     <42> | <-1>
   type   Num
   oracle rakudo-2026.07 → -1e0
   oracle rakupp-3.14.0 → -1e0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
 - id     0015
-  from   inventory:IntStr.^methods
-  cell   CREATE | <42>
-  code   (<42>).CREATE
-  is     UNRENDERABLE
-  type   IntStr
-  oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference produced no usable answer for this cell
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0016
-  from   inventory:IntStr.^methods
-  cell   CREATE | <-1>
-  code   (<-1>).CREATE
-  is     UNRENDERABLE
-  type   IntStr
-  oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference produced no usable answer for this cell
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0017
   from   inventory:IntStr.^methods
   cell   Capture | <42>
   code   (<42>).Capture
   throws X::Cannot::Capture
   oracle rakudo-2026.07 → ERR:X::Cannot::Capture
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0018
+- id     0016
   from   inventory:IntStr.^methods
   cell   Capture | <-1>
   code   (<-1>).Capture
   throws X::Cannot::Capture
   oracle rakudo-2026.07 → ERR:X::Cannot::Capture
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0019
+- id     0017
   from   inventory:IntStr.^methods
   cell   Complex | <42>
   code   (<42>).Complex
@@ -217,11 +145,8 @@ cols     <42> | <-1>
   type   Complex
   oracle rakudo-2026.07 → <42+0i>
   oracle rakupp-3.14.0 → <42+0i>
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0020
+- id     0018
   from   inventory:IntStr.^methods
   cell   Complex | <-1>
   code   (<-1>).Complex
@@ -229,11 +154,8 @@ cols     <42> | <-1>
   type   Complex
   oracle rakudo-2026.07 → <-1+0i>
   oracle rakupp-3.14.0 → <-1+0i>
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0021
+- id     0019
   from   inventory:IntStr.^methods
   cell   DEFINITE | <42>
   code   (<42>).DEFINITE
@@ -241,11 +163,8 @@ cols     <42> | <-1>
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0022
+- id     0020
   from   inventory:IntStr.^methods
   cell   DEFINITE | <-1>
   code   (<-1>).DEFINITE
@@ -253,33 +172,24 @@ cols     <42> | <-1>
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0023
+- id     0021
   from   inventory:IntStr.^methods
   cell   Date | <42>
   code   (<42>).Date
   throws X::Temporal::InvalidFormat
   oracle rakudo-2026.07 → ERR:X::Temporal::InvalidFormat
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0024
+- id     0022
   from   inventory:IntStr.^methods
   cell   Date | <-1>
   code   (<-1>).Date
   throws X::Temporal::InvalidFormat
   oracle rakudo-2026.07 → ERR:X::Temporal::InvalidFormat
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0025
+- id     0023
   from   inventory:IntStr.^methods
   cell   DateTime | <42>
   code   (<42>).DateTime
@@ -287,11 +197,8 @@ cols     <42> | <-1>
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(1970,1,1,0,0,42)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0026
+- id     0024
   from   inventory:IntStr.^methods
   cell   DateTime | <-1>
   code   (<-1>).DateTime
@@ -299,11 +206,8 @@ cols     <42> | <-1>
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(1969,12,31,23,59,59)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0027
+- id     0025
   from   inventory:IntStr.^methods
   cell   EVAL | <42>
   code   (<42>).EVAL
@@ -311,11 +215,8 @@ cols     <42> | <-1>
   type   Int
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0028
+- id     0026
   from   inventory:IntStr.^methods
   cell   EVAL | <-1>
   code   (<-1>).EVAL
@@ -323,33 +224,24 @@ cols     <42> | <-1>
   type   Int
   oracle rakudo-2026.07 → -1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0029
+- id     0027
   from   inventory:IntStr.^methods
   cell   Failure | <42>
   code   (<42>).Failure
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0030
+- id     0028
   from   inventory:IntStr.^methods
   cell   Failure | <-1>
   code   (<-1>).Failure
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0031
+- id     0029
   from   inventory:IntStr.^methods
   cell   FatRat | <42>
   code   (<42>).FatRat
@@ -357,11 +249,8 @@ cols     <42> | <-1>
   type   FatRat
   oracle rakudo-2026.07 → FatRat.new(42, 1)
   oracle rakupp-3.14.0 → FatRat.new(42, 1)
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0032
+- id     0030
   from   inventory:IntStr.^methods
   cell   FatRat | <-1>
   code   (<-1>).FatRat
@@ -369,11 +258,8 @@ cols     <42> | <-1>
   type   FatRat
   oracle rakudo-2026.07 → FatRat.new(-1, 1)
   oracle rakupp-3.14.0 → FatRat.new(-1, 1)
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0033
+- id     0031
   from   inventory:IntStr.^methods
   cell   HOW | <42>
   code   (<42>).HOW
@@ -381,11 +267,8 @@ cols     <42> | <-1>
   type   Perl6::Metamodel::ClassHOW
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0034
+- id     0032
   from   inventory:IntStr.^methods
   cell   HOW | <-1>
   code   (<-1>).HOW
@@ -393,121 +276,8 @@ cols     <42> | <-1>
   type   Perl6::Metamodel::ClassHOW
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0035
-  from   inventory:IntStr.^methods
-  cell   INSTANTIATE-GENERIC(0) | <42>
-  code   (<42>).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0036
-  from   inventory:IntStr.^methods
-  cell   INSTANTIATE-GENERIC(1) | <42>
-  code   (<42>).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0037
-  from   inventory:IntStr.^methods
-  cell   INSTANTIATE-GENERIC(-1) | <42>
-  code   (<42>).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0038
-  from   inventory:IntStr.^methods
-  cell   INSTANTIATE-GENERIC("a") | <42>
-  code   (<42>).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0039
-  from   inventory:IntStr.^methods
-  cell   INSTANTIATE-GENERIC(Any) | <42>
-  code   (<42>).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0040
-  from   inventory:IntStr.^methods
-  cell   INSTANTIATE-GENERIC(0) | <-1>
-  code   (<-1>).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0041
-  from   inventory:IntStr.^methods
-  cell   INSTANTIATE-GENERIC(1) | <-1>
-  code   (<-1>).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0042
-  from   inventory:IntStr.^methods
-  cell   INSTANTIATE-GENERIC(-1) | <-1>
-  code   (<-1>).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0043
-  from   inventory:IntStr.^methods
-  cell   INSTANTIATE-GENERIC("a") | <-1>
-  code   (<-1>).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0044
-  from   inventory:IntStr.^methods
-  cell   INSTANTIATE-GENERIC(Any) | <-1>
-  code   (<-1>).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0045
+- id     0033
   from   inventory:IntStr.^methods
   cell   Int | <42>
   code   (<42>).Int
@@ -515,11 +285,8 @@ cols     <42> | <-1>
   type   Int
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → 42
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0046
+- id     0034
   from   inventory:IntStr.^methods
   cell   Int | <-1>
   code   (<-1>).Int
@@ -527,107 +294,8 @@ cols     <42> | <-1>
   type   Int
   oracle rakudo-2026.07 → -1
   oracle rakupp-3.14.0 → -1
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0047
-  from   inventory:IntStr.^methods
-  cell   NFC | <42>
-  code   (<42>).NFC
-  is     Uni.new(0x0034, 0x0032).NFC
-  type   NFC
-  oracle rakudo-2026.07 → Uni.new(0x0034, 0x0032).NFC
-  oracle rakupp-3.14.0 → Uni.new(0x0034, 0x0032).NFC
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0048
-  from   inventory:IntStr.^methods
-  cell   NFC | <-1>
-  code   (<-1>).NFC
-  is     Uni.new(0x002d, 0x0031).NFC
-  type   NFC
-  oracle rakudo-2026.07 → Uni.new(0x002d, 0x0031).NFC
-  oracle rakupp-3.14.0 → Uni.new(0x002d, 0x0031).NFC
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0049
-  from   inventory:IntStr.^methods
-  cell   NFD | <42>
-  code   (<42>).NFD
-  is     Uni.new(0x0034, 0x0032).NFD
-  type   NFD
-  oracle rakudo-2026.07 → Uni.new(0x0034, 0x0032).NFD
-  oracle rakupp-3.14.0 → Uni.new(0x0034, 0x0032).NFD
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0050
-  from   inventory:IntStr.^methods
-  cell   NFD | <-1>
-  code   (<-1>).NFD
-  is     Uni.new(0x002d, 0x0031).NFD
-  type   NFD
-  oracle rakudo-2026.07 → Uni.new(0x002d, 0x0031).NFD
-  oracle rakupp-3.14.0 → Uni.new(0x002d, 0x0031).NFD
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0051
-  from   inventory:IntStr.^methods
-  cell   NFKC | <42>
-  code   (<42>).NFKC
-  is     Uni.new(0x0034, 0x0032).NFKC
-  type   NFKC
-  oracle rakudo-2026.07 → Uni.new(0x0034, 0x0032).NFKC
-  oracle rakupp-3.14.0 → Uni.new(0x0034, 0x0032).NFKC
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0052
-  from   inventory:IntStr.^methods
-  cell   NFKC | <-1>
-  code   (<-1>).NFKC
-  is     Uni.new(0x002d, 0x0031).NFKC
-  type   NFKC
-  oracle rakudo-2026.07 → Uni.new(0x002d, 0x0031).NFKC
-  oracle rakupp-3.14.0 → Uni.new(0x002d, 0x0031).NFKC
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0053
-  from   inventory:IntStr.^methods
-  cell   NFKD | <42>
-  code   (<42>).NFKD
-  is     Uni.new(0x0034, 0x0032).NFKD
-  type   NFKD
-  oracle rakudo-2026.07 → Uni.new(0x0034, 0x0032).NFKD
-  oracle rakupp-3.14.0 → Uni.new(0x0034, 0x0032).NFKD
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0054
-  from   inventory:IntStr.^methods
-  cell   NFKD | <-1>
-  code   (<-1>).NFKD
-  is     Uni.new(0x002d, 0x0031).NFKD
-  type   NFKD
-  oracle rakudo-2026.07 → Uni.new(0x002d, 0x0031).NFKD
-  oracle rakupp-3.14.0 → Uni.new(0x002d, 0x0031).NFKD
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0055
+- id     0035
   from   inventory:IntStr.^methods
   cell   Num | <42>
   code   (<42>).Num
@@ -635,11 +303,8 @@ cols     <42> | <-1>
   type   Num
   oracle rakudo-2026.07 → 42e0
   oracle rakupp-3.14.0 → 42e0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0056
+- id     0036
   from   inventory:IntStr.^methods
   cell   Num | <-1>
   code   (<-1>).Num
@@ -647,11 +312,8 @@ cols     <42> | <-1>
   type   Num
   oracle rakudo-2026.07 → -1e0
   oracle rakupp-3.14.0 → -1e0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0057
+- id     0037
   from   inventory:IntStr.^methods
   cell   Order | <42>
   code   (<42>).Order
@@ -659,11 +321,8 @@ cols     <42> | <-1>
   type   Order
   oracle rakudo-2026.07 → Order::More
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0058
+- id     0038
   from   inventory:IntStr.^methods
   cell   Order | <-1>
   code   (<-1>).Order
@@ -671,121 +330,8 @@ cols     <42> | <-1>
   type   Order
   oracle rakudo-2026.07 → Order::Less
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0059
-  from   inventory:IntStr.^methods
-  cell   POPULATE(0) | <42>
-  code   (<42>).POPULATE(0)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0060
-  from   inventory:IntStr.^methods
-  cell   POPULATE(1) | <42>
-  code   (<42>).POPULATE(1)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0061
-  from   inventory:IntStr.^methods
-  cell   POPULATE(-1) | <42>
-  code   (<42>).POPULATE(-1)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0062
-  from   inventory:IntStr.^methods
-  cell   POPULATE("a") | <42>
-  code   (<42>).POPULATE("a")
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0063
-  from   inventory:IntStr.^methods
-  cell   POPULATE(Any) | <42>
-  code   (<42>).POPULATE(Any)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0064
-  from   inventory:IntStr.^methods
-  cell   POPULATE(0) | <-1>
-  code   (<-1>).POPULATE(0)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0065
-  from   inventory:IntStr.^methods
-  cell   POPULATE(1) | <-1>
-  code   (<-1>).POPULATE(1)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0066
-  from   inventory:IntStr.^methods
-  cell   POPULATE(-1) | <-1>
-  code   (<-1>).POPULATE(-1)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0067
-  from   inventory:IntStr.^methods
-  cell   POPULATE("a") | <-1>
-  code   (<-1>).POPULATE("a")
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0068
-  from   inventory:IntStr.^methods
-  cell   POPULATE(Any) | <-1>
-  code   (<-1>).POPULATE(Any)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0069
+- id     0039
   from   inventory:IntStr.^methods
   cell   REPR | <42>
   code   (<42>).REPR
@@ -793,11 +339,8 @@ cols     <42> | <-1>
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0070
+- id     0040
   from   inventory:IntStr.^methods
   cell   REPR | <-1>
   code   (<-1>).REPR
@@ -805,33 +348,24 @@ cols     <42> | <-1>
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0071
+- id     0041
   from   inventory:IntStr.^methods
   cell   Range | <42>
   code   (<42>).Range
   throws X::Parameter::InvalidConcreteness
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0072
+- id     0042
   from   inventory:IntStr.^methods
   cell   Range | <-1>
   code   (<-1>).Range
   throws X::Parameter::InvalidConcreteness
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0073
+- id     0043
   from   inventory:IntStr.^methods
   cell   Rat | <42>
   code   (<42>).Rat
@@ -839,11 +373,8 @@ cols     <42> | <-1>
   type   Rat
   oracle rakudo-2026.07 → 42.0
   oracle rakupp-3.14.0 → 42.0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0074
+- id     0044
   from   inventory:IntStr.^methods
   cell   Rat | <-1>
   code   (<-1>).Rat
@@ -851,11 +382,8 @@ cols     <42> | <-1>
   type   Rat
   oracle rakudo-2026.07 → -1.0
   oracle rakupp-3.14.0 → -1.0
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0075
+- id     0045
   from   inventory:IntStr.^methods
   cell   Str | <42>
   code   (<42>).Str
@@ -863,11 +391,8 @@ cols     <42> | <-1>
   type   Str
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0076
+- id     0046
   from   inventory:IntStr.^methods
   cell   Str | <-1>
   code   (<-1>).Str
@@ -875,11 +400,8 @@ cols     <42> | <-1>
   type   Str
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0077
+- id     0047
   from   inventory:IntStr.^methods
   cell   VAR | <42>
   code   (<42>).VAR
@@ -887,11 +409,8 @@ cols     <42> | <-1>
   type   IntStr
   oracle rakudo-2026.07 → IntStr.new(42, "42")
   oracle rakupp-3.14.0 → IntStr.new(42, "42")
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0078
+- id     0048
   from   inventory:IntStr.^methods
   cell   VAR | <-1>
   code   (<-1>).VAR
@@ -899,11 +418,8 @@ cols     <42> | <-1>
   type   IntStr
   oracle rakudo-2026.07 → IntStr.new(-1, "-1")
   oracle rakupp-3.14.0 → IntStr.new(-1, "-1")
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0079
+- id     0049
   from   inventory:IntStr.^methods
   cell   Version | <42>
   code   (<42>).Version
@@ -911,11 +427,8 @@ cols     <42> | <-1>
   type   Version
   oracle rakudo-2026.07 → v42
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0080
+- id     0050
   from   inventory:IntStr.^methods
   cell   Version | <-1>
   code   (<-1>).Version
@@ -923,11 +436,8 @@ cols     <42> | <-1>
   type   Version
   oracle rakudo-2026.07 → v1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0081
+- id     0051
   from   inventory:IntStr.^methods
   cell   WHAT | <42>
   code   (<42>).WHAT
@@ -935,11 +445,8 @@ cols     <42> | <-1>
   type   IntStr
   oracle rakudo-2026.07 → IntStr
   oracle rakupp-3.14.0 → IntStr
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0082
+- id     0052
   from   inventory:IntStr.^methods
   cell   WHAT | <-1>
   code   (<-1>).WHAT
@@ -947,35 +454,8 @@ cols     <42> | <-1>
   type   IntStr
   oracle rakudo-2026.07 → IntStr
   oracle rakupp-3.14.0 → IntStr
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0083
-  from   inventory:IntStr.^methods
-  cell   WHERE | <42>
-  code   (<42>).WHERE
-  is     5677599822016
-  type   Int
-  oracle rakudo-2026.07 → 5677599822016
-  oracle rakupp-3.14.0 → 14116376016
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0084
-  from   inventory:IntStr.^methods
-  cell   WHERE | <-1>
-  code   (<-1>).WHERE
-  is     5677600267864
-  type   Int
-  oracle rakudo-2026.07 → 5677600267864
-  oracle rakupp-3.14.0 → 14116376016
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0085
+- id     0053
   from   inventory:IntStr.^methods
   cell   WHO | <42>
   code   (<42>).WHO
@@ -983,11 +463,8 @@ cols     <42> | <-1>
   type   Stash
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0086
+- id     0054
   from   inventory:IntStr.^methods
   cell   WHO | <-1>
   code   (<-1>).WHO
@@ -995,11 +472,8 @@ cols     <42> | <-1>
   type   Stash
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0087
+- id     0055
   from   inventory:IntStr.^methods
   cell   abs | <42>
   code   (<42>).abs
@@ -1007,11 +481,8 @@ cols     <42> | <-1>
   type   Int
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → 42
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0088
+- id     0056
   from   inventory:IntStr.^methods
   cell   abs | <-1>
   code   (<-1>).abs
@@ -1020,7 +491,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0089
+- id     0057
   from   inventory:IntStr.^methods
   cell   acos | <42>
   code   (<42>).acos
@@ -1029,7 +500,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0090
+- id     0058
   from   inventory:IntStr.^methods
   cell   acos | <-1>
   code   (<-1>).acos
@@ -1038,7 +509,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 3.141592653589793e0
   oracle rakupp-3.14.0 → 3.141592653589793e0
 
-- id     0091
+- id     0059
   from   inventory:IntStr.^methods
   cell   acosec | <42>
   code   (<42>).acosec
@@ -1047,7 +518,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 0.02381177396066874e0
   oracle rakupp-3.14.0 → 0.02381177396066874e0
 
-- id     0092
+- id     0060
   from   inventory:IntStr.^methods
   cell   acosec | <-1>
   code   (<-1>).acosec
@@ -1056,7 +527,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1.5707963267948966e0
   oracle rakupp-3.14.0 → -1.5707963267948966e0
 
-- id     0093
+- id     0061
   from   inventory:IntStr.^methods
   cell   acosech | <42>
   code   (<42>).acosech
@@ -1065,7 +536,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 0.023807274806122304e0
   oracle rakupp-3.14.0 → 0.023807274806122432e0
 
-- id     0094
+- id     0062
   from   inventory:IntStr.^methods
   cell   acosech | <-1>
   code   (<-1>).acosech
@@ -1074,7 +545,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -0.8813735870195429e0
   oracle rakupp-3.14.0 → -0.881373587019543e0
 
-- id     0095
+- id     0063
   from   inventory:IntStr.^methods
   cell   acosh | <42>
   code   (<42>).acosh
@@ -1083,7 +554,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 4.430675045349548e0
   oracle rakupp-3.14.0 → 4.430675045349548e0
 
-- id     0096
+- id     0064
   from   inventory:IntStr.^methods
   cell   acosh | <-1>
   code   (<-1>).acosh
@@ -1092,7 +563,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0097
+- id     0065
   from   inventory:IntStr.^methods
   cell   acotan | <42>
   code   (<42>).acotan
@@ -1101,7 +572,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 0.023805026185069942e0
   oracle rakupp-3.14.0 → 0.023805026185069942e0
 
-- id     0098
+- id     0066
   from   inventory:IntStr.^methods
   cell   acotan | <-1>
   code   (<-1>).acotan
@@ -1110,7 +581,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -0.7853981633974483e0
   oracle rakupp-3.14.0 → -0.7853981633974483e0
 
-- id     0099
+- id     0067
   from   inventory:IntStr.^methods
   cell   acotanh | <42>
   code   (<42>).acotanh
@@ -1119,7 +590,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 0.023814024494627332e0
   oracle rakupp-3.14.0 → 0.02381402449462731e0
 
-- id     0100
+- id     0068
   from   inventory:IntStr.^methods
   cell   acotanh | <-1>
   code   (<-1>).acotanh
@@ -1128,7 +599,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -Inf
   oracle rakupp-3.14.0 → -Inf
 
-- id     0101
+- id     0069
   from   inventory:IntStr.^methods
   cell   all | <42>
   code   (<42>).all
@@ -1137,7 +608,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → all(IntStr.new(42, "42"))
   oracle rakupp-3.14.0 → all(IntStr.new(42, "42"))
 
-- id     0102
+- id     0070
   from   inventory:IntStr.^methods
   cell   all | <-1>
   code   (<-1>).all
@@ -1146,7 +617,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → all(IntStr.new(-1, "-1"))
   oracle rakupp-3.14.0 → all(IntStr.new(-1, "-1"))
 
-- id     0103
+- id     0071
   from   inventory:IntStr.^methods
   cell   any | <42>
   code   (<42>).any
@@ -1155,7 +626,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → any(IntStr.new(42, "42"))
   oracle rakupp-3.14.0 → any(IntStr.new(42, "42"))
 
-- id     0104
+- id     0072
   from   inventory:IntStr.^methods
   cell   any | <-1>
   code   (<-1>).any
@@ -1164,7 +635,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → any(IntStr.new(-1, "-1"))
   oracle rakupp-3.14.0 → any(IntStr.new(-1, "-1"))
 
-- id     0105
+- id     0073
   from   inventory:IntStr.^methods
   cell   asec | <42>
   code   (<42>).asec
@@ -1173,7 +644,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1.5469845528342279e0
   oracle rakupp-3.14.0 → 1.5469845528342279e0
 
-- id     0106
+- id     0074
   from   inventory:IntStr.^methods
   cell   asec | <-1>
   code   (<-1>).asec
@@ -1182,7 +653,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 3.141592653589793e0
   oracle rakupp-3.14.0 → 3.141592653589793e0
 
-- id     0107
+- id     0075
   from   inventory:IntStr.^methods
   cell   asech | <42>
   code   (<42>).asech
@@ -1191,7 +662,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0108
+- id     0076
   from   inventory:IntStr.^methods
   cell   asech | <-1>
   code   (<-1>).asech
@@ -1200,7 +671,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0109
+- id     0077
   from   inventory:IntStr.^methods
   cell   asin | <42>
   code   (<42>).asin
@@ -1209,7 +680,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0110
+- id     0078
   from   inventory:IntStr.^methods
   cell   asin | <-1>
   code   (<-1>).asin
@@ -1218,7 +689,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1.5707963267948966e0
   oracle rakupp-3.14.0 → -1.5707963267948966e0
 
-- id     0111
+- id     0079
   from   inventory:IntStr.^methods
   cell   asinh | <42>
   code   (<42>).asinh
@@ -1227,7 +698,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 4.430958492080543e0
   oracle rakupp-3.14.0 → 4.430958492080543e0
 
-- id     0112
+- id     0080
   from   inventory:IntStr.^methods
   cell   asinh | <-1>
   code   (<-1>).asinh
@@ -1236,7 +707,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -0.8813735870195429e0
   oracle rakupp-3.14.0 → -0.881373587019543e0
 
-- id     0113
+- id     0081
   from   inventory:IntStr.^methods
   cell   atan | <42>
   code   (<42>).atan
@@ -1245,7 +716,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1.5469913006098266e0
   oracle rakupp-3.14.0 → 1.5469913006098266e0
 
-- id     0114
+- id     0082
   from   inventory:IntStr.^methods
   cell   atan | <-1>
   code   (<-1>).atan
@@ -1254,7 +725,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -0.7853981633974483e0
   oracle rakupp-3.14.0 → -0.7853981633974483e0
 
-- id     0115
+- id     0083
   from   inventory:IntStr.^methods
   cell   atan2(0) | <42>
   code   (<42>).atan2(0)
@@ -1263,7 +734,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → 1.5707963267948966e0
 
-- id     0116
+- id     0084
   from   inventory:IntStr.^methods
   cell   atan2(1) | <42>
   code   (<42>).atan2(1)
@@ -1272,7 +743,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1.5469913006098266e0
   oracle rakupp-3.14.0 → 1.5469913006098266e0
 
-- id     0117
+- id     0085
   from   inventory:IntStr.^methods
   cell   atan2(-1) | <42>
   code   (<42>).atan2(-1)
@@ -1281,7 +752,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1.5946013529799665e0
   oracle rakupp-3.14.0 → 1.5946013529799665e0
 
-- id     0118
+- id     0086
   from   inventory:IntStr.^methods
   cell   atan2("a") | <42>
   code   (<42>).atan2("a")
@@ -1289,7 +760,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → 1.5707963267948966e0
 
-- id     0119
+- id     0087
   from   inventory:IntStr.^methods
   cell   atan2(Any) | <42>
   code   (<42>).atan2(Any)
@@ -1297,7 +768,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → 1.5707963267948966e0
 
-- id     0120
+- id     0088
   from   inventory:IntStr.^methods
   cell   atan2(0) | <-1>
   code   (<-1>).atan2(0)
@@ -1306,7 +777,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1.5707963267948966e0
   oracle rakupp-3.14.0 → -1.5707963267948966e0
 
-- id     0121
+- id     0089
   from   inventory:IntStr.^methods
   cell   atan2(1) | <-1>
   code   (<-1>).atan2(1)
@@ -1315,7 +786,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -0.7853981633974483e0
   oracle rakupp-3.14.0 → -0.7853981633974483e0
 
-- id     0122
+- id     0090
   from   inventory:IntStr.^methods
   cell   atan2(-1) | <-1>
   code   (<-1>).atan2(-1)
@@ -1324,7 +795,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -2.356194490192345e0
   oracle rakupp-3.14.0 → -2.356194490192345e0
 
-- id     0123
+- id     0091
   from   inventory:IntStr.^methods
   cell   atan2("a") | <-1>
   code   (<-1>).atan2("a")
@@ -1332,7 +803,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → -1.5707963267948966e0
 
-- id     0124
+- id     0092
   from   inventory:IntStr.^methods
   cell   atan2(Any) | <-1>
   code   (<-1>).atan2(Any)
@@ -1340,7 +811,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → -1.5707963267948966e0
 
-- id     0125
+- id     0093
   from   inventory:IntStr.^methods
   cell   atanh | <42>
   code   (<42>).atanh
@@ -1349,7 +820,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0126
+- id     0094
   from   inventory:IntStr.^methods
   cell   atanh | <-1>
   code   (<-1>).atanh
@@ -1358,7 +829,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -Inf
   oracle rakupp-3.14.0 → -Inf
 
-- id     0127
+- id     0095
   from   inventory:IntStr.^methods
   cell   bits | <42>
   code   (<42>).bits
@@ -1366,7 +837,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0128
+- id     0096
   from   inventory:IntStr.^methods
   cell   bits | <-1>
   code   (<-1>).bits
@@ -1374,7 +845,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0129
+- id     0097
   from   inventory:IntStr.^methods
   cell   bless | <42>
   code   (<42>).bless
@@ -1383,7 +854,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(0, "")
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0130
+- id     0098
   from   inventory:IntStr.^methods
   cell   bless | <-1>
   code   (<-1>).bless
@@ -1392,7 +863,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(0, "")
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0131
+- id     0099
   from   inventory:IntStr.^methods
   cell   byte | <42>
   code   (<42>).byte
@@ -1401,7 +872,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0132
+- id     0100
   from   inventory:IntStr.^methods
   cell   byte | <-1>
   code   (<-1>).byte
@@ -1410,7 +881,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 255
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0133
+- id     0101
   from   inventory:IntStr.^methods
   cell   cache | <42>
   code   (<42>).cache
@@ -1419,7 +890,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → $(IntStr.new(42, "42"),)
   oracle rakupp-3.14.0 → $(IntStr.new(42, "42"),)
 
-- id     0134
+- id     0102
   from   inventory:IntStr.^methods
   cell   cache | <-1>
   code   (<-1>).cache
@@ -1428,7 +899,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → $(IntStr.new(-1, "-1"),)
   oracle rakupp-3.14.0 → $(IntStr.new(-1, "-1"),)
 
-- id     0135
+- id     0103
   from   inventory:IntStr.^methods
   cell   can(0) | <42>
   code   (<42>).can(0)
@@ -1436,7 +907,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0136
+- id     0104
   from   inventory:IntStr.^methods
   cell   can(1) | <42>
   code   (<42>).can(1)
@@ -1444,7 +915,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0137
+- id     0105
   from   inventory:IntStr.^methods
   cell   can(-1) | <42>
   code   (<42>).can(-1)
@@ -1452,7 +923,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0138
+- id     0106
   from   inventory:IntStr.^methods
   cell   can("a") | <42>
   code   (<42>).can("a")
@@ -1461,7 +932,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0139
+- id     0107
   from   inventory:IntStr.^methods
   cell   can(Any) | <42>
   code   (<42>).can(Any)
@@ -1469,7 +940,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0140
+- id     0108
   from   inventory:IntStr.^methods
   cell   can(0) | <-1>
   code   (<-1>).can(0)
@@ -1477,7 +948,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0141
+- id     0109
   from   inventory:IntStr.^methods
   cell   can(1) | <-1>
   code   (<-1>).can(1)
@@ -1485,7 +956,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0142
+- id     0110
   from   inventory:IntStr.^methods
   cell   can(-1) | <-1>
   code   (<-1>).can(-1)
@@ -1493,7 +964,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0143
+- id     0111
   from   inventory:IntStr.^methods
   cell   can("a") | <-1>
   code   (<-1>).can("a")
@@ -1502,7 +973,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0144
+- id     0112
   from   inventory:IntStr.^methods
   cell   can(Any) | <-1>
   code   (<-1>).can(Any)
@@ -1510,7 +981,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0145
+- id     0113
   from   inventory:IntStr.^methods
   cell   ceiling | <42>
   code   (<42>).ceiling
@@ -1519,7 +990,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(42, "42")
   oracle rakupp-3.14.0 → 42
 
-- id     0146
+- id     0114
   from   inventory:IntStr.^methods
   cell   ceiling | <-1>
   code   (<-1>).ceiling
@@ -1528,7 +999,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(-1, "-1")
   oracle rakupp-3.14.0 → -1
 
-- id     0147
+- id     0115
   from   inventory:IntStr.^methods
   cell   chars | <42>
   code   (<42>).chars
@@ -1537,7 +1008,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 2
   oracle rakupp-3.14.0 → 2
 
-- id     0148
+- id     0116
   from   inventory:IntStr.^methods
   cell   chars | <-1>
   code   (<-1>).chars
@@ -1546,7 +1017,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 2
   oracle rakupp-3.14.0 → 2
 
-- id     0149
+- id     0117
   from   inventory:IntStr.^methods
   cell   chomp(0) | <42>
   code   (<42>).chomp(0)
@@ -1554,7 +1025,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "42"
 
-- id     0150
+- id     0118
   from   inventory:IntStr.^methods
   cell   chomp(1) | <42>
   code   (<42>).chomp(1)
@@ -1562,7 +1033,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "42"
 
-- id     0151
+- id     0119
   from   inventory:IntStr.^methods
   cell   chomp(-1) | <42>
   code   (<42>).chomp(-1)
@@ -1570,7 +1041,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "42"
 
-- id     0152
+- id     0120
   from   inventory:IntStr.^methods
   cell   chomp("a") | <42>
   code   (<42>).chomp("a")
@@ -1578,7 +1049,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "42"
 
-- id     0153
+- id     0121
   from   inventory:IntStr.^methods
   cell   chomp(Any) | <42>
   code   (<42>).chomp(Any)
@@ -1586,7 +1057,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "42"
 
-- id     0154
+- id     0122
   from   inventory:IntStr.^methods
   cell   chomp(0) | <-1>
   code   (<-1>).chomp(0)
@@ -1594,7 +1065,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "-1"
 
-- id     0155
+- id     0123
   from   inventory:IntStr.^methods
   cell   chomp(1) | <-1>
   code   (<-1>).chomp(1)
@@ -1602,7 +1073,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "-1"
 
-- id     0156
+- id     0124
   from   inventory:IntStr.^methods
   cell   chomp(-1) | <-1>
   code   (<-1>).chomp(-1)
@@ -1610,7 +1081,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "-1"
 
-- id     0157
+- id     0125
   from   inventory:IntStr.^methods
   cell   chomp("a") | <-1>
   code   (<-1>).chomp("a")
@@ -1618,7 +1089,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "-1"
 
-- id     0158
+- id     0126
   from   inventory:IntStr.^methods
   cell   chomp(Any) | <-1>
   code   (<-1>).chomp(Any)
@@ -1626,7 +1097,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → "-1"
 
-- id     0159
+- id     0127
   from   inventory:IntStr.^methods
   cell   chr | <42>
   code   (<42>).chr
@@ -1635,7 +1106,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "*"
   oracle rakupp-3.14.0 → "*"
 
-- id     0160
+- id     0128
   from   inventory:IntStr.^methods
   cell   chr | <-1>
   code   (<-1>).chr
@@ -1643,7 +1114,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::AdHoc
 
-- id     0161
+- id     0129
   from   inventory:IntStr.^methods
   cell   chrs | <42>
   code   (<42>).chrs
@@ -1652,7 +1123,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "*"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0162
+- id     0130
   from   inventory:IntStr.^methods
   cell   chrs | <-1>
   code   (<-1>).chrs
@@ -1660,7 +1131,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0163
+- id     0131
   from   inventory:IntStr.^methods
   cell   cis | <42>
   code   (<42>).cis
@@ -1669,7 +1140,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → <-0.3999853149883513-0.9165215479156338i>
   oracle rakupp-3.14.0 → <-0.3999853149883513-0.9165215479156338i>
 
-- id     0164
+- id     0132
   from   inventory:IntStr.^methods
   cell   cis | <-1>
   code   (<-1>).cis
@@ -1678,7 +1149,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → <0.5403023058681398-0.8414709848078965i>
   oracle rakupp-3.14.0 → <0.5403023058681398-0.8414709848078965i>
 
-- id     0165
+- id     0133
   from   inventory:IntStr.^methods
   cell   codes | <42>
   code   (<42>).codes
@@ -1687,7 +1158,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 2
   oracle rakupp-3.14.0 → 2
 
-- id     0166
+- id     0134
   from   inventory:IntStr.^methods
   cell   codes | <-1>
   code   (<-1>).codes
@@ -1696,7 +1167,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 2
   oracle rakupp-3.14.0 → 2
 
-- id     0167
+- id     0135
   from   inventory:IntStr.^methods
   cell   conj | <42>
   code   (<42>).conj
@@ -1705,7 +1176,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(42, "42")
   oracle rakupp-3.14.0 → IntStr.new(42, "42")
 
-- id     0168
+- id     0136
   from   inventory:IntStr.^methods
   cell   conj | <-1>
   code   (<-1>).conj
@@ -1714,7 +1185,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(-1, "-1")
   oracle rakupp-3.14.0 → IntStr.new(-1, "-1")
 
-- id     0169
+- id     0137
   from   inventory:IntStr.^methods
   cell   cos | <42>
   code   (<42>).cos
@@ -1723,7 +1194,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -0.3999853149883513e0
   oracle rakupp-3.14.0 → -0.3999853149883513e0
 
-- id     0170
+- id     0138
   from   inventory:IntStr.^methods
   cell   cos | <-1>
   code   (<-1>).cos
@@ -1732,7 +1203,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 0.5403023058681398e0
   oracle rakupp-3.14.0 → 0.5403023058681398e0
 
-- id     0171
+- id     0139
   from   inventory:IntStr.^methods
   cell   cosec | <42>
   code   (<42>).cosec
@@ -1741,7 +1212,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1.0910818215613305e0
   oracle rakupp-3.14.0 → -1.0910818215613305e0
 
-- id     0172
+- id     0140
   from   inventory:IntStr.^methods
   cell   cosec | <-1>
   code   (<-1>).cosec
@@ -1750,7 +1221,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1.1883951057781212e0
   oracle rakupp-3.14.0 → -1.1883951057781212e0
 
-- id     0173
+- id     0141
   from   inventory:IntStr.^methods
   cell   cosech | <42>
   code   (<42>).cosech
@@ -1759,7 +1230,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1.149904452858712e-18
   oracle rakupp-3.14.0 → 1.149904452858712e-18
 
-- id     0174
+- id     0142
   from   inventory:IntStr.^methods
   cell   cosech | <-1>
   code   (<-1>).cosech
@@ -1768,7 +1239,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -0.8509181282393216e0
   oracle rakupp-3.14.0 → -0.8509181282393216e0
 
-- id     0175
+- id     0143
   from   inventory:IntStr.^methods
   cell   cosh | <42>
   code   (<42>).cosh
@@ -1777,7 +1248,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 8.696374707602505e+17
   oracle rakupp-3.14.0 → 8.696374707602505e+17
 
-- id     0176
+- id     0144
   from   inventory:IntStr.^methods
   cell   cosh | <-1>
   code   (<-1>).cosh
@@ -1786,7 +1257,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1.5430806348152437e0
   oracle rakupp-3.14.0 → 1.5430806348152437e0
 
-- id     0177
+- id     0145
   from   inventory:IntStr.^methods
   cell   cotan | <42>
   code   (<42>).cotan
@@ -1795,7 +1266,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 0.43641670607527294e0
   oracle rakupp-3.14.0 → 0.43641670607527294e0
 
-- id     0178
+- id     0146
   from   inventory:IntStr.^methods
   cell   cotan | <-1>
   code   (<-1>).cotan
@@ -1804,7 +1275,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -0.6420926159343308e0
   oracle rakupp-3.14.0 → -0.6420926159343308e0
 
-- id     0179
+- id     0147
   from   inventory:IntStr.^methods
   cell   cotanh | <42>
   code   (<42>).cotanh
@@ -1813,7 +1284,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → 1e0
 
-- id     0180
+- id     0148
   from   inventory:IntStr.^methods
   cell   cotanh | <-1>
   code   (<-1>).cotanh
@@ -1822,7 +1293,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1.3130352854993315e0
   oracle rakupp-3.14.0 → -1.3130352854993315e0
 
-- id     0181
+- id     0149
   from   inventory:IntStr.^methods
   cell   does(0) | <42>
   code   (<42>).does(0)
@@ -1831,7 +1302,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0182
+- id     0150
   from   inventory:IntStr.^methods
   cell   does(1) | <42>
   code   (<42>).does(1)
@@ -1840,7 +1311,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0183
+- id     0151
   from   inventory:IntStr.^methods
   cell   does(-1) | <42>
   code   (<42>).does(-1)
@@ -1849,7 +1320,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0184
+- id     0152
   from   inventory:IntStr.^methods
   cell   does("a") | <42>
   code   (<42>).does("a")
@@ -1858,7 +1329,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0185
+- id     0153
   from   inventory:IntStr.^methods
   cell   does(Any) | <42>
   code   (<42>).does(Any)
@@ -1867,7 +1338,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0186
+- id     0154
   from   inventory:IntStr.^methods
   cell   does(0) | <-1>
   code   (<-1>).does(0)
@@ -1876,7 +1347,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0187
+- id     0155
   from   inventory:IntStr.^methods
   cell   does(1) | <-1>
   code   (<-1>).does(1)
@@ -1885,7 +1356,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0188
+- id     0156
   from   inventory:IntStr.^methods
   cell   does(-1) | <-1>
   code   (<-1>).does(-1)
@@ -1894,7 +1365,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0189
+- id     0157
   from   inventory:IntStr.^methods
   cell   does("a") | <-1>
   code   (<-1>).does("a")
@@ -1903,7 +1374,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0190
+- id     0158
   from   inventory:IntStr.^methods
   cell   does(Any) | <-1>
   code   (<-1>).does(Any)
@@ -1912,7 +1383,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0191
+- id     0159
   from   inventory:IntStr.^methods
   cell   fc | <42>
   code   (<42>).fc
@@ -1921,7 +1392,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0192
+- id     0160
   from   inventory:IntStr.^methods
   cell   fc | <-1>
   code   (<-1>).fc
@@ -1930,7 +1401,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0193
+- id     0161
   from   inventory:IntStr.^methods
   cell   flip | <42>
   code   (<42>).flip
@@ -1939,7 +1410,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "24"
   oracle rakupp-3.14.0 → "24"
 
-- id     0194
+- id     0162
   from   inventory:IntStr.^methods
   cell   flip | <-1>
   code   (<-1>).flip
@@ -1948,7 +1419,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "1-"
   oracle rakupp-3.14.0 → "1-"
 
-- id     0195
+- id     0163
   from   inventory:IntStr.^methods
   cell   floor | <42>
   code   (<42>).floor
@@ -1957,7 +1428,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(42, "42")
   oracle rakupp-3.14.0 → 42
 
-- id     0196
+- id     0164
   from   inventory:IntStr.^methods
   cell   floor | <-1>
   code   (<-1>).floor
@@ -1966,7 +1437,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(-1, "-1")
   oracle rakupp-3.14.0 → -1
 
-- id     0197
+- id     0165
   from   inventory:IntStr.^methods
   cell   indent(0) | <42>
   code   (<42>).indent(0)
@@ -1975,7 +1446,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(42, "42")
   oracle rakupp-3.14.0 → "42"
 
-- id     0198
+- id     0166
   from   inventory:IntStr.^methods
   cell   indent(1) | <42>
   code   (<42>).indent(1)
@@ -1984,7 +1455,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(0, " 42")
   oracle rakupp-3.14.0 → " 42"
 
-- id     0199
+- id     0167
   from   inventory:IntStr.^methods
   cell   indent(-1) | <42>
   code   (<42>).indent(-1)
@@ -1993,7 +1464,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(0, "42")
   oracle rakupp-3.14.0 → "42"
 
-- id     0200
+- id     0168
   from   inventory:IntStr.^methods
   cell   indent("a") | <42>
   code   (<42>).indent("a")
@@ -2001,7 +1472,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → "42"
 
-- id     0201
+- id     0169
   from   inventory:IntStr.^methods
   cell   indent(Any) | <42>
   code   (<42>).indent(Any)
@@ -2010,7 +1481,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(42, "42")
   oracle rakupp-3.14.0 → "42"
 
-- id     0202
+- id     0170
   from   inventory:IntStr.^methods
   cell   indent(0) | <-1>
   code   (<-1>).indent(0)
@@ -2019,7 +1490,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(-1, "-1")
   oracle rakupp-3.14.0 → "-1"
 
-- id     0203
+- id     0171
   from   inventory:IntStr.^methods
   cell   indent(1) | <-1>
   code   (<-1>).indent(1)
@@ -2028,7 +1499,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(0, " -1")
   oracle rakupp-3.14.0 → " -1"
 
-- id     0204
+- id     0172
   from   inventory:IntStr.^methods
   cell   indent(-1) | <-1>
   code   (<-1>).indent(-1)
@@ -2037,7 +1508,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(0, "-1")
   oracle rakupp-3.14.0 → "-1"
 
-- id     0205
+- id     0173
   from   inventory:IntStr.^methods
   cell   indent("a") | <-1>
   code   (<-1>).indent("a")
@@ -2045,7 +1516,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → "-1"
 
-- id     0206
+- id     0174
   from   inventory:IntStr.^methods
   cell   indent(Any) | <-1>
   code   (<-1>).indent(Any)
@@ -2054,7 +1525,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(-1, "-1")
   oracle rakupp-3.14.0 → "-1"
 
-- id     0207
+- id     0175
   from   inventory:IntStr.^methods
   cell   int | <42>
   code   (<42>).int
@@ -2063,7 +1534,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0208
+- id     0176
   from   inventory:IntStr.^methods
   cell   int | <-1>
   code   (<-1>).int
@@ -2072,7 +1543,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0209
+- id     0177
   from   inventory:IntStr.^methods
   cell   int16 | <42>
   code   (<42>).int16
@@ -2081,7 +1552,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0210
+- id     0178
   from   inventory:IntStr.^methods
   cell   int16 | <-1>
   code   (<-1>).int16
@@ -2090,7 +1561,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0211
+- id     0179
   from   inventory:IntStr.^methods
   cell   int32 | <42>
   code   (<42>).int32
@@ -2099,7 +1570,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0212
+- id     0180
   from   inventory:IntStr.^methods
   cell   int32 | <-1>
   code   (<-1>).int32
@@ -2108,7 +1579,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0213
+- id     0181
   from   inventory:IntStr.^methods
   cell   int64 | <42>
   code   (<42>).int64
@@ -2117,7 +1588,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0214
+- id     0182
   from   inventory:IntStr.^methods
   cell   int64 | <-1>
   code   (<-1>).int64
@@ -2126,7 +1597,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0215
+- id     0183
   from   inventory:IntStr.^methods
   cell   int8 | <42>
   code   (<42>).int8
@@ -2135,7 +1606,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0216
+- id     0184
   from   inventory:IntStr.^methods
   cell   int8 | <-1>
   code   (<-1>).int8
@@ -2144,7 +1615,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0217
+- id     0185
   from   inventory:IntStr.^methods
   cell   is-generic | <42>
   code   (<42>).is-generic
@@ -2153,7 +1624,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0218
+- id     0186
   from   inventory:IntStr.^methods
   cell   is-generic | <-1>
   code   (<-1>).is-generic
@@ -2162,7 +1633,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0219
+- id     0187
   from   inventory:IntStr.^methods
   cell   is-prime | <42>
   code   (<42>).is-prime
@@ -2171,7 +1642,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0220
+- id     0188
   from   inventory:IntStr.^methods
   cell   is-prime | <-1>
   code   (<-1>).is-prime
@@ -2180,7 +1651,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0221
+- id     0189
   from   inventory:IntStr.^methods
   cell   is-whitespace | <42>
   code   (<42>).is-whitespace
@@ -2189,7 +1660,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0222
+- id     0190
   from   inventory:IntStr.^methods
   cell   is-whitespace | <-1>
   code   (<-1>).is-whitespace
@@ -2198,7 +1669,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0223
+- id     0191
   from   inventory:IntStr.^methods
   cell   isNaN | <42>
   code   (<42>).isNaN
@@ -2207,7 +1678,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0224
+- id     0192
   from   inventory:IntStr.^methods
   cell   isNaN | <-1>
   code   (<-1>).isNaN
@@ -2216,7 +1687,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0225
+- id     0193
   from   inventory:IntStr.^methods
   cell   item | <42>
   code   (<42>).item
@@ -2225,7 +1696,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(42, "42")
   oracle rakupp-3.14.0 → IntStr.new(42, "42")
 
-- id     0226
+- id     0194
   from   inventory:IntStr.^methods
   cell   item | <-1>
   code   (<-1>).item
@@ -2234,7 +1705,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(-1, "-1")
   oracle rakupp-3.14.0 → IntStr.new(-1, "-1")
 
-- id     0227
+- id     0195
   from   inventory:IntStr.^methods
   cell   join(0) | <42>
   code   (<42>).join(0)
@@ -2243,7 +1714,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0228
+- id     0196
   from   inventory:IntStr.^methods
   cell   join(1) | <42>
   code   (<42>).join(1)
@@ -2252,7 +1723,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0229
+- id     0197
   from   inventory:IntStr.^methods
   cell   join(-1) | <42>
   code   (<42>).join(-1)
@@ -2261,7 +1732,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0230
+- id     0198
   from   inventory:IntStr.^methods
   cell   join("a") | <42>
   code   (<42>).join("a")
@@ -2270,7 +1741,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0231
+- id     0199
   from   inventory:IntStr.^methods
   cell   join(Any) | <42>
   code   (<42>).join(Any)
@@ -2278,7 +1749,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → "42"
 
-- id     0232
+- id     0200
   from   inventory:IntStr.^methods
   cell   join(0) | <-1>
   code   (<-1>).join(0)
@@ -2287,7 +1758,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0233
+- id     0201
   from   inventory:IntStr.^methods
   cell   join(1) | <-1>
   code   (<-1>).join(1)
@@ -2296,7 +1767,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0234
+- id     0202
   from   inventory:IntStr.^methods
   cell   join(-1) | <-1>
   code   (<-1>).join(-1)
@@ -2305,7 +1776,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0235
+- id     0203
   from   inventory:IntStr.^methods
   cell   join("a") | <-1>
   code   (<-1>).join("a")
@@ -2314,7 +1785,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0236
+- id     0204
   from   inventory:IntStr.^methods
   cell   join(Any) | <-1>
   code   (<-1>).join(Any)
@@ -2322,7 +1793,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → "-1"
 
-- id     0237
+- id     0205
   from   inventory:IntStr.^methods
   cell   lazy-if(0) | <42>
   code   (<42>).lazy-if(0)
@@ -2331,7 +1802,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(42, "42")
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0238
+- id     0206
   from   inventory:IntStr.^methods
   cell   lazy-if(1) | <42>
   code   (<42>).lazy-if(1)
@@ -2340,7 +1811,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(42, "42")
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0239
+- id     0207
   from   inventory:IntStr.^methods
   cell   lazy-if(-1) | <42>
   code   (<42>).lazy-if(-1)
@@ -2349,7 +1820,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(42, "42")
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0240
+- id     0208
   from   inventory:IntStr.^methods
   cell   lazy-if("a") | <42>
   code   (<42>).lazy-if("a")
@@ -2358,7 +1829,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(42, "42")
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0241
+- id     0209
   from   inventory:IntStr.^methods
   cell   lazy-if(Any) | <42>
   code   (<42>).lazy-if(Any)
@@ -2367,7 +1838,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(42, "42")
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0242
+- id     0210
   from   inventory:IntStr.^methods
   cell   lazy-if(0) | <-1>
   code   (<-1>).lazy-if(0)
@@ -2376,7 +1847,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(-1, "-1")
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0243
+- id     0211
   from   inventory:IntStr.^methods
   cell   lazy-if(1) | <-1>
   code   (<-1>).lazy-if(1)
@@ -2385,7 +1856,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(-1, "-1")
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0244
+- id     0212
   from   inventory:IntStr.^methods
   cell   lazy-if(-1) | <-1>
   code   (<-1>).lazy-if(-1)
@@ -2394,7 +1865,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(-1, "-1")
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0245
+- id     0213
   from   inventory:IntStr.^methods
   cell   lazy-if("a") | <-1>
   code   (<-1>).lazy-if("a")
@@ -2403,7 +1874,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(-1, "-1")
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0246
+- id     0214
   from   inventory:IntStr.^methods
   cell   lazy-if(Any) | <-1>
   code   (<-1>).lazy-if(Any)
@@ -2412,7 +1883,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(-1, "-1")
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0247
+- id     0215
   from   inventory:IntStr.^methods
   cell   lc | <42>
   code   (<42>).lc
@@ -2421,7 +1892,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0248
+- id     0216
   from   inventory:IntStr.^methods
   cell   lc | <-1>
   code   (<-1>).lc
@@ -2430,7 +1901,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0249
+- id     0217
   from   inventory:IntStr.^methods
   cell   leading-whitespace | <42>
   code   (<42>).leading-whitespace
@@ -2439,7 +1910,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0250
+- id     0218
   from   inventory:IntStr.^methods
   cell   leading-whitespace | <-1>
   code   (<-1>).leading-whitespace
@@ -2448,7 +1919,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0251
+- id     0219
   from   inventory:IntStr.^methods
   cell   log10 | <42>
   code   (<42>).log10
@@ -2457,7 +1928,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1.6232492903979003e0
   oracle rakupp-3.14.0 → 1.6232492903979006e0
 
-- id     0252
+- id     0220
   from   inventory:IntStr.^methods
   cell   log10 | <-1>
   code   (<-1>).log10
@@ -2466,7 +1937,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0253
+- id     0221
   from   inventory:IntStr.^methods
   cell   log2 | <42>
   code   (<42>).log2
@@ -2475,7 +1946,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 5.392317422778761e0
   oracle rakupp-3.14.0 → 5.392317422778761e0
 
-- id     0254
+- id     0222
   from   inventory:IntStr.^methods
   cell   log2 | <-1>
   code   (<-1>).log2
@@ -2484,7 +1955,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0255
+- id     0223
   from   inventory:IntStr.^methods
   cell   lsb | <42>
   code   (<42>).lsb
@@ -2493,7 +1964,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0256
+- id     0224
   from   inventory:IntStr.^methods
   cell   lsb | <-1>
   code   (<-1>).lsb
@@ -2502,7 +1973,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0257
+- id     0225
   from   inventory:IntStr.^methods
   cell   msb | <42>
   code   (<42>).msb
@@ -2511,7 +1982,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 5
   oracle rakupp-3.14.0 → 5
 
-- id     0258
+- id     0226
   from   inventory:IntStr.^methods
   cell   msb | <-1>
   code   (<-1>).msb
@@ -2520,7 +1991,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0259
+- id     0227
   from   inventory:IntStr.^methods
   cell   naive-word-wrapper | <42>
   code   (<42>).naive-word-wrapper
@@ -2529,7 +2000,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0260
+- id     0228
   from   inventory:IntStr.^methods
   cell   naive-word-wrapper | <-1>
   code   (<-1>).naive-word-wrapper
@@ -2538,7 +2009,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0261
+- id     0229
   from   inventory:IntStr.^methods
   cell   narrow | <42>
   code   (<42>).narrow
@@ -2547,7 +2018,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → IntStr.new(42, "42")
 
-- id     0262
+- id     0230
   from   inventory:IntStr.^methods
   cell   narrow | <-1>
   code   (<-1>).narrow
@@ -2556,7 +2027,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1
   oracle rakupp-3.14.0 → IntStr.new(-1, "-1")
 
-- id     0263
+- id     0231
   from   inventory:IntStr.^methods
   cell   nl-out | <42>
   code   (<42>).nl-out
@@ -2565,7 +2036,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0264
+- id     0232
   from   inventory:IntStr.^methods
   cell   nl-out | <-1>
   code   (<-1>).nl-out
@@ -2574,7 +2045,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0265
+- id     0233
   from   inventory:IntStr.^methods
   cell   no-zero-arg | <42>
   code   (<42>).no-zero-arg
@@ -2582,7 +2053,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::NoZeroArgMeaning
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0266
+- id     0234
   from   inventory:IntStr.^methods
   cell   no-zero-arg | <-1>
   code   (<-1>).no-zero-arg
@@ -2590,7 +2061,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::NoZeroArgMeaning
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0267
+- id     0235
   from   inventory:IntStr.^methods
   cell   none | <42>
   code   (<42>).none
@@ -2599,7 +2070,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → none(IntStr.new(42, "42"))
   oracle rakupp-3.14.0 → none(IntStr.new(42, "42"))
 
-- id     0268
+- id     0236
   from   inventory:IntStr.^methods
   cell   none | <-1>
   code   (<-1>).none
@@ -2608,7 +2079,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → none(IntStr.new(-1, "-1"))
   oracle rakupp-3.14.0 → none(IntStr.new(-1, "-1"))
 
-- id     0269
+- id     0237
   from   inventory:IntStr.^methods
   cell   not | <42>
   code   (<42>).not
@@ -2617,7 +2088,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0270
+- id     0238
   from   inventory:IntStr.^methods
   cell   not | <-1>
   code   (<-1>).not
@@ -2626,7 +2097,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0271
+- id     0239
   from   inventory:IntStr.^methods
   cell   one | <42>
   code   (<42>).one
@@ -2635,7 +2106,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → one(IntStr.new(42, "42"))
   oracle rakupp-3.14.0 → one(IntStr.new(42, "42"))
 
-- id     0272
+- id     0240
   from   inventory:IntStr.^methods
   cell   one | <-1>
   code   (<-1>).one
@@ -2644,7 +2115,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → one(IntStr.new(-1, "-1"))
   oracle rakupp-3.14.0 → one(IntStr.new(-1, "-1"))
 
-- id     0273
+- id     0241
   from   inventory:IntStr.^methods
   cell   ord | <42>
   code   (<42>).ord
@@ -2653,7 +2124,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 52
   oracle rakupp-3.14.0 → 52
 
-- id     0274
+- id     0242
   from   inventory:IntStr.^methods
   cell   ord | <-1>
   code   (<-1>).ord
@@ -2662,7 +2133,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 45
   oracle rakupp-3.14.0 → 45
 
-- id     0275
+- id     0243
   from   inventory:IntStr.^methods
   cell   ords | <42>
   code   (<42>).ords
@@ -2671,7 +2142,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → $((52, 50).Seq)
   oracle rakupp-3.14.0 → $(52, 50).Seq
 
-- id     0276
+- id     0244
   from   inventory:IntStr.^methods
   cell   ords | <-1>
   code   (<-1>).ords
@@ -2680,7 +2151,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → $((45, 49).Seq)
   oracle rakupp-3.14.0 → $(45, 49).Seq
 
-- id     0277
+- id     0245
   from   inventory:IntStr.^methods
   cell   parse-names | <42>
   code   (<42>).parse-names
@@ -2688,7 +2159,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0278
+- id     0246
   from   inventory:IntStr.^methods
   cell   parse-names | <-1>
   code   (<-1>).parse-names
@@ -2696,7 +2167,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0279
+- id     0247
   from   inventory:IntStr.^methods
   cell   path | <42>
   code   (<42>).path
@@ -2704,8 +2175,11 @@ cols     <42> | <-1>
   type   IO::Path
   oracle rakudo-2026.07 → IO::Path.new("42", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
   oracle rakupp-3.14.0 → "42"
+  verdict disputed
+  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
+  ruled  2026-08-16 against rakudo-2026.07
 
-- id     0280
+- id     0248
   from   inventory:IntStr.^methods
   cell   path | <-1>
   code   (<-1>).path
@@ -2713,8 +2187,11 @@ cols     <42> | <-1>
   type   IO::Path
   oracle rakudo-2026.07 → IO::Path.new("-1", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
   oracle rakupp-3.14.0 → "-1"
+  verdict disputed
+  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
+  ruled  2026-08-16 against rakudo-2026.07
 
-- id     0281
+- id     0249
   from   inventory:IntStr.^methods
   cell   power-down(0) | <42>
   code   (<42>).power-down(0)
@@ -2723,7 +2200,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1.0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0282
+- id     0250
   from   inventory:IntStr.^methods
   cell   power-down(1) | <42>
   code   (<42>).power-down(1)
@@ -2731,7 +2208,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Numeric::Underflow
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0283
+- id     0251
   from   inventory:IntStr.^methods
   cell   power-down(-1) | <42>
   code   (<42>).power-down(-1)
@@ -2740,7 +2217,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → <1/42>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0284
+- id     0252
   from   inventory:IntStr.^methods
   cell   power-down("a") | <42>
   code   (<42>).power-down("a")
@@ -2748,7 +2225,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0285
+- id     0253
   from   inventory:IntStr.^methods
   cell   power-down(Any) | <42>
   code   (<42>).power-down(Any)
@@ -2756,7 +2233,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0286
+- id     0254
   from   inventory:IntStr.^methods
   cell   power-down(0) | <-1>
   code   (<-1>).power-down(0)
@@ -2765,7 +2242,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1.0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0287
+- id     0255
   from   inventory:IntStr.^methods
   cell   power-down(1) | <-1>
   code   (<-1>).power-down(1)
@@ -2773,7 +2250,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Numeric::Underflow
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0288
+- id     0256
   from   inventory:IntStr.^methods
   cell   power-down(-1) | <-1>
   code   (<-1>).power-down(-1)
@@ -2782,7 +2259,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → <1/-1>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0289
+- id     0257
   from   inventory:IntStr.^methods
   cell   power-down("a") | <-1>
   code   (<-1>).power-down("a")
@@ -2790,7 +2267,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0290
+- id     0258
   from   inventory:IntStr.^methods
   cell   power-down(Any) | <-1>
   code   (<-1>).power-down(Any)
@@ -2798,7 +2275,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0291
+- id     0259
   from   inventory:IntStr.^methods
   cell   power-up(0) | <42>
   code   (<42>).power-up(0)
@@ -2807,7 +2284,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0292
+- id     0260
   from   inventory:IntStr.^methods
   cell   power-up(1) | <42>
   code   (<42>).power-up(1)
@@ -2816,7 +2293,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0293
+- id     0261
   from   inventory:IntStr.^methods
   cell   power-up(-1) | <42>
   code   (<42>).power-up(-1)
@@ -2824,7 +2301,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Numeric::Overflow
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0294
+- id     0262
   from   inventory:IntStr.^methods
   cell   power-up("a") | <42>
   code   (<42>).power-up("a")
@@ -2832,7 +2309,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0295
+- id     0263
   from   inventory:IntStr.^methods
   cell   power-up(Any) | <42>
   code   (<42>).power-up(Any)
@@ -2840,7 +2317,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0296
+- id     0264
   from   inventory:IntStr.^methods
   cell   power-up(0) | <-1>
   code   (<-1>).power-up(0)
@@ -2849,7 +2326,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0297
+- id     0265
   from   inventory:IntStr.^methods
   cell   power-up(1) | <-1>
   code   (<-1>).power-up(1)
@@ -2858,7 +2335,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0298
+- id     0266
   from   inventory:IntStr.^methods
   cell   power-up(-1) | <-1>
   code   (<-1>).power-up(-1)
@@ -2866,7 +2343,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Numeric::Overflow
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0299
+- id     0267
   from   inventory:IntStr.^methods
   cell   power-up("a") | <-1>
   code   (<-1>).power-up("a")
@@ -2874,7 +2351,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0300
+- id     0268
   from   inventory:IntStr.^methods
   cell   power-up(Any) | <-1>
   code   (<-1>).power-up(Any)
@@ -2882,7 +2359,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0301
+- id     0269
   from   inventory:IntStr.^methods
   cell   pred | <42>
   code   (<42>).pred
@@ -2891,7 +2368,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 41
   oracle rakupp-3.14.0 → 41
 
-- id     0302
+- id     0270
   from   inventory:IntStr.^methods
   cell   pred | <-1>
   code   (<-1>).pred
@@ -2900,31 +2377,31 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -2
   oracle rakupp-3.14.0 → -2
 
-- id     0303
+- id     0271
   from   inventory:IntStr.^methods
   cell   rand | <42>
   code   (<42>).rand
-  is     15.888472071467461e0
+  is     20.351732810497808e0
   type   Num
-  oracle rakudo-2026.07 → 15.888472071467461e0
-  oracle rakupp-3.14.0 → 5.005458134993333e0
+  oracle rakudo-2026.07 → 20.351732810497808e0
+  oracle rakupp-3.14.0 → 31.04171758316989e0
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0304
+- id     0272
   from   inventory:IntStr.^methods
   cell   rand | <-1>
   code   (<-1>).rand
-  is     -0.5801108197683769e0
+  is     -0.15889570438196887e0
   type   Num
-  oracle rakudo-2026.07 → -0.5801108197683769e0
-  oracle rakupp-3.14.0 → -0.6767358332281681e0
+  oracle rakudo-2026.07 → -0.15889570438196887e0
+  oracle rakupp-3.14.0 → -0.768530111108717e0
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0305
+- id     0273
   from   inventory:IntStr.^methods
   cell   reverse | <42>
   code   (<42>).reverse
@@ -2933,7 +2410,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → $((IntStr.new(42, "42"),).Seq)
   oracle rakupp-3.14.0 → $(IntStr.new(42, "42"),).Seq
 
-- id     0306
+- id     0274
   from   inventory:IntStr.^methods
   cell   reverse | <-1>
   code   (<-1>).reverse
@@ -2942,7 +2419,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → $((IntStr.new(-1, "-1"),).Seq)
   oracle rakupp-3.14.0 → $(IntStr.new(-1, "-1"),).Seq
 
-- id     0307
+- id     0275
   from   inventory:IntStr.^methods
   cell   roots(0) | <42>
   code   (<42>).roots(0)
@@ -2951,7 +2428,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0308
+- id     0276
   from   inventory:IntStr.^methods
   cell   roots(1) | <42>
   code   (<42>).roots(1)
@@ -2960,7 +2437,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → <42+0i>
   oracle rakupp-3.14.0 → $(<42+0i>,)
 
-- id     0309
+- id     0277
   from   inventory:IntStr.^methods
   cell   roots(-1) | <42>
   code   (<42>).roots(-1)
@@ -2969,7 +2446,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0310
+- id     0278
   from   inventory:IntStr.^methods
   cell   roots("a") | <42>
   code   (<42>).roots("a")
@@ -2977,7 +2454,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0311
+- id     0279
   from   inventory:IntStr.^methods
   cell   roots(Any) | <42>
   code   (<42>).roots(Any)
@@ -2985,7 +2462,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0312
+- id     0280
   from   inventory:IntStr.^methods
   cell   roots(0) | <-1>
   code   (<-1>).roots(0)
@@ -2994,7 +2471,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0313
+- id     0281
   from   inventory:IntStr.^methods
   cell   roots(1) | <-1>
   code   (<-1>).roots(1)
@@ -3003,7 +2480,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → <-1+0i>
   oracle rakupp-3.14.0 → $(<-1+1.2246467991473532e-16i>,)
 
-- id     0314
+- id     0282
   from   inventory:IntStr.^methods
   cell   roots(-1) | <-1>
   code   (<-1>).roots(-1)
@@ -3012,7 +2489,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0315
+- id     0283
   from   inventory:IntStr.^methods
   cell   roots("a") | <-1>
   code   (<-1>).roots("a")
@@ -3020,7 +2497,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0316
+- id     0284
   from   inventory:IntStr.^methods
   cell   roots(Any) | <-1>
   code   (<-1>).roots(Any)
@@ -3028,7 +2505,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $(<NaN+NaNi>,)
 
-- id     0317
+- id     0285
   from   inventory:IntStr.^methods
   cell   samecase(0) | <42>
   code   (<42>).samecase(0)
@@ -3037,7 +2514,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0318
+- id     0286
   from   inventory:IntStr.^methods
   cell   samecase(1) | <42>
   code   (<42>).samecase(1)
@@ -3046,7 +2523,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0319
+- id     0287
   from   inventory:IntStr.^methods
   cell   samecase(-1) | <42>
   code   (<42>).samecase(-1)
@@ -3055,7 +2532,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0320
+- id     0288
   from   inventory:IntStr.^methods
   cell   samecase("a") | <42>
   code   (<42>).samecase("a")
@@ -3064,7 +2541,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0321
+- id     0289
   from   inventory:IntStr.^methods
   cell   samecase(Any) | <42>
   code   (<42>).samecase(Any)
@@ -3072,7 +2549,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "42"
 
-- id     0322
+- id     0290
   from   inventory:IntStr.^methods
   cell   samecase(0) | <-1>
   code   (<-1>).samecase(0)
@@ -3081,7 +2558,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0323
+- id     0291
   from   inventory:IntStr.^methods
   cell   samecase(1) | <-1>
   code   (<-1>).samecase(1)
@@ -3090,7 +2567,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0324
+- id     0292
   from   inventory:IntStr.^methods
   cell   samecase(-1) | <-1>
   code   (<-1>).samecase(-1)
@@ -3099,7 +2576,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0325
+- id     0293
   from   inventory:IntStr.^methods
   cell   samecase("a") | <-1>
   code   (<-1>).samecase("a")
@@ -3108,7 +2585,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0326
+- id     0294
   from   inventory:IntStr.^methods
   cell   samecase(Any) | <-1>
   code   (<-1>).samecase(Any)
@@ -3116,7 +2593,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "-1"
 
-- id     0327
+- id     0295
   from   inventory:IntStr.^methods
   cell   samemark(0) | <42>
   code   (<42>).samemark(0)
@@ -3125,7 +2602,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0328
+- id     0296
   from   inventory:IntStr.^methods
   cell   samemark(1) | <42>
   code   (<42>).samemark(1)
@@ -3134,7 +2611,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0329
+- id     0297
   from   inventory:IntStr.^methods
   cell   samemark(-1) | <42>
   code   (<42>).samemark(-1)
@@ -3143,7 +2620,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0330
+- id     0298
   from   inventory:IntStr.^methods
   cell   samemark("a") | <42>
   code   (<42>).samemark("a")
@@ -3152,7 +2629,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0331
+- id     0299
   from   inventory:IntStr.^methods
   cell   samemark(Any) | <42>
   code   (<42>).samemark(Any)
@@ -3160,7 +2637,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "42"
 
-- id     0332
+- id     0300
   from   inventory:IntStr.^methods
   cell   samemark(0) | <-1>
   code   (<-1>).samemark(0)
@@ -3169,7 +2646,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0333
+- id     0301
   from   inventory:IntStr.^methods
   cell   samemark(1) | <-1>
   code   (<-1>).samemark(1)
@@ -3178,7 +2655,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0334
+- id     0302
   from   inventory:IntStr.^methods
   cell   samemark(-1) | <-1>
   code   (<-1>).samemark(-1)
@@ -3187,7 +2664,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0335
+- id     0303
   from   inventory:IntStr.^methods
   cell   samemark("a") | <-1>
   code   (<-1>).samemark("a")
@@ -3196,7 +2673,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0336
+- id     0304
   from   inventory:IntStr.^methods
   cell   samemark(Any) | <-1>
   code   (<-1>).samemark(Any)
@@ -3204,7 +2681,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "-1"
 
-- id     0337
+- id     0305
   from   inventory:IntStr.^methods
   cell   samespace(0) | <42>
   code   (<42>).samespace(0)
@@ -3213,7 +2690,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0338
+- id     0306
   from   inventory:IntStr.^methods
   cell   samespace(1) | <42>
   code   (<42>).samespace(1)
@@ -3222,7 +2699,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0339
+- id     0307
   from   inventory:IntStr.^methods
   cell   samespace(-1) | <42>
   code   (<42>).samespace(-1)
@@ -3231,7 +2708,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0340
+- id     0308
   from   inventory:IntStr.^methods
   cell   samespace("a") | <42>
   code   (<42>).samespace("a")
@@ -3240,7 +2717,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0341
+- id     0309
   from   inventory:IntStr.^methods
   cell   samespace(Any) | <42>
   code   (<42>).samespace(Any)
@@ -3248,7 +2725,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0342
+- id     0310
   from   inventory:IntStr.^methods
   cell   samespace(0) | <-1>
   code   (<-1>).samespace(0)
@@ -3257,7 +2734,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0343
+- id     0311
   from   inventory:IntStr.^methods
   cell   samespace(1) | <-1>
   code   (<-1>).samespace(1)
@@ -3266,7 +2743,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0344
+- id     0312
   from   inventory:IntStr.^methods
   cell   samespace(-1) | <-1>
   code   (<-1>).samespace(-1)
@@ -3275,7 +2752,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0345
+- id     0313
   from   inventory:IntStr.^methods
   cell   samespace("a") | <-1>
   code   (<-1>).samespace("a")
@@ -3284,7 +2761,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0346
+- id     0314
   from   inventory:IntStr.^methods
   cell   samespace(Any) | <-1>
   code   (<-1>).samespace(Any)
@@ -3292,7 +2769,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0347
+- id     0315
   from   inventory:IntStr.^methods
   cell   sec | <42>
   code   (<42>).sec
@@ -3301,7 +2778,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -2.500091784692452e0
   oracle rakupp-3.14.0 → -2.500091784692452e0
 
-- id     0348
+- id     0316
   from   inventory:IntStr.^methods
   cell   sec | <-1>
   code   (<-1>).sec
@@ -3310,7 +2787,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1.8508157176809255e0
   oracle rakupp-3.14.0 → 1.8508157176809255e0
 
-- id     0349
+- id     0317
   from   inventory:IntStr.^methods
   cell   sech | <42>
   code   (<42>).sech
@@ -3319,7 +2796,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1.149904452858712e-18
   oracle rakupp-3.14.0 → 1.149904452858712e-18
 
-- id     0350
+- id     0318
   from   inventory:IntStr.^methods
   cell   sech | <-1>
   code   (<-1>).sech
@@ -3328,7 +2805,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 0.6480542736638855e0
   oracle rakupp-3.14.0 → 0.6480542736638855e0
 
-- id     0351
+- id     0319
   from   inventory:IntStr.^methods
   cell   self | <42>
   code   (<42>).self
@@ -3337,7 +2814,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(42, "42")
   oracle rakupp-3.14.0 → IntStr.new(42, "42")
 
-- id     0352
+- id     0320
   from   inventory:IntStr.^methods
   cell   self | <-1>
   code   (<-1>).self
@@ -3346,7 +2823,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(-1, "-1")
   oracle rakupp-3.14.0 → IntStr.new(-1, "-1")
 
-- id     0353
+- id     0321
   from   inventory:IntStr.^methods
   cell   sign | <42>
   code   (<42>).sign
@@ -3355,7 +2832,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0354
+- id     0322
   from   inventory:IntStr.^methods
   cell   sign | <-1>
   code   (<-1>).sign
@@ -3364,7 +2841,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1
   oracle rakupp-3.14.0 → -1
 
-- id     0355
+- id     0323
   from   inventory:IntStr.^methods
   cell   sin | <42>
   code   (<42>).sin
@@ -3373,7 +2850,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -0.9165215479156338e0
   oracle rakupp-3.14.0 → -0.9165215479156338e0
 
-- id     0356
+- id     0324
   from   inventory:IntStr.^methods
   cell   sin | <-1>
   code   (<-1>).sin
@@ -3382,7 +2859,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -0.8414709848078965e0
   oracle rakupp-3.14.0 → -0.8414709848078965e0
 
-- id     0357
+- id     0325
   from   inventory:IntStr.^methods
   cell   sinh | <42>
   code   (<42>).sinh
@@ -3391,7 +2868,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 8.696374707602505e+17
   oracle rakupp-3.14.0 → 8.696374707602505e+17
 
-- id     0358
+- id     0326
   from   inventory:IntStr.^methods
   cell   sinh | <-1>
   code   (<-1>).sinh
@@ -3400,7 +2877,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1.1752011936438014e0
   oracle rakupp-3.14.0 → -1.1752011936438014e0
 
-- id     0359
+- id     0327
   from   inventory:IntStr.^methods
   cell   so | <42>
   code   (<42>).so
@@ -3409,7 +2886,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0360
+- id     0328
   from   inventory:IntStr.^methods
   cell   so | <-1>
   code   (<-1>).so
@@ -3418,7 +2895,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0361
+- id     0329
   from   inventory:IntStr.^methods
   cell   sqrt | <42>
   code   (<42>).sqrt
@@ -3427,7 +2904,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 6.48074069840786e0
   oracle rakupp-3.14.0 → 6.48074069840786e0
 
-- id     0362
+- id     0330
   from   inventory:IntStr.^methods
   cell   sqrt | <-1>
   code   (<-1>).sqrt
@@ -3436,7 +2913,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0363
+- id     0331
   from   inventory:IntStr.^methods
   cell   succ | <42>
   code   (<42>).succ
@@ -3445,7 +2922,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 43
   oracle rakupp-3.14.0 → 43
 
-- id     0364
+- id     0332
   from   inventory:IntStr.^methods
   cell   succ | <-1>
   code   (<-1>).succ
@@ -3454,7 +2931,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0365
+- id     0333
   from   inventory:IntStr.^methods
   cell   sum | <42>
   code   (<42>).sum
@@ -3463,7 +2940,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → IntStr.new(42, "42")
 
-- id     0366
+- id     0334
   from   inventory:IntStr.^methods
   cell   sum | <-1>
   code   (<-1>).sum
@@ -3472,7 +2949,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1
   oracle rakupp-3.14.0 → IntStr.new(-1, "-1")
 
-- id     0367
+- id     0335
   from   inventory:IntStr.^methods
   cell   take | <42>
   code   (<42>).take
@@ -3480,7 +2957,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → IntStr.new(42, "42")
 
-- id     0368
+- id     0336
   from   inventory:IntStr.^methods
   cell   take | <-1>
   code   (<-1>).take
@@ -3488,7 +2965,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → IntStr.new(-1, "-1")
 
-- id     0369
+- id     0337
   from   inventory:IntStr.^methods
   cell   tan | <42>
   code   (<42>).tan
@@ -3497,7 +2974,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 2.291387992437486e0
   oracle rakupp-3.14.0 → 2.291387992437486e0
 
-- id     0370
+- id     0338
   from   inventory:IntStr.^methods
   cell   tan | <-1>
   code   (<-1>).tan
@@ -3506,7 +2983,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -1.557407724654902e0
   oracle rakupp-3.14.0 → -1.557407724654902e0
 
-- id     0371
+- id     0339
   from   inventory:IntStr.^methods
   cell   tanh | <42>
   code   (<42>).tanh
@@ -3515,7 +2992,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → 1e0
 
-- id     0372
+- id     0340
   from   inventory:IntStr.^methods
   cell   tanh | <-1>
   code   (<-1>).tanh
@@ -3524,7 +3001,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → -0.7615941559557649e0
   oracle rakupp-3.14.0 → -0.7615941559557649e0
 
-- id     0373
+- id     0341
   from   inventory:IntStr.^methods
   cell   tc | <42>
   code   (<42>).tc
@@ -3533,7 +3010,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0374
+- id     0342
   from   inventory:IntStr.^methods
   cell   tc | <-1>
   code   (<-1>).tc
@@ -3542,7 +3019,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0375
+- id     0343
   from   inventory:IntStr.^methods
   cell   tclc | <42>
   code   (<42>).tclc
@@ -3551,7 +3028,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0376
+- id     0344
   from   inventory:IntStr.^methods
   cell   tclc | <-1>
   code   (<-1>).tclc
@@ -3560,7 +3037,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0377
+- id     0345
   from   inventory:IntStr.^methods
   cell   trailing-whitespace | <42>
   code   (<42>).trailing-whitespace
@@ -3569,7 +3046,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0378
+- id     0346
   from   inventory:IntStr.^methods
   cell   trailing-whitespace | <-1>
   code   (<-1>).trailing-whitespace
@@ -3578,7 +3055,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0379
+- id     0347
   from   inventory:IntStr.^methods
   cell   trim | <42>
   code   (<42>).trim
@@ -3587,7 +3064,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0380
+- id     0348
   from   inventory:IntStr.^methods
   cell   trim | <-1>
   code   (<-1>).trim
@@ -3596,7 +3073,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0381
+- id     0349
   from   inventory:IntStr.^methods
   cell   trim-leading | <42>
   code   (<42>).trim-leading
@@ -3605,7 +3082,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0382
+- id     0350
   from   inventory:IntStr.^methods
   cell   trim-leading | <-1>
   code   (<-1>).trim-leading
@@ -3614,7 +3091,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0383
+- id     0351
   from   inventory:IntStr.^methods
   cell   trim-trailing | <42>
   code   (<42>).trim-trailing
@@ -3623,7 +3100,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0384
+- id     0352
   from   inventory:IntStr.^methods
   cell   trim-trailing | <-1>
   code   (<-1>).trim-trailing
@@ -3632,7 +3109,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0385
+- id     0353
   from   inventory:IntStr.^methods
   cell   truncate | <42>
   code   (<42>).truncate
@@ -3641,7 +3118,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(42, "42")
   oracle rakupp-3.14.0 → 42
 
-- id     0386
+- id     0354
   from   inventory:IntStr.^methods
   cell   truncate | <-1>
   code   (<-1>).truncate
@@ -3650,7 +3127,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(-1, "-1")
   oracle rakupp-3.14.0 → -1
 
-- id     0387
+- id     0355
   from   inventory:IntStr.^methods
   cell   uc | <42>
   code   (<42>).uc
@@ -3659,7 +3136,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "42"
   oracle rakupp-3.14.0 → "42"
 
-- id     0388
+- id     0356
   from   inventory:IntStr.^methods
   cell   uc | <-1>
   code   (<-1>).uc
@@ -3668,7 +3145,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "-1"
   oracle rakupp-3.14.0 → "-1"
 
-- id     0389
+- id     0357
   from   inventory:IntStr.^methods
   cell   uint | <42>
   code   (<42>).uint
@@ -3677,7 +3154,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0390
+- id     0358
   from   inventory:IntStr.^methods
   cell   uint | <-1>
   code   (<-1>).uint
@@ -3685,8 +3162,11 @@ cols     <42> | <-1>
   type   Int
   oracle rakudo-2026.07 → 18446744073709551615
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
+  ruled  2026-08-16 against rakudo-2026.07
 
-- id     0391
+- id     0359
   from   inventory:IntStr.^methods
   cell   uint16 | <42>
   code   (<42>).uint16
@@ -3695,7 +3175,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0392
+- id     0360
   from   inventory:IntStr.^methods
   cell   uint16 | <-1>
   code   (<-1>).uint16
@@ -3704,7 +3184,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 65535
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0393
+- id     0361
   from   inventory:IntStr.^methods
   cell   uint32 | <42>
   code   (<42>).uint32
@@ -3713,7 +3193,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0394
+- id     0362
   from   inventory:IntStr.^methods
   cell   uint32 | <-1>
   code   (<-1>).uint32
@@ -3722,7 +3202,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 4294967295
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0395
+- id     0363
   from   inventory:IntStr.^methods
   cell   uint64 | <42>
   code   (<42>).uint64
@@ -3731,7 +3211,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0396
+- id     0364
   from   inventory:IntStr.^methods
   cell   uint64 | <-1>
   code   (<-1>).uint64
@@ -3739,8 +3219,11 @@ cols     <42> | <-1>
   type   Int
   oracle rakudo-2026.07 → 18446744073709551615
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+  verdict disputed
+  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
+  ruled  2026-08-16 against rakudo-2026.07
 
-- id     0397
+- id     0365
   from   inventory:IntStr.^methods
   cell   uint8 | <42>
   code   (<42>).uint8
@@ -3749,7 +3232,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0398
+- id     0366
   from   inventory:IntStr.^methods
   cell   uint8 | <-1>
   code   (<-1>).uint8
@@ -3758,7 +3241,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 255
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0399
+- id     0367
   from   inventory:IntStr.^methods
   cell   uniname | <42>
   code   (<42>).uniname
@@ -3767,7 +3250,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "DIGIT FOUR"
   oracle rakupp-3.14.0 → "ASTERISK"
 
-- id     0400
+- id     0368
   from   inventory:IntStr.^methods
   cell   uniname | <-1>
   code   (<-1>).uniname
@@ -3776,7 +3259,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "HYPHEN-MINUS"
   oracle rakupp-3.14.0 → "<illegal>"
 
-- id     0401
+- id     0369
   from   inventory:IntStr.^methods
   cell   uninames | <42>
   code   (<42>).uninames
@@ -3785,7 +3268,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → $(("DIGIT FOUR", "DIGIT TWO").Seq)
   oracle rakupp-3.14.0 → $("DIGIT FOUR", "DIGIT TWO").Seq
 
-- id     0402
+- id     0370
   from   inventory:IntStr.^methods
   cell   uninames | <-1>
   code   (<-1>).uninames
@@ -3794,7 +3277,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → $(("HYPHEN-MINUS", "DIGIT ONE").Seq)
   oracle rakupp-3.14.0 → $("HYPHEN-MINUS", "DIGIT ONE").Seq
 
-- id     0403
+- id     0371
   from   inventory:IntStr.^methods
   cell   uniparse | <42>
   code   (<42>).uniparse
@@ -3802,7 +3285,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0404
+- id     0372
   from   inventory:IntStr.^methods
   cell   uniparse | <-1>
   code   (<-1>).uniparse
@@ -3810,7 +3293,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0405
+- id     0373
   from   inventory:IntStr.^methods
   cell   uniprop(0) | <42>
   code   (<42>).uniprop(0)
@@ -3818,7 +3301,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0406
+- id     0374
   from   inventory:IntStr.^methods
   cell   uniprop(1) | <42>
   code   (<42>).uniprop(1)
@@ -3826,7 +3309,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0407
+- id     0375
   from   inventory:IntStr.^methods
   cell   uniprop(-1) | <42>
   code   (<42>).uniprop(-1)
@@ -3834,7 +3317,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0408
+- id     0376
   from   inventory:IntStr.^methods
   cell   uniprop("a") | <42>
   code   (<42>).uniprop("a")
@@ -3843,7 +3326,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0409
+- id     0377
   from   inventory:IntStr.^methods
   cell   uniprop(Any) | <42>
   code   (<42>).uniprop(Any)
@@ -3851,7 +3334,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0410
+- id     0378
   from   inventory:IntStr.^methods
   cell   uniprop(0) | <-1>
   code   (<-1>).uniprop(0)
@@ -3859,7 +3342,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0411
+- id     0379
   from   inventory:IntStr.^methods
   cell   uniprop(1) | <-1>
   code   (<-1>).uniprop(1)
@@ -3867,7 +3350,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0412
+- id     0380
   from   inventory:IntStr.^methods
   cell   uniprop(-1) | <-1>
   code   (<-1>).uniprop(-1)
@@ -3875,7 +3358,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0413
+- id     0381
   from   inventory:IntStr.^methods
   cell   uniprop("a") | <-1>
   code   (<-1>).uniprop("a")
@@ -3884,7 +3367,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0414
+- id     0382
   from   inventory:IntStr.^methods
   cell   uniprop(Any) | <-1>
   code   (<-1>).uniprop(Any)
@@ -3892,7 +3375,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0415
+- id     0383
   from   inventory:IntStr.^methods
   cell   uniprops(0) | <42>
   code   (<42>).uniprops(0)
@@ -3900,7 +3383,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0416
+- id     0384
   from   inventory:IntStr.^methods
   cell   uniprops(1) | <42>
   code   (<42>).uniprops(1)
@@ -3908,7 +3391,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0417
+- id     0385
   from   inventory:IntStr.^methods
   cell   uniprops(-1) | <42>
   code   (<42>).uniprops(-1)
@@ -3916,7 +3399,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0418
+- id     0386
   from   inventory:IntStr.^methods
   cell   uniprops("a") | <42>
   code   (<42>).uniprops("a")
@@ -3925,7 +3408,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → $(("0", "0").Seq)
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0419
+- id     0387
   from   inventory:IntStr.^methods
   cell   uniprops(Any) | <42>
   code   (<42>).uniprops(Any)
@@ -3933,7 +3416,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0420
+- id     0388
   from   inventory:IntStr.^methods
   cell   uniprops(0) | <-1>
   code   (<-1>).uniprops(0)
@@ -3941,7 +3424,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0421
+- id     0389
   from   inventory:IntStr.^methods
   cell   uniprops(1) | <-1>
   code   (<-1>).uniprops(1)
@@ -3949,7 +3432,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0422
+- id     0390
   from   inventory:IntStr.^methods
   cell   uniprops(-1) | <-1>
   code   (<-1>).uniprops(-1)
@@ -3957,7 +3440,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0423
+- id     0391
   from   inventory:IntStr.^methods
   cell   uniprops("a") | <-1>
   code   (<-1>).uniprops("a")
@@ -3966,7 +3449,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → $(("0", "0").Seq)
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0424
+- id     0392
   from   inventory:IntStr.^methods
   cell   uniprops(Any) | <-1>
   code   (<-1>).uniprops(Any)
@@ -3974,7 +3457,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False,).Seq
 
-- id     0425
+- id     0393
   from   inventory:IntStr.^methods
   cell   unival | <42>
   code   (<42>).unival
@@ -3983,7 +3466,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → 4
   oracle rakupp-3.14.0 → NaN
 
-- id     0426
+- id     0394
   from   inventory:IntStr.^methods
   cell   unival | <-1>
   code   (<-1>).unival
@@ -3992,7 +3475,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0427
+- id     0395
   from   inventory:IntStr.^methods
   cell   univals | <42>
   code   (<42>).univals
@@ -4001,7 +3484,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → $((4, 2).Seq)
   oracle rakupp-3.14.0 → $(4, 2)
 
-- id     0428
+- id     0396
   from   inventory:IntStr.^methods
   cell   univals | <-1>
   code   (<-1>).univals
@@ -4010,7 +3493,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → $((NaN, 1).Seq)
   oracle rakupp-3.14.0 → $(NaN, 1)
 
-- id     0429
+- id     0397
   from   inventory:IntStr.^methods
   cell   unpolar(0) | <42>
   code   (<42>).unpolar(0)
@@ -4019,7 +3502,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → <42+0i>
   oracle rakupp-3.14.0 → <42+0i>
 
-- id     0430
+- id     0398
   from   inventory:IntStr.^methods
   cell   unpolar(1) | <42>
   code   (<42>).unpolar(1)
@@ -4028,7 +3511,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → <22.69269684646187+35.34178136193165i>
   oracle rakupp-3.14.0 → <22.69269684646187+35.34178136193165i>
 
-- id     0431
+- id     0399
   from   inventory:IntStr.^methods
   cell   unpolar(-1) | <42>
   code   (<42>).unpolar(-1)
@@ -4037,7 +3520,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → <22.69269684646187-35.34178136193165i>
   oracle rakupp-3.14.0 → <22.69269684646187-35.34178136193165i>
 
-- id     0432
+- id     0400
   from   inventory:IntStr.^methods
   cell   unpolar("a") | <42>
   code   (<42>).unpolar("a")
@@ -4045,7 +3528,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → <42+0i>
 
-- id     0433
+- id     0401
   from   inventory:IntStr.^methods
   cell   unpolar(Any) | <42>
   code   (<42>).unpolar(Any)
@@ -4053,7 +3536,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → <42+0i>
 
-- id     0434
+- id     0402
   from   inventory:IntStr.^methods
   cell   unpolar(0) | <-1>
   code   (<-1>).unpolar(0)
@@ -4062,7 +3545,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → <-1-0i>
   oracle rakupp-3.14.0 → <-1-0i>
 
-- id     0435
+- id     0403
   from   inventory:IntStr.^methods
   cell   unpolar(1) | <-1>
   code   (<-1>).unpolar(1)
@@ -4071,7 +3554,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → <-0.5403023058681398-0.8414709848078965i>
   oracle rakupp-3.14.0 → <-0.5403023058681398-0.8414709848078965i>
 
-- id     0436
+- id     0404
   from   inventory:IntStr.^methods
   cell   unpolar(-1) | <-1>
   code   (<-1>).unpolar(-1)
@@ -4080,7 +3563,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → <-0.5403023058681398+0.8414709848078965i>
   oracle rakupp-3.14.0 → <-0.5403023058681398+0.8414709848078965i>
 
-- id     0437
+- id     0405
   from   inventory:IntStr.^methods
   cell   unpolar("a") | <-1>
   code   (<-1>).unpolar("a")
@@ -4088,7 +3571,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → <-1-0i>
 
-- id     0438
+- id     0406
   from   inventory:IntStr.^methods
   cell   unpolar(Any) | <-1>
   code   (<-1>).unpolar(Any)
@@ -4096,7 +3579,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → <-1-0i>
 
-- id     0439
+- id     0407
   from   inventory:IntStr.^methods
   cell   wordcase | <42>
   code   (<42>).wordcase
@@ -4105,7 +3588,7 @@ cols     <42> | <-1>
   oracle rakudo-2026.07 → IntStr.new(0, "42")
   oracle rakupp-3.14.0 → "42"
 
-- id     0440
+- id     0408
   from   inventory:IntStr.^methods
   cell   wordcase | <-1>
   code   (<-1>).wordcase

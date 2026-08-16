@@ -2,7 +2,7 @@ atom     methods/Pair
 source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
-axes     Bool | CREATE | Capture | DEFINITE | HOW | INSTANTIATE-GENERIC | POPULATE | Pair | REPR | VAR | WHAT | WHERE | WHO | abs-value | add-value | all | antipair | any | bless | cache | can | chrs | does | freeze | is-generic | item | iterator | join | key | keyof | lazy-if | nl-out | none | not | of | one | reverse | self | so | sum | take | value
+axes     Bool | Capture | DEFINITE | HOW | Pair | REPR | VAR | WHAT | WHO | abs-value | add-value | all | antipair | any | bless | cache | can | chrs | does | freeze | is-generic | item | iterator | join | key | keyof | lazy-if | nl-out | none | not | of | one | reverse | self | so | sum | take | value
 cols     (a => 1) | (1 => "x")
 
 - id     0001
@@ -25,24 +25,6 @@ cols     (a => 1) | (1 => "x")
 
 - id     0003
   from   inventory:Pair.^methods
-  cell   CREATE | (a => 1)
-  code   ((a => 1)).CREATE
-  is     (Nil) => Nil
-  type   Pair
-  oracle rakudo-2026.07 → (Nil) => Nil
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0004
-  from   inventory:Pair.^methods
-  cell   CREATE | (1 => "x")
-  code   ((1 => "x")).CREATE
-  is     (Nil) => Nil
-  type   Pair
-  oracle rakudo-2026.07 → (Nil) => Nil
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0005
-  from   inventory:Pair.^methods
   cell   Capture | (a => 1)
   code   ((a => 1)).Capture
   is     \(:key("a"), :value(1))
@@ -50,7 +32,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → \(:key("a"), :value(1))
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0006
+- id     0004
   from   inventory:Pair.^methods
   cell   Capture | (1 => "x")
   code   ((1 => "x")).Capture
@@ -59,7 +41,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → \(:key(1), :value("x"))
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0007
+- id     0005
   from   inventory:Pair.^methods
   cell   DEFINITE | (a => 1)
   code   ((a => 1)).DEFINITE
@@ -68,7 +50,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0008
+- id     0006
   from   inventory:Pair.^methods
   cell   DEFINITE | (1 => "x")
   code   ((1 => "x")).DEFINITE
@@ -77,7 +59,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0009
+- id     0007
   from   inventory:Pair.^methods
   cell   HOW | (a => 1)
   code   ((a => 1)).HOW
@@ -86,7 +68,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0010
+- id     0008
   from   inventory:Pair.^methods
   cell   HOW | (1 => "x")
   code   ((1 => "x")).HOW
@@ -95,167 +77,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0011
-  from   inventory:Pair.^methods
-  cell   INSTANTIATE-GENERIC(0) | (a => 1)
-  code   ((a => 1)).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0012
-  from   inventory:Pair.^methods
-  cell   INSTANTIATE-GENERIC(1) | (a => 1)
-  code   ((a => 1)).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0013
-  from   inventory:Pair.^methods
-  cell   INSTANTIATE-GENERIC(-1) | (a => 1)
-  code   ((a => 1)).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0014
-  from   inventory:Pair.^methods
-  cell   INSTANTIATE-GENERIC("a") | (a => 1)
-  code   ((a => 1)).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0015
-  from   inventory:Pair.^methods
-  cell   INSTANTIATE-GENERIC(Any) | (a => 1)
-  code   ((a => 1)).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0016
-  from   inventory:Pair.^methods
-  cell   INSTANTIATE-GENERIC(0) | (1 => "x")
-  code   ((1 => "x")).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0017
-  from   inventory:Pair.^methods
-  cell   INSTANTIATE-GENERIC(1) | (1 => "x")
-  code   ((1 => "x")).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0018
-  from   inventory:Pair.^methods
-  cell   INSTANTIATE-GENERIC(-1) | (1 => "x")
-  code   ((1 => "x")).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0019
-  from   inventory:Pair.^methods
-  cell   INSTANTIATE-GENERIC("a") | (1 => "x")
-  code   ((1 => "x")).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0020
-  from   inventory:Pair.^methods
-  cell   INSTANTIATE-GENERIC(Any) | (1 => "x")
-  code   ((1 => "x")).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0021
-  from   inventory:Pair.^methods
-  cell   POPULATE(0) | (a => 1)
-  code   ((a => 1)).POPULATE(0)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0022
-  from   inventory:Pair.^methods
-  cell   POPULATE(1) | (a => 1)
-  code   ((a => 1)).POPULATE(1)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0023
-  from   inventory:Pair.^methods
-  cell   POPULATE(-1) | (a => 1)
-  code   ((a => 1)).POPULATE(-1)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0024
-  from   inventory:Pair.^methods
-  cell   POPULATE("a") | (a => 1)
-  code   ((a => 1)).POPULATE("a")
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0025
-  from   inventory:Pair.^methods
-  cell   POPULATE(Any) | (a => 1)
-  code   ((a => 1)).POPULATE(Any)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0026
-  from   inventory:Pair.^methods
-  cell   POPULATE(0) | (1 => "x")
-  code   ((1 => "x")).POPULATE(0)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0027
-  from   inventory:Pair.^methods
-  cell   POPULATE(1) | (1 => "x")
-  code   ((1 => "x")).POPULATE(1)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0028
-  from   inventory:Pair.^methods
-  cell   POPULATE(-1) | (1 => "x")
-  code   ((1 => "x")).POPULATE(-1)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0029
-  from   inventory:Pair.^methods
-  cell   POPULATE("a") | (1 => "x")
-  code   ((1 => "x")).POPULATE("a")
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0030
-  from   inventory:Pair.^methods
-  cell   POPULATE(Any) | (1 => "x")
-  code   ((1 => "x")).POPULATE(Any)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0031
+- id     0009
   from   inventory:Pair.^methods
   cell   Pair | (a => 1)
   code   ((a => 1)).Pair
@@ -264,7 +86,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → :a(1)
   oracle rakupp-3.14.0 → :a(1)
 
-- id     0032
+- id     0010
   from   inventory:Pair.^methods
   cell   Pair | (1 => "x")
   code   ((1 => "x")).Pair
@@ -273,7 +95,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1 => "x"
   oracle rakupp-3.14.0 → 1 => "x"
 
-- id     0033
+- id     0011
   from   inventory:Pair.^methods
   cell   REPR | (a => 1)
   code   ((a => 1)).REPR
@@ -282,7 +104,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0034
+- id     0012
   from   inventory:Pair.^methods
   cell   REPR | (1 => "x")
   code   ((1 => "x")).REPR
@@ -291,7 +113,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0035
+- id     0013
   from   inventory:Pair.^methods
   cell   VAR | (a => 1)
   code   ((a => 1)).VAR
@@ -300,7 +122,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → :a(1)
   oracle rakupp-3.14.0 → :a(1)
 
-- id     0036
+- id     0014
   from   inventory:Pair.^methods
   cell   VAR | (1 => "x")
   code   ((1 => "x")).VAR
@@ -309,7 +131,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1 => "x"
   oracle rakupp-3.14.0 → 1 => "x"
 
-- id     0037
+- id     0015
   from   inventory:Pair.^methods
   cell   WHAT | (a => 1)
   code   ((a => 1)).WHAT
@@ -318,7 +140,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Pair
   oracle rakupp-3.14.0 → Pair
 
-- id     0038
+- id     0016
   from   inventory:Pair.^methods
   cell   WHAT | (1 => "x")
   code   ((1 => "x")).WHAT
@@ -327,31 +149,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Pair
   oracle rakupp-3.14.0 → Pair
 
-- id     0039
-  from   inventory:Pair.^methods
-  cell   WHERE | (a => 1)
-  code   ((a => 1)).WHERE
-  is     4895421781008
-  type   Int
-  oracle rakudo-2026.07 → 4895421781008
-  oracle rakupp-3.14.0 → 14071381792
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0040
-  from   inventory:Pair.^methods
-  cell   WHERE | (1 => "x")
-  code   ((1 => "x")).WHERE
-  is     4895422126512
-  type   Int
-  oracle rakudo-2026.07 → 4895422126512
-  oracle rakupp-3.14.0 → 14071381792
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0041
+- id     0017
   from   inventory:Pair.^methods
   cell   WHO | (a => 1)
   code   ((a => 1)).WHO
@@ -360,7 +158,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0042
+- id     0018
   from   inventory:Pair.^methods
   cell   WHO | (1 => "x")
   code   ((1 => "x")).WHO
@@ -369,7 +167,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0043
+- id     0019
   from   inventory:Pair.^methods
   cell   abs-value | (a => 1)
   code   ((a => 1)).abs-value
@@ -378,7 +176,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0044
+- id     0020
   from   inventory:Pair.^methods
   cell   abs-value | (1 => "x")
   code   ((1 => "x")).abs-value
@@ -386,7 +184,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0045
+- id     0021
   from   inventory:Pair.^methods
   cell   add-value(0) | (a => 1)
   code   ((a => 1)).add-value(0)
@@ -395,7 +193,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0046
+- id     0022
   from   inventory:Pair.^methods
   cell   add-value(1) | (a => 1)
   code   ((a => 1)).add-value(1)
@@ -404,7 +202,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 2
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0047
+- id     0023
   from   inventory:Pair.^methods
   cell   add-value(-1) | (a => 1)
   code   ((a => 1)).add-value(-1)
@@ -413,7 +211,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0048
+- id     0024
   from   inventory:Pair.^methods
   cell   add-value("a") | (a => 1)
   code   ((a => 1)).add-value("a")
@@ -421,7 +219,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0049
+- id     0025
   from   inventory:Pair.^methods
   cell   add-value(Any) | (a => 1)
   code   ((a => 1)).add-value(Any)
@@ -430,7 +228,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0050
+- id     0026
   from   inventory:Pair.^methods
   cell   add-value(0) | (1 => "x")
   code   ((1 => "x")).add-value(0)
@@ -438,7 +236,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0051
+- id     0027
   from   inventory:Pair.^methods
   cell   add-value(1) | (1 => "x")
   code   ((1 => "x")).add-value(1)
@@ -446,7 +244,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0052
+- id     0028
   from   inventory:Pair.^methods
   cell   add-value(-1) | (1 => "x")
   code   ((1 => "x")).add-value(-1)
@@ -454,7 +252,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0053
+- id     0029
   from   inventory:Pair.^methods
   cell   add-value("a") | (1 => "x")
   code   ((1 => "x")).add-value("a")
@@ -462,7 +260,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0054
+- id     0030
   from   inventory:Pair.^methods
   cell   add-value(Any) | (1 => "x")
   code   ((1 => "x")).add-value(Any)
@@ -470,7 +268,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0055
+- id     0031
   from   inventory:Pair.^methods
   cell   all | (a => 1)
   code   ((a => 1)).all
@@ -479,7 +277,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → all(:a(1))
   oracle rakupp-3.14.0 → all(:a(1))
 
-- id     0056
+- id     0032
   from   inventory:Pair.^methods
   cell   all | (1 => "x")
   code   ((1 => "x")).all
@@ -488,7 +286,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → all(1 => "x")
   oracle rakupp-3.14.0 → all(1 => "x")
 
-- id     0057
+- id     0033
   from   inventory:Pair.^methods
   cell   antipair | (a => 1)
   code   ((a => 1)).antipair
@@ -497,7 +295,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1 => "a"
   oracle rakupp-3.14.0 → "1" => "a"
 
-- id     0058
+- id     0034
   from   inventory:Pair.^methods
   cell   antipair | (1 => "x")
   code   ((1 => "x")).antipair
@@ -506,7 +304,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → :x(1)
   oracle rakupp-3.14.0 → :x("1")
 
-- id     0059
+- id     0035
   from   inventory:Pair.^methods
   cell   any | (a => 1)
   code   ((a => 1)).any
@@ -515,7 +313,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → any(:a(1))
   oracle rakupp-3.14.0 → any(:a(1))
 
-- id     0060
+- id     0036
   from   inventory:Pair.^methods
   cell   any | (1 => "x")
   code   ((1 => "x")).any
@@ -524,7 +322,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → any(1 => "x")
   oracle rakupp-3.14.0 → any(1 => "x")
 
-- id     0061
+- id     0037
   from   inventory:Pair.^methods
   cell   bless | (a => 1)
   code   ((a => 1)).bless
@@ -533,7 +331,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → (Nil) => Nil
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0062
+- id     0038
   from   inventory:Pair.^methods
   cell   bless | (1 => "x")
   code   ((1 => "x")).bless
@@ -542,7 +340,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → (Nil) => Nil
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0063
+- id     0039
   from   inventory:Pair.^methods
   cell   cache | (a => 1)
   code   ((a => 1)).cache
@@ -551,7 +349,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → $(:a(1),)
   oracle rakupp-3.14.0 → $(:a(1),)
 
-- id     0064
+- id     0040
   from   inventory:Pair.^methods
   cell   cache | (1 => "x")
   code   ((1 => "x")).cache
@@ -560,7 +358,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → $(1 => "x",)
   oracle rakupp-3.14.0 → $(1 => "x",)
 
-- id     0065
+- id     0041
   from   inventory:Pair.^methods
   cell   can(0) | (a => 1)
   code   ((a => 1)).can(0)
@@ -568,7 +366,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0066
+- id     0042
   from   inventory:Pair.^methods
   cell   can(1) | (a => 1)
   code   ((a => 1)).can(1)
@@ -576,7 +374,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0067
+- id     0043
   from   inventory:Pair.^methods
   cell   can(-1) | (a => 1)
   code   ((a => 1)).can(-1)
@@ -584,7 +382,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0068
+- id     0044
   from   inventory:Pair.^methods
   cell   can("a") | (a => 1)
   code   ((a => 1)).can("a")
@@ -593,7 +391,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0069
+- id     0045
   from   inventory:Pair.^methods
   cell   can(Any) | (a => 1)
   code   ((a => 1)).can(Any)
@@ -601,7 +399,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0070
+- id     0046
   from   inventory:Pair.^methods
   cell   can(0) | (1 => "x")
   code   ((1 => "x")).can(0)
@@ -609,7 +407,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0071
+- id     0047
   from   inventory:Pair.^methods
   cell   can(1) | (1 => "x")
   code   ((1 => "x")).can(1)
@@ -617,7 +415,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0072
+- id     0048
   from   inventory:Pair.^methods
   cell   can(-1) | (1 => "x")
   code   ((1 => "x")).can(-1)
@@ -625,7 +423,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0073
+- id     0049
   from   inventory:Pair.^methods
   cell   can("a") | (1 => "x")
   code   ((1 => "x")).can("a")
@@ -634,7 +432,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0074
+- id     0050
   from   inventory:Pair.^methods
   cell   can(Any) | (1 => "x")
   code   ((1 => "x")).can(Any)
@@ -642,7 +440,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0075
+- id     0051
   from   inventory:Pair.^methods
   cell   chrs | (a => 1)
   code   ((a => 1)).chrs
@@ -650,7 +448,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0076
+- id     0052
   from   inventory:Pair.^methods
   cell   chrs | (1 => "x")
   code   ((1 => "x")).chrs
@@ -658,7 +456,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0077
+- id     0053
   from   inventory:Pair.^methods
   cell   does(0) | (a => 1)
   code   ((a => 1)).does(0)
@@ -667,7 +465,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0078
+- id     0054
   from   inventory:Pair.^methods
   cell   does(1) | (a => 1)
   code   ((a => 1)).does(1)
@@ -676,7 +474,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0079
+- id     0055
   from   inventory:Pair.^methods
   cell   does(-1) | (a => 1)
   code   ((a => 1)).does(-1)
@@ -685,7 +483,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0080
+- id     0056
   from   inventory:Pair.^methods
   cell   does("a") | (a => 1)
   code   ((a => 1)).does("a")
@@ -694,7 +492,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0081
+- id     0057
   from   inventory:Pair.^methods
   cell   does(Any) | (a => 1)
   code   ((a => 1)).does(Any)
@@ -703,7 +501,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0082
+- id     0058
   from   inventory:Pair.^methods
   cell   does(0) | (1 => "x")
   code   ((1 => "x")).does(0)
@@ -712,7 +510,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0083
+- id     0059
   from   inventory:Pair.^methods
   cell   does(1) | (1 => "x")
   code   ((1 => "x")).does(1)
@@ -721,7 +519,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0084
+- id     0060
   from   inventory:Pair.^methods
   cell   does(-1) | (1 => "x")
   code   ((1 => "x")).does(-1)
@@ -730,7 +528,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0085
+- id     0061
   from   inventory:Pair.^methods
   cell   does("a") | (1 => "x")
   code   ((1 => "x")).does("a")
@@ -739,7 +537,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0086
+- id     0062
   from   inventory:Pair.^methods
   cell   does(Any) | (1 => "x")
   code   ((1 => "x")).does(Any)
@@ -748,7 +546,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0087
+- id     0063
   from   inventory:Pair.^methods
   cell   freeze | (a => 1)
   code   ((a => 1)).freeze
@@ -757,7 +555,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → :a(1)
 
-- id     0088
+- id     0064
   from   inventory:Pair.^methods
   cell   freeze | (1 => "x")
   code   ((1 => "x")).freeze
@@ -766,7 +564,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → "x"
   oracle rakupp-3.14.0 → 1 => "x"
 
-- id     0089
+- id     0065
   from   inventory:Pair.^methods
   cell   is-generic | (a => 1)
   code   ((a => 1)).is-generic
@@ -775,7 +573,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0090
+- id     0066
   from   inventory:Pair.^methods
   cell   is-generic | (1 => "x")
   code   ((1 => "x")).is-generic
@@ -784,7 +582,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0091
+- id     0067
   from   inventory:Pair.^methods
   cell   item | (a => 1)
   code   ((a => 1)).item
@@ -793,7 +591,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → :a(1)
   oracle rakupp-3.14.0 → :a(1)
 
-- id     0092
+- id     0068
   from   inventory:Pair.^methods
   cell   item | (1 => "x")
   code   ((1 => "x")).item
@@ -802,7 +600,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1 => "x"
   oracle rakupp-3.14.0 → 1 => "x"
 
-- id     0093
+- id     0069
   from   inventory:Pair.^methods
   cell   iterator | (a => 1)
   code   ((a => 1)).iterator
@@ -811,7 +609,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Rakudo::Iterator::OneValue.new
   oracle rakupp-3.14.0 → ${:items($[:a(1)]), :pos(0)}
 
-- id     0094
+- id     0070
   from   inventory:Pair.^methods
   cell   iterator | (1 => "x")
   code   ((1 => "x")).iterator
@@ -820,7 +618,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Rakudo::Iterator::OneValue.new
   oracle rakupp-3.14.0 → ${:items($[1 => "x"]), :pos(0)}
 
-- id     0095
+- id     0071
   from   inventory:Pair.^methods
   cell   join(0) | (a => 1)
   code   ((a => 1)).join(0)
@@ -829,7 +627,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0096
+- id     0072
   from   inventory:Pair.^methods
   cell   join(1) | (a => 1)
   code   ((a => 1)).join(1)
@@ -838,7 +636,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0097
+- id     0073
   from   inventory:Pair.^methods
   cell   join(-1) | (a => 1)
   code   ((a => 1)).join(-1)
@@ -847,7 +645,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0098
+- id     0074
   from   inventory:Pair.^methods
   cell   join("a") | (a => 1)
   code   ((a => 1)).join("a")
@@ -856,7 +654,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0099
+- id     0075
   from   inventory:Pair.^methods
   cell   join(Any) | (a => 1)
   code   ((a => 1)).join(Any)
@@ -864,7 +662,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0100
+- id     0076
   from   inventory:Pair.^methods
   cell   join(0) | (1 => "x")
   code   ((1 => "x")).join(0)
@@ -873,7 +671,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → "1\tx"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0101
+- id     0077
   from   inventory:Pair.^methods
   cell   join(1) | (1 => "x")
   code   ((1 => "x")).join(1)
@@ -882,7 +680,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → "1\tx"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0102
+- id     0078
   from   inventory:Pair.^methods
   cell   join(-1) | (1 => "x")
   code   ((1 => "x")).join(-1)
@@ -891,7 +689,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → "1\tx"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0103
+- id     0079
   from   inventory:Pair.^methods
   cell   join("a") | (1 => "x")
   code   ((1 => "x")).join("a")
@@ -900,7 +698,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → "1\tx"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0104
+- id     0080
   from   inventory:Pair.^methods
   cell   join(Any) | (1 => "x")
   code   ((1 => "x")).join(Any)
@@ -908,7 +706,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0105
+- id     0081
   from   inventory:Pair.^methods
   cell   key | (a => 1)
   code   ((a => 1)).key
@@ -917,7 +715,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → "a"
   oracle rakupp-3.14.0 → "a"
 
-- id     0106
+- id     0082
   from   inventory:Pair.^methods
   cell   key | (1 => "x")
   code   ((1 => "x")).key
@@ -926,7 +724,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0107
+- id     0083
   from   inventory:Pair.^methods
   cell   keyof | (a => 1)
   code   ((a => 1)).keyof
@@ -935,7 +733,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Str(Any)
   oracle rakupp-3.14.0 → Str(Any)
 
-- id     0108
+- id     0084
   from   inventory:Pair.^methods
   cell   keyof | (1 => "x")
   code   ((1 => "x")).keyof
@@ -944,7 +742,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Str(Any)
   oracle rakupp-3.14.0 → Str(Any)
 
-- id     0109
+- id     0085
   from   inventory:Pair.^methods
   cell   lazy-if(0) | (a => 1)
   code   ((a => 1)).lazy-if(0)
@@ -953,7 +751,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → :a(1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0110
+- id     0086
   from   inventory:Pair.^methods
   cell   lazy-if(1) | (a => 1)
   code   ((a => 1)).lazy-if(1)
@@ -962,7 +760,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → :a(1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0111
+- id     0087
   from   inventory:Pair.^methods
   cell   lazy-if(-1) | (a => 1)
   code   ((a => 1)).lazy-if(-1)
@@ -971,7 +769,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → :a(1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0112
+- id     0088
   from   inventory:Pair.^methods
   cell   lazy-if("a") | (a => 1)
   code   ((a => 1)).lazy-if("a")
@@ -980,7 +778,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → :a(1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0113
+- id     0089
   from   inventory:Pair.^methods
   cell   lazy-if(Any) | (a => 1)
   code   ((a => 1)).lazy-if(Any)
@@ -989,7 +787,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → :a(1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0114
+- id     0090
   from   inventory:Pair.^methods
   cell   lazy-if(0) | (1 => "x")
   code   ((1 => "x")).lazy-if(0)
@@ -998,7 +796,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1 => "x"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0115
+- id     0091
   from   inventory:Pair.^methods
   cell   lazy-if(1) | (1 => "x")
   code   ((1 => "x")).lazy-if(1)
@@ -1007,7 +805,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1 => "x"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0116
+- id     0092
   from   inventory:Pair.^methods
   cell   lazy-if(-1) | (1 => "x")
   code   ((1 => "x")).lazy-if(-1)
@@ -1016,7 +814,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1 => "x"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0117
+- id     0093
   from   inventory:Pair.^methods
   cell   lazy-if("a") | (1 => "x")
   code   ((1 => "x")).lazy-if("a")
@@ -1025,7 +823,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1 => "x"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0118
+- id     0094
   from   inventory:Pair.^methods
   cell   lazy-if(Any) | (1 => "x")
   code   ((1 => "x")).lazy-if(Any)
@@ -1034,7 +832,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1 => "x"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0119
+- id     0095
   from   inventory:Pair.^methods
   cell   nl-out | (a => 1)
   code   ((a => 1)).nl-out
@@ -1043,7 +841,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0120
+- id     0096
   from   inventory:Pair.^methods
   cell   nl-out | (1 => "x")
   code   ((1 => "x")).nl-out
@@ -1052,7 +850,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0121
+- id     0097
   from   inventory:Pair.^methods
   cell   none | (a => 1)
   code   ((a => 1)).none
@@ -1061,7 +859,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → none(:a(1))
   oracle rakupp-3.14.0 → none(:a(1))
 
-- id     0122
+- id     0098
   from   inventory:Pair.^methods
   cell   none | (1 => "x")
   code   ((1 => "x")).none
@@ -1070,7 +868,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → none(1 => "x")
   oracle rakupp-3.14.0 → none(1 => "x")
 
-- id     0123
+- id     0099
   from   inventory:Pair.^methods
   cell   not | (a => 1)
   code   ((a => 1)).not
@@ -1079,7 +877,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0124
+- id     0100
   from   inventory:Pair.^methods
   cell   not | (1 => "x")
   code   ((1 => "x")).not
@@ -1088,7 +886,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0125
+- id     0101
   from   inventory:Pair.^methods
   cell   of | (a => 1)
   code   ((a => 1)).of
@@ -1097,7 +895,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0126
+- id     0102
   from   inventory:Pair.^methods
   cell   of | (1 => "x")
   code   ((1 => "x")).of
@@ -1106,7 +904,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0127
+- id     0103
   from   inventory:Pair.^methods
   cell   one | (a => 1)
   code   ((a => 1)).one
@@ -1115,7 +913,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → one(:a(1))
   oracle rakupp-3.14.0 → one(:a(1))
 
-- id     0128
+- id     0104
   from   inventory:Pair.^methods
   cell   one | (1 => "x")
   code   ((1 => "x")).one
@@ -1124,7 +922,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → one(1 => "x")
   oracle rakupp-3.14.0 → one(1 => "x")
 
-- id     0129
+- id     0105
   from   inventory:Pair.^methods
   cell   reverse | (a => 1)
   code   ((a => 1)).reverse
@@ -1133,7 +931,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → $((:a(1),).Seq)
   oracle rakupp-3.14.0 → $(:a(1),).Seq
 
-- id     0130
+- id     0106
   from   inventory:Pair.^methods
   cell   reverse | (1 => "x")
   code   ((1 => "x")).reverse
@@ -1142,7 +940,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → $((1 => "x",).Seq)
   oracle rakupp-3.14.0 → $(1 => "x",).Seq
 
-- id     0131
+- id     0107
   from   inventory:Pair.^methods
   cell   self | (a => 1)
   code   ((a => 1)).self
@@ -1151,7 +949,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → :a(1)
   oracle rakupp-3.14.0 → :a(1)
 
-- id     0132
+- id     0108
   from   inventory:Pair.^methods
   cell   self | (1 => "x")
   code   ((1 => "x")).self
@@ -1160,7 +958,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1 => "x"
   oracle rakupp-3.14.0 → 1 => "x"
 
-- id     0133
+- id     0109
   from   inventory:Pair.^methods
   cell   so | (a => 1)
   code   ((a => 1)).so
@@ -1169,7 +967,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0134
+- id     0110
   from   inventory:Pair.^methods
   cell   so | (1 => "x")
   code   ((1 => "x")).so
@@ -1178,7 +976,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0135
+- id     0111
   from   inventory:Pair.^methods
   cell   sum | (a => 1)
   code   ((a => 1)).sum
@@ -1186,7 +984,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0136
+- id     0112
   from   inventory:Pair.^methods
   cell   sum | (1 => "x")
   code   ((1 => "x")).sum
@@ -1194,7 +992,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0137
+- id     0113
   from   inventory:Pair.^methods
   cell   take | (a => 1)
   code   ((a => 1)).take
@@ -1202,7 +1000,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → :a(1)
 
-- id     0138
+- id     0114
   from   inventory:Pair.^methods
   cell   take | (1 => "x")
   code   ((1 => "x")).take
@@ -1210,7 +1008,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → 1 => "x"
 
-- id     0139
+- id     0115
   from   inventory:Pair.^methods
   cell   value | (a => 1)
   code   ((a => 1)).value
@@ -1219,7 +1017,7 @@ cols     (a => 1) | (1 => "x")
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0140
+- id     0116
   from   inventory:Pair.^methods
   cell   value | (1 => "x")
   code   ((1 => "x")).value

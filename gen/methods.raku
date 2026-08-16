@@ -22,6 +22,14 @@ $TMP.mkdir unless $TMP.e;
 my $GUARD = 0;
 
 # type => the edge ladder of instances for it. Value types only.
+#
+# NOTE on unordered containers. A Set, Bag, Mix or Hash with more than one
+# distinct key renders in hash order, and Rakudo randomises that per process —
+# `set(1,2)` is "1,2" in one run and "2,1" in the next. Probing twice agrees by
+# luck about half the time, so the reproducibility check cannot catch it. Rather
+# than assert a coin flip, these ladders carry only instances whose order cannot
+# vary: empty, or a single distinct key. Multi-key behaviour belongs in atoms
+# that assert order-independent properties (`.elems`, `.total`, `.keys.sort`).
 constant %TYPES =
     'Int'      => ['0', '1', '-1', '2**64', '-2**64', '42'],
     'Rat'      => ['1/3', '0/1', '-1/3', '1/1', '(2**64)/3'],
@@ -31,12 +39,12 @@ constant %TYPES =
     'Bool'     => ['True', 'False'],
     'List'     => ['()', '(1,)', '(1,2,3)', '(1,(2,3))', '("a","b")'],
     'Array'    => ['[]', '[1]', '[1,2,3]', '[[1],[2]]'],
-    'Hash'     => ['{}', '{a=>1}', '{a=>1,b=>2}'],
+    'Hash'     => ['{}', '{a=>1}', '{"" => 1}'],
     'Pair'     => ['(a => 1)', '(1 => "x")'],
     'Range'    => ['(1..3)', '(1^..^3)', '(3..1)', '("a".."c")'],
     'Seq'      => ['(1..3).Seq', '().Seq'],
-    'Set'      => ['set(1,2)', 'set()'],
-    'Bag'      => ['bag(1,1,2)', 'bag()'],
+    'Set'      => ['set(1)', 'set()'],
+    'Bag'      => ['bag(1,1)', 'bag()'],
     'Map'      => ['Map.new((a=>1))', 'Map.new()'],
     'Capture'  => ['\\(1, :a)', '\\()'],
     'Version'  => ['v1.2.3', 'v0'],
@@ -56,9 +64,9 @@ constant %TYPES =
     'Failure'  => ['(try { die "x" } // $!)'],
 
     # --- widened: more of the value surface ---------------------------------
-    'Mix'      => ['mix(1,1,2)', 'mix()'],
-    'SetHash'  => ['SetHash.new(1,2)', 'SetHash.new'],
-    'BagHash'  => ['BagHash.new(1,1,2)', 'BagHash.new'],
+    'Mix'      => ['mix(1,1)', 'mix()'],
+    'SetHash'  => ['SetHash.new(1)', 'SetHash.new'],
+    'BagHash'  => ['BagHash.new(1,1)', 'BagHash.new'],
     'MixHash'  => ['MixHash.new(1)', 'MixHash.new'],
     'Slip'     => ['slip(1,2)', 'Empty'],
     'Code'     => ['{ 1 }', '-> $x { $x }'],
@@ -92,6 +100,9 @@ constant %TYPES =
 # `.substr("a")` and `.abs(1)` are as interesting as the well-typed calls.
 constant @ARGS = ['0', '1', '-1', '"a"', 'Any'];
 
+# The all-caps names that ARE language surface rather than plumbing.
+constant @CAPS-KEEP = <ACCEPTS WHAT WHO WHY HOW WHICH DEFINITE VAR REPR EVAL AST DUMP>;
+
 constant @FORBIDDEN =
     'run', 'shell', 'exit', 'unlink', 'rmdir', 'mkdir', 'spurt', 'slurp',
     'open', 'close', 'print', 'print-nl', 'say', 'note', 'put', 'printf',
@@ -101,7 +112,10 @@ constant @FORBIDDEN =
     'link', 'rename', 'copy', 'move', 'watch', 'lines', 'words', 'get', 'getc',
     'readchars', 'read', 'write', 'seek', 'tell', 'lock', 'unlock', 'signal',
     'Supply', 'Channel', 'Promise', 'tap', 'emit', 'done', 'quit', 'schedule',
-    'cue', 'kill', 'perl', 'encode', 'decode';
+    'cue', 'kill', 'perl', 'encode', 'decode',
+    # where an object was DEFINED, never what it is: 1 under a probe, 962
+    # inside a dense program, and neither is a fact about the language
+    'line', 'file';
 
 constant $METHOD-PROBE = q:to/END/;
     # print the local methods of each named type, with their arity
@@ -213,21 +227,48 @@ sub run-parallel($cmd, @exprs, $probe-src, $jobs, $batch = 200, $secs = 120) {
     return %seen;
 }
 
-# Anything the parallel pass missed — a chunk that died takes its tail with it —
-# is retried one expression at a time so a crash costs one cell, not a chunk.
-sub fill-gaps($cmd, @missing, $probe-src) {
+# Anything the parallel pass missed — a batch that died takes its tail with it.
+# Recovering one expression at a time costs one process per lost cell, which is
+# what made generation slow: a single fatal expression in a 200-cell batch cost
+# 199 extra process spawns. Bisect instead. A batch that dies is split in half
+# and retried, so isolating one killer costs log2(n) runs, and the healthy cells
+# around it come back in bulk.
+sub recover($cmd, @missing, $probe-src, $depth = 0) {
+    return {} unless @missing;
+
+    my $list  = $TMP.add("mm-rec-$depth.txt");
+    my $probe = $TMP.add('mm-rec-probe.raku');
+    $list.spurt(@missing.join("\n") ~ "\n");
+    $probe.spurt($probe-src);
+
+    # The timeout must scale with the work. Healthy cells run at ~190/sec, so a
+    # flat 60s for every level means each HANG costs the full minute at each of
+    # ~9 bisection depths — nine minutes to isolate one bad cell. Give each
+    # level only the time its list could honestly need.
+    my $secs = @missing == 1 ?? 6 !! max(6, (@missing / 20).ceiling);
+    my %r = run-sh("{ sh-quote($cmd) } { sh-quote($probe.absolute) } { sh-quote($list.absolute) }", $secs);
+
     my %got;
-    for @missing -> $e {
-        my $list = $TMP.add('mm-one.txt');
-        my $probe = $TMP.add('mm-one-probe.raku');
-        $list.spurt($e ~ "\n");
-        $probe.spurt($probe-src);
-        my %r = run-sh("{ sh-quote($cmd) } { sh-quote($probe.absolute) } { sh-quote($list.absolute) }", 8);
-        my @c = (%r<out>.lines[0] // '').split("\t");
-        %got{$e} = @c >= 3
-            ?? { value => @c[1], type => @c[2] }
-            !! { value => (%r<exit> == 137 ?? 'HANG' !! 'CRASH:' ~ %r<exit>), type => '-' };
+    for %r<out>.lines -> $l {
+        my @c = $l.split("\t");
+        next unless @c >= 3;
+        %got{@c[0]} = { value => @c[1], type => @c[2] };
     }
+
+    my @still = @missing.grep({ !%got{$_} });
+    return %got unless @still;
+
+    if @still == 1 {
+        # one expression, and it still produced nothing: it is the killer
+        %got{@still[0]} = { value => (%r<exit> == 137 ?? 'HANG' !! 'CRASH:' ~ %r<exit>), type => '-' };
+        return %got;
+    }
+
+    my $half = (@still / 2).Int;
+    my %a = recover($cmd, @still[0 ..^ $half].list, $probe-src, $depth + 1);
+    my %b = recover($cmd, @still[$half .. *].list,  $probe-src, $depth + 1);
+    for %a.keys -> $k { %got{$k} = %a{$k} }
+    for %b.keys -> $k { %got{$k} = %b{$k} }
     return %got;
 }
 
@@ -298,6 +339,15 @@ for %r<out>.lines -> $l {
     # internal (BUILD_LEAST_DERIVED, FLATTENABLE_HASH, CURSOR_NEXT), which no
     # independent implementation owes anyone.
     next if $n.contains('_');
+
+    # A run of capitals marks the REPR/metamodel plumbing — CREATE, POPULATE,
+    # COERCE, RAW-HASH, INSTANTIATE-GENERIC. Two reasons to refuse them, and the
+    # second is the expensive one: they are noise in any list of what a Raku
+    # implementation is missing, AND they die in ways `try` cannot catch, taking
+    # the whole probe batch down. Rakugrid's own generation was spending most of
+    # its time restarting after these. Raku's user-facing shouting API is a small
+    # closed set, so it is easier to name what to keep.
+    next if $n ~~ / <[A..Z]> ** 3..* / && !@CAPS-KEEP.first({ $_ eq $n });
     # invocant only, or invocant plus one argument we can supply from a ladder
     next unless +$count == 1 || +$count == 2;
     %arity{"$t\t$n"} = +$count;
@@ -355,8 +405,8 @@ for ^@engines -> $e {
     for %fresh.keys -> $k { %seen{$k} = %fresh{$k} }
     my @missing = @todo.grep({ !%seen{$_} });
     if @missing {
-        say "#   filling { @missing.elems } gaps one at a time …";
-        my %filled = fill-gaps(@engines[$e], @missing, $VALUE-PROBE);
+        say "#   recovering { @missing.elems } lost cells by bisection …";
+        my %filled = recover(@engines[$e], @missing, $VALUE-PROBE);
         for %filled.keys -> $k { %seen{$k} = %filled{$k} }
     }
     cache-save(@ids[$e], %seen);
@@ -406,6 +456,20 @@ for %TYPES.keys.sort -> $t {
 
         my $answered = !($r<value>.starts-with('CRASH') || $r<value> eq 'HANG'
                          || $r<value> eq 'UNRENDERABLE');
+
+        # Some values describe WHERE they were evaluated rather than what they
+        # are: `.file` on a block renders as EVAL_59 under a probe and as a real
+        # path in a dense program, and an object address renders as a long bare
+        # integer. Both reproduce perfectly across identical probe runs — they
+        # are stable and still worthless as expectations, so the reproducibility
+        # check cannot see them. Match them by shape instead.
+        #
+        # The deeper fix is for probes to execute the way the harness does,
+        # rather than through EVAL. That removes this class at the root.
+        my $portable = !($r<value> ~~ / 'EVAL_' \d+ /
+                      || $r<value>.contains('<anon|')
+                      || $r<value>.contains($ROOT.Str)
+                      || $r<value> ~~ /^ \d ** 12..* $/);
         my $stable = %again{%c<expr>} && %again{%c<expr>}<value> eq $r<value>;
 
         if $r<value>.starts-with('ERR:') {
@@ -422,7 +486,13 @@ for %TYPES.keys.sort -> $t {
             @out.push: "  oracle { @ids[$e] } → { $o<value> }";
         }
 
-        if !$answered {
+        if !$portable {
+            @out.push: "  verdict disputed";
+            @out.push: "  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation";
+            @out.push: "  ruled  2026-08-16 against { @ids[0] }";
+            $parked++;
+        }
+        elsif !$answered {
             @out.push: "  verdict disputed";
             @out.push: "  why    the reference produced no usable answer for this cell";
             @out.push: "  ruled  2026-08-15 against { @ids[0] }";

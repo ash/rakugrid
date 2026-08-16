@@ -2,7 +2,7 @@ atom     methods/Regex
 source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
-axes     Bool | CREATE | Capture | DEFINITE | HOW | INSTANTIATE-GENERIC | IS-SETTING-ONLY | POPULATE | REPR | VAR | WHAT | WHERE | WHO | WHY | all | any | arity | assoc | associative | bless | bytecode-size | cache | can | candidates | cando | chrs | clone | count | does | equiv | file | has-loop-phasers | has-phaser | has-phasers | iffy | is-generic | is-implementation-detail | is-wrapped | item | iterator | join | lazy-if | line | looser | multi | nl-out | none | not | of | one | outer | package | phasers | precedence | reducer | returns | reverse | self | signature | so | soft | sum | take | thunky | tighter | unwrap | wrap
+axes     Bool | Capture | DEFINITE | HOW | REPR | VAR | WHAT | WHO | WHY | all | any | arity | assoc | associative | bless | bytecode-size | cache | can | candidates | cando | chrs | clone | count | does | equiv | has-loop-phasers | has-phaser | has-phasers | iffy | is-generic | is-implementation-detail | is-wrapped | item | iterator | join | lazy-if | looser | multi | nl-out | none | not | of | one | outer | package | phasers | precedence | reducer | returns | reverse | self | signature | so | soft | sum | take | thunky | tighter | unwrap | wrap
 cols     /a/ | /^ \d+ $/
 
 - id     0001
@@ -25,31 +25,13 @@ cols     /a/ | /^ \d+ $/
 
 - id     0003
   from   inventory:Regex.^methods
-  cell   CREATE | /a/
-  code   (/a/).CREATE
-  is     
-  type   Regex
-  oracle rakudo-2026.07 → 
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0004
-  from   inventory:Regex.^methods
-  cell   CREATE | /^ \d+ $/
-  code   (/^ \d+ $/).CREATE
-  is     
-  type   Regex
-  oracle rakudo-2026.07 → 
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0005
-  from   inventory:Regex.^methods
   cell   Capture | /a/
   code   (/a/).Capture
   throws X::Cannot::Capture
   oracle rakudo-2026.07 → ERR:X::Cannot::Capture
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0006
+- id     0004
   from   inventory:Regex.^methods
   cell   Capture | /^ \d+ $/
   code   (/^ \d+ $/).Capture
@@ -57,7 +39,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::Cannot::Capture
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0007
+- id     0005
   from   inventory:Regex.^methods
   cell   DEFINITE | /a/
   code   (/a/).DEFINITE
@@ -66,7 +48,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0008
+- id     0006
   from   inventory:Regex.^methods
   cell   DEFINITE | /^ \d+ $/
   code   (/^ \d+ $/).DEFINITE
@@ -75,7 +57,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0009
+- id     0007
   from   inventory:Regex.^methods
   cell   HOW | /a/
   code   (/a/).HOW
@@ -84,7 +66,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0010
+- id     0008
   from   inventory:Regex.^methods
   cell   HOW | /^ \d+ $/
   code   (/^ \d+ $/).HOW
@@ -93,259 +75,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0011
-  from   inventory:Regex.^methods
-  cell   INSTANTIATE-GENERIC(0) | /a/
-  code   (/a/).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0012
-  from   inventory:Regex.^methods
-  cell   INSTANTIATE-GENERIC(1) | /a/
-  code   (/a/).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0013
-  from   inventory:Regex.^methods
-  cell   INSTANTIATE-GENERIC(-1) | /a/
-  code   (/a/).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0014
-  from   inventory:Regex.^methods
-  cell   INSTANTIATE-GENERIC("a") | /a/
-  code   (/a/).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0015
-  from   inventory:Regex.^methods
-  cell   INSTANTIATE-GENERIC(Any) | /a/
-  code   (/a/).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0016
-  from   inventory:Regex.^methods
-  cell   INSTANTIATE-GENERIC(0) | /^ \d+ $/
-  code   (/^ \d+ $/).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0017
-  from   inventory:Regex.^methods
-  cell   INSTANTIATE-GENERIC(1) | /^ \d+ $/
-  code   (/^ \d+ $/).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0018
-  from   inventory:Regex.^methods
-  cell   INSTANTIATE-GENERIC(-1) | /^ \d+ $/
-  code   (/^ \d+ $/).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0019
-  from   inventory:Regex.^methods
-  cell   INSTANTIATE-GENERIC("a") | /^ \d+ $/
-  code   (/^ \d+ $/).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0020
-  from   inventory:Regex.^methods
-  cell   INSTANTIATE-GENERIC(Any) | /^ \d+ $/
-  code   (/^ \d+ $/).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0021
-  from   inventory:Regex.^methods
-  cell   IS-SETTING-ONLY(0) | /a/
-  code   (/a/).IS-SETTING-ONLY(0)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0022
-  from   inventory:Regex.^methods
-  cell   IS-SETTING-ONLY(1) | /a/
-  code   (/a/).IS-SETTING-ONLY(1)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0023
-  from   inventory:Regex.^methods
-  cell   IS-SETTING-ONLY(-1) | /a/
-  code   (/a/).IS-SETTING-ONLY(-1)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0024
-  from   inventory:Regex.^methods
-  cell   IS-SETTING-ONLY("a") | /a/
-  code   (/a/).IS-SETTING-ONLY("a")
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0025
-  from   inventory:Regex.^methods
-  cell   IS-SETTING-ONLY(Any) | /a/
-  code   (/a/).IS-SETTING-ONLY(Any)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0026
-  from   inventory:Regex.^methods
-  cell   IS-SETTING-ONLY(0) | /^ \d+ $/
-  code   (/^ \d+ $/).IS-SETTING-ONLY(0)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0027
-  from   inventory:Regex.^methods
-  cell   IS-SETTING-ONLY(1) | /^ \d+ $/
-  code   (/^ \d+ $/).IS-SETTING-ONLY(1)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0028
-  from   inventory:Regex.^methods
-  cell   IS-SETTING-ONLY(-1) | /^ \d+ $/
-  code   (/^ \d+ $/).IS-SETTING-ONLY(-1)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0029
-  from   inventory:Regex.^methods
-  cell   IS-SETTING-ONLY("a") | /^ \d+ $/
-  code   (/^ \d+ $/).IS-SETTING-ONLY("a")
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0030
-  from   inventory:Regex.^methods
-  cell   IS-SETTING-ONLY(Any) | /^ \d+ $/
-  code   (/^ \d+ $/).IS-SETTING-ONLY(Any)
-  throws X::AdHoc
-  oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0031
-  from   inventory:Regex.^methods
-  cell   POPULATE(0) | /a/
-  code   (/a/).POPULATE(0)
-  is     /a/
-  type   Regex
-  oracle rakudo-2026.07 → /a/
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0032
-  from   inventory:Regex.^methods
-  cell   POPULATE(1) | /a/
-  code   (/a/).POPULATE(1)
-  is     /a/
-  type   Regex
-  oracle rakudo-2026.07 → /a/
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0033
-  from   inventory:Regex.^methods
-  cell   POPULATE(-1) | /a/
-  code   (/a/).POPULATE(-1)
-  is     /a/
-  type   Regex
-  oracle rakudo-2026.07 → /a/
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0034
-  from   inventory:Regex.^methods
-  cell   POPULATE("a") | /a/
-  code   (/a/).POPULATE("a")
-  is     /a/
-  type   Regex
-  oracle rakudo-2026.07 → /a/
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0035
-  from   inventory:Regex.^methods
-  cell   POPULATE(Any) | /a/
-  code   (/a/).POPULATE(Any)
-  is     /a/
-  type   Regex
-  oracle rakudo-2026.07 → /a/
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0036
-  from   inventory:Regex.^methods
-  cell   POPULATE(0) | /^ \d+ $/
-  code   (/^ \d+ $/).POPULATE(0)
-  is     /^ \d+ $/
-  type   Regex
-  oracle rakudo-2026.07 → /^ \d+ $/
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0037
-  from   inventory:Regex.^methods
-  cell   POPULATE(1) | /^ \d+ $/
-  code   (/^ \d+ $/).POPULATE(1)
-  is     /^ \d+ $/
-  type   Regex
-  oracle rakudo-2026.07 → /^ \d+ $/
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0038
-  from   inventory:Regex.^methods
-  cell   POPULATE(-1) | /^ \d+ $/
-  code   (/^ \d+ $/).POPULATE(-1)
-  is     /^ \d+ $/
-  type   Regex
-  oracle rakudo-2026.07 → /^ \d+ $/
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0039
-  from   inventory:Regex.^methods
-  cell   POPULATE("a") | /^ \d+ $/
-  code   (/^ \d+ $/).POPULATE("a")
-  is     /^ \d+ $/
-  type   Regex
-  oracle rakudo-2026.07 → /^ \d+ $/
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0040
-  from   inventory:Regex.^methods
-  cell   POPULATE(Any) | /^ \d+ $/
-  code   (/^ \d+ $/).POPULATE(Any)
-  is     /^ \d+ $/
-  type   Regex
-  oracle rakudo-2026.07 → /^ \d+ $/
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0041
+- id     0009
   from   inventory:Regex.^methods
   cell   REPR | /a/
   code   (/a/).REPR
@@ -354,7 +84,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0042
+- id     0010
   from   inventory:Regex.^methods
   cell   REPR | /^ \d+ $/
   code   (/^ \d+ $/).REPR
@@ -363,7 +93,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0043
+- id     0011
   from   inventory:Regex.^methods
   cell   VAR | /a/
   code   (/a/).VAR
@@ -372,7 +102,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /a/
   oracle rakupp-3.14.0 → rx/a/
 
-- id     0044
+- id     0012
   from   inventory:Regex.^methods
   cell   VAR | /^ \d+ $/
   code   (/^ \d+ $/).VAR
@@ -381,7 +111,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /^ \d+ $/
   oracle rakupp-3.14.0 → rx/^ \d+ $/
 
-- id     0045
+- id     0013
   from   inventory:Regex.^methods
   cell   WHAT | /a/
   code   (/a/).WHAT
@@ -390,7 +120,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Regex
   oracle rakupp-3.14.0 → Regex
 
-- id     0046
+- id     0014
   from   inventory:Regex.^methods
   cell   WHAT | /^ \d+ $/
   code   (/^ \d+ $/).WHAT
@@ -399,31 +129,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Regex
   oracle rakupp-3.14.0 → Regex
 
-- id     0047
-  from   inventory:Regex.^methods
-  cell   WHERE | /a/
-  code   (/a/).WHERE
-  is     4412749558288
-  type   Int
-  oracle rakudo-2026.07 → 4412749558288
-  oracle rakupp-3.14.0 → 14201060816
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0048
-  from   inventory:Regex.^methods
-  cell   WHERE | /^ \d+ $/
-  code   (/^ \d+ $/).WHERE
-  is     4412916331776
-  type   Int
-  oracle rakudo-2026.07 → 4412916331776
-  oracle rakupp-3.14.0 → 14201060816
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0049
+- id     0015
   from   inventory:Regex.^methods
   cell   WHO | /a/
   code   (/a/).WHO
@@ -432,7 +138,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0050
+- id     0016
   from   inventory:Regex.^methods
   cell   WHO | /^ \d+ $/
   code   (/^ \d+ $/).WHO
@@ -441,7 +147,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0051
+- id     0017
   from   inventory:Regex.^methods
   cell   WHY | /a/
   code   (/a/).WHY
@@ -450,7 +156,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Nil
   oracle rakupp-3.14.0 → Any
 
-- id     0052
+- id     0018
   from   inventory:Regex.^methods
   cell   WHY | /^ \d+ $/
   code   (/^ \d+ $/).WHY
@@ -459,7 +165,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Nil
   oracle rakupp-3.14.0 → Any
 
-- id     0053
+- id     0019
   from   inventory:Regex.^methods
   cell   all | /a/
   code   (/a/).all
@@ -468,7 +174,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → all(/a/)
   oracle rakupp-3.14.0 → all(rx/a/)
 
-- id     0054
+- id     0020
   from   inventory:Regex.^methods
   cell   all | /^ \d+ $/
   code   (/^ \d+ $/).all
@@ -477,7 +183,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → all(/^ \d+ $/)
   oracle rakupp-3.14.0 → all(rx/^ \d+ $/)
 
-- id     0055
+- id     0021
   from   inventory:Regex.^methods
   cell   any | /a/
   code   (/a/).any
@@ -486,7 +192,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → any(/a/)
   oracle rakupp-3.14.0 → any(rx/a/)
 
-- id     0056
+- id     0022
   from   inventory:Regex.^methods
   cell   any | /^ \d+ $/
   code   (/^ \d+ $/).any
@@ -495,7 +201,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → any(/^ \d+ $/)
   oracle rakupp-3.14.0 → any(rx/^ \d+ $/)
 
-- id     0057
+- id     0023
   from   inventory:Regex.^methods
   cell   arity | /a/
   code   (/a/).arity
@@ -504,7 +210,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0058
+- id     0024
   from   inventory:Regex.^methods
   cell   arity | /^ \d+ $/
   code   (/^ \d+ $/).arity
@@ -513,7 +219,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0059
+- id     0025
   from   inventory:Regex.^methods
   cell   assoc(0) | /a/
   code   (/a/).assoc(0)
@@ -521,7 +227,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0060
+- id     0026
   from   inventory:Regex.^methods
   cell   assoc(1) | /a/
   code   (/a/).assoc(1)
@@ -529,7 +235,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0061
+- id     0027
   from   inventory:Regex.^methods
   cell   assoc(-1) | /a/
   code   (/a/).assoc(-1)
@@ -537,7 +243,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0062
+- id     0028
   from   inventory:Regex.^methods
   cell   assoc("a") | /a/
   code   (/a/).assoc("a")
@@ -546,7 +252,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0063
+- id     0029
   from   inventory:Regex.^methods
   cell   assoc(Any) | /a/
   code   (/a/).assoc(Any)
@@ -554,7 +260,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0064
+- id     0030
   from   inventory:Regex.^methods
   cell   assoc(0) | /^ \d+ $/
   code   (/^ \d+ $/).assoc(0)
@@ -562,7 +268,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0065
+- id     0031
   from   inventory:Regex.^methods
   cell   assoc(1) | /^ \d+ $/
   code   (/^ \d+ $/).assoc(1)
@@ -570,7 +276,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0066
+- id     0032
   from   inventory:Regex.^methods
   cell   assoc(-1) | /^ \d+ $/
   code   (/^ \d+ $/).assoc(-1)
@@ -578,7 +284,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0067
+- id     0033
   from   inventory:Regex.^methods
   cell   assoc("a") | /^ \d+ $/
   code   (/^ \d+ $/).assoc("a")
@@ -587,7 +293,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0068
+- id     0034
   from   inventory:Regex.^methods
   cell   assoc(Any) | /^ \d+ $/
   code   (/^ \d+ $/).assoc(Any)
@@ -595,7 +301,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0069
+- id     0035
   from   inventory:Regex.^methods
   cell   associative | /a/
   code   (/a/).associative
@@ -604,7 +310,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0070
+- id     0036
   from   inventory:Regex.^methods
   cell   associative | /^ \d+ $/
   code   (/^ \d+ $/).associative
@@ -613,7 +319,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0071
+- id     0037
   from   inventory:Regex.^methods
   cell   bless | /a/
   code   (/a/).bless
@@ -622,7 +328,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → 
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0072
+- id     0038
   from   inventory:Regex.^methods
   cell   bless | /^ \d+ $/
   code   (/^ \d+ $/).bless
@@ -631,7 +337,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → 
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0073
+- id     0039
   from   inventory:Regex.^methods
   cell   bytecode-size | /a/
   code   (/a/).bytecode-size
@@ -640,7 +346,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → 758
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0074
+- id     0040
   from   inventory:Regex.^methods
   cell   bytecode-size | /^ \d+ $/
   code   (/^ \d+ $/).bytecode-size
@@ -649,7 +355,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → 718
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0075
+- id     0041
   from   inventory:Regex.^methods
   cell   cache | /a/
   code   (/a/).cache
@@ -658,7 +364,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $(/a/,)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0076
+- id     0042
   from   inventory:Regex.^methods
   cell   cache | /^ \d+ $/
   code   (/^ \d+ $/).cache
@@ -667,7 +373,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $(/^ \d+ $/,)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0077
+- id     0043
   from   inventory:Regex.^methods
   cell   can(0) | /a/
   code   (/a/).can(0)
@@ -675,7 +381,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0078
+- id     0044
   from   inventory:Regex.^methods
   cell   can(1) | /a/
   code   (/a/).can(1)
@@ -683,7 +389,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0079
+- id     0045
   from   inventory:Regex.^methods
   cell   can(-1) | /a/
   code   (/a/).can(-1)
@@ -691,7 +397,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0080
+- id     0046
   from   inventory:Regex.^methods
   cell   can("a") | /a/
   code   (/a/).can("a")
@@ -700,7 +406,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0081
+- id     0047
   from   inventory:Regex.^methods
   cell   can(Any) | /a/
   code   (/a/).can(Any)
@@ -708,7 +414,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0082
+- id     0048
   from   inventory:Regex.^methods
   cell   can(0) | /^ \d+ $/
   code   (/^ \d+ $/).can(0)
@@ -716,7 +422,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0083
+- id     0049
   from   inventory:Regex.^methods
   cell   can(1) | /^ \d+ $/
   code   (/^ \d+ $/).can(1)
@@ -724,7 +430,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0084
+- id     0050
   from   inventory:Regex.^methods
   cell   can(-1) | /^ \d+ $/
   code   (/^ \d+ $/).can(-1)
@@ -732,7 +438,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0085
+- id     0051
   from   inventory:Regex.^methods
   cell   can("a") | /^ \d+ $/
   code   (/^ \d+ $/).can("a")
@@ -741,7 +447,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0086
+- id     0052
   from   inventory:Regex.^methods
   cell   can(Any) | /^ \d+ $/
   code   (/^ \d+ $/).can(Any)
@@ -749,7 +455,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0087
+- id     0053
   from   inventory:Regex.^methods
   cell   candidates | /a/
   code   (/a/).candidates
@@ -758,7 +464,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $(/a/,)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0088
+- id     0054
   from   inventory:Regex.^methods
   cell   candidates | /^ \d+ $/
   code   (/^ \d+ $/).candidates
@@ -767,7 +473,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $(/^ \d+ $/,)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0089
+- id     0055
   from   inventory:Regex.^methods
   cell   cando(0) | /a/
   code   (/a/).cando(0)
@@ -776,7 +482,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $(/a/,)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0090
+- id     0056
   from   inventory:Regex.^methods
   cell   cando(1) | /a/
   code   (/a/).cando(1)
@@ -785,7 +491,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $(/a/,)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0091
+- id     0057
   from   inventory:Regex.^methods
   cell   cando(-1) | /a/
   code   (/a/).cando(-1)
@@ -794,7 +500,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $(/a/,)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0092
+- id     0058
   from   inventory:Regex.^methods
   cell   cando("a") | /a/
   code   (/a/).cando("a")
@@ -803,7 +509,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $(/a/,)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0093
+- id     0059
   from   inventory:Regex.^methods
   cell   cando(Any) | /a/
   code   (/a/).cando(Any)
@@ -812,7 +518,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $(/a/,)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0094
+- id     0060
   from   inventory:Regex.^methods
   cell   cando(0) | /^ \d+ $/
   code   (/^ \d+ $/).cando(0)
@@ -821,7 +527,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $(/^ \d+ $/,)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0095
+- id     0061
   from   inventory:Regex.^methods
   cell   cando(1) | /^ \d+ $/
   code   (/^ \d+ $/).cando(1)
@@ -830,7 +536,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $(/^ \d+ $/,)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0096
+- id     0062
   from   inventory:Regex.^methods
   cell   cando(-1) | /^ \d+ $/
   code   (/^ \d+ $/).cando(-1)
@@ -839,7 +545,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $(/^ \d+ $/,)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0097
+- id     0063
   from   inventory:Regex.^methods
   cell   cando("a") | /^ \d+ $/
   code   (/^ \d+ $/).cando("a")
@@ -848,7 +554,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $(/^ \d+ $/,)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0098
+- id     0064
   from   inventory:Regex.^methods
   cell   cando(Any) | /^ \d+ $/
   code   (/^ \d+ $/).cando(Any)
@@ -857,7 +563,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $(/^ \d+ $/,)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0099
+- id     0065
   from   inventory:Regex.^methods
   cell   chrs | /a/
   code   (/a/).chrs
@@ -865,7 +571,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0100
+- id     0066
   from   inventory:Regex.^methods
   cell   chrs | /^ \d+ $/
   code   (/^ \d+ $/).chrs
@@ -873,7 +579,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0101
+- id     0067
   from   inventory:Regex.^methods
   cell   clone | /a/
   code   (/a/).clone
@@ -882,7 +588,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /a/
   oracle rakupp-3.14.0 → rx/a/
 
-- id     0102
+- id     0068
   from   inventory:Regex.^methods
   cell   clone | /^ \d+ $/
   code   (/^ \d+ $/).clone
@@ -891,7 +597,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /^ \d+ $/
   oracle rakupp-3.14.0 → rx/^ \d+ $/
 
-- id     0103
+- id     0069
   from   inventory:Regex.^methods
   cell   count | /a/
   code   (/a/).count
@@ -900,7 +606,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0104
+- id     0070
   from   inventory:Regex.^methods
   cell   count | /^ \d+ $/
   code   (/^ \d+ $/).count
@@ -909,7 +615,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0105
+- id     0071
   from   inventory:Regex.^methods
   cell   does(0) | /a/
   code   (/a/).does(0)
@@ -918,7 +624,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0106
+- id     0072
   from   inventory:Regex.^methods
   cell   does(1) | /a/
   code   (/a/).does(1)
@@ -927,7 +633,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0107
+- id     0073
   from   inventory:Regex.^methods
   cell   does(-1) | /a/
   code   (/a/).does(-1)
@@ -936,7 +642,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0108
+- id     0074
   from   inventory:Regex.^methods
   cell   does("a") | /a/
   code   (/a/).does("a")
@@ -945,7 +651,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0109
+- id     0075
   from   inventory:Regex.^methods
   cell   does(Any) | /a/
   code   (/a/).does(Any)
@@ -954,7 +660,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0110
+- id     0076
   from   inventory:Regex.^methods
   cell   does(0) | /^ \d+ $/
   code   (/^ \d+ $/).does(0)
@@ -963,7 +669,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0111
+- id     0077
   from   inventory:Regex.^methods
   cell   does(1) | /^ \d+ $/
   code   (/^ \d+ $/).does(1)
@@ -972,7 +678,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0112
+- id     0078
   from   inventory:Regex.^methods
   cell   does(-1) | /^ \d+ $/
   code   (/^ \d+ $/).does(-1)
@@ -981,7 +687,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0113
+- id     0079
   from   inventory:Regex.^methods
   cell   does("a") | /^ \d+ $/
   code   (/^ \d+ $/).does("a")
@@ -990,7 +696,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0114
+- id     0080
   from   inventory:Regex.^methods
   cell   does(Any) | /^ \d+ $/
   code   (/^ \d+ $/).does(Any)
@@ -999,7 +705,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0115
+- id     0081
   from   inventory:Regex.^methods
   cell   equiv(0) | /a/
   code   (/a/).equiv(0)
@@ -1007,7 +713,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0116
+- id     0082
   from   inventory:Regex.^methods
   cell   equiv(1) | /a/
   code   (/a/).equiv(1)
@@ -1015,7 +721,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0117
+- id     0083
   from   inventory:Regex.^methods
   cell   equiv(-1) | /a/
   code   (/a/).equiv(-1)
@@ -1023,7 +729,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0118
+- id     0084
   from   inventory:Regex.^methods
   cell   equiv("a") | /a/
   code   (/a/).equiv("a")
@@ -1031,7 +737,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0119
+- id     0085
   from   inventory:Regex.^methods
   cell   equiv(Any) | /a/
   code   (/a/).equiv(Any)
@@ -1039,7 +745,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0120
+- id     0086
   from   inventory:Regex.^methods
   cell   equiv(0) | /^ \d+ $/
   code   (/^ \d+ $/).equiv(0)
@@ -1047,7 +753,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0121
+- id     0087
   from   inventory:Regex.^methods
   cell   equiv(1) | /^ \d+ $/
   code   (/^ \d+ $/).equiv(1)
@@ -1055,7 +761,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0122
+- id     0088
   from   inventory:Regex.^methods
   cell   equiv(-1) | /^ \d+ $/
   code   (/^ \d+ $/).equiv(-1)
@@ -1063,7 +769,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0123
+- id     0089
   from   inventory:Regex.^methods
   cell   equiv("a") | /^ \d+ $/
   code   (/^ \d+ $/).equiv("a")
@@ -1071,7 +777,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0124
+- id     0090
   from   inventory:Regex.^methods
   cell   equiv(Any) | /^ \d+ $/
   code   (/^ \d+ $/).equiv(Any)
@@ -1079,31 +785,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0125
-  from   inventory:Regex.^methods
-  cell   file | /a/
-  code   (/a/).file
-  is     UNRENDERABLE
-  type   Str
-  oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference produced no usable answer for this cell
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0126
-  from   inventory:Regex.^methods
-  cell   file | /^ \d+ $/
-  code   (/^ \d+ $/).file
-  is     UNRENDERABLE
-  type   Str
-  oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference produced no usable answer for this cell
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0127
+- id     0091
   from   inventory:Regex.^methods
   cell   has-loop-phasers | /a/
   code   (/a/).has-loop-phasers
@@ -1112,7 +794,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0128
+- id     0092
   from   inventory:Regex.^methods
   cell   has-loop-phasers | /^ \d+ $/
   code   (/^ \d+ $/).has-loop-phasers
@@ -1121,7 +803,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0129
+- id     0093
   from   inventory:Regex.^methods
   cell   has-phaser(0) | /a/
   code   (/a/).has-phaser(0)
@@ -1129,7 +811,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0130
+- id     0094
   from   inventory:Regex.^methods
   cell   has-phaser(1) | /a/
   code   (/a/).has-phaser(1)
@@ -1137,7 +819,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0131
+- id     0095
   from   inventory:Regex.^methods
   cell   has-phaser(-1) | /a/
   code   (/a/).has-phaser(-1)
@@ -1145,7 +827,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0132
+- id     0096
   from   inventory:Regex.^methods
   cell   has-phaser("a") | /a/
   code   (/a/).has-phaser("a")
@@ -1154,7 +836,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0133
+- id     0097
   from   inventory:Regex.^methods
   cell   has-phaser(Any) | /a/
   code   (/a/).has-phaser(Any)
@@ -1162,7 +844,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0134
+- id     0098
   from   inventory:Regex.^methods
   cell   has-phaser(0) | /^ \d+ $/
   code   (/^ \d+ $/).has-phaser(0)
@@ -1170,7 +852,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0135
+- id     0099
   from   inventory:Regex.^methods
   cell   has-phaser(1) | /^ \d+ $/
   code   (/^ \d+ $/).has-phaser(1)
@@ -1178,7 +860,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0136
+- id     0100
   from   inventory:Regex.^methods
   cell   has-phaser(-1) | /^ \d+ $/
   code   (/^ \d+ $/).has-phaser(-1)
@@ -1186,7 +868,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0137
+- id     0101
   from   inventory:Regex.^methods
   cell   has-phaser("a") | /^ \d+ $/
   code   (/^ \d+ $/).has-phaser("a")
@@ -1195,7 +877,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0138
+- id     0102
   from   inventory:Regex.^methods
   cell   has-phaser(Any) | /^ \d+ $/
   code   (/^ \d+ $/).has-phaser(Any)
@@ -1203,7 +885,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0139
+- id     0103
   from   inventory:Regex.^methods
   cell   has-phasers | /a/
   code   (/a/).has-phasers
@@ -1212,7 +894,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0140
+- id     0104
   from   inventory:Regex.^methods
   cell   has-phasers | /^ \d+ $/
   code   (/^ \d+ $/).has-phasers
@@ -1221,7 +903,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0141
+- id     0105
   from   inventory:Regex.^methods
   cell   iffy | /a/
   code   (/a/).iffy
@@ -1230,7 +912,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0142
+- id     0106
   from   inventory:Regex.^methods
   cell   iffy | /^ \d+ $/
   code   (/^ \d+ $/).iffy
@@ -1239,7 +921,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0143
+- id     0107
   from   inventory:Regex.^methods
   cell   is-generic | /a/
   code   (/a/).is-generic
@@ -1248,7 +930,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0144
+- id     0108
   from   inventory:Regex.^methods
   cell   is-generic | /^ \d+ $/
   code   (/^ \d+ $/).is-generic
@@ -1257,7 +939,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0145
+- id     0109
   from   inventory:Regex.^methods
   cell   is-implementation-detail | /a/
   code   (/a/).is-implementation-detail
@@ -1266,7 +948,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0146
+- id     0110
   from   inventory:Regex.^methods
   cell   is-implementation-detail | /^ \d+ $/
   code   (/^ \d+ $/).is-implementation-detail
@@ -1275,7 +957,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0147
+- id     0111
   from   inventory:Regex.^methods
   cell   is-wrapped | /a/
   code   (/a/).is-wrapped
@@ -1284,7 +966,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0148
+- id     0112
   from   inventory:Regex.^methods
   cell   is-wrapped | /^ \d+ $/
   code   (/^ \d+ $/).is-wrapped
@@ -1293,7 +975,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0149
+- id     0113
   from   inventory:Regex.^methods
   cell   item | /a/
   code   (/a/).item
@@ -1302,7 +984,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /a/
   oracle rakupp-3.14.0 → rx/a/
 
-- id     0150
+- id     0114
   from   inventory:Regex.^methods
   cell   item | /^ \d+ $/
   code   (/^ \d+ $/).item
@@ -1311,7 +993,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /^ \d+ $/
   oracle rakupp-3.14.0 → rx/^ \d+ $/
 
-- id     0151
+- id     0115
   from   inventory:Regex.^methods
   cell   iterator | /a/
   code   (/a/).iterator
@@ -1320,7 +1002,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Rakudo::Iterator::OneValue.new
   oracle rakupp-3.14.0 → ${:items($[rx/a/]), :pos(0)}
 
-- id     0152
+- id     0116
   from   inventory:Regex.^methods
   cell   iterator | /^ \d+ $/
   code   (/^ \d+ $/).iterator
@@ -1329,7 +1011,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Rakudo::Iterator::OneValue.new
   oracle rakupp-3.14.0 → ${:items($[rx/^ \d+ $/]), :pos(0)}
 
-- id     0153
+- id     0117
   from   inventory:Regex.^methods
   cell   join(0) | /a/
   code   (/a/).join(0)
@@ -1338,7 +1020,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0154
+- id     0118
   from   inventory:Regex.^methods
   cell   join(1) | /a/
   code   (/a/).join(1)
@@ -1347,7 +1029,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0155
+- id     0119
   from   inventory:Regex.^methods
   cell   join(-1) | /a/
   code   (/a/).join(-1)
@@ -1356,7 +1038,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0156
+- id     0120
   from   inventory:Regex.^methods
   cell   join("a") | /a/
   code   (/a/).join("a")
@@ -1365,7 +1047,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0157
+- id     0121
   from   inventory:Regex.^methods
   cell   join(Any) | /a/
   code   (/a/).join(Any)
@@ -1373,7 +1055,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0158
+- id     0122
   from   inventory:Regex.^methods
   cell   join(0) | /^ \d+ $/
   code   (/^ \d+ $/).join(0)
@@ -1382,7 +1064,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0159
+- id     0123
   from   inventory:Regex.^methods
   cell   join(1) | /^ \d+ $/
   code   (/^ \d+ $/).join(1)
@@ -1391,7 +1073,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0160
+- id     0124
   from   inventory:Regex.^methods
   cell   join(-1) | /^ \d+ $/
   code   (/^ \d+ $/).join(-1)
@@ -1400,7 +1082,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0161
+- id     0125
   from   inventory:Regex.^methods
   cell   join("a") | /^ \d+ $/
   code   (/^ \d+ $/).join("a")
@@ -1409,7 +1091,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0162
+- id     0126
   from   inventory:Regex.^methods
   cell   join(Any) | /^ \d+ $/
   code   (/^ \d+ $/).join(Any)
@@ -1417,7 +1099,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0163
+- id     0127
   from   inventory:Regex.^methods
   cell   lazy-if(0) | /a/
   code   (/a/).lazy-if(0)
@@ -1426,7 +1108,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /a/
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0164
+- id     0128
   from   inventory:Regex.^methods
   cell   lazy-if(1) | /a/
   code   (/a/).lazy-if(1)
@@ -1435,7 +1117,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /a/
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0165
+- id     0129
   from   inventory:Regex.^methods
   cell   lazy-if(-1) | /a/
   code   (/a/).lazy-if(-1)
@@ -1444,7 +1126,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /a/
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0166
+- id     0130
   from   inventory:Regex.^methods
   cell   lazy-if("a") | /a/
   code   (/a/).lazy-if("a")
@@ -1453,7 +1135,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /a/
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0167
+- id     0131
   from   inventory:Regex.^methods
   cell   lazy-if(Any) | /a/
   code   (/a/).lazy-if(Any)
@@ -1462,7 +1144,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /a/
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0168
+- id     0132
   from   inventory:Regex.^methods
   cell   lazy-if(0) | /^ \d+ $/
   code   (/^ \d+ $/).lazy-if(0)
@@ -1471,7 +1153,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /^ \d+ $/
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0169
+- id     0133
   from   inventory:Regex.^methods
   cell   lazy-if(1) | /^ \d+ $/
   code   (/^ \d+ $/).lazy-if(1)
@@ -1480,7 +1162,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /^ \d+ $/
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0170
+- id     0134
   from   inventory:Regex.^methods
   cell   lazy-if(-1) | /^ \d+ $/
   code   (/^ \d+ $/).lazy-if(-1)
@@ -1489,7 +1171,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /^ \d+ $/
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0171
+- id     0135
   from   inventory:Regex.^methods
   cell   lazy-if("a") | /^ \d+ $/
   code   (/^ \d+ $/).lazy-if("a")
@@ -1498,7 +1180,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /^ \d+ $/
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0172
+- id     0136
   from   inventory:Regex.^methods
   cell   lazy-if(Any) | /^ \d+ $/
   code   (/^ \d+ $/).lazy-if(Any)
@@ -1507,25 +1189,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /^ \d+ $/
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0173
-  from   inventory:Regex.^methods
-  cell   line | /a/
-  code   (/a/).line
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0174
-  from   inventory:Regex.^methods
-  cell   line | /^ \d+ $/
-  code   (/^ \d+ $/).line
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0175
+- id     0137
   from   inventory:Regex.^methods
   cell   looser(0) | /a/
   code   (/a/).looser(0)
@@ -1533,7 +1197,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0176
+- id     0138
   from   inventory:Regex.^methods
   cell   looser(1) | /a/
   code   (/a/).looser(1)
@@ -1541,7 +1205,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0177
+- id     0139
   from   inventory:Regex.^methods
   cell   looser(-1) | /a/
   code   (/a/).looser(-1)
@@ -1549,7 +1213,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0178
+- id     0140
   from   inventory:Regex.^methods
   cell   looser("a") | /a/
   code   (/a/).looser("a")
@@ -1557,7 +1221,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0179
+- id     0141
   from   inventory:Regex.^methods
   cell   looser(Any) | /a/
   code   (/a/).looser(Any)
@@ -1565,7 +1229,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0180
+- id     0142
   from   inventory:Regex.^methods
   cell   looser(0) | /^ \d+ $/
   code   (/^ \d+ $/).looser(0)
@@ -1573,7 +1237,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0181
+- id     0143
   from   inventory:Regex.^methods
   cell   looser(1) | /^ \d+ $/
   code   (/^ \d+ $/).looser(1)
@@ -1581,7 +1245,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0182
+- id     0144
   from   inventory:Regex.^methods
   cell   looser(-1) | /^ \d+ $/
   code   (/^ \d+ $/).looser(-1)
@@ -1589,7 +1253,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0183
+- id     0145
   from   inventory:Regex.^methods
   cell   looser("a") | /^ \d+ $/
   code   (/^ \d+ $/).looser("a")
@@ -1597,7 +1261,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0184
+- id     0146
   from   inventory:Regex.^methods
   cell   looser(Any) | /^ \d+ $/
   code   (/^ \d+ $/).looser(Any)
@@ -1605,7 +1269,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0185
+- id     0147
   from   inventory:Regex.^methods
   cell   multi | /a/
   code   (/a/).multi
@@ -1614,7 +1278,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0186
+- id     0148
   from   inventory:Regex.^methods
   cell   multi | /^ \d+ $/
   code   (/^ \d+ $/).multi
@@ -1623,7 +1287,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0187
+- id     0149
   from   inventory:Regex.^methods
   cell   nl-out | /a/
   code   (/a/).nl-out
@@ -1632,7 +1296,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0188
+- id     0150
   from   inventory:Regex.^methods
   cell   nl-out | /^ \d+ $/
   code   (/^ \d+ $/).nl-out
@@ -1641,7 +1305,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0189
+- id     0151
   from   inventory:Regex.^methods
   cell   none | /a/
   code   (/a/).none
@@ -1650,7 +1314,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → none(/a/)
   oracle rakupp-3.14.0 → none(rx/a/)
 
-- id     0190
+- id     0152
   from   inventory:Regex.^methods
   cell   none | /^ \d+ $/
   code   (/^ \d+ $/).none
@@ -1659,7 +1323,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → none(/^ \d+ $/)
   oracle rakupp-3.14.0 → none(rx/^ \d+ $/)
 
-- id     0191
+- id     0153
   from   inventory:Regex.^methods
   cell   not | /a/
   code   (/a/).not
@@ -1668,7 +1332,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0192
+- id     0154
   from   inventory:Regex.^methods
   cell   not | /^ \d+ $/
   code   (/^ \d+ $/).not
@@ -1677,7 +1341,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0193
+- id     0155
   from   inventory:Regex.^methods
   cell   of | /a/
   code   (/a/).of
@@ -1686,7 +1350,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0194
+- id     0156
   from   inventory:Regex.^methods
   cell   of | /^ \d+ $/
   code   (/^ \d+ $/).of
@@ -1695,7 +1359,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0195
+- id     0157
   from   inventory:Regex.^methods
   cell   one | /a/
   code   (/a/).one
@@ -1704,7 +1368,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → one(/a/)
   oracle rakupp-3.14.0 → one(rx/a/)
 
-- id     0196
+- id     0158
   from   inventory:Regex.^methods
   cell   one | /^ \d+ $/
   code   (/^ \d+ $/).one
@@ -1713,31 +1377,31 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → one(/^ \d+ $/)
   oracle rakupp-3.14.0 → one(rx/^ \d+ $/)
 
-- id     0197
+- id     0159
   from   inventory:Regex.^methods
   cell   outer | /a/
   code   (/a/).outer
-  is     ->  { #`(Block|4412924611048) ... }
+  is     ->  { #`(Block|2515404851600) ... }
   type   Block
-  oracle rakudo-2026.07 → ->  { #`(Block|4412924611048) ... }
+  oracle rakudo-2026.07 → ->  { #`(Block|2515404851600) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0198
+- id     0160
   from   inventory:Regex.^methods
   cell   outer | /^ \d+ $/
   code   (/^ \d+ $/).outer
-  is     ->  { #`(Block|4412987015248) ... }
+  is     ->  { #`(Block|2515404852032) ... }
   type   Block
-  oracle rakudo-2026.07 → ->  { #`(Block|4412987015248) ... }
+  oracle rakudo-2026.07 → ->  { #`(Block|2515404852032) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0199
+- id     0161
   from   inventory:Regex.^methods
   cell   package | /a/
   code   (/a/).package
@@ -1746,7 +1410,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → GLOBAL
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0200
+- id     0162
   from   inventory:Regex.^methods
   cell   package | /^ \d+ $/
   code   (/^ \d+ $/).package
@@ -1755,7 +1419,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → GLOBAL
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0201
+- id     0163
   from   inventory:Regex.^methods
   cell   phasers(0) | /a/
   code   (/a/).phasers(0)
@@ -1763,7 +1427,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0202
+- id     0164
   from   inventory:Regex.^methods
   cell   phasers(1) | /a/
   code   (/a/).phasers(1)
@@ -1771,7 +1435,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0203
+- id     0165
   from   inventory:Regex.^methods
   cell   phasers(-1) | /a/
   code   (/a/).phasers(-1)
@@ -1779,7 +1443,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0204
+- id     0166
   from   inventory:Regex.^methods
   cell   phasers("a") | /a/
   code   (/a/).phasers("a")
@@ -1788,7 +1452,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0205
+- id     0167
   from   inventory:Regex.^methods
   cell   phasers(Any) | /a/
   code   (/a/).phasers(Any)
@@ -1796,7 +1460,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0206
+- id     0168
   from   inventory:Regex.^methods
   cell   phasers(0) | /^ \d+ $/
   code   (/^ \d+ $/).phasers(0)
@@ -1804,7 +1468,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0207
+- id     0169
   from   inventory:Regex.^methods
   cell   phasers(1) | /^ \d+ $/
   code   (/^ \d+ $/).phasers(1)
@@ -1812,7 +1476,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0208
+- id     0170
   from   inventory:Regex.^methods
   cell   phasers(-1) | /^ \d+ $/
   code   (/^ \d+ $/).phasers(-1)
@@ -1820,7 +1484,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0209
+- id     0171
   from   inventory:Regex.^methods
   cell   phasers("a") | /^ \d+ $/
   code   (/^ \d+ $/).phasers("a")
@@ -1829,7 +1493,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0210
+- id     0172
   from   inventory:Regex.^methods
   cell   phasers(Any) | /^ \d+ $/
   code   (/^ \d+ $/).phasers(Any)
@@ -1837,7 +1501,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0211
+- id     0173
   from   inventory:Regex.^methods
   cell   precedence | /a/
   code   (/a/).precedence
@@ -1846,7 +1510,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0212
+- id     0174
   from   inventory:Regex.^methods
   cell   precedence | /^ \d+ $/
   code   (/^ \d+ $/).precedence
@@ -1855,7 +1519,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0213
+- id     0175
   from   inventory:Regex.^methods
   cell   reducer | /a/
   code   (/a/).reducer
@@ -1864,7 +1528,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → proto sub METAOP_REDUCE_LEFT (|) {*}
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0214
+- id     0176
   from   inventory:Regex.^methods
   cell   reducer | /^ \d+ $/
   code   (/^ \d+ $/).reducer
@@ -1873,7 +1537,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → proto sub METAOP_REDUCE_LEFT (|) {*}
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0215
+- id     0177
   from   inventory:Regex.^methods
   cell   returns | /a/
   code   (/a/).returns
@@ -1882,7 +1546,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0216
+- id     0178
   from   inventory:Regex.^methods
   cell   returns | /^ \d+ $/
   code   (/^ \d+ $/).returns
@@ -1891,7 +1555,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0217
+- id     0179
   from   inventory:Regex.^methods
   cell   reverse | /a/
   code   (/a/).reverse
@@ -1900,7 +1564,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $((/a/,).Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0218
+- id     0180
   from   inventory:Regex.^methods
   cell   reverse | /^ \d+ $/
   code   (/^ \d+ $/).reverse
@@ -1909,7 +1573,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → $((/^ \d+ $/,).Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0219
+- id     0181
   from   inventory:Regex.^methods
   cell   self | /a/
   code   (/a/).self
@@ -1918,7 +1582,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /a/
   oracle rakupp-3.14.0 → rx/a/
 
-- id     0220
+- id     0182
   from   inventory:Regex.^methods
   cell   self | /^ \d+ $/
   code   (/^ \d+ $/).self
@@ -1927,7 +1591,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → /^ \d+ $/
   oracle rakupp-3.14.0 → rx/^ \d+ $/
 
-- id     0221
+- id     0183
   from   inventory:Regex.^methods
   cell   signature | /a/
   code   (/a/).signature
@@ -1936,7 +1600,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → :(Mu $:: *%_)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0222
+- id     0184
   from   inventory:Regex.^methods
   cell   signature | /^ \d+ $/
   code   (/^ \d+ $/).signature
@@ -1945,7 +1609,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → :(Mu $:: *%_)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0223
+- id     0185
   from   inventory:Regex.^methods
   cell   so | /a/
   code   (/a/).so
@@ -1954,7 +1618,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0224
+- id     0186
   from   inventory:Regex.^methods
   cell   so | /^ \d+ $/
   code   (/^ \d+ $/).so
@@ -1963,7 +1627,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0225
+- id     0187
   from   inventory:Regex.^methods
   cell   soft | /a/
   code   (/a/).soft
@@ -1972,7 +1636,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0226
+- id     0188
   from   inventory:Regex.^methods
   cell   soft | /^ \d+ $/
   code   (/^ \d+ $/).soft
@@ -1981,7 +1645,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0227
+- id     0189
   from   inventory:Regex.^methods
   cell   sum | /a/
   code   (/a/).sum
@@ -1989,7 +1653,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0228
+- id     0190
   from   inventory:Regex.^methods
   cell   sum | /^ \d+ $/
   code   (/^ \d+ $/).sum
@@ -1997,7 +1661,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0229
+- id     0191
   from   inventory:Regex.^methods
   cell   take | /a/
   code   (/a/).take
@@ -2005,7 +1669,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → rx/a/
 
-- id     0230
+- id     0192
   from   inventory:Regex.^methods
   cell   take | /^ \d+ $/
   code   (/^ \d+ $/).take
@@ -2013,7 +1677,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → rx/^ \d+ $/
 
-- id     0231
+- id     0193
   from   inventory:Regex.^methods
   cell   thunky | /a/
   code   (/a/).thunky
@@ -2022,7 +1686,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0232
+- id     0194
   from   inventory:Regex.^methods
   cell   thunky | /^ \d+ $/
   code   (/^ \d+ $/).thunky
@@ -2031,7 +1695,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0233
+- id     0195
   from   inventory:Regex.^methods
   cell   tighter(0) | /a/
   code   (/a/).tighter(0)
@@ -2039,7 +1703,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0234
+- id     0196
   from   inventory:Regex.^methods
   cell   tighter(1) | /a/
   code   (/a/).tighter(1)
@@ -2047,7 +1711,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0235
+- id     0197
   from   inventory:Regex.^methods
   cell   tighter(-1) | /a/
   code   (/a/).tighter(-1)
@@ -2055,7 +1719,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0236
+- id     0198
   from   inventory:Regex.^methods
   cell   tighter("a") | /a/
   code   (/a/).tighter("a")
@@ -2063,7 +1727,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0237
+- id     0199
   from   inventory:Regex.^methods
   cell   tighter(Any) | /a/
   code   (/a/).tighter(Any)
@@ -2071,7 +1735,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0238
+- id     0200
   from   inventory:Regex.^methods
   cell   tighter(0) | /^ \d+ $/
   code   (/^ \d+ $/).tighter(0)
@@ -2079,7 +1743,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0239
+- id     0201
   from   inventory:Regex.^methods
   cell   tighter(1) | /^ \d+ $/
   code   (/^ \d+ $/).tighter(1)
@@ -2087,7 +1751,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0240
+- id     0202
   from   inventory:Regex.^methods
   cell   tighter(-1) | /^ \d+ $/
   code   (/^ \d+ $/).tighter(-1)
@@ -2095,7 +1759,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0241
+- id     0203
   from   inventory:Regex.^methods
   cell   tighter("a") | /^ \d+ $/
   code   (/^ \d+ $/).tighter("a")
@@ -2103,7 +1767,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0242
+- id     0204
   from   inventory:Regex.^methods
   cell   tighter(Any) | /^ \d+ $/
   code   (/^ \d+ $/).tighter(Any)
@@ -2111,7 +1775,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0243
+- id     0205
   from   inventory:Regex.^methods
   cell   unwrap(0) | /a/
   code   (/a/).unwrap(0)
@@ -2119,7 +1783,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0244
+- id     0206
   from   inventory:Regex.^methods
   cell   unwrap(1) | /a/
   code   (/a/).unwrap(1)
@@ -2127,7 +1791,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0245
+- id     0207
   from   inventory:Regex.^methods
   cell   unwrap(-1) | /a/
   code   (/a/).unwrap(-1)
@@ -2135,7 +1799,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0246
+- id     0208
   from   inventory:Regex.^methods
   cell   unwrap("a") | /a/
   code   (/a/).unwrap("a")
@@ -2143,7 +1807,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0247
+- id     0209
   from   inventory:Regex.^methods
   cell   unwrap(Any) | /a/
   code   (/a/).unwrap(Any)
@@ -2151,7 +1815,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0248
+- id     0210
   from   inventory:Regex.^methods
   cell   unwrap(0) | /^ \d+ $/
   code   (/^ \d+ $/).unwrap(0)
@@ -2159,7 +1823,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0249
+- id     0211
   from   inventory:Regex.^methods
   cell   unwrap(1) | /^ \d+ $/
   code   (/^ \d+ $/).unwrap(1)
@@ -2167,7 +1831,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0250
+- id     0212
   from   inventory:Regex.^methods
   cell   unwrap(-1) | /^ \d+ $/
   code   (/^ \d+ $/).unwrap(-1)
@@ -2175,7 +1839,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0251
+- id     0213
   from   inventory:Regex.^methods
   cell   unwrap("a") | /^ \d+ $/
   code   (/^ \d+ $/).unwrap("a")
@@ -2183,7 +1847,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0252
+- id     0214
   from   inventory:Regex.^methods
   cell   unwrap(Any) | /^ \d+ $/
   code   (/^ \d+ $/).unwrap(Any)
@@ -2191,7 +1855,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::Routine::Unwrap
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0253
+- id     0215
   from   inventory:Regex.^methods
   cell   wrap(0) | /a/
   code   (/a/).wrap(0)
@@ -2199,7 +1863,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0254
+- id     0216
   from   inventory:Regex.^methods
   cell   wrap(1) | /a/
   code   (/a/).wrap(1)
@@ -2207,7 +1871,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0255
+- id     0217
   from   inventory:Regex.^methods
   cell   wrap(-1) | /a/
   code   (/a/).wrap(-1)
@@ -2215,7 +1879,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0256
+- id     0218
   from   inventory:Regex.^methods
   cell   wrap("a") | /a/
   code   (/a/).wrap("a")
@@ -2223,7 +1887,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0257
+- id     0219
   from   inventory:Regex.^methods
   cell   wrap(Any) | /a/
   code   (/a/).wrap(Any)
@@ -2231,7 +1895,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0258
+- id     0220
   from   inventory:Regex.^methods
   cell   wrap(0) | /^ \d+ $/
   code   (/^ \d+ $/).wrap(0)
@@ -2239,7 +1903,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0259
+- id     0221
   from   inventory:Regex.^methods
   cell   wrap(1) | /^ \d+ $/
   code   (/^ \d+ $/).wrap(1)
@@ -2247,7 +1911,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0260
+- id     0222
   from   inventory:Regex.^methods
   cell   wrap(-1) | /^ \d+ $/
   code   (/^ \d+ $/).wrap(-1)
@@ -2255,7 +1919,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0261
+- id     0223
   from   inventory:Regex.^methods
   cell   wrap("a") | /^ \d+ $/
   code   (/^ \d+ $/).wrap("a")
@@ -2263,7 +1927,7 @@ cols     /a/ | /^ \d+ $/
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0262
+- id     0224
   from   inventory:Regex.^methods
   cell   wrap(Any) | /^ \d+ $/
   code   (/^ \d+ $/).wrap(Any)

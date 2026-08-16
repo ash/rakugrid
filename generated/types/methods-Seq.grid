@@ -2,7 +2,7 @@ atom     methods/Seq
 source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
-axes     AST | Bool | CREATE | Capture | Complex | DEFINITE | EVAL | Failure | FatRat | HOW | INSTANTIATE-GENERIC | Int | NFC | NFD | NFKC | NFKD | Num | Numeric | Order | POPULATE | REPR | Rat | VAR | Version | WHAT | WHERE | WHO | abs | acos | acosec | acosech | acosh | acotan | acotanh | all | any | asec | asech | asin | asinh | atan | atan2 | atanh | bless | byte | cache | can | ceiling | chars | chomp | chr | chrs | cis | codes | conj | cos | cosec | cosech | cosh | cotan | cotanh | does | end | fc | flat | flip | floor | hyper | indent | int | int16 | int32 | int64 | int8 | is-generic | is-prime | item | iterator | join | lazy | lazy-if | lc | log10 | log2 | nl-out | none | not | one | ord | ords | parse-names | path | race | rand | reverse | roots | rotate | samecase | samemark | samespace | sec | sech | self | sign | sin | sinh | so | sqrt | sum | take | tan | tanh | tc | tclc | trim | trim-leading | trim-trailing | truncate | uc | uint | uint16 | uint32 | uint64 | uint8 | uniname | uninames | uniparse | uniprop | uniprops | unival | univals | unpolar | wordcase
+axes     AST | Bool | Capture | Complex | DEFINITE | EVAL | Failure | FatRat | HOW | Int | Num | Numeric | Order | REPR | Rat | VAR | Version | WHAT | WHO | abs | acos | acosec | acosech | acosh | acotan | acotanh | all | any | asec | asech | asin | asinh | atan | atan2 | atanh | bless | byte | cache | can | ceiling | chars | chomp | chr | chrs | cis | codes | conj | cos | cosec | cosech | cosh | cotan | cotanh | does | end | fc | flat | flip | floor | hyper | indent | int | int16 | int32 | int64 | int8 | is-generic | is-prime | item | iterator | join | lazy | lazy-if | lc | log10 | log2 | nl-out | none | not | one | ord | ords | parse-names | path | race | rand | reverse | roots | rotate | samecase | samemark | samespace | sec | sech | self | sign | sin | sinh | so | sqrt | sum | take | tan | tanh | tc | tclc | trim | trim-leading | trim-trailing | truncate | uc | uint | uint16 | uint32 | uint64 | uint8 | uniname | uninames | uniparse | uniprop | uniprops | unival | univals | unpolar | wordcase
 cols     (1..3).Seq | ().Seq
 
 - id     0001
@@ -105,24 +105,6 @@ cols     (1..3).Seq | ().Seq
 
 - id     0013
   from   inventory:Seq.^methods
-  cell   CREATE | (1..3).Seq
-  code   ((1..3).Seq).CREATE
-  is     $(Seq.new())
-  type   Seq
-  oracle rakudo-2026.07 → $(Seq.new())
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0014
-  from   inventory:Seq.^methods
-  cell   CREATE | ().Seq
-  code   (().Seq).CREATE
-  is     $(Seq.new())
-  type   Seq
-  oracle rakudo-2026.07 → $(Seq.new())
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0015
-  from   inventory:Seq.^methods
   cell   Capture | (1..3).Seq
   code   ((1..3).Seq).Capture
   is     \(1, 2, 3)
@@ -130,7 +112,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → \(1, 2, 3)
   oracle rakupp-3.14.0 → \(1, 2, 3)
 
-- id     0016
+- id     0014
   from   inventory:Seq.^methods
   cell   Capture | ().Seq
   code   (().Seq).Capture
@@ -139,7 +121,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → \()
   oracle rakupp-3.14.0 → \()
 
-- id     0017
+- id     0015
   from   inventory:Seq.^methods
   cell   Complex | (1..3).Seq
   code   ((1..3).Seq).Complex
@@ -148,7 +130,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → <3+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0018
+- id     0016
   from   inventory:Seq.^methods
   cell   Complex | ().Seq
   code   (().Seq).Complex
@@ -157,7 +139,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → <0+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0019
+- id     0017
   from   inventory:Seq.^methods
   cell   DEFINITE | (1..3).Seq
   code   ((1..3).Seq).DEFINITE
@@ -166,7 +148,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0020
+- id     0018
   from   inventory:Seq.^methods
   cell   DEFINITE | ().Seq
   code   (().Seq).DEFINITE
@@ -175,7 +157,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0021
+- id     0019
   from   inventory:Seq.^methods
   cell   EVAL | (1..3).Seq
   code   ((1..3).Seq).EVAL
@@ -183,7 +165,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Syntax::Confused
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0022
+- id     0020
   from   inventory:Seq.^methods
   cell   EVAL | ().Seq
   code   (().Seq).EVAL
@@ -192,7 +174,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0023
+- id     0021
   from   inventory:Seq.^methods
   cell   Failure | (1..3).Seq
   code   ((1..3).Seq).Failure
@@ -200,7 +182,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0024
+- id     0022
   from   inventory:Seq.^methods
   cell   Failure | ().Seq
   code   (().Seq).Failure
@@ -208,7 +190,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0025
+- id     0023
   from   inventory:Seq.^methods
   cell   FatRat | (1..3).Seq
   code   ((1..3).Seq).FatRat
@@ -217,7 +199,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → FatRat.new(3, 1)
   oracle rakupp-3.14.0 → FatRat.new(3, 1)
 
-- id     0026
+- id     0024
   from   inventory:Seq.^methods
   cell   FatRat | ().Seq
   code   (().Seq).FatRat
@@ -226,7 +208,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → FatRat.new(0, 1)
   oracle rakupp-3.14.0 → FatRat.new(0, 1)
 
-- id     0027
+- id     0025
   from   inventory:Seq.^methods
   cell   HOW | (1..3).Seq
   code   ((1..3).Seq).HOW
@@ -235,7 +217,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0028
+- id     0026
   from   inventory:Seq.^methods
   cell   HOW | ().Seq
   code   (().Seq).HOW
@@ -244,87 +226,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0029
-  from   inventory:Seq.^methods
-  cell   INSTANTIATE-GENERIC(0) | (1..3).Seq
-  code   ((1..3).Seq).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0030
-  from   inventory:Seq.^methods
-  cell   INSTANTIATE-GENERIC(1) | (1..3).Seq
-  code   ((1..3).Seq).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0031
-  from   inventory:Seq.^methods
-  cell   INSTANTIATE-GENERIC(-1) | (1..3).Seq
-  code   ((1..3).Seq).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0032
-  from   inventory:Seq.^methods
-  cell   INSTANTIATE-GENERIC("a") | (1..3).Seq
-  code   ((1..3).Seq).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0033
-  from   inventory:Seq.^methods
-  cell   INSTANTIATE-GENERIC(Any) | (1..3).Seq
-  code   ((1..3).Seq).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0034
-  from   inventory:Seq.^methods
-  cell   INSTANTIATE-GENERIC(0) | ().Seq
-  code   (().Seq).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0035
-  from   inventory:Seq.^methods
-  cell   INSTANTIATE-GENERIC(1) | ().Seq
-  code   (().Seq).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0036
-  from   inventory:Seq.^methods
-  cell   INSTANTIATE-GENERIC(-1) | ().Seq
-  code   (().Seq).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0037
-  from   inventory:Seq.^methods
-  cell   INSTANTIATE-GENERIC("a") | ().Seq
-  code   (().Seq).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0038
-  from   inventory:Seq.^methods
-  cell   INSTANTIATE-GENERIC(Any) | ().Seq
-  code   (().Seq).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0039
+- id     0027
   from   inventory:Seq.^methods
   cell   Int | (1..3).Seq
   code   ((1..3).Seq).Int
@@ -333,7 +235,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → 3
 
-- id     0040
+- id     0028
   from   inventory:Seq.^methods
   cell   Int | ().Seq
   code   (().Seq).Int
@@ -342,79 +244,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0041
-  from   inventory:Seq.^methods
-  cell   NFC | (1..3).Seq
-  code   ((1..3).Seq).NFC
-  is     Uni.new(0x0031, 0x0020, 0x0032, 0x0020, 0x0033).NFC
-  type   NFC
-  oracle rakudo-2026.07 → Uni.new(0x0031, 0x0020, 0x0032, 0x0020, 0x0033).NFC
-  oracle rakupp-3.14.0 → Uni.new(0x0031, 0x0020, 0x0032, 0x0020, 0x0033).NFC
-
-- id     0042
-  from   inventory:Seq.^methods
-  cell   NFC | ().Seq
-  code   (().Seq).NFC
-  is     Uni.new().NFC
-  type   NFC
-  oracle rakudo-2026.07 → Uni.new().NFC
-  oracle rakupp-3.14.0 → Uni.new().NFC
-
-- id     0043
-  from   inventory:Seq.^methods
-  cell   NFD | (1..3).Seq
-  code   ((1..3).Seq).NFD
-  is     Uni.new(0x0031, 0x0020, 0x0032, 0x0020, 0x0033).NFD
-  type   NFD
-  oracle rakudo-2026.07 → Uni.new(0x0031, 0x0020, 0x0032, 0x0020, 0x0033).NFD
-  oracle rakupp-3.14.0 → Uni.new(0x0031, 0x0020, 0x0032, 0x0020, 0x0033).NFD
-
-- id     0044
-  from   inventory:Seq.^methods
-  cell   NFD | ().Seq
-  code   (().Seq).NFD
-  is     Uni.new().NFD
-  type   NFD
-  oracle rakudo-2026.07 → Uni.new().NFD
-  oracle rakupp-3.14.0 → Uni.new().NFD
-
-- id     0045
-  from   inventory:Seq.^methods
-  cell   NFKC | (1..3).Seq
-  code   ((1..3).Seq).NFKC
-  is     Uni.new(0x0031, 0x0020, 0x0032, 0x0020, 0x0033).NFKC
-  type   NFKC
-  oracle rakudo-2026.07 → Uni.new(0x0031, 0x0020, 0x0032, 0x0020, 0x0033).NFKC
-  oracle rakupp-3.14.0 → Uni.new(0x0031, 0x0020, 0x0032, 0x0020, 0x0033).NFKC
-
-- id     0046
-  from   inventory:Seq.^methods
-  cell   NFKC | ().Seq
-  code   (().Seq).NFKC
-  is     Uni.new().NFKC
-  type   NFKC
-  oracle rakudo-2026.07 → Uni.new().NFKC
-  oracle rakupp-3.14.0 → Uni.new().NFKC
-
-- id     0047
-  from   inventory:Seq.^methods
-  cell   NFKD | (1..3).Seq
-  code   ((1..3).Seq).NFKD
-  is     Uni.new(0x0031, 0x0020, 0x0032, 0x0020, 0x0033).NFKD
-  type   NFKD
-  oracle rakudo-2026.07 → Uni.new(0x0031, 0x0020, 0x0032, 0x0020, 0x0033).NFKD
-  oracle rakupp-3.14.0 → Uni.new(0x0031, 0x0020, 0x0032, 0x0020, 0x0033).NFKD
-
-- id     0048
-  from   inventory:Seq.^methods
-  cell   NFKD | ().Seq
-  code   (().Seq).NFKD
-  is     Uni.new().NFKD
-  type   NFKD
-  oracle rakudo-2026.07 → Uni.new().NFKD
-  oracle rakupp-3.14.0 → Uni.new().NFKD
-
-- id     0049
+- id     0029
   from   inventory:Seq.^methods
   cell   Num | (1..3).Seq
   code   ((1..3).Seq).Num
@@ -423,7 +253,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3e0
   oracle rakupp-3.14.0 → 3e0
 
-- id     0050
+- id     0030
   from   inventory:Seq.^methods
   cell   Num | ().Seq
   code   (().Seq).Num
@@ -432,7 +262,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0051
+- id     0031
   from   inventory:Seq.^methods
   cell   Numeric | (1..3).Seq
   code   ((1..3).Seq).Numeric
@@ -441,7 +271,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → 3e0
 
-- id     0052
+- id     0032
   from   inventory:Seq.^methods
   cell   Numeric | ().Seq
   code   (().Seq).Numeric
@@ -450,7 +280,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0053
+- id     0033
   from   inventory:Seq.^methods
   cell   Order | (1..3).Seq
   code   ((1..3).Seq).Order
@@ -459,7 +289,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Order::More
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0054
+- id     0034
   from   inventory:Seq.^methods
   cell   Order | ().Seq
   code   (().Seq).Order
@@ -468,97 +298,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Order::Same
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0055
-  from   inventory:Seq.^methods
-  cell   POPULATE(0) | (1..3).Seq
-  code   ((1..3).Seq).POPULATE(0)
-  is     $((1, 2, 3).Seq)
-  type   Seq
-  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0056
-  from   inventory:Seq.^methods
-  cell   POPULATE(1) | (1..3).Seq
-  code   ((1..3).Seq).POPULATE(1)
-  is     $((1, 2, 3).Seq)
-  type   Seq
-  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0057
-  from   inventory:Seq.^methods
-  cell   POPULATE(-1) | (1..3).Seq
-  code   ((1..3).Seq).POPULATE(-1)
-  is     $((1, 2, 3).Seq)
-  type   Seq
-  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0058
-  from   inventory:Seq.^methods
-  cell   POPULATE("a") | (1..3).Seq
-  code   ((1..3).Seq).POPULATE("a")
-  is     $((1, 2, 3).Seq)
-  type   Seq
-  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0059
-  from   inventory:Seq.^methods
-  cell   POPULATE(Any) | (1..3).Seq
-  code   ((1..3).Seq).POPULATE(Any)
-  is     $((1, 2, 3).Seq)
-  type   Seq
-  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0060
-  from   inventory:Seq.^methods
-  cell   POPULATE(0) | ().Seq
-  code   (().Seq).POPULATE(0)
-  is     $(().Seq)
-  type   Seq
-  oracle rakudo-2026.07 → $(().Seq)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0061
-  from   inventory:Seq.^methods
-  cell   POPULATE(1) | ().Seq
-  code   (().Seq).POPULATE(1)
-  is     $(().Seq)
-  type   Seq
-  oracle rakudo-2026.07 → $(().Seq)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0062
-  from   inventory:Seq.^methods
-  cell   POPULATE(-1) | ().Seq
-  code   (().Seq).POPULATE(-1)
-  is     $(().Seq)
-  type   Seq
-  oracle rakudo-2026.07 → $(().Seq)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0063
-  from   inventory:Seq.^methods
-  cell   POPULATE("a") | ().Seq
-  code   (().Seq).POPULATE("a")
-  is     $(().Seq)
-  type   Seq
-  oracle rakudo-2026.07 → $(().Seq)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0064
-  from   inventory:Seq.^methods
-  cell   POPULATE(Any) | ().Seq
-  code   (().Seq).POPULATE(Any)
-  is     $(().Seq)
-  type   Seq
-  oracle rakudo-2026.07 → $(().Seq)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0065
+- id     0035
   from   inventory:Seq.^methods
   cell   REPR | (1..3).Seq
   code   ((1..3).Seq).REPR
@@ -567,7 +307,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0066
+- id     0036
   from   inventory:Seq.^methods
   cell   REPR | ().Seq
   code   (().Seq).REPR
@@ -576,7 +316,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0067
+- id     0037
   from   inventory:Seq.^methods
   cell   Rat | (1..3).Seq
   code   ((1..3).Seq).Rat
@@ -585,7 +325,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3.0
   oracle rakupp-3.14.0 → 3.0
 
-- id     0068
+- id     0038
   from   inventory:Seq.^methods
   cell   Rat | ().Seq
   code   (().Seq).Rat
@@ -594,7 +334,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0.0
   oracle rakupp-3.14.0 → 0.0
 
-- id     0069
+- id     0039
   from   inventory:Seq.^methods
   cell   VAR | (1..3).Seq
   code   ((1..3).Seq).VAR
@@ -603,7 +343,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((1, 2, 3).Seq)
   oracle rakupp-3.14.0 → $(1, 2, 3).Seq
 
-- id     0070
+- id     0040
   from   inventory:Seq.^methods
   cell   VAR | ().Seq
   code   (().Seq).VAR
@@ -612,7 +352,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0071
+- id     0041
   from   inventory:Seq.^methods
   cell   Version | (1..3).Seq
   code   ((1..3).Seq).Version
@@ -621,7 +361,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → v1.2.3
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0072
+- id     0042
   from   inventory:Seq.^methods
   cell   Version | ().Seq
   code   (().Seq).Version
@@ -630,7 +370,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Version.new
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0073
+- id     0043
   from   inventory:Seq.^methods
   cell   WHAT | (1..3).Seq
   code   ((1..3).Seq).WHAT
@@ -639,7 +379,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Seq
   oracle rakupp-3.14.0 → Seq
 
-- id     0074
+- id     0044
   from   inventory:Seq.^methods
   cell   WHAT | ().Seq
   code   (().Seq).WHAT
@@ -648,31 +388,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Seq
   oracle rakupp-3.14.0 → Seq
 
-- id     0075
-  from   inventory:Seq.^methods
-  cell   WHERE | (1..3).Seq
-  code   ((1..3).Seq).WHERE
-  is     4967887802288
-  type   Int
-  oracle rakudo-2026.07 → 4967887802288
-  oracle rakupp-3.14.0 → 140261459061704
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0076
-  from   inventory:Seq.^methods
-  cell   WHERE | ().Seq
-  code   (().Seq).WHERE
-  is     4967888146400
-  type   Int
-  oracle rakudo-2026.07 → 4967888146400
-  oracle rakupp-3.14.0 → 140261459062504
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0077
+- id     0045
   from   inventory:Seq.^methods
   cell   WHO | (1..3).Seq
   code   ((1..3).Seq).WHO
@@ -681,7 +397,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0078
+- id     0046
   from   inventory:Seq.^methods
   cell   WHO | ().Seq
   code   (().Seq).WHO
@@ -690,7 +406,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0079
+- id     0047
   from   inventory:Seq.^methods
   cell   abs | (1..3).Seq
   code   ((1..3).Seq).abs
@@ -699,7 +415,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → 3e0
 
-- id     0080
+- id     0048
   from   inventory:Seq.^methods
   cell   abs | ().Seq
   code   (().Seq).abs
@@ -708,7 +424,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0081
+- id     0049
   from   inventory:Seq.^methods
   cell   acos | (1..3).Seq
   code   ((1..3).Seq).acos
@@ -717,7 +433,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0082
+- id     0050
   from   inventory:Seq.^methods
   cell   acos | ().Seq
   code   (().Seq).acos
@@ -726,7 +442,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0083
+- id     0051
   from   inventory:Seq.^methods
   cell   acosec | (1..3).Seq
   code   ((1..3).Seq).acosec
@@ -735,7 +451,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0.3398369094541219e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0084
+- id     0052
   from   inventory:Seq.^methods
   cell   acosec | ().Seq
   code   (().Seq).acosec
@@ -744,7 +460,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0085
+- id     0053
   from   inventory:Seq.^methods
   cell   acosech | (1..3).Seq
   code   ((1..3).Seq).acosech
@@ -753,7 +469,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0.32745015023725843e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0086
+- id     0054
   from   inventory:Seq.^methods
   cell   acosech | ().Seq
   code   (().Seq).acosech
@@ -761,7 +477,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0087
+- id     0055
   from   inventory:Seq.^methods
   cell   acosh | (1..3).Seq
   code   ((1..3).Seq).acosh
@@ -770,7 +486,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1.762747174039086e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0088
+- id     0056
   from   inventory:Seq.^methods
   cell   acosh | ().Seq
   code   (().Seq).acosh
@@ -779,7 +495,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0089
+- id     0057
   from   inventory:Seq.^methods
   cell   acotan | (1..3).Seq
   code   ((1..3).Seq).acotan
@@ -788,7 +504,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0.3217505543966422e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0090
+- id     0058
   from   inventory:Seq.^methods
   cell   acotan | ().Seq
   code   (().Seq).acotan
@@ -797,7 +513,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0091
+- id     0059
   from   inventory:Seq.^methods
   cell   acotanh | (1..3).Seq
   code   ((1..3).Seq).acotanh
@@ -806,7 +522,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0.3465735902799726e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0092
+- id     0060
   from   inventory:Seq.^methods
   cell   acotanh | ().Seq
   code   (().Seq).acotanh
@@ -814,7 +530,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0093
+- id     0061
   from   inventory:Seq.^methods
   cell   all | (1..3).Seq
   code   ((1..3).Seq).all
@@ -823,7 +539,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → all(1, 2, 3)
   oracle rakupp-3.14.0 → all(1, 2, 3)
 
-- id     0094
+- id     0062
   from   inventory:Seq.^methods
   cell   all | ().Seq
   code   (().Seq).all
@@ -832,7 +548,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → all()
   oracle rakupp-3.14.0 → all()
 
-- id     0095
+- id     0063
   from   inventory:Seq.^methods
   cell   any | (1..3).Seq
   code   ((1..3).Seq).any
@@ -841,7 +557,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → any(1, 2, 3)
   oracle rakupp-3.14.0 → any(1, 2, 3)
 
-- id     0096
+- id     0064
   from   inventory:Seq.^methods
   cell   any | ().Seq
   code   (().Seq).any
@@ -850,7 +566,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → any()
   oracle rakupp-3.14.0 → any()
 
-- id     0097
+- id     0065
   from   inventory:Seq.^methods
   cell   asec | (1..3).Seq
   code   ((1..3).Seq).asec
@@ -859,7 +575,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1.2309594173407747e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0098
+- id     0066
   from   inventory:Seq.^methods
   cell   asec | ().Seq
   code   (().Seq).asec
@@ -868,7 +584,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0099
+- id     0067
   from   inventory:Seq.^methods
   cell   asech | (1..3).Seq
   code   ((1..3).Seq).asech
@@ -877,7 +593,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0100
+- id     0068
   from   inventory:Seq.^methods
   cell   asech | ().Seq
   code   (().Seq).asech
@@ -885,7 +601,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0101
+- id     0069
   from   inventory:Seq.^methods
   cell   asin | (1..3).Seq
   code   ((1..3).Seq).asin
@@ -894,7 +610,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0102
+- id     0070
   from   inventory:Seq.^methods
   cell   asin | ().Seq
   code   (().Seq).asin
@@ -903,7 +619,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0103
+- id     0071
   from   inventory:Seq.^methods
   cell   asinh | (1..3).Seq
   code   ((1..3).Seq).asinh
@@ -912,7 +628,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1.8184464592320668e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0104
+- id     0072
   from   inventory:Seq.^methods
   cell   asinh | ().Seq
   code   (().Seq).asinh
@@ -921,7 +637,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0105
+- id     0073
   from   inventory:Seq.^methods
   cell   atan | (1..3).Seq
   code   ((1..3).Seq).atan
@@ -930,7 +646,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1.2490457723982544e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0106
+- id     0074
   from   inventory:Seq.^methods
   cell   atan | ().Seq
   code   (().Seq).atan
@@ -939,7 +655,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0107
+- id     0075
   from   inventory:Seq.^methods
   cell   atan2(0) | (1..3).Seq
   code   ((1..3).Seq).atan2(0)
@@ -948,7 +664,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0108
+- id     0076
   from   inventory:Seq.^methods
   cell   atan2(1) | (1..3).Seq
   code   ((1..3).Seq).atan2(1)
@@ -957,7 +673,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1.2490457723982544e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0109
+- id     0077
   from   inventory:Seq.^methods
   cell   atan2(-1) | (1..3).Seq
   code   ((1..3).Seq).atan2(-1)
@@ -966,7 +682,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1.892546881191539e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0110
+- id     0078
   from   inventory:Seq.^methods
   cell   atan2("a") | (1..3).Seq
   code   ((1..3).Seq).atan2("a")
@@ -974,7 +690,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0111
+- id     0079
   from   inventory:Seq.^methods
   cell   atan2(Any) | (1..3).Seq
   code   ((1..3).Seq).atan2(Any)
@@ -983,7 +699,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0112
+- id     0080
   from   inventory:Seq.^methods
   cell   atan2(0) | ().Seq
   code   (().Seq).atan2(0)
@@ -992,7 +708,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0113
+- id     0081
   from   inventory:Seq.^methods
   cell   atan2(1) | ().Seq
   code   (().Seq).atan2(1)
@@ -1001,7 +717,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0114
+- id     0082
   from   inventory:Seq.^methods
   cell   atan2(-1) | ().Seq
   code   (().Seq).atan2(-1)
@@ -1010,7 +726,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3.141592653589793e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0115
+- id     0083
   from   inventory:Seq.^methods
   cell   atan2("a") | ().Seq
   code   (().Seq).atan2("a")
@@ -1018,7 +734,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0116
+- id     0084
   from   inventory:Seq.^methods
   cell   atan2(Any) | ().Seq
   code   (().Seq).atan2(Any)
@@ -1027,7 +743,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0117
+- id     0085
   from   inventory:Seq.^methods
   cell   atanh | (1..3).Seq
   code   ((1..3).Seq).atanh
@@ -1036,7 +752,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0118
+- id     0086
   from   inventory:Seq.^methods
   cell   atanh | ().Seq
   code   (().Seq).atanh
@@ -1045,7 +761,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0119
+- id     0087
   from   inventory:Seq.^methods
   cell   bless | (1..3).Seq
   code   ((1..3).Seq).bless
@@ -1054,7 +770,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(Seq.new())
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0120
+- id     0088
   from   inventory:Seq.^methods
   cell   bless | ().Seq
   code   (().Seq).bless
@@ -1063,7 +779,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(Seq.new())
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0121
+- id     0089
   from   inventory:Seq.^methods
   cell   byte | (1..3).Seq
   code   ((1..3).Seq).byte
@@ -1072,7 +788,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0122
+- id     0090
   from   inventory:Seq.^methods
   cell   byte | ().Seq
   code   (().Seq).byte
@@ -1081,7 +797,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0123
+- id     0091
   from   inventory:Seq.^methods
   cell   cache | (1..3).Seq
   code   ((1..3).Seq).cache
@@ -1090,7 +806,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(1, 2, 3)
   oracle rakupp-3.14.0 → $(1, 2, 3)
 
-- id     0124
+- id     0092
   from   inventory:Seq.^methods
   cell   cache | ().Seq
   code   (().Seq).cache
@@ -1099,7 +815,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0125
+- id     0093
   from   inventory:Seq.^methods
   cell   can(0) | (1..3).Seq
   code   ((1..3).Seq).can(0)
@@ -1107,7 +823,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0126
+- id     0094
   from   inventory:Seq.^methods
   cell   can(1) | (1..3).Seq
   code   ((1..3).Seq).can(1)
@@ -1115,7 +831,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0127
+- id     0095
   from   inventory:Seq.^methods
   cell   can(-1) | (1..3).Seq
   code   ((1..3).Seq).can(-1)
@@ -1123,7 +839,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0128
+- id     0096
   from   inventory:Seq.^methods
   cell   can("a") | (1..3).Seq
   code   ((1..3).Seq).can("a")
@@ -1132,7 +848,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0129
+- id     0097
   from   inventory:Seq.^methods
   cell   can(Any) | (1..3).Seq
   code   ((1..3).Seq).can(Any)
@@ -1140,7 +856,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0130
+- id     0098
   from   inventory:Seq.^methods
   cell   can(0) | ().Seq
   code   (().Seq).can(0)
@@ -1148,7 +864,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0131
+- id     0099
   from   inventory:Seq.^methods
   cell   can(1) | ().Seq
   code   (().Seq).can(1)
@@ -1156,7 +872,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0132
+- id     0100
   from   inventory:Seq.^methods
   cell   can(-1) | ().Seq
   code   (().Seq).can(-1)
@@ -1164,7 +880,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0133
+- id     0101
   from   inventory:Seq.^methods
   cell   can("a") | ().Seq
   code   (().Seq).can("a")
@@ -1173,7 +889,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0134
+- id     0102
   from   inventory:Seq.^methods
   cell   can(Any) | ().Seq
   code   (().Seq).can(Any)
@@ -1181,7 +897,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0135
+- id     0103
   from   inventory:Seq.^methods
   cell   ceiling | (1..3).Seq
   code   ((1..3).Seq).ceiling
@@ -1190,7 +906,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → 3
 
-- id     0136
+- id     0104
   from   inventory:Seq.^methods
   cell   ceiling | ().Seq
   code   (().Seq).ceiling
@@ -1199,7 +915,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0137
+- id     0105
   from   inventory:Seq.^methods
   cell   chars | (1..3).Seq
   code   ((1..3).Seq).chars
@@ -1208,7 +924,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 5
   oracle rakupp-3.14.0 → 5
 
-- id     0138
+- id     0106
   from   inventory:Seq.^methods
   cell   chars | ().Seq
   code   (().Seq).chars
@@ -1217,7 +933,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0139
+- id     0107
   from   inventory:Seq.^methods
   cell   chomp(0) | (1..3).Seq
   code   ((1..3).Seq).chomp(0)
@@ -1226,7 +942,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0140
+- id     0108
   from   inventory:Seq.^methods
   cell   chomp(1) | (1..3).Seq
   code   ((1..3).Seq).chomp(1)
@@ -1235,7 +951,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0141
+- id     0109
   from   inventory:Seq.^methods
   cell   chomp(-1) | (1..3).Seq
   code   ((1..3).Seq).chomp(-1)
@@ -1244,7 +960,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0142
+- id     0110
   from   inventory:Seq.^methods
   cell   chomp("a") | (1..3).Seq
   code   ((1..3).Seq).chomp("a")
@@ -1253,7 +969,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0143
+- id     0111
   from   inventory:Seq.^methods
   cell   chomp(Any) | (1..3).Seq
   code   ((1..3).Seq).chomp(Any)
@@ -1261,7 +977,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0144
+- id     0112
   from   inventory:Seq.^methods
   cell   chomp(0) | ().Seq
   code   (().Seq).chomp(0)
@@ -1270,7 +986,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0145
+- id     0113
   from   inventory:Seq.^methods
   cell   chomp(1) | ().Seq
   code   (().Seq).chomp(1)
@@ -1279,7 +995,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0146
+- id     0114
   from   inventory:Seq.^methods
   cell   chomp(-1) | ().Seq
   code   (().Seq).chomp(-1)
@@ -1288,7 +1004,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0147
+- id     0115
   from   inventory:Seq.^methods
   cell   chomp("a") | ().Seq
   code   (().Seq).chomp("a")
@@ -1297,7 +1013,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0148
+- id     0116
   from   inventory:Seq.^methods
   cell   chomp(Any) | ().Seq
   code   (().Seq).chomp(Any)
@@ -1305,7 +1021,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0149
+- id     0117
   from   inventory:Seq.^methods
   cell   chr | (1..3).Seq
   code   ((1..3).Seq).chr
@@ -1314,7 +1030,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "\x[3]"
   oracle rakupp-3.14.0 → ""
 
-- id     0150
+- id     0118
   from   inventory:Seq.^methods
   cell   chr | ().Seq
   code   (().Seq).chr
@@ -1323,7 +1039,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "\0"
   oracle rakupp-3.14.0 → "\0"
 
-- id     0151
+- id     0119
   from   inventory:Seq.^methods
   cell   chrs | (1..3).Seq
   code   ((1..3).Seq).chrs
@@ -1332,7 +1048,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "\x[1]\x[2]\x[3]"
   oracle rakupp-3.14.0 → ""
 
-- id     0152
+- id     0120
   from   inventory:Seq.^methods
   cell   chrs | ().Seq
   code   (().Seq).chrs
@@ -1341,7 +1057,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0153
+- id     0121
   from   inventory:Seq.^methods
   cell   cis | (1..3).Seq
   code   ((1..3).Seq).cis
@@ -1350,7 +1066,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → <-0.9899924966004454+0.1411200080598672i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0154
+- id     0122
   from   inventory:Seq.^methods
   cell   cis | ().Seq
   code   (().Seq).cis
@@ -1359,7 +1075,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → <1+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0155
+- id     0123
   from   inventory:Seq.^methods
   cell   codes | (1..3).Seq
   code   ((1..3).Seq).codes
@@ -1368,7 +1084,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 5
   oracle rakupp-3.14.0 → 5
 
-- id     0156
+- id     0124
   from   inventory:Seq.^methods
   cell   codes | ().Seq
   code   (().Seq).codes
@@ -1377,7 +1093,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0157
+- id     0125
   from   inventory:Seq.^methods
   cell   conj | (1..3).Seq
   code   ((1..3).Seq).conj
@@ -1386,7 +1102,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0158
+- id     0126
   from   inventory:Seq.^methods
   cell   conj | ().Seq
   code   (().Seq).conj
@@ -1395,7 +1111,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0159
+- id     0127
   from   inventory:Seq.^methods
   cell   cos | (1..3).Seq
   code   ((1..3).Seq).cos
@@ -1404,7 +1120,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → -0.9899924966004454e0
   oracle rakupp-3.14.0 → -0.9899924966004454e0
 
-- id     0160
+- id     0128
   from   inventory:Seq.^methods
   cell   cos | ().Seq
   code   (().Seq).cos
@@ -1413,7 +1129,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → 1e0
 
-- id     0161
+- id     0129
   from   inventory:Seq.^methods
   cell   cosec | (1..3).Seq
   code   ((1..3).Seq).cosec
@@ -1422,7 +1138,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 7.086167395737187e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0162
+- id     0130
   from   inventory:Seq.^methods
   cell   cosec | ().Seq
   code   (().Seq).cosec
@@ -1431,7 +1147,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0163
+- id     0131
   from   inventory:Seq.^methods
   cell   cosech | (1..3).Seq
   code   ((1..3).Seq).cosech
@@ -1440,7 +1156,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0.09982156966882273e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0164
+- id     0132
   from   inventory:Seq.^methods
   cell   cosech | ().Seq
   code   (().Seq).cosech
@@ -1449,7 +1165,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0165
+- id     0133
   from   inventory:Seq.^methods
   cell   cosh | (1..3).Seq
   code   ((1..3).Seq).cosh
@@ -1458,7 +1174,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 10.067661995777765e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0166
+- id     0134
   from   inventory:Seq.^methods
   cell   cosh | ().Seq
   code   (().Seq).cosh
@@ -1467,7 +1183,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0167
+- id     0135
   from   inventory:Seq.^methods
   cell   cotan | (1..3).Seq
   code   ((1..3).Seq).cotan
@@ -1476,7 +1192,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → -7.015252551434534e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0168
+- id     0136
   from   inventory:Seq.^methods
   cell   cotan | ().Seq
   code   (().Seq).cotan
@@ -1485,7 +1201,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0169
+- id     0137
   from   inventory:Seq.^methods
   cell   cotanh | (1..3).Seq
   code   ((1..3).Seq).cotanh
@@ -1494,7 +1210,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1.0049698233136892e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0170
+- id     0138
   from   inventory:Seq.^methods
   cell   cotanh | ().Seq
   code   (().Seq).cotanh
@@ -1503,7 +1219,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0171
+- id     0139
   from   inventory:Seq.^methods
   cell   does(0) | (1..3).Seq
   code   ((1..3).Seq).does(0)
@@ -1512,7 +1228,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0172
+- id     0140
   from   inventory:Seq.^methods
   cell   does(1) | (1..3).Seq
   code   ((1..3).Seq).does(1)
@@ -1521,7 +1237,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0173
+- id     0141
   from   inventory:Seq.^methods
   cell   does(-1) | (1..3).Seq
   code   ((1..3).Seq).does(-1)
@@ -1530,7 +1246,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0174
+- id     0142
   from   inventory:Seq.^methods
   cell   does("a") | (1..3).Seq
   code   ((1..3).Seq).does("a")
@@ -1539,7 +1255,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0175
+- id     0143
   from   inventory:Seq.^methods
   cell   does(Any) | (1..3).Seq
   code   ((1..3).Seq).does(Any)
@@ -1548,7 +1264,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0176
+- id     0144
   from   inventory:Seq.^methods
   cell   does(0) | ().Seq
   code   (().Seq).does(0)
@@ -1557,7 +1273,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0177
+- id     0145
   from   inventory:Seq.^methods
   cell   does(1) | ().Seq
   code   (().Seq).does(1)
@@ -1566,7 +1282,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0178
+- id     0146
   from   inventory:Seq.^methods
   cell   does(-1) | ().Seq
   code   (().Seq).does(-1)
@@ -1575,7 +1291,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0179
+- id     0147
   from   inventory:Seq.^methods
   cell   does("a") | ().Seq
   code   (().Seq).does("a")
@@ -1584,7 +1300,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0180
+- id     0148
   from   inventory:Seq.^methods
   cell   does(Any) | ().Seq
   code   (().Seq).does(Any)
@@ -1593,7 +1309,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0181
+- id     0149
   from   inventory:Seq.^methods
   cell   end | (1..3).Seq
   code   ((1..3).Seq).end
@@ -1602,7 +1318,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 2
   oracle rakupp-3.14.0 → 2
 
-- id     0182
+- id     0150
   from   inventory:Seq.^methods
   cell   end | ().Seq
   code   (().Seq).end
@@ -1611,7 +1327,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → -1
   oracle rakupp-3.14.0 → -1
 
-- id     0183
+- id     0151
   from   inventory:Seq.^methods
   cell   fc | (1..3).Seq
   code   ((1..3).Seq).fc
@@ -1620,7 +1336,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0184
+- id     0152
   from   inventory:Seq.^methods
   cell   fc | ().Seq
   code   (().Seq).fc
@@ -1629,7 +1345,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0185
+- id     0153
   from   inventory:Seq.^methods
   cell   flat(0) | (1..3).Seq
   code   ((1..3).Seq).flat(0)
@@ -1638,7 +1354,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((1, 2, 3).Seq)
   oracle rakupp-3.14.0 → $(1, 2, 3).Seq
 
-- id     0186
+- id     0154
   from   inventory:Seq.^methods
   cell   flat(1) | (1..3).Seq
   code   ((1..3).Seq).flat(1)
@@ -1647,7 +1363,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((1, 2, 3).Seq)
   oracle rakupp-3.14.0 → $(1, 2, 3).Seq
 
-- id     0187
+- id     0155
   from   inventory:Seq.^methods
   cell   flat(-1) | (1..3).Seq
   code   ((1..3).Seq).flat(-1)
@@ -1656,7 +1372,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((1, 2, 3).Seq)
   oracle rakupp-3.14.0 → $(1, 2, 3).Seq
 
-- id     0188
+- id     0156
   from   inventory:Seq.^methods
   cell   flat("a") | (1..3).Seq
   code   ((1..3).Seq).flat("a")
@@ -1664,7 +1380,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $(1, 2, 3).Seq
 
-- id     0189
+- id     0157
   from   inventory:Seq.^methods
   cell   flat(Any) | (1..3).Seq
   code   ((1..3).Seq).flat(Any)
@@ -1673,7 +1389,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((1, 2, 3).Seq)
   oracle rakupp-3.14.0 → $(1, 2, 3).Seq
 
-- id     0190
+- id     0158
   from   inventory:Seq.^methods
   cell   flat(0) | ().Seq
   code   (().Seq).flat(0)
@@ -1682,7 +1398,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0191
+- id     0159
   from   inventory:Seq.^methods
   cell   flat(1) | ().Seq
   code   (().Seq).flat(1)
@@ -1691,7 +1407,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0192
+- id     0160
   from   inventory:Seq.^methods
   cell   flat(-1) | ().Seq
   code   (().Seq).flat(-1)
@@ -1700,7 +1416,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0193
+- id     0161
   from   inventory:Seq.^methods
   cell   flat("a") | ().Seq
   code   (().Seq).flat("a")
@@ -1708,7 +1424,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0194
+- id     0162
   from   inventory:Seq.^methods
   cell   flat(Any) | ().Seq
   code   (().Seq).flat(Any)
@@ -1717,7 +1433,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0195
+- id     0163
   from   inventory:Seq.^methods
   cell   flip | (1..3).Seq
   code   ((1..3).Seq).flip
@@ -1726,7 +1442,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "3 2 1"
   oracle rakupp-3.14.0 → "3 2 1"
 
-- id     0196
+- id     0164
   from   inventory:Seq.^methods
   cell   flip | ().Seq
   code   (().Seq).flip
@@ -1735,7 +1451,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0197
+- id     0165
   from   inventory:Seq.^methods
   cell   floor | (1..3).Seq
   code   ((1..3).Seq).floor
@@ -1744,7 +1460,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → 3
 
-- id     0198
+- id     0166
   from   inventory:Seq.^methods
   cell   floor | ().Seq
   code   (().Seq).floor
@@ -1753,7 +1469,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0199
+- id     0167
   from   inventory:Seq.^methods
   cell   hyper | (1..3).Seq
   code   ((1..3).Seq).hyper
@@ -1762,7 +1478,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
   oracle rakupp-3.14.0 → $(1, 2, 3)
 
-- id     0200
+- id     0168
   from   inventory:Seq.^methods
   cell   hyper | ().Seq
   code   (().Seq).hyper
@@ -1771,7 +1487,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
   oracle rakupp-3.14.0 → $()
 
-- id     0201
+- id     0169
   from   inventory:Seq.^methods
   cell   indent(0) | (1..3).Seq
   code   ((1..3).Seq).indent(0)
@@ -1780,7 +1496,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0202
+- id     0170
   from   inventory:Seq.^methods
   cell   indent(1) | (1..3).Seq
   code   ((1..3).Seq).indent(1)
@@ -1789,7 +1505,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → " 1 2 3"
   oracle rakupp-3.14.0 → " 1 2 3"
 
-- id     0203
+- id     0171
   from   inventory:Seq.^methods
   cell   indent(-1) | (1..3).Seq
   code   ((1..3).Seq).indent(-1)
@@ -1798,7 +1514,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0204
+- id     0172
   from   inventory:Seq.^methods
   cell   indent("a") | (1..3).Seq
   code   ((1..3).Seq).indent("a")
@@ -1806,7 +1522,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0205
+- id     0173
   from   inventory:Seq.^methods
   cell   indent(Any) | (1..3).Seq
   code   ((1..3).Seq).indent(Any)
@@ -1815,7 +1531,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0206
+- id     0174
   from   inventory:Seq.^methods
   cell   indent(0) | ().Seq
   code   (().Seq).indent(0)
@@ -1824,7 +1540,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0207
+- id     0175
   from   inventory:Seq.^methods
   cell   indent(1) | ().Seq
   code   (().Seq).indent(1)
@@ -1833,7 +1549,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0208
+- id     0176
   from   inventory:Seq.^methods
   cell   indent(-1) | ().Seq
   code   (().Seq).indent(-1)
@@ -1842,7 +1558,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0209
+- id     0177
   from   inventory:Seq.^methods
   cell   indent("a") | ().Seq
   code   (().Seq).indent("a")
@@ -1850,7 +1566,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ""
 
-- id     0210
+- id     0178
   from   inventory:Seq.^methods
   cell   indent(Any) | ().Seq
   code   (().Seq).indent(Any)
@@ -1859,7 +1575,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0211
+- id     0179
   from   inventory:Seq.^methods
   cell   int | (1..3).Seq
   code   ((1..3).Seq).int
@@ -1868,7 +1584,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0212
+- id     0180
   from   inventory:Seq.^methods
   cell   int | ().Seq
   code   (().Seq).int
@@ -1877,7 +1593,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0213
+- id     0181
   from   inventory:Seq.^methods
   cell   int16 | (1..3).Seq
   code   ((1..3).Seq).int16
@@ -1886,7 +1602,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0214
+- id     0182
   from   inventory:Seq.^methods
   cell   int16 | ().Seq
   code   (().Seq).int16
@@ -1895,7 +1611,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0215
+- id     0183
   from   inventory:Seq.^methods
   cell   int32 | (1..3).Seq
   code   ((1..3).Seq).int32
@@ -1904,7 +1620,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0216
+- id     0184
   from   inventory:Seq.^methods
   cell   int32 | ().Seq
   code   (().Seq).int32
@@ -1913,7 +1629,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0217
+- id     0185
   from   inventory:Seq.^methods
   cell   int64 | (1..3).Seq
   code   ((1..3).Seq).int64
@@ -1922,7 +1638,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0218
+- id     0186
   from   inventory:Seq.^methods
   cell   int64 | ().Seq
   code   (().Seq).int64
@@ -1931,7 +1647,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0219
+- id     0187
   from   inventory:Seq.^methods
   cell   int8 | (1..3).Seq
   code   ((1..3).Seq).int8
@@ -1940,7 +1656,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0220
+- id     0188
   from   inventory:Seq.^methods
   cell   int8 | ().Seq
   code   (().Seq).int8
@@ -1949,7 +1665,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0221
+- id     0189
   from   inventory:Seq.^methods
   cell   is-generic | (1..3).Seq
   code   ((1..3).Seq).is-generic
@@ -1958,7 +1674,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0222
+- id     0190
   from   inventory:Seq.^methods
   cell   is-generic | ().Seq
   code   (().Seq).is-generic
@@ -1967,7 +1683,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0223
+- id     0191
   from   inventory:Seq.^methods
   cell   is-prime | (1..3).Seq
   code   ((1..3).Seq).is-prime
@@ -1976,7 +1692,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0224
+- id     0192
   from   inventory:Seq.^methods
   cell   is-prime | ().Seq
   code   (().Seq).is-prime
@@ -1985,7 +1701,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0225
+- id     0193
   from   inventory:Seq.^methods
   cell   item | (1..3).Seq
   code   ((1..3).Seq).item
@@ -1994,7 +1710,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((1, 2, 3).Seq)
   oracle rakupp-3.14.0 → $(1, 2, 3).Seq
 
-- id     0226
+- id     0194
   from   inventory:Seq.^methods
   cell   item | ().Seq
   code   (().Seq).item
@@ -2003,7 +1719,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0227
+- id     0195
   from   inventory:Seq.^methods
   cell   iterator | (1..3).Seq
   code   ((1..3).Seq).iterator
@@ -2012,7 +1728,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Rakudo::Iterator::IntRange.new
   oracle rakupp-3.14.0 → ${:items($[1, 2, 3]), :pos(0)}
 
-- id     0228
+- id     0196
   from   inventory:Seq.^methods
   cell   iterator | ().Seq
   code   (().Seq).iterator
@@ -2021,7 +1737,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Rakudo::Iterator::Empty.new
   oracle rakupp-3.14.0 → ${:items($[]), :pos(0)}
 
-- id     0229
+- id     0197
   from   inventory:Seq.^methods
   cell   join(0) | (1..3).Seq
   code   ((1..3).Seq).join(0)
@@ -2030,7 +1746,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "10203"
   oracle rakupp-3.14.0 → "10203"
 
-- id     0230
+- id     0198
   from   inventory:Seq.^methods
   cell   join(1) | (1..3).Seq
   code   ((1..3).Seq).join(1)
@@ -2039,7 +1755,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "11213"
   oracle rakupp-3.14.0 → "11213"
 
-- id     0231
+- id     0199
   from   inventory:Seq.^methods
   cell   join(-1) | (1..3).Seq
   code   ((1..3).Seq).join(-1)
@@ -2048,7 +1764,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1-12-13"
   oracle rakupp-3.14.0 → "1-12-13"
 
-- id     0232
+- id     0200
   from   inventory:Seq.^methods
   cell   join("a") | (1..3).Seq
   code   ((1..3).Seq).join("a")
@@ -2057,7 +1773,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1a2a3"
   oracle rakupp-3.14.0 → "1a2a3"
 
-- id     0233
+- id     0201
   from   inventory:Seq.^methods
   cell   join(Any) | (1..3).Seq
   code   ((1..3).Seq).join(Any)
@@ -2066,7 +1782,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "123"
   oracle rakupp-3.14.0 → "123"
 
-- id     0234
+- id     0202
   from   inventory:Seq.^methods
   cell   join(0) | ().Seq
   code   (().Seq).join(0)
@@ -2075,7 +1791,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0235
+- id     0203
   from   inventory:Seq.^methods
   cell   join(1) | ().Seq
   code   (().Seq).join(1)
@@ -2084,7 +1800,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0236
+- id     0204
   from   inventory:Seq.^methods
   cell   join(-1) | ().Seq
   code   (().Seq).join(-1)
@@ -2093,7 +1809,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0237
+- id     0205
   from   inventory:Seq.^methods
   cell   join("a") | ().Seq
   code   (().Seq).join("a")
@@ -2102,7 +1818,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0238
+- id     0206
   from   inventory:Seq.^methods
   cell   join(Any) | ().Seq
   code   (().Seq).join(Any)
@@ -2111,7 +1827,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0239
+- id     0207
   from   inventory:Seq.^methods
   cell   lazy | (1..3).Seq
   code   ((1..3).Seq).lazy
@@ -2120,7 +1836,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((1, 2, 3).lazy.Seq)
   oracle rakupp-3.14.0 → $(1, 2, 3)
 
-- id     0240
+- id     0208
   from   inventory:Seq.^methods
   cell   lazy | ().Seq
   code   (().Seq).lazy
@@ -2129,7 +1845,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().lazy.Seq)
   oracle rakupp-3.14.0 → $()
 
-- id     0241
+- id     0209
   from   inventory:Seq.^methods
   cell   lazy-if(0) | (1..3).Seq
   code   ((1..3).Seq).lazy-if(0)
@@ -2138,7 +1854,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((1, 2, 3).Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0242
+- id     0210
   from   inventory:Seq.^methods
   cell   lazy-if(1) | (1..3).Seq
   code   ((1..3).Seq).lazy-if(1)
@@ -2147,7 +1863,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((1, 2, 3).lazy.Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0243
+- id     0211
   from   inventory:Seq.^methods
   cell   lazy-if(-1) | (1..3).Seq
   code   ((1..3).Seq).lazy-if(-1)
@@ -2156,7 +1872,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((1, 2, 3).lazy.Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0244
+- id     0212
   from   inventory:Seq.^methods
   cell   lazy-if("a") | (1..3).Seq
   code   ((1..3).Seq).lazy-if("a")
@@ -2165,7 +1881,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((1, 2, 3).lazy.Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0245
+- id     0213
   from   inventory:Seq.^methods
   cell   lazy-if(Any) | (1..3).Seq
   code   ((1..3).Seq).lazy-if(Any)
@@ -2174,7 +1890,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((1, 2, 3).Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0246
+- id     0214
   from   inventory:Seq.^methods
   cell   lazy-if(0) | ().Seq
   code   (().Seq).lazy-if(0)
@@ -2183,7 +1899,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0247
+- id     0215
   from   inventory:Seq.^methods
   cell   lazy-if(1) | ().Seq
   code   (().Seq).lazy-if(1)
@@ -2192,7 +1908,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().lazy.Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0248
+- id     0216
   from   inventory:Seq.^methods
   cell   lazy-if(-1) | ().Seq
   code   (().Seq).lazy-if(-1)
@@ -2201,7 +1917,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().lazy.Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0249
+- id     0217
   from   inventory:Seq.^methods
   cell   lazy-if("a") | ().Seq
   code   (().Seq).lazy-if("a")
@@ -2210,7 +1926,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().lazy.Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0250
+- id     0218
   from   inventory:Seq.^methods
   cell   lazy-if(Any) | ().Seq
   code   (().Seq).lazy-if(Any)
@@ -2219,7 +1935,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0251
+- id     0219
   from   inventory:Seq.^methods
   cell   lc | (1..3).Seq
   code   ((1..3).Seq).lc
@@ -2228,7 +1944,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0252
+- id     0220
   from   inventory:Seq.^methods
   cell   lc | ().Seq
   code   (().Seq).lc
@@ -2237,7 +1953,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0253
+- id     0221
   from   inventory:Seq.^methods
   cell   log10 | (1..3).Seq
   code   ((1..3).Seq).log10
@@ -2246,7 +1962,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0.47712125471966244e0
   oracle rakupp-3.14.0 → 0.47712125471966244e0
 
-- id     0254
+- id     0222
   from   inventory:Seq.^methods
   cell   log10 | ().Seq
   code   (().Seq).log10
@@ -2255,7 +1971,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → -Inf
   oracle rakupp-3.14.0 → -Inf
 
-- id     0255
+- id     0223
   from   inventory:Seq.^methods
   cell   log2 | (1..3).Seq
   code   ((1..3).Seq).log2
@@ -2264,7 +1980,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1.5849625007211563e0
   oracle rakupp-3.14.0 → 1.584962500721156e0
 
-- id     0256
+- id     0224
   from   inventory:Seq.^methods
   cell   log2 | ().Seq
   code   (().Seq).log2
@@ -2273,7 +1989,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → -Inf
   oracle rakupp-3.14.0 → -Inf
 
-- id     0257
+- id     0225
   from   inventory:Seq.^methods
   cell   nl-out | (1..3).Seq
   code   ((1..3).Seq).nl-out
@@ -2282,7 +1998,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0258
+- id     0226
   from   inventory:Seq.^methods
   cell   nl-out | ().Seq
   code   (().Seq).nl-out
@@ -2291,7 +2007,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0259
+- id     0227
   from   inventory:Seq.^methods
   cell   none | (1..3).Seq
   code   ((1..3).Seq).none
@@ -2300,7 +2016,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → none(1, 2, 3)
   oracle rakupp-3.14.0 → none(1, 2, 3)
 
-- id     0260
+- id     0228
   from   inventory:Seq.^methods
   cell   none | ().Seq
   code   (().Seq).none
@@ -2309,7 +2025,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → none()
   oracle rakupp-3.14.0 → none()
 
-- id     0261
+- id     0229
   from   inventory:Seq.^methods
   cell   not | (1..3).Seq
   code   ((1..3).Seq).not
@@ -2318,7 +2034,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0262
+- id     0230
   from   inventory:Seq.^methods
   cell   not | ().Seq
   code   (().Seq).not
@@ -2327,7 +2043,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0263
+- id     0231
   from   inventory:Seq.^methods
   cell   one | (1..3).Seq
   code   ((1..3).Seq).one
@@ -2336,7 +2052,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → one(1, 2, 3)
   oracle rakupp-3.14.0 → one(1, 2, 3)
 
-- id     0264
+- id     0232
   from   inventory:Seq.^methods
   cell   one | ().Seq
   code   (().Seq).one
@@ -2345,7 +2061,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → one()
   oracle rakupp-3.14.0 → one()
 
-- id     0265
+- id     0233
   from   inventory:Seq.^methods
   cell   ord | (1..3).Seq
   code   ((1..3).Seq).ord
@@ -2354,7 +2070,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 49
   oracle rakupp-3.14.0 → 49
 
-- id     0266
+- id     0234
   from   inventory:Seq.^methods
   cell   ord | ().Seq
   code   (().Seq).ord
@@ -2363,7 +2079,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0267
+- id     0235
   from   inventory:Seq.^methods
   cell   ords | (1..3).Seq
   code   ((1..3).Seq).ords
@@ -2372,7 +2088,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((49, 32, 50, 32, 51).Seq)
   oracle rakupp-3.14.0 → $(49, 32, 50, 32, 51).Seq
 
-- id     0268
+- id     0236
   from   inventory:Seq.^methods
   cell   ords | ().Seq
   code   (().Seq).ords
@@ -2381,7 +2097,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0269
+- id     0237
   from   inventory:Seq.^methods
   cell   parse-names | (1..3).Seq
   code   ((1..3).Seq).parse-names
@@ -2389,7 +2105,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0270
+- id     0238
   from   inventory:Seq.^methods
   cell   parse-names | ().Seq
   code   (().Seq).parse-names
@@ -2398,7 +2114,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0271
+- id     0239
   from   inventory:Seq.^methods
   cell   path | (1..3).Seq
   code   ((1..3).Seq).path
@@ -2406,8 +2122,11 @@ cols     (1..3).Seq | ().Seq
   type   IO::Path
   oracle rakudo-2026.07 → IO::Path.new("1 2 3", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
   oracle rakupp-3.14.0 → "1 2 3"
+  verdict disputed
+  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
+  ruled  2026-08-16 against rakudo-2026.07
 
-- id     0272
+- id     0240
   from   inventory:Seq.^methods
   cell   path | ().Seq
   code   (().Seq).path
@@ -2415,7 +2134,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ""
 
-- id     0273
+- id     0241
   from   inventory:Seq.^methods
   cell   race | (1..3).Seq
   code   ((1..3).Seq).race
@@ -2424,7 +2143,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
   oracle rakupp-3.14.0 → $(1, 2, 3)
 
-- id     0274
+- id     0242
   from   inventory:Seq.^methods
   cell   race | ().Seq
   code   (().Seq).race
@@ -2433,19 +2152,19 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
   oracle rakupp-3.14.0 → $()
 
-- id     0275
+- id     0243
   from   inventory:Seq.^methods
   cell   rand | (1..3).Seq
   code   ((1..3).Seq).rand
-  is     1.2337798166639116e0
+  is     1.8006013772752034e0
   type   Num
-  oracle rakudo-2026.07 → 1.2337798166639116e0
-  oracle rakupp-3.14.0 → 2.4968237703669303e0
+  oracle rakudo-2026.07 → 1.8006013772752034e0
+  oracle rakupp-3.14.0 → 0.31839882515910034e0
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0276
+- id     0244
   from   inventory:Seq.^methods
   cell   rand | ().Seq
   code   (().Seq).rand
@@ -2454,7 +2173,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0277
+- id     0245
   from   inventory:Seq.^methods
   cell   reverse | (1..3).Seq
   code   ((1..3).Seq).reverse
@@ -2463,7 +2182,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((3, 2, 1).Seq)
   oracle rakupp-3.14.0 → $(3, 2, 1).Seq
 
-- id     0278
+- id     0246
   from   inventory:Seq.^methods
   cell   reverse | ().Seq
   code   (().Seq).reverse
@@ -2472,7 +2191,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0279
+- id     0247
   from   inventory:Seq.^methods
   cell   roots(0) | (1..3).Seq
   code   ((1..3).Seq).roots(0)
@@ -2481,7 +2200,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0280
+- id     0248
   from   inventory:Seq.^methods
   cell   roots(1) | (1..3).Seq
   code   ((1..3).Seq).roots(1)
@@ -2490,7 +2209,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → <3+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0281
+- id     0249
   from   inventory:Seq.^methods
   cell   roots(-1) | (1..3).Seq
   code   ((1..3).Seq).roots(-1)
@@ -2499,7 +2218,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0282
+- id     0250
   from   inventory:Seq.^methods
   cell   roots("a") | (1..3).Seq
   code   ((1..3).Seq).roots("a")
@@ -2507,7 +2226,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0283
+- id     0251
   from   inventory:Seq.^methods
   cell   roots(Any) | (1..3).Seq
   code   ((1..3).Seq).roots(Any)
@@ -2515,7 +2234,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0284
+- id     0252
   from   inventory:Seq.^methods
   cell   roots(0) | ().Seq
   code   (().Seq).roots(0)
@@ -2524,7 +2243,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0285
+- id     0253
   from   inventory:Seq.^methods
   cell   roots(1) | ().Seq
   code   (().Seq).roots(1)
@@ -2533,7 +2252,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → <0+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0286
+- id     0254
   from   inventory:Seq.^methods
   cell   roots(-1) | ().Seq
   code   (().Seq).roots(-1)
@@ -2542,7 +2261,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0287
+- id     0255
   from   inventory:Seq.^methods
   cell   roots("a") | ().Seq
   code   (().Seq).roots("a")
@@ -2550,7 +2269,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0288
+- id     0256
   from   inventory:Seq.^methods
   cell   roots(Any) | ().Seq
   code   (().Seq).roots(Any)
@@ -2558,7 +2277,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0289
+- id     0257
   from   inventory:Seq.^methods
   cell   rotate(0) | (1..3).Seq
   code   ((1..3).Seq).rotate(0)
@@ -2567,7 +2286,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(Seq.new())
   oracle rakupp-3.14.0 → $(1, 2, 3)
 
-- id     0290
+- id     0258
   from   inventory:Seq.^methods
   cell   rotate(1) | (1..3).Seq
   code   ((1..3).Seq).rotate(1)
@@ -2576,7 +2295,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((2, 3, 1).Seq)
   oracle rakupp-3.14.0 → $(2, 3, 1)
 
-- id     0291
+- id     0259
   from   inventory:Seq.^methods
   cell   rotate(-1) | (1..3).Seq
   code   ((1..3).Seq).rotate(-1)
@@ -2585,7 +2304,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((3, 1, 2).Seq)
   oracle rakupp-3.14.0 → $(3, 1, 2)
 
-- id     0292
+- id     0260
   from   inventory:Seq.^methods
   cell   rotate("a") | (1..3).Seq
   code   ((1..3).Seq).rotate("a")
@@ -2594,7 +2313,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(Seq.new())
   oracle rakupp-3.14.0 → $(1, 2, 3)
 
-- id     0293
+- id     0261
   from   inventory:Seq.^methods
   cell   rotate(Any) | (1..3).Seq
   code   ((1..3).Seq).rotate(Any)
@@ -2602,7 +2321,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $(1, 2, 3)
 
-- id     0294
+- id     0262
   from   inventory:Seq.^methods
   cell   rotate(0) | ().Seq
   code   (().Seq).rotate(0)
@@ -2611,7 +2330,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(Seq.new())
   oracle rakupp-3.14.0 → $()
 
-- id     0295
+- id     0263
   from   inventory:Seq.^methods
   cell   rotate(1) | ().Seq
   code   (().Seq).rotate(1)
@@ -2620,7 +2339,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $()
 
-- id     0296
+- id     0264
   from   inventory:Seq.^methods
   cell   rotate(-1) | ().Seq
   code   (().Seq).rotate(-1)
@@ -2629,7 +2348,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $()
 
-- id     0297
+- id     0265
   from   inventory:Seq.^methods
   cell   rotate("a") | ().Seq
   code   (().Seq).rotate("a")
@@ -2638,7 +2357,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(Seq.new())
   oracle rakupp-3.14.0 → $()
 
-- id     0298
+- id     0266
   from   inventory:Seq.^methods
   cell   rotate(Any) | ().Seq
   code   (().Seq).rotate(Any)
@@ -2646,7 +2365,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $()
 
-- id     0299
+- id     0267
   from   inventory:Seq.^methods
   cell   samecase(0) | (1..3).Seq
   code   ((1..3).Seq).samecase(0)
@@ -2655,7 +2374,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0300
+- id     0268
   from   inventory:Seq.^methods
   cell   samecase(1) | (1..3).Seq
   code   ((1..3).Seq).samecase(1)
@@ -2664,7 +2383,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0301
+- id     0269
   from   inventory:Seq.^methods
   cell   samecase(-1) | (1..3).Seq
   code   ((1..3).Seq).samecase(-1)
@@ -2673,7 +2392,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0302
+- id     0270
   from   inventory:Seq.^methods
   cell   samecase("a") | (1..3).Seq
   code   ((1..3).Seq).samecase("a")
@@ -2682,7 +2401,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0303
+- id     0271
   from   inventory:Seq.^methods
   cell   samecase(Any) | (1..3).Seq
   code   ((1..3).Seq).samecase(Any)
@@ -2690,7 +2409,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0304
+- id     0272
   from   inventory:Seq.^methods
   cell   samecase(0) | ().Seq
   code   (().Seq).samecase(0)
@@ -2699,7 +2418,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0305
+- id     0273
   from   inventory:Seq.^methods
   cell   samecase(1) | ().Seq
   code   (().Seq).samecase(1)
@@ -2708,7 +2427,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0306
+- id     0274
   from   inventory:Seq.^methods
   cell   samecase(-1) | ().Seq
   code   (().Seq).samecase(-1)
@@ -2717,7 +2436,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0307
+- id     0275
   from   inventory:Seq.^methods
   cell   samecase("a") | ().Seq
   code   (().Seq).samecase("a")
@@ -2726,7 +2445,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0308
+- id     0276
   from   inventory:Seq.^methods
   cell   samecase(Any) | ().Seq
   code   (().Seq).samecase(Any)
@@ -2734,7 +2453,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0309
+- id     0277
   from   inventory:Seq.^methods
   cell   samemark(0) | (1..3).Seq
   code   ((1..3).Seq).samemark(0)
@@ -2743,7 +2462,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0310
+- id     0278
   from   inventory:Seq.^methods
   cell   samemark(1) | (1..3).Seq
   code   ((1..3).Seq).samemark(1)
@@ -2752,7 +2471,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0311
+- id     0279
   from   inventory:Seq.^methods
   cell   samemark(-1) | (1..3).Seq
   code   ((1..3).Seq).samemark(-1)
@@ -2761,7 +2480,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0312
+- id     0280
   from   inventory:Seq.^methods
   cell   samemark("a") | (1..3).Seq
   code   ((1..3).Seq).samemark("a")
@@ -2770,7 +2489,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0313
+- id     0281
   from   inventory:Seq.^methods
   cell   samemark(Any) | (1..3).Seq
   code   ((1..3).Seq).samemark(Any)
@@ -2778,7 +2497,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0314
+- id     0282
   from   inventory:Seq.^methods
   cell   samemark(0) | ().Seq
   code   (().Seq).samemark(0)
@@ -2787,7 +2506,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0315
+- id     0283
   from   inventory:Seq.^methods
   cell   samemark(1) | ().Seq
   code   (().Seq).samemark(1)
@@ -2796,7 +2515,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0316
+- id     0284
   from   inventory:Seq.^methods
   cell   samemark(-1) | ().Seq
   code   (().Seq).samemark(-1)
@@ -2805,7 +2524,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0317
+- id     0285
   from   inventory:Seq.^methods
   cell   samemark("a") | ().Seq
   code   (().Seq).samemark("a")
@@ -2814,7 +2533,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0318
+- id     0286
   from   inventory:Seq.^methods
   cell   samemark(Any) | ().Seq
   code   (().Seq).samemark(Any)
@@ -2822,7 +2541,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0319
+- id     0287
   from   inventory:Seq.^methods
   cell   samespace(0) | (1..3).Seq
   code   ((1..3).Seq).samespace(0)
@@ -2831,7 +2550,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0320
+- id     0288
   from   inventory:Seq.^methods
   cell   samespace(1) | (1..3).Seq
   code   ((1..3).Seq).samespace(1)
@@ -2840,7 +2559,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0321
+- id     0289
   from   inventory:Seq.^methods
   cell   samespace(-1) | (1..3).Seq
   code   ((1..3).Seq).samespace(-1)
@@ -2849,7 +2568,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0322
+- id     0290
   from   inventory:Seq.^methods
   cell   samespace("a") | (1..3).Seq
   code   ((1..3).Seq).samespace("a")
@@ -2858,7 +2577,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0323
+- id     0291
   from   inventory:Seq.^methods
   cell   samespace(Any) | (1..3).Seq
   code   ((1..3).Seq).samespace(Any)
@@ -2866,7 +2585,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0324
+- id     0292
   from   inventory:Seq.^methods
   cell   samespace(0) | ().Seq
   code   (().Seq).samespace(0)
@@ -2875,7 +2594,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0325
+- id     0293
   from   inventory:Seq.^methods
   cell   samespace(1) | ().Seq
   code   (().Seq).samespace(1)
@@ -2884,7 +2603,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0326
+- id     0294
   from   inventory:Seq.^methods
   cell   samespace(-1) | ().Seq
   code   (().Seq).samespace(-1)
@@ -2893,7 +2612,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0327
+- id     0295
   from   inventory:Seq.^methods
   cell   samespace("a") | ().Seq
   code   (().Seq).samespace("a")
@@ -2902,7 +2621,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0328
+- id     0296
   from   inventory:Seq.^methods
   cell   samespace(Any) | ().Seq
   code   (().Seq).samespace(Any)
@@ -2910,7 +2629,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0329
+- id     0297
   from   inventory:Seq.^methods
   cell   sec | (1..3).Seq
   code   ((1..3).Seq).sec
@@ -2919,7 +2638,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → -1.0101086659079939e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0330
+- id     0298
   from   inventory:Seq.^methods
   cell   sec | ().Seq
   code   (().Seq).sec
@@ -2928,7 +2647,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0331
+- id     0299
   from   inventory:Seq.^methods
   cell   sech | (1..3).Seq
   code   ((1..3).Seq).sech
@@ -2937,7 +2656,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0.0993279274194332e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0332
+- id     0300
   from   inventory:Seq.^methods
   cell   sech | ().Seq
   code   (().Seq).sech
@@ -2946,7 +2665,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0333
+- id     0301
   from   inventory:Seq.^methods
   cell   self | (1..3).Seq
   code   ((1..3).Seq).self
@@ -2955,7 +2674,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((1, 2, 3).Seq)
   oracle rakupp-3.14.0 → $(1, 2, 3).Seq
 
-- id     0334
+- id     0302
   from   inventory:Seq.^methods
   cell   self | ().Seq
   code   (().Seq).self
@@ -2964,7 +2683,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0335
+- id     0303
   from   inventory:Seq.^methods
   cell   sign | (1..3).Seq
   code   ((1..3).Seq).sign
@@ -2973,7 +2692,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0336
+- id     0304
   from   inventory:Seq.^methods
   cell   sign | ().Seq
   code   (().Seq).sign
@@ -2982,7 +2701,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0337
+- id     0305
   from   inventory:Seq.^methods
   cell   sin | (1..3).Seq
   code   ((1..3).Seq).sin
@@ -2991,7 +2710,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0.1411200080598672e0
   oracle rakupp-3.14.0 → 0.1411200080598672e0
 
-- id     0338
+- id     0306
   from   inventory:Seq.^methods
   cell   sin | ().Seq
   code   (().Seq).sin
@@ -3000,7 +2719,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0339
+- id     0307
   from   inventory:Seq.^methods
   cell   sinh | (1..3).Seq
   code   ((1..3).Seq).sinh
@@ -3009,7 +2728,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 10.017874927409903e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0340
+- id     0308
   from   inventory:Seq.^methods
   cell   sinh | ().Seq
   code   (().Seq).sinh
@@ -3018,7 +2737,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0341
+- id     0309
   from   inventory:Seq.^methods
   cell   so | (1..3).Seq
   code   ((1..3).Seq).so
@@ -3027,7 +2746,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0342
+- id     0310
   from   inventory:Seq.^methods
   cell   so | ().Seq
   code   (().Seq).so
@@ -3036,7 +2755,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0343
+- id     0311
   from   inventory:Seq.^methods
   cell   sqrt | (1..3).Seq
   code   ((1..3).Seq).sqrt
@@ -3045,7 +2764,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 1.7320508075688772e0
   oracle rakupp-3.14.0 → 1.7320508075688772e0
 
-- id     0344
+- id     0312
   from   inventory:Seq.^methods
   cell   sqrt | ().Seq
   code   (().Seq).sqrt
@@ -3054,7 +2773,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0345
+- id     0313
   from   inventory:Seq.^methods
   cell   sum | (1..3).Seq
   code   ((1..3).Seq).sum
@@ -3063,7 +2782,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 6
   oracle rakupp-3.14.0 → 6
 
-- id     0346
+- id     0314
   from   inventory:Seq.^methods
   cell   sum | ().Seq
   code   (().Seq).sum
@@ -3072,7 +2791,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0347
+- id     0315
   from   inventory:Seq.^methods
   cell   take | (1..3).Seq
   code   ((1..3).Seq).take
@@ -3080,7 +2799,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → $(1, 2, 3).Seq
 
-- id     0348
+- id     0316
   from   inventory:Seq.^methods
   cell   take | ().Seq
   code   (().Seq).take
@@ -3088,7 +2807,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0349
+- id     0317
   from   inventory:Seq.^methods
   cell   tan | (1..3).Seq
   code   ((1..3).Seq).tan
@@ -3097,7 +2816,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → -0.1425465430742778e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0350
+- id     0318
   from   inventory:Seq.^methods
   cell   tan | ().Seq
   code   (().Seq).tan
@@ -3106,7 +2825,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0351
+- id     0319
   from   inventory:Seq.^methods
   cell   tanh | (1..3).Seq
   code   ((1..3).Seq).tanh
@@ -3115,7 +2834,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0.9950547536867305e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0352
+- id     0320
   from   inventory:Seq.^methods
   cell   tanh | ().Seq
   code   (().Seq).tanh
@@ -3124,7 +2843,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0353
+- id     0321
   from   inventory:Seq.^methods
   cell   tc | (1..3).Seq
   code   ((1..3).Seq).tc
@@ -3133,7 +2852,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0354
+- id     0322
   from   inventory:Seq.^methods
   cell   tc | ().Seq
   code   (().Seq).tc
@@ -3142,7 +2861,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0355
+- id     0323
   from   inventory:Seq.^methods
   cell   tclc | (1..3).Seq
   code   ((1..3).Seq).tclc
@@ -3151,7 +2870,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0356
+- id     0324
   from   inventory:Seq.^methods
   cell   tclc | ().Seq
   code   (().Seq).tclc
@@ -3160,7 +2879,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0357
+- id     0325
   from   inventory:Seq.^methods
   cell   trim | (1..3).Seq
   code   ((1..3).Seq).trim
@@ -3169,7 +2888,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0358
+- id     0326
   from   inventory:Seq.^methods
   cell   trim | ().Seq
   code   (().Seq).trim
@@ -3178,7 +2897,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0359
+- id     0327
   from   inventory:Seq.^methods
   cell   trim-leading | (1..3).Seq
   code   ((1..3).Seq).trim-leading
@@ -3187,7 +2906,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0360
+- id     0328
   from   inventory:Seq.^methods
   cell   trim-leading | ().Seq
   code   (().Seq).trim-leading
@@ -3196,7 +2915,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0361
+- id     0329
   from   inventory:Seq.^methods
   cell   trim-trailing | (1..3).Seq
   code   ((1..3).Seq).trim-trailing
@@ -3205,7 +2924,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0362
+- id     0330
   from   inventory:Seq.^methods
   cell   trim-trailing | ().Seq
   code   (().Seq).trim-trailing
@@ -3214,7 +2933,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0363
+- id     0331
   from   inventory:Seq.^methods
   cell   truncate | (1..3).Seq
   code   ((1..3).Seq).truncate
@@ -3223,7 +2942,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → 3
 
-- id     0364
+- id     0332
   from   inventory:Seq.^methods
   cell   truncate | ().Seq
   code   (().Seq).truncate
@@ -3232,7 +2951,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0365
+- id     0333
   from   inventory:Seq.^methods
   cell   uc | (1..3).Seq
   code   ((1..3).Seq).uc
@@ -3241,7 +2960,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0366
+- id     0334
   from   inventory:Seq.^methods
   cell   uc | ().Seq
   code   (().Seq).uc
@@ -3250,7 +2969,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0367
+- id     0335
   from   inventory:Seq.^methods
   cell   uint | (1..3).Seq
   code   ((1..3).Seq).uint
@@ -3259,7 +2978,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0368
+- id     0336
   from   inventory:Seq.^methods
   cell   uint | ().Seq
   code   (().Seq).uint
@@ -3268,7 +2987,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0369
+- id     0337
   from   inventory:Seq.^methods
   cell   uint16 | (1..3).Seq
   code   ((1..3).Seq).uint16
@@ -3277,7 +2996,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0370
+- id     0338
   from   inventory:Seq.^methods
   cell   uint16 | ().Seq
   code   (().Seq).uint16
@@ -3286,7 +3005,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0371
+- id     0339
   from   inventory:Seq.^methods
   cell   uint32 | (1..3).Seq
   code   ((1..3).Seq).uint32
@@ -3295,7 +3014,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0372
+- id     0340
   from   inventory:Seq.^methods
   cell   uint32 | ().Seq
   code   (().Seq).uint32
@@ -3304,7 +3023,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0373
+- id     0341
   from   inventory:Seq.^methods
   cell   uint64 | (1..3).Seq
   code   ((1..3).Seq).uint64
@@ -3313,7 +3032,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0374
+- id     0342
   from   inventory:Seq.^methods
   cell   uint64 | ().Seq
   code   (().Seq).uint64
@@ -3322,7 +3041,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0375
+- id     0343
   from   inventory:Seq.^methods
   cell   uint8 | (1..3).Seq
   code   ((1..3).Seq).uint8
@@ -3331,7 +3050,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0376
+- id     0344
   from   inventory:Seq.^methods
   cell   uint8 | ().Seq
   code   (().Seq).uint8
@@ -3340,7 +3059,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0377
+- id     0345
   from   inventory:Seq.^methods
   cell   uniname | (1..3).Seq
   code   ((1..3).Seq).uniname
@@ -3349,7 +3068,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "DIGIT ONE"
   oracle rakupp-3.14.0 → "DIGIT ONE"
 
-- id     0378
+- id     0346
   from   inventory:Seq.^methods
   cell   uniname | ().Seq
   code   (().Seq).uniname
@@ -3358,7 +3077,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → "<unassigned>"
 
-- id     0379
+- id     0347
   from   inventory:Seq.^methods
   cell   uninames | (1..3).Seq
   code   ((1..3).Seq).uninames
@@ -3367,7 +3086,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(("DIGIT ONE", "SPACE", "DIGIT TWO", "SPACE", "DIGIT THREE").Seq)
   oracle rakupp-3.14.0 → $("DIGIT ONE", "SPACE", "DIGIT TWO", "SPACE", "DIGIT THREE").Seq
 
-- id     0380
+- id     0348
   from   inventory:Seq.^methods
   cell   uninames | ().Seq
   code   (().Seq).uninames
@@ -3376,7 +3095,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0381
+- id     0349
   from   inventory:Seq.^methods
   cell   uniparse | (1..3).Seq
   code   ((1..3).Seq).uniparse
@@ -3384,7 +3103,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0382
+- id     0350
   from   inventory:Seq.^methods
   cell   uniparse | ().Seq
   code   (().Seq).uniparse
@@ -3393,7 +3112,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0383
+- id     0351
   from   inventory:Seq.^methods
   cell   uniprop(0) | (1..3).Seq
   code   ((1..3).Seq).uniprop(0)
@@ -3401,7 +3120,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0384
+- id     0352
   from   inventory:Seq.^methods
   cell   uniprop(1) | (1..3).Seq
   code   ((1..3).Seq).uniprop(1)
@@ -3409,7 +3128,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0385
+- id     0353
   from   inventory:Seq.^methods
   cell   uniprop(-1) | (1..3).Seq
   code   ((1..3).Seq).uniprop(-1)
@@ -3417,7 +3136,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0386
+- id     0354
   from   inventory:Seq.^methods
   cell   uniprop("a") | (1..3).Seq
   code   ((1..3).Seq).uniprop("a")
@@ -3426,7 +3145,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0387
+- id     0355
   from   inventory:Seq.^methods
   cell   uniprop(Any) | (1..3).Seq
   code   ((1..3).Seq).uniprop(Any)
@@ -3434,7 +3153,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0388
+- id     0356
   from   inventory:Seq.^methods
   cell   uniprop(0) | ().Seq
   code   (().Seq).uniprop(0)
@@ -3442,7 +3161,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0389
+- id     0357
   from   inventory:Seq.^methods
   cell   uniprop(1) | ().Seq
   code   (().Seq).uniprop(1)
@@ -3450,7 +3169,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0390
+- id     0358
   from   inventory:Seq.^methods
   cell   uniprop(-1) | ().Seq
   code   (().Seq).uniprop(-1)
@@ -3458,7 +3177,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0391
+- id     0359
   from   inventory:Seq.^methods
   cell   uniprop("a") | ().Seq
   code   (().Seq).uniprop("a")
@@ -3467,7 +3186,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ""
 
-- id     0392
+- id     0360
   from   inventory:Seq.^methods
   cell   uniprop(Any) | ().Seq
   code   (().Seq).uniprop(Any)
@@ -3475,7 +3194,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0393
+- id     0361
   from   inventory:Seq.^methods
   cell   uniprops(0) | (1..3).Seq
   code   ((1..3).Seq).uniprops(0)
@@ -3483,7 +3202,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False, Bool::False, Bool::False, Bool::False, Bool::False).Seq
 
-- id     0394
+- id     0362
   from   inventory:Seq.^methods
   cell   uniprops(1) | (1..3).Seq
   code   ((1..3).Seq).uniprops(1)
@@ -3491,7 +3210,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False, Bool::False, Bool::False, Bool::False, Bool::False).Seq
 
-- id     0395
+- id     0363
   from   inventory:Seq.^methods
   cell   uniprops(-1) | (1..3).Seq
   code   ((1..3).Seq).uniprops(-1)
@@ -3499,7 +3218,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False, Bool::False, Bool::False, Bool::False, Bool::False).Seq
 
-- id     0396
+- id     0364
   from   inventory:Seq.^methods
   cell   uniprops("a") | (1..3).Seq
   code   ((1..3).Seq).uniprops("a")
@@ -3508,7 +3227,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(("0", "0", "0", "0", "0").Seq)
   oracle rakupp-3.14.0 → $(Bool::False, Bool::False, Bool::False, Bool::False, Bool::False).Seq
 
-- id     0397
+- id     0365
   from   inventory:Seq.^methods
   cell   uniprops(Any) | (1..3).Seq
   code   ((1..3).Seq).uniprops(Any)
@@ -3516,7 +3235,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False, Bool::False, Bool::False, Bool::False, Bool::False).Seq
 
-- id     0398
+- id     0366
   from   inventory:Seq.^methods
   cell   uniprops(0) | ().Seq
   code   (().Seq).uniprops(0)
@@ -3524,7 +3243,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0399
+- id     0367
   from   inventory:Seq.^methods
   cell   uniprops(1) | ().Seq
   code   (().Seq).uniprops(1)
@@ -3532,7 +3251,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0400
+- id     0368
   from   inventory:Seq.^methods
   cell   uniprops(-1) | ().Seq
   code   (().Seq).uniprops(-1)
@@ -3540,7 +3259,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0401
+- id     0369
   from   inventory:Seq.^methods
   cell   uniprops("a") | ().Seq
   code   (().Seq).uniprops("a")
@@ -3549,7 +3268,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0402
+- id     0370
   from   inventory:Seq.^methods
   cell   uniprops(Any) | ().Seq
   code   (().Seq).uniprops(Any)
@@ -3557,7 +3276,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0403
+- id     0371
   from   inventory:Seq.^methods
   cell   unival | (1..3).Seq
   code   ((1..3).Seq).unival
@@ -3566,7 +3285,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → 1
 
-- id     0404
+- id     0372
   from   inventory:Seq.^methods
   cell   unival | ().Seq
   code   (().Seq).unival
@@ -3575,7 +3294,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → Any
 
-- id     0405
+- id     0373
   from   inventory:Seq.^methods
   cell   univals | (1..3).Seq
   code   ((1..3).Seq).univals
@@ -3584,7 +3303,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $((1, NaN, 2, NaN, 3).Seq)
   oracle rakupp-3.14.0 → $(1, NaN, 2, NaN, 3)
 
-- id     0406
+- id     0374
   from   inventory:Seq.^methods
   cell   univals | ().Seq
   code   (().Seq).univals
@@ -3593,7 +3312,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $()
 
-- id     0407
+- id     0375
   from   inventory:Seq.^methods
   cell   unpolar(0) | (1..3).Seq
   code   ((1..3).Seq).unpolar(0)
@@ -3602,7 +3321,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → <3+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0408
+- id     0376
   from   inventory:Seq.^methods
   cell   unpolar(1) | (1..3).Seq
   code   ((1..3).Seq).unpolar(1)
@@ -3611,7 +3330,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → <1.6209069176044193+2.5244129544236893i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0409
+- id     0377
   from   inventory:Seq.^methods
   cell   unpolar(-1) | (1..3).Seq
   code   ((1..3).Seq).unpolar(-1)
@@ -3620,7 +3339,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → <1.6209069176044193-2.5244129544236893i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0410
+- id     0378
   from   inventory:Seq.^methods
   cell   unpolar("a") | (1..3).Seq
   code   ((1..3).Seq).unpolar("a")
@@ -3628,7 +3347,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0411
+- id     0379
   from   inventory:Seq.^methods
   cell   unpolar(Any) | (1..3).Seq
   code   ((1..3).Seq).unpolar(Any)
@@ -3637,7 +3356,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → <3+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0412
+- id     0380
   from   inventory:Seq.^methods
   cell   unpolar(0) | ().Seq
   code   (().Seq).unpolar(0)
@@ -3646,7 +3365,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → <0+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0413
+- id     0381
   from   inventory:Seq.^methods
   cell   unpolar(1) | ().Seq
   code   (().Seq).unpolar(1)
@@ -3655,7 +3374,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → <0+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0414
+- id     0382
   from   inventory:Seq.^methods
   cell   unpolar(-1) | ().Seq
   code   (().Seq).unpolar(-1)
@@ -3664,7 +3383,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → <0-0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0415
+- id     0383
   from   inventory:Seq.^methods
   cell   unpolar("a") | ().Seq
   code   (().Seq).unpolar("a")
@@ -3672,7 +3391,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0416
+- id     0384
   from   inventory:Seq.^methods
   cell   unpolar(Any) | ().Seq
   code   (().Seq).unpolar(Any)
@@ -3681,7 +3400,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → <0+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0417
+- id     0385
   from   inventory:Seq.^methods
   cell   wordcase | (1..3).Seq
   code   ((1..3).Seq).wordcase
@@ -3690,7 +3409,7 @@ cols     (1..3).Seq | ().Seq
   oracle rakudo-2026.07 → "1 2 3"
   oracle rakupp-3.14.0 → "1 2 3"
 
-- id     0418
+- id     0386
   from   inventory:Seq.^methods
   cell   wordcase | ().Seq
   code   (().Seq).wordcase

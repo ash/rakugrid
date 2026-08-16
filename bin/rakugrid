@@ -23,6 +23,7 @@ my $ENGINE = %*ENV<RAKUGRID_ENGINE> // $*EXECUTABLE.Str;
 my $KEEP   = False;
 my $GUARD  = 0;
 my $VERB   = False;
+my $CLASSIFY = False;
 
 # ---------------------------------------------------------------- the format
 
@@ -289,11 +290,16 @@ sub emit-record(%parsed, %r, $kind) {
     if $kind eq 'is' {
         my $exp   = %r<is>;
         my $wtype = %r<type> // '';
+        # The type name goes in through raku-literal, never raw. A mixin renders
+        # as `Nil+{Mu::Suggestion[Block]}`, and interpolating that into a
+        # double-quoted diagnostic makes the generated program evaluate
+        # `{Mu::Suggestion[Block]}` as a block — which does not compile, so the
+        # test could never run at all.
         my $tcheck = $wtype
-            ?? " && \$got.WHAT.^name eq '$wtype'"
+            ?? " && \$got.WHAT.^name eq { raku-literal($wtype) }"
             !! '';
         my $tdiag = $wtype
-            ?? " ~ \" (type \" ~ \$got.WHAT.^name ~ \", expected $wtype)\""
+            ?? " ~ ' (type ' ~ \$got.WHAT.^name ~ ', expected ' ~ { raku-literal($wtype) } ~ ')'"
             !! '';
         return qq:to/END/;
         \{
@@ -780,6 +786,59 @@ sub engine-of($line) {
     return '';
 }
 
+
+# `.raku` output is not fully specified, so two engines can render the same
+# value differently and both be right. A third of the recorded divergences turn
+# out to be exactly that. `--classify` asks the reference whether the two
+# renderings DENOTE the same value — it evaluates both and compares with `eqv` —
+# so a semantic difference can be told from a spelling one.
+constant $EQV-PROBE = q:to/END/;
+    use MONKEY-SEE-NO-EVAL;
+    for @*ARGS[0].IO.lines -> $line {
+        my ($a, $b) = $line.split("\x[1F]");
+        my $x = try EVAL $a;
+        my $ea = $! ?? 1 !! 0;
+        my $y = try EVAL $b;
+        my $eb = $! ?? 1 !! 0;
+        say $ea ?? 'unparseable-reference'
+                !! $eb ?? 'unparseable-other'
+                !! ((try { $x eqv $y }) ?? 'rendering' !! 'value');
+        $*OUT.flush;
+    }
+    END
+
+sub classify-pairs(@pairs) {
+    return {} unless @pairs;
+    my $tmp   = tmpdir();
+    my $probe = $tmp.add('eqv-probe.raku');
+    $probe.spurt($EQV-PROBE);
+
+    # Evaluating arbitrary `.raku` text can kill the process, so this resumes
+    # past whatever died instead of losing every pair after it — the same
+    # discipline the generators need, for the same reason.
+    my %by;
+    my @todo = @pairs;
+    while @todo {
+        my $list = $tmp.add('eqv-pairs.txt');
+        $list.spurt(@todo.map({ $_[0] ~ "\x[1F]" ~ $_[1] }).join("\n") ~ "\n");
+
+        my %g = run-guarded($ENGINE, [$probe.absolute, $list.absolute], 120);
+        my @v = %g<out>.lines;
+
+        for ^@v -> $i {
+            last if $i >= @todo.elems;
+            %by{@todo[$i][0] ~ "\x[1F]" ~ @todo[$i][1]} = @v[$i];
+        }
+        last if @v.elems >= @todo.elems;
+
+        # the pair right after the last verdict is the one that killed the run
+        my $bad = @todo[@v.elems];
+        %by{$bad[0] ~ "\x[1F]" ~ $bad[1]} = 'fatal-to-evaluate';
+        @todo = @todo[(@v.elems + 1) .. *].list;
+    }
+    return %by;
+}
+
 # Every record where the engines on record disagree, clustered by the shape of
 # the disagreement so a cluster of 28 identical ones reads as one line.
 sub cmd-diverge(@selector) {
@@ -805,7 +864,8 @@ sub cmd-diverge(@selector) {
                 $records++;
                 my $key = "$eng\t{ short-obs($ref-obs) }\t{ short-obs($obs) }";
                 %clusters{$key} = [] unless %clusters{$key}:exists;
-                %clusters{$key}.push: { id => id-of(%parsed, %r), code => (%r<code> // '').lines.join(' ') };
+                %clusters{$key}.push: { id => id-of(%parsed, %r), code => (%r<code> // '').lines.join(' '),
+                                        ref => $ref-obs, other => $obs };
             }
         }
     }
@@ -815,11 +875,34 @@ sub cmd-diverge(@selector) {
         return;
     }
 
+    my %class;
+    if $CLASSIFY {
+        my %uniq;
+        for %clusters.values -> $cases {
+            for $cases.list -> %c {
+                next if %c<ref>.starts-with('ERR') || %c<other>.starts-with('ERR');
+                next if %c<other>.contains('CRASH') || %c<other>.contains('HANG');
+                next if %c<ref>.contains('NOCOMPILE') || %c<other>.contains('NOCOMPILE');
+                %uniq{%c<ref> ~ "\x[1F]" ~ %c<other>} = [%c<ref>, %c<other>];
+            }
+        }
+        say "# classifying { %uniq.elems } distinct renderings …";
+        %class = classify-pairs(%uniq.values.list);
+    }
+
+    my %tally;
     for %clusters.keys.sort({ -%clusters{$_}.elems }) -> $key {
         my ($eng, $ref-obs, $obs) = $key.split("\t");
         my @cases = %clusters{$key}.list;
+        my $tag = '';
+        if $CLASSIFY {
+            my $k = @cases[0]<ref> ~ "\x[1F]" ~ @cases[0]<other>;
+            my $c = %class{$k} // 'not-a-value';
+            %tally{$c} += @cases.elems;
+            $tag = "  [$c]";
+        }
         say "";
-        say "{ @cases.elems } × $eng    reference: $ref-obs    got: $obs";
+        say "{ @cases.elems } × $eng    reference: $ref-obs    got: $obs$tag";
         for @cases.head($VERB ?? @cases.elems !! 4) -> %c {
             say sprintf("    %-34s %s", %c<code>, %c<id>);
         }
@@ -827,6 +910,11 @@ sub cmd-diverge(@selector) {
     }
     say "";
     say "# $records divergent observation{ $records == 1 ?? '' !! 's' } in { %clusters.elems } cluster{ %clusters.elems == 1 ?? '' !! 's' }";
+    if $CLASSIFY {
+        for %tally.keys.sort({ -%tally{$_} }) -> $c {
+            say "#   { sprintf('%-22s', $c) } { %tally{$c} }";
+        }
+    }
 }
 
 # A ladder cross is a matrix. Render it as one — far faster to scan than a list.
@@ -939,6 +1027,9 @@ for @*ARGS -> $a {
     }
     elsif $a eq '--verbose' {
         $VERB = True;
+    }
+    elsif $a eq '--classify' {
+        $CLASSIFY = True;
     }
     else {
         @args.push: $a;

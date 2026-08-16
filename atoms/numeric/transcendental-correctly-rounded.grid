@@ -1,0 +1,52 @@
+atom     numeric/transcendental-correctly-rounded
+source   curated
+kind     accuracy — where the reference is measurably the less correct engine
+
+# The generated method matrix records 49 cells where the two engines return
+# doubles differing in the last place. They are not a rendering difference: the
+# doubles differ. Checked against the correctly-rounded IEEE-754 result, rakupp
+# is exact in every one and the reference is 1-3 ULP out.
+#
+# This is the case the oracle-is-not-the-arbiter rule exists for. Mathematics
+# decides a correctly-rounded result, not an implementation, so the assertion is
+# the exact value and the ruling is recorded against the reference.
+
+- id     0001
+  from   review:2026-08-16 · generated/types/methods-Int.grid
+  code   (1).asinh
+  is     0.881373587019543e0
+  oracle rakudo-2026.07 → 0.8813735870195429e0
+  oracle rakupp-3.14.0 → 0.881373587019543e0
+  verdict impl-bug
+  why    asinh(1) = ln(1+sqrt 2); the correctly-rounded double is 0.881373587019543, and the reference is one ULP below it
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0002
+  from   review:2026-08-16
+  code   (1/2).log10
+  is     -0.3010299956639812e0
+  oracle rakudo-2026.07 → -0.30102999566398114e0
+  oracle rakupp-3.14.0 → -0.3010299956639812e0
+  verdict impl-bug
+  why    the correctly-rounded double for log10(0.5) is -0.3010299956639812; the reference is one ULP out
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0003
+  from   review:2026-08-16
+  code   (1/3).atanh
+  is     0.34657359027997264e0
+  oracle rakudo-2026.07 → 0.3465735902799726e0
+  oracle rakupp-3.14.0 → 0.34657359027997264e0
+  verdict impl-bug
+  why    the correctly-rounded double for atanh(1/3) is 0.34657359027997264; the reference is one ULP out
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0004
+  from   review:2026-08-16
+  code   (10).acotanh
+  is     0.10033534773107558e0
+  oracle rakudo-2026.07 → 0.10033534773107562e0
+  oracle rakupp-3.14.0 → 0.10033534773107558e0
+  verdict impl-bug
+  why    the correctly-rounded double for atanh(1/10) is 0.10033534773107558; the reference is three ULP out, the largest gap seen
+  ruled  2026-08-16 against rakudo-2026.07

@@ -100,11 +100,67 @@ re-run alone, so a fault costs one result rather than a whole file.
 `same-as` is the oracle-free lane and carries much of the molecule layer:
 internal consistency is checkable without deciding who is right.
 
-`is` is compared as **text**, never by re-compiling the expected value. Two
-reasons, both learned the hard way: a value's own `.raku` is not always
-re-parseable — `(2**64 / 1).raku` gives `18446744073709551616.0`, which Rakudo
-then refuses to compile — and text comparison makes `NaN` equal `NaN`, which is
-what a test wants and what `==` will never give.
+### How `is` is produced, and how it is compared
+
+An `is` value is never written by a person and never invented. It is whatever
+the **reference implementation's `.raku`** printed when the generator ran the
+expression, copied verbatim into the record:
+
+```
+    probe          $r = EVAL '(1) + (2.5)'
+    render         $r.raku          →  3.5
+                   $r.WHAT.^name    →  Rat
+    record           is     3.5
+                     type   Rat
+    harness        $got.raku eq '3.5'   &&   $got.WHAT.^name eq 'Rat'
+```
+
+The comparison is **textual**. The harness escapes the recorded text into a
+single-quoted Raku string and compares it against the result's own `.raku` — it
+never re-compiles the expected value. Two reasons, both learned the hard way:
+
+- **`.raku` is not always re-parseable.** `((2**64)/1).raku` gives
+  `18446744073709551616.0`, which Rakudo then refuses to compile.
+- **Text makes `NaN` equal `NaN`**, which is what a test wants and what `==`
+  will never give.
+
+### Why `.raku` and not `.gist` or `==`
+
+`.raku` is the representation that distinguishes things a test needs
+distinguished, and `==` or `.gist` would quietly merge them:
+
+| Expression | `.raku` | why it matters |
+|---|---|---|
+| `1 + 2` | `3` | |
+| `1 + 2.5` | `3.5` (a `Rat`) | `.gist` shows the same for a `Num` |
+| `1/3` | `<1/3>` | exact, where `.gist` gives `0.333333` |
+| `0e0` vs `0` | `0e0` vs `0` | `==` says these are equal; they are not the same value |
+| `-0e0` | `-0e0` | signed zero survives, and `== 0e0` would hide it |
+| `NaN` | `NaN` | `== NaN` is false even against itself |
+| `(1, 2)` itemised | `$(1, 2)` | itemisation is visible |
+| `1 <=> 2` | `Order::Less` | the enum is qualified |
+
+One consequence is worth stating plainly: because `.raku` output *is* the
+comparison, a **rendering** bug and a **wrong value** look alike in the failure
+count. rakupp rendering `Less` where Rakudo renders `Order::Less` produced some
+440 failures from a single defect. That is the right trade — `.raku` output is
+specified behaviour, and a suite that ignored it would miss real bugs — but it
+is why `rakugrid diverge` clusters by the *shape* of the disagreement. Read the
+clusters, not the total.
+
+### When there is no `is` at all
+
+`type` accompanies `is` rather than standing beside it as a second assertion:
+"this expression produces this value, of this type" is one behaviour. The
+generator omits `is` entirely and writes something else when the reference did
+not return a value:
+
+| What the reference did | What is recorded |
+|---|---|
+| threw | `throws X::Whatever` — the type, never the message |
+| failed to compile | `no-parse`, with the code wrapped as the probe compiled it |
+| crashed, hung, or `.raku` itself failed | no assertion — the record is **parked** with a signed verdict |
+| answered differently on two identical runs | parked — an address inside `.WHICH` is not something to assert |
 
 ### The oracle and its ruling
 

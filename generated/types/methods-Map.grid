@@ -2,7 +2,7 @@ atom     methods/Map
 source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
-axes     AST | Bool | CREATE | Capture | Complex | DEFINITE | EVAL | Failure | FatRat | HOW | INSTANTIATE-GENERIC | IterationBuffer | List | NFC | NFD | NFKC | NFKD | Num | Order | POPULATE | REPR | Rat | VAR | Version | WHAT | WHERE | WHO | abs | acos | acosec | acosech | acosh | acotan | acotanh | all | any | asec | asech | asin | asinh | atan | atan2 | atanh | bless | byte | cache | can | ceiling | chars | chomp | chr | chrs | cis | codes | conj | cos | cosec | cosech | cosh | cotan | cotanh | does | fc | flat | flip | floor | hash | hyper | indent | int | int16 | int32 | int64 | int8 | is-generic | is-prime | item | join | keyof | lazy | lazy-if | lc | log10 | log2 | nl-out | none | not | of | one | ord | ords | parse-names | path | race | rand | reverse | roots | samecase | samemark | samespace | sec | sech | self | sign | sin | sinh | so | sqrt | store-odd-number | sum | take | tan | tanh | tc | tclc | trim | trim-leading | trim-trailing | truncate | uc | uint | uint16 | uint32 | uint64 | uint8 | uniname | uninames | uniparse | uniprop | uniprops | unival | univals | unpolar | wordcase
+axes     AST | Bool | Capture | Complex | DEFINITE | EVAL | Failure | FatRat | HOW | IterationBuffer | List | Num | Order | REPR | Rat | VAR | Version | WHAT | WHO | abs | acos | acosec | acosech | acosh | acotan | acotanh | all | any | asec | asech | asin | asinh | atan | atan2 | atanh | bless | byte | cache | can | ceiling | chars | chomp | chr | chrs | cis | codes | conj | cos | cosec | cosech | cosh | cotan | cotanh | does | fc | flat | flip | floor | hash | hyper | indent | int | int16 | int32 | int64 | int8 | is-generic | is-prime | item | join | keyof | lazy | lazy-if | lc | log10 | log2 | nl-out | none | not | of | one | ord | ords | parse-names | path | race | rand | reverse | roots | samecase | samemark | samespace | sec | sech | self | sign | sin | sinh | so | sqrt | store-odd-number | sum | take | tan | tanh | tc | tclc | trim | trim-leading | trim-trailing | truncate | uc | uint | uint16 | uint32 | uint64 | uint8 | uniname | uninames | uniparse | uniprop | uniprops | unival | univals | unpolar | wordcase
 cols     Map.new((a=>1)) | Map.new()
 
 - id     0001
@@ -105,24 +105,6 @@ cols     Map.new((a=>1)) | Map.new()
 
 - id     0013
   from   inventory:Map.^methods
-  cell   CREATE | Map.new((a=>1))
-  code   (Map.new((a=>1))).CREATE
-  is     $(Map.new)
-  type   Map
-  oracle rakudo-2026.07 → $(Map.new)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0014
-  from   inventory:Map.^methods
-  cell   CREATE | Map.new()
-  code   (Map.new()).CREATE
-  is     $(Map.new)
-  type   Map
-  oracle rakudo-2026.07 → $(Map.new)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0015
-  from   inventory:Map.^methods
   cell   Capture | Map.new((a=>1))
   code   (Map.new((a=>1))).Capture
   is     \(:a(1))
@@ -130,7 +112,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → \(:a(1))
   oracle rakupp-3.14.0 → \(:a(1))
 
-- id     0016
+- id     0014
   from   inventory:Map.^methods
   cell   Capture | Map.new()
   code   (Map.new()).Capture
@@ -139,7 +121,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → \()
   oracle rakupp-3.14.0 → \()
 
-- id     0017
+- id     0015
   from   inventory:Map.^methods
   cell   Complex | Map.new((a=>1))
   code   (Map.new((a=>1))).Complex
@@ -148,7 +130,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → <1+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0018
+- id     0016
   from   inventory:Map.^methods
   cell   Complex | Map.new()
   code   (Map.new()).Complex
@@ -157,7 +139,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → <0+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0019
+- id     0017
   from   inventory:Map.^methods
   cell   DEFINITE | Map.new((a=>1))
   code   (Map.new((a=>1))).DEFINITE
@@ -166,7 +148,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0020
+- id     0018
   from   inventory:Map.^methods
   cell   DEFINITE | Map.new()
   code   (Map.new()).DEFINITE
@@ -175,7 +157,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0021
+- id     0019
   from   inventory:Map.^methods
   cell   EVAL | Map.new((a=>1))
   code   (Map.new((a=>1))).EVAL
@@ -183,7 +165,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0022
+- id     0020
   from   inventory:Map.^methods
   cell   EVAL | Map.new()
   code   (Map.new()).EVAL
@@ -192,7 +174,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0023
+- id     0021
   from   inventory:Map.^methods
   cell   Failure | Map.new((a=>1))
   code   (Map.new((a=>1))).Failure
@@ -200,7 +182,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0024
+- id     0022
   from   inventory:Map.^methods
   cell   Failure | Map.new()
   code   (Map.new()).Failure
@@ -208,7 +190,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0025
+- id     0023
   from   inventory:Map.^methods
   cell   FatRat | Map.new((a=>1))
   code   (Map.new((a=>1))).FatRat
@@ -217,7 +199,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → FatRat.new(1, 1)
   oracle rakupp-3.14.0 → FatRat.new(1, 1)
 
-- id     0026
+- id     0024
   from   inventory:Map.^methods
   cell   FatRat | Map.new()
   code   (Map.new()).FatRat
@@ -226,7 +208,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → FatRat.new(0, 1)
   oracle rakupp-3.14.0 → FatRat.new(0, 1)
 
-- id     0027
+- id     0025
   from   inventory:Map.^methods
   cell   HOW | Map.new((a=>1))
   code   (Map.new((a=>1))).HOW
@@ -235,7 +217,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0028
+- id     0026
   from   inventory:Map.^methods
   cell   HOW | Map.new()
   code   (Map.new()).HOW
@@ -244,87 +226,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0029
-  from   inventory:Map.^methods
-  cell   INSTANTIATE-GENERIC(0) | Map.new((a=>1))
-  code   (Map.new((a=>1))).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0030
-  from   inventory:Map.^methods
-  cell   INSTANTIATE-GENERIC(1) | Map.new((a=>1))
-  code   (Map.new((a=>1))).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0031
-  from   inventory:Map.^methods
-  cell   INSTANTIATE-GENERIC(-1) | Map.new((a=>1))
-  code   (Map.new((a=>1))).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0032
-  from   inventory:Map.^methods
-  cell   INSTANTIATE-GENERIC("a") | Map.new((a=>1))
-  code   (Map.new((a=>1))).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0033
-  from   inventory:Map.^methods
-  cell   INSTANTIATE-GENERIC(Any) | Map.new((a=>1))
-  code   (Map.new((a=>1))).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0034
-  from   inventory:Map.^methods
-  cell   INSTANTIATE-GENERIC(0) | Map.new()
-  code   (Map.new()).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0035
-  from   inventory:Map.^methods
-  cell   INSTANTIATE-GENERIC(1) | Map.new()
-  code   (Map.new()).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0036
-  from   inventory:Map.^methods
-  cell   INSTANTIATE-GENERIC(-1) | Map.new()
-  code   (Map.new()).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0037
-  from   inventory:Map.^methods
-  cell   INSTANTIATE-GENERIC("a") | Map.new()
-  code   (Map.new()).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0038
-  from   inventory:Map.^methods
-  cell   INSTANTIATE-GENERIC(Any) | Map.new()
-  code   (Map.new()).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0039
+- id     0027
   from   inventory:Map.^methods
   cell   IterationBuffer | Map.new((a=>1))
   code   (Map.new((a=>1))).IterationBuffer
@@ -333,7 +235,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → (:a(1),).IterationBuffer
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0040
+- id     0028
   from   inventory:Map.^methods
   cell   IterationBuffer | Map.new()
   code   (Map.new()).IterationBuffer
@@ -342,7 +244,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ().IterationBuffer
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0041
+- id     0029
   from   inventory:Map.^methods
   cell   List | Map.new((a=>1))
   code   (Map.new((a=>1))).List
@@ -351,7 +253,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(:a(1),)
   oracle rakupp-3.14.0 → $(:a(1),)
 
-- id     0042
+- id     0030
   from   inventory:Map.^methods
   cell   List | Map.new()
   code   (Map.new()).List
@@ -360,79 +262,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0043
-  from   inventory:Map.^methods
-  cell   NFC | Map.new((a=>1))
-  code   (Map.new((a=>1))).NFC
-  is     Uni.new(0x0061, 0x0009, 0x0031).NFC
-  type   NFC
-  oracle rakudo-2026.07 → Uni.new(0x0061, 0x0009, 0x0031).NFC
-  oracle rakupp-3.14.0 → Uni.new(0x0061, 0x0009, 0x0031).NFC
-
-- id     0044
-  from   inventory:Map.^methods
-  cell   NFC | Map.new()
-  code   (Map.new()).NFC
-  is     Uni.new().NFC
-  type   NFC
-  oracle rakudo-2026.07 → Uni.new().NFC
-  oracle rakupp-3.14.0 → Uni.new().NFC
-
-- id     0045
-  from   inventory:Map.^methods
-  cell   NFD | Map.new((a=>1))
-  code   (Map.new((a=>1))).NFD
-  is     Uni.new(0x0061, 0x0009, 0x0031).NFD
-  type   NFD
-  oracle rakudo-2026.07 → Uni.new(0x0061, 0x0009, 0x0031).NFD
-  oracle rakupp-3.14.0 → Uni.new(0x0061, 0x0009, 0x0031).NFD
-
-- id     0046
-  from   inventory:Map.^methods
-  cell   NFD | Map.new()
-  code   (Map.new()).NFD
-  is     Uni.new().NFD
-  type   NFD
-  oracle rakudo-2026.07 → Uni.new().NFD
-  oracle rakupp-3.14.0 → Uni.new().NFD
-
-- id     0047
-  from   inventory:Map.^methods
-  cell   NFKC | Map.new((a=>1))
-  code   (Map.new((a=>1))).NFKC
-  is     Uni.new(0x0061, 0x0009, 0x0031).NFKC
-  type   NFKC
-  oracle rakudo-2026.07 → Uni.new(0x0061, 0x0009, 0x0031).NFKC
-  oracle rakupp-3.14.0 → Uni.new(0x0061, 0x0009, 0x0031).NFKC
-
-- id     0048
-  from   inventory:Map.^methods
-  cell   NFKC | Map.new()
-  code   (Map.new()).NFKC
-  is     Uni.new().NFKC
-  type   NFKC
-  oracle rakudo-2026.07 → Uni.new().NFKC
-  oracle rakupp-3.14.0 → Uni.new().NFKC
-
-- id     0049
-  from   inventory:Map.^methods
-  cell   NFKD | Map.new((a=>1))
-  code   (Map.new((a=>1))).NFKD
-  is     Uni.new(0x0061, 0x0009, 0x0031).NFKD
-  type   NFKD
-  oracle rakudo-2026.07 → Uni.new(0x0061, 0x0009, 0x0031).NFKD
-  oracle rakupp-3.14.0 → Uni.new(0x0061, 0x0009, 0x0031).NFKD
-
-- id     0050
-  from   inventory:Map.^methods
-  cell   NFKD | Map.new()
-  code   (Map.new()).NFKD
-  is     Uni.new().NFKD
-  type   NFKD
-  oracle rakudo-2026.07 → Uni.new().NFKD
-  oracle rakupp-3.14.0 → Uni.new().NFKD
-
-- id     0051
+- id     0031
   from   inventory:Map.^methods
   cell   Num | Map.new((a=>1))
   code   (Map.new((a=>1))).Num
@@ -441,7 +271,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → 1e0
 
-- id     0052
+- id     0032
   from   inventory:Map.^methods
   cell   Num | Map.new()
   code   (Map.new()).Num
@@ -450,7 +280,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0053
+- id     0033
   from   inventory:Map.^methods
   cell   Order | Map.new((a=>1))
   code   (Map.new((a=>1))).Order
@@ -459,7 +289,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Order::More
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0054
+- id     0034
   from   inventory:Map.^methods
   cell   Order | Map.new()
   code   (Map.new()).Order
@@ -468,97 +298,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Order::Same
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0055
-  from   inventory:Map.^methods
-  cell   POPULATE(0) | Map.new((a=>1))
-  code   (Map.new((a=>1))).POPULATE(0)
-  is     $(Map.new((:a(1))))
-  type   Map
-  oracle rakudo-2026.07 → $(Map.new((:a(1))))
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0056
-  from   inventory:Map.^methods
-  cell   POPULATE(1) | Map.new((a=>1))
-  code   (Map.new((a=>1))).POPULATE(1)
-  is     $(Map.new((:a(1))))
-  type   Map
-  oracle rakudo-2026.07 → $(Map.new((:a(1))))
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0057
-  from   inventory:Map.^methods
-  cell   POPULATE(-1) | Map.new((a=>1))
-  code   (Map.new((a=>1))).POPULATE(-1)
-  is     $(Map.new((:a(1))))
-  type   Map
-  oracle rakudo-2026.07 → $(Map.new((:a(1))))
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0058
-  from   inventory:Map.^methods
-  cell   POPULATE("a") | Map.new((a=>1))
-  code   (Map.new((a=>1))).POPULATE("a")
-  is     $(Map.new((:a(1))))
-  type   Map
-  oracle rakudo-2026.07 → $(Map.new((:a(1))))
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0059
-  from   inventory:Map.^methods
-  cell   POPULATE(Any) | Map.new((a=>1))
-  code   (Map.new((a=>1))).POPULATE(Any)
-  is     $(Map.new((:a(1))))
-  type   Map
-  oracle rakudo-2026.07 → $(Map.new((:a(1))))
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0060
-  from   inventory:Map.^methods
-  cell   POPULATE(0) | Map.new()
-  code   (Map.new()).POPULATE(0)
-  is     $(Map.new)
-  type   Map
-  oracle rakudo-2026.07 → $(Map.new)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0061
-  from   inventory:Map.^methods
-  cell   POPULATE(1) | Map.new()
-  code   (Map.new()).POPULATE(1)
-  is     $(Map.new)
-  type   Map
-  oracle rakudo-2026.07 → $(Map.new)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0062
-  from   inventory:Map.^methods
-  cell   POPULATE(-1) | Map.new()
-  code   (Map.new()).POPULATE(-1)
-  is     $(Map.new)
-  type   Map
-  oracle rakudo-2026.07 → $(Map.new)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0063
-  from   inventory:Map.^methods
-  cell   POPULATE("a") | Map.new()
-  code   (Map.new()).POPULATE("a")
-  is     $(Map.new)
-  type   Map
-  oracle rakudo-2026.07 → $(Map.new)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0064
-  from   inventory:Map.^methods
-  cell   POPULATE(Any) | Map.new()
-  code   (Map.new()).POPULATE(Any)
-  is     $(Map.new)
-  type   Map
-  oracle rakudo-2026.07 → $(Map.new)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0065
+- id     0035
   from   inventory:Map.^methods
   cell   REPR | Map.new((a=>1))
   code   (Map.new((a=>1))).REPR
@@ -567,7 +307,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0066
+- id     0036
   from   inventory:Map.^methods
   cell   REPR | Map.new()
   code   (Map.new()).REPR
@@ -576,7 +316,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0067
+- id     0037
   from   inventory:Map.^methods
   cell   Rat | Map.new((a=>1))
   code   (Map.new((a=>1))).Rat
@@ -585,7 +325,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1.0
   oracle rakupp-3.14.0 → 1.0
 
-- id     0068
+- id     0038
   from   inventory:Map.^methods
   cell   Rat | Map.new()
   code   (Map.new()).Rat
@@ -594,7 +334,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0.0
   oracle rakupp-3.14.0 → 0.0
 
-- id     0069
+- id     0039
   from   inventory:Map.^methods
   cell   VAR | Map.new((a=>1))
   code   (Map.new((a=>1))).VAR
@@ -603,7 +343,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(Map.new((:a(1))))
   oracle rakupp-3.14.0 → Map.new((:a(1)))
 
-- id     0070
+- id     0040
   from   inventory:Map.^methods
   cell   VAR | Map.new()
   code   (Map.new()).VAR
@@ -612,7 +352,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(Map.new)
   oracle rakupp-3.14.0 → Map.new(())
 
-- id     0071
+- id     0041
   from   inventory:Map.^methods
   cell   Version | Map.new((a=>1))
   code   (Map.new((a=>1))).Version
@@ -621,7 +361,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Version.new('a.1')
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0072
+- id     0042
   from   inventory:Map.^methods
   cell   Version | Map.new()
   code   (Map.new()).Version
@@ -630,7 +370,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Version.new
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0073
+- id     0043
   from   inventory:Map.^methods
   cell   WHAT | Map.new((a=>1))
   code   (Map.new((a=>1))).WHAT
@@ -639,7 +379,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Map
   oracle rakupp-3.14.0 → Map
 
-- id     0074
+- id     0044
   from   inventory:Map.^methods
   cell   WHAT | Map.new()
   code   (Map.new()).WHAT
@@ -648,31 +388,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Map
   oracle rakupp-3.14.0 → Map
 
-- id     0075
-  from   inventory:Map.^methods
-  cell   WHERE | Map.new((a=>1))
-  code   (Map.new((a=>1))).WHERE
-  is     3281456358072
-  type   Int
-  oracle rakudo-2026.07 → 3281456358072
-  oracle rakupp-3.14.0 → 140181675264904
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0076
-  from   inventory:Map.^methods
-  cell   WHERE | Map.new()
-  code   (Map.new()).WHERE
-  is     3281456705360
-  type   Int
-  oracle rakudo-2026.07 → 3281456705360
-  oracle rakupp-3.14.0 → 140181675258680
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0077
+- id     0045
   from   inventory:Map.^methods
   cell   WHO | Map.new((a=>1))
   code   (Map.new((a=>1))).WHO
@@ -681,7 +397,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0078
+- id     0046
   from   inventory:Map.^methods
   cell   WHO | Map.new()
   code   (Map.new()).WHO
@@ -690,7 +406,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0079
+- id     0047
   from   inventory:Map.^methods
   cell   abs | Map.new((a=>1))
   code   (Map.new((a=>1))).abs
@@ -699,7 +415,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1e0
 
-- id     0080
+- id     0048
   from   inventory:Map.^methods
   cell   abs | Map.new()
   code   (Map.new()).abs
@@ -708,7 +424,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0081
+- id     0049
   from   inventory:Map.^methods
   cell   acos | Map.new((a=>1))
   code   (Map.new((a=>1))).acos
@@ -717,7 +433,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0082
+- id     0050
   from   inventory:Map.^methods
   cell   acos | Map.new()
   code   (Map.new()).acos
@@ -726,7 +442,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0083
+- id     0051
   from   inventory:Map.^methods
   cell   acosec | Map.new((a=>1))
   code   (Map.new((a=>1))).acosec
@@ -735,7 +451,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0084
+- id     0052
   from   inventory:Map.^methods
   cell   acosec | Map.new()
   code   (Map.new()).acosec
@@ -744,7 +460,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0085
+- id     0053
   from   inventory:Map.^methods
   cell   acosech | Map.new((a=>1))
   code   (Map.new((a=>1))).acosech
@@ -753,7 +469,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0.8813735870195429e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0086
+- id     0054
   from   inventory:Map.^methods
   cell   acosech | Map.new()
   code   (Map.new()).acosech
@@ -761,7 +477,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0087
+- id     0055
   from   inventory:Map.^methods
   cell   acosh | Map.new((a=>1))
   code   (Map.new((a=>1))).acosh
@@ -770,7 +486,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0088
+- id     0056
   from   inventory:Map.^methods
   cell   acosh | Map.new()
   code   (Map.new()).acosh
@@ -779,7 +495,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0089
+- id     0057
   from   inventory:Map.^methods
   cell   acotan | Map.new((a=>1))
   code   (Map.new((a=>1))).acotan
@@ -788,7 +504,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0.7853981633974483e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0090
+- id     0058
   from   inventory:Map.^methods
   cell   acotan | Map.new()
   code   (Map.new()).acotan
@@ -797,7 +513,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0091
+- id     0059
   from   inventory:Map.^methods
   cell   acotanh | Map.new((a=>1))
   code   (Map.new((a=>1))).acotanh
@@ -806,7 +522,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0092
+- id     0060
   from   inventory:Map.^methods
   cell   acotanh | Map.new()
   code   (Map.new()).acotanh
@@ -814,7 +530,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0093
+- id     0061
   from   inventory:Map.^methods
   cell   all | Map.new((a=>1))
   code   (Map.new((a=>1))).all
@@ -823,7 +539,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → all(:a(1))
   oracle rakupp-3.14.0 → all(:a(1))
 
-- id     0094
+- id     0062
   from   inventory:Map.^methods
   cell   all | Map.new()
   code   (Map.new()).all
@@ -832,7 +548,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → all()
   oracle rakupp-3.14.0 → all()
 
-- id     0095
+- id     0063
   from   inventory:Map.^methods
   cell   any | Map.new((a=>1))
   code   (Map.new((a=>1))).any
@@ -841,7 +557,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → any(:a(1))
   oracle rakupp-3.14.0 → any(:a(1))
 
-- id     0096
+- id     0064
   from   inventory:Map.^methods
   cell   any | Map.new()
   code   (Map.new()).any
@@ -850,7 +566,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → any()
   oracle rakupp-3.14.0 → any()
 
-- id     0097
+- id     0065
   from   inventory:Map.^methods
   cell   asec | Map.new((a=>1))
   code   (Map.new((a=>1))).asec
@@ -859,7 +575,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0098
+- id     0066
   from   inventory:Map.^methods
   cell   asec | Map.new()
   code   (Map.new()).asec
@@ -868,7 +584,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0099
+- id     0067
   from   inventory:Map.^methods
   cell   asech | Map.new((a=>1))
   code   (Map.new((a=>1))).asech
@@ -877,7 +593,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0100
+- id     0068
   from   inventory:Map.^methods
   cell   asech | Map.new()
   code   (Map.new()).asech
@@ -885,7 +601,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0101
+- id     0069
   from   inventory:Map.^methods
   cell   asin | Map.new((a=>1))
   code   (Map.new((a=>1))).asin
@@ -894,7 +610,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0102
+- id     0070
   from   inventory:Map.^methods
   cell   asin | Map.new()
   code   (Map.new()).asin
@@ -903,7 +619,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0103
+- id     0071
   from   inventory:Map.^methods
   cell   asinh | Map.new((a=>1))
   code   (Map.new((a=>1))).asinh
@@ -912,7 +628,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0.8813735870195429e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0104
+- id     0072
   from   inventory:Map.^methods
   cell   asinh | Map.new()
   code   (Map.new()).asinh
@@ -921,7 +637,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0105
+- id     0073
   from   inventory:Map.^methods
   cell   atan | Map.new((a=>1))
   code   (Map.new((a=>1))).atan
@@ -930,7 +646,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0.7853981633974483e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0106
+- id     0074
   from   inventory:Map.^methods
   cell   atan | Map.new()
   code   (Map.new()).atan
@@ -939,7 +655,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0107
+- id     0075
   from   inventory:Map.^methods
   cell   atan2(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).atan2(0)
@@ -948,7 +664,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0108
+- id     0076
   from   inventory:Map.^methods
   cell   atan2(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).atan2(1)
@@ -957,7 +673,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0.7853981633974483e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0109
+- id     0077
   from   inventory:Map.^methods
   cell   atan2(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).atan2(-1)
@@ -966,7 +682,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 2.356194490192345e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0110
+- id     0078
   from   inventory:Map.^methods
   cell   atan2("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).atan2("a")
@@ -974,7 +690,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0111
+- id     0079
   from   inventory:Map.^methods
   cell   atan2(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).atan2(Any)
@@ -983,7 +699,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1.5707963267948966e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0112
+- id     0080
   from   inventory:Map.^methods
   cell   atan2(0) | Map.new()
   code   (Map.new()).atan2(0)
@@ -992,7 +708,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0113
+- id     0081
   from   inventory:Map.^methods
   cell   atan2(1) | Map.new()
   code   (Map.new()).atan2(1)
@@ -1001,7 +717,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0114
+- id     0082
   from   inventory:Map.^methods
   cell   atan2(-1) | Map.new()
   code   (Map.new()).atan2(-1)
@@ -1010,7 +726,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 3.141592653589793e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0115
+- id     0083
   from   inventory:Map.^methods
   cell   atan2("a") | Map.new()
   code   (Map.new()).atan2("a")
@@ -1018,7 +734,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0116
+- id     0084
   from   inventory:Map.^methods
   cell   atan2(Any) | Map.new()
   code   (Map.new()).atan2(Any)
@@ -1027,7 +743,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0117
+- id     0085
   from   inventory:Map.^methods
   cell   atanh | Map.new((a=>1))
   code   (Map.new((a=>1))).atanh
@@ -1036,7 +752,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0118
+- id     0086
   from   inventory:Map.^methods
   cell   atanh | Map.new()
   code   (Map.new()).atanh
@@ -1045,7 +761,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0119
+- id     0087
   from   inventory:Map.^methods
   cell   bless | Map.new((a=>1))
   code   (Map.new((a=>1))).bless
@@ -1054,7 +770,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(Map.new)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0120
+- id     0088
   from   inventory:Map.^methods
   cell   bless | Map.new()
   code   (Map.new()).bless
@@ -1063,7 +779,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(Map.new)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0121
+- id     0089
   from   inventory:Map.^methods
   cell   byte | Map.new((a=>1))
   code   (Map.new((a=>1))).byte
@@ -1072,7 +788,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0122
+- id     0090
   from   inventory:Map.^methods
   cell   byte | Map.new()
   code   (Map.new()).byte
@@ -1081,7 +797,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0123
+- id     0091
   from   inventory:Map.^methods
   cell   cache | Map.new((a=>1))
   code   (Map.new((a=>1))).cache
@@ -1090,7 +806,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(:a(1),)
   oracle rakupp-3.14.0 → $(:a(1),)
 
-- id     0124
+- id     0092
   from   inventory:Map.^methods
   cell   cache | Map.new()
   code   (Map.new()).cache
@@ -1099,7 +815,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0125
+- id     0093
   from   inventory:Map.^methods
   cell   can(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).can(0)
@@ -1107,7 +823,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0126
+- id     0094
   from   inventory:Map.^methods
   cell   can(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).can(1)
@@ -1115,7 +831,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0127
+- id     0095
   from   inventory:Map.^methods
   cell   can(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).can(-1)
@@ -1123,7 +839,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0128
+- id     0096
   from   inventory:Map.^methods
   cell   can("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).can("a")
@@ -1132,7 +848,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0129
+- id     0097
   from   inventory:Map.^methods
   cell   can(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).can(Any)
@@ -1140,7 +856,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0130
+- id     0098
   from   inventory:Map.^methods
   cell   can(0) | Map.new()
   code   (Map.new()).can(0)
@@ -1148,7 +864,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0131
+- id     0099
   from   inventory:Map.^methods
   cell   can(1) | Map.new()
   code   (Map.new()).can(1)
@@ -1156,7 +872,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0132
+- id     0100
   from   inventory:Map.^methods
   cell   can(-1) | Map.new()
   code   (Map.new()).can(-1)
@@ -1164,7 +880,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0133
+- id     0101
   from   inventory:Map.^methods
   cell   can("a") | Map.new()
   code   (Map.new()).can("a")
@@ -1173,7 +889,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0134
+- id     0102
   from   inventory:Map.^methods
   cell   can(Any) | Map.new()
   code   (Map.new()).can(Any)
@@ -1181,7 +897,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0135
+- id     0103
   from   inventory:Map.^methods
   cell   ceiling | Map.new((a=>1))
   code   (Map.new((a=>1))).ceiling
@@ -1190,7 +906,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0136
+- id     0104
   from   inventory:Map.^methods
   cell   ceiling | Map.new()
   code   (Map.new()).ceiling
@@ -1199,7 +915,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0137
+- id     0105
   from   inventory:Map.^methods
   cell   chars | Map.new((a=>1))
   code   (Map.new((a=>1))).chars
@@ -1208,7 +924,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → 3
 
-- id     0138
+- id     0106
   from   inventory:Map.^methods
   cell   chars | Map.new()
   code   (Map.new()).chars
@@ -1217,7 +933,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0139
+- id     0107
   from   inventory:Map.^methods
   cell   chomp(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).chomp(0)
@@ -1226,7 +942,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0140
+- id     0108
   from   inventory:Map.^methods
   cell   chomp(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).chomp(1)
@@ -1235,7 +951,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0141
+- id     0109
   from   inventory:Map.^methods
   cell   chomp(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).chomp(-1)
@@ -1244,7 +960,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0142
+- id     0110
   from   inventory:Map.^methods
   cell   chomp("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).chomp("a")
@@ -1253,7 +969,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0143
+- id     0111
   from   inventory:Map.^methods
   cell   chomp(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).chomp(Any)
@@ -1261,7 +977,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0144
+- id     0112
   from   inventory:Map.^methods
   cell   chomp(0) | Map.new()
   code   (Map.new()).chomp(0)
@@ -1270,7 +986,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0145
+- id     0113
   from   inventory:Map.^methods
   cell   chomp(1) | Map.new()
   code   (Map.new()).chomp(1)
@@ -1279,7 +995,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0146
+- id     0114
   from   inventory:Map.^methods
   cell   chomp(-1) | Map.new()
   code   (Map.new()).chomp(-1)
@@ -1288,7 +1004,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0147
+- id     0115
   from   inventory:Map.^methods
   cell   chomp("a") | Map.new()
   code   (Map.new()).chomp("a")
@@ -1297,7 +1013,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0148
+- id     0116
   from   inventory:Map.^methods
   cell   chomp(Any) | Map.new()
   code   (Map.new()).chomp(Any)
@@ -1305,7 +1021,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0149
+- id     0117
   from   inventory:Map.^methods
   cell   chr | Map.new((a=>1))
   code   (Map.new((a=>1))).chr
@@ -1314,7 +1030,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "\x[1]"
   oracle rakupp-3.14.0 → ""
 
-- id     0150
+- id     0118
   from   inventory:Map.^methods
   cell   chr | Map.new()
   code   (Map.new()).chr
@@ -1323,7 +1039,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "\0"
   oracle rakupp-3.14.0 → "\0"
 
-- id     0151
+- id     0119
   from   inventory:Map.^methods
   cell   chrs | Map.new((a=>1))
   code   (Map.new((a=>1))).chrs
@@ -1331,7 +1047,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::TypeCheck
   oracle rakupp-3.14.0 → "\0"
 
-- id     0152
+- id     0120
   from   inventory:Map.^methods
   cell   chrs | Map.new()
   code   (Map.new()).chrs
@@ -1340,7 +1056,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0153
+- id     0121
   from   inventory:Map.^methods
   cell   cis | Map.new((a=>1))
   code   (Map.new((a=>1))).cis
@@ -1349,7 +1065,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0154
+- id     0122
   from   inventory:Map.^methods
   cell   cis | Map.new()
   code   (Map.new()).cis
@@ -1358,7 +1074,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → <1+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0155
+- id     0123
   from   inventory:Map.^methods
   cell   codes | Map.new((a=>1))
   code   (Map.new((a=>1))).codes
@@ -1367,7 +1083,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 3
   oracle rakupp-3.14.0 → 3
 
-- id     0156
+- id     0124
   from   inventory:Map.^methods
   cell   codes | Map.new()
   code   (Map.new()).codes
@@ -1376,7 +1092,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0157
+- id     0125
   from   inventory:Map.^methods
   cell   conj | Map.new((a=>1))
   code   (Map.new((a=>1))).conj
@@ -1385,7 +1101,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0158
+- id     0126
   from   inventory:Map.^methods
   cell   conj | Map.new()
   code   (Map.new()).conj
@@ -1394,7 +1110,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0159
+- id     0127
   from   inventory:Map.^methods
   cell   cos | Map.new((a=>1))
   code   (Map.new((a=>1))).cos
@@ -1403,7 +1119,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0.5403023058681398e0
   oracle rakupp-3.14.0 → 0.5403023058681398e0
 
-- id     0160
+- id     0128
   from   inventory:Map.^methods
   cell   cos | Map.new()
   code   (Map.new()).cos
@@ -1412,7 +1128,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → 1e0
 
-- id     0161
+- id     0129
   from   inventory:Map.^methods
   cell   cosec | Map.new((a=>1))
   code   (Map.new((a=>1))).cosec
@@ -1421,7 +1137,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1.1883951057781212e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0162
+- id     0130
   from   inventory:Map.^methods
   cell   cosec | Map.new()
   code   (Map.new()).cosec
@@ -1430,7 +1146,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0163
+- id     0131
   from   inventory:Map.^methods
   cell   cosech | Map.new((a=>1))
   code   (Map.new((a=>1))).cosech
@@ -1439,7 +1155,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0.8509181282393216e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0164
+- id     0132
   from   inventory:Map.^methods
   cell   cosech | Map.new()
   code   (Map.new()).cosech
@@ -1448,7 +1164,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0165
+- id     0133
   from   inventory:Map.^methods
   cell   cosh | Map.new((a=>1))
   code   (Map.new((a=>1))).cosh
@@ -1457,7 +1173,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1.5430806348152437e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0166
+- id     0134
   from   inventory:Map.^methods
   cell   cosh | Map.new()
   code   (Map.new()).cosh
@@ -1466,7 +1182,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0167
+- id     0135
   from   inventory:Map.^methods
   cell   cotan | Map.new((a=>1))
   code   (Map.new((a=>1))).cotan
@@ -1475,7 +1191,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0.6420926159343308e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0168
+- id     0136
   from   inventory:Map.^methods
   cell   cotan | Map.new()
   code   (Map.new()).cotan
@@ -1484,7 +1200,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0169
+- id     0137
   from   inventory:Map.^methods
   cell   cotanh | Map.new((a=>1))
   code   (Map.new((a=>1))).cotanh
@@ -1493,7 +1209,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1.3130352854993315e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0170
+- id     0138
   from   inventory:Map.^methods
   cell   cotanh | Map.new()
   code   (Map.new()).cotanh
@@ -1502,7 +1218,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Inf
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0171
+- id     0139
   from   inventory:Map.^methods
   cell   does(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).does(0)
@@ -1511,7 +1227,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0172
+- id     0140
   from   inventory:Map.^methods
   cell   does(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).does(1)
@@ -1520,7 +1236,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0173
+- id     0141
   from   inventory:Map.^methods
   cell   does(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).does(-1)
@@ -1529,7 +1245,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0174
+- id     0142
   from   inventory:Map.^methods
   cell   does("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).does("a")
@@ -1538,7 +1254,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0175
+- id     0143
   from   inventory:Map.^methods
   cell   does(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).does(Any)
@@ -1547,7 +1263,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0176
+- id     0144
   from   inventory:Map.^methods
   cell   does(0) | Map.new()
   code   (Map.new()).does(0)
@@ -1556,7 +1272,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0177
+- id     0145
   from   inventory:Map.^methods
   cell   does(1) | Map.new()
   code   (Map.new()).does(1)
@@ -1565,7 +1281,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0178
+- id     0146
   from   inventory:Map.^methods
   cell   does(-1) | Map.new()
   code   (Map.new()).does(-1)
@@ -1574,7 +1290,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0179
+- id     0147
   from   inventory:Map.^methods
   cell   does("a") | Map.new()
   code   (Map.new()).does("a")
@@ -1583,7 +1299,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0180
+- id     0148
   from   inventory:Map.^methods
   cell   does(Any) | Map.new()
   code   (Map.new()).does(Any)
@@ -1592,7 +1308,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0181
+- id     0149
   from   inventory:Map.^methods
   cell   fc | Map.new((a=>1))
   code   (Map.new((a=>1))).fc
@@ -1601,7 +1317,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0182
+- id     0150
   from   inventory:Map.^methods
   cell   fc | Map.new()
   code   (Map.new()).fc
@@ -1610,7 +1326,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0183
+- id     0151
   from   inventory:Map.^methods
   cell   flat(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).flat(0)
@@ -1619,7 +1335,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $((:a(1),).Seq)
   oracle rakupp-3.14.0 → $(:a(1),).Seq
 
-- id     0184
+- id     0152
   from   inventory:Map.^methods
   cell   flat(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).flat(1)
@@ -1628,7 +1344,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $((:a(1),).Seq)
   oracle rakupp-3.14.0 → $(:a(1),).Seq
 
-- id     0185
+- id     0153
   from   inventory:Map.^methods
   cell   flat(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).flat(-1)
@@ -1637,7 +1353,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $((:a(1),).Seq)
   oracle rakupp-3.14.0 → $(:a(1),).Seq
 
-- id     0186
+- id     0154
   from   inventory:Map.^methods
   cell   flat("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).flat("a")
@@ -1645,7 +1361,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $(:a(1),).Seq
 
-- id     0187
+- id     0155
   from   inventory:Map.^methods
   cell   flat(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).flat(Any)
@@ -1654,7 +1370,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $((:a(1),).Seq)
   oracle rakupp-3.14.0 → $(:a(1),).Seq
 
-- id     0188
+- id     0156
   from   inventory:Map.^methods
   cell   flat(0) | Map.new()
   code   (Map.new()).flat(0)
@@ -1663,7 +1379,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0189
+- id     0157
   from   inventory:Map.^methods
   cell   flat(1) | Map.new()
   code   (Map.new()).flat(1)
@@ -1672,7 +1388,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0190
+- id     0158
   from   inventory:Map.^methods
   cell   flat(-1) | Map.new()
   code   (Map.new()).flat(-1)
@@ -1681,7 +1397,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0191
+- id     0159
   from   inventory:Map.^methods
   cell   flat("a") | Map.new()
   code   (Map.new()).flat("a")
@@ -1689,7 +1405,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0192
+- id     0160
   from   inventory:Map.^methods
   cell   flat(Any) | Map.new()
   code   (Map.new()).flat(Any)
@@ -1698,7 +1414,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0193
+- id     0161
   from   inventory:Map.^methods
   cell   flip | Map.new((a=>1))
   code   (Map.new((a=>1))).flip
@@ -1707,7 +1423,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "1\ta"
   oracle rakupp-3.14.0 → "1\ta"
 
-- id     0194
+- id     0162
   from   inventory:Map.^methods
   cell   flip | Map.new()
   code   (Map.new()).flip
@@ -1716,7 +1432,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0195
+- id     0163
   from   inventory:Map.^methods
   cell   floor | Map.new((a=>1))
   code   (Map.new((a=>1))).floor
@@ -1725,7 +1441,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0196
+- id     0164
   from   inventory:Map.^methods
   cell   floor | Map.new()
   code   (Map.new()).floor
@@ -1734,7 +1450,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0197
+- id     0165
   from   inventory:Map.^methods
   cell   hash | Map.new((a=>1))
   code   (Map.new((a=>1))).hash
@@ -1743,7 +1459,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(Map.new((:a(1))))
   oracle rakupp-3.14.0 → Map.new((:a(1)))
 
-- id     0198
+- id     0166
   from   inventory:Map.^methods
   cell   hash | Map.new()
   code   (Map.new()).hash
@@ -1752,7 +1468,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(Map.new)
   oracle rakupp-3.14.0 → Map.new(())
 
-- id     0199
+- id     0167
   from   inventory:Map.^methods
   cell   hyper | Map.new((a=>1))
   code   (Map.new((a=>1))).hyper
@@ -1761,7 +1477,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
   oracle rakupp-3.14.0 → $(:a(1),)
 
-- id     0200
+- id     0168
   from   inventory:Map.^methods
   cell   hyper | Map.new()
   code   (Map.new()).hyper
@@ -1770,7 +1486,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
   oracle rakupp-3.14.0 → $()
 
-- id     0201
+- id     0169
   from   inventory:Map.^methods
   cell   indent(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).indent(0)
@@ -1779,7 +1495,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0202
+- id     0170
   from   inventory:Map.^methods
   cell   indent(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).indent(1)
@@ -1788,7 +1504,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → " a\t1"
   oracle rakupp-3.14.0 → " a\t1"
 
-- id     0203
+- id     0171
   from   inventory:Map.^methods
   cell   indent(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).indent(-1)
@@ -1797,7 +1513,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0204
+- id     0172
   from   inventory:Map.^methods
   cell   indent("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).indent("a")
@@ -1805,7 +1521,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0205
+- id     0173
   from   inventory:Map.^methods
   cell   indent(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).indent(Any)
@@ -1814,7 +1530,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0206
+- id     0174
   from   inventory:Map.^methods
   cell   indent(0) | Map.new()
   code   (Map.new()).indent(0)
@@ -1823,7 +1539,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0207
+- id     0175
   from   inventory:Map.^methods
   cell   indent(1) | Map.new()
   code   (Map.new()).indent(1)
@@ -1832,7 +1548,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0208
+- id     0176
   from   inventory:Map.^methods
   cell   indent(-1) | Map.new()
   code   (Map.new()).indent(-1)
@@ -1841,7 +1557,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0209
+- id     0177
   from   inventory:Map.^methods
   cell   indent("a") | Map.new()
   code   (Map.new()).indent("a")
@@ -1849,7 +1565,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ""
 
-- id     0210
+- id     0178
   from   inventory:Map.^methods
   cell   indent(Any) | Map.new()
   code   (Map.new()).indent(Any)
@@ -1858,7 +1574,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0211
+- id     0179
   from   inventory:Map.^methods
   cell   int | Map.new((a=>1))
   code   (Map.new((a=>1))).int
@@ -1867,7 +1583,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0212
+- id     0180
   from   inventory:Map.^methods
   cell   int | Map.new()
   code   (Map.new()).int
@@ -1876,7 +1592,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0213
+- id     0181
   from   inventory:Map.^methods
   cell   int16 | Map.new((a=>1))
   code   (Map.new((a=>1))).int16
@@ -1885,7 +1601,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0214
+- id     0182
   from   inventory:Map.^methods
   cell   int16 | Map.new()
   code   (Map.new()).int16
@@ -1894,7 +1610,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0215
+- id     0183
   from   inventory:Map.^methods
   cell   int32 | Map.new((a=>1))
   code   (Map.new((a=>1))).int32
@@ -1903,7 +1619,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0216
+- id     0184
   from   inventory:Map.^methods
   cell   int32 | Map.new()
   code   (Map.new()).int32
@@ -1912,7 +1628,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0217
+- id     0185
   from   inventory:Map.^methods
   cell   int64 | Map.new((a=>1))
   code   (Map.new((a=>1))).int64
@@ -1921,7 +1637,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0218
+- id     0186
   from   inventory:Map.^methods
   cell   int64 | Map.new()
   code   (Map.new()).int64
@@ -1930,7 +1646,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0219
+- id     0187
   from   inventory:Map.^methods
   cell   int8 | Map.new((a=>1))
   code   (Map.new((a=>1))).int8
@@ -1939,7 +1655,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0220
+- id     0188
   from   inventory:Map.^methods
   cell   int8 | Map.new()
   code   (Map.new()).int8
@@ -1948,7 +1664,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0221
+- id     0189
   from   inventory:Map.^methods
   cell   is-generic | Map.new((a=>1))
   code   (Map.new((a=>1))).is-generic
@@ -1957,7 +1673,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0222
+- id     0190
   from   inventory:Map.^methods
   cell   is-generic | Map.new()
   code   (Map.new()).is-generic
@@ -1966,7 +1682,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0223
+- id     0191
   from   inventory:Map.^methods
   cell   is-prime | Map.new((a=>1))
   code   (Map.new((a=>1))).is-prime
@@ -1975,7 +1691,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0224
+- id     0192
   from   inventory:Map.^methods
   cell   is-prime | Map.new()
   code   (Map.new()).is-prime
@@ -1984,7 +1700,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0225
+- id     0193
   from   inventory:Map.^methods
   cell   item | Map.new((a=>1))
   code   (Map.new((a=>1))).item
@@ -1993,7 +1709,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(Map.new((:a(1))))
   oracle rakupp-3.14.0 → Map.new((:a(1)))
 
-- id     0226
+- id     0194
   from   inventory:Map.^methods
   cell   item | Map.new()
   code   (Map.new()).item
@@ -2002,7 +1718,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(Map.new)
   oracle rakupp-3.14.0 → Map.new(())
 
-- id     0227
+- id     0195
   from   inventory:Map.^methods
   cell   join(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).join(0)
@@ -2011,7 +1727,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0228
+- id     0196
   from   inventory:Map.^methods
   cell   join(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).join(1)
@@ -2020,7 +1736,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0229
+- id     0197
   from   inventory:Map.^methods
   cell   join(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).join(-1)
@@ -2029,7 +1745,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0230
+- id     0198
   from   inventory:Map.^methods
   cell   join("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).join("a")
@@ -2038,7 +1754,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0231
+- id     0199
   from   inventory:Map.^methods
   cell   join(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).join(Any)
@@ -2046,7 +1762,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0232
+- id     0200
   from   inventory:Map.^methods
   cell   join(0) | Map.new()
   code   (Map.new()).join(0)
@@ -2055,7 +1771,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0233
+- id     0201
   from   inventory:Map.^methods
   cell   join(1) | Map.new()
   code   (Map.new()).join(1)
@@ -2064,7 +1780,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0234
+- id     0202
   from   inventory:Map.^methods
   cell   join(-1) | Map.new()
   code   (Map.new()).join(-1)
@@ -2073,7 +1789,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0235
+- id     0203
   from   inventory:Map.^methods
   cell   join("a") | Map.new()
   code   (Map.new()).join("a")
@@ -2082,7 +1798,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0236
+- id     0204
   from   inventory:Map.^methods
   cell   join(Any) | Map.new()
   code   (Map.new()).join(Any)
@@ -2090,7 +1806,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ""
 
-- id     0237
+- id     0205
   from   inventory:Map.^methods
   cell   keyof | Map.new((a=>1))
   code   (Map.new((a=>1))).keyof
@@ -2099,7 +1815,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Str(Any)
   oracle rakupp-3.14.0 → Mu
 
-- id     0238
+- id     0206
   from   inventory:Map.^methods
   cell   keyof | Map.new()
   code   (Map.new()).keyof
@@ -2108,7 +1824,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Str(Any)
   oracle rakupp-3.14.0 → Mu
 
-- id     0239
+- id     0207
   from   inventory:Map.^methods
   cell   lazy | Map.new((a=>1))
   code   (Map.new((a=>1))).lazy
@@ -2117,7 +1833,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $((:a(1)).lazy.Seq)
   oracle rakupp-3.14.0 → $(:a(1),)
 
-- id     0240
+- id     0208
   from   inventory:Map.^methods
   cell   lazy | Map.new()
   code   (Map.new()).lazy
@@ -2126,7 +1842,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(().lazy.Seq)
   oracle rakupp-3.14.0 → $()
 
-- id     0241
+- id     0209
   from   inventory:Map.^methods
   cell   lazy-if(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).lazy-if(0)
@@ -2135,7 +1851,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(Map.new((:a(1))))
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0242
+- id     0210
   from   inventory:Map.^methods
   cell   lazy-if(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).lazy-if(1)
@@ -2144,7 +1860,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $((:a(1)).lazy.Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0243
+- id     0211
   from   inventory:Map.^methods
   cell   lazy-if(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).lazy-if(-1)
@@ -2153,7 +1869,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $((:a(1)).lazy.Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0244
+- id     0212
   from   inventory:Map.^methods
   cell   lazy-if("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).lazy-if("a")
@@ -2162,7 +1878,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $((:a(1)).lazy.Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0245
+- id     0213
   from   inventory:Map.^methods
   cell   lazy-if(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).lazy-if(Any)
@@ -2171,7 +1887,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(Map.new((:a(1))))
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0246
+- id     0214
   from   inventory:Map.^methods
   cell   lazy-if(0) | Map.new()
   code   (Map.new()).lazy-if(0)
@@ -2180,7 +1896,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(Map.new)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0247
+- id     0215
   from   inventory:Map.^methods
   cell   lazy-if(1) | Map.new()
   code   (Map.new()).lazy-if(1)
@@ -2189,7 +1905,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(().lazy.Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0248
+- id     0216
   from   inventory:Map.^methods
   cell   lazy-if(-1) | Map.new()
   code   (Map.new()).lazy-if(-1)
@@ -2198,7 +1914,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(().lazy.Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0249
+- id     0217
   from   inventory:Map.^methods
   cell   lazy-if("a") | Map.new()
   code   (Map.new()).lazy-if("a")
@@ -2207,7 +1923,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(().lazy.Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0250
+- id     0218
   from   inventory:Map.^methods
   cell   lazy-if(Any) | Map.new()
   code   (Map.new()).lazy-if(Any)
@@ -2216,7 +1932,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(Map.new)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0251
+- id     0219
   from   inventory:Map.^methods
   cell   lc | Map.new((a=>1))
   code   (Map.new((a=>1))).lc
@@ -2225,7 +1941,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0252
+- id     0220
   from   inventory:Map.^methods
   cell   lc | Map.new()
   code   (Map.new()).lc
@@ -2234,7 +1950,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0253
+- id     0221
   from   inventory:Map.^methods
   cell   log10 | Map.new((a=>1))
   code   (Map.new((a=>1))).log10
@@ -2243,7 +1959,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0254
+- id     0222
   from   inventory:Map.^methods
   cell   log10 | Map.new()
   code   (Map.new()).log10
@@ -2252,7 +1968,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → -Inf
   oracle rakupp-3.14.0 → -Inf
 
-- id     0255
+- id     0223
   from   inventory:Map.^methods
   cell   log2 | Map.new((a=>1))
   code   (Map.new((a=>1))).log2
@@ -2261,7 +1977,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0256
+- id     0224
   from   inventory:Map.^methods
   cell   log2 | Map.new()
   code   (Map.new()).log2
@@ -2270,7 +1986,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → -Inf
   oracle rakupp-3.14.0 → -Inf
 
-- id     0257
+- id     0225
   from   inventory:Map.^methods
   cell   nl-out | Map.new((a=>1))
   code   (Map.new((a=>1))).nl-out
@@ -2279,7 +1995,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0258
+- id     0226
   from   inventory:Map.^methods
   cell   nl-out | Map.new()
   code   (Map.new()).nl-out
@@ -2288,7 +2004,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0259
+- id     0227
   from   inventory:Map.^methods
   cell   none | Map.new((a=>1))
   code   (Map.new((a=>1))).none
@@ -2297,7 +2013,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → none(:a(1))
   oracle rakupp-3.14.0 → none(:a(1))
 
-- id     0260
+- id     0228
   from   inventory:Map.^methods
   cell   none | Map.new()
   code   (Map.new()).none
@@ -2306,7 +2022,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → none()
   oracle rakupp-3.14.0 → none()
 
-- id     0261
+- id     0229
   from   inventory:Map.^methods
   cell   not | Map.new((a=>1))
   code   (Map.new((a=>1))).not
@@ -2315,7 +2031,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0262
+- id     0230
   from   inventory:Map.^methods
   cell   not | Map.new()
   code   (Map.new()).not
@@ -2324,7 +2040,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0263
+- id     0231
   from   inventory:Map.^methods
   cell   of | Map.new((a=>1))
   code   (Map.new((a=>1))).of
@@ -2333,7 +2049,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0264
+- id     0232
   from   inventory:Map.^methods
   cell   of | Map.new()
   code   (Map.new()).of
@@ -2342,7 +2058,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0265
+- id     0233
   from   inventory:Map.^methods
   cell   one | Map.new((a=>1))
   code   (Map.new((a=>1))).one
@@ -2351,7 +2067,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → one(:a(1))
   oracle rakupp-3.14.0 → one(:a(1))
 
-- id     0266
+- id     0234
   from   inventory:Map.^methods
   cell   one | Map.new()
   code   (Map.new()).one
@@ -2360,7 +2076,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → one()
   oracle rakupp-3.14.0 → one()
 
-- id     0267
+- id     0235
   from   inventory:Map.^methods
   cell   ord | Map.new((a=>1))
   code   (Map.new((a=>1))).ord
@@ -2369,7 +2085,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 97
   oracle rakupp-3.14.0 → 97
 
-- id     0268
+- id     0236
   from   inventory:Map.^methods
   cell   ord | Map.new()
   code   (Map.new()).ord
@@ -2378,7 +2094,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0269
+- id     0237
   from   inventory:Map.^methods
   cell   ords | Map.new((a=>1))
   code   (Map.new((a=>1))).ords
@@ -2387,7 +2103,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $((97, 9, 49).Seq)
   oracle rakupp-3.14.0 → $(97, 9, 49).Seq
 
-- id     0270
+- id     0238
   from   inventory:Map.^methods
   cell   ords | Map.new()
   code   (Map.new()).ords
@@ -2396,7 +2112,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0271
+- id     0239
   from   inventory:Map.^methods
   cell   parse-names | Map.new((a=>1))
   code   (Map.new((a=>1))).parse-names
@@ -2404,7 +2120,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0272
+- id     0240
   from   inventory:Map.^methods
   cell   parse-names | Map.new()
   code   (Map.new()).parse-names
@@ -2413,7 +2129,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0273
+- id     0241
   from   inventory:Map.^methods
   cell   path | Map.new((a=>1))
   code   (Map.new((a=>1))).path
@@ -2421,8 +2137,11 @@ cols     Map.new((a=>1)) | Map.new()
   type   IO::Path
   oracle rakudo-2026.07 → IO::Path.new("a\t1", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
   oracle rakupp-3.14.0 → "a\t1"
+  verdict disputed
+  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
+  ruled  2026-08-16 against rakudo-2026.07
 
-- id     0274
+- id     0242
   from   inventory:Map.^methods
   cell   path | Map.new()
   code   (Map.new()).path
@@ -2430,7 +2149,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ""
 
-- id     0275
+- id     0243
   from   inventory:Map.^methods
   cell   race | Map.new((a=>1))
   code   (Map.new((a=>1))).race
@@ -2439,7 +2158,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
   oracle rakupp-3.14.0 → $(:a(1),)
 
-- id     0276
+- id     0244
   from   inventory:Map.^methods
   cell   race | Map.new()
   code   (Map.new()).race
@@ -2448,19 +2167,19 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
   oracle rakupp-3.14.0 → $()
 
-- id     0277
+- id     0245
   from   inventory:Map.^methods
   cell   rand | Map.new((a=>1))
   code   (Map.new((a=>1))).rand
-  is     0.5755342581658759e0
+  is     0.8019188577637683e0
   type   Num
-  oracle rakudo-2026.07 → 0.5755342581658759e0
-  oracle rakupp-3.14.0 → 0.6624056857737948e0
+  oracle rakudo-2026.07 → 0.8019188577637683e0
+  oracle rakupp-3.14.0 → 0.5517329776158704e0
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0278
+- id     0246
   from   inventory:Map.^methods
   cell   rand | Map.new()
   code   (Map.new()).rand
@@ -2469,7 +2188,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0279
+- id     0247
   from   inventory:Map.^methods
   cell   reverse | Map.new((a=>1))
   code   (Map.new((a=>1))).reverse
@@ -2478,7 +2197,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $((:a(1),).Seq)
   oracle rakupp-3.14.0 → $(:a(1),).Seq
 
-- id     0280
+- id     0248
   from   inventory:Map.^methods
   cell   reverse | Map.new()
   code   (Map.new()).reverse
@@ -2487,7 +2206,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0281
+- id     0249
   from   inventory:Map.^methods
   cell   roots(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).roots(0)
@@ -2496,7 +2215,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0282
+- id     0250
   from   inventory:Map.^methods
   cell   roots(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).roots(1)
@@ -2505,7 +2224,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → <1+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0283
+- id     0251
   from   inventory:Map.^methods
   cell   roots(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).roots(-1)
@@ -2514,7 +2233,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0284
+- id     0252
   from   inventory:Map.^methods
   cell   roots("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).roots("a")
@@ -2522,7 +2241,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0285
+- id     0253
   from   inventory:Map.^methods
   cell   roots(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).roots(Any)
@@ -2530,7 +2249,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0286
+- id     0254
   from   inventory:Map.^methods
   cell   roots(0) | Map.new()
   code   (Map.new()).roots(0)
@@ -2539,7 +2258,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0287
+- id     0255
   from   inventory:Map.^methods
   cell   roots(1) | Map.new()
   code   (Map.new()).roots(1)
@@ -2548,7 +2267,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → <0+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0288
+- id     0256
   from   inventory:Map.^methods
   cell   roots(-1) | Map.new()
   code   (Map.new()).roots(-1)
@@ -2557,7 +2276,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0289
+- id     0257
   from   inventory:Map.^methods
   cell   roots("a") | Map.new()
   code   (Map.new()).roots("a")
@@ -2565,7 +2284,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0290
+- id     0258
   from   inventory:Map.^methods
   cell   roots(Any) | Map.new()
   code   (Map.new()).roots(Any)
@@ -2573,7 +2292,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0291
+- id     0259
   from   inventory:Map.^methods
   cell   samecase(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).samecase(0)
@@ -2582,7 +2301,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0292
+- id     0260
   from   inventory:Map.^methods
   cell   samecase(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).samecase(1)
@@ -2591,7 +2310,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0293
+- id     0261
   from   inventory:Map.^methods
   cell   samecase(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).samecase(-1)
@@ -2600,7 +2319,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0294
+- id     0262
   from   inventory:Map.^methods
   cell   samecase("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).samecase("a")
@@ -2609,7 +2328,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0295
+- id     0263
   from   inventory:Map.^methods
   cell   samecase(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).samecase(Any)
@@ -2617,7 +2336,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0296
+- id     0264
   from   inventory:Map.^methods
   cell   samecase(0) | Map.new()
   code   (Map.new()).samecase(0)
@@ -2626,7 +2345,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0297
+- id     0265
   from   inventory:Map.^methods
   cell   samecase(1) | Map.new()
   code   (Map.new()).samecase(1)
@@ -2635,7 +2354,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0298
+- id     0266
   from   inventory:Map.^methods
   cell   samecase(-1) | Map.new()
   code   (Map.new()).samecase(-1)
@@ -2644,7 +2363,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0299
+- id     0267
   from   inventory:Map.^methods
   cell   samecase("a") | Map.new()
   code   (Map.new()).samecase("a")
@@ -2653,7 +2372,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0300
+- id     0268
   from   inventory:Map.^methods
   cell   samecase(Any) | Map.new()
   code   (Map.new()).samecase(Any)
@@ -2661,7 +2380,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0301
+- id     0269
   from   inventory:Map.^methods
   cell   samemark(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).samemark(0)
@@ -2670,7 +2389,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0302
+- id     0270
   from   inventory:Map.^methods
   cell   samemark(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).samemark(1)
@@ -2679,7 +2398,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0303
+- id     0271
   from   inventory:Map.^methods
   cell   samemark(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).samemark(-1)
@@ -2688,7 +2407,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0304
+- id     0272
   from   inventory:Map.^methods
   cell   samemark("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).samemark("a")
@@ -2697,7 +2416,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0305
+- id     0273
   from   inventory:Map.^methods
   cell   samemark(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).samemark(Any)
@@ -2705,7 +2424,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0306
+- id     0274
   from   inventory:Map.^methods
   cell   samemark(0) | Map.new()
   code   (Map.new()).samemark(0)
@@ -2714,7 +2433,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0307
+- id     0275
   from   inventory:Map.^methods
   cell   samemark(1) | Map.new()
   code   (Map.new()).samemark(1)
@@ -2723,7 +2442,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0308
+- id     0276
   from   inventory:Map.^methods
   cell   samemark(-1) | Map.new()
   code   (Map.new()).samemark(-1)
@@ -2732,7 +2451,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0309
+- id     0277
   from   inventory:Map.^methods
   cell   samemark("a") | Map.new()
   code   (Map.new()).samemark("a")
@@ -2741,7 +2460,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0310
+- id     0278
   from   inventory:Map.^methods
   cell   samemark(Any) | Map.new()
   code   (Map.new()).samemark(Any)
@@ -2749,7 +2468,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0311
+- id     0279
   from   inventory:Map.^methods
   cell   samespace(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).samespace(0)
@@ -2758,7 +2477,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0312
+- id     0280
   from   inventory:Map.^methods
   cell   samespace(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).samespace(1)
@@ -2767,7 +2486,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0313
+- id     0281
   from   inventory:Map.^methods
   cell   samespace(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).samespace(-1)
@@ -2776,7 +2495,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0314
+- id     0282
   from   inventory:Map.^methods
   cell   samespace("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).samespace("a")
@@ -2785,7 +2504,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0315
+- id     0283
   from   inventory:Map.^methods
   cell   samespace(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).samespace(Any)
@@ -2793,7 +2512,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0316
+- id     0284
   from   inventory:Map.^methods
   cell   samespace(0) | Map.new()
   code   (Map.new()).samespace(0)
@@ -2802,7 +2521,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0317
+- id     0285
   from   inventory:Map.^methods
   cell   samespace(1) | Map.new()
   code   (Map.new()).samespace(1)
@@ -2811,7 +2530,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0318
+- id     0286
   from   inventory:Map.^methods
   cell   samespace(-1) | Map.new()
   code   (Map.new()).samespace(-1)
@@ -2820,7 +2539,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0319
+- id     0287
   from   inventory:Map.^methods
   cell   samespace("a") | Map.new()
   code   (Map.new()).samespace("a")
@@ -2829,7 +2548,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0320
+- id     0288
   from   inventory:Map.^methods
   cell   samespace(Any) | Map.new()
   code   (Map.new()).samespace(Any)
@@ -2837,7 +2556,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0321
+- id     0289
   from   inventory:Map.^methods
   cell   sec | Map.new((a=>1))
   code   (Map.new((a=>1))).sec
@@ -2846,7 +2565,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1.8508157176809255e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0322
+- id     0290
   from   inventory:Map.^methods
   cell   sec | Map.new()
   code   (Map.new()).sec
@@ -2855,7 +2574,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0323
+- id     0291
   from   inventory:Map.^methods
   cell   sech | Map.new((a=>1))
   code   (Map.new((a=>1))).sech
@@ -2864,7 +2583,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0.6480542736638855e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0324
+- id     0292
   from   inventory:Map.^methods
   cell   sech | Map.new()
   code   (Map.new()).sech
@@ -2873,7 +2592,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0325
+- id     0293
   from   inventory:Map.^methods
   cell   self | Map.new((a=>1))
   code   (Map.new((a=>1))).self
@@ -2882,7 +2601,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(Map.new((:a(1))))
   oracle rakupp-3.14.0 → Map.new((:a(1)))
 
-- id     0326
+- id     0294
   from   inventory:Map.^methods
   cell   self | Map.new()
   code   (Map.new()).self
@@ -2891,7 +2610,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(Map.new)
   oracle rakupp-3.14.0 → Map.new(())
 
-- id     0327
+- id     0295
   from   inventory:Map.^methods
   cell   sign | Map.new((a=>1))
   code   (Map.new((a=>1))).sign
@@ -2900,7 +2619,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0328
+- id     0296
   from   inventory:Map.^methods
   cell   sign | Map.new()
   code   (Map.new()).sign
@@ -2909,7 +2628,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0329
+- id     0297
   from   inventory:Map.^methods
   cell   sin | Map.new((a=>1))
   code   (Map.new((a=>1))).sin
@@ -2918,7 +2637,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0.8414709848078965e0
   oracle rakupp-3.14.0 → 0.8414709848078965e0
 
-- id     0330
+- id     0298
   from   inventory:Map.^methods
   cell   sin | Map.new()
   code   (Map.new()).sin
@@ -2927,7 +2646,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0331
+- id     0299
   from   inventory:Map.^methods
   cell   sinh | Map.new((a=>1))
   code   (Map.new((a=>1))).sinh
@@ -2936,7 +2655,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1.1752011936438014e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0332
+- id     0300
   from   inventory:Map.^methods
   cell   sinh | Map.new()
   code   (Map.new()).sinh
@@ -2945,7 +2664,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0333
+- id     0301
   from   inventory:Map.^methods
   cell   so | Map.new((a=>1))
   code   (Map.new((a=>1))).so
@@ -2954,7 +2673,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0334
+- id     0302
   from   inventory:Map.^methods
   cell   so | Map.new()
   code   (Map.new()).so
@@ -2963,7 +2682,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0335
+- id     0303
   from   inventory:Map.^methods
   cell   sqrt | Map.new((a=>1))
   code   (Map.new((a=>1))).sqrt
@@ -2972,7 +2691,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1e0
   oracle rakupp-3.14.0 → 1e0
 
-- id     0336
+- id     0304
   from   inventory:Map.^methods
   cell   sqrt | Map.new()
   code   (Map.new()).sqrt
@@ -2981,7 +2700,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0337
+- id     0305
   from   inventory:Map.^methods
   cell   store-odd-number(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).store-odd-number(0)
@@ -2989,7 +2708,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0338
+- id     0306
   from   inventory:Map.^methods
   cell   store-odd-number(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).store-odd-number(1)
@@ -2997,7 +2716,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0339
+- id     0307
   from   inventory:Map.^methods
   cell   store-odd-number(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).store-odd-number(-1)
@@ -3005,7 +2724,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0340
+- id     0308
   from   inventory:Map.^methods
   cell   store-odd-number("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).store-odd-number("a")
@@ -3013,7 +2732,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0341
+- id     0309
   from   inventory:Map.^methods
   cell   store-odd-number(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).store-odd-number(Any)
@@ -3021,7 +2740,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0342
+- id     0310
   from   inventory:Map.^methods
   cell   store-odd-number(0) | Map.new()
   code   (Map.new()).store-odd-number(0)
@@ -3029,7 +2748,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0343
+- id     0311
   from   inventory:Map.^methods
   cell   store-odd-number(1) | Map.new()
   code   (Map.new()).store-odd-number(1)
@@ -3037,7 +2756,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0344
+- id     0312
   from   inventory:Map.^methods
   cell   store-odd-number(-1) | Map.new()
   code   (Map.new()).store-odd-number(-1)
@@ -3045,7 +2764,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0345
+- id     0313
   from   inventory:Map.^methods
   cell   store-odd-number("a") | Map.new()
   code   (Map.new()).store-odd-number("a")
@@ -3053,7 +2772,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0346
+- id     0314
   from   inventory:Map.^methods
   cell   store-odd-number(Any) | Map.new()
   code   (Map.new()).store-odd-number(Any)
@@ -3061,7 +2780,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0347
+- id     0315
   from   inventory:Map.^methods
   cell   sum | Map.new((a=>1))
   code   (Map.new((a=>1))).sum
@@ -3069,7 +2788,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → 0e0
 
-- id     0348
+- id     0316
   from   inventory:Map.^methods
   cell   sum | Map.new()
   code   (Map.new()).sum
@@ -3078,7 +2797,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0349
+- id     0317
   from   inventory:Map.^methods
   cell   take | Map.new((a=>1))
   code   (Map.new((a=>1))).take
@@ -3086,7 +2805,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → Map.new((:a(1)))
 
-- id     0350
+- id     0318
   from   inventory:Map.^methods
   cell   take | Map.new()
   code   (Map.new()).take
@@ -3094,7 +2813,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → Map.new(())
 
-- id     0351
+- id     0319
   from   inventory:Map.^methods
   cell   tan | Map.new((a=>1))
   code   (Map.new((a=>1))).tan
@@ -3103,7 +2822,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1.557407724654902e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0352
+- id     0320
   from   inventory:Map.^methods
   cell   tan | Map.new()
   code   (Map.new()).tan
@@ -3112,7 +2831,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0353
+- id     0321
   from   inventory:Map.^methods
   cell   tanh | Map.new((a=>1))
   code   (Map.new((a=>1))).tanh
@@ -3121,7 +2840,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0.7615941559557649e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0354
+- id     0322
   from   inventory:Map.^methods
   cell   tanh | Map.new()
   code   (Map.new()).tanh
@@ -3130,7 +2849,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0355
+- id     0323
   from   inventory:Map.^methods
   cell   tc | Map.new((a=>1))
   code   (Map.new((a=>1))).tc
@@ -3139,7 +2858,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "A\t1"
   oracle rakupp-3.14.0 → "A\t1"
 
-- id     0356
+- id     0324
   from   inventory:Map.^methods
   cell   tc | Map.new()
   code   (Map.new()).tc
@@ -3148,7 +2867,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0357
+- id     0325
   from   inventory:Map.^methods
   cell   tclc | Map.new((a=>1))
   code   (Map.new((a=>1))).tclc
@@ -3157,7 +2876,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "A\t1"
   oracle rakupp-3.14.0 → "A\t1"
 
-- id     0358
+- id     0326
   from   inventory:Map.^methods
   cell   tclc | Map.new()
   code   (Map.new()).tclc
@@ -3166,7 +2885,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0359
+- id     0327
   from   inventory:Map.^methods
   cell   trim | Map.new((a=>1))
   code   (Map.new((a=>1))).trim
@@ -3175,7 +2894,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0360
+- id     0328
   from   inventory:Map.^methods
   cell   trim | Map.new()
   code   (Map.new()).trim
@@ -3184,7 +2903,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0361
+- id     0329
   from   inventory:Map.^methods
   cell   trim-leading | Map.new((a=>1))
   code   (Map.new((a=>1))).trim-leading
@@ -3193,7 +2912,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0362
+- id     0330
   from   inventory:Map.^methods
   cell   trim-leading | Map.new()
   code   (Map.new()).trim-leading
@@ -3202,7 +2921,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0363
+- id     0331
   from   inventory:Map.^methods
   cell   trim-trailing | Map.new((a=>1))
   code   (Map.new((a=>1))).trim-trailing
@@ -3211,7 +2930,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "a\t1"
   oracle rakupp-3.14.0 → "a\t1"
 
-- id     0364
+- id     0332
   from   inventory:Map.^methods
   cell   trim-trailing | Map.new()
   code   (Map.new()).trim-trailing
@@ -3220,7 +2939,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0365
+- id     0333
   from   inventory:Map.^methods
   cell   truncate | Map.new((a=>1))
   code   (Map.new((a=>1))).truncate
@@ -3229,7 +2948,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 1
 
-- id     0366
+- id     0334
   from   inventory:Map.^methods
   cell   truncate | Map.new()
   code   (Map.new()).truncate
@@ -3238,7 +2957,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0367
+- id     0335
   from   inventory:Map.^methods
   cell   uc | Map.new((a=>1))
   code   (Map.new((a=>1))).uc
@@ -3247,7 +2966,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "A\t1"
   oracle rakupp-3.14.0 → "A\t1"
 
-- id     0368
+- id     0336
   from   inventory:Map.^methods
   cell   uc | Map.new()
   code   (Map.new()).uc
@@ -3256,7 +2975,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0369
+- id     0337
   from   inventory:Map.^methods
   cell   uint | Map.new((a=>1))
   code   (Map.new((a=>1))).uint
@@ -3265,7 +2984,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0370
+- id     0338
   from   inventory:Map.^methods
   cell   uint | Map.new()
   code   (Map.new()).uint
@@ -3274,7 +2993,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0371
+- id     0339
   from   inventory:Map.^methods
   cell   uint16 | Map.new((a=>1))
   code   (Map.new((a=>1))).uint16
@@ -3283,7 +3002,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0372
+- id     0340
   from   inventory:Map.^methods
   cell   uint16 | Map.new()
   code   (Map.new()).uint16
@@ -3292,7 +3011,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0373
+- id     0341
   from   inventory:Map.^methods
   cell   uint32 | Map.new((a=>1))
   code   (Map.new((a=>1))).uint32
@@ -3301,7 +3020,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0374
+- id     0342
   from   inventory:Map.^methods
   cell   uint32 | Map.new()
   code   (Map.new()).uint32
@@ -3310,7 +3029,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0375
+- id     0343
   from   inventory:Map.^methods
   cell   uint64 | Map.new((a=>1))
   code   (Map.new((a=>1))).uint64
@@ -3319,7 +3038,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0376
+- id     0344
   from   inventory:Map.^methods
   cell   uint64 | Map.new()
   code   (Map.new()).uint64
@@ -3328,7 +3047,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0377
+- id     0345
   from   inventory:Map.^methods
   cell   uint8 | Map.new((a=>1))
   code   (Map.new((a=>1))).uint8
@@ -3337,7 +3056,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0378
+- id     0346
   from   inventory:Map.^methods
   cell   uint8 | Map.new()
   code   (Map.new()).uint8
@@ -3346,7 +3065,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0379
+- id     0347
   from   inventory:Map.^methods
   cell   uniname | Map.new((a=>1))
   code   (Map.new((a=>1))).uniname
@@ -3355,7 +3074,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "LATIN SMALL LETTER A"
   oracle rakupp-3.14.0 → "LATIN SMALL LETTER A"
 
-- id     0380
+- id     0348
   from   inventory:Map.^methods
   cell   uniname | Map.new()
   code   (Map.new()).uniname
@@ -3364,7 +3083,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → "<unassigned>"
 
-- id     0381
+- id     0349
   from   inventory:Map.^methods
   cell   uninames | Map.new((a=>1))
   code   (Map.new((a=>1))).uninames
@@ -3373,7 +3092,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(("LATIN SMALL LETTER A", "<control-0009>", "DIGIT ONE").Seq)
   oracle rakupp-3.14.0 → $("LATIN SMALL LETTER A", "TAB", "DIGIT ONE").Seq
 
-- id     0382
+- id     0350
   from   inventory:Map.^methods
   cell   uninames | Map.new()
   code   (Map.new()).uninames
@@ -3382,7 +3101,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0383
+- id     0351
   from   inventory:Map.^methods
   cell   uniparse | Map.new((a=>1))
   code   (Map.new((a=>1))).uniparse
@@ -3390,7 +3109,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0384
+- id     0352
   from   inventory:Map.^methods
   cell   uniparse | Map.new()
   code   (Map.new()).uniparse
@@ -3399,7 +3118,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0385
+- id     0353
   from   inventory:Map.^methods
   cell   uniprop(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).uniprop(0)
@@ -3407,7 +3126,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0386
+- id     0354
   from   inventory:Map.^methods
   cell   uniprop(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).uniprop(1)
@@ -3415,7 +3134,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0387
+- id     0355
   from   inventory:Map.^methods
   cell   uniprop(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).uniprop(-1)
@@ -3423,7 +3142,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0388
+- id     0356
   from   inventory:Map.^methods
   cell   uniprop("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).uniprop("a")
@@ -3432,7 +3151,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "0"
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0389
+- id     0357
   from   inventory:Map.^methods
   cell   uniprop(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).uniprop(Any)
@@ -3440,7 +3159,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0390
+- id     0358
   from   inventory:Map.^methods
   cell   uniprop(0) | Map.new()
   code   (Map.new()).uniprop(0)
@@ -3448,7 +3167,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0391
+- id     0359
   from   inventory:Map.^methods
   cell   uniprop(1) | Map.new()
   code   (Map.new()).uniprop(1)
@@ -3456,7 +3175,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0392
+- id     0360
   from   inventory:Map.^methods
   cell   uniprop(-1) | Map.new()
   code   (Map.new()).uniprop(-1)
@@ -3464,7 +3183,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0393
+- id     0361
   from   inventory:Map.^methods
   cell   uniprop("a") | Map.new()
   code   (Map.new()).uniprop("a")
@@ -3473,7 +3192,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → ""
 
-- id     0394
+- id     0362
   from   inventory:Map.^methods
   cell   uniprop(Any) | Map.new()
   code   (Map.new()).uniprop(Any)
@@ -3481,7 +3200,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0395
+- id     0363
   from   inventory:Map.^methods
   cell   uniprops(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).uniprops(0)
@@ -3489,7 +3208,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False, Bool::False, Bool::False).Seq
 
-- id     0396
+- id     0364
   from   inventory:Map.^methods
   cell   uniprops(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).uniprops(1)
@@ -3497,7 +3216,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False, Bool::False, Bool::False).Seq
 
-- id     0397
+- id     0365
   from   inventory:Map.^methods
   cell   uniprops(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).uniprops(-1)
@@ -3505,7 +3224,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False, Bool::False, Bool::False).Seq
 
-- id     0398
+- id     0366
   from   inventory:Map.^methods
   cell   uniprops("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).uniprops("a")
@@ -3514,7 +3233,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(("0", "0", "0").Seq)
   oracle rakupp-3.14.0 → $(Bool::False, Bool::False, Bool::False).Seq
 
-- id     0399
+- id     0367
   from   inventory:Map.^methods
   cell   uniprops(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).uniprops(Any)
@@ -3522,7 +3241,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $(Bool::False, Bool::False, Bool::False).Seq
 
-- id     0400
+- id     0368
   from   inventory:Map.^methods
   cell   uniprops(0) | Map.new()
   code   (Map.new()).uniprops(0)
@@ -3530,7 +3249,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0401
+- id     0369
   from   inventory:Map.^methods
   cell   uniprops(1) | Map.new()
   code   (Map.new()).uniprops(1)
@@ -3538,7 +3257,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0402
+- id     0370
   from   inventory:Map.^methods
   cell   uniprops(-1) | Map.new()
   code   (Map.new()).uniprops(-1)
@@ -3546,7 +3265,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0403
+- id     0371
   from   inventory:Map.^methods
   cell   uniprops("a") | Map.new()
   code   (Map.new()).uniprops("a")
@@ -3555,7 +3274,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0404
+- id     0372
   from   inventory:Map.^methods
   cell   uniprops(Any) | Map.new()
   code   (Map.new()).uniprops(Any)
@@ -3563,7 +3282,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0405
+- id     0373
   from   inventory:Map.^methods
   cell   unival | Map.new((a=>1))
   code   (Map.new((a=>1))).unival
@@ -3572,7 +3291,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → NaN
 
-- id     0406
+- id     0374
   from   inventory:Map.^methods
   cell   unival | Map.new()
   code   (Map.new()).unival
@@ -3581,7 +3300,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → NaN
   oracle rakupp-3.14.0 → Any
 
-- id     0407
+- id     0375
   from   inventory:Map.^methods
   cell   univals | Map.new((a=>1))
   code   (Map.new((a=>1))).univals
@@ -3590,7 +3309,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $((NaN, NaN, 1).Seq)
   oracle rakupp-3.14.0 → $(NaN, NaN, 1)
 
-- id     0408
+- id     0376
   from   inventory:Map.^methods
   cell   univals | Map.new()
   code   (Map.new()).univals
@@ -3599,7 +3318,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $()
 
-- id     0409
+- id     0377
   from   inventory:Map.^methods
   cell   unpolar(0) | Map.new((a=>1))
   code   (Map.new((a=>1))).unpolar(0)
@@ -3608,7 +3327,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → <1+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0410
+- id     0378
   from   inventory:Map.^methods
   cell   unpolar(1) | Map.new((a=>1))
   code   (Map.new((a=>1))).unpolar(1)
@@ -3617,7 +3336,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0411
+- id     0379
   from   inventory:Map.^methods
   cell   unpolar(-1) | Map.new((a=>1))
   code   (Map.new((a=>1))).unpolar(-1)
@@ -3626,7 +3345,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → <0.5403023058681398-0.8414709848078965i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0412
+- id     0380
   from   inventory:Map.^methods
   cell   unpolar("a") | Map.new((a=>1))
   code   (Map.new((a=>1))).unpolar("a")
@@ -3634,7 +3353,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0413
+- id     0381
   from   inventory:Map.^methods
   cell   unpolar(Any) | Map.new((a=>1))
   code   (Map.new((a=>1))).unpolar(Any)
@@ -3643,7 +3362,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → <1+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0414
+- id     0382
   from   inventory:Map.^methods
   cell   unpolar(0) | Map.new()
   code   (Map.new()).unpolar(0)
@@ -3652,7 +3371,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → <0+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0415
+- id     0383
   from   inventory:Map.^methods
   cell   unpolar(1) | Map.new()
   code   (Map.new()).unpolar(1)
@@ -3661,7 +3380,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → <0+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0416
+- id     0384
   from   inventory:Map.^methods
   cell   unpolar(-1) | Map.new()
   code   (Map.new()).unpolar(-1)
@@ -3670,7 +3389,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → <0-0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0417
+- id     0385
   from   inventory:Map.^methods
   cell   unpolar("a") | Map.new()
   code   (Map.new()).unpolar("a")
@@ -3678,7 +3397,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0418
+- id     0386
   from   inventory:Map.^methods
   cell   unpolar(Any) | Map.new()
   code   (Map.new()).unpolar(Any)
@@ -3687,7 +3406,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → <0+0i>
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0419
+- id     0387
   from   inventory:Map.^methods
   cell   wordcase | Map.new((a=>1))
   code   (Map.new((a=>1))).wordcase
@@ -3696,7 +3415,7 @@ cols     Map.new((a=>1)) | Map.new()
   oracle rakudo-2026.07 → "A\t1"
   oracle rakupp-3.14.0 → "A\t1"
 
-- id     0420
+- id     0388
   from   inventory:Map.^methods
   cell   wordcase | Map.new()
   code   (Map.new()).wordcase

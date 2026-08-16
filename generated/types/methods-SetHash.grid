@@ -2,13 +2,13 @@ atom     methods/SetHash
 source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
-axes     Bool | CREATE | Capture | DEFINITE | HOW | INSTANTIATE-GENERIC | Int | Map | Num | Numeric | OBJECTIFIER | POPULATE | RAW-HASH | REPR | Real | VAR | WHAT | WHERE | WHICHIFY | WHO | all | any | bless | cache | can | chrs | clone | default | does | is-generic | item | iterator | join | keyof | lazy-if | nl-out | none | not | of | one | reverse | self | set | so | sum | take | total | unset
-cols     SetHash.new(1,2) | SetHash.new
+axes     Bool | Capture | DEFINITE | HOW | Int | Map | Num | Numeric | REPR | Real | VAR | WHAT | WHO | all | any | bless | cache | can | chrs | clone | default | does | is-generic | item | iterator | join | keyof | lazy-if | nl-out | none | not | of | one | reverse | self | set | so | sum | take | total | unset
+cols     SetHash.new(1) | SetHash.new
 
 - id     0001
   from   inventory:SetHash.^methods
-  cell   Bool | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).Bool
+  cell   Bool | SetHash.new(1)
+  code   (SetHash.new(1)).Bool
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
@@ -25,38 +25,14 @@ cols     SetHash.new(1,2) | SetHash.new
 
 - id     0003
   from   inventory:SetHash.^methods
-  cell   CREATE | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).CREATE
-  is     UNRENDERABLE
-  type   SetHash
-  oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference produced no usable answer for this cell
-  ruled  2026-08-15 against rakudo-2026.07
+  cell   Capture | SetHash.new(1)
+  code   (SetHash.new(1)).Capture
+  is     \("1" => Bool::True)
+  type   Capture
+  oracle rakudo-2026.07 → \("1" => Bool::True)
+  oracle rakupp-3.14.0 → \(:1(Bool::True))
 
 - id     0004
-  from   inventory:SetHash.^methods
-  cell   CREATE | SetHash.new
-  code   (SetHash.new).CREATE
-  is     UNRENDERABLE
-  type   SetHash
-  oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference produced no usable answer for this cell
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0005
-  from   inventory:SetHash.^methods
-  cell   Capture | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).Capture
-  is     \("1" => Bool::True, "2" => Bool::True)
-  type   Capture
-  oracle rakudo-2026.07 → \("1" => Bool::True, "2" => Bool::True)
-  oracle rakupp-3.14.0 → \(:1(Bool::True), :2(Bool::True))
-
-- id     0006
   from   inventory:SetHash.^methods
   cell   Capture | SetHash.new
   code   (SetHash.new).Capture
@@ -65,16 +41,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → \()
   oracle rakupp-3.14.0 → \()
 
-- id     0007
+- id     0005
   from   inventory:SetHash.^methods
-  cell   DEFINITE | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).DEFINITE
+  cell   DEFINITE | SetHash.new(1)
+  code   (SetHash.new(1)).DEFINITE
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0008
+- id     0006
   from   inventory:SetHash.^methods
   cell   DEFINITE | SetHash.new
   code   (SetHash.new).DEFINITE
@@ -83,10 +59,10 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0009
+- id     0007
   from   inventory:SetHash.^methods
-  cell   HOW | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).HOW
+  cell   HOW | SetHash.new(1)
+  code   (SetHash.new(1)).HOW
   is     UNRENDERABLE
   type   Perl6::Metamodel::ClassHOW+{<anon>}
   oracle rakudo-2026.07 → UNRENDERABLE
@@ -95,7 +71,7 @@ cols     SetHash.new(1,2) | SetHash.new
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0010
+- id     0008
   from   inventory:SetHash.^methods
   cell   HOW | SetHash.new
   code   (SetHash.new).HOW
@@ -107,96 +83,16 @@ cols     SetHash.new(1,2) | SetHash.new
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0011
+- id     0009
   from   inventory:SetHash.^methods
-  cell   INSTANTIATE-GENERIC(0) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0012
-  from   inventory:SetHash.^methods
-  cell   INSTANTIATE-GENERIC(1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0013
-  from   inventory:SetHash.^methods
-  cell   INSTANTIATE-GENERIC(-1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0014
-  from   inventory:SetHash.^methods
-  cell   INSTANTIATE-GENERIC("a") | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0015
-  from   inventory:SetHash.^methods
-  cell   INSTANTIATE-GENERIC(Any) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0016
-  from   inventory:SetHash.^methods
-  cell   INSTANTIATE-GENERIC(0) | SetHash.new
-  code   (SetHash.new).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0017
-  from   inventory:SetHash.^methods
-  cell   INSTANTIATE-GENERIC(1) | SetHash.new
-  code   (SetHash.new).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0018
-  from   inventory:SetHash.^methods
-  cell   INSTANTIATE-GENERIC(-1) | SetHash.new
-  code   (SetHash.new).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0019
-  from   inventory:SetHash.^methods
-  cell   INSTANTIATE-GENERIC("a") | SetHash.new
-  code   (SetHash.new).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0020
-  from   inventory:SetHash.^methods
-  cell   INSTANTIATE-GENERIC(Any) | SetHash.new
-  code   (SetHash.new).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0021
-  from   inventory:SetHash.^methods
-  cell   Int | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).Int
-  is     2
+  cell   Int | SetHash.new(1)
+  code   (SetHash.new(1)).Int
+  is     1
   type   Int
-  oracle rakudo-2026.07 → 2
-  oracle rakupp-3.14.0 → 2
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
 
-- id     0022
+- id     0010
   from   inventory:SetHash.^methods
   cell   Int | SetHash.new
   code   (SetHash.new).Int
@@ -205,16 +101,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0023
+- id     0011
   from   inventory:SetHash.^methods
-  cell   Map | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).Map
-  is     $(Map.new(("1" => Bool::True,"2" => Bool::True)))
+  cell   Map | SetHash.new(1)
+  code   (SetHash.new(1)).Map
+  is     $(Map.new(("1" => Bool::True)))
   type   Map
-  oracle rakudo-2026.07 → $(Map.new(("1" => Bool::True,"2" => Bool::True)))
-  oracle rakupp-3.14.0 → Map.new(("1" => Bool::True,"2" => Bool::True))
+  oracle rakudo-2026.07 → $(Map.new(("1" => Bool::True)))
+  oracle rakupp-3.14.0 → Map.new(("1" => Bool::True))
 
-- id     0024
+- id     0012
   from   inventory:SetHash.^methods
   cell   Map | SetHash.new
   code   (SetHash.new).Map
@@ -223,16 +119,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → $(Map.new)
   oracle rakupp-3.14.0 → Map.new(())
 
-- id     0025
+- id     0013
   from   inventory:SetHash.^methods
-  cell   Num | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).Num
-  is     2e0
+  cell   Num | SetHash.new(1)
+  code   (SetHash.new(1)).Num
+  is     1e0
   type   Num
-  oracle rakudo-2026.07 → 2e0
-  oracle rakupp-3.14.0 → 2e0
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-3.14.0 → 1e0
 
-- id     0026
+- id     0014
   from   inventory:SetHash.^methods
   cell   Num | SetHash.new
   code   (SetHash.new).Num
@@ -241,16 +137,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → 0e0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0027
+- id     0015
   from   inventory:SetHash.^methods
-  cell   Numeric | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).Numeric
-  is     2
+  cell   Numeric | SetHash.new(1)
+  code   (SetHash.new(1)).Numeric
+  is     1
   type   Int
-  oracle rakudo-2026.07 → 2
-  oracle rakupp-3.14.0 → 2e0
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1e0
 
-- id     0028
+- id     0016
   from   inventory:SetHash.^methods
   cell   Numeric | SetHash.new
   code   (SetHash.new).Numeric
@@ -259,157 +155,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0029
+- id     0017
   from   inventory:SetHash.^methods
-  cell   OBJECTIFIER | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).OBJECTIFIER
-  is     -> $value { #`(Block|6464281959448) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> $value { #`(Block|6464281959448) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0030
-  from   inventory:SetHash.^methods
-  cell   OBJECTIFIER | SetHash.new
-  code   (SetHash.new).OBJECTIFIER
-  is     -> $value { #`(Block|6464281959808) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> $value { #`(Block|6464281959808) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0031
-  from   inventory:SetHash.^methods
-  cell   POPULATE(0) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).POPULATE(0)
-  is     SetHash.new(2,1)
-  type   SetHash
-  oracle rakudo-2026.07 → SetHash.new(2,1)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0032
-  from   inventory:SetHash.^methods
-  cell   POPULATE(1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).POPULATE(1)
-  is     SetHash.new(2,1)
-  type   SetHash
-  oracle rakudo-2026.07 → SetHash.new(2,1)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0033
-  from   inventory:SetHash.^methods
-  cell   POPULATE(-1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).POPULATE(-1)
-  is     SetHash.new(2,1)
-  type   SetHash
-  oracle rakudo-2026.07 → SetHash.new(2,1)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0034
-  from   inventory:SetHash.^methods
-  cell   POPULATE("a") | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).POPULATE("a")
-  is     SetHash.new(2,1)
-  type   SetHash
-  oracle rakudo-2026.07 → SetHash.new(2,1)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0035
-  from   inventory:SetHash.^methods
-  cell   POPULATE(Any) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).POPULATE(Any)
-  is     SetHash.new(1,2)
-  type   SetHash
-  oracle rakudo-2026.07 → SetHash.new(1,2)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0036
-  from   inventory:SetHash.^methods
-  cell   POPULATE(0) | SetHash.new
-  code   (SetHash.new).POPULATE(0)
-  is     SetHash.new()
-  type   SetHash
-  oracle rakudo-2026.07 → SetHash.new()
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0037
-  from   inventory:SetHash.^methods
-  cell   POPULATE(1) | SetHash.new
-  code   (SetHash.new).POPULATE(1)
-  is     SetHash.new()
-  type   SetHash
-  oracle rakudo-2026.07 → SetHash.new()
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0038
-  from   inventory:SetHash.^methods
-  cell   POPULATE(-1) | SetHash.new
-  code   (SetHash.new).POPULATE(-1)
-  is     SetHash.new()
-  type   SetHash
-  oracle rakudo-2026.07 → SetHash.new()
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0039
-  from   inventory:SetHash.^methods
-  cell   POPULATE("a") | SetHash.new
-  code   (SetHash.new).POPULATE("a")
-  is     SetHash.new()
-  type   SetHash
-  oracle rakudo-2026.07 → SetHash.new()
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0040
-  from   inventory:SetHash.^methods
-  cell   POPULATE(Any) | SetHash.new
-  code   (SetHash.new).POPULATE(Any)
-  is     SetHash.new()
-  type   SetHash
-  oracle rakudo-2026.07 → SetHash.new()
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0041
-  from   inventory:SetHash.^methods
-  cell   RAW-HASH | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).RAW-HASH
-  is     Int|1
-  type   1
-  oracle rakudo-2026.07 → Int|1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0042
-  from   inventory:SetHash.^methods
-  cell   RAW-HASH | SetHash.new
-  code   (SetHash.new).RAW-HASH
-  is     
-  type   Rakudo::Internals::IterationSet
-  oracle rakudo-2026.07 → 
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0043
-  from   inventory:SetHash.^methods
-  cell   REPR | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).REPR
+  cell   REPR | SetHash.new(1)
+  code   (SetHash.new(1)).REPR
   is     "P6opaque"
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0044
+- id     0018
   from   inventory:SetHash.^methods
   cell   REPR | SetHash.new
   code   (SetHash.new).REPR
@@ -418,16 +173,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0045
+- id     0019
   from   inventory:SetHash.^methods
-  cell   Real | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).Real
-  is     2
+  cell   Real | SetHash.new(1)
+  code   (SetHash.new(1)).Real
+  is     1
   type   Int
-  oracle rakudo-2026.07 → 2
-  oracle rakupp-3.14.0 → 2e0
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1e0
 
-- id     0046
+- id     0020
   from   inventory:SetHash.^methods
   cell   Real | SetHash.new
   code   (SetHash.new).Real
@@ -436,19 +191,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0e0
 
-- id     0047
+- id     0021
   from   inventory:SetHash.^methods
-  cell   VAR | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).VAR
-  is     SetHash.new(1,2)
+  cell   VAR | SetHash.new(1)
+  code   (SetHash.new(1)).VAR
+  is     SetHash.new(1)
   type   SetHash
-  oracle rakudo-2026.07 → SetHash.new(1,2)
-  oracle rakupp-3.14.0 → SetHash.new(1,2)
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  oracle rakudo-2026.07 → SetHash.new(1)
+  oracle rakupp-3.14.0 → SetHash.new(1)
 
-- id     0048
+- id     0022
   from   inventory:SetHash.^methods
   cell   VAR | SetHash.new
   code   (SetHash.new).VAR
@@ -457,16 +209,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → SetHash.new()
   oracle rakupp-3.14.0 → SetHash.new()
 
-- id     0049
+- id     0023
   from   inventory:SetHash.^methods
-  cell   WHAT | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).WHAT
+  cell   WHAT | SetHash.new(1)
+  code   (SetHash.new(1)).WHAT
   is     SetHash
   type   SetHash
   oracle rakudo-2026.07 → SetHash
   oracle rakupp-3.14.0 → SetHash
 
-- id     0050
+- id     0024
   from   inventory:SetHash.^methods
   cell   WHAT | SetHash.new
   code   (SetHash.new).WHAT
@@ -475,136 +227,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → SetHash
   oracle rakupp-3.14.0 → SetHash
 
-- id     0051
+- id     0025
   from   inventory:SetHash.^methods
-  cell   WHERE | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).WHERE
-  is     6464105849408
-  type   Int
-  oracle rakudo-2026.07 → 6464105849408
-  oracle rakupp-3.14.0 → 140678994750568
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0052
-  from   inventory:SetHash.^methods
-  cell   WHERE | SetHash.new
-  code   (SetHash.new).WHERE
-  is     6464106194744
-  type   Int
-  oracle rakudo-2026.07 → 6464106194744
-  oracle rakupp-3.14.0 → 140678994750568
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0053
-  from   inventory:SetHash.^methods
-  cell   WHICHIFY(0) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).WHICHIFY(0)
-  is     ValueObjAt.new("Int|0")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|0")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0054
-  from   inventory:SetHash.^methods
-  cell   WHICHIFY(1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).WHICHIFY(1)
-  is     ValueObjAt.new("Int|1")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|1")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0055
-  from   inventory:SetHash.^methods
-  cell   WHICHIFY(-1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).WHICHIFY(-1)
-  is     ValueObjAt.new("Int|-1")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|-1")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0056
-  from   inventory:SetHash.^methods
-  cell   WHICHIFY("a") | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).WHICHIFY("a")
-  is     ValueObjAt.new("Str|a")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Str|a")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0057
-  from   inventory:SetHash.^methods
-  cell   WHICHIFY(Any) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).WHICHIFY(Any)
-  is     ValueObjAt.new("Any|U6464113205624")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Any|U6464113205624")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0058
-  from   inventory:SetHash.^methods
-  cell   WHICHIFY(0) | SetHash.new
-  code   (SetHash.new).WHICHIFY(0)
-  is     ValueObjAt.new("Int|0")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|0")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0059
-  from   inventory:SetHash.^methods
-  cell   WHICHIFY(1) | SetHash.new
-  code   (SetHash.new).WHICHIFY(1)
-  is     ValueObjAt.new("Int|1")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|1")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0060
-  from   inventory:SetHash.^methods
-  cell   WHICHIFY(-1) | SetHash.new
-  code   (SetHash.new).WHICHIFY(-1)
-  is     ValueObjAt.new("Int|-1")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Int|-1")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0061
-  from   inventory:SetHash.^methods
-  cell   WHICHIFY("a") | SetHash.new
-  code   (SetHash.new).WHICHIFY("a")
-  is     ValueObjAt.new("Str|a")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Str|a")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0062
-  from   inventory:SetHash.^methods
-  cell   WHICHIFY(Any) | SetHash.new
-  code   (SetHash.new).WHICHIFY(Any)
-  is     ValueObjAt.new("Any|U6464113205624")
-  type   ValueObjAt
-  oracle rakudo-2026.07 → ValueObjAt.new("Any|U6464113205624")
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0063
-  from   inventory:SetHash.^methods
-  cell   WHO | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).WHO
+  cell   WHO | SetHash.new(1)
+  code   (SetHash.new(1)).WHO
   is     ${}
   type   Stash
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0064
+- id     0026
   from   inventory:SetHash.^methods
   cell   WHO | SetHash.new
   code   (SetHash.new).WHO
@@ -613,16 +245,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0065
+- id     0027
   from   inventory:SetHash.^methods
-  cell   all | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).all
-  is     all(1 => Bool::True, 2 => Bool::True)
+  cell   all | SetHash.new(1)
+  code   (SetHash.new(1)).all
+  is     all(1 => Bool::True)
   type   Junction
-  oracle rakudo-2026.07 → all(1 => Bool::True, 2 => Bool::True)
-  oracle rakupp-3.14.0 → all(1 => Bool::True, 2 => Bool::True)
+  oracle rakudo-2026.07 → all(1 => Bool::True)
+  oracle rakupp-3.14.0 → all(1 => Bool::True)
 
-- id     0066
+- id     0028
   from   inventory:SetHash.^methods
   cell   all | SetHash.new
   code   (SetHash.new).all
@@ -631,16 +263,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → all()
   oracle rakupp-3.14.0 → all()
 
-- id     0067
+- id     0029
   from   inventory:SetHash.^methods
-  cell   any | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).any
-  is     any(1 => Bool::True, 2 => Bool::True)
+  cell   any | SetHash.new(1)
+  code   (SetHash.new(1)).any
+  is     any(1 => Bool::True)
   type   Junction
-  oracle rakudo-2026.07 → any(1 => Bool::True, 2 => Bool::True)
-  oracle rakupp-3.14.0 → any(1 => Bool::True, 2 => Bool::True)
+  oracle rakudo-2026.07 → any(1 => Bool::True)
+  oracle rakupp-3.14.0 → any(1 => Bool::True)
 
-- id     0068
+- id     0030
   from   inventory:SetHash.^methods
   cell   any | SetHash.new
   code   (SetHash.new).any
@@ -649,10 +281,10 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → any()
   oracle rakupp-3.14.0 → any()
 
-- id     0069
+- id     0031
   from   inventory:SetHash.^methods
-  cell   bless | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).bless
+  cell   bless | SetHash.new(1)
+  code   (SetHash.new(1)).bless
   is     UNRENDERABLE
   type   SetHash
   oracle rakudo-2026.07 → UNRENDERABLE
@@ -661,7 +293,7 @@ cols     SetHash.new(1,2) | SetHash.new
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0070
+- id     0032
   from   inventory:SetHash.^methods
   cell   bless | SetHash.new
   code   (SetHash.new).bless
@@ -673,16 +305,16 @@ cols     SetHash.new(1,2) | SetHash.new
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0071
+- id     0033
   from   inventory:SetHash.^methods
-  cell   cache | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).cache
-  is     $(1 => Bool::True, 2 => Bool::True)
+  cell   cache | SetHash.new(1)
+  code   (SetHash.new(1)).cache
+  is     $(1 => Bool::True,)
   type   List
-  oracle rakudo-2026.07 → $(1 => Bool::True, 2 => Bool::True)
-  oracle rakupp-3.14.0 → $(1 => Bool::True, 2 => Bool::True)
+  oracle rakudo-2026.07 → $(1 => Bool::True,)
+  oracle rakupp-3.14.0 → $(1 => Bool::True,)
 
-- id     0072
+- id     0034
   from   inventory:SetHash.^methods
   cell   cache | SetHash.new
   code   (SetHash.new).cache
@@ -691,48 +323,48 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0073
+- id     0035
   from   inventory:SetHash.^methods
-  cell   can(0) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).can(0)
+  cell   can(0) | SetHash.new(1)
+  code   (SetHash.new(1)).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0074
+- id     0036
   from   inventory:SetHash.^methods
-  cell   can(1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).can(1)
+  cell   can(1) | SetHash.new(1)
+  code   (SetHash.new(1)).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0075
+- id     0037
   from   inventory:SetHash.^methods
-  cell   can(-1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).can(-1)
+  cell   can(-1) | SetHash.new(1)
+  code   (SetHash.new(1)).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0076
+- id     0038
   from   inventory:SetHash.^methods
-  cell   can("a") | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).can("a")
+  cell   can("a") | SetHash.new(1)
+  code   (SetHash.new(1)).can("a")
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0077
+- id     0039
   from   inventory:SetHash.^methods
-  cell   can(Any) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).can(Any)
+  cell   can(Any) | SetHash.new(1)
+  code   (SetHash.new(1)).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0078
+- id     0040
   from   inventory:SetHash.^methods
   cell   can(0) | SetHash.new
   code   (SetHash.new).can(0)
@@ -740,7 +372,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0079
+- id     0041
   from   inventory:SetHash.^methods
   cell   can(1) | SetHash.new
   code   (SetHash.new).can(1)
@@ -748,7 +380,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0080
+- id     0042
   from   inventory:SetHash.^methods
   cell   can(-1) | SetHash.new
   code   (SetHash.new).can(-1)
@@ -756,7 +388,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0081
+- id     0043
   from   inventory:SetHash.^methods
   cell   can("a") | SetHash.new
   code   (SetHash.new).can("a")
@@ -765,7 +397,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0082
+- id     0044
   from   inventory:SetHash.^methods
   cell   can(Any) | SetHash.new
   code   (SetHash.new).can(Any)
@@ -773,15 +405,15 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0083
+- id     0045
   from   inventory:SetHash.^methods
-  cell   chrs | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).chrs
+  cell   chrs | SetHash.new(1)
+  code   (SetHash.new(1)).chrs
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → "\0\0"
+  oracle rakupp-3.14.0 → "\0"
 
-- id     0084
+- id     0046
   from   inventory:SetHash.^methods
   cell   chrs | SetHash.new
   code   (SetHash.new).chrs
@@ -789,16 +421,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ""
 
-- id     0085
+- id     0047
   from   inventory:SetHash.^methods
-  cell   clone | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).clone
-  is     SetHash.new(1,2)
+  cell   clone | SetHash.new(1)
+  code   (SetHash.new(1)).clone
+  is     SetHash.new(1)
   type   SetHash
-  oracle rakudo-2026.07 → SetHash.new(1,2)
-  oracle rakupp-3.14.0 → SetHash.new(1,2)
+  oracle rakudo-2026.07 → SetHash.new(1)
+  oracle rakupp-3.14.0 → SetHash.new(1)
 
-- id     0086
+- id     0048
   from   inventory:SetHash.^methods
   cell   clone | SetHash.new
   code   (SetHash.new).clone
@@ -807,16 +439,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → SetHash.new()
   oracle rakupp-3.14.0 → SetHash.new()
 
-- id     0087
+- id     0049
   from   inventory:SetHash.^methods
-  cell   default | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).default
+  cell   default | SetHash.new(1)
+  code   (SetHash.new(1)).default
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0088
+- id     0050
   from   inventory:SetHash.^methods
   cell   default | SetHash.new
   code   (SetHash.new).default
@@ -825,52 +457,52 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0089
+- id     0051
   from   inventory:SetHash.^methods
-  cell   does(0) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).does(0)
+  cell   does(0) | SetHash.new(1)
+  code   (SetHash.new(1)).does(0)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0090
+- id     0052
   from   inventory:SetHash.^methods
-  cell   does(1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).does(1)
+  cell   does(1) | SetHash.new(1)
+  code   (SetHash.new(1)).does(1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0091
+- id     0053
   from   inventory:SetHash.^methods
-  cell   does(-1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).does(-1)
+  cell   does(-1) | SetHash.new(1)
+  code   (SetHash.new(1)).does(-1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0092
+- id     0054
   from   inventory:SetHash.^methods
-  cell   does("a") | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).does("a")
+  cell   does("a") | SetHash.new(1)
+  code   (SetHash.new(1)).does("a")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0093
+- id     0055
   from   inventory:SetHash.^methods
-  cell   does(Any) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).does(Any)
+  cell   does(Any) | SetHash.new(1)
+  code   (SetHash.new(1)).does(Any)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0094
+- id     0056
   from   inventory:SetHash.^methods
   cell   does(0) | SetHash.new
   code   (SetHash.new).does(0)
@@ -879,7 +511,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0095
+- id     0057
   from   inventory:SetHash.^methods
   cell   does(1) | SetHash.new
   code   (SetHash.new).does(1)
@@ -888,7 +520,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0096
+- id     0058
   from   inventory:SetHash.^methods
   cell   does(-1) | SetHash.new
   code   (SetHash.new).does(-1)
@@ -897,7 +529,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0097
+- id     0059
   from   inventory:SetHash.^methods
   cell   does("a") | SetHash.new
   code   (SetHash.new).does("a")
@@ -906,7 +538,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0098
+- id     0060
   from   inventory:SetHash.^methods
   cell   does(Any) | SetHash.new
   code   (SetHash.new).does(Any)
@@ -915,16 +547,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0099
+- id     0061
   from   inventory:SetHash.^methods
-  cell   is-generic | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).is-generic
+  cell   is-generic | SetHash.new(1)
+  code   (SetHash.new(1)).is-generic
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0100
+- id     0062
   from   inventory:SetHash.^methods
   cell   is-generic | SetHash.new
   code   (SetHash.new).is-generic
@@ -933,19 +565,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0101
+- id     0063
   from   inventory:SetHash.^methods
-  cell   item | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).item
-  is     SetHash.new(2,1)
+  cell   item | SetHash.new(1)
+  code   (SetHash.new(1)).item
+  is     SetHash.new(1)
   type   SetHash
-  oracle rakudo-2026.07 → SetHash.new(2,1)
-  oracle rakupp-3.14.0 → SetHash.new(1,2)
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  oracle rakudo-2026.07 → SetHash.new(1)
+  oracle rakupp-3.14.0 → SetHash.new(1)
 
-- id     0102
+- id     0064
   from   inventory:SetHash.^methods
   cell   item | SetHash.new
   code   (SetHash.new).item
@@ -954,19 +583,19 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → SetHash.new()
   oracle rakupp-3.14.0 → SetHash.new()
 
-- id     0103
+- id     0065
   from   inventory:SetHash.^methods
-  cell   iterator | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).iterator
+  cell   iterator | SetHash.new(1)
+  code   (SetHash.new(1)).iterator
   is     UNRENDERABLE
   type   SetHash::Iterate
   oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-3.14.0 → ${:items($[1 => Bool::True, 2 => Bool::True]), :nondeterministic(Bool::True), :pos(0)}
+  oracle rakupp-3.14.0 → ${:items($[1 => Bool::True]), :nondeterministic(Bool::True), :pos(0)}
   verdict disputed
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0104
+- id     0066
   from   inventory:SetHash.^methods
   cell   iterator | SetHash.new
   code   (SetHash.new).iterator
@@ -978,51 +607,51 @@ cols     SetHash.new(1,2) | SetHash.new
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0105
+- id     0067
   from   inventory:SetHash.^methods
-  cell   join(0) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).join(0)
-  is     "1\tTrue02\tTrue"
+  cell   join(0) | SetHash.new(1)
+  code   (SetHash.new(1)).join(0)
+  is     "1\tTrue"
   type   Str
-  oracle rakudo-2026.07 → "1\tTrue02\tTrue"
-  oracle rakupp-3.14.0 → "1\tTrue02\tTrue"
+  oracle rakudo-2026.07 → "1\tTrue"
+  oracle rakupp-3.14.0 → "1\tTrue"
 
-- id     0106
+- id     0068
   from   inventory:SetHash.^methods
-  cell   join(1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).join(1)
-  is     "2\tTrue11\tTrue"
+  cell   join(1) | SetHash.new(1)
+  code   (SetHash.new(1)).join(1)
+  is     "1\tTrue"
   type   Str
-  oracle rakudo-2026.07 → "2\tTrue11\tTrue"
-  oracle rakupp-3.14.0 → "1\tTrue12\tTrue"
+  oracle rakudo-2026.07 → "1\tTrue"
+  oracle rakupp-3.14.0 → "1\tTrue"
 
-- id     0107
+- id     0069
   from   inventory:SetHash.^methods
-  cell   join(-1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).join(-1)
-  is     "2\tTrue-11\tTrue"
+  cell   join(-1) | SetHash.new(1)
+  code   (SetHash.new(1)).join(-1)
+  is     "1\tTrue"
   type   Str
-  oracle rakudo-2026.07 → "2\tTrue-11\tTrue"
-  oracle rakupp-3.14.0 → "1\tTrue-12\tTrue"
+  oracle rakudo-2026.07 → "1\tTrue"
+  oracle rakupp-3.14.0 → "1\tTrue"
 
-- id     0108
+- id     0070
   from   inventory:SetHash.^methods
-  cell   join("a") | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).join("a")
-  is     "2\tTruea1\tTrue"
+  cell   join("a") | SetHash.new(1)
+  code   (SetHash.new(1)).join("a")
+  is     "1\tTrue"
   type   Str
-  oracle rakudo-2026.07 → "2\tTruea1\tTrue"
-  oracle rakupp-3.14.0 → "1\tTruea2\tTrue"
+  oracle rakudo-2026.07 → "1\tTrue"
+  oracle rakupp-3.14.0 → "1\tTrue"
 
-- id     0109
+- id     0071
   from   inventory:SetHash.^methods
-  cell   join(Any) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).join(Any)
+  cell   join(Any) | SetHash.new(1)
+  code   (SetHash.new(1)).join(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-3.14.0 → "1\tTrue2\tTrue"
+  oracle rakupp-3.14.0 → "1\tTrue"
 
-- id     0110
+- id     0072
   from   inventory:SetHash.^methods
   cell   join(0) | SetHash.new
   code   (SetHash.new).join(0)
@@ -1031,7 +660,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0111
+- id     0073
   from   inventory:SetHash.^methods
   cell   join(1) | SetHash.new
   code   (SetHash.new).join(1)
@@ -1040,7 +669,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0112
+- id     0074
   from   inventory:SetHash.^methods
   cell   join(-1) | SetHash.new
   code   (SetHash.new).join(-1)
@@ -1049,7 +678,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0113
+- id     0075
   from   inventory:SetHash.^methods
   cell   join("a") | SetHash.new
   code   (SetHash.new).join("a")
@@ -1058,7 +687,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ""
 
-- id     0114
+- id     0076
   from   inventory:SetHash.^methods
   cell   join(Any) | SetHash.new
   code   (SetHash.new).join(Any)
@@ -1066,16 +695,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ""
 
-- id     0115
+- id     0077
   from   inventory:SetHash.^methods
-  cell   keyof | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).keyof
+  cell   keyof | SetHash.new(1)
+  code   (SetHash.new(1)).keyof
   is     Mu
   type   Mu
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0116
+- id     0078
   from   inventory:SetHash.^methods
   cell   keyof | SetHash.new
   code   (SetHash.new).keyof
@@ -1084,55 +713,52 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0117
+- id     0079
   from   inventory:SetHash.^methods
-  cell   lazy-if(0) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).lazy-if(0)
-  is     SetHash.new(2,1)
+  cell   lazy-if(0) | SetHash.new(1)
+  code   (SetHash.new(1)).lazy-if(0)
+  is     SetHash.new(1)
   type   SetHash
-  oracle rakudo-2026.07 → SetHash.new(2,1)
+  oracle rakudo-2026.07 → SetHash.new(1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0118
+- id     0080
   from   inventory:SetHash.^methods
-  cell   lazy-if(1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).lazy-if(1)
-  is     SetHash.new(1,2)
+  cell   lazy-if(1) | SetHash.new(1)
+  code   (SetHash.new(1)).lazy-if(1)
+  is     SetHash.new(1)
   type   SetHash
-  oracle rakudo-2026.07 → SetHash.new(1,2)
+  oracle rakudo-2026.07 → SetHash.new(1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0119
+- id     0081
   from   inventory:SetHash.^methods
-  cell   lazy-if(-1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).lazy-if(-1)
-  is     SetHash.new(2,1)
+  cell   lazy-if(-1) | SetHash.new(1)
+  code   (SetHash.new(1)).lazy-if(-1)
+  is     SetHash.new(1)
   type   SetHash
-  oracle rakudo-2026.07 → SetHash.new(2,1)
+  oracle rakudo-2026.07 → SetHash.new(1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0120
+- id     0082
   from   inventory:SetHash.^methods
-  cell   lazy-if("a") | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).lazy-if("a")
-  is     SetHash.new(1,2)
+  cell   lazy-if("a") | SetHash.new(1)
+  code   (SetHash.new(1)).lazy-if("a")
+  is     SetHash.new(1)
   type   SetHash
-  oracle rakudo-2026.07 → SetHash.new(1,2)
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0121
-  from   inventory:SetHash.^methods
-  cell   lazy-if(Any) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).lazy-if(Any)
-  is     SetHash.new(2,1)
-  type   SetHash
-  oracle rakudo-2026.07 → SetHash.new(2,1)
+  oracle rakudo-2026.07 → SetHash.new(1)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0122
+- id     0083
+  from   inventory:SetHash.^methods
+  cell   lazy-if(Any) | SetHash.new(1)
+  code   (SetHash.new(1)).lazy-if(Any)
+  is     SetHash.new(1)
+  type   SetHash
+  oracle rakudo-2026.07 → SetHash.new(1)
+  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
+
+- id     0084
   from   inventory:SetHash.^methods
   cell   lazy-if(0) | SetHash.new
   code   (SetHash.new).lazy-if(0)
@@ -1141,7 +767,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → SetHash.new()
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0123
+- id     0085
   from   inventory:SetHash.^methods
   cell   lazy-if(1) | SetHash.new
   code   (SetHash.new).lazy-if(1)
@@ -1150,7 +776,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → SetHash.new()
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0124
+- id     0086
   from   inventory:SetHash.^methods
   cell   lazy-if(-1) | SetHash.new
   code   (SetHash.new).lazy-if(-1)
@@ -1159,7 +785,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → SetHash.new()
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0125
+- id     0087
   from   inventory:SetHash.^methods
   cell   lazy-if("a") | SetHash.new
   code   (SetHash.new).lazy-if("a")
@@ -1168,7 +794,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → SetHash.new()
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0126
+- id     0088
   from   inventory:SetHash.^methods
   cell   lazy-if(Any) | SetHash.new
   code   (SetHash.new).lazy-if(Any)
@@ -1177,16 +803,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → SetHash.new()
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0127
+- id     0089
   from   inventory:SetHash.^methods
-  cell   nl-out | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).nl-out
+  cell   nl-out | SetHash.new(1)
+  code   (SetHash.new(1)).nl-out
   is     "\n"
   type   Str
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0128
+- id     0090
   from   inventory:SetHash.^methods
   cell   nl-out | SetHash.new
   code   (SetHash.new).nl-out
@@ -1195,19 +821,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0129
+- id     0091
   from   inventory:SetHash.^methods
-  cell   none | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).none
-  is     none(1 => Bool::True, 2 => Bool::True)
+  cell   none | SetHash.new(1)
+  code   (SetHash.new(1)).none
+  is     none(1 => Bool::True)
   type   Junction
-  oracle rakudo-2026.07 → none(1 => Bool::True, 2 => Bool::True)
-  oracle rakupp-3.14.0 → none(1 => Bool::True, 2 => Bool::True)
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  oracle rakudo-2026.07 → none(1 => Bool::True)
+  oracle rakupp-3.14.0 → none(1 => Bool::True)
 
-- id     0130
+- id     0092
   from   inventory:SetHash.^methods
   cell   none | SetHash.new
   code   (SetHash.new).none
@@ -1216,16 +839,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → none()
   oracle rakupp-3.14.0 → none()
 
-- id     0131
+- id     0093
   from   inventory:SetHash.^methods
-  cell   not | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).not
+  cell   not | SetHash.new(1)
+  code   (SetHash.new(1)).not
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0132
+- id     0094
   from   inventory:SetHash.^methods
   cell   not | SetHash.new
   code   (SetHash.new).not
@@ -1234,16 +857,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0133
+- id     0095
   from   inventory:SetHash.^methods
-  cell   of | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).of
+  cell   of | SetHash.new(1)
+  code   (SetHash.new(1)).of
   is     Bool
   type   Bool
   oracle rakudo-2026.07 → Bool
   oracle rakupp-3.14.0 → Bool
 
-- id     0134
+- id     0096
   from   inventory:SetHash.^methods
   cell   of | SetHash.new
   code   (SetHash.new).of
@@ -1252,16 +875,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Bool
   oracle rakupp-3.14.0 → Bool
 
-- id     0135
+- id     0097
   from   inventory:SetHash.^methods
-  cell   one | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).one
-  is     one(1 => Bool::True, 2 => Bool::True)
+  cell   one | SetHash.new(1)
+  code   (SetHash.new(1)).one
+  is     one(1 => Bool::True)
   type   Junction
-  oracle rakudo-2026.07 → one(1 => Bool::True, 2 => Bool::True)
-  oracle rakupp-3.14.0 → one(1 => Bool::True, 2 => Bool::True)
+  oracle rakudo-2026.07 → one(1 => Bool::True)
+  oracle rakupp-3.14.0 → one(1 => Bool::True)
 
-- id     0136
+- id     0098
   from   inventory:SetHash.^methods
   cell   one | SetHash.new
   code   (SetHash.new).one
@@ -1270,19 +893,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → one()
   oracle rakupp-3.14.0 → one()
 
-- id     0137
+- id     0099
   from   inventory:SetHash.^methods
-  cell   reverse | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).reverse
-  is     $((1 => Bool::True, 2 => Bool::True).Seq)
+  cell   reverse | SetHash.new(1)
+  code   (SetHash.new(1)).reverse
+  is     $((1 => Bool::True,).Seq)
   type   Seq
-  oracle rakudo-2026.07 → $((1 => Bool::True, 2 => Bool::True).Seq)
-  oracle rakupp-3.14.0 → $(2 => Bool::True, 1 => Bool::True).Seq
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  oracle rakudo-2026.07 → $((1 => Bool::True,).Seq)
+  oracle rakupp-3.14.0 → $(1 => Bool::True,).Seq
 
-- id     0138
+- id     0100
   from   inventory:SetHash.^methods
   cell   reverse | SetHash.new
   code   (SetHash.new).reverse
@@ -1291,19 +911,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → $(().Seq)
   oracle rakupp-3.14.0 → $().Seq
 
-- id     0139
+- id     0101
   from   inventory:SetHash.^methods
-  cell   self | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).self
-  is     SetHash.new(1,2)
+  cell   self | SetHash.new(1)
+  code   (SetHash.new(1)).self
+  is     SetHash.new(1)
   type   SetHash
-  oracle rakudo-2026.07 → SetHash.new(1,2)
-  oracle rakupp-3.14.0 → SetHash.new(1,2)
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
+  oracle rakudo-2026.07 → SetHash.new(1)
+  oracle rakupp-3.14.0 → SetHash.new(1)
 
-- id     0140
+- id     0102
   from   inventory:SetHash.^methods
   cell   self | SetHash.new
   code   (SetHash.new).self
@@ -1312,52 +929,52 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → SetHash.new()
   oracle rakupp-3.14.0 → SetHash.new()
 
-- id     0141
+- id     0103
   from   inventory:SetHash.^methods
-  cell   set(0) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).set(0)
+  cell   set(0) | SetHash.new(1)
+  code   (SetHash.new(1)).set(0)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0142
+- id     0104
   from   inventory:SetHash.^methods
-  cell   set(1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).set(1)
+  cell   set(1) | SetHash.new(1)
+  code   (SetHash.new(1)).set(1)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0143
+- id     0105
   from   inventory:SetHash.^methods
-  cell   set(-1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).set(-1)
+  cell   set(-1) | SetHash.new(1)
+  code   (SetHash.new(1)).set(-1)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0144
+- id     0106
   from   inventory:SetHash.^methods
-  cell   set("a") | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).set("a")
+  cell   set("a") | SetHash.new(1)
+  code   (SetHash.new(1)).set("a")
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0145
+- id     0107
   from   inventory:SetHash.^methods
-  cell   set(Any) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).set(Any)
+  cell   set(Any) | SetHash.new(1)
+  code   (SetHash.new(1)).set(Any)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0146
+- id     0108
   from   inventory:SetHash.^methods
   cell   set(0) | SetHash.new
   code   (SetHash.new).set(0)
@@ -1366,7 +983,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0147
+- id     0109
   from   inventory:SetHash.^methods
   cell   set(1) | SetHash.new
   code   (SetHash.new).set(1)
@@ -1375,7 +992,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0148
+- id     0110
   from   inventory:SetHash.^methods
   cell   set(-1) | SetHash.new
   code   (SetHash.new).set(-1)
@@ -1384,7 +1001,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0149
+- id     0111
   from   inventory:SetHash.^methods
   cell   set("a") | SetHash.new
   code   (SetHash.new).set("a")
@@ -1393,7 +1010,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0150
+- id     0112
   from   inventory:SetHash.^methods
   cell   set(Any) | SetHash.new
   code   (SetHash.new).set(Any)
@@ -1402,16 +1019,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0151
+- id     0113
   from   inventory:SetHash.^methods
-  cell   so | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).so
+  cell   so | SetHash.new(1)
+  code   (SetHash.new(1)).so
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0152
+- id     0114
   from   inventory:SetHash.^methods
   cell   so | SetHash.new
   code   (SetHash.new).so
@@ -1420,15 +1037,15 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0153
+- id     0115
   from   inventory:SetHash.^methods
-  cell   sum | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).sum
+  cell   sum | SetHash.new(1)
+  code   (SetHash.new(1)).sum
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → 0e0
 
-- id     0154
+- id     0116
   from   inventory:SetHash.^methods
   cell   sum | SetHash.new
   code   (SetHash.new).sum
@@ -1437,15 +1054,15 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0155
+- id     0117
   from   inventory:SetHash.^methods
-  cell   take | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).take
+  cell   take | SetHash.new(1)
+  code   (SetHash.new(1)).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
-  oracle rakupp-3.14.0 → SetHash.new(1,2)
+  oracle rakupp-3.14.0 → SetHash.new(1)
 
-- id     0156
+- id     0118
   from   inventory:SetHash.^methods
   cell   take | SetHash.new
   code   (SetHash.new).take
@@ -1453,16 +1070,16 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → SetHash.new()
 
-- id     0157
+- id     0119
   from   inventory:SetHash.^methods
-  cell   total | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).total
-  is     2
+  cell   total | SetHash.new(1)
+  code   (SetHash.new(1)).total
+  is     1
   type   Int
-  oracle rakudo-2026.07 → 2
-  oracle rakupp-3.14.0 → 2
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-3.14.0 → 1
 
-- id     0158
+- id     0120
   from   inventory:SetHash.^methods
   cell   total | SetHash.new
   code   (SetHash.new).total
@@ -1471,52 +1088,52 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0159
+- id     0121
   from   inventory:SetHash.^methods
-  cell   unset(0) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).unset(0)
+  cell   unset(0) | SetHash.new(1)
+  code   (SetHash.new(1)).unset(0)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0160
+- id     0122
   from   inventory:SetHash.^methods
-  cell   unset(1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).unset(1)
+  cell   unset(1) | SetHash.new(1)
+  code   (SetHash.new(1)).unset(1)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0161
+- id     0123
   from   inventory:SetHash.^methods
-  cell   unset(-1) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).unset(-1)
+  cell   unset(-1) | SetHash.new(1)
+  code   (SetHash.new(1)).unset(-1)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0162
+- id     0124
   from   inventory:SetHash.^methods
-  cell   unset("a") | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).unset("a")
+  cell   unset("a") | SetHash.new(1)
+  code   (SetHash.new(1)).unset("a")
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0163
+- id     0125
   from   inventory:SetHash.^methods
-  cell   unset(Any) | SetHash.new(1,2)
-  code   (SetHash.new(1,2)).unset(Any)
+  cell   unset(Any) | SetHash.new(1)
+  code   (SetHash.new(1)).unset(Any)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0164
+- id     0126
   from   inventory:SetHash.^methods
   cell   unset(0) | SetHash.new
   code   (SetHash.new).unset(0)
@@ -1525,7 +1142,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0165
+- id     0127
   from   inventory:SetHash.^methods
   cell   unset(1) | SetHash.new
   code   (SetHash.new).unset(1)
@@ -1534,7 +1151,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0166
+- id     0128
   from   inventory:SetHash.^methods
   cell   unset(-1) | SetHash.new
   code   (SetHash.new).unset(-1)
@@ -1543,7 +1160,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0167
+- id     0129
   from   inventory:SetHash.^methods
   cell   unset("a") | SetHash.new
   code   (SetHash.new).unset("a")
@@ -1552,7 +1169,7 @@ cols     SetHash.new(1,2) | SetHash.new
   oracle rakudo-2026.07 → Any
   oracle rakupp-3.14.0 → Any
 
-- id     0168
+- id     0130
   from   inventory:SetHash.^methods
   cell   unset(Any) | SetHash.new
   code   (SetHash.new).unset(Any)

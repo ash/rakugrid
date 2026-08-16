@@ -2,7 +2,7 @@ atom     methods/Whatever
 source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
-axes     Bool | CREATE | Capture | DEFINITE | HOW | INSTANTIATE-GENERIC | POPULATE | REPR | VAR | WHAT | WHERE | WHO | all | any | bless | cache | can | chrs | does | is-generic | item | join | lazy-if | nl-out | none | not | one | reverse | self | so | sum | take
+axes     Bool | Capture | DEFINITE | HOW | REPR | VAR | WHAT | WHO | all | any | bless | cache | can | chrs | does | is-generic | item | join | lazy-if | nl-out | none | not | one | reverse | self | so | sum | take
 cols     *
 
 - id     0001
@@ -16,15 +16,6 @@ cols     *
 
 - id     0002
   from   inventory:Whatever.^methods
-  cell   CREATE | *
-  code   (*).CREATE
-  is     WhateverCode.new
-  type   WhateverCode
-  oracle rakudo-2026.07 → WhateverCode.new
-  oracle rakupp-3.14.0 → WhateverCode.new
-
-- id     0003
-  from   inventory:Whatever.^methods
   cell   Capture | *
   code   (*).Capture
   is     WhateverCode.new
@@ -32,7 +23,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0004
+- id     0003
   from   inventory:Whatever.^methods
   cell   DEFINITE | *
   code   (*).DEFINITE
@@ -41,7 +32,7 @@ cols     *
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0005
+- id     0004
   from   inventory:Whatever.^methods
   cell   HOW | *
   code   (*).HOW
@@ -50,97 +41,7 @@ cols     *
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0006
-  from   inventory:Whatever.^methods
-  cell   INSTANTIATE-GENERIC(0) | *
-  code   (*).INSTANTIATE-GENERIC(0)
-  is     WhateverCode.new
-  type   WhateverCode
-  oracle rakudo-2026.07 → WhateverCode.new
-  oracle rakupp-3.14.0 → WhateverCode.new
-
-- id     0007
-  from   inventory:Whatever.^methods
-  cell   INSTANTIATE-GENERIC(1) | *
-  code   (*).INSTANTIATE-GENERIC(1)
-  is     WhateverCode.new
-  type   WhateverCode
-  oracle rakudo-2026.07 → WhateverCode.new
-  oracle rakupp-3.14.0 → WhateverCode.new
-
-- id     0008
-  from   inventory:Whatever.^methods
-  cell   INSTANTIATE-GENERIC(-1) | *
-  code   (*).INSTANTIATE-GENERIC(-1)
-  is     WhateverCode.new
-  type   WhateverCode
-  oracle rakudo-2026.07 → WhateverCode.new
-  oracle rakupp-3.14.0 → WhateverCode.new
-
-- id     0009
-  from   inventory:Whatever.^methods
-  cell   INSTANTIATE-GENERIC("a") | *
-  code   (*).INSTANTIATE-GENERIC("a")
-  is     WhateverCode.new
-  type   WhateverCode
-  oracle rakudo-2026.07 → WhateverCode.new
-  oracle rakupp-3.14.0 → WhateverCode.new
-
-- id     0010
-  from   inventory:Whatever.^methods
-  cell   INSTANTIATE-GENERIC(Any) | *
-  code   (*).INSTANTIATE-GENERIC(Any)
-  is     WhateverCode.new
-  type   WhateverCode
-  oracle rakudo-2026.07 → WhateverCode.new
-  oracle rakupp-3.14.0 → WhateverCode.new
-
-- id     0011
-  from   inventory:Whatever.^methods
-  cell   POPULATE(0) | *
-  code   (*).POPULATE(0)
-  is     WhateverCode.new
-  type   WhateverCode
-  oracle rakudo-2026.07 → WhateverCode.new
-  oracle rakupp-3.14.0 → WhateverCode.new
-
-- id     0012
-  from   inventory:Whatever.^methods
-  cell   POPULATE(1) | *
-  code   (*).POPULATE(1)
-  is     WhateverCode.new
-  type   WhateverCode
-  oracle rakudo-2026.07 → WhateverCode.new
-  oracle rakupp-3.14.0 → WhateverCode.new
-
-- id     0013
-  from   inventory:Whatever.^methods
-  cell   POPULATE(-1) | *
-  code   (*).POPULATE(-1)
-  is     WhateverCode.new
-  type   WhateverCode
-  oracle rakudo-2026.07 → WhateverCode.new
-  oracle rakupp-3.14.0 → WhateverCode.new
-
-- id     0014
-  from   inventory:Whatever.^methods
-  cell   POPULATE("a") | *
-  code   (*).POPULATE("a")
-  is     WhateverCode.new
-  type   WhateverCode
-  oracle rakudo-2026.07 → WhateverCode.new
-  oracle rakupp-3.14.0 → WhateverCode.new
-
-- id     0015
-  from   inventory:Whatever.^methods
-  cell   POPULATE(Any) | *
-  code   (*).POPULATE(Any)
-  is     WhateverCode.new
-  type   WhateverCode
-  oracle rakudo-2026.07 → WhateverCode.new
-  oracle rakupp-3.14.0 → WhateverCode.new
-
-- id     0016
+- id     0005
   from   inventory:Whatever.^methods
   cell   REPR | *
   code   (*).REPR
@@ -149,7 +50,7 @@ cols     *
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0017
+- id     0006
   from   inventory:Whatever.^methods
   cell   VAR | *
   code   (*).VAR
@@ -158,7 +59,7 @@ cols     *
   oracle rakudo-2026.07 → *
   oracle rakupp-3.14.0 → *
 
-- id     0018
+- id     0007
   from   inventory:Whatever.^methods
   cell   WHAT | *
   code   (*).WHAT
@@ -167,19 +68,7 @@ cols     *
   oracle rakudo-2026.07 → Whatever
   oracle rakupp-3.14.0 → Whatever
 
-- id     0019
-  from   inventory:Whatever.^methods
-  cell   WHERE | *
-  code   (*).WHERE
-  is     4568701929456
-  type   Int
-  oracle rakudo-2026.07 → 4568701929456
-  oracle rakupp-3.14.0 → WhateverCode.new
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0020
+- id     0008
   from   inventory:Whatever.^methods
   cell   WHO | *
   code   (*).WHO
@@ -188,7 +77,7 @@ cols     *
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0021
+- id     0009
   from   inventory:Whatever.^methods
   cell   all | *
   code   (*).all
@@ -197,7 +86,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0022
+- id     0010
   from   inventory:Whatever.^methods
   cell   any | *
   code   (*).any
@@ -206,7 +95,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0023
+- id     0011
   from   inventory:Whatever.^methods
   cell   bless | *
   code   (*).bless
@@ -215,7 +104,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0024
+- id     0012
   from   inventory:Whatever.^methods
   cell   cache | *
   code   (*).cache
@@ -224,7 +113,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0025
+- id     0013
   from   inventory:Whatever.^methods
   cell   can(0) | *
   code   (*).can(0)
@@ -233,7 +122,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0026
+- id     0014
   from   inventory:Whatever.^methods
   cell   can(1) | *
   code   (*).can(1)
@@ -242,7 +131,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0027
+- id     0015
   from   inventory:Whatever.^methods
   cell   can(-1) | *
   code   (*).can(-1)
@@ -251,7 +140,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0028
+- id     0016
   from   inventory:Whatever.^methods
   cell   can("a") | *
   code   (*).can("a")
@@ -260,7 +149,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0029
+- id     0017
   from   inventory:Whatever.^methods
   cell   can(Any) | *
   code   (*).can(Any)
@@ -269,7 +158,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0030
+- id     0018
   from   inventory:Whatever.^methods
   cell   chrs | *
   code   (*).chrs
@@ -278,7 +167,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0031
+- id     0019
   from   inventory:Whatever.^methods
   cell   does(0) | *
   code   (*).does(0)
@@ -287,7 +176,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0032
+- id     0020
   from   inventory:Whatever.^methods
   cell   does(1) | *
   code   (*).does(1)
@@ -296,7 +185,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0033
+- id     0021
   from   inventory:Whatever.^methods
   cell   does(-1) | *
   code   (*).does(-1)
@@ -305,7 +194,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0034
+- id     0022
   from   inventory:Whatever.^methods
   cell   does("a") | *
   code   (*).does("a")
@@ -314,7 +203,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0035
+- id     0023
   from   inventory:Whatever.^methods
   cell   does(Any) | *
   code   (*).does(Any)
@@ -323,7 +212,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0036
+- id     0024
   from   inventory:Whatever.^methods
   cell   is-generic | *
   code   (*).is-generic
@@ -332,7 +221,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0037
+- id     0025
   from   inventory:Whatever.^methods
   cell   item | *
   code   (*).item
@@ -341,7 +230,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0038
+- id     0026
   from   inventory:Whatever.^methods
   cell   join(0) | *
   code   (*).join(0)
@@ -350,7 +239,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0039
+- id     0027
   from   inventory:Whatever.^methods
   cell   join(1) | *
   code   (*).join(1)
@@ -359,7 +248,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0040
+- id     0028
   from   inventory:Whatever.^methods
   cell   join(-1) | *
   code   (*).join(-1)
@@ -368,7 +257,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0041
+- id     0029
   from   inventory:Whatever.^methods
   cell   join("a") | *
   code   (*).join("a")
@@ -377,7 +266,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0042
+- id     0030
   from   inventory:Whatever.^methods
   cell   join(Any) | *
   code   (*).join(Any)
@@ -386,7 +275,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0043
+- id     0031
   from   inventory:Whatever.^methods
   cell   lazy-if(0) | *
   code   (*).lazy-if(0)
@@ -395,7 +284,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0044
+- id     0032
   from   inventory:Whatever.^methods
   cell   lazy-if(1) | *
   code   (*).lazy-if(1)
@@ -404,7 +293,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0045
+- id     0033
   from   inventory:Whatever.^methods
   cell   lazy-if(-1) | *
   code   (*).lazy-if(-1)
@@ -413,7 +302,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0046
+- id     0034
   from   inventory:Whatever.^methods
   cell   lazy-if("a") | *
   code   (*).lazy-if("a")
@@ -422,7 +311,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0047
+- id     0035
   from   inventory:Whatever.^methods
   cell   lazy-if(Any) | *
   code   (*).lazy-if(Any)
@@ -431,7 +320,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0048
+- id     0036
   from   inventory:Whatever.^methods
   cell   nl-out | *
   code   (*).nl-out
@@ -440,7 +329,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0049
+- id     0037
   from   inventory:Whatever.^methods
   cell   none | *
   code   (*).none
@@ -449,7 +338,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0050
+- id     0038
   from   inventory:Whatever.^methods
   cell   not | *
   code   (*).not
@@ -458,7 +347,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0051
+- id     0039
   from   inventory:Whatever.^methods
   cell   one | *
   code   (*).one
@@ -467,7 +356,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0052
+- id     0040
   from   inventory:Whatever.^methods
   cell   reverse | *
   code   (*).reverse
@@ -476,7 +365,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0053
+- id     0041
   from   inventory:Whatever.^methods
   cell   self | *
   code   (*).self
@@ -485,7 +374,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0054
+- id     0042
   from   inventory:Whatever.^methods
   cell   so | *
   code   (*).so
@@ -494,7 +383,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0055
+- id     0043
   from   inventory:Whatever.^methods
   cell   sum | *
   code   (*).sum
@@ -503,7 +392,7 @@ cols     *
   oracle rakudo-2026.07 → WhateverCode.new
   oracle rakupp-3.14.0 → WhateverCode.new
 
-- id     0056
+- id     0044
   from   inventory:Whatever.^methods
   cell   take | *
   code   (*).take

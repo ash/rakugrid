@@ -2,7 +2,7 @@ atom     methods/Block
 source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
-axes     Bool | CREATE | Capture | DEFINITE | HOW | INSTANTIATE-GENERIC | POPULATE | REPR | VAR | WHAT | WHERE | WHO | WHY | all | any | arity | associative | bless | bytecode-size | cache | can | cando | chrs | count | does | file | has-loop-phasers | has-phaser | has-phasers | iffy | is-generic | is-implementation-detail | item | join | lazy-if | line | nl-out | none | not | of | one | outer | phasers | precedence | reducer | returns | reverse | self | signature | so | sum | take | thunky
+axes     Bool | Capture | DEFINITE | HOW | REPR | VAR | WHAT | WHO | WHY | all | any | arity | associative | bless | bytecode-size | cache | can | cando | chrs | count | does | has-loop-phasers | has-phaser | has-phasers | iffy | is-generic | is-implementation-detail | item | join | lazy-if | nl-out | none | not | of | one | outer | phasers | precedence | reducer | returns | reverse | self | signature | so | sum | take | thunky
 cols     { 1 } | { $_ }
 
 - id     0001
@@ -25,37 +25,13 @@ cols     { 1 } | { $_ }
 
 - id     0003
   from   inventory:Block.^methods
-  cell   CREATE | { 1 }
-  code   ({ 1 }).CREATE
-  is     -> gnatur { #`(Block|3252730756776) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> gnatur { #`(Block|3252730756776) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0004
-  from   inventory:Block.^methods
-  cell   CREATE | { $_ }
-  code   ({ $_ }).CREATE
-  is     -> gnatur { #`(Block|3252730757208) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> gnatur { #`(Block|3252730757208) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0005
-  from   inventory:Block.^methods
   cell   Capture | { 1 }
   code   ({ 1 }).Capture
   throws X::Cannot::Capture
   oracle rakudo-2026.07 → ERR:X::Cannot::Capture
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0006
+- id     0004
   from   inventory:Block.^methods
   cell   Capture | { $_ }
   code   ({ $_ }).Capture
@@ -63,7 +39,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::Cannot::Capture
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0007
+- id     0005
   from   inventory:Block.^methods
   cell   DEFINITE | { 1 }
   code   ({ 1 }).DEFINITE
@@ -72,7 +48,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0008
+- id     0006
   from   inventory:Block.^methods
   cell   DEFINITE | { $_ }
   code   ({ $_ }).DEFINITE
@@ -81,16 +57,19 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0009
+- id     0007
   from   inventory:Block.^methods
   cell   HOW | { 1 }
   code   ({ 1 }).HOW
-  is     Perl6::Metamodel::ClassHOW.new
+  is     UNRENDERABLE
   type   Perl6::Metamodel::ClassHOW
-  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakudo-2026.07 → UNRENDERABLE
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
 
-- id     0010
+- id     0008
   from   inventory:Block.^methods
   cell   HOW | { $_ }
   code   ({ $_ }).HOW
@@ -99,207 +78,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
   oracle rakupp-3.14.0 → Metamodel::ClassHOW
 
-- id     0011
-  from   inventory:Block.^methods
-  cell   INSTANTIATE-GENERIC(0) | { 1 }
-  code   ({ 1 }).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0012
-  from   inventory:Block.^methods
-  cell   INSTANTIATE-GENERIC(1) | { 1 }
-  code   ({ 1 }).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0013
-  from   inventory:Block.^methods
-  cell   INSTANTIATE-GENERIC(-1) | { 1 }
-  code   ({ 1 }).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0014
-  from   inventory:Block.^methods
-  cell   INSTANTIATE-GENERIC("a") | { 1 }
-  code   ({ 1 }).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0015
-  from   inventory:Block.^methods
-  cell   INSTANTIATE-GENERIC(Any) | { 1 }
-  code   ({ 1 }).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0016
-  from   inventory:Block.^methods
-  cell   INSTANTIATE-GENERIC(0) | { $_ }
-  code   ({ $_ }).INSTANTIATE-GENERIC(0)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0017
-  from   inventory:Block.^methods
-  cell   INSTANTIATE-GENERIC(1) | { $_ }
-  code   ({ $_ }).INSTANTIATE-GENERIC(1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0018
-  from   inventory:Block.^methods
-  cell   INSTANTIATE-GENERIC(-1) | { $_ }
-  code   ({ $_ }).INSTANTIATE-GENERIC(-1)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0019
-  from   inventory:Block.^methods
-  cell   INSTANTIATE-GENERIC("a") | { $_ }
-  code   ({ $_ }).INSTANTIATE-GENERIC("a")
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0020
-  from   inventory:Block.^methods
-  cell   INSTANTIATE-GENERIC(Any) | { $_ }
-  code   ({ $_ }).INSTANTIATE-GENERIC(Any)
-  throws X::Multi::NoMatch
-  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0021
-  from   inventory:Block.^methods
-  cell   POPULATE(0) | { 1 }
-  code   ({ 1 }).POPULATE(0)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730833080) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730833080) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0022
-  from   inventory:Block.^methods
-  cell   POPULATE(1) | { 1 }
-  code   ({ 1 }).POPULATE(1)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730833512) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730833512) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0023
-  from   inventory:Block.^methods
-  cell   POPULATE(-1) | { 1 }
-  code   ({ 1 }).POPULATE(-1)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730833944) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730833944) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0024
-  from   inventory:Block.^methods
-  cell   POPULATE("a") | { 1 }
-  code   ({ 1 }).POPULATE("a")
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730834376) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730834376) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0025
-  from   inventory:Block.^methods
-  cell   POPULATE(Any) | { 1 }
-  code   ({ 1 }).POPULATE(Any)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730834808) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730834808) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0026
-  from   inventory:Block.^methods
-  cell   POPULATE(0) | { $_ }
-  code   ({ $_ }).POPULATE(0)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730835240) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730835240) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0027
-  from   inventory:Block.^methods
-  cell   POPULATE(1) | { $_ }
-  code   ({ $_ }).POPULATE(1)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730858672) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730858672) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0028
-  from   inventory:Block.^methods
-  cell   POPULATE(-1) | { $_ }
-  code   ({ $_ }).POPULATE(-1)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730859104) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730859104) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0029
-  from   inventory:Block.^methods
-  cell   POPULATE("a") | { $_ }
-  code   ({ $_ }).POPULATE("a")
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730859536) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730859536) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0030
-  from   inventory:Block.^methods
-  cell   POPULATE(Any) | { $_ }
-  code   ({ $_ }).POPULATE(Any)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730859968) ... }
-  type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730859968) ... }
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0031
+- id     0009
   from   inventory:Block.^methods
   cell   REPR | { 1 }
   code   ({ 1 }).REPR
@@ -308,7 +87,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0032
+- id     0010
   from   inventory:Block.^methods
   cell   REPR | { $_ }
   code   ({ $_ }).REPR
@@ -317,31 +96,31 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → "P6opaque"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0033
+- id     0011
   from   inventory:Block.^methods
   cell   VAR | { 1 }
   code   ({ 1 }).VAR
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730861120) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880382504) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730861120) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880382504) ... }
   oracle rakupp-3.14.0 → sub { ... }
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0034
+- id     0012
   from   inventory:Block.^methods
   cell   VAR | { $_ }
   code   ({ $_ }).VAR
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730861552) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880382936) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730861552) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880382936) ... }
   oracle rakupp-3.14.0 → sub { ... }
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0035
+- id     0013
   from   inventory:Block.^methods
   cell   WHAT | { 1 }
   code   ({ 1 }).WHAT
@@ -350,7 +129,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Block
   oracle rakupp-3.14.0 → Block
 
-- id     0036
+- id     0014
   from   inventory:Block.^methods
   cell   WHAT | { $_ }
   code   ({ $_ }).WHAT
@@ -359,31 +138,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Block
   oracle rakupp-3.14.0 → Block
 
-- id     0037
-  from   inventory:Block.^methods
-  cell   WHERE | { 1 }
-  code   ({ 1 }).WHERE
-  is     3252556242728
-  type   Int
-  oracle rakudo-2026.07 → 3252556242728
-  oracle rakupp-3.14.0 → 14137372112
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0038
-  from   inventory:Block.^methods
-  cell   WHERE | { $_ }
-  code   ({ $_ }).WHERE
-  is     3252556622608
-  type   Int
-  oracle rakudo-2026.07 → 3252556622608
-  oracle rakupp-3.14.0 → 14137372112
-  verdict disputed
-  why    the reference answers differently on two identical runs, so there is nothing stable to assert
-  ruled  2026-08-15 against rakudo-2026.07
-
-- id     0039
+- id     0015
   from   inventory:Block.^methods
   cell   WHO | { 1 }
   code   ({ 1 }).WHO
@@ -392,7 +147,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0040
+- id     0016
   from   inventory:Block.^methods
   cell   WHO | { $_ }
   code   ({ $_ }).WHO
@@ -401,7 +156,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ${}
   oracle rakupp-3.14.0 → ${}
 
-- id     0041
+- id     0017
   from   inventory:Block.^methods
   cell   WHY | { 1 }
   code   ({ 1 }).WHY
@@ -410,7 +165,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Nil
   oracle rakupp-3.14.0 → Any
 
-- id     0042
+- id     0018
   from   inventory:Block.^methods
   cell   WHY | { $_ }
   code   ({ $_ }).WHY
@@ -419,55 +174,55 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Nil
   oracle rakupp-3.14.0 → Any
 
-- id     0043
+- id     0019
   from   inventory:Block.^methods
   cell   all | { 1 }
   code   ({ 1 }).all
-  is     all(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730699296) ... })
+  is     all(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880422672) ... })
   type   Junction
-  oracle rakudo-2026.07 → all(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730699296) ... })
+  oracle rakudo-2026.07 → all(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880422672) ... })
   oracle rakupp-3.14.0 → all(sub { ... })
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0044
+- id     0020
   from   inventory:Block.^methods
   cell   all | { $_ }
   code   ({ $_ }).all
-  is     all(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730909136) ... })
+  is     all(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880423104) ... })
   type   Junction
-  oracle rakudo-2026.07 → all(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730909136) ... })
+  oracle rakudo-2026.07 → all(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880423104) ... })
   oracle rakupp-3.14.0 → all(sub { ... })
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0045
+- id     0021
   from   inventory:Block.^methods
   cell   any | { 1 }
   code   ({ 1 }).any
-  is     any(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730909568) ... })
+  is     any(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880423536) ... })
   type   Junction
-  oracle rakudo-2026.07 → any(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730909568) ... })
+  oracle rakudo-2026.07 → any(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880423536) ... })
   oracle rakupp-3.14.0 → any(sub { ... })
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0046
+- id     0022
   from   inventory:Block.^methods
   cell   any | { $_ }
   code   ({ $_ }).any
-  is     any(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730910000) ... })
+  is     any(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880423968) ... })
   type   Junction
-  oracle rakudo-2026.07 → any(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730910000) ... })
+  oracle rakudo-2026.07 → any(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880423968) ... })
   oracle rakupp-3.14.0 → any(sub { ... })
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0047
+- id     0023
   from   inventory:Block.^methods
   cell   arity | { 1 }
   code   ({ 1 }).arity
@@ -476,7 +231,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0048
+- id     0024
   from   inventory:Block.^methods
   cell   arity | { $_ }
   code   ({ $_ }).arity
@@ -485,7 +240,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → 0
 
-- id     0049
+- id     0025
   from   inventory:Block.^methods
   cell   associative | { 1 }
   code   ({ 1 }).associative
@@ -494,7 +249,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0050
+- id     0026
   from   inventory:Block.^methods
   cell   associative | { $_ }
   code   ({ $_ }).associative
@@ -503,31 +258,31 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0051
+- id     0027
   from   inventory:Block.^methods
   cell   bless | { 1 }
   code   ({ 1 }).bless
-  is     -> gnatur { #`(Block|3252730913920) ... }
+  is     -> gnatur { #`(Block|6342880451032) ... }
   type   Block
-  oracle rakudo-2026.07 → -> gnatur { #`(Block|3252730913920) ... }
+  oracle rakudo-2026.07 → -> gnatur { #`(Block|6342880451032) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0052
+- id     0028
   from   inventory:Block.^methods
   cell   bless | { $_ }
   code   ({ $_ }).bless
-  is     -> gnatur { #`(Block|3252730914352) ... }
+  is     -> gnatur { #`(Block|6342880451464) ... }
   type   Block
-  oracle rakudo-2026.07 → -> gnatur { #`(Block|3252730914352) ... }
+  oracle rakudo-2026.07 → -> gnatur { #`(Block|6342880451464) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0053
+- id     0029
   from   inventory:Block.^methods
   cell   bytecode-size | { 1 }
   code   ({ 1 }).bytecode-size
@@ -536,7 +291,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → 50
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0054
+- id     0030
   from   inventory:Block.^methods
   cell   bytecode-size | { $_ }
   code   ({ $_ }).bytecode-size
@@ -545,31 +300,31 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → 42
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0055
+- id     0031
   from   inventory:Block.^methods
   cell   cache | { 1 }
   code   ({ 1 }).cache
-  is     $(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730959056) ... },)
+  is     $(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880452688) ... },)
   type   List
-  oracle rakudo-2026.07 → $(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730959056) ... },)
+  oracle rakudo-2026.07 → $(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880452688) ... },)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0056
+- id     0032
   from   inventory:Block.^methods
   cell   cache | { $_ }
   code   ({ $_ }).cache
-  is     $(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730959488) ... },)
+  is     $(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880453120) ... },)
   type   List
-  oracle rakudo-2026.07 → $(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252730959488) ... },)
+  oracle rakudo-2026.07 → $(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880453120) ... },)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0057
+- id     0033
   from   inventory:Block.^methods
   cell   can(0) | { 1 }
   code   ({ 1 }).can(0)
@@ -577,7 +332,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0058
+- id     0034
   from   inventory:Block.^methods
   cell   can(1) | { 1 }
   code   ({ 1 }).can(1)
@@ -585,7 +340,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0059
+- id     0035
   from   inventory:Block.^methods
   cell   can(-1) | { 1 }
   code   ({ 1 }).can(-1)
@@ -593,7 +348,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0060
+- id     0036
   from   inventory:Block.^methods
   cell   can("a") | { 1 }
   code   ({ 1 }).can("a")
@@ -602,7 +357,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0061
+- id     0037
   from   inventory:Block.^methods
   cell   can(Any) | { 1 }
   code   ({ 1 }).can(Any)
@@ -610,7 +365,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0062
+- id     0038
   from   inventory:Block.^methods
   cell   can(0) | { $_ }
   code   ({ $_ }).can(0)
@@ -618,7 +373,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0063
+- id     0039
   from   inventory:Block.^methods
   cell   can(1) | { $_ }
   code   ({ $_ }).can(1)
@@ -626,7 +381,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0064
+- id     0040
   from   inventory:Block.^methods
   cell   can(-1) | { $_ }
   code   ({ $_ }).can(-1)
@@ -634,7 +389,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0065
+- id     0041
   from   inventory:Block.^methods
   cell   can("a") | { $_ }
   code   ({ $_ }).can("a")
@@ -643,7 +398,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → $()
 
-- id     0066
+- id     0042
   from   inventory:Block.^methods
   cell   can(Any) | { $_ }
   code   ({ $_ }).can(Any)
@@ -651,7 +406,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → $()
 
-- id     0067
+- id     0043
   from   inventory:Block.^methods
   cell   cando(0) | { 1 }
   code   ({ 1 }).cando(0)
@@ -659,7 +414,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $()
 
-- id     0068
+- id     0044
   from   inventory:Block.^methods
   cell   cando(1) | { 1 }
   code   ({ 1 }).cando(1)
@@ -667,7 +422,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $()
 
-- id     0069
+- id     0045
   from   inventory:Block.^methods
   cell   cando(-1) | { 1 }
   code   ({ 1 }).cando(-1)
@@ -675,7 +430,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $()
 
-- id     0070
+- id     0046
   from   inventory:Block.^methods
   cell   cando("a") | { 1 }
   code   ({ 1 }).cando("a")
@@ -683,7 +438,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $()
 
-- id     0071
+- id     0047
   from   inventory:Block.^methods
   cell   cando(Any) | { 1 }
   code   ({ 1 }).cando(Any)
@@ -691,7 +446,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $()
 
-- id     0072
+- id     0048
   from   inventory:Block.^methods
   cell   cando(0) | { $_ }
   code   ({ $_ }).cando(0)
@@ -699,7 +454,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $()
 
-- id     0073
+- id     0049
   from   inventory:Block.^methods
   cell   cando(1) | { $_ }
   code   ({ $_ }).cando(1)
@@ -707,7 +462,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $()
 
-- id     0074
+- id     0050
   from   inventory:Block.^methods
   cell   cando(-1) | { $_ }
   code   ({ $_ }).cando(-1)
@@ -715,7 +470,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $()
 
-- id     0075
+- id     0051
   from   inventory:Block.^methods
   cell   cando("a") | { $_ }
   code   ({ $_ }).cando("a")
@@ -723,7 +478,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $()
 
-- id     0076
+- id     0052
   from   inventory:Block.^methods
   cell   cando(Any) | { $_ }
   code   ({ $_ }).cando(Any)
@@ -731,7 +486,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → $()
 
-- id     0077
+- id     0053
   from   inventory:Block.^methods
   cell   chrs | { 1 }
   code   ({ 1 }).chrs
@@ -739,7 +494,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0078
+- id     0054
   from   inventory:Block.^methods
   cell   chrs | { $_ }
   code   ({ $_ }).chrs
@@ -747,7 +502,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0079
+- id     0055
   from   inventory:Block.^methods
   cell   count | { 1 }
   code   ({ 1 }).count
@@ -756,7 +511,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 0
 
-- id     0080
+- id     0056
   from   inventory:Block.^methods
   cell   count | { $_ }
   code   ({ $_ }).count
@@ -765,7 +520,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → 1
   oracle rakupp-3.14.0 → 0
 
-- id     0081
+- id     0057
   from   inventory:Block.^methods
   cell   does(0) | { 1 }
   code   ({ 1 }).does(0)
@@ -774,7 +529,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0082
+- id     0058
   from   inventory:Block.^methods
   cell   does(1) | { 1 }
   code   ({ 1 }).does(1)
@@ -783,7 +538,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0083
+- id     0059
   from   inventory:Block.^methods
   cell   does(-1) | { 1 }
   code   ({ 1 }).does(-1)
@@ -792,7 +547,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0084
+- id     0060
   from   inventory:Block.^methods
   cell   does("a") | { 1 }
   code   ({ 1 }).does("a")
@@ -801,7 +556,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0085
+- id     0061
   from   inventory:Block.^methods
   cell   does(Any) | { 1 }
   code   ({ 1 }).does(Any)
@@ -810,7 +565,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0086
+- id     0062
   from   inventory:Block.^methods
   cell   does(0) | { $_ }
   code   ({ $_ }).does(0)
@@ -819,7 +574,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0087
+- id     0063
   from   inventory:Block.^methods
   cell   does(1) | { $_ }
   code   ({ $_ }).does(1)
@@ -828,7 +583,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0088
+- id     0064
   from   inventory:Block.^methods
   cell   does(-1) | { $_ }
   code   ({ $_ }).does(-1)
@@ -837,7 +592,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0089
+- id     0065
   from   inventory:Block.^methods
   cell   does("a") | { $_ }
   code   ({ $_ }).does("a")
@@ -846,7 +601,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0090
+- id     0066
   from   inventory:Block.^methods
   cell   does(Any) | { $_ }
   code   ({ $_ }).does(Any)
@@ -855,25 +610,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0091
-  from   inventory:Block.^methods
-  cell   file | { 1 }
-  code   ({ 1 }).file
-  is     "EVAL_123"
-  type   Str
-  oracle rakudo-2026.07 → "EVAL_123"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0092
-  from   inventory:Block.^methods
-  cell   file | { $_ }
-  code   ({ $_ }).file
-  is     "EVAL_124"
-  type   Str
-  oracle rakudo-2026.07 → "EVAL_124"
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0093
+- id     0067
   from   inventory:Block.^methods
   cell   has-loop-phasers | { 1 }
   code   ({ 1 }).has-loop-phasers
@@ -882,7 +619,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0094
+- id     0068
   from   inventory:Block.^methods
   cell   has-loop-phasers | { $_ }
   code   ({ $_ }).has-loop-phasers
@@ -891,7 +628,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0095
+- id     0069
   from   inventory:Block.^methods
   cell   has-phaser(0) | { 1 }
   code   ({ 1 }).has-phaser(0)
@@ -899,7 +636,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0096
+- id     0070
   from   inventory:Block.^methods
   cell   has-phaser(1) | { 1 }
   code   ({ 1 }).has-phaser(1)
@@ -907,7 +644,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0097
+- id     0071
   from   inventory:Block.^methods
   cell   has-phaser(-1) | { 1 }
   code   ({ 1 }).has-phaser(-1)
@@ -915,7 +652,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0098
+- id     0072
   from   inventory:Block.^methods
   cell   has-phaser("a") | { 1 }
   code   ({ 1 }).has-phaser("a")
@@ -924,7 +661,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0099
+- id     0073
   from   inventory:Block.^methods
   cell   has-phaser(Any) | { 1 }
   code   ({ 1 }).has-phaser(Any)
@@ -932,7 +669,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0100
+- id     0074
   from   inventory:Block.^methods
   cell   has-phaser(0) | { $_ }
   code   ({ $_ }).has-phaser(0)
@@ -940,7 +677,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0101
+- id     0075
   from   inventory:Block.^methods
   cell   has-phaser(1) | { $_ }
   code   ({ $_ }).has-phaser(1)
@@ -948,7 +685,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0102
+- id     0076
   from   inventory:Block.^methods
   cell   has-phaser(-1) | { $_ }
   code   ({ $_ }).has-phaser(-1)
@@ -956,7 +693,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0103
+- id     0077
   from   inventory:Block.^methods
   cell   has-phaser("a") | { $_ }
   code   ({ $_ }).has-phaser("a")
@@ -965,7 +702,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0104
+- id     0078
   from   inventory:Block.^methods
   cell   has-phaser(Any) | { $_ }
   code   ({ $_ }).has-phaser(Any)
@@ -973,7 +710,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0105
+- id     0079
   from   inventory:Block.^methods
   cell   has-phasers | { 1 }
   code   ({ 1 }).has-phasers
@@ -982,7 +719,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0106
+- id     0080
   from   inventory:Block.^methods
   cell   has-phasers | { $_ }
   code   ({ $_ }).has-phasers
@@ -991,7 +728,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0107
+- id     0081
   from   inventory:Block.^methods
   cell   iffy | { 1 }
   code   ({ 1 }).iffy
@@ -1000,7 +737,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0108
+- id     0082
   from   inventory:Block.^methods
   cell   iffy | { $_ }
   code   ({ $_ }).iffy
@@ -1009,7 +746,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → 0
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0109
+- id     0083
   from   inventory:Block.^methods
   cell   is-generic | { 1 }
   code   ({ 1 }).is-generic
@@ -1018,7 +755,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0110
+- id     0084
   from   inventory:Block.^methods
   cell   is-generic | { $_ }
   code   ({ $_ }).is-generic
@@ -1027,7 +764,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0111
+- id     0085
   from   inventory:Block.^methods
   cell   is-implementation-detail | { 1 }
   code   ({ 1 }).is-implementation-detail
@@ -1036,7 +773,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0112
+- id     0086
   from   inventory:Block.^methods
   cell   is-implementation-detail | { $_ }
   code   ({ $_ }).is-implementation-detail
@@ -1045,31 +782,31 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0113
+- id     0087
   from   inventory:Block.^methods
   cell   item | { 1 }
   code   ({ 1 }).item
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795165448) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880697008) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795165448) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880697008) ... }
   oracle rakupp-3.14.0 → sub { ... }
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0114
+- id     0088
   from   inventory:Block.^methods
   cell   item | { $_ }
   code   ({ $_ }).item
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795165880) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880697440) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795165880) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880697440) ... }
   oracle rakupp-3.14.0 → sub { ... }
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0115
+- id     0089
   from   inventory:Block.^methods
   cell   join(0) | { 1 }
   code   ({ 1 }).join(0)
@@ -1078,7 +815,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0116
+- id     0090
   from   inventory:Block.^methods
   cell   join(1) | { 1 }
   code   ({ 1 }).join(1)
@@ -1087,7 +824,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0117
+- id     0091
   from   inventory:Block.^methods
   cell   join(-1) | { 1 }
   code   ({ 1 }).join(-1)
@@ -1096,7 +833,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0118
+- id     0092
   from   inventory:Block.^methods
   cell   join("a") | { 1 }
   code   ({ 1 }).join("a")
@@ -1105,7 +842,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0119
+- id     0093
   from   inventory:Block.^methods
   cell   join(Any) | { 1 }
   code   ({ 1 }).join(Any)
@@ -1113,7 +850,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0120
+- id     0094
   from   inventory:Block.^methods
   cell   join(0) | { $_ }
   code   ({ $_ }).join(0)
@@ -1122,7 +859,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0121
+- id     0095
   from   inventory:Block.^methods
   cell   join(1) | { $_ }
   code   ({ $_ }).join(1)
@@ -1131,7 +868,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0122
+- id     0096
   from   inventory:Block.^methods
   cell   join(-1) | { $_ }
   code   ({ $_ }).join(-1)
@@ -1140,7 +877,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0123
+- id     0097
   from   inventory:Block.^methods
   cell   join("a") | { $_ }
   code   ({ $_ }).join("a")
@@ -1149,7 +886,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0124
+- id     0098
   from   inventory:Block.^methods
   cell   join(Any) | { $_ }
   code   ({ $_ }).join(Any)
@@ -1157,145 +894,127 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0125
+- id     0099
   from   inventory:Block.^methods
   cell   lazy-if(0) | { 1 }
   code   ({ 1 }).lazy-if(0)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795238368) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880769608) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795238368) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880769608) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0126
+- id     0100
   from   inventory:Block.^methods
   cell   lazy-if(1) | { 1 }
   code   ({ 1 }).lazy-if(1)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795238800) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880770040) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795238800) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880770040) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0127
+- id     0101
   from   inventory:Block.^methods
   cell   lazy-if(-1) | { 1 }
   code   ({ 1 }).lazy-if(-1)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795260864) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880770472) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795260864) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880770472) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0128
+- id     0102
   from   inventory:Block.^methods
   cell   lazy-if("a") | { 1 }
   code   ({ 1 }).lazy-if("a")
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795261296) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880770904) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795261296) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880770904) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0129
+- id     0103
   from   inventory:Block.^methods
   cell   lazy-if(Any) | { 1 }
   code   ({ 1 }).lazy-if(Any)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795261728) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880771336) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795261728) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880771336) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0130
+- id     0104
   from   inventory:Block.^methods
   cell   lazy-if(0) | { $_ }
   code   ({ $_ }).lazy-if(0)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795262160) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880771768) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795262160) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342880771768) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0131
+- id     0105
   from   inventory:Block.^methods
   cell   lazy-if(1) | { $_ }
   code   ({ $_ }).lazy-if(1)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795262592) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342726223080) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795262592) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342726223080) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0132
+- id     0106
   from   inventory:Block.^methods
   cell   lazy-if(-1) | { $_ }
   code   ({ $_ }).lazy-if(-1)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795263024) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342726223512) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795263024) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342726223512) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0133
+- id     0107
   from   inventory:Block.^methods
   cell   lazy-if("a") | { $_ }
   code   ({ $_ }).lazy-if("a")
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795263456) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933762120) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795263456) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933762120) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0134
+- id     0108
   from   inventory:Block.^methods
   cell   lazy-if(Any) | { $_ }
   code   ({ $_ }).lazy-if(Any)
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795263888) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933762552) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795263888) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933762552) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0135
-  from   inventory:Block.^methods
-  cell   line | { 1 }
-  code   ({ 1 }).line
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0136
-  from   inventory:Block.^methods
-  cell   line | { $_ }
-  code   ({ $_ }).line
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-3.14.0 → ERR:X::Method::NotFound
-
-- id     0137
+- id     0109
   from   inventory:Block.^methods
   cell   nl-out | { 1 }
   code   ({ 1 }).nl-out
@@ -1304,7 +1023,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0138
+- id     0110
   from   inventory:Block.^methods
   cell   nl-out | { $_ }
   code   ({ $_ }).nl-out
@@ -1313,31 +1032,31 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → "\n"
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0139
+- id     0111
   from   inventory:Block.^methods
   cell   none | { 1 }
   code   ({ 1 }).none
-  is     none(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795290128) ... })
+  is     none(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933788864) ... })
   type   Junction
-  oracle rakudo-2026.07 → none(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795290128) ... })
+  oracle rakudo-2026.07 → none(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933788864) ... })
   oracle rakupp-3.14.0 → none(sub { ... })
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0140
+- id     0112
   from   inventory:Block.^methods
   cell   none | { $_ }
   code   ({ $_ }).none
-  is     none(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795290560) ... })
+  is     none(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933789296) ... })
   type   Junction
-  oracle rakudo-2026.07 → none(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795290560) ... })
+  oracle rakudo-2026.07 → none(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933789296) ... })
   oracle rakupp-3.14.0 → none(sub { ... })
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0141
+- id     0113
   from   inventory:Block.^methods
   cell   not | { 1 }
   code   ({ 1 }).not
@@ -1346,7 +1065,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0142
+- id     0114
   from   inventory:Block.^methods
   cell   not | { $_ }
   code   ({ $_ }).not
@@ -1355,7 +1074,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::False
   oracle rakupp-3.14.0 → Bool::False
 
-- id     0143
+- id     0115
   from   inventory:Block.^methods
   cell   of | { 1 }
   code   ({ 1 }).of
@@ -1364,7 +1083,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0144
+- id     0116
   from   inventory:Block.^methods
   cell   of | { $_ }
   code   ({ $_ }).of
@@ -1373,55 +1092,55 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0145
+- id     0117
   from   inventory:Block.^methods
   cell   one | { 1 }
   code   ({ 1 }).one
-  is     one(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795336416) ... })
+  is     one(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933791168) ... })
   type   Junction
-  oracle rakudo-2026.07 → one(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795336416) ... })
+  oracle rakudo-2026.07 → one(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933791168) ... })
   oracle rakupp-3.14.0 → one(sub { ... })
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0146
+- id     0118
   from   inventory:Block.^methods
   cell   one | { $_ }
   code   ({ $_ }).one
-  is     one(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795338896) ... })
+  is     one(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933791600) ... })
   type   Junction
-  oracle rakudo-2026.07 → one(-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795338896) ... })
+  oracle rakudo-2026.07 → one(-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933791600) ... })
   oracle rakupp-3.14.0 → one(sub { ... })
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0147
+- id     0119
   from   inventory:Block.^methods
   cell   outer | { 1 }
   code   ({ 1 }).outer
-  is     ->  { #`(Block|3252795339328) ... }
+  is     ->  { #`(Block|6342933792032) ... }
   type   Block
-  oracle rakudo-2026.07 → ->  { #`(Block|3252795339328) ... }
+  oracle rakudo-2026.07 → ->  { #`(Block|6342933792032) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0148
+- id     0120
   from   inventory:Block.^methods
   cell   outer | { $_ }
   code   ({ $_ }).outer
-  is     ->  { #`(Block|3252795339760) ... }
+  is     ->  { #`(Block|6342933816400) ... }
   type   Block
-  oracle rakudo-2026.07 → ->  { #`(Block|3252795339760) ... }
+  oracle rakudo-2026.07 → ->  { #`(Block|6342933816400) ... }
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0149
+- id     0121
   from   inventory:Block.^methods
   cell   phasers(0) | { 1 }
   code   ({ 1 }).phasers(0)
@@ -1429,7 +1148,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0150
+- id     0122
   from   inventory:Block.^methods
   cell   phasers(1) | { 1 }
   code   ({ 1 }).phasers(1)
@@ -1437,7 +1156,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0151
+- id     0123
   from   inventory:Block.^methods
   cell   phasers(-1) | { 1 }
   code   ({ 1 }).phasers(-1)
@@ -1445,7 +1164,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0152
+- id     0124
   from   inventory:Block.^methods
   cell   phasers("a") | { 1 }
   code   ({ 1 }).phasers("a")
@@ -1454,7 +1173,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0153
+- id     0125
   from   inventory:Block.^methods
   cell   phasers(Any) | { 1 }
   code   ({ 1 }).phasers(Any)
@@ -1462,7 +1181,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0154
+- id     0126
   from   inventory:Block.^methods
   cell   phasers(0) | { $_ }
   code   ({ $_ }).phasers(0)
@@ -1470,7 +1189,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0155
+- id     0127
   from   inventory:Block.^methods
   cell   phasers(1) | { $_ }
   code   ({ $_ }).phasers(1)
@@ -1478,7 +1197,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0156
+- id     0128
   from   inventory:Block.^methods
   cell   phasers(-1) | { $_ }
   code   ({ $_ }).phasers(-1)
@@ -1486,7 +1205,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0157
+- id     0129
   from   inventory:Block.^methods
   cell   phasers("a") | { $_ }
   code   ({ $_ }).phasers("a")
@@ -1495,7 +1214,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → $( )
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0158
+- id     0130
   from   inventory:Block.^methods
   cell   phasers(Any) | { $_ }
   code   ({ $_ }).phasers(Any)
@@ -1503,7 +1222,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::AdHoc
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0159
+- id     0131
   from   inventory:Block.^methods
   cell   precedence | { 1 }
   code   ({ 1 }).precedence
@@ -1512,7 +1231,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0160
+- id     0132
   from   inventory:Block.^methods
   cell   precedence | { $_ }
   code   ({ $_ }).precedence
@@ -1521,7 +1240,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0161
+- id     0133
   from   inventory:Block.^methods
   cell   reducer | { 1 }
   code   ({ 1 }).reducer
@@ -1530,7 +1249,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → proto sub METAOP_REDUCE_LEFT (|) {*}
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0162
+- id     0134
   from   inventory:Block.^methods
   cell   reducer | { $_ }
   code   ({ $_ }).reducer
@@ -1539,7 +1258,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → proto sub METAOP_REDUCE_LEFT (|) {*}
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0163
+- id     0135
   from   inventory:Block.^methods
   cell   returns | { 1 }
   code   ({ 1 }).returns
@@ -1548,7 +1267,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0164
+- id     0136
   from   inventory:Block.^methods
   cell   returns | { $_ }
   code   ({ $_ }).returns
@@ -1557,55 +1276,55 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Mu
   oracle rakupp-3.14.0 → Mu
 
-- id     0165
+- id     0137
   from   inventory:Block.^methods
   cell   reverse | { 1 }
   code   ({ 1 }).reverse
-  is     $((-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795057288) ... },).Seq)
+  is     $((-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933913904) ... },).Seq)
   type   Seq
-  oracle rakudo-2026.07 → $((-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795057288) ... },).Seq)
+  oracle rakudo-2026.07 → $((-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933913904) ... },).Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0166
+- id     0138
   from   inventory:Block.^methods
   cell   reverse | { $_ }
   code   ({ $_ }).reverse
-  is     $((-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795057720) ... },).Seq)
+  is     $((-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933914336) ... },).Seq)
   type   Seq
-  oracle rakudo-2026.07 → $((-> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795057720) ... },).Seq)
+  oracle rakudo-2026.07 → $((-> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933914336) ... },).Seq)
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0167
+- id     0139
   from   inventory:Block.^methods
   cell   self | { 1 }
   code   ({ 1 }).self
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795058368) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933914768) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|3252795058368) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933914768) ... }
   oracle rakupp-3.14.0 → sub { ... }
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0168
+- id     0140
   from   inventory:Block.^methods
   cell   self | { $_ }
   code   ({ $_ }).self
-  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|2806115844192) ... }
+  is     -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933915200) ... }
   type   Block
-  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|2806115844192) ... }
+  oracle rakudo-2026.07 → -> ;; $_? is raw = OUTER::<$_> { #`(Block|6342933915200) ... }
   oracle rakupp-3.14.0 → sub { ... }
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0169
+- id     0141
   from   inventory:Block.^methods
   cell   signature | { 1 }
   code   ({ 1 }).signature
@@ -1614,7 +1333,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → :(;; $_? is raw = OUTER::<$_>)
   oracle rakupp-3.14.0 → :(;; $_? is raw = OUTER::<$_>)
 
-- id     0170
+- id     0142
   from   inventory:Block.^methods
   cell   signature | { $_ }
   code   ({ $_ }).signature
@@ -1623,7 +1342,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → :(;; $_? is raw = OUTER::<$_>)
   oracle rakupp-3.14.0 → :(;; $_? is raw = OUTER::<$_>)
 
-- id     0171
+- id     0143
   from   inventory:Block.^methods
   cell   so | { 1 }
   code   ({ 1 }).so
@@ -1632,7 +1351,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0172
+- id     0144
   from   inventory:Block.^methods
   cell   so | { $_ }
   code   ({ $_ }).so
@@ -1641,7 +1360,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-3.14.0 → Bool::True
 
-- id     0173
+- id     0145
   from   inventory:Block.^methods
   cell   sum | { 1 }
   code   ({ 1 }).sum
@@ -1649,7 +1368,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0174
+- id     0146
   from   inventory:Block.^methods
   cell   sum | { $_ }
   code   ({ $_ }).sum
@@ -1657,7 +1376,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0175
+- id     0147
   from   inventory:Block.^methods
   cell   take | { 1 }
   code   ({ 1 }).take
@@ -1665,7 +1384,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → sub { ... }
 
-- id     0176
+- id     0148
   from   inventory:Block.^methods
   cell   take | { $_ }
   code   ({ $_ }).take
@@ -1673,7 +1392,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ERR:X::ControlFlow
   oracle rakupp-3.14.0 → sub { ... }
 
-- id     0177
+- id     0149
   from   inventory:Block.^methods
   cell   thunky | { 1 }
   code   ({ 1 }).thunky
@@ -1682,7 +1401,7 @@ cols     { 1 } | { $_ }
   oracle rakudo-2026.07 → ""
   oracle rakupp-3.14.0 → ERR:X::Method::NotFound
 
-- id     0178
+- id     0150
   from   inventory:Block.^methods
   cell   thunky | { $_ }
   code   ({ $_ }).thunky
