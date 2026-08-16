@@ -1975,10 +1975,13 @@ cols     (1..3).Seq | ().Seq
   from   inventory:Seq.^methods
   cell   log2 | (1..3).Seq
   code   ((1..3).Seq).log2
-  is     1.5849625007211563e0
+  is     1.584962500721156e0
   type   Num
   oracle rakudo-2026.07 → 1.5849625007211563e0
   oracle rakupp-3.14.0 → 1.584962500721156e0
+  verdict impl-bug
+  why    the correctly-rounded double for log2 of this argument is 1.584962500721156; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0224
   from   inventory:Seq.^methods

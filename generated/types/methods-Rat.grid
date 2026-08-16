@@ -1218,10 +1218,13 @@ cols     1/3 | 0/1 | -1/3 | 1/1 | (2**64)/3
   from   inventory:Rat.^methods
   cell   acosech | 1/1
   code   (1/1).acosech
-  is     0.8813735870195429e0
+  is     0.881373587019543e0
   type   Num
   oracle rakudo-2026.07 → 0.8813735870195429e0
   oracle rakupp-3.14.0 → 0.881373587019543e0
+  verdict impl-bug
+  why    the correctly-rounded double for acosech of this argument is 0.881373587019543; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0140
   from   inventory:Rat.^methods
@@ -1621,10 +1624,13 @@ cols     1/3 | 0/1 | -1/3 | 1/1 | (2**64)/3
   from   inventory:Rat.^methods
   cell   asinh | 1/1
   code   (1/1).asinh
-  is     0.8813735870195429e0
+  is     0.881373587019543e0
   type   Num
   oracle rakudo-2026.07 → 0.8813735870195429e0
   oracle rakupp-3.14.0 → 0.881373587019543e0
+  verdict impl-bug
+  why    the correctly-rounded double for asinh of this argument is 0.881373587019543; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0185
   from   inventory:Rat.^methods
@@ -1899,10 +1905,13 @@ cols     1/3 | 0/1 | -1/3 | 1/1 | (2**64)/3
   from   inventory:Rat.^methods
   cell   atanh | 1/3
   code   (1/3).atanh
-  is     0.3465735902799726e0
+  is     0.34657359027997264e0
   type   Num
   oracle rakudo-2026.07 → 0.3465735902799726e0
   oracle rakupp-3.14.0 → 0.34657359027997264e0
+  verdict impl-bug
+  why    the correctly-rounded double for atanh of this argument is 0.34657359027997264; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0217
   from   inventory:Rat.^methods
@@ -1917,10 +1926,13 @@ cols     1/3 | 0/1 | -1/3 | 1/1 | (2**64)/3
   from   inventory:Rat.^methods
   cell   atanh | -1/3
   code   (-1/3).atanh
-  is     -0.34657359027997253e0
+  is     -0.34657359027997264e0
   type   Num
   oracle rakudo-2026.07 → -0.34657359027997253e0
   oracle rakupp-3.14.0 → -0.34657359027997264e0
+  verdict impl-bug
+  why    the correctly-rounded double for atanh of this argument is -0.34657359027997264; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0219
   from   inventory:Rat.^methods

@@ -317,6 +317,21 @@ for @*ARGS -> $a {
     @engines = $a.substr(10).split(',') if $a.starts-with('--engines=');
     $JOBS    = +$a.substr(7)            if $a.starts-with('--jobs=');
 }
+# Standing rulings, applied at emit time so that generated files stay
+# generated. A row here says: the reference's answer for this expression is not
+# the right one, and here is what to assert instead. See docs/PLAN.md §2.
+my %RULED;
+my $adj = $ROOT.add('adjudications/numeric-ieee.tsv');
+if $adj.e {
+    for $adj.slurp.lines -> $l {
+        next if $l.starts-with('#') || !$l.trim;
+        my @f = $l.split("\t");
+        next unless @f >= 3;
+        %RULED{@f[0]} = { is => @f[1], why => @f[2] };
+    }
+    say "# { %RULED.elems } standing ruling{ %RULED.elems == 1 ?? '' !! 's' } loaded";
+}
+
 my @ids = @engines.map({ engine-id($_) });
 
 # --- step 1: ask the reference what methods each type has -------------------
@@ -472,8 +487,14 @@ for %TYPES.keys.sort -> $t {
                       || $r<value> ~~ /^ \d ** 12..* $/);
         my $stable = %again{%c<expr>} && %again{%c<expr>}<value> eq $r<value>;
 
+        my $ruling = %RULED{%c<expr>};
+
         if $r<value>.starts-with('ERR:') {
             @out.push: "  throws { $r<value>.substr(4) }";
+        }
+        elsif $ruling {
+            @out.push: "  is     { $ruling<is> }";
+            @out.push: "  type   { $r<type> }";
         }
         else {
             @out.push: "  is     { $r<value> }";
@@ -486,7 +507,12 @@ for %TYPES.keys.sort -> $t {
             @out.push: "  oracle { @ids[$e] } → { $o<value> }";
         }
 
-        if !$portable {
+        if $ruling {
+            @out.push: "  verdict impl-bug";
+            @out.push: "  why    { $ruling<why> }";
+            @out.push: "  ruled  2026-08-16 against { @ids[0] }";
+        }
+        elsif !$portable {
             @out.push: "  verdict disputed";
             @out.push: "  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation";
             @out.push: "  ruled  2026-08-16 against { @ids[0] }";

@@ -724,10 +724,13 @@ cols     1 | "a" | 1/2
   from   inventory:Cool.^methods
   cell   acosech | 1
   code   (1).acosech
-  is     0.8813735870195429e0
+  is     0.881373587019543e0
   type   Num
   oracle rakudo-2026.07 → 0.8813735870195429e0
   oracle rakupp-3.14.0 → 0.881373587019543e0
+  verdict impl-bug
+  why    the correctly-rounded double for acosech of this argument is 0.881373587019543; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0074
   from   inventory:Cool.^methods
@@ -960,10 +963,13 @@ cols     1 | "a" | 1/2
   from   inventory:Cool.^methods
   cell   asinh | 1
   code   (1).asinh
-  is     0.8813735870195429e0
+  is     0.881373587019543e0
   type   Num
   oracle rakudo-2026.07 → 0.8813735870195429e0
   oracle rakupp-3.14.0 → 0.881373587019543e0
+  verdict impl-bug
+  why    the correctly-rounded double for asinh of this argument is 0.881373587019543; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0101
   from   inventory:Cool.^methods
@@ -2709,10 +2715,13 @@ cols     1 | "a" | 1/2
   from   inventory:Cool.^methods
   cell   log10 | 1/2
   code   (1/2).log10
-  is     -0.30102999566398114e0
+  is     -0.3010299956639812e0
   type   Num
   oracle rakudo-2026.07 → -0.30102999566398114e0
   oracle rakupp-3.14.0 → -0.3010299956639812e0
+  verdict impl-bug
+  why    the correctly-rounded double for log10 of this argument is -0.3010299956639812; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0301
   from   inventory:Cool.^methods

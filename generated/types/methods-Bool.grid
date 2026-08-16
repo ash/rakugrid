@@ -479,10 +479,13 @@ cols     True | False
   from   inventory:Bool.^methods
   cell   acosech | True
   code   (True).acosech
-  is     0.8813735870195429e0
+  is     0.881373587019543e0
   type   Num
   oracle rakudo-2026.07 → 0.8813735870195429e0
   oracle rakupp-3.14.0 → 0.881373587019543e0
+  verdict impl-bug
+  why    the correctly-rounded double for acosech of this argument is 0.881373587019543; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0056
   from   inventory:Bool.^methods
@@ -638,10 +641,13 @@ cols     True | False
   from   inventory:Bool.^methods
   cell   asinh | True
   code   (True).asinh
-  is     0.8813735870195429e0
+  is     0.881373587019543e0
   type   Num
   oracle rakudo-2026.07 → 0.8813735870195429e0
   oracle rakupp-3.14.0 → 0.881373587019543e0
+  verdict impl-bug
+  why    the correctly-rounded double for asinh of this argument is 0.881373587019543; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0074
   from   inventory:Bool.^methods

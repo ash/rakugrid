@@ -281,10 +281,13 @@ cols     Instant.from-posix(0)
   from   inventory:Instant.^methods
   cell   acotanh | Instant.from-posix(0)
   code   (Instant.from-posix(0)).acotanh
-  is     0.10033534773107562e0
+  is     0.10033534773107558e0
   type   Num
   oracle rakudo-2026.07 → 0.10033534773107562e0
   oracle rakupp-3.14.0 → 0.10033534773107558e0
+  verdict impl-bug
+  why    the correctly-rounded double for acotanh of this argument is 0.10033534773107558; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0033
   from   inventory:Instant.^methods

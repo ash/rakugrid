@@ -4251,10 +4251,13 @@ cols     [] | [1] | [1,2,3] | [[1],[2]]
   from   inventory:Array.^methods
   cell   log10 | [[1],[2]]
   code   ([[1],[2]]).log10
-  is     0.30102999566398114e0
+  is     0.3010299956639812e0
   type   Num
   oracle rakudo-2026.07 → 0.30102999566398114e0
   oracle rakupp-3.14.0 → 0.3010299956639812e0
+  verdict impl-bug
+  why    the correctly-rounded double for log10 of this argument is 0.3010299956639812; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0485
   from   inventory:Array.^methods
@@ -4278,10 +4281,13 @@ cols     [] | [1] | [1,2,3] | [[1],[2]]
   from   inventory:Array.^methods
   cell   log2 | [1,2,3]
   code   ([1,2,3]).log2
-  is     1.5849625007211563e0
+  is     1.584962500721156e0
   type   Num
   oracle rakudo-2026.07 → 1.5849625007211563e0
   oracle rakupp-3.14.0 → 1.584962500721156e0
+  verdict impl-bug
+  why    the correctly-rounded double for log2 of this argument is 1.584962500721156; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0488
   from   inventory:Array.^methods

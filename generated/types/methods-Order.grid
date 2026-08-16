@@ -714,10 +714,13 @@ cols     Order::Less | Order::Same | Order::More
   from   inventory:Order.^methods
   cell   acosech | Order::Less
   code   (Order::Less).acosech
-  is     -0.8813735870195429e0
+  is     -0.881373587019543e0
   type   Num
   oracle rakudo-2026.07 → -0.8813735870195429e0
   oracle rakupp-3.14.0 → -0.881373587019543e0
+  verdict impl-bug
+  why    the correctly-rounded double for acosech of this argument is -0.881373587019543; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0083
   from   inventory:Order.^methods
@@ -731,10 +734,13 @@ cols     Order::Less | Order::Same | Order::More
   from   inventory:Order.^methods
   cell   acosech | Order::More
   code   (Order::More).acosech
-  is     0.8813735870195429e0
+  is     0.881373587019543e0
   type   Num
   oracle rakudo-2026.07 → 0.8813735870195429e0
   oracle rakupp-3.14.0 → 0.881373587019543e0
+  verdict impl-bug
+  why    the correctly-rounded double for acosech of this argument is 0.881373587019543; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0085
   from   inventory:Order.^methods
@@ -954,10 +960,13 @@ cols     Order::Less | Order::Same | Order::More
   from   inventory:Order.^methods
   cell   asinh | Order::Less
   code   (Order::Less).asinh
-  is     -0.8813735870195429e0
+  is     -0.881373587019543e0
   type   Num
   oracle rakudo-2026.07 → -0.8813735870195429e0
   oracle rakupp-3.14.0 → -0.881373587019543e0
+  verdict impl-bug
+  why    the correctly-rounded double for asinh of this argument is -0.881373587019543; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0110
   from   inventory:Order.^methods
@@ -972,10 +981,13 @@ cols     Order::Less | Order::Same | Order::More
   from   inventory:Order.^methods
   cell   asinh | Order::More
   code   (Order::More).asinh
-  is     0.8813735870195429e0
+  is     0.881373587019543e0
   type   Num
   oracle rakudo-2026.07 → 0.8813735870195429e0
   oracle rakupp-3.14.0 → 0.881373587019543e0
+  verdict impl-bug
+  why    the correctly-rounded double for asinh of this argument is 0.881373587019543; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0112
   from   inventory:Order.^methods

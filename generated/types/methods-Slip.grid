@@ -1999,10 +1999,13 @@ cols     slip(1,2) | Empty
   from   inventory:Slip.^methods
   cell   log10 | slip(1,2)
   code   (slip(1,2)).log10
-  is     0.30102999566398114e0
+  is     0.3010299956639812e0
   type   Num
   oracle rakudo-2026.07 → 0.30102999566398114e0
   oracle rakupp-3.14.0 → 0.3010299956639812e0
+  verdict impl-bug
+  why    the correctly-rounded double for log10 of this argument is 0.3010299956639812; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
 
 - id     0228
   from   inventory:Slip.^methods
