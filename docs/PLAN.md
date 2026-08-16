@@ -38,6 +38,21 @@ language; Rakugrid measures whether an implementation of it holds together.
    | `underspecified` | more than one answer is legitimate; assert only the property they share |
    | `disputed` | unresolved; the test is parked and does not run |
 
+   **Standing rulings.** Some questions are settled once and then applied
+   consistently rather than re-argued per cell:
+
+   - **IEEE-754 beats the reference.** Where two engines return doubles
+     differing in the last place, the correctly-rounded value wins — decided by
+     high-precision arithmetic, not by either implementation. Verified at 60
+     digits, rakupp is exact on `asinh`, `log10`, `log2`, `atanh` and `acotanh`
+     while Rakudo is 1–3 ULP out; those cells are ruled `impl-bug` against the
+     reference. Check with independent arithmetic, never with another libm,
+     which may share an implementation with the engine under test.
+   - **Diagnostic wording is never asserted.** Only the exception type, or the
+     structural fact that something did or did not compile.
+   - **Unspecified order is never asserted.** Hash and set iteration order, and
+     anything derived from it.
+
 3. **Provenance is mandatory.** Every test names its origin: a Roast coverage
    point, a fixed bug, a corpus program, a module failure, a documented rule.
 
