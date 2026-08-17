@@ -11,7 +11,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).AST(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0002
   from   inventory:Match.^methods
@@ -19,7 +19,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).AST(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0003
   from   inventory:Match.^methods
@@ -27,7 +27,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).AST(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0004
   from   inventory:Match.^methods
@@ -35,7 +35,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).AST("a")
   throws X::CompUnit::UnsatisfiedDependency+{X::Comp}
   oracle rakudo-2026.07 → ERR:X::CompUnit::UnsatisfiedDependency+{X::Comp}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0005
   from   inventory:Match.^methods
@@ -43,7 +43,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).AST(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0006
   from   inventory:Match.^methods
@@ -52,7 +52,7 @@ cols     ("abc" ~~ /b/)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::True
 
 - id     0007
   from   inventory:Match.^methods
@@ -61,7 +61,7 @@ cols     ("abc" ~~ /b/)
   is     Match.new(:orig("abc"), :from(1), :pos(2))
   type   Match
   oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Cannot::Capture
 
 - id     0008
   from   inventory:Match.^methods
@@ -69,7 +69,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).Complex
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0009
   from   inventory:Match.^methods
@@ -78,7 +78,7 @@ cols     ("abc" ~~ /b/)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::True
 
 - id     0010
   from   inventory:Match.^methods
@@ -86,7 +86,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).EVAL
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Undeclared::Symbols
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Undeclared::Symbols
 
 - id     0011
   from   inventory:Match.^methods
@@ -94,7 +94,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).Failure
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::AdHoc
 
 - id     0012
   from   inventory:Match.^methods
@@ -102,7 +102,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).FatRat
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → FatRat.new(0, 1)
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → FatRat.new(0, 1)
 
 - id     0013
   from   inventory:Match.^methods
@@ -111,7 +111,7 @@ cols     ("abc" ~~ /b/)
   is     Perl6::Metamodel::ClassHOW.new
   type   Perl6::Metamodel::ClassHOW
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Metamodel::ClassHOW
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Metamodel::ClassHOW
 
 - id     0014
   from   inventory:Match.^methods
@@ -119,7 +119,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).Int
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0015
   from   inventory:Match.^methods
@@ -127,7 +127,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).Num
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0016
   from   inventory:Match.^methods
@@ -135,7 +135,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).Order
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0017
   from   inventory:Match.^methods
@@ -144,7 +144,7 @@ cols     ("abc" ~~ /b/)
   is     "P6opaque"
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0018
   from   inventory:Match.^methods
@@ -152,7 +152,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).Rat
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.0
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.0
 
 - id     0019
   from   inventory:Match.^methods
@@ -161,7 +161,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0020
   from   inventory:Match.^methods
@@ -170,7 +170,7 @@ cols     ("abc" ~~ /b/)
   is     Match.new(:orig("abc"), :from(1), :pos(2))
   type   Match
   oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Match.new(:orig("abc"), :from(1), :pos(2))
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Match.new(:orig("abc"), :from(1), :pos(2))
 
 - id     0021
   from   inventory:Match.^methods
@@ -179,7 +179,7 @@ cols     ("abc" ~~ /b/)
   is     Version.new('b')
   type   Version
   oracle rakudo-2026.07 → Version.new('b')
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → vb
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → vb
 
 - id     0022
   from   inventory:Match.^methods
@@ -188,7 +188,7 @@ cols     ("abc" ~~ /b/)
   is     Match
   type   Match
   oracle rakudo-2026.07 → Match
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Match
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Match
 
 - id     0023
   from   inventory:Match.^methods
@@ -197,7 +197,7 @@ cols     ("abc" ~~ /b/)
   is     ${}
   type   Stash
   oracle rakudo-2026.07 → ${}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${}
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${}
 
 - id     0024
   from   inventory:Match.^methods
@@ -205,7 +205,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).abs
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
 
 - id     0025
   from   inventory:Match.^methods
@@ -213,7 +213,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).acos
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0026
   from   inventory:Match.^methods
@@ -221,7 +221,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).acosec
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0027
   from   inventory:Match.^methods
@@ -229,7 +229,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).acosech
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0028
   from   inventory:Match.^methods
@@ -237,7 +237,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).acosh
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0029
   from   inventory:Match.^methods
@@ -245,7 +245,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).acotan
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0030
   from   inventory:Match.^methods
@@ -253,7 +253,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).acotanh
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0031
   from   inventory:Match.^methods
@@ -262,7 +262,7 @@ cols     ("abc" ~~ /b/)
   is     all()
   type   Junction
   oracle rakudo-2026.07 → all()
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → all(Match.new(:orig("abc"), :from(1), :pos(2)))
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → all(Match.new(:orig("abc"), :from(1), :pos(2)))
 
 - id     0032
   from   inventory:Match.^methods
@@ -271,7 +271,7 @@ cols     ("abc" ~~ /b/)
   is     any()
   type   Junction
   oracle rakudo-2026.07 → any()
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → any(Match.new(:orig("abc"), :from(1), :pos(2)))
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → any(Match.new(:orig("abc"), :from(1), :pos(2)))
 
 - id     0033
   from   inventory:Match.^methods
@@ -279,7 +279,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).asec
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0034
   from   inventory:Match.^methods
@@ -287,7 +287,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).asech
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0035
   from   inventory:Match.^methods
@@ -295,7 +295,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).asin
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0036
   from   inventory:Match.^methods
@@ -303,7 +303,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).asinh
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0037
   from   inventory:Match.^methods
@@ -312,7 +312,7 @@ cols     ("abc" ~~ /b/)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Any
 
 - id     0038
   from   inventory:Match.^methods
@@ -320,7 +320,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).atan
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0039
   from   inventory:Match.^methods
@@ -328,7 +328,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).atan2(0)
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0040
   from   inventory:Match.^methods
@@ -336,7 +336,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).atan2(1)
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0041
   from   inventory:Match.^methods
@@ -344,7 +344,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).atan2(-1)
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0042
   from   inventory:Match.^methods
@@ -352,7 +352,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).atan2("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0043
   from   inventory:Match.^methods
@@ -360,7 +360,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).atan2(Any)
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0044
   from   inventory:Match.^methods
@@ -368,7 +368,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).atanh
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0045
   from   inventory:Match.^methods
@@ -377,7 +377,7 @@ cols     ("abc" ~~ /b/)
   is     Match.new(:orig(""), :from(0), :pos(0))
   type   Match
   oracle rakudo-2026.07 → Match.new(:orig(""), :from(0), :pos(0))
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Match.new(:orig(""), :from(0), :pos(0))
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Match.new(:orig(""), :from(0), :pos(0))
 
 - id     0046
   from   inventory:Match.^methods
@@ -385,7 +385,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).byte
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0047
   from   inventory:Match.^methods
@@ -394,7 +394,7 @@ cols     ("abc" ~~ /b/)
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0048
   from   inventory:Match.^methods
@@ -402,7 +402,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $( )
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
 
 - id     0049
   from   inventory:Match.^methods
@@ -410,7 +410,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $( )
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
 
 - id     0050
   from   inventory:Match.^methods
@@ -418,7 +418,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $( )
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
 
 - id     0051
   from   inventory:Match.^methods
@@ -427,7 +427,7 @@ cols     ("abc" ~~ /b/)
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $( )
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
 
 - id     0052
   from   inventory:Match.^methods
@@ -435,7 +435,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $( )
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
 
 - id     0053
   from   inventory:Match.^methods
@@ -444,7 +444,7 @@ cols     ("abc" ~~ /b/)
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $( )
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
 
 - id     0054
   from   inventory:Match.^methods
@@ -452,7 +452,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).ceiling
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0055
   from   inventory:Match.^methods
@@ -461,7 +461,7 @@ cols     ("abc" ~~ /b/)
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
 
 - id     0056
   from   inventory:Match.^methods
@@ -470,7 +470,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0057
   from   inventory:Match.^methods
@@ -479,7 +479,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0058
   from   inventory:Match.^methods
@@ -488,7 +488,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0059
   from   inventory:Match.^methods
@@ -497,7 +497,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0060
   from   inventory:Match.^methods
@@ -505,7 +505,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).chomp(Any)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Multi::NoMatch
 
 - id     0061
   from   inventory:Match.^methods
@@ -513,7 +513,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).chr
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0062
   from   inventory:Match.^methods
@@ -522,7 +522,7 @@ cols     ("abc" ~~ /b/)
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0063
   from   inventory:Match.^methods
@@ -531,7 +531,7 @@ cols     ("abc" ~~ /b/)
   is     $(("~" => "b",).Seq)
   type   Seq
   oracle rakudo-2026.07 → $(("~" => "b",).Seq)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0064
   from   inventory:Match.^methods
@@ -539,7 +539,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).cis
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0065
   from   inventory:Match.^methods
@@ -548,7 +548,7 @@ cols     ("abc" ~~ /b/)
   is     Match.new(:orig("abc"), :from(1), :pos(2))
   type   Match
   oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Match.new(:orig("abc"), :from(1), :pos(2))
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Match.new(:orig("abc"), :from(1), :pos(2))
 
 - id     0066
   from   inventory:Match.^methods
@@ -557,7 +557,7 @@ cols     ("abc" ~~ /b/)
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
 
 - id     0067
   from   inventory:Match.^methods
@@ -565,7 +565,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).conj
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0068
   from   inventory:Match.^methods
@@ -573,7 +573,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).cos
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0069
   from   inventory:Match.^methods
@@ -581,7 +581,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).cosec
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0070
   from   inventory:Match.^methods
@@ -589,7 +589,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).cosech
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0071
   from   inventory:Match.^methods
@@ -597,7 +597,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).cosh
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0072
   from   inventory:Match.^methods
@@ -605,7 +605,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).cotan
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0073
   from   inventory:Match.^methods
@@ -613,7 +613,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).cotanh
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0074
   from   inventory:Match.^methods
@@ -622,7 +622,7 @@ cols     ("abc" ~~ /b/)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
 
 - id     0075
   from   inventory:Match.^methods
@@ -631,7 +631,7 @@ cols     ("abc" ~~ /b/)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
 
 - id     0076
   from   inventory:Match.^methods
@@ -640,7 +640,7 @@ cols     ("abc" ~~ /b/)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
 
 - id     0077
   from   inventory:Match.^methods
@@ -649,7 +649,7 @@ cols     ("abc" ~~ /b/)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
 
 - id     0078
   from   inventory:Match.^methods
@@ -658,7 +658,7 @@ cols     ("abc" ~~ /b/)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::True
 
 - id     0079
   from   inventory:Match.^methods
@@ -667,7 +667,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0080
   from   inventory:Match.^methods
@@ -676,7 +676,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0081
   from   inventory:Match.^methods
@@ -684,7 +684,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).floor
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0082
   from   inventory:Match.^methods
@@ -693,7 +693,7 @@ cols     ("abc" ~~ /b/)
   is     $(Map.new)
   type   Map
   oracle rakudo-2026.07 → $(Map.new)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${}
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${}
 
 - id     0083
   from   inventory:Match.^methods
@@ -702,7 +702,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0084
   from   inventory:Match.^methods
@@ -711,7 +711,7 @@ cols     ("abc" ~~ /b/)
   is     " b"
   type   Str
   oracle rakudo-2026.07 → " b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → " b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → " b"
 
 - id     0085
   from   inventory:Match.^methods
@@ -720,7 +720,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0086
   from   inventory:Match.^methods
@@ -728,7 +728,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).indent("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0087
   from   inventory:Match.^methods
@@ -737,7 +737,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0088
   from   inventory:Match.^methods
@@ -745,7 +745,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).int
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0089
   from   inventory:Match.^methods
@@ -753,7 +753,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).int16
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0090
   from   inventory:Match.^methods
@@ -761,7 +761,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).int32
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0091
   from   inventory:Match.^methods
@@ -769,7 +769,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).int64
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0092
   from   inventory:Match.^methods
@@ -777,7 +777,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).int8
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0093
   from   inventory:Match.^methods
@@ -786,7 +786,7 @@ cols     ("abc" ~~ /b/)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0094
   from   inventory:Match.^methods
@@ -794,7 +794,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).is-prime
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0095
   from   inventory:Match.^methods
@@ -803,7 +803,7 @@ cols     ("abc" ~~ /b/)
   is     Match.new(:orig("abc"), :from(1), :pos(2))
   type   Match
   oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Match.new(:orig("abc"), :from(1), :pos(2))
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Match.new(:orig("abc"), :from(1), :pos(2))
 
 - id     0096
   from   inventory:Match.^methods
@@ -812,7 +812,7 @@ cols     ("abc" ~~ /b/)
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ""
 
 - id     0097
   from   inventory:Match.^methods
@@ -821,7 +821,7 @@ cols     ("abc" ~~ /b/)
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ""
 
 - id     0098
   from   inventory:Match.^methods
@@ -830,7 +830,7 @@ cols     ("abc" ~~ /b/)
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ""
 
 - id     0099
   from   inventory:Match.^methods
@@ -839,7 +839,7 @@ cols     ("abc" ~~ /b/)
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ""
 
 - id     0100
   from   inventory:Match.^methods
@@ -847,7 +847,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).join(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::TypeCheck::Binding::Parameter
 
 - id     0101
   from   inventory:Match.^methods
@@ -856,7 +856,7 @@ cols     ("abc" ~~ /b/)
   is     Match.new(:orig("abc"), :from(1), :pos(2))
   type   Match
   oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0102
   from   inventory:Match.^methods
@@ -865,7 +865,7 @@ cols     ("abc" ~~ /b/)
   is     Match.new(:orig("abc"), :from(1), :pos(2))
   type   Match
   oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0103
   from   inventory:Match.^methods
@@ -874,7 +874,7 @@ cols     ("abc" ~~ /b/)
   is     Match.new(:orig("abc"), :from(1), :pos(2))
   type   Match
   oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0104
   from   inventory:Match.^methods
@@ -883,7 +883,7 @@ cols     ("abc" ~~ /b/)
   is     Match.new(:orig("abc"), :from(1), :pos(2))
   type   Match
   oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0105
   from   inventory:Match.^methods
@@ -892,7 +892,7 @@ cols     ("abc" ~~ /b/)
   is     Match.new(:orig("abc"), :from(1), :pos(2))
   type   Match
   oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0106
   from   inventory:Match.^methods
@@ -901,7 +901,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0107
   from   inventory:Match.^methods
@@ -910,7 +910,7 @@ cols     ("abc" ~~ /b/)
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $( )
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
 
 - id     0108
   from   inventory:Match.^methods
@@ -918,7 +918,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).log10
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0109
   from   inventory:Match.^methods
@@ -926,7 +926,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).log2
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0110
   from   inventory:Match.^methods
@@ -935,7 +935,7 @@ cols     ("abc" ~~ /b/)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Any
 
 - id     0111
   from   inventory:Match.^methods
@@ -944,7 +944,7 @@ cols     ("abc" ~~ /b/)
   is     "\n"
   type   Str
   oracle rakudo-2026.07 → "\n"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0112
   from   inventory:Match.^methods
@@ -953,7 +953,7 @@ cols     ("abc" ~~ /b/)
   is     none()
   type   Junction
   oracle rakudo-2026.07 → none()
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → none(Match.new(:orig("abc"), :from(1), :pos(2)))
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → none(Match.new(:orig("abc"), :from(1), :pos(2)))
 
 - id     0113
   from   inventory:Match.^methods
@@ -962,7 +962,7 @@ cols     ("abc" ~~ /b/)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
 
 - id     0114
   from   inventory:Match.^methods
@@ -971,7 +971,7 @@ cols     ("abc" ~~ /b/)
   is     one()
   type   Junction
   oracle rakudo-2026.07 → one()
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → one(Match.new(:orig("abc"), :from(1), :pos(2)))
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → one(Match.new(:orig("abc"), :from(1), :pos(2)))
 
 - id     0115
   from   inventory:Match.^methods
@@ -980,7 +980,7 @@ cols     ("abc" ~~ /b/)
   is     98
   type   Int
   oracle rakudo-2026.07 → 98
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 98
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → 98
 
 - id     0116
   from   inventory:Match.^methods
@@ -989,7 +989,7 @@ cols     ("abc" ~~ /b/)
   is     $((98,).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((98,).Seq)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $((98,).Seq)
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((98,).Seq)
 
 - id     0117
   from   inventory:Match.^methods
@@ -997,7 +997,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).parse-names
   throws X::Str::InvalidCharName
   oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::InvalidCharName
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::InvalidCharName
 
 - id     0118
   from   inventory:Match.^methods
@@ -1006,7 +1006,7 @@ cols     ("abc" ~~ /b/)
   is     IO::Path.new("b", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
   type   IO::Path
   oracle rakudo-2026.07 → IO::Path.new("b", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
   verdict disputed
   why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
   ruled  2026-08-16 against rakudo-2026.07
@@ -1018,7 +1018,7 @@ cols     ("abc" ~~ /b/)
   is     "c"
   type   Str
   oracle rakudo-2026.07 → "c"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "c"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "c"
 
 - id     0120
   from   inventory:Match.^methods
@@ -1027,7 +1027,7 @@ cols     ("abc" ~~ /b/)
   is     "a"
   type   Str
   oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "a"
 
 - id     0121
   from   inventory:Match.^methods
@@ -1035,7 +1035,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).rand
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
 
 - id     0122
   from   inventory:Match.^methods
@@ -1044,7 +1044,7 @@ cols     ("abc" ~~ /b/)
   is     "a0c"
   type   Str
   oracle rakudo-2026.07 → "a0c"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0123
   from   inventory:Match.^methods
@@ -1053,7 +1053,7 @@ cols     ("abc" ~~ /b/)
   is     "a1c"
   type   Str
   oracle rakudo-2026.07 → "a1c"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0124
   from   inventory:Match.^methods
@@ -1062,7 +1062,7 @@ cols     ("abc" ~~ /b/)
   is     "a-1c"
   type   Str
   oracle rakudo-2026.07 → "a-1c"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0125
   from   inventory:Match.^methods
@@ -1071,7 +1071,7 @@ cols     ("abc" ~~ /b/)
   is     "aac"
   type   Str
   oracle rakudo-2026.07 → "aac"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0126
   from   inventory:Match.^methods
@@ -1080,7 +1080,7 @@ cols     ("abc" ~~ /b/)
   is     "ac"
   type   Str
   oracle rakudo-2026.07 → "ac"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
 
 - id     0127
   from   inventory:Match.^methods
@@ -1089,7 +1089,7 @@ cols     ("abc" ~~ /b/)
   is     $(().Seq)
   type   Seq
   oracle rakudo-2026.07 → $(().Seq)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(().Seq)
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(().Seq)
 
 - id     0128
   from   inventory:Match.^methods
@@ -1097,7 +1097,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).roots(0)
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0129
   from   inventory:Match.^methods
@@ -1105,7 +1105,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).roots(1)
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0130
   from   inventory:Match.^methods
@@ -1113,7 +1113,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).roots(-1)
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0131
   from   inventory:Match.^methods
@@ -1121,7 +1121,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).roots("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0132
   from   inventory:Match.^methods
@@ -1129,7 +1129,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).roots(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::TypeCheck::Binding::Parameter
 
 - id     0133
   from   inventory:Match.^methods
@@ -1138,7 +1138,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0134
   from   inventory:Match.^methods
@@ -1147,7 +1147,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0135
   from   inventory:Match.^methods
@@ -1156,7 +1156,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0136
   from   inventory:Match.^methods
@@ -1165,7 +1165,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0137
   from   inventory:Match.^methods
@@ -1173,7 +1173,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).samecase(Any)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Multi::NoMatch
 
 - id     0138
   from   inventory:Match.^methods
@@ -1182,7 +1182,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0139
   from   inventory:Match.^methods
@@ -1191,7 +1191,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0140
   from   inventory:Match.^methods
@@ -1200,7 +1200,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0141
   from   inventory:Match.^methods
@@ -1209,7 +1209,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0142
   from   inventory:Match.^methods
@@ -1217,7 +1217,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).samemark(Any)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Multi::NoMatch
 
 - id     0143
   from   inventory:Match.^methods
@@ -1226,7 +1226,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0144
   from   inventory:Match.^methods
@@ -1235,7 +1235,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0145
   from   inventory:Match.^methods
@@ -1244,7 +1244,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0146
   from   inventory:Match.^methods
@@ -1253,7 +1253,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0147
   from   inventory:Match.^methods
@@ -1261,7 +1261,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).samespace(Any)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Multi::NoMatch
 
 - id     0148
   from   inventory:Match.^methods
@@ -1269,7 +1269,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).sec
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0149
   from   inventory:Match.^methods
@@ -1277,7 +1277,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).sech
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0150
   from   inventory:Match.^methods
@@ -1286,7 +1286,7 @@ cols     ("abc" ~~ /b/)
   is     Match.new(:orig("abc"), :from(1), :pos(2))
   type   Match
   oracle rakudo-2026.07 → Match.new(:orig("abc"), :from(1), :pos(2))
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Match.new(:orig("abc"), :from(1), :pos(2))
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Match.new(:orig("abc"), :from(1), :pos(2))
 
 - id     0151
   from   inventory:Match.^methods
@@ -1294,7 +1294,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).sign
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0152
   from   inventory:Match.^methods
@@ -1302,7 +1302,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).sin
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0153
   from   inventory:Match.^methods
@@ -1310,7 +1310,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).sinh
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0154
   from   inventory:Match.^methods
@@ -1319,7 +1319,7 @@ cols     ("abc" ~~ /b/)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::True
 
 - id     0155
   from   inventory:Match.^methods
@@ -1327,7 +1327,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).sqrt
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
 
 - id     0156
   from   inventory:Match.^methods
@@ -1336,7 +1336,7 @@ cols     ("abc" ~~ /b/)
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0
 
 - id     0157
   from   inventory:Match.^methods
@@ -1344,7 +1344,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::ControlFlow
 
 - id     0158
   from   inventory:Match.^methods
@@ -1352,7 +1352,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).tan
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0159
   from   inventory:Match.^methods
@@ -1360,7 +1360,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).tanh
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0160
   from   inventory:Match.^methods
@@ -1369,7 +1369,7 @@ cols     ("abc" ~~ /b/)
   is     "B"
   type   Str
   oracle rakudo-2026.07 → "B"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "B"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "B"
 
 - id     0161
   from   inventory:Match.^methods
@@ -1378,7 +1378,7 @@ cols     ("abc" ~~ /b/)
   is     "B"
   type   Str
   oracle rakudo-2026.07 → "B"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "B"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "B"
 
 - id     0162
   from   inventory:Match.^methods
@@ -1387,7 +1387,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0163
   from   inventory:Match.^methods
@@ -1396,7 +1396,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0164
   from   inventory:Match.^methods
@@ -1405,7 +1405,7 @@ cols     ("abc" ~~ /b/)
   is     "b"
   type   Str
   oracle rakudo-2026.07 → "b"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "b"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "b"
 
 - id     0165
   from   inventory:Match.^methods
@@ -1413,7 +1413,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).truncate
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0166
   from   inventory:Match.^methods
@@ -1422,7 +1422,7 @@ cols     ("abc" ~~ /b/)
   is     "B"
   type   Str
   oracle rakudo-2026.07 → "B"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "B"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "B"
 
 - id     0167
   from   inventory:Match.^methods
@@ -1430,7 +1430,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).uint
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0168
   from   inventory:Match.^methods
@@ -1438,7 +1438,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).uint16
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0169
   from   inventory:Match.^methods
@@ -1446,7 +1446,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).uint32
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0170
   from   inventory:Match.^methods
@@ -1454,7 +1454,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).uint64
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0171
   from   inventory:Match.^methods
@@ -1462,7 +1462,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).uint8
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0172
   from   inventory:Match.^methods
@@ -1471,7 +1471,7 @@ cols     ("abc" ~~ /b/)
   is     "LATIN SMALL LETTER B"
   type   Str
   oracle rakudo-2026.07 → "LATIN SMALL LETTER B"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "LATIN SMALL LETTER B"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "LATIN SMALL LETTER B"
 
 - id     0173
   from   inventory:Match.^methods
@@ -1480,7 +1480,7 @@ cols     ("abc" ~~ /b/)
   is     $(("LATIN SMALL LETTER B",).Seq)
   type   Seq
   oracle rakudo-2026.07 → $(("LATIN SMALL LETTER B",).Seq)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(("LATIN SMALL LETTER B",).Seq)
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(("LATIN SMALL LETTER B",).Seq)
 
 - id     0174
   from   inventory:Match.^methods
@@ -1488,7 +1488,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).uniparse
   throws X::Str::InvalidCharName
   oracle rakudo-2026.07 → ERR:X::Str::InvalidCharName
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::InvalidCharName
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::InvalidCharName
 
 - id     0175
   from   inventory:Match.^methods
@@ -1496,7 +1496,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).uniprop(0)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Multi::NoMatch
 
 - id     0176
   from   inventory:Match.^methods
@@ -1504,7 +1504,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).uniprop(1)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Multi::NoMatch
 
 - id     0177
   from   inventory:Match.^methods
@@ -1512,7 +1512,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).uniprop(-1)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Multi::NoMatch
 
 - id     0178
   from   inventory:Match.^methods
@@ -1521,7 +1521,7 @@ cols     ("abc" ~~ /b/)
   is     "0"
   type   Str
   oracle rakudo-2026.07 → "0"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
 
 - id     0179
   from   inventory:Match.^methods
@@ -1529,7 +1529,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).uniprop(Any)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Multi::NoMatch
 
 - id     0180
   from   inventory:Match.^methods
@@ -1537,7 +1537,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).uniprops(0)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Multi::NoMatch
 
 - id     0181
   from   inventory:Match.^methods
@@ -1545,7 +1545,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).uniprops(1)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Multi::NoMatch
 
 - id     0182
   from   inventory:Match.^methods
@@ -1553,7 +1553,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).uniprops(-1)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Multi::NoMatch
 
 - id     0183
   from   inventory:Match.^methods
@@ -1562,7 +1562,7 @@ cols     ("abc" ~~ /b/)
   is     $(("0",).Seq)
   type   Seq
   oracle rakudo-2026.07 → $(("0",).Seq)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $((Bool::False,).Seq)
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((Bool::False,).Seq)
 
 - id     0184
   from   inventory:Match.^methods
@@ -1570,7 +1570,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).uniprops(Any)
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Multi::NoMatch
 
 - id     0185
   from   inventory:Match.^methods
@@ -1578,7 +1578,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).unival
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → NaN
 
 - id     0186
   from   inventory:Match.^methods
@@ -1587,7 +1587,7 @@ cols     ("abc" ~~ /b/)
   is     $((NaN,).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((NaN,).Seq)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(NaN,)
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(NaN,)
 
 - id     0187
   from   inventory:Match.^methods
@@ -1595,7 +1595,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).unpolar(0)
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0188
   from   inventory:Match.^methods
@@ -1603,7 +1603,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).unpolar(1)
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0189
   from   inventory:Match.^methods
@@ -1611,7 +1611,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).unpolar(-1)
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
 
 - id     0190
   from   inventory:Match.^methods
@@ -1619,7 +1619,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).unpolar("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::TypeCheck::Binding::Parameter
 
 - id     0191
   from   inventory:Match.^methods
@@ -1627,7 +1627,7 @@ cols     ("abc" ~~ /b/)
   code   (("abc" ~~ /b/)).unpolar(Any)
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::TypeCheck::Binding::Parameter
 
 - id     0192
   from   inventory:Match.^methods
@@ -1636,4 +1636,4 @@ cols     ("abc" ~~ /b/)
   is     "B"
   type   Str
   oracle rakudo-2026.07 → "B"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "B"
+  oracle rakupp-v3.14.0-82-gacc4eab-modified → "B"

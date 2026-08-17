@@ -36,7 +36,12 @@ sub parse-grid($path) {
     my %header;
     my @records;
     my %cur;
-    my @lines = $path.IO.lines;
+    # utf8-c8, not utf8: an engine under test can emit bytes that are not valid
+    # UTF-8 — rakupp answers `(-1).chrs` with \xff\xbf\xbf\xbf — and those bytes
+    # reach the record. Strict decoding makes one such cell kill every command
+    # that reads the suite. utf8-c8 maps them to synthetic codepoints instead,
+    # so the file stays readable and the bad bytes survive a round trip.
+    my @lines = $path.IO.lines(:enc<utf8-c8>);
     my $n = @lines.elems;
     my $i = 0;
 

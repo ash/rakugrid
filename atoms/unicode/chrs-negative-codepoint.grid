@@ -1,0 +1,30 @@
+atom     unicode/chrs-negative-codepoint
+source   curated
+kind     output validity — the answer is not merely wrong, it is not text
+
+# Found by the method matrix: rakupp answers `(-1).chrs` with the bytes
+# ff bf bf bf, which are not valid UTF-8. Storing that observation put an
+# undecodable byte sequence into five .grid files and broke every command that
+# reads the suite — one cell, whole tool down.
+#
+# A negative number is not a codepoint. Rakudo says so; rakupp encodes -1 as
+# though it were one and emits the result.
+
+- id     0001
+  from   generator:gen/methods.raku · review:2026-08-16
+  code   (-1).chrs
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-77-gf431f48-dirty → INVALID-UTF8: ff bf bf bf
+
+- id     0002
+  from   review:2026-08-16
+  code   (-1).chr
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+
+- id     0003
+  from   review:2026-08-16 · the boundary the reference states
+  code   (0x110000).chr
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc

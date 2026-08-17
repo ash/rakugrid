@@ -237,6 +237,16 @@ sub cache-save($id, %seen) {
     $TMP-DIR.add("ladder-cache-$id.tsv").spurt(@lines.join("\n") ~ "\n");
 }
 
+
+# An engine can answer with bytes that are not valid UTF-8 — rakupp renders
+# `(-1).chrs` as \xff\xbf\xbf\xbf. Storing that verbatim puts a byte sequence in
+# the record that no strict reader can decode, so one cell breaks every tool that
+# reads the suite. Keep WHAT happened, in a form that is text.
+sub textual($v) {
+    return $v if try { $v.encode('utf-8').decode('utf-8') === $v };
+    return 'INVALID-UTF8:' ~ (try { $v.ords.map(*.base(16)).join(' ') } // 'unrenderable');
+}
+
 sub engine-id($cmd) {
     my $p = run($cmd, '-e', 'print $*RAKU.compiler.name', :out, :err);
     my $name = $p.out.slurp(:close).trim;
@@ -540,7 +550,7 @@ for @SPECS -> %spec {
         }
         else {
             @out.push: "  code   { %c<expr> }";
-            @out.push: "  is     { $r<value> }";
+            @out.push: "  is     { textual($r<value>) }";
             @out.push: "  type   { $r<type> }";
         }
 
@@ -557,7 +567,7 @@ for @SPECS -> %spec {
             my $obs = $o<value> eq 'NOCOMPILE' && $o<msg>
                 ?? 'NOCOMPILE: ' ~ $o<msg>
                 !! $o<value>;
-            @out.push: "  oracle { @ids[$e] } → $obs";
+            @out.push: "  oracle { @ids[$e] } → { textual($obs) }";
         }
 
         if !$answered {
