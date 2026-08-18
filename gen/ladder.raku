@@ -247,6 +247,35 @@ sub textual($v) {
     return 'INVALID-UTF8:' ~ (try { $v.ords.map(*.base(16)).join(' ') } // 'unrenderable');
 }
 
+sub PREFIX() { "ladder" }
+sub TMPD() { $TMP-DIR }
+
+# Every observation already on record for one implementation, whatever build
+# made it. A development build moves faster than the suite can re-measure it, so
+# re-probing 50,000 cells because five commits landed is waste — but carrying an
+# old observation forward under the new build's name would be a lie. Each
+# expression therefore remembers WHICH build answered it, and only genuinely new
+# cells are put to the current one.
+sub build-distance($s) {
+    return +$0 if $s ~~ / '-' (\d+) '-g' /;
+    return 0;
+}
+
+sub cache-load-family($short) {
+    my %seen;
+    my @files = TMPD().dir.grep({ .basename.starts-with(PREFIX() ~ '-cache-' ~ $short) && .extension eq 'tsv' });
+    for @files.sort({ build-distance(.basename) }) -> $f {
+        my $label = $f.basename.subst(PREFIX() ~ '-cache-', '').subst('.tsv', '');
+        next if $label.ends-with('-again');
+        for $f.slurp.lines -> $l {
+            my @p = $l.split("\t");
+            next unless @p >= 3;
+            %seen{@p[0]} = { value => @p[1], type => @p[2], label => $label };
+        }
+    }
+    return %seen;
+}
+
 sub engine-id($cmd) {
     my $p = run($cmd, '-e', 'print $*RAKU.compiler.name', :out, :err);
     my $name = $p.out.slurp(:close).trim;

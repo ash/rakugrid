@@ -302,6 +302,35 @@ sub textual($v) {
     return 'INVALID-UTF8:' ~ (try { $v.ords.map(*.base(16)).join(' ') } // 'unrenderable');
 }
 
+sub PREFIX() { "mm" }
+sub TMPD() { $TMP }
+
+# Every observation already on record for one implementation, whatever build
+# made it. A development build moves faster than the suite can re-measure it, so
+# re-probing 50,000 cells because five commits landed is waste — but carrying an
+# old observation forward under the new build's name would be a lie. Each
+# expression therefore remembers WHICH build answered it, and only genuinely new
+# cells are put to the current one.
+sub build-distance($s) {
+    return +$0 if $s ~~ / '-' (\d+) '-g' /;
+    return 0;
+}
+
+sub cache-load-family($short) {
+    my %seen;
+    my @files = TMPD().dir.grep({ .basename.starts-with(PREFIX() ~ '-cache-' ~ $short) && .extension eq 'tsv' });
+    for @files.sort({ build-distance(.basename) }) -> $f {
+        my $label = $f.basename.subst(PREFIX() ~ '-cache-', '').subst('.tsv', '');
+        next if $label.ends-with('-again');
+        for $f.slurp.lines -> $l {
+            my @p = $l.split("\t");
+            next unless @p >= 3;
+            %seen{@p[0]} = { value => @p[1], type => @p[2], label => $label };
+        }
+    }
+    return %seen;
+}
+
 sub engine-id($cmd) {
     my $p = run($cmd, '-e', 'print $*RAKU.compiler.name', :out, :err);
     my $name = $p.out.slurp(:close).trim;
@@ -444,23 +473,26 @@ my @obs;
 for ^@engines -> $e {
     # Incremental: widening the type table or a ladder should cost only the
     # NEW cells. Everything already on record is reused verbatim.
-    my %seen = cache-load(@ids[$e]);
+    my $short = @ids[$e].split('-')[0];
+    my %seen = cache-load-family($short);
     my @todo = @all.grep({ !%seen{$_} });
     if !@todo {
         say "# all { @all.elems } cells already on record for { @ids[$e] }";
         @obs.push: %seen;
         next;
     }
-    say "# probing { @ids[$e] }: { @todo.elems } new of { @all.elems }, $JOBS jobs …";
+    say "# probing { @ids[$e] }: { @todo.elems } new of { @all.elems } ({ @all.elems - @todo.elems } carried forward from earlier builds), $JOBS jobs …";
     my %fresh = run-parallel(@engines[$e], @todo, $VALUE-PROBE, $JOBS);
-    for %fresh.keys -> $k { %seen{$k} = %fresh{$k} }
+    for %fresh.keys -> $k { %fresh{$k}<label> = @ids[$e]; %seen{$k} = %fresh{$k} }
     my @missing = @todo.grep({ !%seen{$_} });
     if @missing {
         say "#   recovering { @missing.elems } lost cells by bisection …";
         my %filled = recover(@engines[$e], @missing, $VALUE-PROBE);
-        for %filled.keys -> $k { %seen{$k} = %filled{$k} }
+        for %filled.keys -> $k { %filled{$k}<label> = @ids[$e]; %seen{$k} = %filled{$k} }
     }
-    cache-save(@ids[$e], %seen);
+    my %mine;
+    for %seen.keys -> $k { %mine{$k} = %seen{$k} if (%seen{$k}<label> // '') eq @ids[$e] }
+    cache-save(@ids[$e], %mine) if %mine;
     @obs.push: %seen;
 }
 
