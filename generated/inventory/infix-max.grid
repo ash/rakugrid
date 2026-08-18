@@ -3,8 +3,8 @@ source   generated
 gen      gen/operators.raku
 from-inventory infix max
 ladder   mixed
-axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
-cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
 
 - id     0001
   from   inventory:infix:max
@@ -13,7 +13,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
 
 - id     0002
   from   inventory:infix:max
@@ -22,1168 +22,1168 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
 
 - id     0003
-  from   inventory:infix:max
-  cell   0 | -1
-  code   (0) max (-1)
-  is     0
-  type   Int
-  oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
-
-- id     0004
-  from   inventory:infix:max
-  cell   0 | 1/2
-  code   (0) max (1/2)
-  is     0.5
-  type   Rat
-  oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
-
-- id     0005
-  from   inventory:infix:max
-  cell   0 | 0e0
-  code   (0) max (0e0)
-  is     0e0
-  type   Num
-  oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
-
-- id     0006
-  from   inventory:infix:max
-  cell   0 | NaN
-  code   (0) max (NaN)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0007
-  from   inventory:infix:max
-  cell   0 | ""
-  code   (0) max ("")
-  is     0
-  type   Int
-  oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
-
-- id     0008
-  from   inventory:infix:max
-  cell   0 | "a"
-  code   (0) max ("a")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0009
-  from   inventory:infix:max
-  cell   0 | True
-  code   (0) max (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0010
-  from   inventory:infix:max
-  cell   0 | Any
-  code   (0) max (Any)
-  is     0
-  type   Int
-  oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
-
-- id     0011
-  from   inventory:infix:max
-  cell   0 | (1,2)
-  code   (0) max ((1,2))
-  is     $(1, 2)
-  type   List
-  oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
-
-- id     0012
-  from   inventory:infix:max
-  cell   0 | {a=>1}
-  code   (0) max ({a=>1})
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0013
-  from   inventory:infix:max
-  cell   1 | 0
-  code   (1) max (0)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
-
-- id     0014
   from   inventory:infix:max
   cell   1 | 1
   code   (1) max (1)
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
 
-- id     0015
+- id     0004
+  from   inventory:infix:max
+  cell   1 | 0
+  code   (1) max (0)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0005
+  from   inventory:infix:max
+  cell   0 | -1
+  code   (0) max (-1)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0006
   from   inventory:infix:max
   cell   1 | -1
   code   (1) max (-1)
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
 
-- id     0016
-  from   inventory:infix:max
-  cell   1 | 1/2
-  code   (1) max (1/2)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
-
-- id     0017
-  from   inventory:infix:max
-  cell   1 | 0e0
-  code   (1) max (0e0)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
-
-- id     0018
-  from   inventory:infix:max
-  cell   1 | NaN
-  code   (1) max (NaN)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0019
-  from   inventory:infix:max
-  cell   1 | ""
-  code   (1) max ("")
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
-
-- id     0020
-  from   inventory:infix:max
-  cell   1 | "a"
-  code   (1) max ("a")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0021
-  from   inventory:infix:max
-  cell   1 | True
-  code   (1) max (True)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0022
-  from   inventory:infix:max
-  cell   1 | Any
-  code   (1) max (Any)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
-
-- id     0023
-  from   inventory:infix:max
-  cell   1 | (1,2)
-  code   (1) max ((1,2))
-  is     $(1, 2)
-  type   List
-  oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
-
-- id     0024
-  from   inventory:infix:max
-  cell   1 | {a=>1}
-  code   (1) max ({a=>1})
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0025
-  from   inventory:infix:max
-  cell   -1 | 0
-  code   (-1) max (0)
-  is     0
-  type   Int
-  oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
-
-- id     0026
-  from   inventory:infix:max
-  cell   -1 | 1
-  code   (-1) max (1)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
-
-- id     0027
+- id     0007
   from   inventory:infix:max
   cell   -1 | -1
   code   (-1) max (-1)
   is     -1
   type   Int
   oracle rakudo-2026.07 → -1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -1
 
-- id     0028
+- id     0008
+  from   inventory:infix:max
+  cell   -1 | 0
+  code   (-1) max (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0009
+  from   inventory:infix:max
+  cell   -1 | 1
+  code   (-1) max (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0010
+  from   inventory:infix:max
+  cell   0 | 1/2
+  code   (0) max (1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0011
+  from   inventory:infix:max
+  cell   1 | 1/2
+  code   (1) max (1/2)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0012
   from   inventory:infix:max
   cell   -1 | 1/2
   code   (-1) max (1/2)
   is     0.5
   type   Rat
   oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
 
-- id     0029
-  from   inventory:infix:max
-  cell   -1 | 0e0
-  code   (-1) max (0e0)
-  is     0e0
-  type   Num
-  oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
-
-- id     0030
-  from   inventory:infix:max
-  cell   -1 | NaN
-  code   (-1) max (NaN)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0031
-  from   inventory:infix:max
-  cell   -1 | ""
-  code   (-1) max ("")
-  is     -1
-  type   Int
-  oracle rakudo-2026.07 → -1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
-
-- id     0032
-  from   inventory:infix:max
-  cell   -1 | "a"
-  code   (-1) max ("a")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0033
-  from   inventory:infix:max
-  cell   -1 | True
-  code   (-1) max (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0034
-  from   inventory:infix:max
-  cell   -1 | Any
-  code   (-1) max (Any)
-  is     -1
-  type   Int
-  oracle rakudo-2026.07 → -1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
-
-- id     0035
-  from   inventory:infix:max
-  cell   -1 | (1,2)
-  code   (-1) max ((1,2))
-  is     $(1, 2)
-  type   List
-  oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
-
-- id     0036
-  from   inventory:infix:max
-  cell   -1 | {a=>1}
-  code   (-1) max ({a=>1})
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0037
-  from   inventory:infix:max
-  cell   1/2 | 0
-  code   (1/2) max (0)
-  is     0.5
-  type   Rat
-  oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
-
-- id     0038
-  from   inventory:infix:max
-  cell   1/2 | 1
-  code   (1/2) max (1)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
-
-- id     0039
-  from   inventory:infix:max
-  cell   1/2 | -1
-  code   (1/2) max (-1)
-  is     0.5
-  type   Rat
-  oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
-
-- id     0040
+- id     0013
   from   inventory:infix:max
   cell   1/2 | 1/2
   code   (1/2) max (1/2)
   is     0.5
   type   Rat
   oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
 
-- id     0041
+- id     0014
+  from   inventory:infix:max
+  cell   1/2 | 0
+  code   (1/2) max (0)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0015
+  from   inventory:infix:max
+  cell   1/2 | 1
+  code   (1/2) max (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0016
+  from   inventory:infix:max
+  cell   1/2 | -1
+  code   (1/2) max (-1)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0017
+  from   inventory:infix:max
+  cell   0 | 0e0
+  code   (0) max (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0018
+  from   inventory:infix:max
+  cell   1 | 0e0
+  code   (1) max (0e0)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0019
+  from   inventory:infix:max
+  cell   -1 | 0e0
+  code   (-1) max (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0020
   from   inventory:infix:max
   cell   1/2 | 0e0
   code   (1/2) max (0e0)
   is     0.5
   type   Rat
   oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
 
-- id     0042
-  from   inventory:infix:max
-  cell   1/2 | NaN
-  code   (1/2) max (NaN)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0043
-  from   inventory:infix:max
-  cell   1/2 | ""
-  code   (1/2) max ("")
-  is     0.5
-  type   Rat
-  oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
-
-- id     0044
-  from   inventory:infix:max
-  cell   1/2 | "a"
-  code   (1/2) max ("a")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0045
-  from   inventory:infix:max
-  cell   1/2 | True
-  code   (1/2) max (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0046
-  from   inventory:infix:max
-  cell   1/2 | Any
-  code   (1/2) max (Any)
-  is     0.5
-  type   Rat
-  oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
-
-- id     0047
-  from   inventory:infix:max
-  cell   1/2 | (1,2)
-  code   (1/2) max ((1,2))
-  is     $(1, 2)
-  type   List
-  oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
-
-- id     0048
-  from   inventory:infix:max
-  cell   1/2 | {a=>1}
-  code   (1/2) max ({a=>1})
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0049
-  from   inventory:infix:max
-  cell   0e0 | 0
-  code   (0e0) max (0)
-  is     0
-  type   Int
-  oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
-
-- id     0050
-  from   inventory:infix:max
-  cell   0e0 | 1
-  code   (0e0) max (1)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
-
-- id     0051
-  from   inventory:infix:max
-  cell   0e0 | -1
-  code   (0e0) max (-1)
-  is     0e0
-  type   Num
-  oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
-
-- id     0052
-  from   inventory:infix:max
-  cell   0e0 | 1/2
-  code   (0e0) max (1/2)
-  is     0.5
-  type   Rat
-  oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
-
-- id     0053
+- id     0021
   from   inventory:infix:max
   cell   0e0 | 0e0
   code   (0e0) max (0e0)
   is     0e0
   type   Num
   oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
 
-- id     0054
+- id     0022
+  from   inventory:infix:max
+  cell   0e0 | 0
+  code   (0e0) max (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0023
+  from   inventory:infix:max
+  cell   0e0 | 1
+  code   (0e0) max (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0024
+  from   inventory:infix:max
+  cell   0e0 | -1
+  code   (0e0) max (-1)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0025
+  from   inventory:infix:max
+  cell   0e0 | 1/2
+  code   (0e0) max (1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0026
+  from   inventory:infix:max
+  cell   0 | NaN
+  code   (0) max (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0027
+  from   inventory:infix:max
+  cell   1 | NaN
+  code   (1) max (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0028
+  from   inventory:infix:max
+  cell   -1 | NaN
+  code   (-1) max (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0029
+  from   inventory:infix:max
+  cell   1/2 | NaN
+  code   (1/2) max (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0030
   from   inventory:infix:max
   cell   0e0 | NaN
   code   (0e0) max (NaN)
   is     0e0
   type   Num
   oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
 
-- id     0055
-  from   inventory:infix:max
-  cell   0e0 | ""
-  code   (0e0) max ("")
-  is     0e0
-  type   Num
-  oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
-
-- id     0056
-  from   inventory:infix:max
-  cell   0e0 | "a"
-  code   (0e0) max ("a")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0057
-  from   inventory:infix:max
-  cell   0e0 | True
-  code   (0e0) max (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0058
-  from   inventory:infix:max
-  cell   0e0 | Any
-  code   (0e0) max (Any)
-  is     0e0
-  type   Num
-  oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
-
-- id     0059
-  from   inventory:infix:max
-  cell   0e0 | (1,2)
-  code   (0e0) max ((1,2))
-  is     $(1, 2)
-  type   List
-  oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
-
-- id     0060
-  from   inventory:infix:max
-  cell   0e0 | {a=>1}
-  code   (0e0) max ({a=>1})
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0061
-  from   inventory:infix:max
-  cell   NaN | 0
-  code   (NaN) max (0)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0062
-  from   inventory:infix:max
-  cell   NaN | 1
-  code   (NaN) max (1)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0063
-  from   inventory:infix:max
-  cell   NaN | -1
-  code   (NaN) max (-1)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0064
-  from   inventory:infix:max
-  cell   NaN | 1/2
-  code   (NaN) max (1/2)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0065
-  from   inventory:infix:max
-  cell   NaN | 0e0
-  code   (NaN) max (0e0)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0066
+- id     0031
   from   inventory:infix:max
   cell   NaN | NaN
   code   (NaN) max (NaN)
   is     NaN
   type   Num
   oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
 
-- id     0067
+- id     0032
+  from   inventory:infix:max
+  cell   NaN | 0
+  code   (NaN) max (0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0033
+  from   inventory:infix:max
+  cell   NaN | 1
+  code   (NaN) max (1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0034
+  from   inventory:infix:max
+  cell   NaN | -1
+  code   (NaN) max (-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0035
+  from   inventory:infix:max
+  cell   NaN | 1/2
+  code   (NaN) max (1/2)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0036
+  from   inventory:infix:max
+  cell   NaN | 0e0
+  code   (NaN) max (0e0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0037
+  from   inventory:infix:max
+  cell   0 | ""
+  code   (0) max ("")
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0038
+  from   inventory:infix:max
+  cell   1 | ""
+  code   (1) max ("")
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0039
+  from   inventory:infix:max
+  cell   -1 | ""
+  code   (-1) max ("")
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -1
+
+- id     0040
+  from   inventory:infix:max
+  cell   1/2 | ""
+  code   (1/2) max ("")
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0041
+  from   inventory:infix:max
+  cell   0e0 | ""
+  code   (0e0) max ("")
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0042
   from   inventory:infix:max
   cell   NaN | ""
   code   (NaN) max ("")
   is     NaN
   type   Num
   oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
 
-- id     0068
-  from   inventory:infix:max
-  cell   NaN | "a"
-  code   (NaN) max ("a")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0069
-  from   inventory:infix:max
-  cell   NaN | True
-  code   (NaN) max (True)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0070
-  from   inventory:infix:max
-  cell   NaN | Any
-  code   (NaN) max (Any)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0071
-  from   inventory:infix:max
-  cell   NaN | (1,2)
-  code   (NaN) max ((1,2))
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0072
-  from   inventory:infix:max
-  cell   NaN | {a=>1}
-  code   (NaN) max ({a=>1})
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0073
-  from   inventory:infix:max
-  cell   "" | 0
-  code   ("") max (0)
-  is     0
-  type   Int
-  oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
-
-- id     0074
-  from   inventory:infix:max
-  cell   "" | 1
-  code   ("") max (1)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
-
-- id     0075
-  from   inventory:infix:max
-  cell   "" | -1
-  code   ("") max (-1)
-  is     -1
-  type   Int
-  oracle rakudo-2026.07 → -1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
-
-- id     0076
-  from   inventory:infix:max
-  cell   "" | 1/2
-  code   ("") max (1/2)
-  is     0.5
-  type   Rat
-  oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
-
-- id     0077
-  from   inventory:infix:max
-  cell   "" | 0e0
-  code   ("") max (0e0)
-  is     0e0
-  type   Num
-  oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
-
-- id     0078
-  from   inventory:infix:max
-  cell   "" | NaN
-  code   ("") max (NaN)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0079
+- id     0043
   from   inventory:infix:max
   cell   "" | ""
   code   ("") max ("")
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ""
 
-- id     0080
+- id     0044
+  from   inventory:infix:max
+  cell   "" | 0
+  code   ("") max (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0045
+  from   inventory:infix:max
+  cell   "" | 1
+  code   ("") max (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0046
+  from   inventory:infix:max
+  cell   "" | -1
+  code   ("") max (-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -1
+
+- id     0047
+  from   inventory:infix:max
+  cell   "" | 1/2
+  code   ("") max (1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0048
+  from   inventory:infix:max
+  cell   "" | 0e0
+  code   ("") max (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0049
+  from   inventory:infix:max
+  cell   "" | NaN
+  code   ("") max (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0050
+  from   inventory:infix:max
+  cell   0 | "a"
+  code   (0) max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0051
+  from   inventory:infix:max
+  cell   1 | "a"
+  code   (1) max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0052
+  from   inventory:infix:max
+  cell   -1 | "a"
+  code   (-1) max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0053
+  from   inventory:infix:max
+  cell   1/2 | "a"
+  code   (1/2) max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0054
+  from   inventory:infix:max
+  cell   0e0 | "a"
+  code   (0e0) max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0055
+  from   inventory:infix:max
+  cell   NaN | "a"
+  code   (NaN) max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0056
   from   inventory:infix:max
   cell   "" | "a"
   code   ("") max ("a")
   is     "a"
   type   Str
   oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
 
-- id     0081
-  from   inventory:infix:max
-  cell   "" | True
-  code   ("") max (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0082
-  from   inventory:infix:max
-  cell   "" | Any
-  code   ("") max (Any)
-  is     ""
-  type   Str
-  oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
-
-- id     0083
-  from   inventory:infix:max
-  cell   "" | (1,2)
-  code   ("") max ((1,2))
-  is     $(1, 2)
-  type   List
-  oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
-
-- id     0084
-  from   inventory:infix:max
-  cell   "" | {a=>1}
-  code   ("") max ({a=>1})
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0085
-  from   inventory:infix:max
-  cell   "a" | 0
-  code   ("a") max (0)
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0086
-  from   inventory:infix:max
-  cell   "a" | 1
-  code   ("a") max (1)
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0087
-  from   inventory:infix:max
-  cell   "a" | -1
-  code   ("a") max (-1)
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0088
-  from   inventory:infix:max
-  cell   "a" | 1/2
-  code   ("a") max (1/2)
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0089
-  from   inventory:infix:max
-  cell   "a" | 0e0
-  code   ("a") max (0e0)
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0090
-  from   inventory:infix:max
-  cell   "a" | NaN
-  code   ("a") max (NaN)
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0091
-  from   inventory:infix:max
-  cell   "a" | ""
-  code   ("a") max ("")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0092
+- id     0057
   from   inventory:infix:max
   cell   "a" | "a"
   code   ("a") max ("a")
   is     "a"
   type   Str
   oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
 
-- id     0093
+- id     0058
+  from   inventory:infix:max
+  cell   "a" | 0
+  code   ("a") max (0)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0059
+  from   inventory:infix:max
+  cell   "a" | 1
+  code   ("a") max (1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0060
+  from   inventory:infix:max
+  cell   "a" | -1
+  code   ("a") max (-1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0061
+  from   inventory:infix:max
+  cell   "a" | 1/2
+  code   ("a") max (1/2)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0062
+  from   inventory:infix:max
+  cell   "a" | 0e0
+  code   ("a") max (0e0)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0063
+  from   inventory:infix:max
+  cell   "a" | NaN
+  code   ("a") max (NaN)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0064
+  from   inventory:infix:max
+  cell   "a" | ""
+  code   ("a") max ("")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0065
+  from   inventory:infix:max
+  cell   0 | True
+  code   (0) max (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0066
+  from   inventory:infix:max
+  cell   1 | True
+  code   (1) max (True)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0067
+  from   inventory:infix:max
+  cell   -1 | True
+  code   (-1) max (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0068
+  from   inventory:infix:max
+  cell   1/2 | True
+  code   (1/2) max (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0069
+  from   inventory:infix:max
+  cell   0e0 | True
+  code   (0e0) max (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0070
+  from   inventory:infix:max
+  cell   NaN | True
+  code   (NaN) max (True)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0071
+  from   inventory:infix:max
+  cell   "" | True
+  code   ("") max (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0072
   from   inventory:infix:max
   cell   "a" | True
   code   ("a") max (True)
   is     "a"
   type   Str
   oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
 
-- id     0094
-  from   inventory:infix:max
-  cell   "a" | Any
-  code   ("a") max (Any)
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0095
-  from   inventory:infix:max
-  cell   "a" | (1,2)
-  code   ("a") max ((1,2))
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0096
-  from   inventory:infix:max
-  cell   "a" | {a=>1}
-  code   ("a") max ({a=>1})
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0097
-  from   inventory:infix:max
-  cell   True | 0
-  code   (True) max (0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0098
-  from   inventory:infix:max
-  cell   True | 1
-  code   (True) max (1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
-
-- id     0099
-  from   inventory:infix:max
-  cell   True | -1
-  code   (True) max (-1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0100
-  from   inventory:infix:max
-  cell   True | 1/2
-  code   (True) max (1/2)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0101
-  from   inventory:infix:max
-  cell   True | 0e0
-  code   (True) max (0e0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0102
-  from   inventory:infix:max
-  cell   True | NaN
-  code   (True) max (NaN)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0103
-  from   inventory:infix:max
-  cell   True | ""
-  code   (True) max ("")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0104
-  from   inventory:infix:max
-  cell   True | "a"
-  code   (True) max ("a")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0105
+- id     0073
   from   inventory:infix:max
   cell   True | True
   code   (True) max (True)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
 
-- id     0106
+- id     0074
+  from   inventory:infix:max
+  cell   True | 0
+  code   (True) max (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0075
+  from   inventory:infix:max
+  cell   True | 1
+  code   (True) max (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0076
+  from   inventory:infix:max
+  cell   True | -1
+  code   (True) max (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0077
+  from   inventory:infix:max
+  cell   True | 1/2
+  code   (True) max (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0078
+  from   inventory:infix:max
+  cell   True | 0e0
+  code   (True) max (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0079
+  from   inventory:infix:max
+  cell   True | NaN
+  code   (True) max (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0080
+  from   inventory:infix:max
+  cell   True | ""
+  code   (True) max ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0081
+  from   inventory:infix:max
+  cell   True | "a"
+  code   (True) max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0082
+  from   inventory:infix:max
+  cell   0 | Any
+  code   (0) max (Any)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0083
+  from   inventory:infix:max
+  cell   1 | Any
+  code   (1) max (Any)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0084
+  from   inventory:infix:max
+  cell   -1 | Any
+  code   (-1) max (Any)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -1
+
+- id     0085
+  from   inventory:infix:max
+  cell   1/2 | Any
+  code   (1/2) max (Any)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0086
+  from   inventory:infix:max
+  cell   0e0 | Any
+  code   (0e0) max (Any)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0087
+  from   inventory:infix:max
+  cell   NaN | Any
+  code   (NaN) max (Any)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0088
+  from   inventory:infix:max
+  cell   "" | Any
+  code   ("") max (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Any
+
+- id     0089
+  from   inventory:infix:max
+  cell   "a" | Any
+  code   ("a") max (Any)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0090
   from   inventory:infix:max
   cell   True | Any
   code   (True) max (Any)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
 
-- id     0107
-  from   inventory:infix:max
-  cell   True | (1,2)
-  code   (True) max ((1,2))
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0108
-  from   inventory:infix:max
-  cell   True | {a=>1}
-  code   (True) max ({a=>1})
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0109
-  from   inventory:infix:max
-  cell   Any | 0
-  code   (Any) max (0)
-  is     0
-  type   Int
-  oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
-
-- id     0110
-  from   inventory:infix:max
-  cell   Any | 1
-  code   (Any) max (1)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
-
-- id     0111
-  from   inventory:infix:max
-  cell   Any | -1
-  code   (Any) max (-1)
-  is     -1
-  type   Int
-  oracle rakudo-2026.07 → -1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
-
-- id     0112
-  from   inventory:infix:max
-  cell   Any | 1/2
-  code   (Any) max (1/2)
-  is     0.5
-  type   Rat
-  oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
-
-- id     0113
-  from   inventory:infix:max
-  cell   Any | 0e0
-  code   (Any) max (0e0)
-  is     0e0
-  type   Num
-  oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
-
-- id     0114
-  from   inventory:infix:max
-  cell   Any | NaN
-  code   (Any) max (NaN)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0115
-  from   inventory:infix:max
-  cell   Any | ""
-  code   (Any) max ("")
-  is     ""
-  type   Str
-  oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
-
-- id     0116
-  from   inventory:infix:max
-  cell   Any | "a"
-  code   (Any) max ("a")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0117
-  from   inventory:infix:max
-  cell   Any | True
-  code   (Any) max (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0118
+- id     0091
   from   inventory:infix:max
   cell   Any | Any
   code   (Any) max (Any)
   is     -Inf
   type   Num
   oracle rakudo-2026.07 → -Inf
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Any
 
-- id     0119
+- id     0092
+  from   inventory:infix:max
+  cell   Any | 0
+  code   (Any) max (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0093
+  from   inventory:infix:max
+  cell   Any | 1
+  code   (Any) max (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0094
+  from   inventory:infix:max
+  cell   Any | -1
+  code   (Any) max (-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -1
+
+- id     0095
+  from   inventory:infix:max
+  cell   Any | 1/2
+  code   (Any) max (1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0096
+  from   inventory:infix:max
+  cell   Any | 0e0
+  code   (Any) max (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0097
+  from   inventory:infix:max
+  cell   Any | NaN
+  code   (Any) max (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0098
+  from   inventory:infix:max
+  cell   Any | ""
+  code   (Any) max ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ""
+
+- id     0099
+  from   inventory:infix:max
+  cell   Any | "a"
+  code   (Any) max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0100
+  from   inventory:infix:max
+  cell   Any | True
+  code   (Any) max (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0101
+  from   inventory:infix:max
+  cell   0 | (1,2)
+  code   (0) max ((1,2))
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0102
+  from   inventory:infix:max
+  cell   1 | (1,2)
+  code   (1) max ((1,2))
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0103
+  from   inventory:infix:max
+  cell   -1 | (1,2)
+  code   (-1) max ((1,2))
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0104
+  from   inventory:infix:max
+  cell   1/2 | (1,2)
+  code   (1/2) max ((1,2))
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0105
+  from   inventory:infix:max
+  cell   0e0 | (1,2)
+  code   (0e0) max ((1,2))
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0106
+  from   inventory:infix:max
+  cell   NaN | (1,2)
+  code   (NaN) max ((1,2))
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0107
+  from   inventory:infix:max
+  cell   "" | (1,2)
+  code   ("") max ((1,2))
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0108
+  from   inventory:infix:max
+  cell   "a" | (1,2)
+  code   ("a") max ((1,2))
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0109
+  from   inventory:infix:max
+  cell   True | (1,2)
+  code   (True) max ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0110
   from   inventory:infix:max
   cell   Any | (1,2)
   code   (Any) max ((1,2))
   is     $(1, 2)
   type   List
   oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
 
-- id     0120
-  from   inventory:infix:max
-  cell   Any | {a=>1}
-  code   (Any) max ({a=>1})
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0121
-  from   inventory:infix:max
-  cell   (1,2) | 0
-  code   ((1,2)) max (0)
-  is     $(1, 2)
-  type   List
-  oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
-
-- id     0122
-  from   inventory:infix:max
-  cell   (1,2) | 1
-  code   ((1,2)) max (1)
-  is     $(1, 2)
-  type   List
-  oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
-
-- id     0123
-  from   inventory:infix:max
-  cell   (1,2) | -1
-  code   ((1,2)) max (-1)
-  is     $(1, 2)
-  type   List
-  oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
-
-- id     0124
-  from   inventory:infix:max
-  cell   (1,2) | 1/2
-  code   ((1,2)) max (1/2)
-  is     $(1, 2)
-  type   List
-  oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
-
-- id     0125
-  from   inventory:infix:max
-  cell   (1,2) | 0e0
-  code   ((1,2)) max (0e0)
-  is     $(1, 2)
-  type   List
-  oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
-
-- id     0126
-  from   inventory:infix:max
-  cell   (1,2) | NaN
-  code   ((1,2)) max (NaN)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0127
-  from   inventory:infix:max
-  cell   (1,2) | ""
-  code   ((1,2)) max ("")
-  is     $(1, 2)
-  type   List
-  oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
-
-- id     0128
-  from   inventory:infix:max
-  cell   (1,2) | "a"
-  code   ((1,2)) max ("a")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0129
-  from   inventory:infix:max
-  cell   (1,2) | True
-  code   ((1,2)) max (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0130
-  from   inventory:infix:max
-  cell   (1,2) | Any
-  code   ((1,2)) max (Any)
-  is     $(1, 2)
-  type   List
-  oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
-
-- id     0131
+- id     0111
   from   inventory:infix:max
   cell   (1,2) | (1,2)
   code   ((1,2)) max ((1,2))
   is     $(1, 2)
   type   List
   oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0112
+  from   inventory:infix:max
+  cell   (1,2) | 0
+  code   ((1,2)) max (0)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0113
+  from   inventory:infix:max
+  cell   (1,2) | 1
+  code   ((1,2)) max (1)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0114
+  from   inventory:infix:max
+  cell   (1,2) | -1
+  code   ((1,2)) max (-1)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0115
+  from   inventory:infix:max
+  cell   (1,2) | 1/2
+  code   ((1,2)) max (1/2)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0116
+  from   inventory:infix:max
+  cell   (1,2) | 0e0
+  code   ((1,2)) max (0e0)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0117
+  from   inventory:infix:max
+  cell   (1,2) | NaN
+  code   ((1,2)) max (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0118
+  from   inventory:infix:max
+  cell   (1,2) | ""
+  code   ((1,2)) max ("")
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0119
+  from   inventory:infix:max
+  cell   (1,2) | "a"
+  code   ((1,2)) max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0120
+  from   inventory:infix:max
+  cell   (1,2) | True
+  code   ((1,2)) max (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0121
+  from   inventory:infix:max
+  cell   (1,2) | Any
+  code   ((1,2)) max (Any)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0122
+  from   inventory:infix:max
+  cell   0 | {a=>1}
+  code   (0) max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0123
+  from   inventory:infix:max
+  cell   1 | {a=>1}
+  code   (1) max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0124
+  from   inventory:infix:max
+  cell   -1 | {a=>1}
+  code   (-1) max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0125
+  from   inventory:infix:max
+  cell   1/2 | {a=>1}
+  code   (1/2) max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0126
+  from   inventory:infix:max
+  cell   0e0 | {a=>1}
+  code   (0e0) max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0127
+  from   inventory:infix:max
+  cell   NaN | {a=>1}
+  code   (NaN) max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0128
+  from   inventory:infix:max
+  cell   "" | {a=>1}
+  code   ("") max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0129
+  from   inventory:infix:max
+  cell   "a" | {a=>1}
+  code   ("a") max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0130
+  from   inventory:infix:max
+  cell   True | {a=>1}
+  code   (True) max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0131
+  from   inventory:infix:max
+  cell   Any | {a=>1}
+  code   (Any) max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
 
 - id     0132
   from   inventory:infix:max
@@ -1192,112 +1192,2416 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
   is     ${:a(1)}
   type   Hash
   oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
 
 - id     0133
-  from   inventory:infix:max
-  cell   {a=>1} | 0
-  code   ({a=>1}) max (0)
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0134
-  from   inventory:infix:max
-  cell   {a=>1} | 1
-  code   ({a=>1}) max (1)
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0135
-  from   inventory:infix:max
-  cell   {a=>1} | -1
-  code   ({a=>1}) max (-1)
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0136
-  from   inventory:infix:max
-  cell   {a=>1} | 1/2
-  code   ({a=>1}) max (1/2)
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0137
-  from   inventory:infix:max
-  cell   {a=>1} | 0e0
-  code   ({a=>1}) max (0e0)
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0138
-  from   inventory:infix:max
-  cell   {a=>1} | NaN
-  code   ({a=>1}) max (NaN)
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0139
-  from   inventory:infix:max
-  cell   {a=>1} | ""
-  code   ({a=>1}) max ("")
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0140
-  from   inventory:infix:max
-  cell   {a=>1} | "a"
-  code   ({a=>1}) max ("a")
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0141
-  from   inventory:infix:max
-  cell   {a=>1} | True
-  code   ({a=>1}) max (True)
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0142
-  from   inventory:infix:max
-  cell   {a=>1} | Any
-  code   ({a=>1}) max (Any)
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0143
-  from   inventory:infix:max
-  cell   {a=>1} | (1,2)
-  code   ({a=>1}) max ((1,2))
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0144
   from   inventory:infix:max
   cell   {a=>1} | {a=>1}
   code   ({a=>1}) max ({a=>1})
   is     ${:a(1)}
   type   Hash
   oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0134
+  from   inventory:infix:max
+  cell   {a=>1} | 0
+  code   ({a=>1}) max (0)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0135
+  from   inventory:infix:max
+  cell   {a=>1} | 1
+  code   ({a=>1}) max (1)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0136
+  from   inventory:infix:max
+  cell   {a=>1} | -1
+  code   ({a=>1}) max (-1)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0137
+  from   inventory:infix:max
+  cell   {a=>1} | 1/2
+  code   ({a=>1}) max (1/2)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0138
+  from   inventory:infix:max
+  cell   {a=>1} | 0e0
+  code   ({a=>1}) max (0e0)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0139
+  from   inventory:infix:max
+  cell   {a=>1} | NaN
+  code   ({a=>1}) max (NaN)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0140
+  from   inventory:infix:max
+  cell   {a=>1} | ""
+  code   ({a=>1}) max ("")
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0141
+  from   inventory:infix:max
+  cell   {a=>1} | "a"
+  code   ({a=>1}) max ("a")
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0142
+  from   inventory:infix:max
+  cell   {a=>1} | True
+  code   ({a=>1}) max (True)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0143
+  from   inventory:infix:max
+  cell   {a=>1} | Any
+  code   ({a=>1}) max (Any)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0144
+  from   inventory:infix:max
+  cell   {a=>1} | (1,2)
+  code   ({a=>1}) max ((1,2))
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0145
+  from   inventory:infix:max
+  cell   0 | -0e0
+  code   (0) max (-0e0)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0146
+  from   inventory:infix:max
+  cell   1 | -0e0
+  code   (1) max (-0e0)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0147
+  from   inventory:infix:max
+  cell   -1 | -0e0
+  code   (-1) max (-0e0)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0148
+  from   inventory:infix:max
+  cell   1/2 | -0e0
+  code   (1/2) max (-0e0)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0149
+  from   inventory:infix:max
+  cell   0e0 | -0e0
+  code   (0e0) max (-0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0150
+  from   inventory:infix:max
+  cell   NaN | -0e0
+  code   (NaN) max (-0e0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0151
+  from   inventory:infix:max
+  cell   "" | -0e0
+  code   ("") max (-0e0)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0152
+  from   inventory:infix:max
+  cell   "a" | -0e0
+  code   ("a") max (-0e0)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0153
+  from   inventory:infix:max
+  cell   True | -0e0
+  code   (True) max (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0154
+  from   inventory:infix:max
+  cell   Any | -0e0
+  code   (Any) max (-0e0)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0155
+  from   inventory:infix:max
+  cell   (1,2) | -0e0
+  code   ((1,2)) max (-0e0)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0156
+  from   inventory:infix:max
+  cell   {a=>1} | -0e0
+  code   ({a=>1}) max (-0e0)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0157
+  from   inventory:infix:max
+  cell   -0e0 | -0e0
+  code   (-0e0) max (-0e0)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0158
+  from   inventory:infix:max
+  cell   -0e0 | 0
+  code   (-0e0) max (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0159
+  from   inventory:infix:max
+  cell   -0e0 | 1
+  code   (-0e0) max (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0160
+  from   inventory:infix:max
+  cell   -0e0 | -1
+  code   (-0e0) max (-1)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0161
+  from   inventory:infix:max
+  cell   -0e0 | 1/2
+  code   (-0e0) max (1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0162
+  from   inventory:infix:max
+  cell   -0e0 | 0e0
+  code   (-0e0) max (0e0)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0163
+  from   inventory:infix:max
+  cell   -0e0 | NaN
+  code   (-0e0) max (NaN)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0164
+  from   inventory:infix:max
+  cell   -0e0 | ""
+  code   (-0e0) max ("")
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0165
+  from   inventory:infix:max
+  cell   -0e0 | "a"
+  code   (-0e0) max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0166
+  from   inventory:infix:max
+  cell   -0e0 | True
+  code   (-0e0) max (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0167
+  from   inventory:infix:max
+  cell   -0e0 | Any
+  code   (-0e0) max (Any)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0168
+  from   inventory:infix:max
+  cell   -0e0 | (1,2)
+  code   (-0e0) max ((1,2))
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0169
+  from   inventory:infix:max
+  cell   -0e0 | {a=>1}
+  code   (-0e0) max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0170
+  from   inventory:infix:max
+  cell   0 | Inf
+  code   (0) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0171
+  from   inventory:infix:max
+  cell   1 | Inf
+  code   (1) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0172
+  from   inventory:infix:max
+  cell   -1 | Inf
+  code   (-1) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0173
+  from   inventory:infix:max
+  cell   1/2 | Inf
+  code   (1/2) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0174
+  from   inventory:infix:max
+  cell   0e0 | Inf
+  code   (0e0) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0175
+  from   inventory:infix:max
+  cell   NaN | Inf
+  code   (NaN) max (Inf)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0176
+  from   inventory:infix:max
+  cell   "" | Inf
+  code   ("") max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0177
+  from   inventory:infix:max
+  cell   "a" | Inf
+  code   ("a") max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0178
+  from   inventory:infix:max
+  cell   True | Inf
+  code   (True) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0179
+  from   inventory:infix:max
+  cell   Any | Inf
+  code   (Any) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0180
+  from   inventory:infix:max
+  cell   (1,2) | Inf
+  code   ((1,2)) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0181
+  from   inventory:infix:max
+  cell   {a=>1} | Inf
+  code   ({a=>1}) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0182
+  from   inventory:infix:max
+  cell   -0e0 | Inf
+  code   (-0e0) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0183
+  from   inventory:infix:max
+  cell   Inf | Inf
+  code   (Inf) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0184
+  from   inventory:infix:max
+  cell   Inf | 0
+  code   (Inf) max (0)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0185
+  from   inventory:infix:max
+  cell   Inf | 1
+  code   (Inf) max (1)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0186
+  from   inventory:infix:max
+  cell   Inf | -1
+  code   (Inf) max (-1)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0187
+  from   inventory:infix:max
+  cell   Inf | 1/2
+  code   (Inf) max (1/2)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0188
+  from   inventory:infix:max
+  cell   Inf | 0e0
+  code   (Inf) max (0e0)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0189
+  from   inventory:infix:max
+  cell   Inf | NaN
+  code   (Inf) max (NaN)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0190
+  from   inventory:infix:max
+  cell   Inf | ""
+  code   (Inf) max ("")
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0191
+  from   inventory:infix:max
+  cell   Inf | "a"
+  code   (Inf) max ("a")
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0192
+  from   inventory:infix:max
+  cell   Inf | True
+  code   (Inf) max (True)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0193
+  from   inventory:infix:max
+  cell   Inf | Any
+  code   (Inf) max (Any)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0194
+  from   inventory:infix:max
+  cell   Inf | (1,2)
+  code   (Inf) max ((1,2))
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0195
+  from   inventory:infix:max
+  cell   Inf | {a=>1}
+  code   (Inf) max ({a=>1})
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0196
+  from   inventory:infix:max
+  cell   Inf | -0e0
+  code   (Inf) max (-0e0)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0197
+  from   inventory:infix:max
+  cell   0 | 2**64
+  code   (0) max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0198
+  from   inventory:infix:max
+  cell   1 | 2**64
+  code   (1) max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0199
+  from   inventory:infix:max
+  cell   -1 | 2**64
+  code   (-1) max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0200
+  from   inventory:infix:max
+  cell   1/2 | 2**64
+  code   (1/2) max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0201
+  from   inventory:infix:max
+  cell   0e0 | 2**64
+  code   (0e0) max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0202
+  from   inventory:infix:max
+  cell   NaN | 2**64
+  code   (NaN) max (2**64)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0203
+  from   inventory:infix:max
+  cell   "" | 2**64
+  code   ("") max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0204
+  from   inventory:infix:max
+  cell   "a" | 2**64
+  code   ("a") max (2**64)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0205
+  from   inventory:infix:max
+  cell   True | 2**64
+  code   (True) max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0206
+  from   inventory:infix:max
+  cell   Any | 2**64
+  code   (Any) max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0207
+  from   inventory:infix:max
+  cell   (1,2) | 2**64
+  code   ((1,2)) max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0208
+  from   inventory:infix:max
+  cell   {a=>1} | 2**64
+  code   ({a=>1}) max (2**64)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0209
+  from   inventory:infix:max
+  cell   -0e0 | 2**64
+  code   (-0e0) max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0210
+  from   inventory:infix:max
+  cell   Inf | 2**64
+  code   (Inf) max (2**64)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0211
+  from   inventory:infix:max
+  cell   2**64 | 2**64
+  code   (2**64) max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0212
+  from   inventory:infix:max
+  cell   2**64 | 0
+  code   (2**64) max (0)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0213
+  from   inventory:infix:max
+  cell   2**64 | 1
+  code   (2**64) max (1)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0214
+  from   inventory:infix:max
+  cell   2**64 | -1
+  code   (2**64) max (-1)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0215
+  from   inventory:infix:max
+  cell   2**64 | 1/2
+  code   (2**64) max (1/2)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0216
+  from   inventory:infix:max
+  cell   2**64 | 0e0
+  code   (2**64) max (0e0)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0217
+  from   inventory:infix:max
+  cell   2**64 | NaN
+  code   (2**64) max (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0218
+  from   inventory:infix:max
+  cell   2**64 | ""
+  code   (2**64) max ("")
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0219
+  from   inventory:infix:max
+  cell   2**64 | "a"
+  code   (2**64) max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0220
+  from   inventory:infix:max
+  cell   2**64 | True
+  code   (2**64) max (True)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0221
+  from   inventory:infix:max
+  cell   2**64 | Any
+  code   (2**64) max (Any)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0222
+  from   inventory:infix:max
+  cell   2**64 | (1,2)
+  code   (2**64) max ((1,2))
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0223
+  from   inventory:infix:max
+  cell   2**64 | {a=>1}
+  code   (2**64) max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0224
+  from   inventory:infix:max
+  cell   2**64 | -0e0
+  code   (2**64) max (-0e0)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0225
+  from   inventory:infix:max
+  cell   2**64 | Inf
+  code   (2**64) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0226
+  from   inventory:infix:max
+  cell   0 | False
+  code   (0) max (False)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0227
+  from   inventory:infix:max
+  cell   1 | False
+  code   (1) max (False)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0228
+  from   inventory:infix:max
+  cell   -1 | False
+  code   (-1) max (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0229
+  from   inventory:infix:max
+  cell   1/2 | False
+  code   (1/2) max (False)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0230
+  from   inventory:infix:max
+  cell   0e0 | False
+  code   (0e0) max (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0231
+  from   inventory:infix:max
+  cell   NaN | False
+  code   (NaN) max (False)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0232
+  from   inventory:infix:max
+  cell   "" | False
+  code   ("") max (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0233
+  from   inventory:infix:max
+  cell   "a" | False
+  code   ("a") max (False)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0234
+  from   inventory:infix:max
+  cell   True | False
+  code   (True) max (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0235
+  from   inventory:infix:max
+  cell   Any | False
+  code   (Any) max (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0236
+  from   inventory:infix:max
+  cell   (1,2) | False
+  code   ((1,2)) max (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0237
+  from   inventory:infix:max
+  cell   {a=>1} | False
+  code   ({a=>1}) max (False)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0238
+  from   inventory:infix:max
+  cell   -0e0 | False
+  code   (-0e0) max (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0239
+  from   inventory:infix:max
+  cell   Inf | False
+  code   (Inf) max (False)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0240
+  from   inventory:infix:max
+  cell   2**64 | False
+  code   (2**64) max (False)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0241
+  from   inventory:infix:max
+  cell   False | False
+  code   (False) max (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0242
+  from   inventory:infix:max
+  cell   False | 0
+  code   (False) max (0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0243
+  from   inventory:infix:max
+  cell   False | 1
+  code   (False) max (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0244
+  from   inventory:infix:max
+  cell   False | -1
+  code   (False) max (-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0245
+  from   inventory:infix:max
+  cell   False | 1/2
+  code   (False) max (1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0246
+  from   inventory:infix:max
+  cell   False | 0e0
+  code   (False) max (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0247
+  from   inventory:infix:max
+  cell   False | NaN
+  code   (False) max (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0248
+  from   inventory:infix:max
+  cell   False | ""
+  code   (False) max ("")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0249
+  from   inventory:infix:max
+  cell   False | "a"
+  code   (False) max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0250
+  from   inventory:infix:max
+  cell   False | True
+  code   (False) max (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0251
+  from   inventory:infix:max
+  cell   False | Any
+  code   (False) max (Any)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0252
+  from   inventory:infix:max
+  cell   False | (1,2)
+  code   (False) max ((1,2))
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0253
+  from   inventory:infix:max
+  cell   False | {a=>1}
+  code   (False) max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0254
+  from   inventory:infix:max
+  cell   False | -0e0
+  code   (False) max (-0e0)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0255
+  from   inventory:infix:max
+  cell   False | Inf
+  code   (False) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0256
+  from   inventory:infix:max
+  cell   False | 2**64
+  code   (False) max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0257
+  from   inventory:infix:max
+  cell   0 | Nil
+  code   (0) max (Nil)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0258
+  from   inventory:infix:max
+  cell   1 | Nil
+  code   (1) max (Nil)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0259
+  from   inventory:infix:max
+  cell   -1 | Nil
+  code   (-1) max (Nil)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -1
+
+- id     0260
+  from   inventory:infix:max
+  cell   1/2 | Nil
+  code   (1/2) max (Nil)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0261
+  from   inventory:infix:max
+  cell   0e0 | Nil
+  code   (0e0) max (Nil)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0262
+  from   inventory:infix:max
+  cell   NaN | Nil
+  code   (NaN) max (Nil)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0263
+  from   inventory:infix:max
+  cell   "" | Nil
+  code   ("") max (Nil)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Any
+
+- id     0264
+  from   inventory:infix:max
+  cell   "a" | Nil
+  code   ("a") max (Nil)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0265
+  from   inventory:infix:max
+  cell   True | Nil
+  code   (True) max (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0266
+  from   inventory:infix:max
+  cell   Any | Nil
+  code   (Any) max (Nil)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Any
+
+- id     0267
+  from   inventory:infix:max
+  cell   (1,2) | Nil
+  code   ((1,2)) max (Nil)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0268
+  from   inventory:infix:max
+  cell   {a=>1} | Nil
+  code   ({a=>1}) max (Nil)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0269
+  from   inventory:infix:max
+  cell   -0e0 | Nil
+  code   (-0e0) max (Nil)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0270
+  from   inventory:infix:max
+  cell   Inf | Nil
+  code   (Inf) max (Nil)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0271
+  from   inventory:infix:max
+  cell   2**64 | Nil
+  code   (2**64) max (Nil)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0272
+  from   inventory:infix:max
+  cell   False | Nil
+  code   (False) max (Nil)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0273
+  from   inventory:infix:max
+  cell   Nil | Nil
+  code   (Nil) max (Nil)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Any
+
+- id     0274
+  from   inventory:infix:max
+  cell   Nil | 0
+  code   (Nil) max (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0275
+  from   inventory:infix:max
+  cell   Nil | 1
+  code   (Nil) max (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0276
+  from   inventory:infix:max
+  cell   Nil | -1
+  code   (Nil) max (-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -1
+
+- id     0277
+  from   inventory:infix:max
+  cell   Nil | 1/2
+  code   (Nil) max (1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0278
+  from   inventory:infix:max
+  cell   Nil | 0e0
+  code   (Nil) max (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0279
+  from   inventory:infix:max
+  cell   Nil | NaN
+  code   (Nil) max (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0280
+  from   inventory:infix:max
+  cell   Nil | ""
+  code   (Nil) max ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ""
+
+- id     0281
+  from   inventory:infix:max
+  cell   Nil | "a"
+  code   (Nil) max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0282
+  from   inventory:infix:max
+  cell   Nil | True
+  code   (Nil) max (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0283
+  from   inventory:infix:max
+  cell   Nil | Any
+  code   (Nil) max (Any)
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Any
+
+- id     0284
+  from   inventory:infix:max
+  cell   Nil | (1,2)
+  code   (Nil) max ((1,2))
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0285
+  from   inventory:infix:max
+  cell   Nil | {a=>1}
+  code   (Nil) max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0286
+  from   inventory:infix:max
+  cell   Nil | -0e0
+  code   (Nil) max (-0e0)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0287
+  from   inventory:infix:max
+  cell   Nil | Inf
+  code   (Nil) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0288
+  from   inventory:infix:max
+  cell   Nil | 2**64
+  code   (Nil) max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0289
+  from   inventory:infix:max
+  cell   Nil | False
+  code   (Nil) max (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0290
+  from   inventory:infix:max
+  cell   0 | ()
+  code   (0) max (())
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0291
+  from   inventory:infix:max
+  cell   1 | ()
+  code   (1) max (())
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0292
+  from   inventory:infix:max
+  cell   -1 | ()
+  code   (-1) max (())
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -1
+
+- id     0293
+  from   inventory:infix:max
+  cell   1/2 | ()
+  code   (1/2) max (())
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0294
+  from   inventory:infix:max
+  cell   0e0 | ()
+  code   (0e0) max (())
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0295
+  from   inventory:infix:max
+  cell   NaN | ()
+  code   (NaN) max (())
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0296
+  from   inventory:infix:max
+  cell   "" | ()
+  code   ("") max (())
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $( )
+
+- id     0297
+  from   inventory:infix:max
+  cell   "a" | ()
+  code   ("a") max (())
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0298
+  from   inventory:infix:max
+  cell   True | ()
+  code   (True) max (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0299
+  from   inventory:infix:max
+  cell   Any | ()
+  code   (Any) max (())
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $( )
+
+- id     0300
+  from   inventory:infix:max
+  cell   (1,2) | ()
+  code   ((1,2)) max (())
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0301
+  from   inventory:infix:max
+  cell   {a=>1} | ()
+  code   ({a=>1}) max (())
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0302
+  from   inventory:infix:max
+  cell   -0e0 | ()
+  code   (-0e0) max (())
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0303
+  from   inventory:infix:max
+  cell   Inf | ()
+  code   (Inf) max (())
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0304
+  from   inventory:infix:max
+  cell   2**64 | ()
+  code   (2**64) max (())
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0305
+  from   inventory:infix:max
+  cell   False | ()
+  code   (False) max (())
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0306
+  from   inventory:infix:max
+  cell   Nil | ()
+  code   (Nil) max (())
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $( )
+
+- id     0307
+  from   inventory:infix:max
+  cell   () | ()
+  code   (()) max (())
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $( )
+
+- id     0308
+  from   inventory:infix:max
+  cell   () | 0
+  code   (()) max (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0309
+  from   inventory:infix:max
+  cell   () | 1
+  code   (()) max (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0310
+  from   inventory:infix:max
+  cell   () | -1
+  code   (()) max (-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -1
+
+- id     0311
+  from   inventory:infix:max
+  cell   () | 1/2
+  code   (()) max (1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0312
+  from   inventory:infix:max
+  cell   () | 0e0
+  code   (()) max (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0313
+  from   inventory:infix:max
+  cell   () | NaN
+  code   (()) max (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0314
+  from   inventory:infix:max
+  cell   () | ""
+  code   (()) max ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ""
+
+- id     0315
+  from   inventory:infix:max
+  cell   () | "a"
+  code   (()) max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0316
+  from   inventory:infix:max
+  cell   () | True
+  code   (()) max (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0317
+  from   inventory:infix:max
+  cell   () | Any
+  code   (()) max (Any)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Any
+
+- id     0318
+  from   inventory:infix:max
+  cell   () | (1,2)
+  code   (()) max ((1,2))
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0319
+  from   inventory:infix:max
+  cell   () | {a=>1}
+  code   (()) max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0320
+  from   inventory:infix:max
+  cell   () | -0e0
+  code   (()) max (-0e0)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0321
+  from   inventory:infix:max
+  cell   () | Inf
+  code   (()) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0322
+  from   inventory:infix:max
+  cell   () | 2**64
+  code   (()) max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0323
+  from   inventory:infix:max
+  cell   () | False
+  code   (()) max (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0324
+  from   inventory:infix:max
+  cell   () | Nil
+  code   (()) max (Nil)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Any
+
+- id     0325
+  from   inventory:infix:max
+  cell   0 | "0"
+  code   (0) max ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0326
+  from   inventory:infix:max
+  cell   1 | "0"
+  code   (1) max ("0")
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0327
+  from   inventory:infix:max
+  cell   -1 | "0"
+  code   (-1) max ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0328
+  from   inventory:infix:max
+  cell   1/2 | "0"
+  code   (1/2) max ("0")
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0329
+  from   inventory:infix:max
+  cell   0e0 | "0"
+  code   (0e0) max ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0330
+  from   inventory:infix:max
+  cell   NaN | "0"
+  code   (NaN) max ("0")
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0331
+  from   inventory:infix:max
+  cell   "" | "0"
+  code   ("") max ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0332
+  from   inventory:infix:max
+  cell   "a" | "0"
+  code   ("a") max ("0")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0333
+  from   inventory:infix:max
+  cell   True | "0"
+  code   (True) max ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0334
+  from   inventory:infix:max
+  cell   Any | "0"
+  code   (Any) max ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0335
+  from   inventory:infix:max
+  cell   (1,2) | "0"
+  code   ((1,2)) max ("0")
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0336
+  from   inventory:infix:max
+  cell   {a=>1} | "0"
+  code   ({a=>1}) max ("0")
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0337
+  from   inventory:infix:max
+  cell   -0e0 | "0"
+  code   (-0e0) max ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0338
+  from   inventory:infix:max
+  cell   Inf | "0"
+  code   (Inf) max ("0")
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0339
+  from   inventory:infix:max
+  cell   2**64 | "0"
+  code   (2**64) max ("0")
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0340
+  from   inventory:infix:max
+  cell   False | "0"
+  code   (False) max ("0")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0341
+  from   inventory:infix:max
+  cell   Nil | "0"
+  code   (Nil) max ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0342
+  from   inventory:infix:max
+  cell   () | "0"
+  code   (()) max ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0343
+  from   inventory:infix:max
+  cell   "0" | "0"
+  code   ("0") max ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0344
+  from   inventory:infix:max
+  cell   "0" | 0
+  code   ("0") max (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0345
+  from   inventory:infix:max
+  cell   "0" | 1
+  code   ("0") max (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0346
+  from   inventory:infix:max
+  cell   "0" | -1
+  code   ("0") max (-1)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0347
+  from   inventory:infix:max
+  cell   "0" | 1/2
+  code   ("0") max (1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0348
+  from   inventory:infix:max
+  cell   "0" | 0e0
+  code   ("0") max (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0349
+  from   inventory:infix:max
+  cell   "0" | NaN
+  code   ("0") max (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0350
+  from   inventory:infix:max
+  cell   "0" | ""
+  code   ("0") max ("")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0351
+  from   inventory:infix:max
+  cell   "0" | "a"
+  code   ("0") max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0352
+  from   inventory:infix:max
+  cell   "0" | True
+  code   ("0") max (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0353
+  from   inventory:infix:max
+  cell   "0" | Any
+  code   ("0") max (Any)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0354
+  from   inventory:infix:max
+  cell   "0" | (1,2)
+  code   ("0") max ((1,2))
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0355
+  from   inventory:infix:max
+  cell   "0" | {a=>1}
+  code   ("0") max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0356
+  from   inventory:infix:max
+  cell   "0" | -0e0
+  code   ("0") max (-0e0)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0357
+  from   inventory:infix:max
+  cell   "0" | Inf
+  code   ("0") max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0358
+  from   inventory:infix:max
+  cell   "0" | 2**64
+  code   ("0") max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0359
+  from   inventory:infix:max
+  cell   "0" | False
+  code   ("0") max (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0360
+  from   inventory:infix:max
+  cell   "0" | Nil
+  code   ("0") max (Nil)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0361
+  from   inventory:infix:max
+  cell   "0" | ()
+  code   ("0") max (())
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0362
+  from   inventory:infix:max
+  cell   0 | (1..3)
+  code   (0) max ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0363
+  from   inventory:infix:max
+  cell   1 | (1..3)
+  code   (1) max ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0364
+  from   inventory:infix:max
+  cell   -1 | (1..3)
+  code   (-1) max ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0365
+  from   inventory:infix:max
+  cell   1/2 | (1..3)
+  code   (1/2) max ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0366
+  from   inventory:infix:max
+  cell   0e0 | (1..3)
+  code   (0e0) max ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0367
+  from   inventory:infix:max
+  cell   NaN | (1..3)
+  code   (NaN) max ((1..3))
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0368
+  from   inventory:infix:max
+  cell   "" | (1..3)
+  code   ("") max ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0369
+  from   inventory:infix:max
+  cell   "a" | (1..3)
+  code   ("a") max ((1..3))
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0370
+  from   inventory:infix:max
+  cell   True | (1..3)
+  code   (True) max ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0371
+  from   inventory:infix:max
+  cell   Any | (1..3)
+  code   (Any) max ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0372
+  from   inventory:infix:max
+  cell   (1,2) | (1..3)
+  code   ((1,2)) max ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0373
+  from   inventory:infix:max
+  cell   {a=>1} | (1..3)
+  code   ({a=>1}) max ((1..3))
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0374
+  from   inventory:infix:max
+  cell   -0e0 | (1..3)
+  code   (-0e0) max ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0375
+  from   inventory:infix:max
+  cell   Inf | (1..3)
+  code   (Inf) max ((1..3))
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0376
+  from   inventory:infix:max
+  cell   2**64 | (1..3)
+  code   (2**64) max ((1..3))
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0377
+  from   inventory:infix:max
+  cell   False | (1..3)
+  code   (False) max ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0378
+  from   inventory:infix:max
+  cell   Nil | (1..3)
+  code   (Nil) max ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0379
+  from   inventory:infix:max
+  cell   () | (1..3)
+  code   (()) max ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0380
+  from   inventory:infix:max
+  cell   "0" | (1..3)
+  code   ("0") max ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0381
+  from   inventory:infix:max
+  cell   (1..3) | (1..3)
+  code   ((1..3)) max ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0382
+  from   inventory:infix:max
+  cell   (1..3) | 0
+  code   ((1..3)) max (0)
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0383
+  from   inventory:infix:max
+  cell   (1..3) | 1
+  code   ((1..3)) max (1)
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0384
+  from   inventory:infix:max
+  cell   (1..3) | -1
+  code   ((1..3)) max (-1)
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0385
+  from   inventory:infix:max
+  cell   (1..3) | 1/2
+  code   ((1..3)) max (1/2)
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0386
+  from   inventory:infix:max
+  cell   (1..3) | 0e0
+  code   ((1..3)) max (0e0)
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0387
+  from   inventory:infix:max
+  cell   (1..3) | NaN
+  code   ((1..3)) max (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0388
+  from   inventory:infix:max
+  cell   (1..3) | ""
+  code   ((1..3)) max ("")
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0389
+  from   inventory:infix:max
+  cell   (1..3) | "a"
+  code   ((1..3)) max ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0390
+  from   inventory:infix:max
+  cell   (1..3) | True
+  code   ((1..3)) max (True)
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0391
+  from   inventory:infix:max
+  cell   (1..3) | Any
+  code   ((1..3)) max (Any)
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0392
+  from   inventory:infix:max
+  cell   (1..3) | (1,2)
+  code   ((1..3)) max ((1,2))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0393
+  from   inventory:infix:max
+  cell   (1..3) | {a=>1}
+  code   ((1..3)) max ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0394
+  from   inventory:infix:max
+  cell   (1..3) | -0e0
+  code   ((1..3)) max (-0e0)
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0395
+  from   inventory:infix:max
+  cell   (1..3) | Inf
+  code   ((1..3)) max (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0396
+  from   inventory:infix:max
+  cell   (1..3) | 2**64
+  code   ((1..3)) max (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0397
+  from   inventory:infix:max
+  cell   (1..3) | False
+  code   ((1..3)) max (False)
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0398
+  from   inventory:infix:max
+  cell   (1..3) | Nil
+  code   ((1..3)) max (Nil)
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0399
+  from   inventory:infix:max
+  cell   (1..3) | ()
+  code   ((1..3)) max (())
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0400
+  from   inventory:infix:max
+  cell   (1..3) | "0"
+  code   ((1..3)) max ("0")
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3

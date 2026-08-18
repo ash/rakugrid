@@ -3,8 +3,8 @@ source   generated
 gen      gen/operators.raku
 from-inventory infix notandthen
 ladder   mixed
-axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
-cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
 
 - id     0001
   from   inventory:infix:notandthen
@@ -13,7 +13,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
 - id     0002
   from   inventory:infix:notandthen
@@ -22,1168 +22,1168 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
 - id     0003
-  from   inventory:infix:notandthen
-  cell   0 | -1
-  code   (0) notandthen (-1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0004
-  from   inventory:infix:notandthen
-  cell   0 | 1/2
-  code   (0) notandthen (1/2)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0005
-  from   inventory:infix:notandthen
-  cell   0 | 0e0
-  code   (0) notandthen (0e0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0006
-  from   inventory:infix:notandthen
-  cell   0 | NaN
-  code   (0) notandthen (NaN)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0007
-  from   inventory:infix:notandthen
-  cell   0 | ""
-  code   (0) notandthen ("")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0008
-  from   inventory:infix:notandthen
-  cell   0 | "a"
-  code   (0) notandthen ("a")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0009
-  from   inventory:infix:notandthen
-  cell   0 | True
-  code   (0) notandthen (True)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0010
-  from   inventory:infix:notandthen
-  cell   0 | Any
-  code   (0) notandthen (Any)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0011
-  from   inventory:infix:notandthen
-  cell   0 | (1,2)
-  code   (0) notandthen ((1,2))
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0012
-  from   inventory:infix:notandthen
-  cell   0 | {a=>1}
-  code   (0) notandthen ({a=>1})
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0013
-  from   inventory:infix:notandthen
-  cell   1 | 0
-  code   (1) notandthen (0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0014
   from   inventory:infix:notandthen
   cell   1 | 1
   code   (1) notandthen (1)
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0015
+- id     0004
+  from   inventory:infix:notandthen
+  cell   1 | 0
+  code   (1) notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0005
+  from   inventory:infix:notandthen
+  cell   0 | -1
+  code   (0) notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0006
   from   inventory:infix:notandthen
   cell   1 | -1
   code   (1) notandthen (-1)
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0016
-  from   inventory:infix:notandthen
-  cell   1 | 1/2
-  code   (1) notandthen (1/2)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0017
-  from   inventory:infix:notandthen
-  cell   1 | 0e0
-  code   (1) notandthen (0e0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0018
-  from   inventory:infix:notandthen
-  cell   1 | NaN
-  code   (1) notandthen (NaN)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0019
-  from   inventory:infix:notandthen
-  cell   1 | ""
-  code   (1) notandthen ("")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0020
-  from   inventory:infix:notandthen
-  cell   1 | "a"
-  code   (1) notandthen ("a")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0021
-  from   inventory:infix:notandthen
-  cell   1 | True
-  code   (1) notandthen (True)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0022
-  from   inventory:infix:notandthen
-  cell   1 | Any
-  code   (1) notandthen (Any)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0023
-  from   inventory:infix:notandthen
-  cell   1 | (1,2)
-  code   (1) notandthen ((1,2))
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0024
-  from   inventory:infix:notandthen
-  cell   1 | {a=>1}
-  code   (1) notandthen ({a=>1})
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0025
-  from   inventory:infix:notandthen
-  cell   -1 | 0
-  code   (-1) notandthen (0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0026
-  from   inventory:infix:notandthen
-  cell   -1 | 1
-  code   (-1) notandthen (1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0027
+- id     0007
   from   inventory:infix:notandthen
   cell   -1 | -1
   code   (-1) notandthen (-1)
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0028
+- id     0008
+  from   inventory:infix:notandthen
+  cell   -1 | 0
+  code   (-1) notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0009
+  from   inventory:infix:notandthen
+  cell   -1 | 1
+  code   (-1) notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0010
+  from   inventory:infix:notandthen
+  cell   0 | 1/2
+  code   (0) notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0011
+  from   inventory:infix:notandthen
+  cell   1 | 1/2
+  code   (1) notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0012
   from   inventory:infix:notandthen
   cell   -1 | 1/2
   code   (-1) notandthen (1/2)
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0029
-  from   inventory:infix:notandthen
-  cell   -1 | 0e0
-  code   (-1) notandthen (0e0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0030
-  from   inventory:infix:notandthen
-  cell   -1 | NaN
-  code   (-1) notandthen (NaN)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0031
-  from   inventory:infix:notandthen
-  cell   -1 | ""
-  code   (-1) notandthen ("")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0032
-  from   inventory:infix:notandthen
-  cell   -1 | "a"
-  code   (-1) notandthen ("a")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0033
-  from   inventory:infix:notandthen
-  cell   -1 | True
-  code   (-1) notandthen (True)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0034
-  from   inventory:infix:notandthen
-  cell   -1 | Any
-  code   (-1) notandthen (Any)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0035
-  from   inventory:infix:notandthen
-  cell   -1 | (1,2)
-  code   (-1) notandthen ((1,2))
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0036
-  from   inventory:infix:notandthen
-  cell   -1 | {a=>1}
-  code   (-1) notandthen ({a=>1})
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0037
-  from   inventory:infix:notandthen
-  cell   1/2 | 0
-  code   (1/2) notandthen (0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0038
-  from   inventory:infix:notandthen
-  cell   1/2 | 1
-  code   (1/2) notandthen (1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0039
-  from   inventory:infix:notandthen
-  cell   1/2 | -1
-  code   (1/2) notandthen (-1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0040
+- id     0013
   from   inventory:infix:notandthen
   cell   1/2 | 1/2
   code   (1/2) notandthen (1/2)
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0041
+- id     0014
+  from   inventory:infix:notandthen
+  cell   1/2 | 0
+  code   (1/2) notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0015
+  from   inventory:infix:notandthen
+  cell   1/2 | 1
+  code   (1/2) notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0016
+  from   inventory:infix:notandthen
+  cell   1/2 | -1
+  code   (1/2) notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0017
+  from   inventory:infix:notandthen
+  cell   0 | 0e0
+  code   (0) notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0018
+  from   inventory:infix:notandthen
+  cell   1 | 0e0
+  code   (1) notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0019
+  from   inventory:infix:notandthen
+  cell   -1 | 0e0
+  code   (-1) notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0020
   from   inventory:infix:notandthen
   cell   1/2 | 0e0
   code   (1/2) notandthen (0e0)
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0042
-  from   inventory:infix:notandthen
-  cell   1/2 | NaN
-  code   (1/2) notandthen (NaN)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0043
-  from   inventory:infix:notandthen
-  cell   1/2 | ""
-  code   (1/2) notandthen ("")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0044
-  from   inventory:infix:notandthen
-  cell   1/2 | "a"
-  code   (1/2) notandthen ("a")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0045
-  from   inventory:infix:notandthen
-  cell   1/2 | True
-  code   (1/2) notandthen (True)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0046
-  from   inventory:infix:notandthen
-  cell   1/2 | Any
-  code   (1/2) notandthen (Any)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0047
-  from   inventory:infix:notandthen
-  cell   1/2 | (1,2)
-  code   (1/2) notandthen ((1,2))
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0048
-  from   inventory:infix:notandthen
-  cell   1/2 | {a=>1}
-  code   (1/2) notandthen ({a=>1})
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0049
-  from   inventory:infix:notandthen
-  cell   0e0 | 0
-  code   (0e0) notandthen (0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0050
-  from   inventory:infix:notandthen
-  cell   0e0 | 1
-  code   (0e0) notandthen (1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0051
-  from   inventory:infix:notandthen
-  cell   0e0 | -1
-  code   (0e0) notandthen (-1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0052
-  from   inventory:infix:notandthen
-  cell   0e0 | 1/2
-  code   (0e0) notandthen (1/2)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0053
+- id     0021
   from   inventory:infix:notandthen
   cell   0e0 | 0e0
   code   (0e0) notandthen (0e0)
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0054
+- id     0022
+  from   inventory:infix:notandthen
+  cell   0e0 | 0
+  code   (0e0) notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0023
+  from   inventory:infix:notandthen
+  cell   0e0 | 1
+  code   (0e0) notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0024
+  from   inventory:infix:notandthen
+  cell   0e0 | -1
+  code   (0e0) notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0025
+  from   inventory:infix:notandthen
+  cell   0e0 | 1/2
+  code   (0e0) notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0026
+  from   inventory:infix:notandthen
+  cell   0 | NaN
+  code   (0) notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0027
+  from   inventory:infix:notandthen
+  cell   1 | NaN
+  code   (1) notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0028
+  from   inventory:infix:notandthen
+  cell   -1 | NaN
+  code   (-1) notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0029
+  from   inventory:infix:notandthen
+  cell   1/2 | NaN
+  code   (1/2) notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0030
   from   inventory:infix:notandthen
   cell   0e0 | NaN
   code   (0e0) notandthen (NaN)
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0055
-  from   inventory:infix:notandthen
-  cell   0e0 | ""
-  code   (0e0) notandthen ("")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0056
-  from   inventory:infix:notandthen
-  cell   0e0 | "a"
-  code   (0e0) notandthen ("a")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0057
-  from   inventory:infix:notandthen
-  cell   0e0 | True
-  code   (0e0) notandthen (True)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0058
-  from   inventory:infix:notandthen
-  cell   0e0 | Any
-  code   (0e0) notandthen (Any)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0059
-  from   inventory:infix:notandthen
-  cell   0e0 | (1,2)
-  code   (0e0) notandthen ((1,2))
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0060
-  from   inventory:infix:notandthen
-  cell   0e0 | {a=>1}
-  code   (0e0) notandthen ({a=>1})
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0061
-  from   inventory:infix:notandthen
-  cell   NaN | 0
-  code   (NaN) notandthen (0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0062
-  from   inventory:infix:notandthen
-  cell   NaN | 1
-  code   (NaN) notandthen (1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0063
-  from   inventory:infix:notandthen
-  cell   NaN | -1
-  code   (NaN) notandthen (-1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0064
-  from   inventory:infix:notandthen
-  cell   NaN | 1/2
-  code   (NaN) notandthen (1/2)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0065
-  from   inventory:infix:notandthen
-  cell   NaN | 0e0
-  code   (NaN) notandthen (0e0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0066
+- id     0031
   from   inventory:infix:notandthen
   cell   NaN | NaN
   code   (NaN) notandthen (NaN)
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0067
+- id     0032
+  from   inventory:infix:notandthen
+  cell   NaN | 0
+  code   (NaN) notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0033
+  from   inventory:infix:notandthen
+  cell   NaN | 1
+  code   (NaN) notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0034
+  from   inventory:infix:notandthen
+  cell   NaN | -1
+  code   (NaN) notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0035
+  from   inventory:infix:notandthen
+  cell   NaN | 1/2
+  code   (NaN) notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0036
+  from   inventory:infix:notandthen
+  cell   NaN | 0e0
+  code   (NaN) notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0037
+  from   inventory:infix:notandthen
+  cell   0 | ""
+  code   (0) notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0038
+  from   inventory:infix:notandthen
+  cell   1 | ""
+  code   (1) notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0039
+  from   inventory:infix:notandthen
+  cell   -1 | ""
+  code   (-1) notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0040
+  from   inventory:infix:notandthen
+  cell   1/2 | ""
+  code   (1/2) notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0041
+  from   inventory:infix:notandthen
+  cell   0e0 | ""
+  code   (0e0) notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0042
   from   inventory:infix:notandthen
   cell   NaN | ""
   code   (NaN) notandthen ("")
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0068
-  from   inventory:infix:notandthen
-  cell   NaN | "a"
-  code   (NaN) notandthen ("a")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0069
-  from   inventory:infix:notandthen
-  cell   NaN | True
-  code   (NaN) notandthen (True)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0070
-  from   inventory:infix:notandthen
-  cell   NaN | Any
-  code   (NaN) notandthen (Any)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0071
-  from   inventory:infix:notandthen
-  cell   NaN | (1,2)
-  code   (NaN) notandthen ((1,2))
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0072
-  from   inventory:infix:notandthen
-  cell   NaN | {a=>1}
-  code   (NaN) notandthen ({a=>1})
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0073
-  from   inventory:infix:notandthen
-  cell   "" | 0
-  code   ("") notandthen (0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0074
-  from   inventory:infix:notandthen
-  cell   "" | 1
-  code   ("") notandthen (1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0075
-  from   inventory:infix:notandthen
-  cell   "" | -1
-  code   ("") notandthen (-1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0076
-  from   inventory:infix:notandthen
-  cell   "" | 1/2
-  code   ("") notandthen (1/2)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0077
-  from   inventory:infix:notandthen
-  cell   "" | 0e0
-  code   ("") notandthen (0e0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0078
-  from   inventory:infix:notandthen
-  cell   "" | NaN
-  code   ("") notandthen (NaN)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0079
+- id     0043
   from   inventory:infix:notandthen
   cell   "" | ""
   code   ("") notandthen ("")
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0080
+- id     0044
+  from   inventory:infix:notandthen
+  cell   "" | 0
+  code   ("") notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0045
+  from   inventory:infix:notandthen
+  cell   "" | 1
+  code   ("") notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0046
+  from   inventory:infix:notandthen
+  cell   "" | -1
+  code   ("") notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0047
+  from   inventory:infix:notandthen
+  cell   "" | 1/2
+  code   ("") notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0048
+  from   inventory:infix:notandthen
+  cell   "" | 0e0
+  code   ("") notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0049
+  from   inventory:infix:notandthen
+  cell   "" | NaN
+  code   ("") notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0050
+  from   inventory:infix:notandthen
+  cell   0 | "a"
+  code   (0) notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0051
+  from   inventory:infix:notandthen
+  cell   1 | "a"
+  code   (1) notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0052
+  from   inventory:infix:notandthen
+  cell   -1 | "a"
+  code   (-1) notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0053
+  from   inventory:infix:notandthen
+  cell   1/2 | "a"
+  code   (1/2) notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0054
+  from   inventory:infix:notandthen
+  cell   0e0 | "a"
+  code   (0e0) notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0055
+  from   inventory:infix:notandthen
+  cell   NaN | "a"
+  code   (NaN) notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0056
   from   inventory:infix:notandthen
   cell   "" | "a"
   code   ("") notandthen ("a")
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0081
-  from   inventory:infix:notandthen
-  cell   "" | True
-  code   ("") notandthen (True)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0082
-  from   inventory:infix:notandthen
-  cell   "" | Any
-  code   ("") notandthen (Any)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0083
-  from   inventory:infix:notandthen
-  cell   "" | (1,2)
-  code   ("") notandthen ((1,2))
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0084
-  from   inventory:infix:notandthen
-  cell   "" | {a=>1}
-  code   ("") notandthen ({a=>1})
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0085
-  from   inventory:infix:notandthen
-  cell   "a" | 0
-  code   ("a") notandthen (0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0086
-  from   inventory:infix:notandthen
-  cell   "a" | 1
-  code   ("a") notandthen (1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0087
-  from   inventory:infix:notandthen
-  cell   "a" | -1
-  code   ("a") notandthen (-1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0088
-  from   inventory:infix:notandthen
-  cell   "a" | 1/2
-  code   ("a") notandthen (1/2)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0089
-  from   inventory:infix:notandthen
-  cell   "a" | 0e0
-  code   ("a") notandthen (0e0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0090
-  from   inventory:infix:notandthen
-  cell   "a" | NaN
-  code   ("a") notandthen (NaN)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0091
-  from   inventory:infix:notandthen
-  cell   "a" | ""
-  code   ("a") notandthen ("")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0092
+- id     0057
   from   inventory:infix:notandthen
   cell   "a" | "a"
   code   ("a") notandthen ("a")
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0093
+- id     0058
+  from   inventory:infix:notandthen
+  cell   "a" | 0
+  code   ("a") notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0059
+  from   inventory:infix:notandthen
+  cell   "a" | 1
+  code   ("a") notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0060
+  from   inventory:infix:notandthen
+  cell   "a" | -1
+  code   ("a") notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0061
+  from   inventory:infix:notandthen
+  cell   "a" | 1/2
+  code   ("a") notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0062
+  from   inventory:infix:notandthen
+  cell   "a" | 0e0
+  code   ("a") notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0063
+  from   inventory:infix:notandthen
+  cell   "a" | NaN
+  code   ("a") notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0064
+  from   inventory:infix:notandthen
+  cell   "a" | ""
+  code   ("a") notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0065
+  from   inventory:infix:notandthen
+  cell   0 | True
+  code   (0) notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0066
+  from   inventory:infix:notandthen
+  cell   1 | True
+  code   (1) notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0067
+  from   inventory:infix:notandthen
+  cell   -1 | True
+  code   (-1) notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0068
+  from   inventory:infix:notandthen
+  cell   1/2 | True
+  code   (1/2) notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0069
+  from   inventory:infix:notandthen
+  cell   0e0 | True
+  code   (0e0) notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0070
+  from   inventory:infix:notandthen
+  cell   NaN | True
+  code   (NaN) notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0071
+  from   inventory:infix:notandthen
+  cell   "" | True
+  code   ("") notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0072
   from   inventory:infix:notandthen
   cell   "a" | True
   code   ("a") notandthen (True)
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0094
-  from   inventory:infix:notandthen
-  cell   "a" | Any
-  code   ("a") notandthen (Any)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0095
-  from   inventory:infix:notandthen
-  cell   "a" | (1,2)
-  code   ("a") notandthen ((1,2))
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0096
-  from   inventory:infix:notandthen
-  cell   "a" | {a=>1}
-  code   ("a") notandthen ({a=>1})
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0097
-  from   inventory:infix:notandthen
-  cell   True | 0
-  code   (True) notandthen (0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0098
-  from   inventory:infix:notandthen
-  cell   True | 1
-  code   (True) notandthen (1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0099
-  from   inventory:infix:notandthen
-  cell   True | -1
-  code   (True) notandthen (-1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0100
-  from   inventory:infix:notandthen
-  cell   True | 1/2
-  code   (True) notandthen (1/2)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0101
-  from   inventory:infix:notandthen
-  cell   True | 0e0
-  code   (True) notandthen (0e0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0102
-  from   inventory:infix:notandthen
-  cell   True | NaN
-  code   (True) notandthen (NaN)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0103
-  from   inventory:infix:notandthen
-  cell   True | ""
-  code   (True) notandthen ("")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0104
-  from   inventory:infix:notandthen
-  cell   True | "a"
-  code   (True) notandthen ("a")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0105
+- id     0073
   from   inventory:infix:notandthen
   cell   True | True
   code   (True) notandthen (True)
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0106
+- id     0074
+  from   inventory:infix:notandthen
+  cell   True | 0
+  code   (True) notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0075
+  from   inventory:infix:notandthen
+  cell   True | 1
+  code   (True) notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0076
+  from   inventory:infix:notandthen
+  cell   True | -1
+  code   (True) notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0077
+  from   inventory:infix:notandthen
+  cell   True | 1/2
+  code   (True) notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0078
+  from   inventory:infix:notandthen
+  cell   True | 0e0
+  code   (True) notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0079
+  from   inventory:infix:notandthen
+  cell   True | NaN
+  code   (True) notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0080
+  from   inventory:infix:notandthen
+  cell   True | ""
+  code   (True) notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0081
+  from   inventory:infix:notandthen
+  cell   True | "a"
+  code   (True) notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0082
+  from   inventory:infix:notandthen
+  cell   0 | Any
+  code   (0) notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0083
+  from   inventory:infix:notandthen
+  cell   1 | Any
+  code   (1) notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0084
+  from   inventory:infix:notandthen
+  cell   -1 | Any
+  code   (-1) notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0085
+  from   inventory:infix:notandthen
+  cell   1/2 | Any
+  code   (1/2) notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0086
+  from   inventory:infix:notandthen
+  cell   0e0 | Any
+  code   (0e0) notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0087
+  from   inventory:infix:notandthen
+  cell   NaN | Any
+  code   (NaN) notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0088
+  from   inventory:infix:notandthen
+  cell   "" | Any
+  code   ("") notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0089
+  from   inventory:infix:notandthen
+  cell   "a" | Any
+  code   ("a") notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0090
   from   inventory:infix:notandthen
   cell   True | Any
   code   (True) notandthen (Any)
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
-- id     0107
-  from   inventory:infix:notandthen
-  cell   True | (1,2)
-  code   (True) notandthen ((1,2))
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0108
-  from   inventory:infix:notandthen
-  cell   True | {a=>1}
-  code   (True) notandthen ({a=>1})
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0109
-  from   inventory:infix:notandthen
-  cell   Any | 0
-  code   (Any) notandthen (0)
-  is     0
-  type   Int
-  oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0
-
-- id     0110
-  from   inventory:infix:notandthen
-  cell   Any | 1
-  code   (Any) notandthen (1)
-  is     1
-  type   Int
-  oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 1
-
-- id     0111
-  from   inventory:infix:notandthen
-  cell   Any | -1
-  code   (Any) notandthen (-1)
-  is     -1
-  type   Int
-  oracle rakudo-2026.07 → -1
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → -1
-
-- id     0112
-  from   inventory:infix:notandthen
-  cell   Any | 1/2
-  code   (Any) notandthen (1/2)
-  is     0.5
-  type   Rat
-  oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0.5
-
-- id     0113
-  from   inventory:infix:notandthen
-  cell   Any | 0e0
-  code   (Any) notandthen (0e0)
-  is     0e0
-  type   Num
-  oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → 0e0
-
-- id     0114
-  from   inventory:infix:notandthen
-  cell   Any | NaN
-  code   (Any) notandthen (NaN)
-  is     NaN
-  type   Num
-  oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → NaN
-
-- id     0115
-  from   inventory:infix:notandthen
-  cell   Any | ""
-  code   (Any) notandthen ("")
-  is     ""
-  type   Str
-  oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ""
-
-- id     0116
-  from   inventory:infix:notandthen
-  cell   Any | "a"
-  code   (Any) notandthen ("a")
-  is     "a"
-  type   Str
-  oracle rakudo-2026.07 → "a"
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → "a"
-
-- id     0117
-  from   inventory:infix:notandthen
-  cell   Any | True
-  code   (Any) notandthen (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0118
+- id     0091
   from   inventory:infix:notandthen
   cell   Any | Any
   code   (Any) notandthen (Any)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Any
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Any
 
-- id     0119
+- id     0092
+  from   inventory:infix:notandthen
+  cell   Any | 0
+  code   (Any) notandthen (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0093
+  from   inventory:infix:notandthen
+  cell   Any | 1
+  code   (Any) notandthen (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0094
+  from   inventory:infix:notandthen
+  cell   Any | -1
+  code   (Any) notandthen (-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -1
+
+- id     0095
+  from   inventory:infix:notandthen
+  cell   Any | 1/2
+  code   (Any) notandthen (1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0096
+  from   inventory:infix:notandthen
+  cell   Any | 0e0
+  code   (Any) notandthen (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0097
+  from   inventory:infix:notandthen
+  cell   Any | NaN
+  code   (Any) notandthen (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0098
+  from   inventory:infix:notandthen
+  cell   Any | ""
+  code   (Any) notandthen ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ""
+
+- id     0099
+  from   inventory:infix:notandthen
+  cell   Any | "a"
+  code   (Any) notandthen ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0100
+  from   inventory:infix:notandthen
+  cell   Any | True
+  code   (Any) notandthen (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0101
+  from   inventory:infix:notandthen
+  cell   0 | (1,2)
+  code   (0) notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0102
+  from   inventory:infix:notandthen
+  cell   1 | (1,2)
+  code   (1) notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0103
+  from   inventory:infix:notandthen
+  cell   -1 | (1,2)
+  code   (-1) notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0104
+  from   inventory:infix:notandthen
+  cell   1/2 | (1,2)
+  code   (1/2) notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0105
+  from   inventory:infix:notandthen
+  cell   0e0 | (1,2)
+  code   (0e0) notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0106
+  from   inventory:infix:notandthen
+  cell   NaN | (1,2)
+  code   (NaN) notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0107
+  from   inventory:infix:notandthen
+  cell   "" | (1,2)
+  code   ("") notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0108
+  from   inventory:infix:notandthen
+  cell   "a" | (1,2)
+  code   ("a") notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0109
+  from   inventory:infix:notandthen
+  cell   True | (1,2)
+  code   (True) notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0110
   from   inventory:infix:notandthen
   cell   Any | (1,2)
   code   (Any) notandthen ((1,2))
   is     $(1, 2)
   type   List
   oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
 
-- id     0120
-  from   inventory:infix:notandthen
-  cell   Any | {a=>1}
-  code   (Any) notandthen ({a=>1})
-  is     ${:a(1)}
-  type   Hash
-  oracle rakudo-2026.07 → ${:a(1)}
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → ${:a(1)}
-
-- id     0121
-  from   inventory:infix:notandthen
-  cell   (1,2) | 0
-  code   ((1,2)) notandthen (0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0122
-  from   inventory:infix:notandthen
-  cell   (1,2) | 1
-  code   ((1,2)) notandthen (1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0123
-  from   inventory:infix:notandthen
-  cell   (1,2) | -1
-  code   ((1,2)) notandthen (-1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0124
-  from   inventory:infix:notandthen
-  cell   (1,2) | 1/2
-  code   ((1,2)) notandthen (1/2)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0125
-  from   inventory:infix:notandthen
-  cell   (1,2) | 0e0
-  code   ((1,2)) notandthen (0e0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0126
-  from   inventory:infix:notandthen
-  cell   (1,2) | NaN
-  code   ((1,2)) notandthen (NaN)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0127
-  from   inventory:infix:notandthen
-  cell   (1,2) | ""
-  code   ((1,2)) notandthen ("")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0128
-  from   inventory:infix:notandthen
-  cell   (1,2) | "a"
-  code   ((1,2)) notandthen ("a")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0129
-  from   inventory:infix:notandthen
-  cell   (1,2) | True
-  code   ((1,2)) notandthen (True)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0130
-  from   inventory:infix:notandthen
-  cell   (1,2) | Any
-  code   ((1,2)) notandthen (Any)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0131
+- id     0111
   from   inventory:infix:notandthen
   cell   (1,2) | (1,2)
   code   ((1,2)) notandthen ((1,2))
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0112
+  from   inventory:infix:notandthen
+  cell   (1,2) | 0
+  code   ((1,2)) notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0113
+  from   inventory:infix:notandthen
+  cell   (1,2) | 1
+  code   ((1,2)) notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0114
+  from   inventory:infix:notandthen
+  cell   (1,2) | -1
+  code   ((1,2)) notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0115
+  from   inventory:infix:notandthen
+  cell   (1,2) | 1/2
+  code   ((1,2)) notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0116
+  from   inventory:infix:notandthen
+  cell   (1,2) | 0e0
+  code   ((1,2)) notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0117
+  from   inventory:infix:notandthen
+  cell   (1,2) | NaN
+  code   ((1,2)) notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0118
+  from   inventory:infix:notandthen
+  cell   (1,2) | ""
+  code   ((1,2)) notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0119
+  from   inventory:infix:notandthen
+  cell   (1,2) | "a"
+  code   ((1,2)) notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0120
+  from   inventory:infix:notandthen
+  cell   (1,2) | True
+  code   ((1,2)) notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0121
+  from   inventory:infix:notandthen
+  cell   (1,2) | Any
+  code   ((1,2)) notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0122
+  from   inventory:infix:notandthen
+  cell   0 | {a=>1}
+  code   (0) notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0123
+  from   inventory:infix:notandthen
+  cell   1 | {a=>1}
+  code   (1) notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0124
+  from   inventory:infix:notandthen
+  cell   -1 | {a=>1}
+  code   (-1) notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0125
+  from   inventory:infix:notandthen
+  cell   1/2 | {a=>1}
+  code   (1/2) notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0126
+  from   inventory:infix:notandthen
+  cell   0e0 | {a=>1}
+  code   (0e0) notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0127
+  from   inventory:infix:notandthen
+  cell   NaN | {a=>1}
+  code   (NaN) notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0128
+  from   inventory:infix:notandthen
+  cell   "" | {a=>1}
+  code   ("") notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0129
+  from   inventory:infix:notandthen
+  cell   "a" | {a=>1}
+  code   ("a") notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0130
+  from   inventory:infix:notandthen
+  cell   True | {a=>1}
+  code   (True) notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0131
+  from   inventory:infix:notandthen
+  cell   Any | {a=>1}
+  code   (Any) notandthen ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
 
 - id     0132
   from   inventory:infix:notandthen
@@ -1192,112 +1192,2416 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
 
 - id     0133
-  from   inventory:infix:notandthen
-  cell   {a=>1} | 0
-  code   ({a=>1}) notandthen (0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0134
-  from   inventory:infix:notandthen
-  cell   {a=>1} | 1
-  code   ({a=>1}) notandthen (1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0135
-  from   inventory:infix:notandthen
-  cell   {a=>1} | -1
-  code   ({a=>1}) notandthen (-1)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0136
-  from   inventory:infix:notandthen
-  cell   {a=>1} | 1/2
-  code   ({a=>1}) notandthen (1/2)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0137
-  from   inventory:infix:notandthen
-  cell   {a=>1} | 0e0
-  code   ({a=>1}) notandthen (0e0)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0138
-  from   inventory:infix:notandthen
-  cell   {a=>1} | NaN
-  code   ({a=>1}) notandthen (NaN)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0139
-  from   inventory:infix:notandthen
-  cell   {a=>1} | ""
-  code   ({a=>1}) notandthen ("")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0140
-  from   inventory:infix:notandthen
-  cell   {a=>1} | "a"
-  code   ({a=>1}) notandthen ("a")
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0141
-  from   inventory:infix:notandthen
-  cell   {a=>1} | True
-  code   ({a=>1}) notandthen (True)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0142
-  from   inventory:infix:notandthen
-  cell   {a=>1} | Any
-  code   ({a=>1}) notandthen (Any)
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0143
-  from   inventory:infix:notandthen
-  cell   {a=>1} | (1,2)
-  code   ({a=>1}) notandthen ((1,2))
-  is     Empty
-  type   Slip
-  oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
-
-- id     0144
   from   inventory:infix:notandthen
   cell   {a=>1} | {a=>1}
   code   ({a=>1}) notandthen ({a=>1})
   is     Empty
   type   Slip
   oracle rakudo-2026.07 → Empty
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0134
+  from   inventory:infix:notandthen
+  cell   {a=>1} | 0
+  code   ({a=>1}) notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0135
+  from   inventory:infix:notandthen
+  cell   {a=>1} | 1
+  code   ({a=>1}) notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0136
+  from   inventory:infix:notandthen
+  cell   {a=>1} | -1
+  code   ({a=>1}) notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0137
+  from   inventory:infix:notandthen
+  cell   {a=>1} | 1/2
+  code   ({a=>1}) notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0138
+  from   inventory:infix:notandthen
+  cell   {a=>1} | 0e0
+  code   ({a=>1}) notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0139
+  from   inventory:infix:notandthen
+  cell   {a=>1} | NaN
+  code   ({a=>1}) notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0140
+  from   inventory:infix:notandthen
+  cell   {a=>1} | ""
+  code   ({a=>1}) notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0141
+  from   inventory:infix:notandthen
+  cell   {a=>1} | "a"
+  code   ({a=>1}) notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0142
+  from   inventory:infix:notandthen
+  cell   {a=>1} | True
+  code   ({a=>1}) notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0143
+  from   inventory:infix:notandthen
+  cell   {a=>1} | Any
+  code   ({a=>1}) notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0144
+  from   inventory:infix:notandthen
+  cell   {a=>1} | (1,2)
+  code   ({a=>1}) notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0145
+  from   inventory:infix:notandthen
+  cell   0 | -0e0
+  code   (0) notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0146
+  from   inventory:infix:notandthen
+  cell   1 | -0e0
+  code   (1) notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0147
+  from   inventory:infix:notandthen
+  cell   -1 | -0e0
+  code   (-1) notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0148
+  from   inventory:infix:notandthen
+  cell   1/2 | -0e0
+  code   (1/2) notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0149
+  from   inventory:infix:notandthen
+  cell   0e0 | -0e0
+  code   (0e0) notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0150
+  from   inventory:infix:notandthen
+  cell   NaN | -0e0
+  code   (NaN) notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0151
+  from   inventory:infix:notandthen
+  cell   "" | -0e0
+  code   ("") notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0152
+  from   inventory:infix:notandthen
+  cell   "a" | -0e0
+  code   ("a") notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0153
+  from   inventory:infix:notandthen
+  cell   True | -0e0
+  code   (True) notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0154
+  from   inventory:infix:notandthen
+  cell   Any | -0e0
+  code   (Any) notandthen (-0e0)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0155
+  from   inventory:infix:notandthen
+  cell   (1,2) | -0e0
+  code   ((1,2)) notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0156
+  from   inventory:infix:notandthen
+  cell   {a=>1} | -0e0
+  code   ({a=>1}) notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0157
+  from   inventory:infix:notandthen
+  cell   -0e0 | -0e0
+  code   (-0e0) notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0158
+  from   inventory:infix:notandthen
+  cell   -0e0 | 0
+  code   (-0e0) notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0159
+  from   inventory:infix:notandthen
+  cell   -0e0 | 1
+  code   (-0e0) notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0160
+  from   inventory:infix:notandthen
+  cell   -0e0 | -1
+  code   (-0e0) notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0161
+  from   inventory:infix:notandthen
+  cell   -0e0 | 1/2
+  code   (-0e0) notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0162
+  from   inventory:infix:notandthen
+  cell   -0e0 | 0e0
+  code   (-0e0) notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0163
+  from   inventory:infix:notandthen
+  cell   -0e0 | NaN
+  code   (-0e0) notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0164
+  from   inventory:infix:notandthen
+  cell   -0e0 | ""
+  code   (-0e0) notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0165
+  from   inventory:infix:notandthen
+  cell   -0e0 | "a"
+  code   (-0e0) notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0166
+  from   inventory:infix:notandthen
+  cell   -0e0 | True
+  code   (-0e0) notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0167
+  from   inventory:infix:notandthen
+  cell   -0e0 | Any
+  code   (-0e0) notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0168
+  from   inventory:infix:notandthen
+  cell   -0e0 | (1,2)
+  code   (-0e0) notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0169
+  from   inventory:infix:notandthen
+  cell   -0e0 | {a=>1}
+  code   (-0e0) notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0170
+  from   inventory:infix:notandthen
+  cell   0 | Inf
+  code   (0) notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0171
+  from   inventory:infix:notandthen
+  cell   1 | Inf
+  code   (1) notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0172
+  from   inventory:infix:notandthen
+  cell   -1 | Inf
+  code   (-1) notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0173
+  from   inventory:infix:notandthen
+  cell   1/2 | Inf
+  code   (1/2) notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0174
+  from   inventory:infix:notandthen
+  cell   0e0 | Inf
+  code   (0e0) notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0175
+  from   inventory:infix:notandthen
+  cell   NaN | Inf
+  code   (NaN) notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0176
+  from   inventory:infix:notandthen
+  cell   "" | Inf
+  code   ("") notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0177
+  from   inventory:infix:notandthen
+  cell   "a" | Inf
+  code   ("a") notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0178
+  from   inventory:infix:notandthen
+  cell   True | Inf
+  code   (True) notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0179
+  from   inventory:infix:notandthen
+  cell   Any | Inf
+  code   (Any) notandthen (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0180
+  from   inventory:infix:notandthen
+  cell   (1,2) | Inf
+  code   ((1,2)) notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0181
+  from   inventory:infix:notandthen
+  cell   {a=>1} | Inf
+  code   ({a=>1}) notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0182
+  from   inventory:infix:notandthen
+  cell   -0e0 | Inf
+  code   (-0e0) notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0183
+  from   inventory:infix:notandthen
+  cell   Inf | Inf
+  code   (Inf) notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0184
+  from   inventory:infix:notandthen
+  cell   Inf | 0
+  code   (Inf) notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0185
+  from   inventory:infix:notandthen
+  cell   Inf | 1
+  code   (Inf) notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0186
+  from   inventory:infix:notandthen
+  cell   Inf | -1
+  code   (Inf) notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0187
+  from   inventory:infix:notandthen
+  cell   Inf | 1/2
+  code   (Inf) notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0188
+  from   inventory:infix:notandthen
+  cell   Inf | 0e0
+  code   (Inf) notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0189
+  from   inventory:infix:notandthen
+  cell   Inf | NaN
+  code   (Inf) notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0190
+  from   inventory:infix:notandthen
+  cell   Inf | ""
+  code   (Inf) notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0191
+  from   inventory:infix:notandthen
+  cell   Inf | "a"
+  code   (Inf) notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0192
+  from   inventory:infix:notandthen
+  cell   Inf | True
+  code   (Inf) notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0193
+  from   inventory:infix:notandthen
+  cell   Inf | Any
+  code   (Inf) notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0194
+  from   inventory:infix:notandthen
+  cell   Inf | (1,2)
+  code   (Inf) notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0195
+  from   inventory:infix:notandthen
+  cell   Inf | {a=>1}
+  code   (Inf) notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0196
+  from   inventory:infix:notandthen
+  cell   Inf | -0e0
+  code   (Inf) notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0197
+  from   inventory:infix:notandthen
+  cell   0 | 2**64
+  code   (0) notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0198
+  from   inventory:infix:notandthen
+  cell   1 | 2**64
+  code   (1) notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0199
+  from   inventory:infix:notandthen
+  cell   -1 | 2**64
+  code   (-1) notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0200
+  from   inventory:infix:notandthen
+  cell   1/2 | 2**64
+  code   (1/2) notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0201
+  from   inventory:infix:notandthen
+  cell   0e0 | 2**64
+  code   (0e0) notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0202
+  from   inventory:infix:notandthen
+  cell   NaN | 2**64
+  code   (NaN) notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0203
+  from   inventory:infix:notandthen
+  cell   "" | 2**64
+  code   ("") notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0204
+  from   inventory:infix:notandthen
+  cell   "a" | 2**64
+  code   ("a") notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0205
+  from   inventory:infix:notandthen
+  cell   True | 2**64
+  code   (True) notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0206
+  from   inventory:infix:notandthen
+  cell   Any | 2**64
+  code   (Any) notandthen (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0207
+  from   inventory:infix:notandthen
+  cell   (1,2) | 2**64
+  code   ((1,2)) notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0208
+  from   inventory:infix:notandthen
+  cell   {a=>1} | 2**64
+  code   ({a=>1}) notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0209
+  from   inventory:infix:notandthen
+  cell   -0e0 | 2**64
+  code   (-0e0) notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0210
+  from   inventory:infix:notandthen
+  cell   Inf | 2**64
+  code   (Inf) notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0211
+  from   inventory:infix:notandthen
+  cell   2**64 | 2**64
+  code   (2**64) notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0212
+  from   inventory:infix:notandthen
+  cell   2**64 | 0
+  code   (2**64) notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0213
+  from   inventory:infix:notandthen
+  cell   2**64 | 1
+  code   (2**64) notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0214
+  from   inventory:infix:notandthen
+  cell   2**64 | -1
+  code   (2**64) notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0215
+  from   inventory:infix:notandthen
+  cell   2**64 | 1/2
+  code   (2**64) notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0216
+  from   inventory:infix:notandthen
+  cell   2**64 | 0e0
+  code   (2**64) notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0217
+  from   inventory:infix:notandthen
+  cell   2**64 | NaN
+  code   (2**64) notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0218
+  from   inventory:infix:notandthen
+  cell   2**64 | ""
+  code   (2**64) notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0219
+  from   inventory:infix:notandthen
+  cell   2**64 | "a"
+  code   (2**64) notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0220
+  from   inventory:infix:notandthen
+  cell   2**64 | True
+  code   (2**64) notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0221
+  from   inventory:infix:notandthen
+  cell   2**64 | Any
+  code   (2**64) notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0222
+  from   inventory:infix:notandthen
+  cell   2**64 | (1,2)
+  code   (2**64) notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0223
+  from   inventory:infix:notandthen
+  cell   2**64 | {a=>1}
+  code   (2**64) notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0224
+  from   inventory:infix:notandthen
+  cell   2**64 | -0e0
+  code   (2**64) notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0225
+  from   inventory:infix:notandthen
+  cell   2**64 | Inf
+  code   (2**64) notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0226
+  from   inventory:infix:notandthen
+  cell   0 | False
+  code   (0) notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0227
+  from   inventory:infix:notandthen
+  cell   1 | False
+  code   (1) notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0228
+  from   inventory:infix:notandthen
+  cell   -1 | False
+  code   (-1) notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0229
+  from   inventory:infix:notandthen
+  cell   1/2 | False
+  code   (1/2) notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0230
+  from   inventory:infix:notandthen
+  cell   0e0 | False
+  code   (0e0) notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0231
+  from   inventory:infix:notandthen
+  cell   NaN | False
+  code   (NaN) notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0232
+  from   inventory:infix:notandthen
+  cell   "" | False
+  code   ("") notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0233
+  from   inventory:infix:notandthen
+  cell   "a" | False
+  code   ("a") notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0234
+  from   inventory:infix:notandthen
+  cell   True | False
+  code   (True) notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0235
+  from   inventory:infix:notandthen
+  cell   Any | False
+  code   (Any) notandthen (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0236
+  from   inventory:infix:notandthen
+  cell   (1,2) | False
+  code   ((1,2)) notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0237
+  from   inventory:infix:notandthen
+  cell   {a=>1} | False
+  code   ({a=>1}) notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0238
+  from   inventory:infix:notandthen
+  cell   -0e0 | False
+  code   (-0e0) notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0239
+  from   inventory:infix:notandthen
+  cell   Inf | False
+  code   (Inf) notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0240
+  from   inventory:infix:notandthen
+  cell   2**64 | False
+  code   (2**64) notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0241
+  from   inventory:infix:notandthen
+  cell   False | False
+  code   (False) notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0242
+  from   inventory:infix:notandthen
+  cell   False | 0
+  code   (False) notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0243
+  from   inventory:infix:notandthen
+  cell   False | 1
+  code   (False) notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0244
+  from   inventory:infix:notandthen
+  cell   False | -1
+  code   (False) notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0245
+  from   inventory:infix:notandthen
+  cell   False | 1/2
+  code   (False) notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0246
+  from   inventory:infix:notandthen
+  cell   False | 0e0
+  code   (False) notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0247
+  from   inventory:infix:notandthen
+  cell   False | NaN
+  code   (False) notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0248
+  from   inventory:infix:notandthen
+  cell   False | ""
+  code   (False) notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0249
+  from   inventory:infix:notandthen
+  cell   False | "a"
+  code   (False) notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0250
+  from   inventory:infix:notandthen
+  cell   False | True
+  code   (False) notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0251
+  from   inventory:infix:notandthen
+  cell   False | Any
+  code   (False) notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0252
+  from   inventory:infix:notandthen
+  cell   False | (1,2)
+  code   (False) notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0253
+  from   inventory:infix:notandthen
+  cell   False | {a=>1}
+  code   (False) notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0254
+  from   inventory:infix:notandthen
+  cell   False | -0e0
+  code   (False) notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0255
+  from   inventory:infix:notandthen
+  cell   False | Inf
+  code   (False) notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0256
+  from   inventory:infix:notandthen
+  cell   False | 2**64
+  code   (False) notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0257
+  from   inventory:infix:notandthen
+  cell   0 | Nil
+  code   (0) notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0258
+  from   inventory:infix:notandthen
+  cell   1 | Nil
+  code   (1) notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0259
+  from   inventory:infix:notandthen
+  cell   -1 | Nil
+  code   (-1) notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0260
+  from   inventory:infix:notandthen
+  cell   1/2 | Nil
+  code   (1/2) notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0261
+  from   inventory:infix:notandthen
+  cell   0e0 | Nil
+  code   (0e0) notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0262
+  from   inventory:infix:notandthen
+  cell   NaN | Nil
+  code   (NaN) notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0263
+  from   inventory:infix:notandthen
+  cell   "" | Nil
+  code   ("") notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0264
+  from   inventory:infix:notandthen
+  cell   "a" | Nil
+  code   ("a") notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0265
+  from   inventory:infix:notandthen
+  cell   True | Nil
+  code   (True) notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0266
+  from   inventory:infix:notandthen
+  cell   Any | Nil
+  code   (Any) notandthen (Nil)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Any
+
+- id     0267
+  from   inventory:infix:notandthen
+  cell   (1,2) | Nil
+  code   ((1,2)) notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0268
+  from   inventory:infix:notandthen
+  cell   {a=>1} | Nil
+  code   ({a=>1}) notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0269
+  from   inventory:infix:notandthen
+  cell   -0e0 | Nil
+  code   (-0e0) notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0270
+  from   inventory:infix:notandthen
+  cell   Inf | Nil
+  code   (Inf) notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0271
+  from   inventory:infix:notandthen
+  cell   2**64 | Nil
+  code   (2**64) notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0272
+  from   inventory:infix:notandthen
+  cell   False | Nil
+  code   (False) notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0273
+  from   inventory:infix:notandthen
+  cell   Nil | Nil
+  code   (Nil) notandthen (Nil)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Any
+
+- id     0274
+  from   inventory:infix:notandthen
+  cell   Nil | 0
+  code   (Nil) notandthen (0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0
+
+- id     0275
+  from   inventory:infix:notandthen
+  cell   Nil | 1
+  code   (Nil) notandthen (1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1
+
+- id     0276
+  from   inventory:infix:notandthen
+  cell   Nil | -1
+  code   (Nil) notandthen (-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -1
+
+- id     0277
+  from   inventory:infix:notandthen
+  cell   Nil | 1/2
+  code   (Nil) notandthen (1/2)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0.5
+
+- id     0278
+  from   inventory:infix:notandthen
+  cell   Nil | 0e0
+  code   (Nil) notandthen (0e0)
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 0e0
+
+- id     0279
+  from   inventory:infix:notandthen
+  cell   Nil | NaN
+  code   (Nil) notandthen (NaN)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-92-g78048b0-modified → NaN
+
+- id     0280
+  from   inventory:infix:notandthen
+  cell   Nil | ""
+  code   (Nil) notandthen ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ""
+
+- id     0281
+  from   inventory:infix:notandthen
+  cell   Nil | "a"
+  code   (Nil) notandthen ("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "a"
+
+- id     0282
+  from   inventory:infix:notandthen
+  cell   Nil | True
+  code   (Nil) notandthen (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0283
+  from   inventory:infix:notandthen
+  cell   Nil | Any
+  code   (Nil) notandthen (Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Any
+
+- id     0284
+  from   inventory:infix:notandthen
+  cell   Nil | (1,2)
+  code   (Nil) notandthen ((1,2))
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $(1, 2)
+
+- id     0285
+  from   inventory:infix:notandthen
+  cell   Nil | {a=>1}
+  code   (Nil) notandthen ({a=>1})
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-92-g78048b0-modified → ${:a(1)}
+
+- id     0286
+  from   inventory:infix:notandthen
+  cell   Nil | -0e0
+  code   (Nil) notandthen (-0e0)
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-92-g78048b0-modified → -0e0
+
+- id     0287
+  from   inventory:infix:notandthen
+  cell   Nil | Inf
+  code   (Nil) notandthen (Inf)
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Inf
+
+- id     0288
+  from   inventory:infix:notandthen
+  cell   Nil | 2**64
+  code   (Nil) notandthen (2**64)
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 18446744073709551616
+
+- id     0289
+  from   inventory:infix:notandthen
+  cell   Nil | False
+  code   (Nil) notandthen (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0290
+  from   inventory:infix:notandthen
+  cell   0 | ()
+  code   (0) notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0291
+  from   inventory:infix:notandthen
+  cell   1 | ()
+  code   (1) notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0292
+  from   inventory:infix:notandthen
+  cell   -1 | ()
+  code   (-1) notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0293
+  from   inventory:infix:notandthen
+  cell   1/2 | ()
+  code   (1/2) notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0294
+  from   inventory:infix:notandthen
+  cell   0e0 | ()
+  code   (0e0) notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0295
+  from   inventory:infix:notandthen
+  cell   NaN | ()
+  code   (NaN) notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0296
+  from   inventory:infix:notandthen
+  cell   "" | ()
+  code   ("") notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0297
+  from   inventory:infix:notandthen
+  cell   "a" | ()
+  code   ("a") notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0298
+  from   inventory:infix:notandthen
+  cell   True | ()
+  code   (True) notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0299
+  from   inventory:infix:notandthen
+  cell   Any | ()
+  code   (Any) notandthen (())
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $( )
+
+- id     0300
+  from   inventory:infix:notandthen
+  cell   (1,2) | ()
+  code   ((1,2)) notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0301
+  from   inventory:infix:notandthen
+  cell   {a=>1} | ()
+  code   ({a=>1}) notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0302
+  from   inventory:infix:notandthen
+  cell   -0e0 | ()
+  code   (-0e0) notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0303
+  from   inventory:infix:notandthen
+  cell   Inf | ()
+  code   (Inf) notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0304
+  from   inventory:infix:notandthen
+  cell   2**64 | ()
+  code   (2**64) notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0305
+  from   inventory:infix:notandthen
+  cell   False | ()
+  code   (False) notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0306
+  from   inventory:infix:notandthen
+  cell   Nil | ()
+  code   (Nil) notandthen (())
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-92-g78048b0-modified → $( )
+
+- id     0307
+  from   inventory:infix:notandthen
+  cell   () | ()
+  code   (()) notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0308
+  from   inventory:infix:notandthen
+  cell   () | 0
+  code   (()) notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0309
+  from   inventory:infix:notandthen
+  cell   () | 1
+  code   (()) notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0310
+  from   inventory:infix:notandthen
+  cell   () | -1
+  code   (()) notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0311
+  from   inventory:infix:notandthen
+  cell   () | 1/2
+  code   (()) notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0312
+  from   inventory:infix:notandthen
+  cell   () | 0e0
+  code   (()) notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0313
+  from   inventory:infix:notandthen
+  cell   () | NaN
+  code   (()) notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0314
+  from   inventory:infix:notandthen
+  cell   () | ""
+  code   (()) notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0315
+  from   inventory:infix:notandthen
+  cell   () | "a"
+  code   (()) notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0316
+  from   inventory:infix:notandthen
+  cell   () | True
+  code   (()) notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0317
+  from   inventory:infix:notandthen
+  cell   () | Any
+  code   (()) notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0318
+  from   inventory:infix:notandthen
+  cell   () | (1,2)
+  code   (()) notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0319
+  from   inventory:infix:notandthen
+  cell   () | {a=>1}
+  code   (()) notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0320
+  from   inventory:infix:notandthen
+  cell   () | -0e0
+  code   (()) notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0321
+  from   inventory:infix:notandthen
+  cell   () | Inf
+  code   (()) notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0322
+  from   inventory:infix:notandthen
+  cell   () | 2**64
+  code   (()) notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0323
+  from   inventory:infix:notandthen
+  cell   () | False
+  code   (()) notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0324
+  from   inventory:infix:notandthen
+  cell   () | Nil
+  code   (()) notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0325
+  from   inventory:infix:notandthen
+  cell   0 | "0"
+  code   (0) notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0326
+  from   inventory:infix:notandthen
+  cell   1 | "0"
+  code   (1) notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0327
+  from   inventory:infix:notandthen
+  cell   -1 | "0"
+  code   (-1) notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0328
+  from   inventory:infix:notandthen
+  cell   1/2 | "0"
+  code   (1/2) notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0329
+  from   inventory:infix:notandthen
+  cell   0e0 | "0"
+  code   (0e0) notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0330
+  from   inventory:infix:notandthen
+  cell   NaN | "0"
+  code   (NaN) notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0331
+  from   inventory:infix:notandthen
+  cell   "" | "0"
+  code   ("") notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0332
+  from   inventory:infix:notandthen
+  cell   "a" | "0"
+  code   ("a") notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0333
+  from   inventory:infix:notandthen
+  cell   True | "0"
+  code   (True) notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0334
+  from   inventory:infix:notandthen
+  cell   Any | "0"
+  code   (Any) notandthen ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0335
+  from   inventory:infix:notandthen
+  cell   (1,2) | "0"
+  code   ((1,2)) notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0336
+  from   inventory:infix:notandthen
+  cell   {a=>1} | "0"
+  code   ({a=>1}) notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0337
+  from   inventory:infix:notandthen
+  cell   -0e0 | "0"
+  code   (-0e0) notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0338
+  from   inventory:infix:notandthen
+  cell   Inf | "0"
+  code   (Inf) notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0339
+  from   inventory:infix:notandthen
+  cell   2**64 | "0"
+  code   (2**64) notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0340
+  from   inventory:infix:notandthen
+  cell   False | "0"
+  code   (False) notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0341
+  from   inventory:infix:notandthen
+  cell   Nil | "0"
+  code   (Nil) notandthen ("0")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-92-g78048b0-modified → "0"
+
+- id     0342
+  from   inventory:infix:notandthen
+  cell   () | "0"
+  code   (()) notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0343
+  from   inventory:infix:notandthen
+  cell   "0" | "0"
+  code   ("0") notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0344
+  from   inventory:infix:notandthen
+  cell   "0" | 0
+  code   ("0") notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0345
+  from   inventory:infix:notandthen
+  cell   "0" | 1
+  code   ("0") notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0346
+  from   inventory:infix:notandthen
+  cell   "0" | -1
+  code   ("0") notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0347
+  from   inventory:infix:notandthen
+  cell   "0" | 1/2
+  code   ("0") notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0348
+  from   inventory:infix:notandthen
+  cell   "0" | 0e0
+  code   ("0") notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0349
+  from   inventory:infix:notandthen
+  cell   "0" | NaN
+  code   ("0") notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0350
+  from   inventory:infix:notandthen
+  cell   "0" | ""
+  code   ("0") notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0351
+  from   inventory:infix:notandthen
+  cell   "0" | "a"
+  code   ("0") notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0352
+  from   inventory:infix:notandthen
+  cell   "0" | True
+  code   ("0") notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0353
+  from   inventory:infix:notandthen
+  cell   "0" | Any
+  code   ("0") notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0354
+  from   inventory:infix:notandthen
+  cell   "0" | (1,2)
+  code   ("0") notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0355
+  from   inventory:infix:notandthen
+  cell   "0" | {a=>1}
+  code   ("0") notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0356
+  from   inventory:infix:notandthen
+  cell   "0" | -0e0
+  code   ("0") notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0357
+  from   inventory:infix:notandthen
+  cell   "0" | Inf
+  code   ("0") notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0358
+  from   inventory:infix:notandthen
+  cell   "0" | 2**64
+  code   ("0") notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0359
+  from   inventory:infix:notandthen
+  cell   "0" | False
+  code   ("0") notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0360
+  from   inventory:infix:notandthen
+  cell   "0" | Nil
+  code   ("0") notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0361
+  from   inventory:infix:notandthen
+  cell   "0" | ()
+  code   ("0") notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0362
+  from   inventory:infix:notandthen
+  cell   0 | (1..3)
+  code   (0) notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0363
+  from   inventory:infix:notandthen
+  cell   1 | (1..3)
+  code   (1) notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0364
+  from   inventory:infix:notandthen
+  cell   -1 | (1..3)
+  code   (-1) notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0365
+  from   inventory:infix:notandthen
+  cell   1/2 | (1..3)
+  code   (1/2) notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0366
+  from   inventory:infix:notandthen
+  cell   0e0 | (1..3)
+  code   (0e0) notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0367
+  from   inventory:infix:notandthen
+  cell   NaN | (1..3)
+  code   (NaN) notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0368
+  from   inventory:infix:notandthen
+  cell   "" | (1..3)
+  code   ("") notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0369
+  from   inventory:infix:notandthen
+  cell   "a" | (1..3)
+  code   ("a") notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0370
+  from   inventory:infix:notandthen
+  cell   True | (1..3)
+  code   (True) notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0371
+  from   inventory:infix:notandthen
+  cell   Any | (1..3)
+  code   (Any) notandthen ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0372
+  from   inventory:infix:notandthen
+  cell   (1,2) | (1..3)
+  code   ((1,2)) notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0373
+  from   inventory:infix:notandthen
+  cell   {a=>1} | (1..3)
+  code   ({a=>1}) notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0374
+  from   inventory:infix:notandthen
+  cell   -0e0 | (1..3)
+  code   (-0e0) notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0375
+  from   inventory:infix:notandthen
+  cell   Inf | (1..3)
+  code   (Inf) notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0376
+  from   inventory:infix:notandthen
+  cell   2**64 | (1..3)
+  code   (2**64) notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0377
+  from   inventory:infix:notandthen
+  cell   False | (1..3)
+  code   (False) notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0378
+  from   inventory:infix:notandthen
+  cell   Nil | (1..3)
+  code   (Nil) notandthen ((1..3))
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0379
+  from   inventory:infix:notandthen
+  cell   () | (1..3)
+  code   (()) notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0380
+  from   inventory:infix:notandthen
+  cell   "0" | (1..3)
+  code   ("0") notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0381
+  from   inventory:infix:notandthen
+  cell   (1..3) | (1..3)
+  code   ((1..3)) notandthen ((1..3))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0382
+  from   inventory:infix:notandthen
+  cell   (1..3) | 0
+  code   ((1..3)) notandthen (0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0383
+  from   inventory:infix:notandthen
+  cell   (1..3) | 1
+  code   ((1..3)) notandthen (1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0384
+  from   inventory:infix:notandthen
+  cell   (1..3) | -1
+  code   ((1..3)) notandthen (-1)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0385
+  from   inventory:infix:notandthen
+  cell   (1..3) | 1/2
+  code   ((1..3)) notandthen (1/2)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0386
+  from   inventory:infix:notandthen
+  cell   (1..3) | 0e0
+  code   ((1..3)) notandthen (0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0387
+  from   inventory:infix:notandthen
+  cell   (1..3) | NaN
+  code   ((1..3)) notandthen (NaN)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0388
+  from   inventory:infix:notandthen
+  cell   (1..3) | ""
+  code   ((1..3)) notandthen ("")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0389
+  from   inventory:infix:notandthen
+  cell   (1..3) | "a"
+  code   ((1..3)) notandthen ("a")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0390
+  from   inventory:infix:notandthen
+  cell   (1..3) | True
+  code   ((1..3)) notandthen (True)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0391
+  from   inventory:infix:notandthen
+  cell   (1..3) | Any
+  code   ((1..3)) notandthen (Any)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0392
+  from   inventory:infix:notandthen
+  cell   (1..3) | (1,2)
+  code   ((1..3)) notandthen ((1,2))
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0393
+  from   inventory:infix:notandthen
+  cell   (1..3) | {a=>1}
+  code   ((1..3)) notandthen ({a=>1})
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0394
+  from   inventory:infix:notandthen
+  cell   (1..3) | -0e0
+  code   ((1..3)) notandthen (-0e0)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0395
+  from   inventory:infix:notandthen
+  cell   (1..3) | Inf
+  code   ((1..3)) notandthen (Inf)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0396
+  from   inventory:infix:notandthen
+  cell   (1..3) | 2**64
+  code   ((1..3)) notandthen (2**64)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0397
+  from   inventory:infix:notandthen
+  cell   (1..3) | False
+  code   ((1..3)) notandthen (False)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0398
+  from   inventory:infix:notandthen
+  cell   (1..3) | Nil
+  code   ((1..3)) notandthen (Nil)
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0399
+  from   inventory:infix:notandthen
+  cell   (1..3) | ()
+  code   ((1..3)) notandthen (())
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty
+
+- id     0400
+  from   inventory:infix:notandthen
+  cell   (1..3) | "0"
+  code   ((1..3)) notandthen ("0")
+  is     Empty
+  type   Slip
+  oracle rakudo-2026.07 → Empty
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Empty

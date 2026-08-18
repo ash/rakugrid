@@ -3,8 +3,8 @@ source   generated
 gen      gen/operators.raku
 from-inventory infix ne
 ladder   mixed
-axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
-cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
 
 - id     0001
   from   inventory:infix:ne
@@ -13,7 +13,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
 
 - id     0002
   from   inventory:infix:ne
@@ -22,1168 +22,1168 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
 
 - id     0003
-  from   inventory:infix:ne
-  cell   0 | -1
-  code   (0) ne (-1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0004
-  from   inventory:infix:ne
-  cell   0 | 1/2
-  code   (0) ne (1/2)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0005
-  from   inventory:infix:ne
-  cell   0 | 0e0
-  code   (0) ne (0e0)
-  is     Bool::False
-  type   Bool
-  oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
-
-- id     0006
-  from   inventory:infix:ne
-  cell   0 | NaN
-  code   (0) ne (NaN)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0007
-  from   inventory:infix:ne
-  cell   0 | ""
-  code   (0) ne ("")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0008
-  from   inventory:infix:ne
-  cell   0 | "a"
-  code   (0) ne ("a")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0009
-  from   inventory:infix:ne
-  cell   0 | True
-  code   (0) ne (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0010
-  from   inventory:infix:ne
-  cell   0 | Any
-  code   (0) ne (Any)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0011
-  from   inventory:infix:ne
-  cell   0 | (1,2)
-  code   (0) ne ((1,2))
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0012
-  from   inventory:infix:ne
-  cell   0 | {a=>1}
-  code   (0) ne ({a=>1})
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0013
-  from   inventory:infix:ne
-  cell   1 | 0
-  code   (1) ne (0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0014
   from   inventory:infix:ne
   cell   1 | 1
   code   (1) ne (1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
 
-- id     0015
+- id     0004
+  from   inventory:infix:ne
+  cell   1 | 0
+  code   (1) ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0005
+  from   inventory:infix:ne
+  cell   0 | -1
+  code   (0) ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0006
   from   inventory:infix:ne
   cell   1 | -1
   code   (1) ne (-1)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
 
-- id     0016
-  from   inventory:infix:ne
-  cell   1 | 1/2
-  code   (1) ne (1/2)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0017
-  from   inventory:infix:ne
-  cell   1 | 0e0
-  code   (1) ne (0e0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0018
-  from   inventory:infix:ne
-  cell   1 | NaN
-  code   (1) ne (NaN)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0019
-  from   inventory:infix:ne
-  cell   1 | ""
-  code   (1) ne ("")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0020
-  from   inventory:infix:ne
-  cell   1 | "a"
-  code   (1) ne ("a")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0021
-  from   inventory:infix:ne
-  cell   1 | True
-  code   (1) ne (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0022
-  from   inventory:infix:ne
-  cell   1 | Any
-  code   (1) ne (Any)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0023
-  from   inventory:infix:ne
-  cell   1 | (1,2)
-  code   (1) ne ((1,2))
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0024
-  from   inventory:infix:ne
-  cell   1 | {a=>1}
-  code   (1) ne ({a=>1})
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0025
-  from   inventory:infix:ne
-  cell   -1 | 0
-  code   (-1) ne (0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0026
-  from   inventory:infix:ne
-  cell   -1 | 1
-  code   (-1) ne (1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0027
+- id     0007
   from   inventory:infix:ne
   cell   -1 | -1
   code   (-1) ne (-1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
 
-- id     0028
+- id     0008
+  from   inventory:infix:ne
+  cell   -1 | 0
+  code   (-1) ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0009
+  from   inventory:infix:ne
+  cell   -1 | 1
+  code   (-1) ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0010
+  from   inventory:infix:ne
+  cell   0 | 1/2
+  code   (0) ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0011
+  from   inventory:infix:ne
+  cell   1 | 1/2
+  code   (1) ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0012
   from   inventory:infix:ne
   cell   -1 | 1/2
   code   (-1) ne (1/2)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
 
-- id     0029
-  from   inventory:infix:ne
-  cell   -1 | 0e0
-  code   (-1) ne (0e0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0030
-  from   inventory:infix:ne
-  cell   -1 | NaN
-  code   (-1) ne (NaN)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0031
-  from   inventory:infix:ne
-  cell   -1 | ""
-  code   (-1) ne ("")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0032
-  from   inventory:infix:ne
-  cell   -1 | "a"
-  code   (-1) ne ("a")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0033
-  from   inventory:infix:ne
-  cell   -1 | True
-  code   (-1) ne (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0034
-  from   inventory:infix:ne
-  cell   -1 | Any
-  code   (-1) ne (Any)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0035
-  from   inventory:infix:ne
-  cell   -1 | (1,2)
-  code   (-1) ne ((1,2))
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0036
-  from   inventory:infix:ne
-  cell   -1 | {a=>1}
-  code   (-1) ne ({a=>1})
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0037
-  from   inventory:infix:ne
-  cell   1/2 | 0
-  code   (1/2) ne (0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0038
-  from   inventory:infix:ne
-  cell   1/2 | 1
-  code   (1/2) ne (1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0039
-  from   inventory:infix:ne
-  cell   1/2 | -1
-  code   (1/2) ne (-1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0040
+- id     0013
   from   inventory:infix:ne
   cell   1/2 | 1/2
   code   (1/2) ne (1/2)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
 
-- id     0041
+- id     0014
+  from   inventory:infix:ne
+  cell   1/2 | 0
+  code   (1/2) ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0015
+  from   inventory:infix:ne
+  cell   1/2 | 1
+  code   (1/2) ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0016
+  from   inventory:infix:ne
+  cell   1/2 | -1
+  code   (1/2) ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0017
+  from   inventory:infix:ne
+  cell   0 | 0e0
+  code   (0) ne (0e0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0018
+  from   inventory:infix:ne
+  cell   1 | 0e0
+  code   (1) ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0019
+  from   inventory:infix:ne
+  cell   -1 | 0e0
+  code   (-1) ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0020
   from   inventory:infix:ne
   cell   1/2 | 0e0
   code   (1/2) ne (0e0)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
 
-- id     0042
-  from   inventory:infix:ne
-  cell   1/2 | NaN
-  code   (1/2) ne (NaN)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0043
-  from   inventory:infix:ne
-  cell   1/2 | ""
-  code   (1/2) ne ("")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0044
-  from   inventory:infix:ne
-  cell   1/2 | "a"
-  code   (1/2) ne ("a")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0045
-  from   inventory:infix:ne
-  cell   1/2 | True
-  code   (1/2) ne (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0046
-  from   inventory:infix:ne
-  cell   1/2 | Any
-  code   (1/2) ne (Any)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0047
-  from   inventory:infix:ne
-  cell   1/2 | (1,2)
-  code   (1/2) ne ((1,2))
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0048
-  from   inventory:infix:ne
-  cell   1/2 | {a=>1}
-  code   (1/2) ne ({a=>1})
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0049
-  from   inventory:infix:ne
-  cell   0e0 | 0
-  code   (0e0) ne (0)
-  is     Bool::False
-  type   Bool
-  oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
-
-- id     0050
-  from   inventory:infix:ne
-  cell   0e0 | 1
-  code   (0e0) ne (1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0051
-  from   inventory:infix:ne
-  cell   0e0 | -1
-  code   (0e0) ne (-1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0052
-  from   inventory:infix:ne
-  cell   0e0 | 1/2
-  code   (0e0) ne (1/2)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0053
+- id     0021
   from   inventory:infix:ne
   cell   0e0 | 0e0
   code   (0e0) ne (0e0)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
 
-- id     0054
+- id     0022
+  from   inventory:infix:ne
+  cell   0e0 | 0
+  code   (0e0) ne (0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0023
+  from   inventory:infix:ne
+  cell   0e0 | 1
+  code   (0e0) ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0024
+  from   inventory:infix:ne
+  cell   0e0 | -1
+  code   (0e0) ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0025
+  from   inventory:infix:ne
+  cell   0e0 | 1/2
+  code   (0e0) ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0026
+  from   inventory:infix:ne
+  cell   0 | NaN
+  code   (0) ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0027
+  from   inventory:infix:ne
+  cell   1 | NaN
+  code   (1) ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0028
+  from   inventory:infix:ne
+  cell   -1 | NaN
+  code   (-1) ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0029
+  from   inventory:infix:ne
+  cell   1/2 | NaN
+  code   (1/2) ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0030
   from   inventory:infix:ne
   cell   0e0 | NaN
   code   (0e0) ne (NaN)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
 
-- id     0055
-  from   inventory:infix:ne
-  cell   0e0 | ""
-  code   (0e0) ne ("")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0056
-  from   inventory:infix:ne
-  cell   0e0 | "a"
-  code   (0e0) ne ("a")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0057
-  from   inventory:infix:ne
-  cell   0e0 | True
-  code   (0e0) ne (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0058
-  from   inventory:infix:ne
-  cell   0e0 | Any
-  code   (0e0) ne (Any)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0059
-  from   inventory:infix:ne
-  cell   0e0 | (1,2)
-  code   (0e0) ne ((1,2))
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0060
-  from   inventory:infix:ne
-  cell   0e0 | {a=>1}
-  code   (0e0) ne ({a=>1})
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0061
-  from   inventory:infix:ne
-  cell   NaN | 0
-  code   (NaN) ne (0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0062
-  from   inventory:infix:ne
-  cell   NaN | 1
-  code   (NaN) ne (1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0063
-  from   inventory:infix:ne
-  cell   NaN | -1
-  code   (NaN) ne (-1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0064
-  from   inventory:infix:ne
-  cell   NaN | 1/2
-  code   (NaN) ne (1/2)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0065
-  from   inventory:infix:ne
-  cell   NaN | 0e0
-  code   (NaN) ne (0e0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0066
+- id     0031
   from   inventory:infix:ne
   cell   NaN | NaN
   code   (NaN) ne (NaN)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
 
-- id     0067
+- id     0032
+  from   inventory:infix:ne
+  cell   NaN | 0
+  code   (NaN) ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0033
+  from   inventory:infix:ne
+  cell   NaN | 1
+  code   (NaN) ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0034
+  from   inventory:infix:ne
+  cell   NaN | -1
+  code   (NaN) ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0035
+  from   inventory:infix:ne
+  cell   NaN | 1/2
+  code   (NaN) ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0036
+  from   inventory:infix:ne
+  cell   NaN | 0e0
+  code   (NaN) ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0037
+  from   inventory:infix:ne
+  cell   0 | ""
+  code   (0) ne ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0038
+  from   inventory:infix:ne
+  cell   1 | ""
+  code   (1) ne ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0039
+  from   inventory:infix:ne
+  cell   -1 | ""
+  code   (-1) ne ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0040
+  from   inventory:infix:ne
+  cell   1/2 | ""
+  code   (1/2) ne ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0041
+  from   inventory:infix:ne
+  cell   0e0 | ""
+  code   (0e0) ne ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0042
   from   inventory:infix:ne
   cell   NaN | ""
   code   (NaN) ne ("")
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
 
-- id     0068
-  from   inventory:infix:ne
-  cell   NaN | "a"
-  code   (NaN) ne ("a")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0069
-  from   inventory:infix:ne
-  cell   NaN | True
-  code   (NaN) ne (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0070
-  from   inventory:infix:ne
-  cell   NaN | Any
-  code   (NaN) ne (Any)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0071
-  from   inventory:infix:ne
-  cell   NaN | (1,2)
-  code   (NaN) ne ((1,2))
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0072
-  from   inventory:infix:ne
-  cell   NaN | {a=>1}
-  code   (NaN) ne ({a=>1})
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0073
-  from   inventory:infix:ne
-  cell   "" | 0
-  code   ("") ne (0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0074
-  from   inventory:infix:ne
-  cell   "" | 1
-  code   ("") ne (1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0075
-  from   inventory:infix:ne
-  cell   "" | -1
-  code   ("") ne (-1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0076
-  from   inventory:infix:ne
-  cell   "" | 1/2
-  code   ("") ne (1/2)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0077
-  from   inventory:infix:ne
-  cell   "" | 0e0
-  code   ("") ne (0e0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0078
-  from   inventory:infix:ne
-  cell   "" | NaN
-  code   ("") ne (NaN)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0079
+- id     0043
   from   inventory:infix:ne
   cell   "" | ""
   code   ("") ne ("")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
 
-- id     0080
+- id     0044
+  from   inventory:infix:ne
+  cell   "" | 0
+  code   ("") ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0045
+  from   inventory:infix:ne
+  cell   "" | 1
+  code   ("") ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0046
+  from   inventory:infix:ne
+  cell   "" | -1
+  code   ("") ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0047
+  from   inventory:infix:ne
+  cell   "" | 1/2
+  code   ("") ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0048
+  from   inventory:infix:ne
+  cell   "" | 0e0
+  code   ("") ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0049
+  from   inventory:infix:ne
+  cell   "" | NaN
+  code   ("") ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0050
+  from   inventory:infix:ne
+  cell   0 | "a"
+  code   (0) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0051
+  from   inventory:infix:ne
+  cell   1 | "a"
+  code   (1) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0052
+  from   inventory:infix:ne
+  cell   -1 | "a"
+  code   (-1) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0053
+  from   inventory:infix:ne
+  cell   1/2 | "a"
+  code   (1/2) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0054
+  from   inventory:infix:ne
+  cell   0e0 | "a"
+  code   (0e0) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0055
+  from   inventory:infix:ne
+  cell   NaN | "a"
+  code   (NaN) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0056
   from   inventory:infix:ne
   cell   "" | "a"
   code   ("") ne ("a")
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
 
-- id     0081
-  from   inventory:infix:ne
-  cell   "" | True
-  code   ("") ne (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0082
-  from   inventory:infix:ne
-  cell   "" | Any
-  code   ("") ne (Any)
-  is     Bool::False
-  type   Bool
-  oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
-
-- id     0083
-  from   inventory:infix:ne
-  cell   "" | (1,2)
-  code   ("") ne ((1,2))
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0084
-  from   inventory:infix:ne
-  cell   "" | {a=>1}
-  code   ("") ne ({a=>1})
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0085
-  from   inventory:infix:ne
-  cell   "a" | 0
-  code   ("a") ne (0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0086
-  from   inventory:infix:ne
-  cell   "a" | 1
-  code   ("a") ne (1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0087
-  from   inventory:infix:ne
-  cell   "a" | -1
-  code   ("a") ne (-1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0088
-  from   inventory:infix:ne
-  cell   "a" | 1/2
-  code   ("a") ne (1/2)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0089
-  from   inventory:infix:ne
-  cell   "a" | 0e0
-  code   ("a") ne (0e0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0090
-  from   inventory:infix:ne
-  cell   "a" | NaN
-  code   ("a") ne (NaN)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0091
-  from   inventory:infix:ne
-  cell   "a" | ""
-  code   ("a") ne ("")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0092
+- id     0057
   from   inventory:infix:ne
   cell   "a" | "a"
   code   ("a") ne ("a")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
 
-- id     0093
+- id     0058
+  from   inventory:infix:ne
+  cell   "a" | 0
+  code   ("a") ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0059
+  from   inventory:infix:ne
+  cell   "a" | 1
+  code   ("a") ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0060
+  from   inventory:infix:ne
+  cell   "a" | -1
+  code   ("a") ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0061
+  from   inventory:infix:ne
+  cell   "a" | 1/2
+  code   ("a") ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0062
+  from   inventory:infix:ne
+  cell   "a" | 0e0
+  code   ("a") ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0063
+  from   inventory:infix:ne
+  cell   "a" | NaN
+  code   ("a") ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0064
+  from   inventory:infix:ne
+  cell   "a" | ""
+  code   ("a") ne ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0065
+  from   inventory:infix:ne
+  cell   0 | True
+  code   (0) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0066
+  from   inventory:infix:ne
+  cell   1 | True
+  code   (1) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0067
+  from   inventory:infix:ne
+  cell   -1 | True
+  code   (-1) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0068
+  from   inventory:infix:ne
+  cell   1/2 | True
+  code   (1/2) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0069
+  from   inventory:infix:ne
+  cell   0e0 | True
+  code   (0e0) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0070
+  from   inventory:infix:ne
+  cell   NaN | True
+  code   (NaN) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0071
+  from   inventory:infix:ne
+  cell   "" | True
+  code   ("") ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0072
   from   inventory:infix:ne
   cell   "a" | True
   code   ("a") ne (True)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
 
-- id     0094
-  from   inventory:infix:ne
-  cell   "a" | Any
-  code   ("a") ne (Any)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0095
-  from   inventory:infix:ne
-  cell   "a" | (1,2)
-  code   ("a") ne ((1,2))
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0096
-  from   inventory:infix:ne
-  cell   "a" | {a=>1}
-  code   ("a") ne ({a=>1})
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0097
-  from   inventory:infix:ne
-  cell   True | 0
-  code   (True) ne (0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0098
-  from   inventory:infix:ne
-  cell   True | 1
-  code   (True) ne (1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0099
-  from   inventory:infix:ne
-  cell   True | -1
-  code   (True) ne (-1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0100
-  from   inventory:infix:ne
-  cell   True | 1/2
-  code   (True) ne (1/2)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0101
-  from   inventory:infix:ne
-  cell   True | 0e0
-  code   (True) ne (0e0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0102
-  from   inventory:infix:ne
-  cell   True | NaN
-  code   (True) ne (NaN)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0103
-  from   inventory:infix:ne
-  cell   True | ""
-  code   (True) ne ("")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0104
-  from   inventory:infix:ne
-  cell   True | "a"
-  code   (True) ne ("a")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0105
+- id     0073
   from   inventory:infix:ne
   cell   True | True
   code   (True) ne (True)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
 
-- id     0106
+- id     0074
+  from   inventory:infix:ne
+  cell   True | 0
+  code   (True) ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0075
+  from   inventory:infix:ne
+  cell   True | 1
+  code   (True) ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0076
+  from   inventory:infix:ne
+  cell   True | -1
+  code   (True) ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0077
+  from   inventory:infix:ne
+  cell   True | 1/2
+  code   (True) ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0078
+  from   inventory:infix:ne
+  cell   True | 0e0
+  code   (True) ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0079
+  from   inventory:infix:ne
+  cell   True | NaN
+  code   (True) ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0080
+  from   inventory:infix:ne
+  cell   True | ""
+  code   (True) ne ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0081
+  from   inventory:infix:ne
+  cell   True | "a"
+  code   (True) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0082
+  from   inventory:infix:ne
+  cell   0 | Any
+  code   (0) ne (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0083
+  from   inventory:infix:ne
+  cell   1 | Any
+  code   (1) ne (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0084
+  from   inventory:infix:ne
+  cell   -1 | Any
+  code   (-1) ne (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0085
+  from   inventory:infix:ne
+  cell   1/2 | Any
+  code   (1/2) ne (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0086
+  from   inventory:infix:ne
+  cell   0e0 | Any
+  code   (0e0) ne (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0087
+  from   inventory:infix:ne
+  cell   NaN | Any
+  code   (NaN) ne (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0088
+  from   inventory:infix:ne
+  cell   "" | Any
+  code   ("") ne (Any)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0089
+  from   inventory:infix:ne
+  cell   "a" | Any
+  code   ("a") ne (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0090
   from   inventory:infix:ne
   cell   True | Any
   code   (True) ne (Any)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
 
-- id     0107
-  from   inventory:infix:ne
-  cell   True | (1,2)
-  code   (True) ne ((1,2))
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0108
-  from   inventory:infix:ne
-  cell   True | {a=>1}
-  code   (True) ne ({a=>1})
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0109
-  from   inventory:infix:ne
-  cell   Any | 0
-  code   (Any) ne (0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0110
-  from   inventory:infix:ne
-  cell   Any | 1
-  code   (Any) ne (1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0111
-  from   inventory:infix:ne
-  cell   Any | -1
-  code   (Any) ne (-1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0112
-  from   inventory:infix:ne
-  cell   Any | 1/2
-  code   (Any) ne (1/2)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0113
-  from   inventory:infix:ne
-  cell   Any | 0e0
-  code   (Any) ne (0e0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0114
-  from   inventory:infix:ne
-  cell   Any | NaN
-  code   (Any) ne (NaN)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0115
-  from   inventory:infix:ne
-  cell   Any | ""
-  code   (Any) ne ("")
-  is     Bool::False
-  type   Bool
-  oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
-
-- id     0116
-  from   inventory:infix:ne
-  cell   Any | "a"
-  code   (Any) ne ("a")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0117
-  from   inventory:infix:ne
-  cell   Any | True
-  code   (Any) ne (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0118
+- id     0091
   from   inventory:infix:ne
   cell   Any | Any
   code   (Any) ne (Any)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
 
-- id     0119
+- id     0092
+  from   inventory:infix:ne
+  cell   Any | 0
+  code   (Any) ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0093
+  from   inventory:infix:ne
+  cell   Any | 1
+  code   (Any) ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0094
+  from   inventory:infix:ne
+  cell   Any | -1
+  code   (Any) ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0095
+  from   inventory:infix:ne
+  cell   Any | 1/2
+  code   (Any) ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0096
+  from   inventory:infix:ne
+  cell   Any | 0e0
+  code   (Any) ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0097
+  from   inventory:infix:ne
+  cell   Any | NaN
+  code   (Any) ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0098
+  from   inventory:infix:ne
+  cell   Any | ""
+  code   (Any) ne ("")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0099
+  from   inventory:infix:ne
+  cell   Any | "a"
+  code   (Any) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0100
+  from   inventory:infix:ne
+  cell   Any | True
+  code   (Any) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0101
+  from   inventory:infix:ne
+  cell   0 | (1,2)
+  code   (0) ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0102
+  from   inventory:infix:ne
+  cell   1 | (1,2)
+  code   (1) ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0103
+  from   inventory:infix:ne
+  cell   -1 | (1,2)
+  code   (-1) ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0104
+  from   inventory:infix:ne
+  cell   1/2 | (1,2)
+  code   (1/2) ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0105
+  from   inventory:infix:ne
+  cell   0e0 | (1,2)
+  code   (0e0) ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0106
+  from   inventory:infix:ne
+  cell   NaN | (1,2)
+  code   (NaN) ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0107
+  from   inventory:infix:ne
+  cell   "" | (1,2)
+  code   ("") ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0108
+  from   inventory:infix:ne
+  cell   "a" | (1,2)
+  code   ("a") ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0109
+  from   inventory:infix:ne
+  cell   True | (1,2)
+  code   (True) ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0110
   from   inventory:infix:ne
   cell   Any | (1,2)
   code   (Any) ne ((1,2))
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
 
-- id     0120
-  from   inventory:infix:ne
-  cell   Any | {a=>1}
-  code   (Any) ne ({a=>1})
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0121
-  from   inventory:infix:ne
-  cell   (1,2) | 0
-  code   ((1,2)) ne (0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0122
-  from   inventory:infix:ne
-  cell   (1,2) | 1
-  code   ((1,2)) ne (1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0123
-  from   inventory:infix:ne
-  cell   (1,2) | -1
-  code   ((1,2)) ne (-1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0124
-  from   inventory:infix:ne
-  cell   (1,2) | 1/2
-  code   ((1,2)) ne (1/2)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0125
-  from   inventory:infix:ne
-  cell   (1,2) | 0e0
-  code   ((1,2)) ne (0e0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0126
-  from   inventory:infix:ne
-  cell   (1,2) | NaN
-  code   ((1,2)) ne (NaN)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0127
-  from   inventory:infix:ne
-  cell   (1,2) | ""
-  code   ((1,2)) ne ("")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0128
-  from   inventory:infix:ne
-  cell   (1,2) | "a"
-  code   ((1,2)) ne ("a")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0129
-  from   inventory:infix:ne
-  cell   (1,2) | True
-  code   ((1,2)) ne (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0130
-  from   inventory:infix:ne
-  cell   (1,2) | Any
-  code   ((1,2)) ne (Any)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0131
+- id     0111
   from   inventory:infix:ne
   cell   (1,2) | (1,2)
   code   ((1,2)) ne ((1,2))
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0112
+  from   inventory:infix:ne
+  cell   (1,2) | 0
+  code   ((1,2)) ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0113
+  from   inventory:infix:ne
+  cell   (1,2) | 1
+  code   ((1,2)) ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0114
+  from   inventory:infix:ne
+  cell   (1,2) | -1
+  code   ((1,2)) ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0115
+  from   inventory:infix:ne
+  cell   (1,2) | 1/2
+  code   ((1,2)) ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0116
+  from   inventory:infix:ne
+  cell   (1,2) | 0e0
+  code   ((1,2)) ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0117
+  from   inventory:infix:ne
+  cell   (1,2) | NaN
+  code   ((1,2)) ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0118
+  from   inventory:infix:ne
+  cell   (1,2) | ""
+  code   ((1,2)) ne ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0119
+  from   inventory:infix:ne
+  cell   (1,2) | "a"
+  code   ((1,2)) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0120
+  from   inventory:infix:ne
+  cell   (1,2) | True
+  code   ((1,2)) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0121
+  from   inventory:infix:ne
+  cell   (1,2) | Any
+  code   ((1,2)) ne (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0122
+  from   inventory:infix:ne
+  cell   0 | {a=>1}
+  code   (0) ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0123
+  from   inventory:infix:ne
+  cell   1 | {a=>1}
+  code   (1) ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0124
+  from   inventory:infix:ne
+  cell   -1 | {a=>1}
+  code   (-1) ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0125
+  from   inventory:infix:ne
+  cell   1/2 | {a=>1}
+  code   (1/2) ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0126
+  from   inventory:infix:ne
+  cell   0e0 | {a=>1}
+  code   (0e0) ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0127
+  from   inventory:infix:ne
+  cell   NaN | {a=>1}
+  code   (NaN) ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0128
+  from   inventory:infix:ne
+  cell   "" | {a=>1}
+  code   ("") ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0129
+  from   inventory:infix:ne
+  cell   "a" | {a=>1}
+  code   ("a") ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0130
+  from   inventory:infix:ne
+  cell   True | {a=>1}
+  code   (True) ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0131
+  from   inventory:infix:ne
+  cell   Any | {a=>1}
+  code   (Any) ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
 
 - id     0132
   from   inventory:infix:ne
@@ -1192,112 +1192,2416 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1}
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
 
 - id     0133
-  from   inventory:infix:ne
-  cell   {a=>1} | 0
-  code   ({a=>1}) ne (0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0134
-  from   inventory:infix:ne
-  cell   {a=>1} | 1
-  code   ({a=>1}) ne (1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0135
-  from   inventory:infix:ne
-  cell   {a=>1} | -1
-  code   ({a=>1}) ne (-1)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0136
-  from   inventory:infix:ne
-  cell   {a=>1} | 1/2
-  code   ({a=>1}) ne (1/2)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0137
-  from   inventory:infix:ne
-  cell   {a=>1} | 0e0
-  code   ({a=>1}) ne (0e0)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0138
-  from   inventory:infix:ne
-  cell   {a=>1} | NaN
-  code   ({a=>1}) ne (NaN)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0139
-  from   inventory:infix:ne
-  cell   {a=>1} | ""
-  code   ({a=>1}) ne ("")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0140
-  from   inventory:infix:ne
-  cell   {a=>1} | "a"
-  code   ({a=>1}) ne ("a")
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0141
-  from   inventory:infix:ne
-  cell   {a=>1} | True
-  code   ({a=>1}) ne (True)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0142
-  from   inventory:infix:ne
-  cell   {a=>1} | Any
-  code   ({a=>1}) ne (Any)
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0143
-  from   inventory:infix:ne
-  cell   {a=>1} | (1,2)
-  code   ({a=>1}) ne ((1,2))
-  is     Bool::True
-  type   Bool
-  oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::True
-
-- id     0144
   from   inventory:infix:ne
   cell   {a=>1} | {a=>1}
   code   ({a=>1}) ne ({a=>1})
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-77-gf431f48-dirty → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0134
+  from   inventory:infix:ne
+  cell   {a=>1} | 0
+  code   ({a=>1}) ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0135
+  from   inventory:infix:ne
+  cell   {a=>1} | 1
+  code   ({a=>1}) ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0136
+  from   inventory:infix:ne
+  cell   {a=>1} | -1
+  code   ({a=>1}) ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0137
+  from   inventory:infix:ne
+  cell   {a=>1} | 1/2
+  code   ({a=>1}) ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0138
+  from   inventory:infix:ne
+  cell   {a=>1} | 0e0
+  code   ({a=>1}) ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0139
+  from   inventory:infix:ne
+  cell   {a=>1} | NaN
+  code   ({a=>1}) ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0140
+  from   inventory:infix:ne
+  cell   {a=>1} | ""
+  code   ({a=>1}) ne ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0141
+  from   inventory:infix:ne
+  cell   {a=>1} | "a"
+  code   ({a=>1}) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0142
+  from   inventory:infix:ne
+  cell   {a=>1} | True
+  code   ({a=>1}) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0143
+  from   inventory:infix:ne
+  cell   {a=>1} | Any
+  code   ({a=>1}) ne (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0144
+  from   inventory:infix:ne
+  cell   {a=>1} | (1,2)
+  code   ({a=>1}) ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0145
+  from   inventory:infix:ne
+  cell   0 | -0e0
+  code   (0) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0146
+  from   inventory:infix:ne
+  cell   1 | -0e0
+  code   (1) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0147
+  from   inventory:infix:ne
+  cell   -1 | -0e0
+  code   (-1) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0148
+  from   inventory:infix:ne
+  cell   1/2 | -0e0
+  code   (1/2) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0149
+  from   inventory:infix:ne
+  cell   0e0 | -0e0
+  code   (0e0) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0150
+  from   inventory:infix:ne
+  cell   NaN | -0e0
+  code   (NaN) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0151
+  from   inventory:infix:ne
+  cell   "" | -0e0
+  code   ("") ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0152
+  from   inventory:infix:ne
+  cell   "a" | -0e0
+  code   ("a") ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0153
+  from   inventory:infix:ne
+  cell   True | -0e0
+  code   (True) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0154
+  from   inventory:infix:ne
+  cell   Any | -0e0
+  code   (Any) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0155
+  from   inventory:infix:ne
+  cell   (1,2) | -0e0
+  code   ((1,2)) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0156
+  from   inventory:infix:ne
+  cell   {a=>1} | -0e0
+  code   ({a=>1}) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0157
+  from   inventory:infix:ne
+  cell   -0e0 | -0e0
+  code   (-0e0) ne (-0e0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0158
+  from   inventory:infix:ne
+  cell   -0e0 | 0
+  code   (-0e0) ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0159
+  from   inventory:infix:ne
+  cell   -0e0 | 1
+  code   (-0e0) ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0160
+  from   inventory:infix:ne
+  cell   -0e0 | -1
+  code   (-0e0) ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0161
+  from   inventory:infix:ne
+  cell   -0e0 | 1/2
+  code   (-0e0) ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0162
+  from   inventory:infix:ne
+  cell   -0e0 | 0e0
+  code   (-0e0) ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0163
+  from   inventory:infix:ne
+  cell   -0e0 | NaN
+  code   (-0e0) ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0164
+  from   inventory:infix:ne
+  cell   -0e0 | ""
+  code   (-0e0) ne ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0165
+  from   inventory:infix:ne
+  cell   -0e0 | "a"
+  code   (-0e0) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0166
+  from   inventory:infix:ne
+  cell   -0e0 | True
+  code   (-0e0) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0167
+  from   inventory:infix:ne
+  cell   -0e0 | Any
+  code   (-0e0) ne (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0168
+  from   inventory:infix:ne
+  cell   -0e0 | (1,2)
+  code   (-0e0) ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0169
+  from   inventory:infix:ne
+  cell   -0e0 | {a=>1}
+  code   (-0e0) ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0170
+  from   inventory:infix:ne
+  cell   0 | Inf
+  code   (0) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0171
+  from   inventory:infix:ne
+  cell   1 | Inf
+  code   (1) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0172
+  from   inventory:infix:ne
+  cell   -1 | Inf
+  code   (-1) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0173
+  from   inventory:infix:ne
+  cell   1/2 | Inf
+  code   (1/2) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0174
+  from   inventory:infix:ne
+  cell   0e0 | Inf
+  code   (0e0) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0175
+  from   inventory:infix:ne
+  cell   NaN | Inf
+  code   (NaN) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0176
+  from   inventory:infix:ne
+  cell   "" | Inf
+  code   ("") ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0177
+  from   inventory:infix:ne
+  cell   "a" | Inf
+  code   ("a") ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0178
+  from   inventory:infix:ne
+  cell   True | Inf
+  code   (True) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0179
+  from   inventory:infix:ne
+  cell   Any | Inf
+  code   (Any) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0180
+  from   inventory:infix:ne
+  cell   (1,2) | Inf
+  code   ((1,2)) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0181
+  from   inventory:infix:ne
+  cell   {a=>1} | Inf
+  code   ({a=>1}) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0182
+  from   inventory:infix:ne
+  cell   -0e0 | Inf
+  code   (-0e0) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0183
+  from   inventory:infix:ne
+  cell   Inf | Inf
+  code   (Inf) ne (Inf)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0184
+  from   inventory:infix:ne
+  cell   Inf | 0
+  code   (Inf) ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0185
+  from   inventory:infix:ne
+  cell   Inf | 1
+  code   (Inf) ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0186
+  from   inventory:infix:ne
+  cell   Inf | -1
+  code   (Inf) ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0187
+  from   inventory:infix:ne
+  cell   Inf | 1/2
+  code   (Inf) ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0188
+  from   inventory:infix:ne
+  cell   Inf | 0e0
+  code   (Inf) ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0189
+  from   inventory:infix:ne
+  cell   Inf | NaN
+  code   (Inf) ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0190
+  from   inventory:infix:ne
+  cell   Inf | ""
+  code   (Inf) ne ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0191
+  from   inventory:infix:ne
+  cell   Inf | "a"
+  code   (Inf) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0192
+  from   inventory:infix:ne
+  cell   Inf | True
+  code   (Inf) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0193
+  from   inventory:infix:ne
+  cell   Inf | Any
+  code   (Inf) ne (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0194
+  from   inventory:infix:ne
+  cell   Inf | (1,2)
+  code   (Inf) ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0195
+  from   inventory:infix:ne
+  cell   Inf | {a=>1}
+  code   (Inf) ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0196
+  from   inventory:infix:ne
+  cell   Inf | -0e0
+  code   (Inf) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0197
+  from   inventory:infix:ne
+  cell   0 | 2**64
+  code   (0) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0198
+  from   inventory:infix:ne
+  cell   1 | 2**64
+  code   (1) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0199
+  from   inventory:infix:ne
+  cell   -1 | 2**64
+  code   (-1) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0200
+  from   inventory:infix:ne
+  cell   1/2 | 2**64
+  code   (1/2) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0201
+  from   inventory:infix:ne
+  cell   0e0 | 2**64
+  code   (0e0) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0202
+  from   inventory:infix:ne
+  cell   NaN | 2**64
+  code   (NaN) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0203
+  from   inventory:infix:ne
+  cell   "" | 2**64
+  code   ("") ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0204
+  from   inventory:infix:ne
+  cell   "a" | 2**64
+  code   ("a") ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0205
+  from   inventory:infix:ne
+  cell   True | 2**64
+  code   (True) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0206
+  from   inventory:infix:ne
+  cell   Any | 2**64
+  code   (Any) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0207
+  from   inventory:infix:ne
+  cell   (1,2) | 2**64
+  code   ((1,2)) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0208
+  from   inventory:infix:ne
+  cell   {a=>1} | 2**64
+  code   ({a=>1}) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0209
+  from   inventory:infix:ne
+  cell   -0e0 | 2**64
+  code   (-0e0) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0210
+  from   inventory:infix:ne
+  cell   Inf | 2**64
+  code   (Inf) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0211
+  from   inventory:infix:ne
+  cell   2**64 | 2**64
+  code   (2**64) ne (2**64)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0212
+  from   inventory:infix:ne
+  cell   2**64 | 0
+  code   (2**64) ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0213
+  from   inventory:infix:ne
+  cell   2**64 | 1
+  code   (2**64) ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0214
+  from   inventory:infix:ne
+  cell   2**64 | -1
+  code   (2**64) ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0215
+  from   inventory:infix:ne
+  cell   2**64 | 1/2
+  code   (2**64) ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0216
+  from   inventory:infix:ne
+  cell   2**64 | 0e0
+  code   (2**64) ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0217
+  from   inventory:infix:ne
+  cell   2**64 | NaN
+  code   (2**64) ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0218
+  from   inventory:infix:ne
+  cell   2**64 | ""
+  code   (2**64) ne ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0219
+  from   inventory:infix:ne
+  cell   2**64 | "a"
+  code   (2**64) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0220
+  from   inventory:infix:ne
+  cell   2**64 | True
+  code   (2**64) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0221
+  from   inventory:infix:ne
+  cell   2**64 | Any
+  code   (2**64) ne (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0222
+  from   inventory:infix:ne
+  cell   2**64 | (1,2)
+  code   (2**64) ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0223
+  from   inventory:infix:ne
+  cell   2**64 | {a=>1}
+  code   (2**64) ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0224
+  from   inventory:infix:ne
+  cell   2**64 | -0e0
+  code   (2**64) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0225
+  from   inventory:infix:ne
+  cell   2**64 | Inf
+  code   (2**64) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0226
+  from   inventory:infix:ne
+  cell   0 | False
+  code   (0) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0227
+  from   inventory:infix:ne
+  cell   1 | False
+  code   (1) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0228
+  from   inventory:infix:ne
+  cell   -1 | False
+  code   (-1) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0229
+  from   inventory:infix:ne
+  cell   1/2 | False
+  code   (1/2) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0230
+  from   inventory:infix:ne
+  cell   0e0 | False
+  code   (0e0) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0231
+  from   inventory:infix:ne
+  cell   NaN | False
+  code   (NaN) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0232
+  from   inventory:infix:ne
+  cell   "" | False
+  code   ("") ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0233
+  from   inventory:infix:ne
+  cell   "a" | False
+  code   ("a") ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0234
+  from   inventory:infix:ne
+  cell   True | False
+  code   (True) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0235
+  from   inventory:infix:ne
+  cell   Any | False
+  code   (Any) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0236
+  from   inventory:infix:ne
+  cell   (1,2) | False
+  code   ((1,2)) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0237
+  from   inventory:infix:ne
+  cell   {a=>1} | False
+  code   ({a=>1}) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0238
+  from   inventory:infix:ne
+  cell   -0e0 | False
+  code   (-0e0) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0239
+  from   inventory:infix:ne
+  cell   Inf | False
+  code   (Inf) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0240
+  from   inventory:infix:ne
+  cell   2**64 | False
+  code   (2**64) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0241
+  from   inventory:infix:ne
+  cell   False | False
+  code   (False) ne (False)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0242
+  from   inventory:infix:ne
+  cell   False | 0
+  code   (False) ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0243
+  from   inventory:infix:ne
+  cell   False | 1
+  code   (False) ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0244
+  from   inventory:infix:ne
+  cell   False | -1
+  code   (False) ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0245
+  from   inventory:infix:ne
+  cell   False | 1/2
+  code   (False) ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0246
+  from   inventory:infix:ne
+  cell   False | 0e0
+  code   (False) ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0247
+  from   inventory:infix:ne
+  cell   False | NaN
+  code   (False) ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0248
+  from   inventory:infix:ne
+  cell   False | ""
+  code   (False) ne ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0249
+  from   inventory:infix:ne
+  cell   False | "a"
+  code   (False) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0250
+  from   inventory:infix:ne
+  cell   False | True
+  code   (False) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0251
+  from   inventory:infix:ne
+  cell   False | Any
+  code   (False) ne (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0252
+  from   inventory:infix:ne
+  cell   False | (1,2)
+  code   (False) ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0253
+  from   inventory:infix:ne
+  cell   False | {a=>1}
+  code   (False) ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0254
+  from   inventory:infix:ne
+  cell   False | -0e0
+  code   (False) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0255
+  from   inventory:infix:ne
+  cell   False | Inf
+  code   (False) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0256
+  from   inventory:infix:ne
+  cell   False | 2**64
+  code   (False) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0257
+  from   inventory:infix:ne
+  cell   0 | Nil
+  code   (0) ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0258
+  from   inventory:infix:ne
+  cell   1 | Nil
+  code   (1) ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0259
+  from   inventory:infix:ne
+  cell   -1 | Nil
+  code   (-1) ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0260
+  from   inventory:infix:ne
+  cell   1/2 | Nil
+  code   (1/2) ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0261
+  from   inventory:infix:ne
+  cell   0e0 | Nil
+  code   (0e0) ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0262
+  from   inventory:infix:ne
+  cell   NaN | Nil
+  code   (NaN) ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0263
+  from   inventory:infix:ne
+  cell   "" | Nil
+  code   ("") ne (Nil)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0264
+  from   inventory:infix:ne
+  cell   "a" | Nil
+  code   ("a") ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0265
+  from   inventory:infix:ne
+  cell   True | Nil
+  code   (True) ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0266
+  from   inventory:infix:ne
+  cell   Any | Nil
+  code   (Any) ne (Nil)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0267
+  from   inventory:infix:ne
+  cell   (1,2) | Nil
+  code   ((1,2)) ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0268
+  from   inventory:infix:ne
+  cell   {a=>1} | Nil
+  code   ({a=>1}) ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0269
+  from   inventory:infix:ne
+  cell   -0e0 | Nil
+  code   (-0e0) ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0270
+  from   inventory:infix:ne
+  cell   Inf | Nil
+  code   (Inf) ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0271
+  from   inventory:infix:ne
+  cell   2**64 | Nil
+  code   (2**64) ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0272
+  from   inventory:infix:ne
+  cell   False | Nil
+  code   (False) ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0273
+  from   inventory:infix:ne
+  cell   Nil | Nil
+  code   (Nil) ne (Nil)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0274
+  from   inventory:infix:ne
+  cell   Nil | 0
+  code   (Nil) ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0275
+  from   inventory:infix:ne
+  cell   Nil | 1
+  code   (Nil) ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0276
+  from   inventory:infix:ne
+  cell   Nil | -1
+  code   (Nil) ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0277
+  from   inventory:infix:ne
+  cell   Nil | 1/2
+  code   (Nil) ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0278
+  from   inventory:infix:ne
+  cell   Nil | 0e0
+  code   (Nil) ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0279
+  from   inventory:infix:ne
+  cell   Nil | NaN
+  code   (Nil) ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0280
+  from   inventory:infix:ne
+  cell   Nil | ""
+  code   (Nil) ne ("")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0281
+  from   inventory:infix:ne
+  cell   Nil | "a"
+  code   (Nil) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0282
+  from   inventory:infix:ne
+  cell   Nil | True
+  code   (Nil) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0283
+  from   inventory:infix:ne
+  cell   Nil | Any
+  code   (Nil) ne (Any)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0284
+  from   inventory:infix:ne
+  cell   Nil | (1,2)
+  code   (Nil) ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0285
+  from   inventory:infix:ne
+  cell   Nil | {a=>1}
+  code   (Nil) ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0286
+  from   inventory:infix:ne
+  cell   Nil | -0e0
+  code   (Nil) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0287
+  from   inventory:infix:ne
+  cell   Nil | Inf
+  code   (Nil) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0288
+  from   inventory:infix:ne
+  cell   Nil | 2**64
+  code   (Nil) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0289
+  from   inventory:infix:ne
+  cell   Nil | False
+  code   (Nil) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0290
+  from   inventory:infix:ne
+  cell   0 | ()
+  code   (0) ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0291
+  from   inventory:infix:ne
+  cell   1 | ()
+  code   (1) ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0292
+  from   inventory:infix:ne
+  cell   -1 | ()
+  code   (-1) ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0293
+  from   inventory:infix:ne
+  cell   1/2 | ()
+  code   (1/2) ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0294
+  from   inventory:infix:ne
+  cell   0e0 | ()
+  code   (0e0) ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0295
+  from   inventory:infix:ne
+  cell   NaN | ()
+  code   (NaN) ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0296
+  from   inventory:infix:ne
+  cell   "" | ()
+  code   ("") ne (())
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0297
+  from   inventory:infix:ne
+  cell   "a" | ()
+  code   ("a") ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0298
+  from   inventory:infix:ne
+  cell   True | ()
+  code   (True) ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0299
+  from   inventory:infix:ne
+  cell   Any | ()
+  code   (Any) ne (())
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0300
+  from   inventory:infix:ne
+  cell   (1,2) | ()
+  code   ((1,2)) ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0301
+  from   inventory:infix:ne
+  cell   {a=>1} | ()
+  code   ({a=>1}) ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0302
+  from   inventory:infix:ne
+  cell   -0e0 | ()
+  code   (-0e0) ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0303
+  from   inventory:infix:ne
+  cell   Inf | ()
+  code   (Inf) ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0304
+  from   inventory:infix:ne
+  cell   2**64 | ()
+  code   (2**64) ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0305
+  from   inventory:infix:ne
+  cell   False | ()
+  code   (False) ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0306
+  from   inventory:infix:ne
+  cell   Nil | ()
+  code   (Nil) ne (())
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0307
+  from   inventory:infix:ne
+  cell   () | ()
+  code   (()) ne (())
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0308
+  from   inventory:infix:ne
+  cell   () | 0
+  code   (()) ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0309
+  from   inventory:infix:ne
+  cell   () | 1
+  code   (()) ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0310
+  from   inventory:infix:ne
+  cell   () | -1
+  code   (()) ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0311
+  from   inventory:infix:ne
+  cell   () | 1/2
+  code   (()) ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0312
+  from   inventory:infix:ne
+  cell   () | 0e0
+  code   (()) ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0313
+  from   inventory:infix:ne
+  cell   () | NaN
+  code   (()) ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0314
+  from   inventory:infix:ne
+  cell   () | ""
+  code   (()) ne ("")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0315
+  from   inventory:infix:ne
+  cell   () | "a"
+  code   (()) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0316
+  from   inventory:infix:ne
+  cell   () | True
+  code   (()) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0317
+  from   inventory:infix:ne
+  cell   () | Any
+  code   (()) ne (Any)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0318
+  from   inventory:infix:ne
+  cell   () | (1,2)
+  code   (()) ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0319
+  from   inventory:infix:ne
+  cell   () | {a=>1}
+  code   (()) ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0320
+  from   inventory:infix:ne
+  cell   () | -0e0
+  code   (()) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0321
+  from   inventory:infix:ne
+  cell   () | Inf
+  code   (()) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0322
+  from   inventory:infix:ne
+  cell   () | 2**64
+  code   (()) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0323
+  from   inventory:infix:ne
+  cell   () | False
+  code   (()) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0324
+  from   inventory:infix:ne
+  cell   () | Nil
+  code   (()) ne (Nil)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0325
+  from   inventory:infix:ne
+  cell   0 | "0"
+  code   (0) ne ("0")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0326
+  from   inventory:infix:ne
+  cell   1 | "0"
+  code   (1) ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0327
+  from   inventory:infix:ne
+  cell   -1 | "0"
+  code   (-1) ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0328
+  from   inventory:infix:ne
+  cell   1/2 | "0"
+  code   (1/2) ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0329
+  from   inventory:infix:ne
+  cell   0e0 | "0"
+  code   (0e0) ne ("0")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0330
+  from   inventory:infix:ne
+  cell   NaN | "0"
+  code   (NaN) ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0331
+  from   inventory:infix:ne
+  cell   "" | "0"
+  code   ("") ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0332
+  from   inventory:infix:ne
+  cell   "a" | "0"
+  code   ("a") ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0333
+  from   inventory:infix:ne
+  cell   True | "0"
+  code   (True) ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0334
+  from   inventory:infix:ne
+  cell   Any | "0"
+  code   (Any) ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0335
+  from   inventory:infix:ne
+  cell   (1,2) | "0"
+  code   ((1,2)) ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0336
+  from   inventory:infix:ne
+  cell   {a=>1} | "0"
+  code   ({a=>1}) ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0337
+  from   inventory:infix:ne
+  cell   -0e0 | "0"
+  code   (-0e0) ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0338
+  from   inventory:infix:ne
+  cell   Inf | "0"
+  code   (Inf) ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0339
+  from   inventory:infix:ne
+  cell   2**64 | "0"
+  code   (2**64) ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0340
+  from   inventory:infix:ne
+  cell   False | "0"
+  code   (False) ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0341
+  from   inventory:infix:ne
+  cell   Nil | "0"
+  code   (Nil) ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0342
+  from   inventory:infix:ne
+  cell   () | "0"
+  code   (()) ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0343
+  from   inventory:infix:ne
+  cell   "0" | "0"
+  code   ("0") ne ("0")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0344
+  from   inventory:infix:ne
+  cell   "0" | 0
+  code   ("0") ne (0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0345
+  from   inventory:infix:ne
+  cell   "0" | 1
+  code   ("0") ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0346
+  from   inventory:infix:ne
+  cell   "0" | -1
+  code   ("0") ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0347
+  from   inventory:infix:ne
+  cell   "0" | 1/2
+  code   ("0") ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0348
+  from   inventory:infix:ne
+  cell   "0" | 0e0
+  code   ("0") ne (0e0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0349
+  from   inventory:infix:ne
+  cell   "0" | NaN
+  code   ("0") ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0350
+  from   inventory:infix:ne
+  cell   "0" | ""
+  code   ("0") ne ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0351
+  from   inventory:infix:ne
+  cell   "0" | "a"
+  code   ("0") ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0352
+  from   inventory:infix:ne
+  cell   "0" | True
+  code   ("0") ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0353
+  from   inventory:infix:ne
+  cell   "0" | Any
+  code   ("0") ne (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0354
+  from   inventory:infix:ne
+  cell   "0" | (1,2)
+  code   ("0") ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0355
+  from   inventory:infix:ne
+  cell   "0" | {a=>1}
+  code   ("0") ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0356
+  from   inventory:infix:ne
+  cell   "0" | -0e0
+  code   ("0") ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0357
+  from   inventory:infix:ne
+  cell   "0" | Inf
+  code   ("0") ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0358
+  from   inventory:infix:ne
+  cell   "0" | 2**64
+  code   ("0") ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0359
+  from   inventory:infix:ne
+  cell   "0" | False
+  code   ("0") ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0360
+  from   inventory:infix:ne
+  cell   "0" | Nil
+  code   ("0") ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0361
+  from   inventory:infix:ne
+  cell   "0" | ()
+  code   ("0") ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0362
+  from   inventory:infix:ne
+  cell   0 | (1..3)
+  code   (0) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0363
+  from   inventory:infix:ne
+  cell   1 | (1..3)
+  code   (1) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0364
+  from   inventory:infix:ne
+  cell   -1 | (1..3)
+  code   (-1) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0365
+  from   inventory:infix:ne
+  cell   1/2 | (1..3)
+  code   (1/2) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0366
+  from   inventory:infix:ne
+  cell   0e0 | (1..3)
+  code   (0e0) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0367
+  from   inventory:infix:ne
+  cell   NaN | (1..3)
+  code   (NaN) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0368
+  from   inventory:infix:ne
+  cell   "" | (1..3)
+  code   ("") ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0369
+  from   inventory:infix:ne
+  cell   "a" | (1..3)
+  code   ("a") ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0370
+  from   inventory:infix:ne
+  cell   True | (1..3)
+  code   (True) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0371
+  from   inventory:infix:ne
+  cell   Any | (1..3)
+  code   (Any) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0372
+  from   inventory:infix:ne
+  cell   (1,2) | (1..3)
+  code   ((1,2)) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0373
+  from   inventory:infix:ne
+  cell   {a=>1} | (1..3)
+  code   ({a=>1}) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0374
+  from   inventory:infix:ne
+  cell   -0e0 | (1..3)
+  code   (-0e0) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0375
+  from   inventory:infix:ne
+  cell   Inf | (1..3)
+  code   (Inf) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0376
+  from   inventory:infix:ne
+  cell   2**64 | (1..3)
+  code   (2**64) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0377
+  from   inventory:infix:ne
+  cell   False | (1..3)
+  code   (False) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0378
+  from   inventory:infix:ne
+  cell   Nil | (1..3)
+  code   (Nil) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0379
+  from   inventory:infix:ne
+  cell   () | (1..3)
+  code   (()) ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0380
+  from   inventory:infix:ne
+  cell   "0" | (1..3)
+  code   ("0") ne ((1..3))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0381
+  from   inventory:infix:ne
+  cell   (1..3) | (1..3)
+  code   ((1..3)) ne ((1..3))
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::False
+
+- id     0382
+  from   inventory:infix:ne
+  cell   (1..3) | 0
+  code   ((1..3)) ne (0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0383
+  from   inventory:infix:ne
+  cell   (1..3) | 1
+  code   ((1..3)) ne (1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0384
+  from   inventory:infix:ne
+  cell   (1..3) | -1
+  code   ((1..3)) ne (-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0385
+  from   inventory:infix:ne
+  cell   (1..3) | 1/2
+  code   ((1..3)) ne (1/2)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0386
+  from   inventory:infix:ne
+  cell   (1..3) | 0e0
+  code   ((1..3)) ne (0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0387
+  from   inventory:infix:ne
+  cell   (1..3) | NaN
+  code   ((1..3)) ne (NaN)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0388
+  from   inventory:infix:ne
+  cell   (1..3) | ""
+  code   ((1..3)) ne ("")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0389
+  from   inventory:infix:ne
+  cell   (1..3) | "a"
+  code   ((1..3)) ne ("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0390
+  from   inventory:infix:ne
+  cell   (1..3) | True
+  code   ((1..3)) ne (True)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0391
+  from   inventory:infix:ne
+  cell   (1..3) | Any
+  code   ((1..3)) ne (Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0392
+  from   inventory:infix:ne
+  cell   (1..3) | (1,2)
+  code   ((1..3)) ne ((1,2))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0393
+  from   inventory:infix:ne
+  cell   (1..3) | {a=>1}
+  code   ((1..3)) ne ({a=>1})
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0394
+  from   inventory:infix:ne
+  cell   (1..3) | -0e0
+  code   ((1..3)) ne (-0e0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0395
+  from   inventory:infix:ne
+  cell   (1..3) | Inf
+  code   ((1..3)) ne (Inf)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0396
+  from   inventory:infix:ne
+  cell   (1..3) | 2**64
+  code   ((1..3)) ne (2**64)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0397
+  from   inventory:infix:ne
+  cell   (1..3) | False
+  code   ((1..3)) ne (False)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0398
+  from   inventory:infix:ne
+  cell   (1..3) | Nil
+  code   ((1..3)) ne (Nil)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0399
+  from   inventory:infix:ne
+  cell   (1..3) | ()
+  code   ((1..3)) ne (())
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0400
+  from   inventory:infix:ne
+  cell   (1..3) | "0"
+  code   ((1..3)) ne ("0")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True

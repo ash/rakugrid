@@ -22,8 +22,15 @@ my $GUARD = 0;
 # Deliberately mixed rather than numeric: an operator's own type domain is
 # already covered by gen/ladder.raku, and what an inventory-wide sweep adds is
 # what happens ACROSS the type boundary, where the coercion bugs live.
+# APPEND ONLY. Ids are derived from a cell's position in the cross, and the
+# cross is enumerated in SHELLS — all pairs whose highest ladder index is 0,
+# then 1, then 2 — precisely so that adding values to the end of this list adds
+# new shells without moving any existing cell. Row-major order would renumber
+# everything on every widening, and an id that moves is not an id.
 constant @LADDER =
-    '0', '1', '-1', '1/2', '0e0', 'NaN', '""', '"a"', 'True', 'Any', '(1,2)', '{a=>1}';
+    '0', '1', '-1', '1/2', '0e0', 'NaN', '""', '"a"', 'True', 'Any', '(1,2)', '{a=>1}',
+    # --- appended 2026-08-16: the corners the first twelve did not reach ------
+    '-0e0', 'Inf', '2**64', 'False', 'Nil', '()', '"0"', '(1..3)';
 
 # Operators whose result depends on reaching an endpoint, and which therefore do
 # not terminate for some perfectly ordinary operands: `0e0 ... NaN` never
@@ -278,9 +285,15 @@ for @wanted -> %o {
     my $sym = %o<sym>.trim;
     my @c;
     if %o<cat> eq 'infix' {
-        for @LADDER -> $a {
-            for @LADDER -> $b {
-                @c.push: { a => $a, b => $b, expr => "($a) $sym ($b)" };
+        # shell order: every pair whose highest index is 0, then 1, then 2 …
+        for ^@LADDER.elems -> $shell {
+            for ^($shell + 1) -> $i {
+                @c.push: { a => @LADDER[$i], b => @LADDER[$shell],
+                           expr => "(@LADDER[$i]) $sym (@LADDER[$shell])" };
+            }
+            for ^$shell -> $j {
+                @c.push: { a => @LADDER[$shell], b => @LADDER[$j],
+                           expr => "(@LADDER[$shell]) $sym (@LADDER[$j])" };
             }
         }
     }
