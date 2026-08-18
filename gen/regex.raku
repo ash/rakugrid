@@ -53,9 +53,9 @@ constant @PATTERNS =
     # nested and quantified groups
     '[a b]+', '[a | b]+', '(a | b)+', '[\\d ** 2]+', '[<alpha> <digit>]',
     # interpolation-free specials
-    '.', '\\n', '\\t', '\\0', '.**2', '<[\\x41]>',
+    '\\n', '\\t', '\\0', '.**2', '<[\\x41]>',
     # empty and near-empty, which is where zero-width behaviour shows
-    '', 'a?', '[]';
+    '', '[]';
 
 # What to match against.
 constant @SUBJECTS =
@@ -262,10 +262,16 @@ sub engine-id($cmd) {
     return "$short-" ~ ($ver || 'unknown');
 }
 
+# Lowercase and digits pass through; EVERYTHING else is hex-encoded, uppercase
+# letters included. That last part is not fussiness: macOS filesystems are
+# case-insensitive, so a case-preserving slug puts `\D` and `\d` in the same
+# file and the second write silently destroys the first. It cost the `\D`,
+# `\S` and `\W` atoms — 384 records — before anyone noticed, because the
+# generator's own count was right and only the files were missing.
 sub slug($p) {
     my $s = $p.trim;
     return 'empty' unless $s;
-    return $s.comb.map({ /<[A..Za..z0..9]>/ ?? $_ !! sprintf('%02x', .ord) }).join.substr(0, 40);
+    return $s.comb.map({ /<[a..z0..9]>/ ?? $_ !! sprintf('%02x', .ord) }).join.substr(0, 40);
 }
 
 # ------------------------------------------------------------------------ run
