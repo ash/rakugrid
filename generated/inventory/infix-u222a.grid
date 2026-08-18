@@ -3,12 +3,13 @@ source   generated
 gen      gen/operators.raku
 from-inventory infix ∪
 ladder   mixed
-axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
-cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
 
 - id     0001
   from   inventory:infix:∪
   cell   0 | 0
+  level  0
   code   (0) ∪ (0)
   is     Set.new(0)
   type   Set
@@ -18,6 +19,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0002
   from   inventory:infix:∪
   cell   0 | 1
+  level  1
   code   (0) ∪ (1)
   is     Set.new(1,0)
   type   Set
@@ -27,6 +29,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0003
   from   inventory:infix:∪
   cell   1 | 1
+  level  1
   code   (1) ∪ (1)
   is     Set.new(1)
   type   Set
@@ -36,6 +39,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0004
   from   inventory:infix:∪
   cell   1 | 0
+  level  1
   code   (1) ∪ (0)
   is     Set.new(1,0)
   type   Set
@@ -48,6 +52,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0005
   from   inventory:infix:∪
   cell   0 | -1
+  level  1
   code   (0) ∪ (-1)
   is     Set.new(0,-1)
   type   Set
@@ -57,6 +62,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0006
   from   inventory:infix:∪
   cell   1 | -1
+  level  1
   code   (1) ∪ (-1)
   is     Set.new(1,-1)
   type   Set
@@ -69,6 +75,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0007
   from   inventory:infix:∪
   cell   -1 | -1
+  level  1
   code   (-1) ∪ (-1)
   is     Set.new(-1)
   type   Set
@@ -78,6 +85,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0008
   from   inventory:infix:∪
   cell   -1 | 0
+  level  1
   code   (-1) ∪ (0)
   is     Set.new(0,-1)
   type   Set
@@ -90,6 +98,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0009
   from   inventory:infix:∪
   cell   -1 | 1
+  level  1
   code   (-1) ∪ (1)
   is     Set.new(-1,1)
   type   Set
@@ -99,6 +108,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0010
   from   inventory:infix:∪
   cell   0 | 1/2
+  level  1
   code   (0) ∪ (1/2)
   is     Set.new(0.5,0)
   type   Set
@@ -111,6 +121,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0011
   from   inventory:infix:∪
   cell   1 | 1/2
+  level  1
   code   (1) ∪ (1/2)
   is     Set.new(0.5,1)
   type   Set
@@ -120,6 +131,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0012
   from   inventory:infix:∪
   cell   -1 | 1/2
+  level  1
   code   (-1) ∪ (1/2)
   is     Set.new(0.5,-1)
   type   Set
@@ -129,6 +141,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0013
   from   inventory:infix:∪
   cell   1/2 | 1/2
+  level  1
   code   (1/2) ∪ (1/2)
   is     Set.new(0.5)
   type   Set
@@ -138,6 +151,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0014
   from   inventory:infix:∪
   cell   1/2 | 0
+  level  1
   code   (1/2) ∪ (0)
   is     Set.new(0.5,0)
   type   Set
@@ -147,6 +161,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0015
   from   inventory:infix:∪
   cell   1/2 | 1
+  level  1
   code   (1/2) ∪ (1)
   is     Set.new(0.5,1)
   type   Set
@@ -159,6 +174,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0016
   from   inventory:infix:∪
   cell   1/2 | -1
+  level  1
   code   (1/2) ∪ (-1)
   is     Set.new(-1,0.5)
   type   Set
@@ -168,6 +184,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0017
   from   inventory:infix:∪
   cell   0 | 0e0
+  level  2
   code   (0) ∪ (0e0)
   is     Set.new(0,0e0)
   type   Set
@@ -177,6 +194,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0018
   from   inventory:infix:∪
   cell   1 | 0e0
+  level  2
   code   (1) ∪ (0e0)
   is     Set.new(1,0e0)
   type   Set
@@ -189,6 +207,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0019
   from   inventory:infix:∪
   cell   -1 | 0e0
+  level  2
   code   (-1) ∪ (0e0)
   is     Set.new(-1,0e0)
   type   Set
@@ -201,6 +220,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0020
   from   inventory:infix:∪
   cell   1/2 | 0e0
+  level  2
   code   (1/2) ∪ (0e0)
   is     Set.new(0e0,0.5)
   type   Set
@@ -213,6 +233,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0021
   from   inventory:infix:∪
   cell   0e0 | 0e0
+  level  2
   code   (0e0) ∪ (0e0)
   is     Set.new(0e0)
   type   Set
@@ -222,6 +243,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0022
   from   inventory:infix:∪
   cell   0e0 | 0
+  level  2
   code   (0e0) ∪ (0)
   is     Set.new(0,0e0)
   type   Set
@@ -231,6 +253,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0023
   from   inventory:infix:∪
   cell   0e0 | 1
+  level  2
   code   (0e0) ∪ (1)
   is     Set.new(1,0e0)
   type   Set
@@ -243,6 +266,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0024
   from   inventory:infix:∪
   cell   0e0 | -1
+  level  2
   code   (0e0) ∪ (-1)
   is     Set.new(-1,0e0)
   type   Set
@@ -252,6 +276,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0025
   from   inventory:infix:∪
   cell   0e0 | 1/2
+  level  2
   code   (0e0) ∪ (1/2)
   is     Set.new(0.5,0e0)
   type   Set
@@ -261,6 +286,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0026
   from   inventory:infix:∪
   cell   0 | NaN
+  level  2
   code   (0) ∪ (NaN)
   is     Set.new(NaN,0)
   type   Set
@@ -273,6 +299,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0027
   from   inventory:infix:∪
   cell   1 | NaN
+  level  2
   code   (1) ∪ (NaN)
   is     Set.new(1,NaN)
   type   Set
@@ -285,6 +312,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0028
   from   inventory:infix:∪
   cell   -1 | NaN
+  level  2
   code   (-1) ∪ (NaN)
   is     Set.new(NaN,-1)
   type   Set
@@ -294,6 +322,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0029
   from   inventory:infix:∪
   cell   1/2 | NaN
+  level  2
   code   (1/2) ∪ (NaN)
   is     Set.new(NaN,0.5)
   type   Set
@@ -306,6 +335,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0030
   from   inventory:infix:∪
   cell   0e0 | NaN
+  level  2
   code   (0e0) ∪ (NaN)
   is     Set.new(NaN,0e0)
   type   Set
@@ -315,6 +345,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0031
   from   inventory:infix:∪
   cell   NaN | NaN
+  level  2
   code   (NaN) ∪ (NaN)
   is     Set.new(NaN)
   type   Set
@@ -324,6 +355,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0032
   from   inventory:infix:∪
   cell   NaN | 0
+  level  2
   code   (NaN) ∪ (0)
   is     Set.new(0,NaN)
   type   Set
@@ -333,6 +365,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0033
   from   inventory:infix:∪
   cell   NaN | 1
+  level  2
   code   (NaN) ∪ (1)
   is     Set.new(1,NaN)
   type   Set
@@ -345,6 +378,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0034
   from   inventory:infix:∪
   cell   NaN | -1
+  level  2
   code   (NaN) ∪ (-1)
   is     Set.new(NaN,-1)
   type   Set
@@ -354,6 +388,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0035
   from   inventory:infix:∪
   cell   NaN | 1/2
+  level  2
   code   (NaN) ∪ (1/2)
   is     Set.new(0.5,NaN)
   type   Set
@@ -363,6 +398,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0036
   from   inventory:infix:∪
   cell   NaN | 0e0
+  level  2
   code   (NaN) ∪ (0e0)
   is     Set.new(NaN,0e0)
   type   Set
@@ -375,6 +411,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0037
   from   inventory:infix:∪
   cell   0 | ""
+  level  2
   code   (0) ∪ ("")
   is     Set.new(0,"")
   type   Set
@@ -387,6 +424,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0038
   from   inventory:infix:∪
   cell   1 | ""
+  level  2
   code   (1) ∪ ("")
   is     Set.new("",1)
   type   Set
@@ -396,6 +434,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0039
   from   inventory:infix:∪
   cell   -1 | ""
+  level  2
   code   (-1) ∪ ("")
   is     Set.new(-1,"")
   type   Set
@@ -405,6 +444,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0040
   from   inventory:infix:∪
   cell   1/2 | ""
+  level  2
   code   (1/2) ∪ ("")
   is     Set.new(0.5,"")
   type   Set
@@ -417,6 +457,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0041
   from   inventory:infix:∪
   cell   0e0 | ""
+  level  2
   code   (0e0) ∪ ("")
   is     Set.new("",0e0)
   type   Set
@@ -429,6 +470,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0042
   from   inventory:infix:∪
   cell   NaN | ""
+  level  2
   code   (NaN) ∪ ("")
   is     Set.new("",NaN)
   type   Set
@@ -438,6 +480,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0043
   from   inventory:infix:∪
   cell   "" | ""
+  level  2
   code   ("") ∪ ("")
   is     Set.new("")
   type   Set
@@ -447,6 +490,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0044
   from   inventory:infix:∪
   cell   "" | 0
+  level  2
   code   ("") ∪ (0)
   is     Set.new(0,"")
   type   Set
@@ -456,6 +500,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0045
   from   inventory:infix:∪
   cell   "" | 1
+  level  2
   code   ("") ∪ (1)
   is     Set.new("",1)
   type   Set
@@ -468,6 +513,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0046
   from   inventory:infix:∪
   cell   "" | -1
+  level  2
   code   ("") ∪ (-1)
   is     Set.new(-1,"")
   type   Set
@@ -480,6 +526,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0047
   from   inventory:infix:∪
   cell   "" | 1/2
+  level  2
   code   ("") ∪ (1/2)
   is     Set.new(0.5,"")
   type   Set
@@ -489,6 +536,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0048
   from   inventory:infix:∪
   cell   "" | 0e0
+  level  2
   code   ("") ∪ (0e0)
   is     Set.new(0e0,"")
   type   Set
@@ -498,6 +546,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0049
   from   inventory:infix:∪
   cell   "" | NaN
+  level  2
   code   ("") ∪ (NaN)
   is     Set.new("",NaN)
   type   Set
@@ -510,6 +559,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0050
   from   inventory:infix:∪
   cell   0 | "a"
+  level  2
   code   (0) ∪ ("a")
   is     Set.new(0,"a")
   type   Set
@@ -522,6 +572,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0051
   from   inventory:infix:∪
   cell   1 | "a"
+  level  2
   code   (1) ∪ ("a")
   is     Set.new("a",1)
   type   Set
@@ -531,6 +582,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0052
   from   inventory:infix:∪
   cell   -1 | "a"
+  level  2
   code   (-1) ∪ ("a")
   is     Set.new(-1,"a")
   type   Set
@@ -540,6 +592,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0053
   from   inventory:infix:∪
   cell   1/2 | "a"
+  level  2
   code   (1/2) ∪ ("a")
   is     Set.new(0.5,"a")
   type   Set
@@ -549,6 +602,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0054
   from   inventory:infix:∪
   cell   0e0 | "a"
+  level  2
   code   (0e0) ∪ ("a")
   is     Set.new(0e0,"a")
   type   Set
@@ -558,6 +612,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0055
   from   inventory:infix:∪
   cell   NaN | "a"
+  level  2
   code   (NaN) ∪ ("a")
   is     Set.new("a",NaN)
   type   Set
@@ -570,6 +625,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0056
   from   inventory:infix:∪
   cell   "" | "a"
+  level  2
   code   ("") ∪ ("a")
   is     Set.new("a","")
   type   Set
@@ -582,6 +638,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0057
   from   inventory:infix:∪
   cell   "a" | "a"
+  level  2
   code   ("a") ∪ ("a")
   is     Set.new("a")
   type   Set
@@ -591,6 +648,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0058
   from   inventory:infix:∪
   cell   "a" | 0
+  level  2
   code   ("a") ∪ (0)
   is     Set.new("a",0)
   type   Set
@@ -603,6 +661,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0059
   from   inventory:infix:∪
   cell   "a" | 1
+  level  2
   code   ("a") ∪ (1)
   is     Set.new("a",1)
   type   Set
@@ -615,6 +674,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0060
   from   inventory:infix:∪
   cell   "a" | -1
+  level  2
   code   ("a") ∪ (-1)
   is     Set.new("a",-1)
   type   Set
@@ -624,6 +684,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0061
   from   inventory:infix:∪
   cell   "a" | 1/2
+  level  2
   code   ("a") ∪ (1/2)
   is     Set.new(0.5,"a")
   type   Set
@@ -636,6 +697,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0062
   from   inventory:infix:∪
   cell   "a" | 0e0
+  level  2
   code   ("a") ∪ (0e0)
   is     Set.new(0e0,"a")
   type   Set
@@ -645,6 +707,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0063
   from   inventory:infix:∪
   cell   "a" | NaN
+  level  2
   code   ("a") ∪ (NaN)
   is     Set.new(NaN,"a")
   type   Set
@@ -657,6 +720,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0064
   from   inventory:infix:∪
   cell   "a" | ""
+  level  2
   code   ("a") ∪ ("")
   is     Set.new("a","")
   type   Set
@@ -666,6 +730,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0065
   from   inventory:infix:∪
   cell   0 | True
+  level  2
   code   (0) ∪ (True)
   is     Set.new(0,Bool::True)
   type   Set
@@ -675,6 +740,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0066
   from   inventory:infix:∪
   cell   1 | True
+  level  2
   code   (1) ∪ (True)
   is     Set.new(1,Bool::True)
   type   Set
@@ -687,6 +753,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0067
   from   inventory:infix:∪
   cell   -1 | True
+  level  2
   code   (-1) ∪ (True)
   is     Set.new(-1,Bool::True)
   type   Set
@@ -696,6 +763,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0068
   from   inventory:infix:∪
   cell   1/2 | True
+  level  2
   code   (1/2) ∪ (True)
   is     Set.new(0.5,Bool::True)
   type   Set
@@ -705,6 +773,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0069
   from   inventory:infix:∪
   cell   0e0 | True
+  level  2
   code   (0e0) ∪ (True)
   is     Set.new(Bool::True,0e0)
   type   Set
@@ -717,6 +786,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0070
   from   inventory:infix:∪
   cell   NaN | True
+  level  2
   code   (NaN) ∪ (True)
   is     Set.new(NaN,Bool::True)
   type   Set
@@ -726,6 +796,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0071
   from   inventory:infix:∪
   cell   "" | True
+  level  2
   code   ("") ∪ (True)
   is     Set.new("",Bool::True)
   type   Set
@@ -738,6 +809,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0072
   from   inventory:infix:∪
   cell   "a" | True
+  level  2
   code   ("a") ∪ (True)
   is     Set.new("a",Bool::True)
   type   Set
@@ -750,6 +822,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0073
   from   inventory:infix:∪
   cell   True | True
+  level  2
   code   (True) ∪ (True)
   is     Set.new(Bool::True)
   type   Set
@@ -759,6 +832,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0074
   from   inventory:infix:∪
   cell   True | 0
+  level  2
   code   (True) ∪ (0)
   is     Set.new(Bool::True,0)
   type   Set
@@ -771,6 +845,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0075
   from   inventory:infix:∪
   cell   True | 1
+  level  2
   code   (True) ∪ (1)
   is     Set.new(1,Bool::True)
   type   Set
@@ -783,6 +858,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0076
   from   inventory:infix:∪
   cell   True | -1
+  level  2
   code   (True) ∪ (-1)
   is     Set.new(Bool::True,-1)
   type   Set
@@ -795,6 +871,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0077
   from   inventory:infix:∪
   cell   True | 1/2
+  level  2
   code   (True) ∪ (1/2)
   is     Set.new(0.5,Bool::True)
   type   Set
@@ -807,6 +884,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0078
   from   inventory:infix:∪
   cell   True | 0e0
+  level  2
   code   (True) ∪ (0e0)
   is     Set.new(Bool::True,0e0)
   type   Set
@@ -816,6 +894,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0079
   from   inventory:infix:∪
   cell   True | NaN
+  level  2
   code   (True) ∪ (NaN)
   is     Set.new(NaN,Bool::True)
   type   Set
@@ -825,6 +904,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0080
   from   inventory:infix:∪
   cell   True | ""
+  level  2
   code   (True) ∪ ("")
   is     Set.new(Bool::True,"")
   type   Set
@@ -834,6 +914,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0081
   from   inventory:infix:∪
   cell   True | "a"
+  level  2
   code   (True) ∪ ("a")
   is     Set.new(Bool::True,"a")
   type   Set
@@ -846,6 +927,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0082
   from   inventory:infix:∪
   cell   0 | Any
+  level  2
   code   (0) ∪ (Any)
   is     Set.new(0,Any)
   type   Set
@@ -858,6 +940,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0083
   from   inventory:infix:∪
   cell   1 | Any
+  level  2
   code   (1) ∪ (Any)
   is     Set.new(Any,1)
   type   Set
@@ -867,6 +950,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0084
   from   inventory:infix:∪
   cell   -1 | Any
+  level  2
   code   (-1) ∪ (Any)
   is     Set.new(-1,Any)
   type   Set
@@ -879,6 +963,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0085
   from   inventory:infix:∪
   cell   1/2 | Any
+  level  2
   code   (1/2) ∪ (Any)
   is     Set.new(0.5,Any)
   type   Set
@@ -891,6 +976,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0086
   from   inventory:infix:∪
   cell   0e0 | Any
+  level  2
   code   (0e0) ∪ (Any)
   is     Set.new(Any,0e0)
   type   Set
@@ -900,6 +986,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0087
   from   inventory:infix:∪
   cell   NaN | Any
+  level  2
   code   (NaN) ∪ (Any)
   is     Set.new(Any,NaN)
   type   Set
@@ -909,6 +996,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0088
   from   inventory:infix:∪
   cell   "" | Any
+  level  2
   code   ("") ∪ (Any)
   is     Set.new("",Any)
   type   Set
@@ -921,6 +1009,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0089
   from   inventory:infix:∪
   cell   "a" | Any
+  level  2
   code   ("a") ∪ (Any)
   is     Set.new(Any,"a")
   type   Set
@@ -930,6 +1019,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0090
   from   inventory:infix:∪
   cell   True | Any
+  level  2
   code   (True) ∪ (Any)
   is     Set.new(Bool::True,Any)
   type   Set
@@ -942,6 +1032,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0091
   from   inventory:infix:∪
   cell   Any | Any
+  level  2
   code   (Any) ∪ (Any)
   is     Set.new(Any)
   type   Set
@@ -951,6 +1042,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0092
   from   inventory:infix:∪
   cell   Any | 0
+  level  2
   code   (Any) ∪ (0)
   is     Set.new(0,Any)
   type   Set
@@ -963,6 +1055,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0093
   from   inventory:infix:∪
   cell   Any | 1
+  level  2
   code   (Any) ∪ (1)
   is     Set.new(Any,1)
   type   Set
@@ -972,6 +1065,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0094
   from   inventory:infix:∪
   cell   Any | -1
+  level  2
   code   (Any) ∪ (-1)
   is     Set.new(-1,Any)
   type   Set
@@ -984,6 +1078,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0095
   from   inventory:infix:∪
   cell   Any | 1/2
+  level  2
   code   (Any) ∪ (1/2)
   is     Set.new(Any,0.5)
   type   Set
@@ -996,6 +1091,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0096
   from   inventory:infix:∪
   cell   Any | 0e0
+  level  2
   code   (Any) ∪ (0e0)
   is     Set.new(0e0,Any)
   type   Set
@@ -1005,6 +1101,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0097
   from   inventory:infix:∪
   cell   Any | NaN
+  level  2
   code   (Any) ∪ (NaN)
   is     Set.new(NaN,Any)
   type   Set
@@ -1017,6 +1114,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0098
   from   inventory:infix:∪
   cell   Any | ""
+  level  2
   code   (Any) ∪ ("")
   is     Set.new("",Any)
   type   Set
@@ -1029,6 +1127,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0099
   from   inventory:infix:∪
   cell   Any | "a"
+  level  2
   code   (Any) ∪ ("a")
   is     Set.new("a",Any)
   type   Set
@@ -1041,6 +1140,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0100
   from   inventory:infix:∪
   cell   Any | True
+  level  2
   code   (Any) ∪ (True)
   is     Set.new(Bool::True,Any)
   type   Set
@@ -1050,6 +1150,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0101
   from   inventory:infix:∪
   cell   0 | (1,2)
+  level  3
   code   (0) ∪ ((1,2))
   is     Set.new(0,2,1)
   type   Set
@@ -1062,6 +1163,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0102
   from   inventory:infix:∪
   cell   1 | (1,2)
+  level  3
   code   (1) ∪ ((1,2))
   is     Set.new(2,1)
   type   Set
@@ -1071,6 +1173,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0103
   from   inventory:infix:∪
   cell   -1 | (1,2)
+  level  3
   code   (-1) ∪ ((1,2))
   is     Set.new(1,2,-1)
   type   Set
@@ -1083,6 +1186,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0104
   from   inventory:infix:∪
   cell   1/2 | (1,2)
+  level  3
   code   (1/2) ∪ ((1,2))
   is     Set.new(1,2,0.5)
   type   Set
@@ -1095,6 +1199,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0105
   from   inventory:infix:∪
   cell   0e0 | (1,2)
+  level  3
   code   (0e0) ∪ ((1,2))
   is     Set.new(1,0e0,2)
   type   Set
@@ -1107,6 +1212,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0106
   from   inventory:infix:∪
   cell   NaN | (1,2)
+  level  3
   code   (NaN) ∪ ((1,2))
   is     Set.new(1,NaN,2)
   type   Set
@@ -1119,6 +1225,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0107
   from   inventory:infix:∪
   cell   "" | (1,2)
+  level  3
   code   ("") ∪ ((1,2))
   is     Set.new(1,2,"")
   type   Set
@@ -1131,6 +1238,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0108
   from   inventory:infix:∪
   cell   "a" | (1,2)
+  level  3
   code   ("a") ∪ ((1,2))
   is     Set.new(2,"a",1)
   type   Set
@@ -1143,6 +1251,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0109
   from   inventory:infix:∪
   cell   True | (1,2)
+  level  3
   code   (True) ∪ ((1,2))
   is     Set.new(1,Bool::True,2)
   type   Set
@@ -1152,6 +1261,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0110
   from   inventory:infix:∪
   cell   Any | (1,2)
+  level  3
   code   (Any) ∪ ((1,2))
   is     Set.new(1,Any,2)
   type   Set
@@ -1164,6 +1274,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0111
   from   inventory:infix:∪
   cell   (1,2) | (1,2)
+  level  3
   code   ((1,2)) ∪ ((1,2))
   is     Set.new(2,1)
   type   Set
@@ -1176,6 +1287,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0112
   from   inventory:infix:∪
   cell   (1,2) | 0
+  level  3
   code   ((1,2)) ∪ (0)
   is     Set.new(1,2,0)
   type   Set
@@ -1188,6 +1300,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0113
   from   inventory:infix:∪
   cell   (1,2) | 1
+  level  3
   code   ((1,2)) ∪ (1)
   is     Set.new(2,1)
   type   Set
@@ -1200,6 +1313,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0114
   from   inventory:infix:∪
   cell   (1,2) | -1
+  level  3
   code   ((1,2)) ∪ (-1)
   is     Set.new(1,-1,2)
   type   Set
@@ -1212,6 +1326,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0115
   from   inventory:infix:∪
   cell   (1,2) | 1/2
+  level  3
   code   ((1,2)) ∪ (1/2)
   is     Set.new(0.5,2,1)
   type   Set
@@ -1224,6 +1339,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0116
   from   inventory:infix:∪
   cell   (1,2) | 0e0
+  level  3
   code   ((1,2)) ∪ (0e0)
   is     Set.new(0e0,2,1)
   type   Set
@@ -1236,6 +1352,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0117
   from   inventory:infix:∪
   cell   (1,2) | NaN
+  level  3
   code   ((1,2)) ∪ (NaN)
   is     Set.new(NaN,1,2)
   type   Set
@@ -1248,6 +1365,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0118
   from   inventory:infix:∪
   cell   (1,2) | ""
+  level  3
   code   ((1,2)) ∪ ("")
   is     Set.new(1,2,"")
   type   Set
@@ -1260,6 +1378,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0119
   from   inventory:infix:∪
   cell   (1,2) | "a"
+  level  3
   code   ((1,2)) ∪ ("a")
   is     Set.new("a",1,2)
   type   Set
@@ -1269,6 +1388,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0120
   from   inventory:infix:∪
   cell   (1,2) | True
+  level  3
   code   ((1,2)) ∪ (True)
   is     Set.new(1,Bool::True,2)
   type   Set
@@ -1281,6 +1401,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0121
   from   inventory:infix:∪
   cell   (1,2) | Any
+  level  3
   code   ((1,2)) ∪ (Any)
   is     Set.new(Any,2,1)
   type   Set
@@ -1293,6 +1414,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0122
   from   inventory:infix:∪
   cell   0 | {a=>1}
+  level  3
   code   (0) ∪ ({a=>1})
   is     Set.new("a",0)
   type   Set
@@ -1302,6 +1424,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0123
   from   inventory:infix:∪
   cell   1 | {a=>1}
+  level  3
   code   (1) ∪ ({a=>1})
   is     Set.new("a",1)
   type   Set
@@ -1311,6 +1434,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0124
   from   inventory:infix:∪
   cell   -1 | {a=>1}
+  level  3
   code   (-1) ∪ ({a=>1})
   is     Set.new("a",-1)
   type   Set
@@ -1323,6 +1447,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0125
   from   inventory:infix:∪
   cell   1/2 | {a=>1}
+  level  3
   code   (1/2) ∪ ({a=>1})
   is     Set.new("a",0.5)
   type   Set
@@ -1335,6 +1460,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0126
   from   inventory:infix:∪
   cell   0e0 | {a=>1}
+  level  3
   code   (0e0) ∪ ({a=>1})
   is     Set.new("a",0e0)
   type   Set
@@ -1344,6 +1470,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0127
   from   inventory:infix:∪
   cell   NaN | {a=>1}
+  level  3
   code   (NaN) ∪ ({a=>1})
   is     Set.new(NaN,"a")
   type   Set
@@ -1353,6 +1480,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0128
   from   inventory:infix:∪
   cell   "" | {a=>1}
+  level  3
   code   ("") ∪ ({a=>1})
   is     Set.new("","a")
   type   Set
@@ -1365,6 +1493,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0129
   from   inventory:infix:∪
   cell   "a" | {a=>1}
+  level  3
   code   ("a") ∪ ({a=>1})
   is     Set.new("a")
   type   Set
@@ -1374,6 +1503,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0130
   from   inventory:infix:∪
   cell   True | {a=>1}
+  level  3
   code   (True) ∪ ({a=>1})
   is     Set.new("a",Bool::True)
   type   Set
@@ -1383,6 +1513,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0131
   from   inventory:infix:∪
   cell   Any | {a=>1}
+  level  3
   code   (Any) ∪ ({a=>1})
   is     Set.new("a",Any)
   type   Set
@@ -1395,6 +1526,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0132
   from   inventory:infix:∪
   cell   (1,2) | {a=>1}
+  level  3
   code   ((1,2)) ∪ ({a=>1})
   is     Set.new("a",2,1)
   type   Set
@@ -1407,6 +1539,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0133
   from   inventory:infix:∪
   cell   {a=>1} | {a=>1}
+  level  3
   code   ({a=>1}) ∪ ({a=>1})
   is     Set.new("a")
   type   Set
@@ -1416,6 +1549,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0134
   from   inventory:infix:∪
   cell   {a=>1} | 0
+  level  3
   code   ({a=>1}) ∪ (0)
   is     Set.new(0,"a")
   type   Set
@@ -1425,6 +1559,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0135
   from   inventory:infix:∪
   cell   {a=>1} | 1
+  level  3
   code   ({a=>1}) ∪ (1)
   is     Set.new(1,"a")
   type   Set
@@ -1434,6 +1569,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0136
   from   inventory:infix:∪
   cell   {a=>1} | -1
+  level  3
   code   ({a=>1}) ∪ (-1)
   is     Set.new(-1,"a")
   type   Set
@@ -1443,6 +1579,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0137
   from   inventory:infix:∪
   cell   {a=>1} | 1/2
+  level  3
   code   ({a=>1}) ∪ (1/2)
   is     Set.new(0.5,"a")
   type   Set
@@ -1455,6 +1592,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0138
   from   inventory:infix:∪
   cell   {a=>1} | 0e0
+  level  3
   code   ({a=>1}) ∪ (0e0)
   is     Set.new(0e0,"a")
   type   Set
@@ -1467,6 +1605,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0139
   from   inventory:infix:∪
   cell   {a=>1} | NaN
+  level  3
   code   ({a=>1}) ∪ (NaN)
   is     Set.new(NaN,"a")
   type   Set
@@ -1476,6 +1615,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0140
   from   inventory:infix:∪
   cell   {a=>1} | ""
+  level  3
   code   ({a=>1}) ∪ ("")
   is     Set.new("","a")
   type   Set
@@ -1488,6 +1628,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0141
   from   inventory:infix:∪
   cell   {a=>1} | "a"
+  level  3
   code   ({a=>1}) ∪ ("a")
   is     Set.new("a")
   type   Set
@@ -1497,6 +1638,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0142
   from   inventory:infix:∪
   cell   {a=>1} | True
+  level  3
   code   ({a=>1}) ∪ (True)
   is     Set.new("a",Bool::True)
   type   Set
@@ -1509,6 +1651,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0143
   from   inventory:infix:∪
   cell   {a=>1} | Any
+  level  3
   code   ({a=>1}) ∪ (Any)
   is     Set.new(Any,"a")
   type   Set
@@ -1521,6 +1664,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0144
   from   inventory:infix:∪
   cell   {a=>1} | (1,2)
+  level  3
   code   ({a=>1}) ∪ ((1,2))
   is     Set.new("a",2,1)
   type   Set
@@ -1530,6 +1674,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0145
   from   inventory:infix:∪
   cell   0 | -0e0
+  level  3
   code   (0) ∪ (-0e0)
   is     Set.new(-0e0,0)
   type   Set
@@ -1542,6 +1687,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0146
   from   inventory:infix:∪
   cell   1 | -0e0
+  level  3
   code   (1) ∪ (-0e0)
   is     Set.new(1,-0e0)
   type   Set
@@ -1554,6 +1700,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0147
   from   inventory:infix:∪
   cell   -1 | -0e0
+  level  3
   code   (-1) ∪ (-0e0)
   is     Set.new(-0e0,-1)
   type   Set
@@ -1566,6 +1713,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0148
   from   inventory:infix:∪
   cell   1/2 | -0e0
+  level  3
   code   (1/2) ∪ (-0e0)
   is     Set.new(-0e0,0.5)
   type   Set
@@ -1578,6 +1726,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0149
   from   inventory:infix:∪
   cell   0e0 | -0e0
+  level  3
   code   (0e0) ∪ (-0e0)
   is     Set.new(0e0,-0e0)
   type   Set
@@ -1590,6 +1739,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0150
   from   inventory:infix:∪
   cell   NaN | -0e0
+  level  3
   code   (NaN) ∪ (-0e0)
   is     Set.new(-0e0,NaN)
   type   Set
@@ -1599,6 +1749,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0151
   from   inventory:infix:∪
   cell   "" | -0e0
+  level  3
   code   ("") ∪ (-0e0)
   is     Set.new("",-0e0)
   type   Set
@@ -1611,6 +1762,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0152
   from   inventory:infix:∪
   cell   "a" | -0e0
+  level  3
   code   ("a") ∪ (-0e0)
   is     Set.new("a",-0e0)
   type   Set
@@ -1623,6 +1775,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0153
   from   inventory:infix:∪
   cell   True | -0e0
+  level  3
   code   (True) ∪ (-0e0)
   is     Set.new(-0e0,Bool::True)
   type   Set
@@ -1635,6 +1788,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0154
   from   inventory:infix:∪
   cell   Any | -0e0
+  level  3
   code   (Any) ∪ (-0e0)
   is     Set.new(Any,-0e0)
   type   Set
@@ -1644,6 +1798,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0155
   from   inventory:infix:∪
   cell   (1,2) | -0e0
+  level  3
   code   ((1,2)) ∪ (-0e0)
   is     Set.new(1,-0e0,2)
   type   Set
@@ -1656,6 +1811,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0156
   from   inventory:infix:∪
   cell   {a=>1} | -0e0
+  level  3
   code   ({a=>1}) ∪ (-0e0)
   is     Set.new(-0e0,"a")
   type   Set
@@ -1668,6 +1824,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0157
   from   inventory:infix:∪
   cell   -0e0 | -0e0
+  level  3
   code   (-0e0) ∪ (-0e0)
   is     Set.new(-0e0)
   type   Set
@@ -1677,6 +1834,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0158
   from   inventory:infix:∪
   cell   -0e0 | 0
+  level  3
   code   (-0e0) ∪ (0)
   is     Set.new(0,-0e0)
   type   Set
@@ -1689,6 +1847,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0159
   from   inventory:infix:∪
   cell   -0e0 | 1
+  level  3
   code   (-0e0) ∪ (1)
   is     Set.new(-0e0,1)
   type   Set
@@ -1701,6 +1860,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0160
   from   inventory:infix:∪
   cell   -0e0 | -1
+  level  3
   code   (-0e0) ∪ (-1)
   is     Set.new(-0e0,-1)
   type   Set
@@ -1710,6 +1870,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0161
   from   inventory:infix:∪
   cell   -0e0 | 1/2
+  level  3
   code   (-0e0) ∪ (1/2)
   is     Set.new(0.5,-0e0)
   type   Set
@@ -1722,6 +1883,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0162
   from   inventory:infix:∪
   cell   -0e0 | 0e0
+  level  3
   code   (-0e0) ∪ (0e0)
   is     Set.new(0e0,-0e0)
   type   Set
@@ -1734,6 +1896,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0163
   from   inventory:infix:∪
   cell   -0e0 | NaN
+  level  3
   code   (-0e0) ∪ (NaN)
   is     Set.new(-0e0,NaN)
   type   Set
@@ -1746,6 +1909,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0164
   from   inventory:infix:∪
   cell   -0e0 | ""
+  level  3
   code   (-0e0) ∪ ("")
   is     Set.new(-0e0,"")
   type   Set
@@ -1758,6 +1922,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0165
   from   inventory:infix:∪
   cell   -0e0 | "a"
+  level  3
   code   (-0e0) ∪ ("a")
   is     Set.new(-0e0,"a")
   type   Set
@@ -1770,6 +1935,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0166
   from   inventory:infix:∪
   cell   -0e0 | True
+  level  3
   code   (-0e0) ∪ (True)
   is     Set.new(-0e0,Bool::True)
   type   Set
@@ -1782,6 +1948,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0167
   from   inventory:infix:∪
   cell   -0e0 | Any
+  level  3
   code   (-0e0) ∪ (Any)
   is     Set.new(Any,-0e0)
   type   Set
@@ -1794,6 +1961,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0168
   from   inventory:infix:∪
   cell   -0e0 | (1,2)
+  level  3
   code   (-0e0) ∪ ((1,2))
   is     Set.new(2,-0e0,1)
   type   Set
@@ -1806,6 +1974,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0169
   from   inventory:infix:∪
   cell   -0e0 | {a=>1}
+  level  3
   code   (-0e0) ∪ ({a=>1})
   is     Set.new(-0e0,"a")
   type   Set
@@ -1818,6 +1987,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0170
   from   inventory:infix:∪
   cell   0 | Inf
+  level  3
   code   (0) ∪ (Inf)
   is     Set.new(0,Inf)
   type   Set
@@ -1830,6 +2000,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0171
   from   inventory:infix:∪
   cell   1 | Inf
+  level  3
   code   (1) ∪ (Inf)
   is     Set.new(Inf,1)
   type   Set
@@ -1839,6 +2010,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0172
   from   inventory:infix:∪
   cell   -1 | Inf
+  level  3
   code   (-1) ∪ (Inf)
   is     Set.new(Inf,-1)
   type   Set
@@ -1851,6 +2023,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0173
   from   inventory:infix:∪
   cell   1/2 | Inf
+  level  3
   code   (1/2) ∪ (Inf)
   is     Set.new(Inf,0.5)
   type   Set
@@ -1860,6 +2033,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0174
   from   inventory:infix:∪
   cell   0e0 | Inf
+  level  3
   code   (0e0) ∪ (Inf)
   is     Set.new(Inf,0e0)
   type   Set
@@ -1872,6 +2046,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0175
   from   inventory:infix:∪
   cell   NaN | Inf
+  level  3
   code   (NaN) ∪ (Inf)
   is     Set.new(Inf,NaN)
   type   Set
@@ -1884,6 +2059,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0176
   from   inventory:infix:∪
   cell   "" | Inf
+  level  3
   code   ("") ∪ (Inf)
   is     Set.new("",Inf)
   type   Set
@@ -1896,6 +2072,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0177
   from   inventory:infix:∪
   cell   "a" | Inf
+  level  3
   code   ("a") ∪ (Inf)
   is     Set.new(Inf,"a")
   type   Set
@@ -1908,6 +2085,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0178
   from   inventory:infix:∪
   cell   True | Inf
+  level  3
   code   (True) ∪ (Inf)
   is     Set.new(Bool::True,Inf)
   type   Set
@@ -1920,6 +2098,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0179
   from   inventory:infix:∪
   cell   Any | Inf
+  level  3
   code   (Any) ∪ (Inf)
   is     Set.new(Inf,Any)
   type   Set
@@ -1929,6 +2108,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0180
   from   inventory:infix:∪
   cell   (1,2) | Inf
+  level  3
   code   ((1,2)) ∪ (Inf)
   is     Set.new(2,1,Inf)
   type   Set
@@ -1941,6 +2121,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0181
   from   inventory:infix:∪
   cell   {a=>1} | Inf
+  level  3
   code   ({a=>1}) ∪ (Inf)
   is     Set.new("a",Inf)
   type   Set
@@ -1950,6 +2131,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0182
   from   inventory:infix:∪
   cell   -0e0 | Inf
+  level  3
   code   (-0e0) ∪ (Inf)
   is     Set.new(Inf,-0e0)
   type   Set
@@ -1959,6 +2141,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0183
   from   inventory:infix:∪
   cell   Inf | Inf
+  level  3
   code   (Inf) ∪ (Inf)
   is     Set.new(Inf)
   type   Set
@@ -1968,6 +2151,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0184
   from   inventory:infix:∪
   cell   Inf | 0
+  level  3
   code   (Inf) ∪ (0)
   is     Set.new(0,Inf)
   type   Set
@@ -1980,6 +2164,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0185
   from   inventory:infix:∪
   cell   Inf | 1
+  level  3
   code   (Inf) ∪ (1)
   is     Set.new(Inf,1)
   type   Set
@@ -1992,6 +2177,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0186
   from   inventory:infix:∪
   cell   Inf | -1
+  level  3
   code   (Inf) ∪ (-1)
   is     Set.new(-1,Inf)
   type   Set
@@ -2004,6 +2190,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0187
   from   inventory:infix:∪
   cell   Inf | 1/2
+  level  3
   code   (Inf) ∪ (1/2)
   is     Set.new(0.5,Inf)
   type   Set
@@ -2016,6 +2203,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0188
   from   inventory:infix:∪
   cell   Inf | 0e0
+  level  3
   code   (Inf) ∪ (0e0)
   is     Set.new(0e0,Inf)
   type   Set
@@ -2028,6 +2216,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0189
   from   inventory:infix:∪
   cell   Inf | NaN
+  level  3
   code   (Inf) ∪ (NaN)
   is     Set.new(Inf,NaN)
   type   Set
@@ -2037,6 +2226,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0190
   from   inventory:infix:∪
   cell   Inf | ""
+  level  3
   code   (Inf) ∪ ("")
   is     Set.new("",Inf)
   type   Set
@@ -2046,6 +2236,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0191
   from   inventory:infix:∪
   cell   Inf | "a"
+  level  3
   code   (Inf) ∪ ("a")
   is     Set.new(Inf,"a")
   type   Set
@@ -2058,6 +2249,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0192
   from   inventory:infix:∪
   cell   Inf | True
+  level  3
   code   (Inf) ∪ (True)
   is     Set.new(Bool::True,Inf)
   type   Set
@@ -2070,6 +2262,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0193
   from   inventory:infix:∪
   cell   Inf | Any
+  level  3
   code   (Inf) ∪ (Any)
   is     Set.new(Any,Inf)
   type   Set
@@ -2079,6 +2272,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0194
   from   inventory:infix:∪
   cell   Inf | (1,2)
+  level  3
   code   (Inf) ∪ ((1,2))
   is     Set.new(2,Inf,1)
   type   Set
@@ -2091,6 +2285,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0195
   from   inventory:infix:∪
   cell   Inf | {a=>1}
+  level  3
   code   (Inf) ∪ ({a=>1})
   is     Set.new(Inf,"a")
   type   Set
@@ -2100,6 +2295,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0196
   from   inventory:infix:∪
   cell   Inf | -0e0
+  level  3
   code   (Inf) ∪ (-0e0)
   is     Set.new(-0e0,Inf)
   type   Set
@@ -2112,6 +2308,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0197
   from   inventory:infix:∪
   cell   0 | 2**64
+  level  3
   code   (0) ∪ (2**64)
   is     Set.new(18446744073709551616,0)
   type   Set
@@ -2124,6 +2321,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0198
   from   inventory:infix:∪
   cell   1 | 2**64
+  level  3
   code   (1) ∪ (2**64)
   is     Set.new(18446744073709551616,1)
   type   Set
@@ -2133,6 +2331,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0199
   from   inventory:infix:∪
   cell   -1 | 2**64
+  level  3
   code   (-1) ∪ (2**64)
   is     Set.new(18446744073709551616,-1)
   type   Set
@@ -2142,6 +2341,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0200
   from   inventory:infix:∪
   cell   1/2 | 2**64
+  level  3
   code   (1/2) ∪ (2**64)
   is     Set.new(18446744073709551616,0.5)
   type   Set
@@ -2151,6 +2351,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0201
   from   inventory:infix:∪
   cell   0e0 | 2**64
+  level  3
   code   (0e0) ∪ (2**64)
   is     Set.new(18446744073709551616,0e0)
   type   Set
@@ -2163,6 +2364,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0202
   from   inventory:infix:∪
   cell   NaN | 2**64
+  level  3
   code   (NaN) ∪ (2**64)
   is     Set.new(NaN,18446744073709551616)
   type   Set
@@ -2175,6 +2377,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0203
   from   inventory:infix:∪
   cell   "" | 2**64
+  level  3
   code   ("") ∪ (2**64)
   is     Set.new(18446744073709551616,"")
   type   Set
@@ -2187,6 +2390,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0204
   from   inventory:infix:∪
   cell   "a" | 2**64
+  level  3
   code   ("a") ∪ (2**64)
   is     Set.new("a",18446744073709551616)
   type   Set
@@ -2199,6 +2403,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0205
   from   inventory:infix:∪
   cell   True | 2**64
+  level  3
   code   (True) ∪ (2**64)
   is     Set.new(Bool::True,18446744073709551616)
   type   Set
@@ -2208,6 +2413,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0206
   from   inventory:infix:∪
   cell   Any | 2**64
+  level  3
   code   (Any) ∪ (2**64)
   is     Set.new(18446744073709551616,Any)
   type   Set
@@ -2220,6 +2426,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0207
   from   inventory:infix:∪
   cell   (1,2) | 2**64
+  level  3
   code   ((1,2)) ∪ (2**64)
   is     Set.new(2,1,18446744073709551616)
   type   Set
@@ -2232,6 +2439,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0208
   from   inventory:infix:∪
   cell   {a=>1} | 2**64
+  level  3
   code   ({a=>1}) ∪ (2**64)
   is     Set.new(18446744073709551616,"a")
   type   Set
@@ -2244,6 +2452,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0209
   from   inventory:infix:∪
   cell   -0e0 | 2**64
+  level  3
   code   (-0e0) ∪ (2**64)
   is     Set.new(18446744073709551616,-0e0)
   type   Set
@@ -2253,6 +2462,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0210
   from   inventory:infix:∪
   cell   Inf | 2**64
+  level  3
   code   (Inf) ∪ (2**64)
   is     Set.new(18446744073709551616,Inf)
   type   Set
@@ -2265,6 +2475,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0211
   from   inventory:infix:∪
   cell   2**64 | 2**64
+  level  3
   code   (2**64) ∪ (2**64)
   is     Set.new(18446744073709551616)
   type   Set
@@ -2274,6 +2485,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0212
   from   inventory:infix:∪
   cell   2**64 | 0
+  level  3
   code   (2**64) ∪ (0)
   is     Set.new(18446744073709551616,0)
   type   Set
@@ -2283,6 +2495,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0213
   from   inventory:infix:∪
   cell   2**64 | 1
+  level  3
   code   (2**64) ∪ (1)
   is     Set.new(18446744073709551616,1)
   type   Set
@@ -2295,6 +2508,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0214
   from   inventory:infix:∪
   cell   2**64 | -1
+  level  3
   code   (2**64) ∪ (-1)
   is     Set.new(18446744073709551616,-1)
   type   Set
@@ -2304,6 +2518,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0215
   from   inventory:infix:∪
   cell   2**64 | 1/2
+  level  3
   code   (2**64) ∪ (1/2)
   is     Set.new(18446744073709551616,0.5)
   type   Set
@@ -2313,6 +2528,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0216
   from   inventory:infix:∪
   cell   2**64 | 0e0
+  level  3
   code   (2**64) ∪ (0e0)
   is     Set.new(18446744073709551616,0e0)
   type   Set
@@ -2322,6 +2538,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0217
   from   inventory:infix:∪
   cell   2**64 | NaN
+  level  3
   code   (2**64) ∪ (NaN)
   is     Set.new(18446744073709551616,NaN)
   type   Set
@@ -2334,6 +2551,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0218
   from   inventory:infix:∪
   cell   2**64 | ""
+  level  3
   code   (2**64) ∪ ("")
   is     Set.new("",18446744073709551616)
   type   Set
@@ -2343,6 +2561,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0219
   from   inventory:infix:∪
   cell   2**64 | "a"
+  level  3
   code   (2**64) ∪ ("a")
   is     Set.new(18446744073709551616,"a")
   type   Set
@@ -2355,6 +2574,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0220
   from   inventory:infix:∪
   cell   2**64 | True
+  level  3
   code   (2**64) ∪ (True)
   is     Set.new(18446744073709551616,Bool::True)
   type   Set
@@ -2364,6 +2584,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0221
   from   inventory:infix:∪
   cell   2**64 | Any
+  level  3
   code   (2**64) ∪ (Any)
   is     Set.new(Any,18446744073709551616)
   type   Set
@@ -2376,6 +2597,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0222
   from   inventory:infix:∪
   cell   2**64 | (1,2)
+  level  3
   code   (2**64) ∪ ((1,2))
   is     Set.new(1,18446744073709551616,2)
   type   Set
@@ -2388,6 +2610,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0223
   from   inventory:infix:∪
   cell   2**64 | {a=>1}
+  level  3
   code   (2**64) ∪ ({a=>1})
   is     Set.new("a",18446744073709551616)
   type   Set
@@ -2400,6 +2623,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0224
   from   inventory:infix:∪
   cell   2**64 | -0e0
+  level  3
   code   (2**64) ∪ (-0e0)
   is     Set.new(18446744073709551616,-0e0)
   type   Set
@@ -2409,6 +2633,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0225
   from   inventory:infix:∪
   cell   2**64 | Inf
+  level  3
   code   (2**64) ∪ (Inf)
   is     Set.new(18446744073709551616,Inf)
   type   Set
@@ -2418,6 +2643,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0226
   from   inventory:infix:∪
   cell   0 | False
+  level  3
   code   (0) ∪ (False)
   is     Set.new(Bool::False,0)
   type   Set
@@ -2427,6 +2653,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0227
   from   inventory:infix:∪
   cell   1 | False
+  level  3
   code   (1) ∪ (False)
   is     Set.new(1,Bool::False)
   type   Set
@@ -2439,6 +2666,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0228
   from   inventory:infix:∪
   cell   -1 | False
+  level  3
   code   (-1) ∪ (False)
   is     Set.new(-1,Bool::False)
   type   Set
@@ -2448,6 +2676,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0229
   from   inventory:infix:∪
   cell   1/2 | False
+  level  3
   code   (1/2) ∪ (False)
   is     Set.new(Bool::False,0.5)
   type   Set
@@ -2460,6 +2689,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0230
   from   inventory:infix:∪
   cell   0e0 | False
+  level  3
   code   (0e0) ∪ (False)
   is     Set.new(0e0,Bool::False)
   type   Set
@@ -2472,6 +2702,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0231
   from   inventory:infix:∪
   cell   NaN | False
+  level  3
   code   (NaN) ∪ (False)
   is     Set.new(Bool::False,NaN)
   type   Set
@@ -2481,6 +2712,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0232
   from   inventory:infix:∪
   cell   "" | False
+  level  3
   code   ("") ∪ (False)
   is     Set.new("",Bool::False)
   type   Set
@@ -2493,6 +2725,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0233
   from   inventory:infix:∪
   cell   "a" | False
+  level  3
   code   ("a") ∪ (False)
   is     Set.new("a",Bool::False)
   type   Set
@@ -2505,6 +2738,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0234
   from   inventory:infix:∪
   cell   True | False
+  level  3
   code   (True) ∪ (False)
   is     Set.new(Bool::False,Bool::True)
   type   Set
@@ -2514,6 +2748,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0235
   from   inventory:infix:∪
   cell   Any | False
+  level  3
   code   (Any) ∪ (False)
   is     Set.new(Any,Bool::False)
   type   Set
@@ -2526,6 +2761,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0236
   from   inventory:infix:∪
   cell   (1,2) | False
+  level  3
   code   ((1,2)) ∪ (False)
   is     Set.new(Bool::False,1,2)
   type   Set
@@ -2538,6 +2774,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0237
   from   inventory:infix:∪
   cell   {a=>1} | False
+  level  3
   code   ({a=>1}) ∪ (False)
   is     Set.new("a",Bool::False)
   type   Set
@@ -2550,6 +2787,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0238
   from   inventory:infix:∪
   cell   -0e0 | False
+  level  3
   code   (-0e0) ∪ (False)
   is     Set.new(Bool::False,-0e0)
   type   Set
@@ -2559,6 +2797,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0239
   from   inventory:infix:∪
   cell   Inf | False
+  level  3
   code   (Inf) ∪ (False)
   is     Set.new(Inf,Bool::False)
   type   Set
@@ -2571,6 +2810,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0240
   from   inventory:infix:∪
   cell   2**64 | False
+  level  3
   code   (2**64) ∪ (False)
   is     Set.new(18446744073709551616,Bool::False)
   type   Set
@@ -2583,6 +2823,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0241
   from   inventory:infix:∪
   cell   False | False
+  level  3
   code   (False) ∪ (False)
   is     Set.new(Bool::False)
   type   Set
@@ -2592,6 +2833,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0242
   from   inventory:infix:∪
   cell   False | 0
+  level  3
   code   (False) ∪ (0)
   is     Set.new(0,Bool::False)
   type   Set
@@ -2604,6 +2846,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0243
   from   inventory:infix:∪
   cell   False | 1
+  level  3
   code   (False) ∪ (1)
   is     Set.new(1,Bool::False)
   type   Set
@@ -2613,6 +2856,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0244
   from   inventory:infix:∪
   cell   False | -1
+  level  3
   code   (False) ∪ (-1)
   is     Set.new(-1,Bool::False)
   type   Set
@@ -2622,6 +2866,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0245
   from   inventory:infix:∪
   cell   False | 1/2
+  level  3
   code   (False) ∪ (1/2)
   is     Set.new(0.5,Bool::False)
   type   Set
@@ -2634,6 +2879,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0246
   from   inventory:infix:∪
   cell   False | 0e0
+  level  3
   code   (False) ∪ (0e0)
   is     Set.new(0e0,Bool::False)
   type   Set
@@ -2646,6 +2892,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0247
   from   inventory:infix:∪
   cell   False | NaN
+  level  3
   code   (False) ∪ (NaN)
   is     Set.new(Bool::False,NaN)
   type   Set
@@ -2655,6 +2902,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0248
   from   inventory:infix:∪
   cell   False | ""
+  level  3
   code   (False) ∪ ("")
   is     Set.new("",Bool::False)
   type   Set
@@ -2664,6 +2912,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0249
   from   inventory:infix:∪
   cell   False | "a"
+  level  3
   code   (False) ∪ ("a")
   is     Set.new(Bool::False,"a")
   type   Set
@@ -2676,6 +2925,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0250
   from   inventory:infix:∪
   cell   False | True
+  level  3
   code   (False) ∪ (True)
   is     Set.new(Bool::True,Bool::False)
   type   Set
@@ -2688,6 +2938,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0251
   from   inventory:infix:∪
   cell   False | Any
+  level  3
   code   (False) ∪ (Any)
   is     Set.new(Any,Bool::False)
   type   Set
@@ -2697,6 +2948,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0252
   from   inventory:infix:∪
   cell   False | (1,2)
+  level  3
   code   (False) ∪ ((1,2))
   is     Set.new(1,2,Bool::False)
   type   Set
@@ -2709,6 +2961,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0253
   from   inventory:infix:∪
   cell   False | {a=>1}
+  level  3
   code   (False) ∪ ({a=>1})
   is     Set.new("a",Bool::False)
   type   Set
@@ -2718,6 +2971,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0254
   from   inventory:infix:∪
   cell   False | -0e0
+  level  3
   code   (False) ∪ (-0e0)
   is     Set.new(Bool::False,-0e0)
   type   Set
@@ -2730,6 +2984,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0255
   from   inventory:infix:∪
   cell   False | Inf
+  level  3
   code   (False) ∪ (Inf)
   is     Set.new(Inf,Bool::False)
   type   Set
@@ -2739,6 +2994,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0256
   from   inventory:infix:∪
   cell   False | 2**64
+  level  3
   code   (False) ∪ (2**64)
   is     Set.new(Bool::False,18446744073709551616)
   type   Set
@@ -2748,6 +3004,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0257
   from   inventory:infix:∪
   cell   0 | Nil
+  level  3
   code   (0) ∪ (Nil)
   is     Set.new(Nil,0)
   type   Set
@@ -2757,6 +3014,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0258
   from   inventory:infix:∪
   cell   1 | Nil
+  level  3
   code   (1) ∪ (Nil)
   is     Set.new(Nil,1)
   type   Set
@@ -2766,6 +3024,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0259
   from   inventory:infix:∪
   cell   -1 | Nil
+  level  3
   code   (-1) ∪ (Nil)
   is     Set.new(-1,Nil)
   type   Set
@@ -2778,6 +3037,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0260
   from   inventory:infix:∪
   cell   1/2 | Nil
+  level  3
   code   (1/2) ∪ (Nil)
   is     Set.new(0.5,Nil)
   type   Set
@@ -2787,6 +3047,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0261
   from   inventory:infix:∪
   cell   0e0 | Nil
+  level  3
   code   (0e0) ∪ (Nil)
   is     Set.new(Nil,0e0)
   type   Set
@@ -2799,6 +3060,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0262
   from   inventory:infix:∪
   cell   NaN | Nil
+  level  3
   code   (NaN) ∪ (Nil)
   is     Set.new(NaN,Nil)
   type   Set
@@ -2808,6 +3070,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0263
   from   inventory:infix:∪
   cell   "" | Nil
+  level  3
   code   ("") ∪ (Nil)
   is     Set.new("",Nil)
   type   Set
@@ -2817,6 +3080,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0264
   from   inventory:infix:∪
   cell   "a" | Nil
+  level  3
   code   ("a") ∪ (Nil)
   is     Set.new(Nil,"a")
   type   Set
@@ -2826,6 +3090,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0265
   from   inventory:infix:∪
   cell   True | Nil
+  level  3
   code   (True) ∪ (Nil)
   is     Set.new(Nil,Bool::True)
   type   Set
@@ -2838,6 +3103,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0266
   from   inventory:infix:∪
   cell   Any | Nil
+  level  3
   code   (Any) ∪ (Nil)
   is     Set.new(Any,Nil)
   type   Set
@@ -2847,6 +3113,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0267
   from   inventory:infix:∪
   cell   (1,2) | Nil
+  level  3
   code   ((1,2)) ∪ (Nil)
   is     Set.new(Nil,2,1)
   type   Set
@@ -2859,6 +3126,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0268
   from   inventory:infix:∪
   cell   {a=>1} | Nil
+  level  3
   code   ({a=>1}) ∪ (Nil)
   is     Set.new("a",Nil)
   type   Set
@@ -2868,6 +3136,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0269
   from   inventory:infix:∪
   cell   -0e0 | Nil
+  level  3
   code   (-0e0) ∪ (Nil)
   is     Set.new(Nil,-0e0)
   type   Set
@@ -2877,6 +3146,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0270
   from   inventory:infix:∪
   cell   Inf | Nil
+  level  3
   code   (Inf) ∪ (Nil)
   is     Set.new(Nil,Inf)
   type   Set
@@ -2889,6 +3159,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0271
   from   inventory:infix:∪
   cell   2**64 | Nil
+  level  3
   code   (2**64) ∪ (Nil)
   is     Set.new(Nil,18446744073709551616)
   type   Set
@@ -2901,6 +3172,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0272
   from   inventory:infix:∪
   cell   False | Nil
+  level  3
   code   (False) ∪ (Nil)
   is     Set.new(Nil,Bool::False)
   type   Set
@@ -2910,6 +3182,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0273
   from   inventory:infix:∪
   cell   Nil | Nil
+  level  3
   code   (Nil) ∪ (Nil)
   is     Set.new(Nil)
   type   Set
@@ -2919,6 +3192,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0274
   from   inventory:infix:∪
   cell   Nil | 0
+  level  3
   code   (Nil) ∪ (0)
   is     Set.new(Nil,0)
   type   Set
@@ -2931,6 +3205,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0275
   from   inventory:infix:∪
   cell   Nil | 1
+  level  3
   code   (Nil) ∪ (1)
   is     Set.new(1,Nil)
   type   Set
@@ -2940,6 +3215,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0276
   from   inventory:infix:∪
   cell   Nil | -1
+  level  3
   code   (Nil) ∪ (-1)
   is     Set.new(-1,Nil)
   type   Set
@@ -2952,6 +3228,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0277
   from   inventory:infix:∪
   cell   Nil | 1/2
+  level  3
   code   (Nil) ∪ (1/2)
   is     Set.new(Nil,0.5)
   type   Set
@@ -2964,6 +3241,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0278
   from   inventory:infix:∪
   cell   Nil | 0e0
+  level  3
   code   (Nil) ∪ (0e0)
   is     Set.new(Nil,0e0)
   type   Set
@@ -2973,6 +3251,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0279
   from   inventory:infix:∪
   cell   Nil | NaN
+  level  3
   code   (Nil) ∪ (NaN)
   is     Set.new(NaN,Nil)
   type   Set
@@ -2985,6 +3264,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0280
   from   inventory:infix:∪
   cell   Nil | ""
+  level  3
   code   (Nil) ∪ ("")
   is     Set.new(Nil,"")
   type   Set
@@ -2994,6 +3274,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0281
   from   inventory:infix:∪
   cell   Nil | "a"
+  level  3
   code   (Nil) ∪ ("a")
   is     Set.new(Nil,"a")
   type   Set
@@ -3003,6 +3284,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0282
   from   inventory:infix:∪
   cell   Nil | True
+  level  3
   code   (Nil) ∪ (True)
   is     Set.new(Nil,Bool::True)
   type   Set
@@ -3015,6 +3297,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0283
   from   inventory:infix:∪
   cell   Nil | Any
+  level  3
   code   (Nil) ∪ (Any)
   is     Set.new(Nil,Any)
   type   Set
@@ -3027,6 +3310,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0284
   from   inventory:infix:∪
   cell   Nil | (1,2)
+  level  3
   code   (Nil) ∪ ((1,2))
   is     Set.new(2,1,Nil)
   type   Set
@@ -3039,6 +3323,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0285
   from   inventory:infix:∪
   cell   Nil | {a=>1}
+  level  3
   code   (Nil) ∪ ({a=>1})
   is     Set.new("a",Nil)
   type   Set
@@ -3051,6 +3336,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0286
   from   inventory:infix:∪
   cell   Nil | -0e0
+  level  3
   code   (Nil) ∪ (-0e0)
   is     Set.new(Nil,-0e0)
   type   Set
@@ -3060,6 +3346,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0287
   from   inventory:infix:∪
   cell   Nil | Inf
+  level  3
   code   (Nil) ∪ (Inf)
   is     Set.new(Inf,Nil)
   type   Set
@@ -3072,6 +3359,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0288
   from   inventory:infix:∪
   cell   Nil | 2**64
+  level  3
   code   (Nil) ∪ (2**64)
   is     Set.new(Nil,18446744073709551616)
   type   Set
@@ -3081,6 +3369,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0289
   from   inventory:infix:∪
   cell   Nil | False
+  level  3
   code   (Nil) ∪ (False)
   is     Set.new(Nil,Bool::False)
   type   Set
@@ -3093,6 +3382,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0290
   from   inventory:infix:∪
   cell   0 | ()
+  level  3
   code   (0) ∪ (())
   is     Set.new(0)
   type   Set
@@ -3102,6 +3392,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0291
   from   inventory:infix:∪
   cell   1 | ()
+  level  3
   code   (1) ∪ (())
   is     Set.new(1)
   type   Set
@@ -3111,6 +3402,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0292
   from   inventory:infix:∪
   cell   -1 | ()
+  level  3
   code   (-1) ∪ (())
   is     Set.new(-1)
   type   Set
@@ -3120,6 +3412,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0293
   from   inventory:infix:∪
   cell   1/2 | ()
+  level  3
   code   (1/2) ∪ (())
   is     Set.new(0.5)
   type   Set
@@ -3129,6 +3422,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0294
   from   inventory:infix:∪
   cell   0e0 | ()
+  level  3
   code   (0e0) ∪ (())
   is     Set.new(0e0)
   type   Set
@@ -3138,6 +3432,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0295
   from   inventory:infix:∪
   cell   NaN | ()
+  level  3
   code   (NaN) ∪ (())
   is     Set.new(NaN)
   type   Set
@@ -3147,6 +3442,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0296
   from   inventory:infix:∪
   cell   "" | ()
+  level  3
   code   ("") ∪ (())
   is     Set.new("")
   type   Set
@@ -3156,6 +3452,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0297
   from   inventory:infix:∪
   cell   "a" | ()
+  level  3
   code   ("a") ∪ (())
   is     Set.new("a")
   type   Set
@@ -3165,6 +3462,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0298
   from   inventory:infix:∪
   cell   True | ()
+  level  3
   code   (True) ∪ (())
   is     Set.new(Bool::True)
   type   Set
@@ -3174,6 +3472,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0299
   from   inventory:infix:∪
   cell   Any | ()
+  level  3
   code   (Any) ∪ (())
   is     Set.new(Any)
   type   Set
@@ -3183,6 +3482,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0300
   from   inventory:infix:∪
   cell   (1,2) | ()
+  level  3
   code   ((1,2)) ∪ (())
   is     Set.new(2,1)
   type   Set
@@ -3192,6 +3492,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0301
   from   inventory:infix:∪
   cell   {a=>1} | ()
+  level  3
   code   ({a=>1}) ∪ (())
   is     Set.new("a")
   type   Set
@@ -3201,6 +3502,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0302
   from   inventory:infix:∪
   cell   -0e0 | ()
+  level  3
   code   (-0e0) ∪ (())
   is     Set.new(-0e0)
   type   Set
@@ -3210,6 +3512,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0303
   from   inventory:infix:∪
   cell   Inf | ()
+  level  3
   code   (Inf) ∪ (())
   is     Set.new(Inf)
   type   Set
@@ -3219,6 +3522,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0304
   from   inventory:infix:∪
   cell   2**64 | ()
+  level  3
   code   (2**64) ∪ (())
   is     Set.new(18446744073709551616)
   type   Set
@@ -3228,6 +3532,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0305
   from   inventory:infix:∪
   cell   False | ()
+  level  3
   code   (False) ∪ (())
   is     Set.new(Bool::False)
   type   Set
@@ -3237,6 +3542,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0306
   from   inventory:infix:∪
   cell   Nil | ()
+  level  3
   code   (Nil) ∪ (())
   is     Set.new(Nil)
   type   Set
@@ -3246,6 +3552,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0307
   from   inventory:infix:∪
   cell   () | ()
+  level  3
   code   (()) ∪ (())
   is     set()
   type   Set
@@ -3255,6 +3562,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0308
   from   inventory:infix:∪
   cell   () | 0
+  level  3
   code   (()) ∪ (0)
   is     Set.new(0)
   type   Set
@@ -3264,6 +3572,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0309
   from   inventory:infix:∪
   cell   () | 1
+  level  3
   code   (()) ∪ (1)
   is     Set.new(1)
   type   Set
@@ -3273,6 +3582,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0310
   from   inventory:infix:∪
   cell   () | -1
+  level  3
   code   (()) ∪ (-1)
   is     Set.new(-1)
   type   Set
@@ -3282,6 +3592,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0311
   from   inventory:infix:∪
   cell   () | 1/2
+  level  3
   code   (()) ∪ (1/2)
   is     Set.new(0.5)
   type   Set
@@ -3291,6 +3602,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0312
   from   inventory:infix:∪
   cell   () | 0e0
+  level  3
   code   (()) ∪ (0e0)
   is     Set.new(0e0)
   type   Set
@@ -3300,6 +3612,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0313
   from   inventory:infix:∪
   cell   () | NaN
+  level  3
   code   (()) ∪ (NaN)
   is     Set.new(NaN)
   type   Set
@@ -3309,6 +3622,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0314
   from   inventory:infix:∪
   cell   () | ""
+  level  3
   code   (()) ∪ ("")
   is     Set.new("")
   type   Set
@@ -3318,6 +3632,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0315
   from   inventory:infix:∪
   cell   () | "a"
+  level  3
   code   (()) ∪ ("a")
   is     Set.new("a")
   type   Set
@@ -3327,6 +3642,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0316
   from   inventory:infix:∪
   cell   () | True
+  level  3
   code   (()) ∪ (True)
   is     Set.new(Bool::True)
   type   Set
@@ -3336,6 +3652,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0317
   from   inventory:infix:∪
   cell   () | Any
+  level  3
   code   (()) ∪ (Any)
   is     Set.new(Any)
   type   Set
@@ -3345,6 +3662,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0318
   from   inventory:infix:∪
   cell   () | (1,2)
+  level  3
   code   (()) ∪ ((1,2))
   is     Set.new(2,1)
   type   Set
@@ -3354,6 +3672,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0319
   from   inventory:infix:∪
   cell   () | {a=>1}
+  level  3
   code   (()) ∪ ({a=>1})
   is     Set.new("a")
   type   Set
@@ -3363,6 +3682,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0320
   from   inventory:infix:∪
   cell   () | -0e0
+  level  3
   code   (()) ∪ (-0e0)
   is     Set.new(-0e0)
   type   Set
@@ -3372,6 +3692,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0321
   from   inventory:infix:∪
   cell   () | Inf
+  level  3
   code   (()) ∪ (Inf)
   is     Set.new(Inf)
   type   Set
@@ -3381,6 +3702,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0322
   from   inventory:infix:∪
   cell   () | 2**64
+  level  3
   code   (()) ∪ (2**64)
   is     Set.new(18446744073709551616)
   type   Set
@@ -3390,6 +3712,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0323
   from   inventory:infix:∪
   cell   () | False
+  level  3
   code   (()) ∪ (False)
   is     Set.new(Bool::False)
   type   Set
@@ -3399,6 +3722,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0324
   from   inventory:infix:∪
   cell   () | Nil
+  level  3
   code   (()) ∪ (Nil)
   is     Set.new(Nil)
   type   Set
@@ -3408,6 +3732,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0325
   from   inventory:infix:∪
   cell   0 | "0"
+  level  3
   code   (0) ∪ ("0")
   is     Set.new("0",0)
   type   Set
@@ -3417,6 +3742,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0326
   from   inventory:infix:∪
   cell   1 | "0"
+  level  3
   code   (1) ∪ ("0")
   is     Set.new("0",1)
   type   Set
@@ -3429,6 +3755,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0327
   from   inventory:infix:∪
   cell   -1 | "0"
+  level  3
   code   (-1) ∪ ("0")
   is     Set.new("0",-1)
   type   Set
@@ -3438,6 +3765,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0328
   from   inventory:infix:∪
   cell   1/2 | "0"
+  level  3
   code   (1/2) ∪ ("0")
   is     Set.new(0.5,"0")
   type   Set
@@ -3447,6 +3775,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0329
   from   inventory:infix:∪
   cell   0e0 | "0"
+  level  3
   code   (0e0) ∪ ("0")
   is     Set.new(0e0,"0")
   type   Set
@@ -3459,6 +3788,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0330
   from   inventory:infix:∪
   cell   NaN | "0"
+  level  3
   code   (NaN) ∪ ("0")
   is     Set.new(NaN,"0")
   type   Set
@@ -3471,6 +3801,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0331
   from   inventory:infix:∪
   cell   "" | "0"
+  level  3
   code   ("") ∪ ("0")
   is     Set.new("","0")
   type   Set
@@ -3483,6 +3814,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0332
   from   inventory:infix:∪
   cell   "a" | "0"
+  level  3
   code   ("a") ∪ ("0")
   is     Set.new("a","0")
   type   Set
@@ -3492,6 +3824,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0333
   from   inventory:infix:∪
   cell   True | "0"
+  level  3
   code   (True) ∪ ("0")
   is     Set.new(Bool::True,"0")
   type   Set
@@ -3501,6 +3834,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0334
   from   inventory:infix:∪
   cell   Any | "0"
+  level  3
   code   (Any) ∪ ("0")
   is     Set.new(Any,"0")
   type   Set
@@ -3510,6 +3844,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0335
   from   inventory:infix:∪
   cell   (1,2) | "0"
+  level  3
   code   ((1,2)) ∪ ("0")
   is     Set.new(1,2,"0")
   type   Set
@@ -3519,6 +3854,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0336
   from   inventory:infix:∪
   cell   {a=>1} | "0"
+  level  3
   code   ({a=>1}) ∪ ("0")
   is     Set.new("0","a")
   type   Set
@@ -3528,6 +3864,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0337
   from   inventory:infix:∪
   cell   -0e0 | "0"
+  level  3
   code   (-0e0) ∪ ("0")
   is     Set.new(-0e0,"0")
   type   Set
@@ -3540,6 +3877,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0338
   from   inventory:infix:∪
   cell   Inf | "0"
+  level  3
   code   (Inf) ∪ ("0")
   is     Set.new("0",Inf)
   type   Set
@@ -3549,6 +3887,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0339
   from   inventory:infix:∪
   cell   2**64 | "0"
+  level  3
   code   (2**64) ∪ ("0")
   is     Set.new(18446744073709551616,"0")
   type   Set
@@ -3558,6 +3897,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0340
   from   inventory:infix:∪
   cell   False | "0"
+  level  3
   code   (False) ∪ ("0")
   is     Set.new(Bool::False,"0")
   type   Set
@@ -3570,6 +3910,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0341
   from   inventory:infix:∪
   cell   Nil | "0"
+  level  3
   code   (Nil) ∪ ("0")
   is     Set.new("0",Nil)
   type   Set
@@ -3579,6 +3920,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0342
   from   inventory:infix:∪
   cell   () | "0"
+  level  3
   code   (()) ∪ ("0")
   is     Set.new("0")
   type   Set
@@ -3588,6 +3930,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0343
   from   inventory:infix:∪
   cell   "0" | "0"
+  level  3
   code   ("0") ∪ ("0")
   is     Set.new("0")
   type   Set
@@ -3597,6 +3940,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0344
   from   inventory:infix:∪
   cell   "0" | 0
+  level  3
   code   ("0") ∪ (0)
   is     Set.new(0,"0")
   type   Set
@@ -3609,6 +3953,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0345
   from   inventory:infix:∪
   cell   "0" | 1
+  level  3
   code   ("0") ∪ (1)
   is     Set.new("0",1)
   type   Set
@@ -3618,6 +3963,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0346
   from   inventory:infix:∪
   cell   "0" | -1
+  level  3
   code   ("0") ∪ (-1)
   is     Set.new(-1,"0")
   type   Set
@@ -3630,6 +3976,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0347
   from   inventory:infix:∪
   cell   "0" | 1/2
+  level  3
   code   ("0") ∪ (1/2)
   is     Set.new(0.5,"0")
   type   Set
@@ -3639,6 +3986,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0348
   from   inventory:infix:∪
   cell   "0" | 0e0
+  level  3
   code   ("0") ∪ (0e0)
   is     Set.new(0e0,"0")
   type   Set
@@ -3648,6 +3996,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0349
   from   inventory:infix:∪
   cell   "0" | NaN
+  level  3
   code   ("0") ∪ (NaN)
   is     Set.new("0",NaN)
   type   Set
@@ -3660,6 +4009,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0350
   from   inventory:infix:∪
   cell   "0" | ""
+  level  3
   code   ("0") ∪ ("")
   is     Set.new("","0")
   type   Set
@@ -3669,6 +4019,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0351
   from   inventory:infix:∪
   cell   "0" | "a"
+  level  3
   code   ("0") ∪ ("a")
   is     Set.new("0","a")
   type   Set
@@ -3681,6 +4032,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0352
   from   inventory:infix:∪
   cell   "0" | True
+  level  3
   code   ("0") ∪ (True)
   is     Set.new("0",Bool::True)
   type   Set
@@ -3693,6 +4045,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0353
   from   inventory:infix:∪
   cell   "0" | Any
+  level  3
   code   ("0") ∪ (Any)
   is     Set.new(Any,"0")
   type   Set
@@ -3705,6 +4058,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0354
   from   inventory:infix:∪
   cell   "0" | (1,2)
+  level  3
   code   ("0") ∪ ((1,2))
   is     Set.new("0",1,2)
   type   Set
@@ -3717,6 +4071,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0355
   from   inventory:infix:∪
   cell   "0" | {a=>1}
+  level  3
   code   ("0") ∪ ({a=>1})
   is     Set.new("a","0")
   type   Set
@@ -3729,6 +4084,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0356
   from   inventory:infix:∪
   cell   "0" | -0e0
+  level  3
   code   ("0") ∪ (-0e0)
   is     Set.new(-0e0,"0")
   type   Set
@@ -3741,6 +4097,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0357
   from   inventory:infix:∪
   cell   "0" | Inf
+  level  3
   code   ("0") ∪ (Inf)
   is     Set.new("0",Inf)
   type   Set
@@ -3750,6 +4107,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0358
   from   inventory:infix:∪
   cell   "0" | 2**64
+  level  3
   code   ("0") ∪ (2**64)
   is     Set.new("0",18446744073709551616)
   type   Set
@@ -3762,6 +4120,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0359
   from   inventory:infix:∪
   cell   "0" | False
+  level  3
   code   ("0") ∪ (False)
   is     Set.new(Bool::False,"0")
   type   Set
@@ -3774,6 +4133,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0360
   from   inventory:infix:∪
   cell   "0" | Nil
+  level  3
   code   ("0") ∪ (Nil)
   is     Set.new("0",Nil)
   type   Set
@@ -3786,6 +4146,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0361
   from   inventory:infix:∪
   cell   "0" | ()
+  level  3
   code   ("0") ∪ (())
   is     Set.new("0")
   type   Set
@@ -3795,6 +4156,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0362
   from   inventory:infix:∪
   cell   0 | (1..3)
+  level  3
   code   (0) ∪ ((1..3))
   is     Set.new(3,0,1,2)
   type   Set
@@ -3807,6 +4169,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0363
   from   inventory:infix:∪
   cell   1 | (1..3)
+  level  3
   code   (1) ∪ ((1..3))
   is     Set.new(3,1,2)
   type   Set
@@ -3819,6 +4182,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0364
   from   inventory:infix:∪
   cell   -1 | (1..3)
+  level  3
   code   (-1) ∪ ((1..3))
   is     Set.new(2,-1,3,1)
   type   Set
@@ -3831,6 +4195,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0365
   from   inventory:infix:∪
   cell   1/2 | (1..3)
+  level  3
   code   (1/2) ∪ ((1..3))
   is     Set.new(3,2,1,0.5)
   type   Set
@@ -3843,6 +4208,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0366
   from   inventory:infix:∪
   cell   0e0 | (1..3)
+  level  3
   code   (0e0) ∪ ((1..3))
   is     Set.new(2,1,3,0e0)
   type   Set
@@ -3852,6 +4218,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0367
   from   inventory:infix:∪
   cell   NaN | (1..3)
+  level  3
   code   (NaN) ∪ ((1..3))
   is     Set.new(1,3,NaN,2)
   type   Set
@@ -3864,6 +4231,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0368
   from   inventory:infix:∪
   cell   "" | (1..3)
+  level  3
   code   ("") ∪ ((1..3))
   is     Set.new(3,1,"",2)
   type   Set
@@ -3876,6 +4244,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0369
   from   inventory:infix:∪
   cell   "a" | (1..3)
+  level  3
   code   ("a") ∪ ((1..3))
   is     Set.new(2,1,3,"a")
   type   Set
@@ -3888,6 +4257,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0370
   from   inventory:infix:∪
   cell   True | (1..3)
+  level  3
   code   (True) ∪ ((1..3))
   is     Set.new(2,3,1,Bool::True)
   type   Set
@@ -3900,6 +4270,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0371
   from   inventory:infix:∪
   cell   Any | (1..3)
+  level  3
   code   (Any) ∪ ((1..3))
   is     Set.new(3,Any,1,2)
   type   Set
@@ -3912,6 +4283,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0372
   from   inventory:infix:∪
   cell   (1,2) | (1..3)
+  level  3
   code   ((1,2)) ∪ ((1..3))
   is     Set.new(3,1,2)
   type   Set
@@ -3924,6 +4296,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0373
   from   inventory:infix:∪
   cell   {a=>1} | (1..3)
+  level  3
   code   ({a=>1}) ∪ ((1..3))
   is     Set.new(3,2,"a",1)
   type   Set
@@ -3936,6 +4309,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0374
   from   inventory:infix:∪
   cell   -0e0 | (1..3)
+  level  3
   code   (-0e0) ∪ ((1..3))
   is     Set.new(3,-0e0,2,1)
   type   Set
@@ -3948,6 +4322,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0375
   from   inventory:infix:∪
   cell   Inf | (1..3)
+  level  3
   code   (Inf) ∪ ((1..3))
   is     Set.new(Inf,3,1,2)
   type   Set
@@ -3960,6 +4335,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0376
   from   inventory:infix:∪
   cell   2**64 | (1..3)
+  level  3
   code   (2**64) ∪ ((1..3))
   is     Set.new(2,18446744073709551616,3,1)
   type   Set
@@ -3972,6 +4348,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0377
   from   inventory:infix:∪
   cell   False | (1..3)
+  level  3
   code   (False) ∪ ((1..3))
   is     Set.new(2,3,Bool::False,1)
   type   Set
@@ -3984,6 +4361,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0378
   from   inventory:infix:∪
   cell   Nil | (1..3)
+  level  3
   code   (Nil) ∪ ((1..3))
   is     Set.new(1,3,Nil,2)
   type   Set
@@ -3996,6 +4374,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0379
   from   inventory:infix:∪
   cell   () | (1..3)
+  level  3
   code   (()) ∪ ((1..3))
   is     Set.new(2,1,3)
   type   Set
@@ -4008,6 +4387,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0380
   from   inventory:infix:∪
   cell   "0" | (1..3)
+  level  3
   code   ("0") ∪ ((1..3))
   is     Set.new("0",1,3,2)
   type   Set
@@ -4020,6 +4400,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0381
   from   inventory:infix:∪
   cell   (1..3) | (1..3)
+  level  3
   code   ((1..3)) ∪ ((1..3))
   is     Set.new(3,2,1)
   type   Set
@@ -4032,6 +4413,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0382
   from   inventory:infix:∪
   cell   (1..3) | 0
+  level  3
   code   ((1..3)) ∪ (0)
   is     Set.new(1,3,2,0)
   type   Set
@@ -4044,6 +4426,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0383
   from   inventory:infix:∪
   cell   (1..3) | 1
+  level  3
   code   ((1..3)) ∪ (1)
   is     Set.new(2,3,1)
   type   Set
@@ -4056,6 +4439,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0384
   from   inventory:infix:∪
   cell   (1..3) | -1
+  level  3
   code   ((1..3)) ∪ (-1)
   is     Set.new(2,1,3,-1)
   type   Set
@@ -4068,6 +4452,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0385
   from   inventory:infix:∪
   cell   (1..3) | 1/2
+  level  3
   code   ((1..3)) ∪ (1/2)
   is     Set.new(1,3,0.5,2)
   type   Set
@@ -4080,6 +4465,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0386
   from   inventory:infix:∪
   cell   (1..3) | 0e0
+  level  3
   code   ((1..3)) ∪ (0e0)
   is     Set.new(3,2,1,0e0)
   type   Set
@@ -4092,6 +4478,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0387
   from   inventory:infix:∪
   cell   (1..3) | NaN
+  level  3
   code   ((1..3)) ∪ (NaN)
   is     Set.new(NaN,3,1,2)
   type   Set
@@ -4101,6 +4488,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0388
   from   inventory:infix:∪
   cell   (1..3) | ""
+  level  3
   code   ((1..3)) ∪ ("")
   is     Set.new(1,"",3,2)
   type   Set
@@ -4113,6 +4501,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0389
   from   inventory:infix:∪
   cell   (1..3) | "a"
+  level  3
   code   ((1..3)) ∪ ("a")
   is     Set.new(1,"a",2,3)
   type   Set
@@ -4125,6 +4514,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0390
   from   inventory:infix:∪
   cell   (1..3) | True
+  level  3
   code   ((1..3)) ∪ (True)
   is     Set.new(Bool::True,2,3,1)
   type   Set
@@ -4134,6 +4524,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0391
   from   inventory:infix:∪
   cell   (1..3) | Any
+  level  3
   code   ((1..3)) ∪ (Any)
   is     Set.new(3,2,Any,1)
   type   Set
@@ -4146,6 +4537,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0392
   from   inventory:infix:∪
   cell   (1..3) | (1,2)
+  level  3
   code   ((1..3)) ∪ ((1,2))
   is     Set.new(2,3,1)
   type   Set
@@ -4158,6 +4550,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0393
   from   inventory:infix:∪
   cell   (1..3) | {a=>1}
+  level  3
   code   ((1..3)) ∪ ({a=>1})
   is     Set.new(1,2,3,"a")
   type   Set
@@ -4170,6 +4563,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0394
   from   inventory:infix:∪
   cell   (1..3) | -0e0
+  level  3
   code   ((1..3)) ∪ (-0e0)
   is     Set.new(3,2,1,-0e0)
   type   Set
@@ -4182,6 +4576,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0395
   from   inventory:infix:∪
   cell   (1..3) | Inf
+  level  3
   code   ((1..3)) ∪ (Inf)
   is     Set.new(1,Inf,2,3)
   type   Set
@@ -4194,6 +4589,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0396
   from   inventory:infix:∪
   cell   (1..3) | 2**64
+  level  3
   code   ((1..3)) ∪ (2**64)
   is     Set.new(1,3,18446744073709551616,2)
   type   Set
@@ -4206,6 +4602,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0397
   from   inventory:infix:∪
   cell   (1..3) | False
+  level  3
   code   ((1..3)) ∪ (False)
   is     Set.new(2,3,1,Bool::False)
   type   Set
@@ -4218,6 +4615,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0398
   from   inventory:infix:∪
   cell   (1..3) | Nil
+  level  3
   code   ((1..3)) ∪ (Nil)
   is     Set.new(3,1,Nil,2)
   type   Set
@@ -4230,6 +4628,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0399
   from   inventory:infix:∪
   cell   (1..3) | ()
+  level  3
   code   ((1..3)) ∪ (())
   is     Set.new(1,3,2)
   type   Set
@@ -4242,8 +4641,2051 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0400
   from   inventory:infix:∪
   cell   (1..3) | "0"
+  level  3
   code   ((1..3)) ∪ ("0")
   is     Set.new("0",3,1,2)
   type   Set
   oracle rakudo-2026.07 → Set.new("0",3,1,2)
   oracle rakupp-v3.14.0-92-g78048b0-modified → Set.new(0,1,2,3)
+
+- id     0401
+  from   inventory:infix:∪
+  cell   0 | Int
+  level  3
+  code   (0) ∪ (Int)
+  is     Set.new(0,Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(0,Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,0)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0402
+  from   inventory:infix:∪
+  cell   1 | Int
+  level  3
+  code   (1) ∪ (Int)
+  is     Set.new(Int,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,1)
+
+- id     0403
+  from   inventory:infix:∪
+  cell   -1 | Int
+  level  3
+  code   (-1) ∪ (Int)
+  is     Set.new(-1,Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(-1,Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,-1)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0404
+  from   inventory:infix:∪
+  cell   1/2 | Int
+  level  3
+  code   (1/2) ∪ (Int)
+  is     Set.new(Int,0.5)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,0.5)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,0.5)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0405
+  from   inventory:infix:∪
+  cell   0e0 | Int
+  level  3
+  code   (0e0) ∪ (Int)
+  is     Set.new(Int,0e0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,0e0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,0)
+
+- id     0406
+  from   inventory:infix:∪
+  cell   NaN | Int
+  level  3
+  code   (NaN) ∪ (Int)
+  is     Set.new(NaN,Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(NaN,Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,NaN)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0407
+  from   inventory:infix:∪
+  cell   "" | Int
+  level  3
+  code   ("") ∪ (Int)
+  is     Set.new("",Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("",Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("",Int)
+
+- id     0408
+  from   inventory:infix:∪
+  cell   "a" | Int
+  level  3
+  code   ("a") ∪ (Int)
+  is     Set.new(Int,"a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,"a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0409
+  from   inventory:infix:∪
+  cell   True | Int
+  level  3
+  code   (True) ∪ (Int)
+  is     Set.new(Int,Bool::True)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,Bool::True)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,Bool::True)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0410
+  from   inventory:infix:∪
+  cell   Any | Int
+  level  3
+  code   (Any) ∪ (Int)
+  is     Set.new(Any,Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Any,Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Any,Int)
+
+- id     0411
+  from   inventory:infix:∪
+  cell   (1,2) | Int
+  level  3
+  code   ((1,2)) ∪ (Int)
+  is     Set.new(1,2,Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2,Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0412
+  from   inventory:infix:∪
+  cell   {a=>1} | Int
+  level  3
+  code   ({a=>1}) ∪ (Int)
+  is     Set.new("a",Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,"a")
+
+- id     0413
+  from   inventory:infix:∪
+  cell   -0e0 | Int
+  level  3
+  code   (-0e0) ∪ (Int)
+  is     Set.new(-0e0,Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(-0e0,Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,-0e0)
+
+- id     0414
+  from   inventory:infix:∪
+  cell   Inf | Int
+  level  3
+  code   (Inf) ∪ (Int)
+  is     Set.new(Int,Inf)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,Inf)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,Inf)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0415
+  from   inventory:infix:∪
+  cell   2**64 | Int
+  level  3
+  code   (2**64) ∪ (Int)
+  is     Set.new(18446744073709551616,Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(18446744073709551616,Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,18446744073709551616)
+
+- id     0416
+  from   inventory:infix:∪
+  cell   False | Int
+  level  3
+  code   (False) ∪ (Int)
+  is     Set.new(Bool::False,Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Bool::False,Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,Bool::False)
+
+- id     0417
+  from   inventory:infix:∪
+  cell   Nil | Int
+  level  3
+  code   (Nil) ∪ (Int)
+  is     Set.new(Int,Nil)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,Nil)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("",Int)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0418
+  from   inventory:infix:∪
+  cell   () | Int
+  level  3
+  code   (()) ∪ (Int)
+  is     Set.new(Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int)
+
+- id     0419
+  from   inventory:infix:∪
+  cell   "0" | Int
+  level  3
+  code   ("0") ∪ (Int)
+  is     Set.new("0",Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("0",Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,0)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0420
+  from   inventory:infix:∪
+  cell   (1..3) | Int
+  level  3
+  code   ((1..3)) ∪ (Int)
+  is     Set.new(3,Int,1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(3,Int,1,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,1,2,3)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0421
+  from   inventory:infix:∪
+  cell   Int | Int
+  level  3
+  code   (Int) ∪ (Int)
+  is     Set.new(Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int)
+
+- id     0422
+  from   inventory:infix:∪
+  cell   Int | 0
+  level  3
+  code   (Int) ∪ (0)
+  is     Set.new(Int,0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,0)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0423
+  from   inventory:infix:∪
+  cell   Int | 1
+  level  3
+  code   (Int) ∪ (1)
+  is     Set.new(Int,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,1)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0424
+  from   inventory:infix:∪
+  cell   Int | -1
+  level  3
+  code   (Int) ∪ (-1)
+  is     Set.new(-1,Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(-1,Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,-1)
+
+- id     0425
+  from   inventory:infix:∪
+  cell   Int | 1/2
+  level  3
+  code   (Int) ∪ (1/2)
+  is     Set.new(Int,0.5)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,0.5)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,0.5)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0426
+  from   inventory:infix:∪
+  cell   Int | 0e0
+  level  3
+  code   (Int) ∪ (0e0)
+  is     Set.new(0e0,Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(0e0,Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,0)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0427
+  from   inventory:infix:∪
+  cell   Int | NaN
+  level  3
+  code   (Int) ∪ (NaN)
+  is     Set.new(Int,NaN)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,NaN)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,NaN)
+
+- id     0428
+  from   inventory:infix:∪
+  cell   Int | ""
+  level  3
+  code   (Int) ∪ ("")
+  is     Set.new("",Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("",Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("",Int)
+
+- id     0429
+  from   inventory:infix:∪
+  cell   Int | "a"
+  level  3
+  code   (Int) ∪ ("a")
+  is     Set.new("a",Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0430
+  from   inventory:infix:∪
+  cell   Int | True
+  level  3
+  code   (Int) ∪ (True)
+  is     Set.new(Bool::True,Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Bool::True,Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,Bool::True)
+
+- id     0431
+  from   inventory:infix:∪
+  cell   Int | Any
+  level  3
+  code   (Int) ∪ (Any)
+  is     Set.new(Any,Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Any,Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Any,Int)
+
+- id     0432
+  from   inventory:infix:∪
+  cell   Int | (1,2)
+  level  3
+  code   (Int) ∪ ((1,2))
+  is     Set.new(1,Int,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,Int,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0433
+  from   inventory:infix:∪
+  cell   Int | {a=>1}
+  level  3
+  code   (Int) ∪ ({a=>1})
+  is     Set.new("a",Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0434
+  from   inventory:infix:∪
+  cell   Int | -0e0
+  level  3
+  code   (Int) ∪ (-0e0)
+  is     Set.new(Int,-0e0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,-0e0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,-0e0)
+
+- id     0435
+  from   inventory:infix:∪
+  cell   Int | Inf
+  level  3
+  code   (Int) ∪ (Inf)
+  is     Set.new(Inf,Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Inf,Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,Inf)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0436
+  from   inventory:infix:∪
+  cell   Int | 2**64
+  level  3
+  code   (Int) ∪ (2**64)
+  is     Set.new(18446744073709551616,Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(18446744073709551616,Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,18446744073709551616)
+
+- id     0437
+  from   inventory:infix:∪
+  cell   Int | False
+  level  3
+  code   (Int) ∪ (False)
+  is     Set.new(Int,Bool::False)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,Bool::False)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,Bool::False)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0438
+  from   inventory:infix:∪
+  cell   Int | Nil
+  level  3
+  code   (Int) ∪ (Nil)
+  is     Set.new(Int,Nil)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,Nil)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("",Int)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0439
+  from   inventory:infix:∪
+  cell   Int | ()
+  level  3
+  code   (Int) ∪ (())
+  is     Set.new(Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int)
+
+- id     0440
+  from   inventory:infix:∪
+  cell   Int | "0"
+  level  3
+  code   (Int) ∪ ("0")
+  is     Set.new(Int,"0")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,"0")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,0)
+
+- id     0441
+  from   inventory:infix:∪
+  cell   Int | (1..3)
+  level  3
+  code   (Int) ∪ ((1..3))
+  is     Set.new(3,Int,1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(3,Int,1,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,1,2,3)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0442
+  from   inventory:infix:∪
+  cell   0 | "a b"
+  level  3
+  code   (0) ∪ ("a b")
+  is     Set.new("a b",0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0443
+  from   inventory:infix:∪
+  cell   1 | "a b"
+  level  3
+  code   (1) ∪ ("a b")
+  is     Set.new(1,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,"a b")
+
+- id     0444
+  from   inventory:infix:∪
+  cell   -1 | "a b"
+  level  3
+  code   (-1) ∪ ("a b")
+  is     Set.new("a b",-1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",-1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(-1,"a b")
+
+- id     0445
+  from   inventory:infix:∪
+  cell   1/2 | "a b"
+  level  3
+  code   (1/2) ∪ ("a b")
+  is     Set.new("a b",0.5)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",0.5)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0.5,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0446
+  from   inventory:infix:∪
+  cell   0e0 | "a b"
+  level  3
+  code   (0e0) ∪ ("a b")
+  is     Set.new("a b",0e0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",0e0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0447
+  from   inventory:infix:∪
+  cell   NaN | "a b"
+  level  3
+  code   (NaN) ∪ ("a b")
+  is     Set.new(NaN,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(NaN,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(NaN,"a b")
+
+- id     0448
+  from   inventory:infix:∪
+  cell   "" | "a b"
+  level  3
+  code   ("") ∪ ("a b")
+  is     Set.new("","a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("","a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("","a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0449
+  from   inventory:infix:∪
+  cell   "a" | "a b"
+  level  3
+  code   ("a") ∪ ("a b")
+  is     Set.new("a b","a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b","a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a","a b")
+
+- id     0450
+  from   inventory:infix:∪
+  cell   True | "a b"
+  level  3
+  code   (True) ∪ ("a b")
+  is     Set.new(Bool::True,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Bool::True,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Bool::True,"a b")
+
+- id     0451
+  from   inventory:infix:∪
+  cell   Any | "a b"
+  level  3
+  code   (Any) ∪ ("a b")
+  is     Set.new("a b",Any)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",Any)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Any,"a b")
+
+- id     0452
+  from   inventory:infix:∪
+  cell   (1,2) | "a b"
+  level  3
+  code   ((1,2)) ∪ ("a b")
+  is     Set.new(1,2,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0453
+  from   inventory:infix:∪
+  cell   {a=>1} | "a b"
+  level  3
+  code   ({a=>1}) ∪ ("a b")
+  is     Set.new("a","a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a","a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a","a b")
+
+- id     0454
+  from   inventory:infix:∪
+  cell   -0e0 | "a b"
+  level  3
+  code   (-0e0) ∪ ("a b")
+  is     Set.new("a b",-0e0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",-0e0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(-0e0,"a b")
+
+- id     0455
+  from   inventory:infix:∪
+  cell   Inf | "a b"
+  level  3
+  code   (Inf) ∪ ("a b")
+  is     Set.new(Inf,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Inf,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Inf,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0456
+  from   inventory:infix:∪
+  cell   2**64 | "a b"
+  level  3
+  code   (2**64) ∪ ("a b")
+  is     Set.new("a b",18446744073709551616)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",18446744073709551616)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(18446744073709551616,"a b")
+
+- id     0457
+  from   inventory:infix:∪
+  cell   False | "a b"
+  level  3
+  code   (False) ∪ ("a b")
+  is     Set.new("a b",Bool::False)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",Bool::False)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Bool::False,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0458
+  from   inventory:infix:∪
+  cell   Nil | "a b"
+  level  3
+  code   (Nil) ∪ ("a b")
+  is     Set.new(Nil,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Nil,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("","a b")
+
+- id     0459
+  from   inventory:infix:∪
+  cell   () | "a b"
+  level  3
+  code   (()) ∪ ("a b")
+  is     Set.new("a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a b")
+
+- id     0460
+  from   inventory:infix:∪
+  cell   "0" | "a b"
+  level  3
+  code   ("0") ∪ ("a b")
+  is     Set.new("0","a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("0","a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,"a b")
+
+- id     0461
+  from   inventory:infix:∪
+  cell   (1..3) | "a b"
+  level  3
+  code   ((1..3)) ∪ ("a b")
+  is     Set.new(1,3,2,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,3,2,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,3,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0462
+  from   inventory:infix:∪
+  cell   Int | "a b"
+  level  3
+  code   (Int) ∪ ("a b")
+  is     Set.new("a b",Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,"a b")
+
+- id     0463
+  from   inventory:infix:∪
+  cell   "a b" | "a b"
+  level  3
+  code   ("a b") ∪ ("a b")
+  is     Set.new("a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a b")
+
+- id     0464
+  from   inventory:infix:∪
+  cell   "a b" | 0
+  level  3
+  code   ("a b") ∪ (0)
+  is     Set.new("a b",0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,"a b")
+
+- id     0465
+  from   inventory:infix:∪
+  cell   "a b" | 1
+  level  3
+  code   ("a b") ∪ (1)
+  is     Set.new(1,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,"a b")
+
+- id     0466
+  from   inventory:infix:∪
+  cell   "a b" | -1
+  level  3
+  code   ("a b") ∪ (-1)
+  is     Set.new(-1,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(-1,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(-1,"a b")
+
+- id     0467
+  from   inventory:infix:∪
+  cell   "a b" | 1/2
+  level  3
+  code   ("a b") ∪ (1/2)
+  is     Set.new("a b",0.5)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",0.5)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0.5,"a b")
+
+- id     0468
+  from   inventory:infix:∪
+  cell   "a b" | 0e0
+  level  3
+  code   ("a b") ∪ (0e0)
+  is     Set.new("a b",0e0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",0e0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0469
+  from   inventory:infix:∪
+  cell   "a b" | NaN
+  level  3
+  code   ("a b") ∪ (NaN)
+  is     Set.new(NaN,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(NaN,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(NaN,"a b")
+
+- id     0470
+  from   inventory:infix:∪
+  cell   "a b" | ""
+  level  3
+  code   ("a b") ∪ ("")
+  is     Set.new("","a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("","a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("","a b")
+
+- id     0471
+  from   inventory:infix:∪
+  cell   "a b" | "a"
+  level  3
+  code   ("a b") ∪ ("a")
+  is     Set.new("a","a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a","a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a","a b")
+
+- id     0472
+  from   inventory:infix:∪
+  cell   "a b" | True
+  level  3
+  code   ("a b") ∪ (True)
+  is     Set.new(Bool::True,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Bool::True,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Bool::True,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0473
+  from   inventory:infix:∪
+  cell   "a b" | Any
+  level  3
+  code   ("a b") ∪ (Any)
+  is     Set.new("a b",Any)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",Any)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Any,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0474
+  from   inventory:infix:∪
+  cell   "a b" | (1,2)
+  level  3
+  code   ("a b") ∪ ((1,2))
+  is     Set.new("a b",2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",2,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0475
+  from   inventory:infix:∪
+  cell   "a b" | {a=>1}
+  level  3
+  code   ("a b") ∪ ({a=>1})
+  is     Set.new("a b","a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b","a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a","a b")
+
+- id     0476
+  from   inventory:infix:∪
+  cell   "a b" | -0e0
+  level  3
+  code   ("a b") ∪ (-0e0)
+  is     Set.new("a b",-0e0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",-0e0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(-0e0,"a b")
+
+- id     0477
+  from   inventory:infix:∪
+  cell   "a b" | Inf
+  level  3
+  code   ("a b") ∪ (Inf)
+  is     Set.new(Inf,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Inf,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Inf,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0478
+  from   inventory:infix:∪
+  cell   "a b" | 2**64
+  level  3
+  code   ("a b") ∪ (2**64)
+  is     Set.new(18446744073709551616,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(18446744073709551616,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(18446744073709551616,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0479
+  from   inventory:infix:∪
+  cell   "a b" | False
+  level  3
+  code   ("a b") ∪ (False)
+  is     Set.new(Bool::False,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Bool::False,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Bool::False,"a b")
+
+- id     0480
+  from   inventory:infix:∪
+  cell   "a b" | Nil
+  level  3
+  code   ("a b") ∪ (Nil)
+  is     Set.new(Nil,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Nil,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("","a b")
+
+- id     0481
+  from   inventory:infix:∪
+  cell   "a b" | ()
+  level  3
+  code   ("a b") ∪ (())
+  is     Set.new("a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a b")
+
+- id     0482
+  from   inventory:infix:∪
+  cell   "a b" | "0"
+  level  3
+  code   ("a b") ∪ ("0")
+  is     Set.new("a b","0")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b","0")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,"a b")
+
+- id     0483
+  from   inventory:infix:∪
+  cell   "a b" | (1..3)
+  level  3
+  code   ("a b") ∪ ((1..3))
+  is     Set.new(3,2,1,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(3,2,1,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,3,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0484
+  from   inventory:infix:∪
+  cell   "a b" | Int
+  level  3
+  code   ("a b") ∪ (Int)
+  is     Set.new(Int,"a b")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,"a b")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,"a b")
+
+- id     0485
+  from   inventory:infix:∪
+  cell   0 | [1,2]
+  level  3
+  code   (0) ∪ ([1,2])
+  is     Set.new(1,2,0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2,0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0486
+  from   inventory:infix:∪
+  cell   1 | [1,2]
+  level  3
+  code   (1) ∪ ([1,2])
+  is     Set.new(1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2)
+
+- id     0487
+  from   inventory:infix:∪
+  cell   -1 | [1,2]
+  level  3
+  code   (-1) ∪ ([1,2])
+  is     Set.new(-1,2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(-1,2,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(-1,1,2)
+
+- id     0488
+  from   inventory:infix:∪
+  cell   1/2 | [1,2]
+  level  3
+  code   (1/2) ∪ ([1,2])
+  is     Set.new(2,1,0.5)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,1,0.5)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0.5,1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0489
+  from   inventory:infix:∪
+  cell   0e0 | [1,2]
+  level  3
+  code   (0e0) ∪ ([1,2])
+  is     Set.new(0e0,2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(0e0,2,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,1,2)
+
+- id     0490
+  from   inventory:infix:∪
+  cell   NaN | [1,2]
+  level  3
+  code   (NaN) ∪ ([1,2])
+  is     Set.new(2,NaN,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,NaN,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,NaN)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0491
+  from   inventory:infix:∪
+  cell   "" | [1,2]
+  level  3
+  code   ("") ∪ ([1,2])
+  is     Set.new(1,2,"")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2,"")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("",1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0492
+  from   inventory:infix:∪
+  cell   "a" | [1,2]
+  level  3
+  code   ("a") ∪ ([1,2])
+  is     Set.new(1,"a",2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,"a",2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0493
+  from   inventory:infix:∪
+  cell   True | [1,2]
+  level  3
+  code   (True) ∪ ([1,2])
+  is     Set.new(Bool::True,2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Bool::True,2,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,Bool::True)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0494
+  from   inventory:infix:∪
+  cell   Any | [1,2]
+  level  3
+  code   (Any) ∪ ([1,2])
+  is     Set.new(Any,1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Any,1,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Any,1,2)
+
+- id     0495
+  from   inventory:infix:∪
+  cell   (1,2) | [1,2]
+  level  3
+  code   ((1,2)) ∪ ([1,2])
+  is     Set.new(2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2)
+
+- id     0496
+  from   inventory:infix:∪
+  cell   {a=>1} | [1,2]
+  level  3
+  code   ({a=>1}) ∪ ([1,2])
+  is     Set.new(2,1,"a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,1,"a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0497
+  from   inventory:infix:∪
+  cell   -0e0 | [1,2]
+  level  3
+  code   (-0e0) ∪ ([1,2])
+  is     Set.new(1,2,-0e0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2,-0e0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(-0e0,1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0498
+  from   inventory:infix:∪
+  cell   Inf | [1,2]
+  level  3
+  code   (Inf) ∪ ([1,2])
+  is     Set.new(2,Inf,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,Inf,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,Inf)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0499
+  from   inventory:infix:∪
+  cell   2**64 | [1,2]
+  level  3
+  code   (2**64) ∪ ([1,2])
+  is     Set.new(1,2,18446744073709551616)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2,18446744073709551616)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,18446744073709551616,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0500
+  from   inventory:infix:∪
+  cell   False | [1,2]
+  level  3
+  code   (False) ∪ ([1,2])
+  is     Set.new(2,Bool::False,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,Bool::False,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,Bool::False)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0501
+  from   inventory:infix:∪
+  cell   Nil | [1,2]
+  level  3
+  code   (Nil) ∪ ([1,2])
+  is     Set.new(1,Nil,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,Nil,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("",1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0502
+  from   inventory:infix:∪
+  cell   () | [1,2]
+  level  3
+  code   (()) ∪ ([1,2])
+  is     Set.new(2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0503
+  from   inventory:infix:∪
+  cell   "0" | [1,2]
+  level  3
+  code   ("0") ∪ ([1,2])
+  is     Set.new("0",1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("0",1,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0504
+  from   inventory:infix:∪
+  cell   (1..3) | [1,2]
+  level  3
+  code   ((1..3)) ∪ ([1,2])
+  is     Set.new(1,3,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,3,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,3)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0505
+  from   inventory:infix:∪
+  cell   Int | [1,2]
+  level  3
+  code   (Int) ∪ ([1,2])
+  is     Set.new(Int,2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,2,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0506
+  from   inventory:infix:∪
+  cell   "a b" | [1,2]
+  level  3
+  code   ("a b") ∪ ([1,2])
+  is     Set.new(1,"a b",2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,"a b",2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0507
+  from   inventory:infix:∪
+  cell   [1,2] | [1,2]
+  level  3
+  code   ([1,2]) ∪ ([1,2])
+  is     Set.new(1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0508
+  from   inventory:infix:∪
+  cell   [1,2] | 0
+  level  3
+  code   ([1,2]) ∪ (0)
+  is     Set.new(1,2,0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2,0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0509
+  from   inventory:infix:∪
+  cell   [1,2] | 1
+  level  3
+  code   ([1,2]) ∪ (1)
+  is     Set.new(1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0510
+  from   inventory:infix:∪
+  cell   [1,2] | -1
+  level  3
+  code   ([1,2]) ∪ (-1)
+  is     Set.new(-1,2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(-1,2,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(-1,1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0511
+  from   inventory:infix:∪
+  cell   [1,2] | 1/2
+  level  3
+  code   ([1,2]) ∪ (1/2)
+  is     Set.new(2,1,0.5)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,1,0.5)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0.5,1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0512
+  from   inventory:infix:∪
+  cell   [1,2] | 0e0
+  level  3
+  code   ([1,2]) ∪ (0e0)
+  is     Set.new(0e0,2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(0e0,2,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0513
+  from   inventory:infix:∪
+  cell   [1,2] | NaN
+  level  3
+  code   ([1,2]) ∪ (NaN)
+  is     Set.new(NaN,2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(NaN,2,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,NaN)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0514
+  from   inventory:infix:∪
+  cell   [1,2] | ""
+  level  3
+  code   ([1,2]) ∪ ("")
+  is     Set.new(1,"",2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,"",2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("",1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0515
+  from   inventory:infix:∪
+  cell   [1,2] | "a"
+  level  3
+  code   ([1,2]) ∪ ("a")
+  is     Set.new("a",1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",1,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0516
+  from   inventory:infix:∪
+  cell   [1,2] | True
+  level  3
+  code   ([1,2]) ∪ (True)
+  is     Set.new(2,Bool::True,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,Bool::True,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,Bool::True)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0517
+  from   inventory:infix:∪
+  cell   [1,2] | Any
+  level  3
+  code   ([1,2]) ∪ (Any)
+  is     Set.new(2,1,Any)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,1,Any)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Any,1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0518
+  from   inventory:infix:∪
+  cell   [1,2] | (1,2)
+  level  3
+  code   ([1,2]) ∪ ((1,2))
+  is     Set.new(1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0519
+  from   inventory:infix:∪
+  cell   [1,2] | {a=>1}
+  level  3
+  code   ([1,2]) ∪ ({a=>1})
+  is     Set.new(2,"a",1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,"a",1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0520
+  from   inventory:infix:∪
+  cell   [1,2] | -0e0
+  level  3
+  code   ([1,2]) ∪ (-0e0)
+  is     Set.new(1,2,-0e0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2,-0e0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(-0e0,1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0521
+  from   inventory:infix:∪
+  cell   [1,2] | Inf
+  level  3
+  code   ([1,2]) ∪ (Inf)
+  is     Set.new(1,Inf,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,Inf,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,Inf)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0522
+  from   inventory:infix:∪
+  cell   [1,2] | 2**64
+  level  3
+  code   ([1,2]) ∪ (2**64)
+  is     Set.new(18446744073709551616,1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(18446744073709551616,1,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,18446744073709551616,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0523
+  from   inventory:infix:∪
+  cell   [1,2] | False
+  level  3
+  code   ([1,2]) ∪ (False)
+  is     Set.new(Bool::False,2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Bool::False,2,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,Bool::False)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0524
+  from   inventory:infix:∪
+  cell   [1,2] | Nil
+  level  3
+  code   ([1,2]) ∪ (Nil)
+  is     Set.new(2,Nil,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,Nil,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("",1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0525
+  from   inventory:infix:∪
+  cell   [1,2] | ()
+  level  3
+  code   ([1,2]) ∪ (())
+  is     Set.new(2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2)
+
+- id     0526
+  from   inventory:infix:∪
+  cell   [1,2] | "0"
+  level  3
+  code   ([1,2]) ∪ ("0")
+  is     Set.new(2,1,"0")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,1,"0")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,1,2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0527
+  from   inventory:infix:∪
+  cell   [1,2] | (1..3)
+  level  3
+  code   ([1,2]) ∪ ((1..3))
+  is     Set.new(1,2,3)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,2,3)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,3)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0528
+  from   inventory:infix:∪
+  cell   [1,2] | Int
+  level  3
+  code   ([1,2]) ∪ (Int)
+  is     Set.new(Int,1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,1,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,1,2)
+
+- id     0529
+  from   inventory:infix:∪
+  cell   [1,2] | "a b"
+  level  3
+  code   ([1,2]) ∪ ("a b")
+  is     Set.new("a b",1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b",1,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,"a b")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0530
+  from   inventory:infix:∪
+  cell   0 | (a => 1)
+  level  3
+  code   (0) ∪ ((a => 1))
+  is     Set.new("a",0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0531
+  from   inventory:infix:∪
+  cell   1 | (a => 1)
+  level  3
+  code   (1) ∪ ((a => 1))
+  is     Set.new("a",1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,"a")
+
+- id     0532
+  from   inventory:infix:∪
+  cell   -1 | (a => 1)
+  level  3
+  code   (-1) ∪ ((a => 1))
+  is     Set.new(-1,"a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(-1,"a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(-1,"a")
+
+- id     0533
+  from   inventory:infix:∪
+  cell   1/2 | (a => 1)
+  level  3
+  code   (1/2) ∪ ((a => 1))
+  is     Set.new(0.5,"a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(0.5,"a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0.5,"a")
+
+- id     0534
+  from   inventory:infix:∪
+  cell   0e0 | (a => 1)
+  level  3
+  code   (0e0) ∪ ((a => 1))
+  is     Set.new("a",0e0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",0e0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0535
+  from   inventory:infix:∪
+  cell   NaN | (a => 1)
+  level  3
+  code   (NaN) ∪ ((a => 1))
+  is     Set.new("a",NaN)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",NaN)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(NaN,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0536
+  from   inventory:infix:∪
+  cell   "" | (a => 1)
+  level  3
+  code   ("") ∪ ((a => 1))
+  is     Set.new("","a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("","a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("","a")
+
+- id     0537
+  from   inventory:infix:∪
+  cell   "a" | (a => 1)
+  level  3
+  code   ("a") ∪ ((a => 1))
+  is     Set.new("a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a")
+
+- id     0538
+  from   inventory:infix:∪
+  cell   True | (a => 1)
+  level  3
+  code   (True) ∪ ((a => 1))
+  is     Set.new(Bool::True,"a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Bool::True,"a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Bool::True,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0539
+  from   inventory:infix:∪
+  cell   Any | (a => 1)
+  level  3
+  code   (Any) ∪ ((a => 1))
+  is     Set.new("a",Any)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",Any)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Any,"a")
+
+- id     0540
+  from   inventory:infix:∪
+  cell   (1,2) | (a => 1)
+  level  3
+  code   ((1,2)) ∪ ((a => 1))
+  is     Set.new(2,"a",1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,"a",1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0541
+  from   inventory:infix:∪
+  cell   {a=>1} | (a => 1)
+  level  3
+  code   ({a=>1}) ∪ ((a => 1))
+  is     Set.new("a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a")
+
+- id     0542
+  from   inventory:infix:∪
+  cell   -0e0 | (a => 1)
+  level  3
+  code   (-0e0) ∪ ((a => 1))
+  is     Set.new("a",-0e0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",-0e0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(-0e0,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0543
+  from   inventory:infix:∪
+  cell   Inf | (a => 1)
+  level  3
+  code   (Inf) ∪ ((a => 1))
+  is     Set.new(Inf,"a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Inf,"a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Inf,"a")
+
+- id     0544
+  from   inventory:infix:∪
+  cell   2**64 | (a => 1)
+  level  3
+  code   (2**64) ∪ ((a => 1))
+  is     Set.new(18446744073709551616,"a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(18446744073709551616,"a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(18446744073709551616,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0545
+  from   inventory:infix:∪
+  cell   False | (a => 1)
+  level  3
+  code   (False) ∪ ((a => 1))
+  is     Set.new(Bool::False,"a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Bool::False,"a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Bool::False,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0546
+  from   inventory:infix:∪
+  cell   Nil | (a => 1)
+  level  3
+  code   (Nil) ∪ ((a => 1))
+  is     Set.new(Nil,"a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Nil,"a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("","a")
+
+- id     0547
+  from   inventory:infix:∪
+  cell   () | (a => 1)
+  level  3
+  code   (()) ∪ ((a => 1))
+  is     Set.new("a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a")
+
+- id     0548
+  from   inventory:infix:∪
+  cell   "0" | (a => 1)
+  level  3
+  code   ("0") ∪ ((a => 1))
+  is     Set.new("a","0")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a","0")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0549
+  from   inventory:infix:∪
+  cell   (1..3) | (a => 1)
+  level  3
+  code   ((1..3)) ∪ ((a => 1))
+  is     Set.new(2,"a",3,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(2,"a",3,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,3,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0550
+  from   inventory:infix:∪
+  cell   Int | (a => 1)
+  level  3
+  code   (Int) ∪ ((a => 1))
+  is     Set.new("a",Int)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",Int)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,"a")
+
+- id     0551
+  from   inventory:infix:∪
+  cell   "a b" | (a => 1)
+  level  3
+  code   ("a b") ∪ ((a => 1))
+  is     Set.new("a b","a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b","a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a","a b")
+
+- id     0552
+  from   inventory:infix:∪
+  cell   [1,2] | (a => 1)
+  level  3
+  code   ([1,2]) ∪ ((a => 1))
+  is     Set.new(1,"a",2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,"a",2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,"a")
+
+- id     0553
+  from   inventory:infix:∪
+  cell   (a => 1) | (a => 1)
+  level  3
+  code   ((a => 1)) ∪ ((a => 1))
+  is     Set.new("a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a")
+
+- id     0554
+  from   inventory:infix:∪
+  cell   (a => 1) | 0
+  level  3
+  code   ((a => 1)) ∪ (0)
+  is     Set.new("a",0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0,"a")
+
+- id     0555
+  from   inventory:infix:∪
+  cell   (a => 1) | 1
+  level  3
+  code   ((a => 1)) ∪ (1)
+  is     Set.new(1,"a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,"a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0556
+  from   inventory:infix:∪
+  cell   (a => 1) | -1
+  level  3
+  code   ((a => 1)) ∪ (-1)
+  is     Set.new("a",-1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",-1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(-1,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0557
+  from   inventory:infix:∪
+  cell   (a => 1) | 1/2
+  level  3
+  code   ((a => 1)) ∪ (1/2)
+  is     Set.new("a",0.5)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",0.5)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0.5,"a")
+
+- id     0558
+  from   inventory:infix:∪
+  cell   (a => 1) | 0e0
+  level  3
+  code   ((a => 1)) ∪ (0e0)
+  is     Set.new(0e0,"a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(0e0,"a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0e0,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0559
+  from   inventory:infix:∪
+  cell   (a => 1) | NaN
+  level  3
+  code   ((a => 1)) ∪ (NaN)
+  is     Set.new("a",NaN)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",NaN)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(NaN,"a")
+
+- id     0560
+  from   inventory:infix:∪
+  cell   (a => 1) | ""
+  level  3
+  code   ((a => 1)) ∪ ("")
+  is     Set.new("","a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("","a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("","a")
+
+- id     0561
+  from   inventory:infix:∪
+  cell   (a => 1) | "a"
+  level  3
+  code   ((a => 1)) ∪ ("a")
+  is     Set.new("a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a")
+
+- id     0562
+  from   inventory:infix:∪
+  cell   (a => 1) | True
+  level  3
+  code   ((a => 1)) ∪ (True)
+  is     Set.new("a",Bool::True)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",Bool::True)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Bool::True,"a")
+
+- id     0563
+  from   inventory:infix:∪
+  cell   (a => 1) | Any
+  level  3
+  code   ((a => 1)) ∪ (Any)
+  is     Set.new(Any,"a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Any,"a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Any,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0564
+  from   inventory:infix:∪
+  cell   (a => 1) | (1,2)
+  level  3
+  code   ((a => 1)) ∪ ((1,2))
+  is     Set.new(1,"a",2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1,"a",2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0565
+  from   inventory:infix:∪
+  cell   (a => 1) | {a=>1}
+  level  3
+  code   ((a => 1)) ∪ ({a=>1})
+  is     Set.new("a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a")
+
+- id     0566
+  from   inventory:infix:∪
+  cell   (a => 1) | -0e0
+  level  3
+  code   ((a => 1)) ∪ (-0e0)
+  is     Set.new("a",-0e0)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",-0e0)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(-0e0,"a")
+
+- id     0567
+  from   inventory:infix:∪
+  cell   (a => 1) | Inf
+  level  3
+  code   ((a => 1)) ∪ (Inf)
+  is     Set.new(Inf,"a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Inf,"a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Inf,"a")
+
+- id     0568
+  from   inventory:infix:∪
+  cell   (a => 1) | 2**64
+  level  3
+  code   ((a => 1)) ∪ (2**64)
+  is     Set.new("a",18446744073709551616)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",18446744073709551616)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(18446744073709551616,"a")
+
+- id     0569
+  from   inventory:infix:∪
+  cell   (a => 1) | False
+  level  3
+  code   ((a => 1)) ∪ (False)
+  is     Set.new("a",Bool::False)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",Bool::False)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Bool::False,"a")
+
+- id     0570
+  from   inventory:infix:∪
+  cell   (a => 1) | Nil
+  level  3
+  code   ((a => 1)) ∪ (Nil)
+  is     Set.new("a",Nil)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",Nil)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("","a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0571
+  from   inventory:infix:∪
+  cell   (a => 1) | ()
+  level  3
+  code   ((a => 1)) ∪ (())
+  is     Set.new("a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a")
+
+- id     0572
+  from   inventory:infix:∪
+  cell   (a => 1) | "0"
+  level  3
+  code   ((a => 1)) ∪ ("0")
+  is     Set.new("0","a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("0","a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(0e0,"a")
+
+- id     0573
+  from   inventory:infix:∪
+  cell   (a => 1) | (1..3)
+  level  3
+  code   ((a => 1)) ∪ ((1..3))
+  is     Set.new("a",3,2,1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",3,2,1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,3,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0574
+  from   inventory:infix:∪
+  cell   (a => 1) | Int
+  level  3
+  code   ((a => 1)) ∪ (Int)
+  is     Set.new(Int,"a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new(Int,"a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(Int,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0575
+  from   inventory:infix:∪
+  cell   (a => 1) | "a b"
+  level  3
+  code   ((a => 1)) ∪ ("a b")
+  is     Set.new("a b","a")
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a b","a")
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new("a","a b")
+
+- id     0576
+  from   inventory:infix:∪
+  cell   (a => 1) | [1,2]
+  level  3
+  code   ((a => 1)) ∪ ([1,2])
+  is     Set.new("a",1,2)
+  type   Set
+  oracle rakudo-2026.07 → Set.new("a",1,2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Set.new(1,2,"a")
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07

@@ -12,7 +12,7 @@ cols     X::AdHoc.new(payload => "x")
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
 
 - id     0002
   from   inventory:Exception.^methods
@@ -21,7 +21,7 @@ cols     X::AdHoc.new(payload => "x")
   is     \(:payload("x"))
   type   Capture
   oracle rakudo-2026.07 → \(:payload("x"))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → \(:message("x"), :payload("x"))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → \(:message("x"), :payload("x"))
 
 - id     0003
   from   inventory:Exception.^methods
@@ -30,7 +30,7 @@ cols     X::AdHoc.new(payload => "x")
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
 
 - id     0004
   from   inventory:Exception.^methods
@@ -38,7 +38,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).Failure
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0005
   from   inventory:Exception.^methods
@@ -47,7 +47,7 @@ cols     X::AdHoc.new(payload => "x")
   is     Perl6::Metamodel::ClassHOW.new
   type   Perl6::Metamodel::ClassHOW
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW.new
 
 - id     0006
   from   inventory:Exception.^methods
@@ -56,7 +56,7 @@ cols     X::AdHoc.new(payload => "x")
   is     "P6opaque"
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0007
   from   inventory:Exception.^methods
@@ -65,7 +65,7 @@ cols     X::AdHoc.new(payload => "x")
   is     X::AdHoc.new(payload => "x")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → X::AdHoc.new(payload => "x", message => Any)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → X::AdHoc.new(payload => "x", message => Any)
 
 - id     0008
   from   inventory:Exception.^methods
@@ -74,7 +74,7 @@ cols     X::AdHoc.new(payload => "x")
   is     X::AdHoc
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → X::AdHoc
 
 - id     0009
   from   inventory:Exception.^methods
@@ -83,7 +83,7 @@ cols     X::AdHoc.new(payload => "x")
   is     ${}
   type   Stash
   oracle rakudo-2026.07 → ${}
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
 
 - id     0010
   from   inventory:Exception.^methods
@@ -92,7 +92,7 @@ cols     X::AdHoc.new(payload => "x")
   is     all(X::AdHoc.new(payload => "x"))
   type   Junction
   oracle rakudo-2026.07 → all(X::AdHoc.new(payload => "x"))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → all(X::AdHoc.new(payload => "x", message => Any))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(X::AdHoc.new(payload => "x", message => Any))
 
 - id     0011
   from   inventory:Exception.^methods
@@ -101,7 +101,7 @@ cols     X::AdHoc.new(payload => "x")
   is     any(X::AdHoc.new(payload => "x"))
   type   Junction
   oracle rakudo-2026.07 → any(X::AdHoc.new(payload => "x"))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → any(X::AdHoc.new(payload => "x", message => Any))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(X::AdHoc.new(payload => "x", message => Any))
 
 - id     0012
   from   inventory:Exception.^methods
@@ -110,7 +110,7 @@ cols     X::AdHoc.new(payload => "x")
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $({:file("/Users/ash/rakugrid/tmp/mm-probe-1.raku"), :line(1)},)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $({:file("/Users/ash/rakugrid/tmp/mm-probe-1.raku"), :line(1)},)
 
 - id     0013
   from   inventory:Exception.^methods
@@ -119,7 +119,7 @@ cols     X::AdHoc.new(payload => "x")
   is     X::AdHoc.new(payload => "Unexplained error")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "Unexplained error")
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → X::AdHoc.new(payload => Any, message => Any)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → X::AdHoc.new(payload => Any, message => Any)
 
 - id     0014
   from   inventory:Exception.^methods
@@ -128,7 +128,7 @@ cols     X::AdHoc.new(payload => "x")
   is     $(X::AdHoc.new(payload => "x"),)
   type   List
   oracle rakudo-2026.07 → $(X::AdHoc.new(payload => "x"),)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0015
   from   inventory:Exception.^methods
@@ -136,7 +136,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
 
 - id     0016
   from   inventory:Exception.^methods
@@ -144,7 +144,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
 
 - id     0017
   from   inventory:Exception.^methods
@@ -152,7 +152,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
 
 - id     0018
   from   inventory:Exception.^methods
@@ -161,7 +161,7 @@ cols     X::AdHoc.new(payload => "x")
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
 
 - id     0019
   from   inventory:Exception.^methods
@@ -169,7 +169,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
 
 - id     0020
   from   inventory:Exception.^methods
@@ -177,7 +177,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).chrs
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0021
   from   inventory:Exception.^methods
@@ -185,7 +185,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).die
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0022
   from   inventory:Exception.^methods
@@ -194,7 +194,7 @@ cols     X::AdHoc.new(payload => "x")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
 - id     0023
   from   inventory:Exception.^methods
@@ -203,7 +203,7 @@ cols     X::AdHoc.new(payload => "x")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
 - id     0024
   from   inventory:Exception.^methods
@@ -212,7 +212,7 @@ cols     X::AdHoc.new(payload => "x")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
 - id     0025
   from   inventory:Exception.^methods
@@ -221,7 +221,7 @@ cols     X::AdHoc.new(payload => "x")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
 - id     0026
   from   inventory:Exception.^methods
@@ -230,7 +230,7 @@ cols     X::AdHoc.new(payload => "x")
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
 
 - id     0027
   from   inventory:Exception.^methods
@@ -238,7 +238,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).fail
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::AdHoc
 
 - id     0028
   from   inventory:Exception.^methods
@@ -247,7 +247,7 @@ cols     X::AdHoc.new(payload => "x")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0029
   from   inventory:Exception.^methods
@@ -256,7 +256,7 @@ cols     X::AdHoc.new(payload => "x")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0030
   from   inventory:Exception.^methods
@@ -265,7 +265,7 @@ cols     X::AdHoc.new(payload => "x")
   is     X::AdHoc.new(payload => "x")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → X::AdHoc.new(payload => "x", message => Any)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → X::AdHoc.new(payload => "x", message => Any)
 
 - id     0031
   from   inventory:Exception.^methods
@@ -274,7 +274,7 @@ cols     X::AdHoc.new(payload => "x")
   is     "x"
   type   Str
   oracle rakudo-2026.07 → "x"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
 
 - id     0032
   from   inventory:Exception.^methods
@@ -283,7 +283,7 @@ cols     X::AdHoc.new(payload => "x")
   is     "x"
   type   Str
   oracle rakudo-2026.07 → "x"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
 
 - id     0033
   from   inventory:Exception.^methods
@@ -292,7 +292,7 @@ cols     X::AdHoc.new(payload => "x")
   is     "x"
   type   Str
   oracle rakudo-2026.07 → "x"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
 
 - id     0034
   from   inventory:Exception.^methods
@@ -301,7 +301,7 @@ cols     X::AdHoc.new(payload => "x")
   is     "x"
   type   Str
   oracle rakudo-2026.07 → "x"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
 
 - id     0035
   from   inventory:Exception.^methods
@@ -309,7 +309,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).join(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
 
 - id     0036
   from   inventory:Exception.^methods
@@ -318,7 +318,7 @@ cols     X::AdHoc.new(payload => "x")
   is     X::AdHoc.new(payload => "x")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0037
   from   inventory:Exception.^methods
@@ -327,7 +327,7 @@ cols     X::AdHoc.new(payload => "x")
   is     X::AdHoc.new(payload => "x")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0038
   from   inventory:Exception.^methods
@@ -336,7 +336,7 @@ cols     X::AdHoc.new(payload => "x")
   is     X::AdHoc.new(payload => "x")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0039
   from   inventory:Exception.^methods
@@ -345,7 +345,7 @@ cols     X::AdHoc.new(payload => "x")
   is     X::AdHoc.new(payload => "x")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0040
   from   inventory:Exception.^methods
@@ -354,7 +354,7 @@ cols     X::AdHoc.new(payload => "x")
   is     X::AdHoc.new(payload => "x")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0041
   from   inventory:Exception.^methods
@@ -363,7 +363,7 @@ cols     X::AdHoc.new(payload => "x")
   is     "x"
   type   Str
   oracle rakudo-2026.07 → "x"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "x"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "x"
 
 - id     0042
   from   inventory:Exception.^methods
@@ -372,7 +372,7 @@ cols     X::AdHoc.new(payload => "x")
   is     "\n"
   type   Str
   oracle rakudo-2026.07 → "\n"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0043
   from   inventory:Exception.^methods
@@ -381,7 +381,7 @@ cols     X::AdHoc.new(payload => "x")
   is     none(X::AdHoc.new(payload => "x"))
   type   Junction
   oracle rakudo-2026.07 → none(X::AdHoc.new(payload => "x"))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → none(X::AdHoc.new(payload => "x", message => Any))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(X::AdHoc.new(payload => "x", message => Any))
 
 - id     0044
   from   inventory:Exception.^methods
@@ -390,7 +390,7 @@ cols     X::AdHoc.new(payload => "x")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
 - id     0045
   from   inventory:Exception.^methods
@@ -399,7 +399,7 @@ cols     X::AdHoc.new(payload => "x")
   is     one(X::AdHoc.new(payload => "x"))
   type   Junction
   oracle rakudo-2026.07 → one(X::AdHoc.new(payload => "x"))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → one(X::AdHoc.new(payload => "x", message => Any))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(X::AdHoc.new(payload => "x", message => Any))
 
 - id     0046
   from   inventory:Exception.^methods
@@ -408,7 +408,7 @@ cols     X::AdHoc.new(payload => "x")
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0047
   from   inventory:Exception.^methods
@@ -416,7 +416,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).resume
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Parameter::InvalidConcreteness
 
 - id     0048
   from   inventory:Exception.^methods
@@ -424,7 +424,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).rethrow
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::AdHoc
 
 - id     0049
   from   inventory:Exception.^methods
@@ -433,7 +433,7 @@ cols     X::AdHoc.new(payload => "x")
   is     $((X::AdHoc.new(payload => "x"),).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((X::AdHoc.new(payload => "x"),).Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0050
   from   inventory:Exception.^methods
@@ -442,7 +442,7 @@ cols     X::AdHoc.new(payload => "x")
   is     X::AdHoc.new(payload => "x")
   type   X::AdHoc
   oracle rakudo-2026.07 → X::AdHoc.new(payload => "x")
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → X::AdHoc.new(payload => "x", message => Any)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → X::AdHoc.new(payload => "x", message => Any)
 
 - id     0051
   from   inventory:Exception.^methods
@@ -451,7 +451,7 @@ cols     X::AdHoc.new(payload => "x")
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
 
 - id     0052
   from   inventory:Exception.^methods
@@ -459,7 +459,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).sum
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0053
   from   inventory:Exception.^methods
@@ -467,7 +467,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
 
 - id     0054
   from   inventory:Exception.^methods
@@ -475,7 +475,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).throw(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::AdHoc
 
 - id     0055
   from   inventory:Exception.^methods
@@ -483,7 +483,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).throw(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::AdHoc
 
 - id     0056
   from   inventory:Exception.^methods
@@ -491,7 +491,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).throw(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::AdHoc
 
 - id     0057
   from   inventory:Exception.^methods
@@ -499,7 +499,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).throw("a")
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::AdHoc
 
 - id     0058
   from   inventory:Exception.^methods
@@ -507,7 +507,7 @@ cols     X::AdHoc.new(payload => "x")
   code   (X::AdHoc.new(payload => "x")).throw(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::AdHoc
 
 - id     0059
   from   inventory:Exception.^methods
@@ -516,4 +516,4 @@ cols     X::AdHoc.new(payload => "x")
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound

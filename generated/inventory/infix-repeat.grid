@@ -3,12 +3,13 @@ source   generated
 gen      gen/operators.raku
 from-inventory infix x
 ladder   mixed
-axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
-cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
 
 - id     0001
   from   inventory:infix:x
   cell   0 | 0
+  level  0
   code   (0) x (0)
   is     ""
   type   Str
@@ -18,6 +19,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0002
   from   inventory:infix:x
   cell   0 | 1
+  level  1
   code   (0) x (1)
   is     "0"
   type   Str
@@ -27,6 +29,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0003
   from   inventory:infix:x
   cell   1 | 1
+  level  1
   code   (1) x (1)
   is     "1"
   type   Str
@@ -36,6 +39,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0004
   from   inventory:infix:x
   cell   1 | 0
+  level  1
   code   (1) x (0)
   is     ""
   type   Str
@@ -45,6 +49,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0005
   from   inventory:infix:x
   cell   0 | -1
+  level  1
   code   (0) x (-1)
   is     ""
   type   Str
@@ -54,6 +59,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0006
   from   inventory:infix:x
   cell   1 | -1
+  level  1
   code   (1) x (-1)
   is     ""
   type   Str
@@ -63,6 +69,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0007
   from   inventory:infix:x
   cell   -1 | -1
+  level  1
   code   (-1) x (-1)
   is     ""
   type   Str
@@ -72,6 +79,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0008
   from   inventory:infix:x
   cell   -1 | 0
+  level  1
   code   (-1) x (0)
   is     ""
   type   Str
@@ -81,6 +89,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0009
   from   inventory:infix:x
   cell   -1 | 1
+  level  1
   code   (-1) x (1)
   is     "-1"
   type   Str
@@ -90,6 +99,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0010
   from   inventory:infix:x
   cell   0 | 1/2
+  level  1
   code   (0) x (1/2)
   is     ""
   type   Str
@@ -99,6 +109,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0011
   from   inventory:infix:x
   cell   1 | 1/2
+  level  1
   code   (1) x (1/2)
   is     ""
   type   Str
@@ -108,6 +119,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0012
   from   inventory:infix:x
   cell   -1 | 1/2
+  level  1
   code   (-1) x (1/2)
   is     ""
   type   Str
@@ -117,6 +129,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0013
   from   inventory:infix:x
   cell   1/2 | 1/2
+  level  1
   code   (1/2) x (1/2)
   is     ""
   type   Str
@@ -126,6 +139,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0014
   from   inventory:infix:x
   cell   1/2 | 0
+  level  1
   code   (1/2) x (0)
   is     ""
   type   Str
@@ -135,6 +149,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0015
   from   inventory:infix:x
   cell   1/2 | 1
+  level  1
   code   (1/2) x (1)
   is     "0.5"
   type   Str
@@ -144,6 +159,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0016
   from   inventory:infix:x
   cell   1/2 | -1
+  level  1
   code   (1/2) x (-1)
   is     ""
   type   Str
@@ -153,6 +169,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0017
   from   inventory:infix:x
   cell   0 | 0e0
+  level  2
   code   (0) x (0e0)
   is     ""
   type   Str
@@ -162,6 +179,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0018
   from   inventory:infix:x
   cell   1 | 0e0
+  level  2
   code   (1) x (0e0)
   is     ""
   type   Str
@@ -171,6 +189,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0019
   from   inventory:infix:x
   cell   -1 | 0e0
+  level  2
   code   (-1) x (0e0)
   is     ""
   type   Str
@@ -180,6 +199,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0020
   from   inventory:infix:x
   cell   1/2 | 0e0
+  level  2
   code   (1/2) x (0e0)
   is     ""
   type   Str
@@ -189,6 +209,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0021
   from   inventory:infix:x
   cell   0e0 | 0e0
+  level  2
   code   (0e0) x (0e0)
   is     ""
   type   Str
@@ -198,6 +219,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0022
   from   inventory:infix:x
   cell   0e0 | 0
+  level  2
   code   (0e0) x (0)
   is     ""
   type   Str
@@ -207,6 +229,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0023
   from   inventory:infix:x
   cell   0e0 | 1
+  level  2
   code   (0e0) x (1)
   is     "0"
   type   Str
@@ -216,6 +239,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0024
   from   inventory:infix:x
   cell   0e0 | -1
+  level  2
   code   (0e0) x (-1)
   is     ""
   type   Str
@@ -225,6 +249,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0025
   from   inventory:infix:x
   cell   0e0 | 1/2
+  level  2
   code   (0e0) x (1/2)
   is     ""
   type   Str
@@ -234,6 +259,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0026
   from   inventory:infix:x
   cell   0 | NaN
+  level  2
   code   (0) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -242,6 +268,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0027
   from   inventory:infix:x
   cell   1 | NaN
+  level  2
   code   (1) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -250,6 +277,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0028
   from   inventory:infix:x
   cell   -1 | NaN
+  level  2
   code   (-1) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -258,6 +286,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0029
   from   inventory:infix:x
   cell   1/2 | NaN
+  level  2
   code   (1/2) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -266,6 +295,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0030
   from   inventory:infix:x
   cell   0e0 | NaN
+  level  2
   code   (0e0) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -274,6 +304,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0031
   from   inventory:infix:x
   cell   NaN | NaN
+  level  2
   code   (NaN) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -282,6 +313,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0032
   from   inventory:infix:x
   cell   NaN | 0
+  level  2
   code   (NaN) x (0)
   is     ""
   type   Str
@@ -291,6 +323,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0033
   from   inventory:infix:x
   cell   NaN | 1
+  level  2
   code   (NaN) x (1)
   is     "NaN"
   type   Str
@@ -300,6 +333,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0034
   from   inventory:infix:x
   cell   NaN | -1
+  level  2
   code   (NaN) x (-1)
   is     ""
   type   Str
@@ -309,6 +343,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0035
   from   inventory:infix:x
   cell   NaN | 1/2
+  level  2
   code   (NaN) x (1/2)
   is     ""
   type   Str
@@ -318,6 +353,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0036
   from   inventory:infix:x
   cell   NaN | 0e0
+  level  2
   code   (NaN) x (0e0)
   is     ""
   type   Str
@@ -327,6 +363,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0037
   from   inventory:infix:x
   cell   0 | ""
+  level  2
   code   (0) x ("")
   is     ""
   type   Str
@@ -336,6 +373,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0038
   from   inventory:infix:x
   cell   1 | ""
+  level  2
   code   (1) x ("")
   is     ""
   type   Str
@@ -345,6 +383,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0039
   from   inventory:infix:x
   cell   -1 | ""
+  level  2
   code   (-1) x ("")
   is     ""
   type   Str
@@ -354,6 +393,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0040
   from   inventory:infix:x
   cell   1/2 | ""
+  level  2
   code   (1/2) x ("")
   is     ""
   type   Str
@@ -363,6 +403,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0041
   from   inventory:infix:x
   cell   0e0 | ""
+  level  2
   code   (0e0) x ("")
   is     ""
   type   Str
@@ -372,6 +413,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0042
   from   inventory:infix:x
   cell   NaN | ""
+  level  2
   code   (NaN) x ("")
   is     ""
   type   Str
@@ -381,6 +423,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0043
   from   inventory:infix:x
   cell   "" | ""
+  level  2
   code   ("") x ("")
   is     ""
   type   Str
@@ -390,6 +433,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0044
   from   inventory:infix:x
   cell   "" | 0
+  level  2
   code   ("") x (0)
   is     ""
   type   Str
@@ -399,6 +443,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0045
   from   inventory:infix:x
   cell   "" | 1
+  level  2
   code   ("") x (1)
   is     ""
   type   Str
@@ -408,6 +453,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0046
   from   inventory:infix:x
   cell   "" | -1
+  level  2
   code   ("") x (-1)
   is     ""
   type   Str
@@ -417,6 +463,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0047
   from   inventory:infix:x
   cell   "" | 1/2
+  level  2
   code   ("") x (1/2)
   is     ""
   type   Str
@@ -426,6 +473,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0048
   from   inventory:infix:x
   cell   "" | 0e0
+  level  2
   code   ("") x (0e0)
   is     ""
   type   Str
@@ -435,6 +483,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0049
   from   inventory:infix:x
   cell   "" | NaN
+  level  2
   code   ("") x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -443,6 +492,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0050
   from   inventory:infix:x
   cell   0 | "a"
+  level  2
   code   (0) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -451,6 +501,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0051
   from   inventory:infix:x
   cell   1 | "a"
+  level  2
   code   (1) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -459,6 +510,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0052
   from   inventory:infix:x
   cell   -1 | "a"
+  level  2
   code   (-1) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -467,6 +519,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0053
   from   inventory:infix:x
   cell   1/2 | "a"
+  level  2
   code   (1/2) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -475,6 +528,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0054
   from   inventory:infix:x
   cell   0e0 | "a"
+  level  2
   code   (0e0) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -483,6 +537,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0055
   from   inventory:infix:x
   cell   NaN | "a"
+  level  2
   code   (NaN) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -491,6 +546,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0056
   from   inventory:infix:x
   cell   "" | "a"
+  level  2
   code   ("") x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -499,6 +555,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0057
   from   inventory:infix:x
   cell   "a" | "a"
+  level  2
   code   ("a") x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -507,6 +564,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0058
   from   inventory:infix:x
   cell   "a" | 0
+  level  2
   code   ("a") x (0)
   is     ""
   type   Str
@@ -516,6 +574,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0059
   from   inventory:infix:x
   cell   "a" | 1
+  level  2
   code   ("a") x (1)
   is     "a"
   type   Str
@@ -525,6 +584,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0060
   from   inventory:infix:x
   cell   "a" | -1
+  level  2
   code   ("a") x (-1)
   is     ""
   type   Str
@@ -534,6 +594,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0061
   from   inventory:infix:x
   cell   "a" | 1/2
+  level  2
   code   ("a") x (1/2)
   is     ""
   type   Str
@@ -543,6 +604,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0062
   from   inventory:infix:x
   cell   "a" | 0e0
+  level  2
   code   ("a") x (0e0)
   is     ""
   type   Str
@@ -552,6 +614,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0063
   from   inventory:infix:x
   cell   "a" | NaN
+  level  2
   code   ("a") x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -560,6 +623,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0064
   from   inventory:infix:x
   cell   "a" | ""
+  level  2
   code   ("a") x ("")
   is     ""
   type   Str
@@ -569,6 +633,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0065
   from   inventory:infix:x
   cell   0 | True
+  level  2
   code   (0) x (True)
   is     "0"
   type   Str
@@ -578,6 +643,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0066
   from   inventory:infix:x
   cell   1 | True
+  level  2
   code   (1) x (True)
   is     "1"
   type   Str
@@ -587,6 +653,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0067
   from   inventory:infix:x
   cell   -1 | True
+  level  2
   code   (-1) x (True)
   is     "-1"
   type   Str
@@ -596,6 +663,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0068
   from   inventory:infix:x
   cell   1/2 | True
+  level  2
   code   (1/2) x (True)
   is     "0.5"
   type   Str
@@ -605,6 +673,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0069
   from   inventory:infix:x
   cell   0e0 | True
+  level  2
   code   (0e0) x (True)
   is     "0"
   type   Str
@@ -614,6 +683,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0070
   from   inventory:infix:x
   cell   NaN | True
+  level  2
   code   (NaN) x (True)
   is     "NaN"
   type   Str
@@ -623,6 +693,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0071
   from   inventory:infix:x
   cell   "" | True
+  level  2
   code   ("") x (True)
   is     ""
   type   Str
@@ -632,6 +703,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0072
   from   inventory:infix:x
   cell   "a" | True
+  level  2
   code   ("a") x (True)
   is     "a"
   type   Str
@@ -641,6 +713,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0073
   from   inventory:infix:x
   cell   True | True
+  level  2
   code   (True) x (True)
   is     "True"
   type   Str
@@ -650,6 +723,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0074
   from   inventory:infix:x
   cell   True | 0
+  level  2
   code   (True) x (0)
   is     ""
   type   Str
@@ -659,6 +733,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0075
   from   inventory:infix:x
   cell   True | 1
+  level  2
   code   (True) x (1)
   is     "True"
   type   Str
@@ -668,6 +743,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0076
   from   inventory:infix:x
   cell   True | -1
+  level  2
   code   (True) x (-1)
   is     ""
   type   Str
@@ -677,6 +753,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0077
   from   inventory:infix:x
   cell   True | 1/2
+  level  2
   code   (True) x (1/2)
   is     ""
   type   Str
@@ -686,6 +763,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0078
   from   inventory:infix:x
   cell   True | 0e0
+  level  2
   code   (True) x (0e0)
   is     ""
   type   Str
@@ -695,6 +773,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0079
   from   inventory:infix:x
   cell   True | NaN
+  level  2
   code   (True) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -703,6 +782,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0080
   from   inventory:infix:x
   cell   True | ""
+  level  2
   code   (True) x ("")
   is     ""
   type   Str
@@ -712,6 +792,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0081
   from   inventory:infix:x
   cell   True | "a"
+  level  2
   code   (True) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -720,6 +801,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0082
   from   inventory:infix:x
   cell   0 | Any
+  level  2
   code   (0) x (Any)
   is     ""
   type   Str
@@ -729,6 +811,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0083
   from   inventory:infix:x
   cell   1 | Any
+  level  2
   code   (1) x (Any)
   is     ""
   type   Str
@@ -738,6 +821,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0084
   from   inventory:infix:x
   cell   -1 | Any
+  level  2
   code   (-1) x (Any)
   is     ""
   type   Str
@@ -747,6 +831,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0085
   from   inventory:infix:x
   cell   1/2 | Any
+  level  2
   code   (1/2) x (Any)
   is     ""
   type   Str
@@ -756,6 +841,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0086
   from   inventory:infix:x
   cell   0e0 | Any
+  level  2
   code   (0e0) x (Any)
   is     ""
   type   Str
@@ -765,6 +851,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0087
   from   inventory:infix:x
   cell   NaN | Any
+  level  2
   code   (NaN) x (Any)
   is     ""
   type   Str
@@ -774,6 +861,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0088
   from   inventory:infix:x
   cell   "" | Any
+  level  2
   code   ("") x (Any)
   is     ""
   type   Str
@@ -783,6 +871,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0089
   from   inventory:infix:x
   cell   "a" | Any
+  level  2
   code   ("a") x (Any)
   is     ""
   type   Str
@@ -792,6 +881,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0090
   from   inventory:infix:x
   cell   True | Any
+  level  2
   code   (True) x (Any)
   is     ""
   type   Str
@@ -801,6 +891,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0091
   from   inventory:infix:x
   cell   Any | Any
+  level  2
   code   (Any) x (Any)
   is     ""
   type   Str
@@ -810,6 +901,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0092
   from   inventory:infix:x
   cell   Any | 0
+  level  2
   code   (Any) x (0)
   is     ""
   type   Str
@@ -819,6 +911,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0093
   from   inventory:infix:x
   cell   Any | 1
+  level  2
   code   (Any) x (1)
   is     ""
   type   Str
@@ -828,6 +921,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0094
   from   inventory:infix:x
   cell   Any | -1
+  level  2
   code   (Any) x (-1)
   is     ""
   type   Str
@@ -837,6 +931,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0095
   from   inventory:infix:x
   cell   Any | 1/2
+  level  2
   code   (Any) x (1/2)
   is     ""
   type   Str
@@ -846,6 +941,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0096
   from   inventory:infix:x
   cell   Any | 0e0
+  level  2
   code   (Any) x (0e0)
   is     ""
   type   Str
@@ -855,6 +951,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0097
   from   inventory:infix:x
   cell   Any | NaN
+  level  2
   code   (Any) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -863,6 +960,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0098
   from   inventory:infix:x
   cell   Any | ""
+  level  2
   code   (Any) x ("")
   is     ""
   type   Str
@@ -872,6 +970,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0099
   from   inventory:infix:x
   cell   Any | "a"
+  level  2
   code   (Any) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -880,6 +979,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0100
   from   inventory:infix:x
   cell   Any | True
+  level  2
   code   (Any) x (True)
   is     ""
   type   Str
@@ -889,6 +989,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0101
   from   inventory:infix:x
   cell   0 | (1,2)
+  level  3
   code   (0) x ((1,2))
   is     "00"
   type   Str
@@ -898,6 +999,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0102
   from   inventory:infix:x
   cell   1 | (1,2)
+  level  3
   code   (1) x ((1,2))
   is     "11"
   type   Str
@@ -907,6 +1009,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0103
   from   inventory:infix:x
   cell   -1 | (1,2)
+  level  3
   code   (-1) x ((1,2))
   is     "-1-1"
   type   Str
@@ -916,6 +1019,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0104
   from   inventory:infix:x
   cell   1/2 | (1,2)
+  level  3
   code   (1/2) x ((1,2))
   is     "0.50.5"
   type   Str
@@ -925,6 +1029,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0105
   from   inventory:infix:x
   cell   0e0 | (1,2)
+  level  3
   code   (0e0) x ((1,2))
   is     "00"
   type   Str
@@ -934,6 +1039,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0106
   from   inventory:infix:x
   cell   NaN | (1,2)
+  level  3
   code   (NaN) x ((1,2))
   is     "NaNNaN"
   type   Str
@@ -943,6 +1049,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0107
   from   inventory:infix:x
   cell   "" | (1,2)
+  level  3
   code   ("") x ((1,2))
   is     ""
   type   Str
@@ -952,6 +1059,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0108
   from   inventory:infix:x
   cell   "a" | (1,2)
+  level  3
   code   ("a") x ((1,2))
   is     "aa"
   type   Str
@@ -961,6 +1069,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0109
   from   inventory:infix:x
   cell   True | (1,2)
+  level  3
   code   (True) x ((1,2))
   is     "TrueTrue"
   type   Str
@@ -970,6 +1079,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0110
   from   inventory:infix:x
   cell   Any | (1,2)
+  level  3
   code   (Any) x ((1,2))
   is     ""
   type   Str
@@ -979,6 +1089,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0111
   from   inventory:infix:x
   cell   (1,2) | (1,2)
+  level  3
   code   ((1,2)) x ((1,2))
   is     "1 21 2"
   type   Str
@@ -988,6 +1099,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0112
   from   inventory:infix:x
   cell   (1,2) | 0
+  level  3
   code   ((1,2)) x (0)
   is     ""
   type   Str
@@ -997,6 +1109,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0113
   from   inventory:infix:x
   cell   (1,2) | 1
+  level  3
   code   ((1,2)) x (1)
   is     "1 2"
   type   Str
@@ -1006,6 +1119,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0114
   from   inventory:infix:x
   cell   (1,2) | -1
+  level  3
   code   ((1,2)) x (-1)
   is     ""
   type   Str
@@ -1015,6 +1129,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0115
   from   inventory:infix:x
   cell   (1,2) | 1/2
+  level  3
   code   ((1,2)) x (1/2)
   is     ""
   type   Str
@@ -1024,6 +1139,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0116
   from   inventory:infix:x
   cell   (1,2) | 0e0
+  level  3
   code   ((1,2)) x (0e0)
   is     ""
   type   Str
@@ -1033,6 +1149,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0117
   from   inventory:infix:x
   cell   (1,2) | NaN
+  level  3
   code   ((1,2)) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -1041,6 +1158,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0118
   from   inventory:infix:x
   cell   (1,2) | ""
+  level  3
   code   ((1,2)) x ("")
   is     ""
   type   Str
@@ -1050,6 +1168,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0119
   from   inventory:infix:x
   cell   (1,2) | "a"
+  level  3
   code   ((1,2)) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -1058,6 +1177,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0120
   from   inventory:infix:x
   cell   (1,2) | True
+  level  3
   code   ((1,2)) x (True)
   is     "1 2"
   type   Str
@@ -1067,6 +1187,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0121
   from   inventory:infix:x
   cell   (1,2) | Any
+  level  3
   code   ((1,2)) x (Any)
   is     ""
   type   Str
@@ -1076,6 +1197,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0122
   from   inventory:infix:x
   cell   0 | {a=>1}
+  level  3
   code   (0) x ({a=>1})
   is     "0"
   type   Str
@@ -1085,6 +1207,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0123
   from   inventory:infix:x
   cell   1 | {a=>1}
+  level  3
   code   (1) x ({a=>1})
   is     "1"
   type   Str
@@ -1094,6 +1217,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0124
   from   inventory:infix:x
   cell   -1 | {a=>1}
+  level  3
   code   (-1) x ({a=>1})
   is     "-1"
   type   Str
@@ -1103,6 +1227,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0125
   from   inventory:infix:x
   cell   1/2 | {a=>1}
+  level  3
   code   (1/2) x ({a=>1})
   is     "0.5"
   type   Str
@@ -1112,6 +1237,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0126
   from   inventory:infix:x
   cell   0e0 | {a=>1}
+  level  3
   code   (0e0) x ({a=>1})
   is     "0"
   type   Str
@@ -1121,6 +1247,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0127
   from   inventory:infix:x
   cell   NaN | {a=>1}
+  level  3
   code   (NaN) x ({a=>1})
   is     "NaN"
   type   Str
@@ -1130,6 +1257,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0128
   from   inventory:infix:x
   cell   "" | {a=>1}
+  level  3
   code   ("") x ({a=>1})
   is     ""
   type   Str
@@ -1139,6 +1267,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0129
   from   inventory:infix:x
   cell   "a" | {a=>1}
+  level  3
   code   ("a") x ({a=>1})
   is     "a"
   type   Str
@@ -1148,6 +1277,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0130
   from   inventory:infix:x
   cell   True | {a=>1}
+  level  3
   code   (True) x ({a=>1})
   is     "True"
   type   Str
@@ -1157,6 +1287,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0131
   from   inventory:infix:x
   cell   Any | {a=>1}
+  level  3
   code   (Any) x ({a=>1})
   is     ""
   type   Str
@@ -1166,6 +1297,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0132
   from   inventory:infix:x
   cell   (1,2) | {a=>1}
+  level  3
   code   ((1,2)) x ({a=>1})
   is     "1 2"
   type   Str
@@ -1175,6 +1307,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0133
   from   inventory:infix:x
   cell   {a=>1} | {a=>1}
+  level  3
   code   ({a=>1}) x ({a=>1})
   is     "a\t1"
   type   Str
@@ -1184,6 +1317,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0134
   from   inventory:infix:x
   cell   {a=>1} | 0
+  level  3
   code   ({a=>1}) x (0)
   is     ""
   type   Str
@@ -1193,6 +1327,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0135
   from   inventory:infix:x
   cell   {a=>1} | 1
+  level  3
   code   ({a=>1}) x (1)
   is     "a\t1"
   type   Str
@@ -1202,6 +1337,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0136
   from   inventory:infix:x
   cell   {a=>1} | -1
+  level  3
   code   ({a=>1}) x (-1)
   is     ""
   type   Str
@@ -1211,6 +1347,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0137
   from   inventory:infix:x
   cell   {a=>1} | 1/2
+  level  3
   code   ({a=>1}) x (1/2)
   is     ""
   type   Str
@@ -1220,6 +1357,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0138
   from   inventory:infix:x
   cell   {a=>1} | 0e0
+  level  3
   code   ({a=>1}) x (0e0)
   is     ""
   type   Str
@@ -1229,6 +1367,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0139
   from   inventory:infix:x
   cell   {a=>1} | NaN
+  level  3
   code   ({a=>1}) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -1237,6 +1376,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0140
   from   inventory:infix:x
   cell   {a=>1} | ""
+  level  3
   code   ({a=>1}) x ("")
   is     ""
   type   Str
@@ -1246,6 +1386,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0141
   from   inventory:infix:x
   cell   {a=>1} | "a"
+  level  3
   code   ({a=>1}) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -1254,6 +1395,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0142
   from   inventory:infix:x
   cell   {a=>1} | True
+  level  3
   code   ({a=>1}) x (True)
   is     "a\t1"
   type   Str
@@ -1263,6 +1405,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0143
   from   inventory:infix:x
   cell   {a=>1} | Any
+  level  3
   code   ({a=>1}) x (Any)
   is     ""
   type   Str
@@ -1272,6 +1415,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0144
   from   inventory:infix:x
   cell   {a=>1} | (1,2)
+  level  3
   code   ({a=>1}) x ((1,2))
   is     "a\t1a\t1"
   type   Str
@@ -1281,6 +1425,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0145
   from   inventory:infix:x
   cell   0 | -0e0
+  level  3
   code   (0) x (-0e0)
   is     ""
   type   Str
@@ -1290,6 +1435,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0146
   from   inventory:infix:x
   cell   1 | -0e0
+  level  3
   code   (1) x (-0e0)
   is     ""
   type   Str
@@ -1299,6 +1445,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0147
   from   inventory:infix:x
   cell   -1 | -0e0
+  level  3
   code   (-1) x (-0e0)
   is     ""
   type   Str
@@ -1308,6 +1455,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0148
   from   inventory:infix:x
   cell   1/2 | -0e0
+  level  3
   code   (1/2) x (-0e0)
   is     ""
   type   Str
@@ -1317,6 +1465,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0149
   from   inventory:infix:x
   cell   0e0 | -0e0
+  level  3
   code   (0e0) x (-0e0)
   is     ""
   type   Str
@@ -1326,6 +1475,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0150
   from   inventory:infix:x
   cell   NaN | -0e0
+  level  3
   code   (NaN) x (-0e0)
   is     ""
   type   Str
@@ -1335,6 +1485,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0151
   from   inventory:infix:x
   cell   "" | -0e0
+  level  3
   code   ("") x (-0e0)
   is     ""
   type   Str
@@ -1344,6 +1495,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0152
   from   inventory:infix:x
   cell   "a" | -0e0
+  level  3
   code   ("a") x (-0e0)
   is     ""
   type   Str
@@ -1353,6 +1505,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0153
   from   inventory:infix:x
   cell   True | -0e0
+  level  3
   code   (True) x (-0e0)
   is     ""
   type   Str
@@ -1362,6 +1515,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0154
   from   inventory:infix:x
   cell   Any | -0e0
+  level  3
   code   (Any) x (-0e0)
   is     ""
   type   Str
@@ -1371,6 +1525,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0155
   from   inventory:infix:x
   cell   (1,2) | -0e0
+  level  3
   code   ((1,2)) x (-0e0)
   is     ""
   type   Str
@@ -1380,6 +1535,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0156
   from   inventory:infix:x
   cell   {a=>1} | -0e0
+  level  3
   code   ({a=>1}) x (-0e0)
   is     ""
   type   Str
@@ -1389,6 +1545,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0157
   from   inventory:infix:x
   cell   -0e0 | -0e0
+  level  3
   code   (-0e0) x (-0e0)
   is     ""
   type   Str
@@ -1398,6 +1555,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0158
   from   inventory:infix:x
   cell   -0e0 | 0
+  level  3
   code   (-0e0) x (0)
   is     ""
   type   Str
@@ -1407,6 +1565,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0159
   from   inventory:infix:x
   cell   -0e0 | 1
+  level  3
   code   (-0e0) x (1)
   is     "-0"
   type   Str
@@ -1416,6 +1575,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0160
   from   inventory:infix:x
   cell   -0e0 | -1
+  level  3
   code   (-0e0) x (-1)
   is     ""
   type   Str
@@ -1425,6 +1585,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0161
   from   inventory:infix:x
   cell   -0e0 | 1/2
+  level  3
   code   (-0e0) x (1/2)
   is     ""
   type   Str
@@ -1434,6 +1595,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0162
   from   inventory:infix:x
   cell   -0e0 | 0e0
+  level  3
   code   (-0e0) x (0e0)
   is     ""
   type   Str
@@ -1443,6 +1605,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0163
   from   inventory:infix:x
   cell   -0e0 | NaN
+  level  3
   code   (-0e0) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -1451,6 +1614,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0164
   from   inventory:infix:x
   cell   -0e0 | ""
+  level  3
   code   (-0e0) x ("")
   is     ""
   type   Str
@@ -1460,6 +1624,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0165
   from   inventory:infix:x
   cell   -0e0 | "a"
+  level  3
   code   (-0e0) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -1468,6 +1633,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0166
   from   inventory:infix:x
   cell   -0e0 | True
+  level  3
   code   (-0e0) x (True)
   is     "-0"
   type   Str
@@ -1477,6 +1643,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0167
   from   inventory:infix:x
   cell   -0e0 | Any
+  level  3
   code   (-0e0) x (Any)
   is     ""
   type   Str
@@ -1486,6 +1653,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0168
   from   inventory:infix:x
   cell   -0e0 | (1,2)
+  level  3
   code   (-0e0) x ((1,2))
   is     "-0-0"
   type   Str
@@ -1495,6 +1663,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0169
   from   inventory:infix:x
   cell   -0e0 | {a=>1}
+  level  3
   code   (-0e0) x ({a=>1})
   is     "-0"
   type   Str
@@ -1504,6 +1673,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0170
   from   inventory:infix:x
   cell   0 | Inf
+  level  3
   code   (0) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -1512,6 +1682,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0171
   from   inventory:infix:x
   cell   1 | Inf
+  level  3
   code   (1) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -1520,6 +1691,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0172
   from   inventory:infix:x
   cell   -1 | Inf
+  level  3
   code   (-1) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -1528,6 +1700,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0173
   from   inventory:infix:x
   cell   1/2 | Inf
+  level  3
   code   (1/2) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -1536,6 +1709,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0174
   from   inventory:infix:x
   cell   0e0 | Inf
+  level  3
   code   (0e0) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -1544,6 +1718,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0175
   from   inventory:infix:x
   cell   NaN | Inf
+  level  3
   code   (NaN) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -1552,6 +1727,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0176
   from   inventory:infix:x
   cell   "" | Inf
+  level  3
   code   ("") x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -1560,6 +1736,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0177
   from   inventory:infix:x
   cell   "a" | Inf
+  level  3
   code   ("a") x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -1568,6 +1745,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0178
   from   inventory:infix:x
   cell   True | Inf
+  level  3
   code   (True) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -1576,6 +1754,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0179
   from   inventory:infix:x
   cell   Any | Inf
+  level  3
   code   (Any) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -1584,6 +1763,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0180
   from   inventory:infix:x
   cell   (1,2) | Inf
+  level  3
   code   ((1,2)) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -1592,6 +1772,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0181
   from   inventory:infix:x
   cell   {a=>1} | Inf
+  level  3
   code   ({a=>1}) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -1600,6 +1781,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0182
   from   inventory:infix:x
   cell   -0e0 | Inf
+  level  3
   code   (-0e0) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -1608,6 +1790,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0183
   from   inventory:infix:x
   cell   Inf | Inf
+  level  3
   code   (Inf) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -1616,6 +1799,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0184
   from   inventory:infix:x
   cell   Inf | 0
+  level  3
   code   (Inf) x (0)
   is     ""
   type   Str
@@ -1625,6 +1809,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0185
   from   inventory:infix:x
   cell   Inf | 1
+  level  3
   code   (Inf) x (1)
   is     "Inf"
   type   Str
@@ -1634,6 +1819,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0186
   from   inventory:infix:x
   cell   Inf | -1
+  level  3
   code   (Inf) x (-1)
   is     ""
   type   Str
@@ -1643,6 +1829,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0187
   from   inventory:infix:x
   cell   Inf | 1/2
+  level  3
   code   (Inf) x (1/2)
   is     ""
   type   Str
@@ -1652,6 +1839,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0188
   from   inventory:infix:x
   cell   Inf | 0e0
+  level  3
   code   (Inf) x (0e0)
   is     ""
   type   Str
@@ -1661,6 +1849,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0189
   from   inventory:infix:x
   cell   Inf | NaN
+  level  3
   code   (Inf) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -1669,6 +1858,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0190
   from   inventory:infix:x
   cell   Inf | ""
+  level  3
   code   (Inf) x ("")
   is     ""
   type   Str
@@ -1678,6 +1868,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0191
   from   inventory:infix:x
   cell   Inf | "a"
+  level  3
   code   (Inf) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -1686,6 +1877,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0192
   from   inventory:infix:x
   cell   Inf | True
+  level  3
   code   (Inf) x (True)
   is     "Inf"
   type   Str
@@ -1695,6 +1887,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0193
   from   inventory:infix:x
   cell   Inf | Any
+  level  3
   code   (Inf) x (Any)
   is     ""
   type   Str
@@ -1704,6 +1897,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0194
   from   inventory:infix:x
   cell   Inf | (1,2)
+  level  3
   code   (Inf) x ((1,2))
   is     "InfInf"
   type   Str
@@ -1713,6 +1907,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0195
   from   inventory:infix:x
   cell   Inf | {a=>1}
+  level  3
   code   (Inf) x ({a=>1})
   is     "Inf"
   type   Str
@@ -1722,6 +1917,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0196
   from   inventory:infix:x
   cell   Inf | -0e0
+  level  3
   code   (Inf) x (-0e0)
   is     ""
   type   Str
@@ -1731,6 +1927,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0197
   from   inventory:infix:x
   cell   0 | 2**64
+  level  3
   code   (0) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -1739,6 +1936,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0198
   from   inventory:infix:x
   cell   1 | 2**64
+  level  3
   code   (1) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -1747,6 +1945,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0199
   from   inventory:infix:x
   cell   -1 | 2**64
+  level  3
   code   (-1) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -1755,6 +1954,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0200
   from   inventory:infix:x
   cell   1/2 | 2**64
+  level  3
   code   (1/2) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -1763,6 +1963,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0201
   from   inventory:infix:x
   cell   0e0 | 2**64
+  level  3
   code   (0e0) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -1771,6 +1972,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0202
   from   inventory:infix:x
   cell   NaN | 2**64
+  level  3
   code   (NaN) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -1779,6 +1981,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0203
   from   inventory:infix:x
   cell   "" | 2**64
+  level  3
   code   ("") x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -1787,6 +1990,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0204
   from   inventory:infix:x
   cell   "a" | 2**64
+  level  3
   code   ("a") x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -1795,6 +1999,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0205
   from   inventory:infix:x
   cell   True | 2**64
+  level  3
   code   (True) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -1803,6 +2008,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0206
   from   inventory:infix:x
   cell   Any | 2**64
+  level  3
   code   (Any) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -1811,6 +2017,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0207
   from   inventory:infix:x
   cell   (1,2) | 2**64
+  level  3
   code   ((1,2)) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -1819,6 +2026,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0208
   from   inventory:infix:x
   cell   {a=>1} | 2**64
+  level  3
   code   ({a=>1}) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -1827,6 +2035,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0209
   from   inventory:infix:x
   cell   -0e0 | 2**64
+  level  3
   code   (-0e0) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -1835,6 +2044,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0210
   from   inventory:infix:x
   cell   Inf | 2**64
+  level  3
   code   (Inf) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -1843,6 +2053,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0211
   from   inventory:infix:x
   cell   2**64 | 2**64
+  level  3
   code   (2**64) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -1851,6 +2062,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0212
   from   inventory:infix:x
   cell   2**64 | 0
+  level  3
   code   (2**64) x (0)
   is     ""
   type   Str
@@ -1860,6 +2072,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0213
   from   inventory:infix:x
   cell   2**64 | 1
+  level  3
   code   (2**64) x (1)
   is     "18446744073709551616"
   type   Str
@@ -1869,6 +2082,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0214
   from   inventory:infix:x
   cell   2**64 | -1
+  level  3
   code   (2**64) x (-1)
   is     ""
   type   Str
@@ -1878,6 +2092,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0215
   from   inventory:infix:x
   cell   2**64 | 1/2
+  level  3
   code   (2**64) x (1/2)
   is     ""
   type   Str
@@ -1887,6 +2102,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0216
   from   inventory:infix:x
   cell   2**64 | 0e0
+  level  3
   code   (2**64) x (0e0)
   is     ""
   type   Str
@@ -1896,6 +2112,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0217
   from   inventory:infix:x
   cell   2**64 | NaN
+  level  3
   code   (2**64) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -1904,6 +2121,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0218
   from   inventory:infix:x
   cell   2**64 | ""
+  level  3
   code   (2**64) x ("")
   is     ""
   type   Str
@@ -1913,6 +2131,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0219
   from   inventory:infix:x
   cell   2**64 | "a"
+  level  3
   code   (2**64) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -1921,6 +2140,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0220
   from   inventory:infix:x
   cell   2**64 | True
+  level  3
   code   (2**64) x (True)
   is     "18446744073709551616"
   type   Str
@@ -1930,6 +2150,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0221
   from   inventory:infix:x
   cell   2**64 | Any
+  level  3
   code   (2**64) x (Any)
   is     ""
   type   Str
@@ -1939,6 +2160,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0222
   from   inventory:infix:x
   cell   2**64 | (1,2)
+  level  3
   code   (2**64) x ((1,2))
   is     "1844674407370955161618446744073709551616"
   type   Str
@@ -1948,6 +2170,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0223
   from   inventory:infix:x
   cell   2**64 | {a=>1}
+  level  3
   code   (2**64) x ({a=>1})
   is     "18446744073709551616"
   type   Str
@@ -1957,6 +2180,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0224
   from   inventory:infix:x
   cell   2**64 | -0e0
+  level  3
   code   (2**64) x (-0e0)
   is     ""
   type   Str
@@ -1966,6 +2190,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0225
   from   inventory:infix:x
   cell   2**64 | Inf
+  level  3
   code   (2**64) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -1974,6 +2199,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0226
   from   inventory:infix:x
   cell   0 | False
+  level  3
   code   (0) x (False)
   is     ""
   type   Str
@@ -1983,6 +2209,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0227
   from   inventory:infix:x
   cell   1 | False
+  level  3
   code   (1) x (False)
   is     ""
   type   Str
@@ -1992,6 +2219,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0228
   from   inventory:infix:x
   cell   -1 | False
+  level  3
   code   (-1) x (False)
   is     ""
   type   Str
@@ -2001,6 +2229,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0229
   from   inventory:infix:x
   cell   1/2 | False
+  level  3
   code   (1/2) x (False)
   is     ""
   type   Str
@@ -2010,6 +2239,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0230
   from   inventory:infix:x
   cell   0e0 | False
+  level  3
   code   (0e0) x (False)
   is     ""
   type   Str
@@ -2019,6 +2249,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0231
   from   inventory:infix:x
   cell   NaN | False
+  level  3
   code   (NaN) x (False)
   is     ""
   type   Str
@@ -2028,6 +2259,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0232
   from   inventory:infix:x
   cell   "" | False
+  level  3
   code   ("") x (False)
   is     ""
   type   Str
@@ -2037,6 +2269,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0233
   from   inventory:infix:x
   cell   "a" | False
+  level  3
   code   ("a") x (False)
   is     ""
   type   Str
@@ -2046,6 +2279,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0234
   from   inventory:infix:x
   cell   True | False
+  level  3
   code   (True) x (False)
   is     ""
   type   Str
@@ -2055,6 +2289,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0235
   from   inventory:infix:x
   cell   Any | False
+  level  3
   code   (Any) x (False)
   is     ""
   type   Str
@@ -2064,6 +2299,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0236
   from   inventory:infix:x
   cell   (1,2) | False
+  level  3
   code   ((1,2)) x (False)
   is     ""
   type   Str
@@ -2073,6 +2309,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0237
   from   inventory:infix:x
   cell   {a=>1} | False
+  level  3
   code   ({a=>1}) x (False)
   is     ""
   type   Str
@@ -2082,6 +2319,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0238
   from   inventory:infix:x
   cell   -0e0 | False
+  level  3
   code   (-0e0) x (False)
   is     ""
   type   Str
@@ -2091,6 +2329,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0239
   from   inventory:infix:x
   cell   Inf | False
+  level  3
   code   (Inf) x (False)
   is     ""
   type   Str
@@ -2100,6 +2339,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0240
   from   inventory:infix:x
   cell   2**64 | False
+  level  3
   code   (2**64) x (False)
   is     ""
   type   Str
@@ -2109,6 +2349,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0241
   from   inventory:infix:x
   cell   False | False
+  level  3
   code   (False) x (False)
   is     ""
   type   Str
@@ -2118,6 +2359,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0242
   from   inventory:infix:x
   cell   False | 0
+  level  3
   code   (False) x (0)
   is     ""
   type   Str
@@ -2127,6 +2369,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0243
   from   inventory:infix:x
   cell   False | 1
+  level  3
   code   (False) x (1)
   is     "False"
   type   Str
@@ -2136,6 +2379,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0244
   from   inventory:infix:x
   cell   False | -1
+  level  3
   code   (False) x (-1)
   is     ""
   type   Str
@@ -2145,6 +2389,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0245
   from   inventory:infix:x
   cell   False | 1/2
+  level  3
   code   (False) x (1/2)
   is     ""
   type   Str
@@ -2154,6 +2399,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0246
   from   inventory:infix:x
   cell   False | 0e0
+  level  3
   code   (False) x (0e0)
   is     ""
   type   Str
@@ -2163,6 +2409,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0247
   from   inventory:infix:x
   cell   False | NaN
+  level  3
   code   (False) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -2171,6 +2418,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0248
   from   inventory:infix:x
   cell   False | ""
+  level  3
   code   (False) x ("")
   is     ""
   type   Str
@@ -2180,6 +2428,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0249
   from   inventory:infix:x
   cell   False | "a"
+  level  3
   code   (False) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -2188,6 +2437,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0250
   from   inventory:infix:x
   cell   False | True
+  level  3
   code   (False) x (True)
   is     "False"
   type   Str
@@ -2197,6 +2447,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0251
   from   inventory:infix:x
   cell   False | Any
+  level  3
   code   (False) x (Any)
   is     ""
   type   Str
@@ -2206,6 +2457,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0252
   from   inventory:infix:x
   cell   False | (1,2)
+  level  3
   code   (False) x ((1,2))
   is     "FalseFalse"
   type   Str
@@ -2215,6 +2467,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0253
   from   inventory:infix:x
   cell   False | {a=>1}
+  level  3
   code   (False) x ({a=>1})
   is     "False"
   type   Str
@@ -2224,6 +2477,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0254
   from   inventory:infix:x
   cell   False | -0e0
+  level  3
   code   (False) x (-0e0)
   is     ""
   type   Str
@@ -2233,6 +2487,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0255
   from   inventory:infix:x
   cell   False | Inf
+  level  3
   code   (False) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -2241,6 +2496,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0256
   from   inventory:infix:x
   cell   False | 2**64
+  level  3
   code   (False) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -2249,6 +2505,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0257
   from   inventory:infix:x
   cell   0 | Nil
+  level  3
   code   (0) x (Nil)
   is     ""
   type   Str
@@ -2258,6 +2515,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0258
   from   inventory:infix:x
   cell   1 | Nil
+  level  3
   code   (1) x (Nil)
   is     ""
   type   Str
@@ -2267,6 +2525,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0259
   from   inventory:infix:x
   cell   -1 | Nil
+  level  3
   code   (-1) x (Nil)
   is     ""
   type   Str
@@ -2276,6 +2535,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0260
   from   inventory:infix:x
   cell   1/2 | Nil
+  level  3
   code   (1/2) x (Nil)
   is     ""
   type   Str
@@ -2285,6 +2545,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0261
   from   inventory:infix:x
   cell   0e0 | Nil
+  level  3
   code   (0e0) x (Nil)
   is     ""
   type   Str
@@ -2294,6 +2555,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0262
   from   inventory:infix:x
   cell   NaN | Nil
+  level  3
   code   (NaN) x (Nil)
   is     ""
   type   Str
@@ -2303,6 +2565,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0263
   from   inventory:infix:x
   cell   "" | Nil
+  level  3
   code   ("") x (Nil)
   is     ""
   type   Str
@@ -2312,6 +2575,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0264
   from   inventory:infix:x
   cell   "a" | Nil
+  level  3
   code   ("a") x (Nil)
   is     ""
   type   Str
@@ -2321,6 +2585,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0265
   from   inventory:infix:x
   cell   True | Nil
+  level  3
   code   (True) x (Nil)
   is     ""
   type   Str
@@ -2330,6 +2595,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0266
   from   inventory:infix:x
   cell   Any | Nil
+  level  3
   code   (Any) x (Nil)
   is     ""
   type   Str
@@ -2339,6 +2605,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0267
   from   inventory:infix:x
   cell   (1,2) | Nil
+  level  3
   code   ((1,2)) x (Nil)
   is     ""
   type   Str
@@ -2348,6 +2615,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0268
   from   inventory:infix:x
   cell   {a=>1} | Nil
+  level  3
   code   ({a=>1}) x (Nil)
   is     ""
   type   Str
@@ -2357,6 +2625,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0269
   from   inventory:infix:x
   cell   -0e0 | Nil
+  level  3
   code   (-0e0) x (Nil)
   is     ""
   type   Str
@@ -2366,6 +2635,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0270
   from   inventory:infix:x
   cell   Inf | Nil
+  level  3
   code   (Inf) x (Nil)
   is     ""
   type   Str
@@ -2375,6 +2645,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0271
   from   inventory:infix:x
   cell   2**64 | Nil
+  level  3
   code   (2**64) x (Nil)
   is     ""
   type   Str
@@ -2384,6 +2655,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0272
   from   inventory:infix:x
   cell   False | Nil
+  level  3
   code   (False) x (Nil)
   is     ""
   type   Str
@@ -2393,6 +2665,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0273
   from   inventory:infix:x
   cell   Nil | Nil
+  level  3
   code   (Nil) x (Nil)
   is     ""
   type   Str
@@ -2402,6 +2675,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0274
   from   inventory:infix:x
   cell   Nil | 0
+  level  3
   code   (Nil) x (0)
   is     ""
   type   Str
@@ -2411,6 +2685,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0275
   from   inventory:infix:x
   cell   Nil | 1
+  level  3
   code   (Nil) x (1)
   is     ""
   type   Str
@@ -2420,6 +2695,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0276
   from   inventory:infix:x
   cell   Nil | -1
+  level  3
   code   (Nil) x (-1)
   is     ""
   type   Str
@@ -2429,6 +2705,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0277
   from   inventory:infix:x
   cell   Nil | 1/2
+  level  3
   code   (Nil) x (1/2)
   is     ""
   type   Str
@@ -2438,6 +2715,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0278
   from   inventory:infix:x
   cell   Nil | 0e0
+  level  3
   code   (Nil) x (0e0)
   is     ""
   type   Str
@@ -2447,6 +2725,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0279
   from   inventory:infix:x
   cell   Nil | NaN
+  level  3
   code   (Nil) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -2455,6 +2734,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0280
   from   inventory:infix:x
   cell   Nil | ""
+  level  3
   code   (Nil) x ("")
   is     ""
   type   Str
@@ -2464,6 +2744,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0281
   from   inventory:infix:x
   cell   Nil | "a"
+  level  3
   code   (Nil) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -2472,6 +2753,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0282
   from   inventory:infix:x
   cell   Nil | True
+  level  3
   code   (Nil) x (True)
   is     ""
   type   Str
@@ -2481,6 +2763,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0283
   from   inventory:infix:x
   cell   Nil | Any
+  level  3
   code   (Nil) x (Any)
   is     ""
   type   Str
@@ -2490,6 +2773,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0284
   from   inventory:infix:x
   cell   Nil | (1,2)
+  level  3
   code   (Nil) x ((1,2))
   is     ""
   type   Str
@@ -2499,6 +2783,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0285
   from   inventory:infix:x
   cell   Nil | {a=>1}
+  level  3
   code   (Nil) x ({a=>1})
   is     ""
   type   Str
@@ -2508,6 +2793,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0286
   from   inventory:infix:x
   cell   Nil | -0e0
+  level  3
   code   (Nil) x (-0e0)
   is     ""
   type   Str
@@ -2517,6 +2803,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0287
   from   inventory:infix:x
   cell   Nil | Inf
+  level  3
   code   (Nil) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -2525,6 +2812,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0288
   from   inventory:infix:x
   cell   Nil | 2**64
+  level  3
   code   (Nil) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -2533,6 +2821,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0289
   from   inventory:infix:x
   cell   Nil | False
+  level  3
   code   (Nil) x (False)
   is     ""
   type   Str
@@ -2542,6 +2831,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0290
   from   inventory:infix:x
   cell   0 | ()
+  level  3
   code   (0) x (())
   is     ""
   type   Str
@@ -2551,6 +2841,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0291
   from   inventory:infix:x
   cell   1 | ()
+  level  3
   code   (1) x (())
   is     ""
   type   Str
@@ -2560,6 +2851,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0292
   from   inventory:infix:x
   cell   -1 | ()
+  level  3
   code   (-1) x (())
   is     ""
   type   Str
@@ -2569,6 +2861,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0293
   from   inventory:infix:x
   cell   1/2 | ()
+  level  3
   code   (1/2) x (())
   is     ""
   type   Str
@@ -2578,6 +2871,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0294
   from   inventory:infix:x
   cell   0e0 | ()
+  level  3
   code   (0e0) x (())
   is     ""
   type   Str
@@ -2587,6 +2881,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0295
   from   inventory:infix:x
   cell   NaN | ()
+  level  3
   code   (NaN) x (())
   is     ""
   type   Str
@@ -2596,6 +2891,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0296
   from   inventory:infix:x
   cell   "" | ()
+  level  3
   code   ("") x (())
   is     ""
   type   Str
@@ -2605,6 +2901,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0297
   from   inventory:infix:x
   cell   "a" | ()
+  level  3
   code   ("a") x (())
   is     ""
   type   Str
@@ -2614,6 +2911,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0298
   from   inventory:infix:x
   cell   True | ()
+  level  3
   code   (True) x (())
   is     ""
   type   Str
@@ -2623,6 +2921,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0299
   from   inventory:infix:x
   cell   Any | ()
+  level  3
   code   (Any) x (())
   is     ""
   type   Str
@@ -2632,6 +2931,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0300
   from   inventory:infix:x
   cell   (1,2) | ()
+  level  3
   code   ((1,2)) x (())
   is     ""
   type   Str
@@ -2641,6 +2941,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0301
   from   inventory:infix:x
   cell   {a=>1} | ()
+  level  3
   code   ({a=>1}) x (())
   is     ""
   type   Str
@@ -2650,6 +2951,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0302
   from   inventory:infix:x
   cell   -0e0 | ()
+  level  3
   code   (-0e0) x (())
   is     ""
   type   Str
@@ -2659,6 +2961,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0303
   from   inventory:infix:x
   cell   Inf | ()
+  level  3
   code   (Inf) x (())
   is     ""
   type   Str
@@ -2668,6 +2971,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0304
   from   inventory:infix:x
   cell   2**64 | ()
+  level  3
   code   (2**64) x (())
   is     ""
   type   Str
@@ -2677,6 +2981,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0305
   from   inventory:infix:x
   cell   False | ()
+  level  3
   code   (False) x (())
   is     ""
   type   Str
@@ -2686,6 +2991,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0306
   from   inventory:infix:x
   cell   Nil | ()
+  level  3
   code   (Nil) x (())
   is     ""
   type   Str
@@ -2695,6 +3001,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0307
   from   inventory:infix:x
   cell   () | ()
+  level  3
   code   (()) x (())
   is     ""
   type   Str
@@ -2704,6 +3011,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0308
   from   inventory:infix:x
   cell   () | 0
+  level  3
   code   (()) x (0)
   is     ""
   type   Str
@@ -2713,6 +3021,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0309
   from   inventory:infix:x
   cell   () | 1
+  level  3
   code   (()) x (1)
   is     ""
   type   Str
@@ -2722,6 +3031,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0310
   from   inventory:infix:x
   cell   () | -1
+  level  3
   code   (()) x (-1)
   is     ""
   type   Str
@@ -2731,6 +3041,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0311
   from   inventory:infix:x
   cell   () | 1/2
+  level  3
   code   (()) x (1/2)
   is     ""
   type   Str
@@ -2740,6 +3051,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0312
   from   inventory:infix:x
   cell   () | 0e0
+  level  3
   code   (()) x (0e0)
   is     ""
   type   Str
@@ -2749,6 +3061,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0313
   from   inventory:infix:x
   cell   () | NaN
+  level  3
   code   (()) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -2757,6 +3070,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0314
   from   inventory:infix:x
   cell   () | ""
+  level  3
   code   (()) x ("")
   is     ""
   type   Str
@@ -2766,6 +3080,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0315
   from   inventory:infix:x
   cell   () | "a"
+  level  3
   code   (()) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -2774,6 +3089,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0316
   from   inventory:infix:x
   cell   () | True
+  level  3
   code   (()) x (True)
   is     ""
   type   Str
@@ -2783,6 +3099,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0317
   from   inventory:infix:x
   cell   () | Any
+  level  3
   code   (()) x (Any)
   is     ""
   type   Str
@@ -2792,6 +3109,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0318
   from   inventory:infix:x
   cell   () | (1,2)
+  level  3
   code   (()) x ((1,2))
   is     ""
   type   Str
@@ -2801,6 +3119,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0319
   from   inventory:infix:x
   cell   () | {a=>1}
+  level  3
   code   (()) x ({a=>1})
   is     ""
   type   Str
@@ -2810,6 +3129,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0320
   from   inventory:infix:x
   cell   () | -0e0
+  level  3
   code   (()) x (-0e0)
   is     ""
   type   Str
@@ -2819,6 +3139,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0321
   from   inventory:infix:x
   cell   () | Inf
+  level  3
   code   (()) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -2827,6 +3148,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0322
   from   inventory:infix:x
   cell   () | 2**64
+  level  3
   code   (()) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -2835,6 +3157,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0323
   from   inventory:infix:x
   cell   () | False
+  level  3
   code   (()) x (False)
   is     ""
   type   Str
@@ -2844,6 +3167,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0324
   from   inventory:infix:x
   cell   () | Nil
+  level  3
   code   (()) x (Nil)
   is     ""
   type   Str
@@ -2853,6 +3177,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0325
   from   inventory:infix:x
   cell   0 | "0"
+  level  3
   code   (0) x ("0")
   is     ""
   type   Str
@@ -2862,6 +3187,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0326
   from   inventory:infix:x
   cell   1 | "0"
+  level  3
   code   (1) x ("0")
   is     ""
   type   Str
@@ -2871,6 +3197,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0327
   from   inventory:infix:x
   cell   -1 | "0"
+  level  3
   code   (-1) x ("0")
   is     ""
   type   Str
@@ -2880,6 +3207,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0328
   from   inventory:infix:x
   cell   1/2 | "0"
+  level  3
   code   (1/2) x ("0")
   is     ""
   type   Str
@@ -2889,6 +3217,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0329
   from   inventory:infix:x
   cell   0e0 | "0"
+  level  3
   code   (0e0) x ("0")
   is     ""
   type   Str
@@ -2898,6 +3227,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0330
   from   inventory:infix:x
   cell   NaN | "0"
+  level  3
   code   (NaN) x ("0")
   is     ""
   type   Str
@@ -2907,6 +3237,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0331
   from   inventory:infix:x
   cell   "" | "0"
+  level  3
   code   ("") x ("0")
   is     ""
   type   Str
@@ -2916,6 +3247,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0332
   from   inventory:infix:x
   cell   "a" | "0"
+  level  3
   code   ("a") x ("0")
   is     ""
   type   Str
@@ -2925,6 +3257,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0333
   from   inventory:infix:x
   cell   True | "0"
+  level  3
   code   (True) x ("0")
   is     ""
   type   Str
@@ -2934,6 +3267,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0334
   from   inventory:infix:x
   cell   Any | "0"
+  level  3
   code   (Any) x ("0")
   is     ""
   type   Str
@@ -2943,6 +3277,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0335
   from   inventory:infix:x
   cell   (1,2) | "0"
+  level  3
   code   ((1,2)) x ("0")
   is     ""
   type   Str
@@ -2952,6 +3287,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0336
   from   inventory:infix:x
   cell   {a=>1} | "0"
+  level  3
   code   ({a=>1}) x ("0")
   is     ""
   type   Str
@@ -2961,6 +3297,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0337
   from   inventory:infix:x
   cell   -0e0 | "0"
+  level  3
   code   (-0e0) x ("0")
   is     ""
   type   Str
@@ -2970,6 +3307,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0338
   from   inventory:infix:x
   cell   Inf | "0"
+  level  3
   code   (Inf) x ("0")
   is     ""
   type   Str
@@ -2979,6 +3317,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0339
   from   inventory:infix:x
   cell   2**64 | "0"
+  level  3
   code   (2**64) x ("0")
   is     ""
   type   Str
@@ -2988,6 +3327,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0340
   from   inventory:infix:x
   cell   False | "0"
+  level  3
   code   (False) x ("0")
   is     ""
   type   Str
@@ -2997,6 +3337,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0341
   from   inventory:infix:x
   cell   Nil | "0"
+  level  3
   code   (Nil) x ("0")
   is     ""
   type   Str
@@ -3006,6 +3347,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0342
   from   inventory:infix:x
   cell   () | "0"
+  level  3
   code   (()) x ("0")
   is     ""
   type   Str
@@ -3015,6 +3357,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0343
   from   inventory:infix:x
   cell   "0" | "0"
+  level  3
   code   ("0") x ("0")
   is     ""
   type   Str
@@ -3024,6 +3367,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0344
   from   inventory:infix:x
   cell   "0" | 0
+  level  3
   code   ("0") x (0)
   is     ""
   type   Str
@@ -3033,6 +3377,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0345
   from   inventory:infix:x
   cell   "0" | 1
+  level  3
   code   ("0") x (1)
   is     "0"
   type   Str
@@ -3042,6 +3387,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0346
   from   inventory:infix:x
   cell   "0" | -1
+  level  3
   code   ("0") x (-1)
   is     ""
   type   Str
@@ -3051,6 +3397,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0347
   from   inventory:infix:x
   cell   "0" | 1/2
+  level  3
   code   ("0") x (1/2)
   is     ""
   type   Str
@@ -3060,6 +3407,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0348
   from   inventory:infix:x
   cell   "0" | 0e0
+  level  3
   code   ("0") x (0e0)
   is     ""
   type   Str
@@ -3069,6 +3417,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0349
   from   inventory:infix:x
   cell   "0" | NaN
+  level  3
   code   ("0") x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -3077,6 +3426,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0350
   from   inventory:infix:x
   cell   "0" | ""
+  level  3
   code   ("0") x ("")
   is     ""
   type   Str
@@ -3086,6 +3436,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0351
   from   inventory:infix:x
   cell   "0" | "a"
+  level  3
   code   ("0") x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -3094,6 +3445,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0352
   from   inventory:infix:x
   cell   "0" | True
+  level  3
   code   ("0") x (True)
   is     "0"
   type   Str
@@ -3103,6 +3455,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0353
   from   inventory:infix:x
   cell   "0" | Any
+  level  3
   code   ("0") x (Any)
   is     ""
   type   Str
@@ -3112,6 +3465,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0354
   from   inventory:infix:x
   cell   "0" | (1,2)
+  level  3
   code   ("0") x ((1,2))
   is     "00"
   type   Str
@@ -3121,6 +3475,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0355
   from   inventory:infix:x
   cell   "0" | {a=>1}
+  level  3
   code   ("0") x ({a=>1})
   is     "0"
   type   Str
@@ -3130,6 +3485,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0356
   from   inventory:infix:x
   cell   "0" | -0e0
+  level  3
   code   ("0") x (-0e0)
   is     ""
   type   Str
@@ -3139,6 +3495,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0357
   from   inventory:infix:x
   cell   "0" | Inf
+  level  3
   code   ("0") x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -3147,6 +3504,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0358
   from   inventory:infix:x
   cell   "0" | 2**64
+  level  3
   code   ("0") x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -3155,6 +3513,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0359
   from   inventory:infix:x
   cell   "0" | False
+  level  3
   code   ("0") x (False)
   is     ""
   type   Str
@@ -3164,6 +3523,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0360
   from   inventory:infix:x
   cell   "0" | Nil
+  level  3
   code   ("0") x (Nil)
   is     ""
   type   Str
@@ -3173,6 +3533,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0361
   from   inventory:infix:x
   cell   "0" | ()
+  level  3
   code   ("0") x (())
   is     ""
   type   Str
@@ -3182,6 +3543,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0362
   from   inventory:infix:x
   cell   0 | (1..3)
+  level  3
   code   (0) x ((1..3))
   is     "000"
   type   Str
@@ -3191,6 +3553,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0363
   from   inventory:infix:x
   cell   1 | (1..3)
+  level  3
   code   (1) x ((1..3))
   is     "111"
   type   Str
@@ -3200,6 +3563,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0364
   from   inventory:infix:x
   cell   -1 | (1..3)
+  level  3
   code   (-1) x ((1..3))
   is     "-1-1-1"
   type   Str
@@ -3209,6 +3573,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0365
   from   inventory:infix:x
   cell   1/2 | (1..3)
+  level  3
   code   (1/2) x ((1..3))
   is     "0.50.50.5"
   type   Str
@@ -3218,6 +3583,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0366
   from   inventory:infix:x
   cell   0e0 | (1..3)
+  level  3
   code   (0e0) x ((1..3))
   is     "000"
   type   Str
@@ -3227,6 +3593,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0367
   from   inventory:infix:x
   cell   NaN | (1..3)
+  level  3
   code   (NaN) x ((1..3))
   is     "NaNNaNNaN"
   type   Str
@@ -3236,6 +3603,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0368
   from   inventory:infix:x
   cell   "" | (1..3)
+  level  3
   code   ("") x ((1..3))
   is     ""
   type   Str
@@ -3245,6 +3613,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0369
   from   inventory:infix:x
   cell   "a" | (1..3)
+  level  3
   code   ("a") x ((1..3))
   is     "aaa"
   type   Str
@@ -3254,6 +3623,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0370
   from   inventory:infix:x
   cell   True | (1..3)
+  level  3
   code   (True) x ((1..3))
   is     "TrueTrueTrue"
   type   Str
@@ -3263,6 +3633,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0371
   from   inventory:infix:x
   cell   Any | (1..3)
+  level  3
   code   (Any) x ((1..3))
   is     ""
   type   Str
@@ -3272,6 +3643,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0372
   from   inventory:infix:x
   cell   (1,2) | (1..3)
+  level  3
   code   ((1,2)) x ((1..3))
   is     "1 21 21 2"
   type   Str
@@ -3281,6 +3653,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0373
   from   inventory:infix:x
   cell   {a=>1} | (1..3)
+  level  3
   code   ({a=>1}) x ((1..3))
   is     "a\t1a\t1a\t1"
   type   Str
@@ -3290,6 +3663,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0374
   from   inventory:infix:x
   cell   -0e0 | (1..3)
+  level  3
   code   (-0e0) x ((1..3))
   is     "-0-0-0"
   type   Str
@@ -3299,6 +3673,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0375
   from   inventory:infix:x
   cell   Inf | (1..3)
+  level  3
   code   (Inf) x ((1..3))
   is     "InfInfInf"
   type   Str
@@ -3308,6 +3683,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0376
   from   inventory:infix:x
   cell   2**64 | (1..3)
+  level  3
   code   (2**64) x ((1..3))
   is     "184467440737095516161844674407370955161618446744073709551616"
   type   Str
@@ -3317,6 +3693,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0377
   from   inventory:infix:x
   cell   False | (1..3)
+  level  3
   code   (False) x ((1..3))
   is     "FalseFalseFalse"
   type   Str
@@ -3326,6 +3703,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0378
   from   inventory:infix:x
   cell   Nil | (1..3)
+  level  3
   code   (Nil) x ((1..3))
   is     ""
   type   Str
@@ -3335,6 +3713,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0379
   from   inventory:infix:x
   cell   () | (1..3)
+  level  3
   code   (()) x ((1..3))
   is     ""
   type   Str
@@ -3344,6 +3723,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0380
   from   inventory:infix:x
   cell   "0" | (1..3)
+  level  3
   code   ("0") x ((1..3))
   is     "000"
   type   Str
@@ -3353,6 +3733,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0381
   from   inventory:infix:x
   cell   (1..3) | (1..3)
+  level  3
   code   ((1..3)) x ((1..3))
   is     "1 2 31 2 31 2 3"
   type   Str
@@ -3362,6 +3743,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0382
   from   inventory:infix:x
   cell   (1..3) | 0
+  level  3
   code   ((1..3)) x (0)
   is     ""
   type   Str
@@ -3371,6 +3753,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0383
   from   inventory:infix:x
   cell   (1..3) | 1
+  level  3
   code   ((1..3)) x (1)
   is     "1 2 3"
   type   Str
@@ -3380,6 +3763,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0384
   from   inventory:infix:x
   cell   (1..3) | -1
+  level  3
   code   ((1..3)) x (-1)
   is     ""
   type   Str
@@ -3389,6 +3773,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0385
   from   inventory:infix:x
   cell   (1..3) | 1/2
+  level  3
   code   ((1..3)) x (1/2)
   is     ""
   type   Str
@@ -3398,6 +3783,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0386
   from   inventory:infix:x
   cell   (1..3) | 0e0
+  level  3
   code   ((1..3)) x (0e0)
   is     ""
   type   Str
@@ -3407,6 +3793,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0387
   from   inventory:infix:x
   cell   (1..3) | NaN
+  level  3
   code   ((1..3)) x (NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -3415,6 +3802,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0388
   from   inventory:infix:x
   cell   (1..3) | ""
+  level  3
   code   ((1..3)) x ("")
   is     ""
   type   Str
@@ -3424,6 +3812,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0389
   from   inventory:infix:x
   cell   (1..3) | "a"
+  level  3
   code   ((1..3)) x ("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -3432,6 +3821,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0390
   from   inventory:infix:x
   cell   (1..3) | True
+  level  3
   code   ((1..3)) x (True)
   is     "1 2 3"
   type   Str
@@ -3441,6 +3831,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0391
   from   inventory:infix:x
   cell   (1..3) | Any
+  level  3
   code   ((1..3)) x (Any)
   is     ""
   type   Str
@@ -3450,6 +3841,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0392
   from   inventory:infix:x
   cell   (1..3) | (1,2)
+  level  3
   code   ((1..3)) x ((1,2))
   is     "1 2 31 2 3"
   type   Str
@@ -3459,6 +3851,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0393
   from   inventory:infix:x
   cell   (1..3) | {a=>1}
+  level  3
   code   ((1..3)) x ({a=>1})
   is     "1 2 3"
   type   Str
@@ -3468,6 +3861,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0394
   from   inventory:infix:x
   cell   (1..3) | -0e0
+  level  3
   code   ((1..3)) x (-0e0)
   is     ""
   type   Str
@@ -3477,6 +3871,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0395
   from   inventory:infix:x
   cell   (1..3) | Inf
+  level  3
   code   ((1..3)) x (Inf)
   throws X::NYI
   oracle rakudo-2026.07 → ERR:X::NYI
@@ -3485,6 +3880,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0396
   from   inventory:infix:x
   cell   (1..3) | 2**64
+  level  3
   code   ((1..3)) x (2**64)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
@@ -3493,6 +3889,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0397
   from   inventory:infix:x
   cell   (1..3) | False
+  level  3
   code   ((1..3)) x (False)
   is     ""
   type   Str
@@ -3502,6 +3899,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0398
   from   inventory:infix:x
   cell   (1..3) | Nil
+  level  3
   code   ((1..3)) x (Nil)
   is     ""
   type   Str
@@ -3511,6 +3909,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0399
   from   inventory:infix:x
   cell   (1..3) | ()
+  level  3
   code   ((1..3)) x (())
   is     ""
   type   Str
@@ -3520,8 +3919,1705 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0400
   from   inventory:infix:x
   cell   (1..3) | "0"
+  level  3
   code   ((1..3)) x ("0")
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
   oracle rakupp-v3.14.0-92-g78048b0-modified → ""
+
+- id     0401
+  from   inventory:infix:x
+  cell   0 | Int
+  level  3
+  code   (0) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0402
+  from   inventory:infix:x
+  cell   1 | Int
+  level  3
+  code   (1) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0403
+  from   inventory:infix:x
+  cell   -1 | Int
+  level  3
+  code   (-1) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0404
+  from   inventory:infix:x
+  cell   1/2 | Int
+  level  3
+  code   (1/2) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0405
+  from   inventory:infix:x
+  cell   0e0 | Int
+  level  3
+  code   (0e0) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0406
+  from   inventory:infix:x
+  cell   NaN | Int
+  level  3
+  code   (NaN) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0407
+  from   inventory:infix:x
+  cell   "" | Int
+  level  3
+  code   ("") x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0408
+  from   inventory:infix:x
+  cell   "a" | Int
+  level  3
+  code   ("a") x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0409
+  from   inventory:infix:x
+  cell   True | Int
+  level  3
+  code   (True) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0410
+  from   inventory:infix:x
+  cell   Any | Int
+  level  3
+  code   (Any) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0411
+  from   inventory:infix:x
+  cell   (1,2) | Int
+  level  3
+  code   ((1,2)) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0412
+  from   inventory:infix:x
+  cell   {a=>1} | Int
+  level  3
+  code   ({a=>1}) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0413
+  from   inventory:infix:x
+  cell   -0e0 | Int
+  level  3
+  code   (-0e0) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0414
+  from   inventory:infix:x
+  cell   Inf | Int
+  level  3
+  code   (Inf) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0415
+  from   inventory:infix:x
+  cell   2**64 | Int
+  level  3
+  code   (2**64) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0416
+  from   inventory:infix:x
+  cell   False | Int
+  level  3
+  code   (False) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0417
+  from   inventory:infix:x
+  cell   Nil | Int
+  level  3
+  code   (Nil) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0418
+  from   inventory:infix:x
+  cell   () | Int
+  level  3
+  code   (()) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0419
+  from   inventory:infix:x
+  cell   "0" | Int
+  level  3
+  code   ("0") x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0420
+  from   inventory:infix:x
+  cell   (1..3) | Int
+  level  3
+  code   ((1..3)) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0421
+  from   inventory:infix:x
+  cell   Int | Int
+  level  3
+  code   (Int) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0422
+  from   inventory:infix:x
+  cell   Int | 0
+  level  3
+  code   (Int) x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0423
+  from   inventory:infix:x
+  cell   Int | 1
+  level  3
+  code   (Int) x (1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0424
+  from   inventory:infix:x
+  cell   Int | -1
+  level  3
+  code   (Int) x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0425
+  from   inventory:infix:x
+  cell   Int | 1/2
+  level  3
+  code   (Int) x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0426
+  from   inventory:infix:x
+  cell   Int | 0e0
+  level  3
+  code   (Int) x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0427
+  from   inventory:infix:x
+  cell   Int | NaN
+  level  3
+  code   (Int) x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0428
+  from   inventory:infix:x
+  cell   Int | ""
+  level  3
+  code   (Int) x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0429
+  from   inventory:infix:x
+  cell   Int | "a"
+  level  3
+  code   (Int) x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0430
+  from   inventory:infix:x
+  cell   Int | True
+  level  3
+  code   (Int) x (True)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0431
+  from   inventory:infix:x
+  cell   Int | Any
+  level  3
+  code   (Int) x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0432
+  from   inventory:infix:x
+  cell   Int | (1,2)
+  level  3
+  code   (Int) x ((1,2))
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0433
+  from   inventory:infix:x
+  cell   Int | {a=>1}
+  level  3
+  code   (Int) x ({a=>1})
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0434
+  from   inventory:infix:x
+  cell   Int | -0e0
+  level  3
+  code   (Int) x (-0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0435
+  from   inventory:infix:x
+  cell   Int | Inf
+  level  3
+  code   (Int) x (Inf)
+  throws X::NYI
+  oracle rakudo-2026.07 → ERR:X::NYI
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → CRASH:0
+
+- id     0436
+  from   inventory:infix:x
+  cell   Int | 2**64
+  level  3
+  code   (Int) x (2**64)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → CRASH:0
+
+- id     0437
+  from   inventory:infix:x
+  cell   Int | False
+  level  3
+  code   (Int) x (False)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0438
+  from   inventory:infix:x
+  cell   Int | Nil
+  level  3
+  code   (Int) x (Nil)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0439
+  from   inventory:infix:x
+  cell   Int | ()
+  level  3
+  code   (Int) x (())
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0440
+  from   inventory:infix:x
+  cell   Int | "0"
+  level  3
+  code   (Int) x ("0")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0441
+  from   inventory:infix:x
+  cell   Int | (1..3)
+  level  3
+  code   (Int) x ((1..3))
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0442
+  from   inventory:infix:x
+  cell   0 | "a b"
+  level  3
+  code   (0) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0443
+  from   inventory:infix:x
+  cell   1 | "a b"
+  level  3
+  code   (1) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0444
+  from   inventory:infix:x
+  cell   -1 | "a b"
+  level  3
+  code   (-1) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0445
+  from   inventory:infix:x
+  cell   1/2 | "a b"
+  level  3
+  code   (1/2) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0446
+  from   inventory:infix:x
+  cell   0e0 | "a b"
+  level  3
+  code   (0e0) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0447
+  from   inventory:infix:x
+  cell   NaN | "a b"
+  level  3
+  code   (NaN) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0448
+  from   inventory:infix:x
+  cell   "" | "a b"
+  level  3
+  code   ("") x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0449
+  from   inventory:infix:x
+  cell   "a" | "a b"
+  level  3
+  code   ("a") x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0450
+  from   inventory:infix:x
+  cell   True | "a b"
+  level  3
+  code   (True) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0451
+  from   inventory:infix:x
+  cell   Any | "a b"
+  level  3
+  code   (Any) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0452
+  from   inventory:infix:x
+  cell   (1,2) | "a b"
+  level  3
+  code   ((1,2)) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0453
+  from   inventory:infix:x
+  cell   {a=>1} | "a b"
+  level  3
+  code   ({a=>1}) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0454
+  from   inventory:infix:x
+  cell   -0e0 | "a b"
+  level  3
+  code   (-0e0) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0455
+  from   inventory:infix:x
+  cell   Inf | "a b"
+  level  3
+  code   (Inf) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0456
+  from   inventory:infix:x
+  cell   2**64 | "a b"
+  level  3
+  code   (2**64) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0457
+  from   inventory:infix:x
+  cell   False | "a b"
+  level  3
+  code   (False) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0458
+  from   inventory:infix:x
+  cell   Nil | "a b"
+  level  3
+  code   (Nil) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0459
+  from   inventory:infix:x
+  cell   () | "a b"
+  level  3
+  code   (()) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0460
+  from   inventory:infix:x
+  cell   "0" | "a b"
+  level  3
+  code   ("0") x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0461
+  from   inventory:infix:x
+  cell   (1..3) | "a b"
+  level  3
+  code   ((1..3)) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0462
+  from   inventory:infix:x
+  cell   Int | "a b"
+  level  3
+  code   (Int) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0463
+  from   inventory:infix:x
+  cell   "a b" | "a b"
+  level  3
+  code   ("a b") x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0464
+  from   inventory:infix:x
+  cell   "a b" | 0
+  level  3
+  code   ("a b") x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0465
+  from   inventory:infix:x
+  cell   "a b" | 1
+  level  3
+  code   ("a b") x (1)
+  is     "a b"
+  type   Str
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0466
+  from   inventory:infix:x
+  cell   "a b" | -1
+  level  3
+  code   ("a b") x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0467
+  from   inventory:infix:x
+  cell   "a b" | 1/2
+  level  3
+  code   ("a b") x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0468
+  from   inventory:infix:x
+  cell   "a b" | 0e0
+  level  3
+  code   ("a b") x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0469
+  from   inventory:infix:x
+  cell   "a b" | NaN
+  level  3
+  code   ("a b") x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0470
+  from   inventory:infix:x
+  cell   "a b" | ""
+  level  3
+  code   ("a b") x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0471
+  from   inventory:infix:x
+  cell   "a b" | "a"
+  level  3
+  code   ("a b") x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0472
+  from   inventory:infix:x
+  cell   "a b" | True
+  level  3
+  code   ("a b") x (True)
+  is     "a b"
+  type   Str
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0473
+  from   inventory:infix:x
+  cell   "a b" | Any
+  level  3
+  code   ("a b") x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0474
+  from   inventory:infix:x
+  cell   "a b" | (1,2)
+  level  3
+  code   ("a b") x ((1,2))
+  is     "a ba b"
+  type   Str
+  oracle rakudo-2026.07 → "a ba b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a ba b"
+
+- id     0475
+  from   inventory:infix:x
+  cell   "a b" | {a=>1}
+  level  3
+  code   ("a b") x ({a=>1})
+  is     "a b"
+  type   Str
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0476
+  from   inventory:infix:x
+  cell   "a b" | -0e0
+  level  3
+  code   ("a b") x (-0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0477
+  from   inventory:infix:x
+  cell   "a b" | Inf
+  level  3
+  code   ("a b") x (Inf)
+  throws X::NYI
+  oracle rakudo-2026.07 → ERR:X::NYI
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → CRASH:0
+
+- id     0478
+  from   inventory:infix:x
+  cell   "a b" | 2**64
+  level  3
+  code   ("a b") x (2**64)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → CRASH:0
+
+- id     0479
+  from   inventory:infix:x
+  cell   "a b" | False
+  level  3
+  code   ("a b") x (False)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0480
+  from   inventory:infix:x
+  cell   "a b" | Nil
+  level  3
+  code   ("a b") x (Nil)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0481
+  from   inventory:infix:x
+  cell   "a b" | ()
+  level  3
+  code   ("a b") x (())
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0482
+  from   inventory:infix:x
+  cell   "a b" | "0"
+  level  3
+  code   ("a b") x ("0")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0483
+  from   inventory:infix:x
+  cell   "a b" | (1..3)
+  level  3
+  code   ("a b") x ((1..3))
+  is     "a ba ba b"
+  type   Str
+  oracle rakudo-2026.07 → "a ba ba b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0484
+  from   inventory:infix:x
+  cell   "a b" | Int
+  level  3
+  code   ("a b") x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0485
+  from   inventory:infix:x
+  cell   0 | [1,2]
+  level  3
+  code   (0) x ([1,2])
+  is     "00"
+  type   Str
+  oracle rakudo-2026.07 → "00"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "00"
+
+- id     0486
+  from   inventory:infix:x
+  cell   1 | [1,2]
+  level  3
+  code   (1) x ([1,2])
+  is     "11"
+  type   Str
+  oracle rakudo-2026.07 → "11"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "11"
+
+- id     0487
+  from   inventory:infix:x
+  cell   -1 | [1,2]
+  level  3
+  code   (-1) x ([1,2])
+  is     "-1-1"
+  type   Str
+  oracle rakudo-2026.07 → "-1-1"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "-1-1"
+
+- id     0488
+  from   inventory:infix:x
+  cell   1/2 | [1,2]
+  level  3
+  code   (1/2) x ([1,2])
+  is     "0.50.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.50.5"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "0.50.5"
+
+- id     0489
+  from   inventory:infix:x
+  cell   0e0 | [1,2]
+  level  3
+  code   (0e0) x ([1,2])
+  is     "00"
+  type   Str
+  oracle rakudo-2026.07 → "00"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "00"
+
+- id     0490
+  from   inventory:infix:x
+  cell   NaN | [1,2]
+  level  3
+  code   (NaN) x ([1,2])
+  is     "NaNNaN"
+  type   Str
+  oracle rakudo-2026.07 → "NaNNaN"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "NaNNaN"
+
+- id     0491
+  from   inventory:infix:x
+  cell   "" | [1,2]
+  level  3
+  code   ("") x ([1,2])
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0492
+  from   inventory:infix:x
+  cell   "a" | [1,2]
+  level  3
+  code   ("a") x ([1,2])
+  is     "aa"
+  type   Str
+  oracle rakudo-2026.07 → "aa"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "aa"
+
+- id     0493
+  from   inventory:infix:x
+  cell   True | [1,2]
+  level  3
+  code   (True) x ([1,2])
+  is     "TrueTrue"
+  type   Str
+  oracle rakudo-2026.07 → "TrueTrue"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "TrueTrue"
+
+- id     0494
+  from   inventory:infix:x
+  cell   Any | [1,2]
+  level  3
+  code   (Any) x ([1,2])
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0495
+  from   inventory:infix:x
+  cell   (1,2) | [1,2]
+  level  3
+  code   ((1,2)) x ([1,2])
+  is     "1 21 2"
+  type   Str
+  oracle rakudo-2026.07 → "1 21 2"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "1 21 2"
+
+- id     0496
+  from   inventory:infix:x
+  cell   {a=>1} | [1,2]
+  level  3
+  code   ({a=>1}) x ([1,2])
+  is     "a\t1a\t1"
+  type   Str
+  oracle rakudo-2026.07 → "a\t1a\t1"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a\t1a\t1"
+
+- id     0497
+  from   inventory:infix:x
+  cell   -0e0 | [1,2]
+  level  3
+  code   (-0e0) x ([1,2])
+  is     "-0-0"
+  type   Str
+  oracle rakudo-2026.07 → "-0-0"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "-0-0"
+
+- id     0498
+  from   inventory:infix:x
+  cell   Inf | [1,2]
+  level  3
+  code   (Inf) x ([1,2])
+  is     "InfInf"
+  type   Str
+  oracle rakudo-2026.07 → "InfInf"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "InfInf"
+
+- id     0499
+  from   inventory:infix:x
+  cell   2**64 | [1,2]
+  level  3
+  code   (2**64) x ([1,2])
+  is     "1844674407370955161618446744073709551616"
+  type   Str
+  oracle rakudo-2026.07 → "1844674407370955161618446744073709551616"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "1844674407370955161618446744073709551616"
+
+- id     0500
+  from   inventory:infix:x
+  cell   False | [1,2]
+  level  3
+  code   (False) x ([1,2])
+  is     "FalseFalse"
+  type   Str
+  oracle rakudo-2026.07 → "FalseFalse"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "FalseFalse"
+
+- id     0501
+  from   inventory:infix:x
+  cell   Nil | [1,2]
+  level  3
+  code   (Nil) x ([1,2])
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0502
+  from   inventory:infix:x
+  cell   () | [1,2]
+  level  3
+  code   (()) x ([1,2])
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0503
+  from   inventory:infix:x
+  cell   "0" | [1,2]
+  level  3
+  code   ("0") x ([1,2])
+  is     "00"
+  type   Str
+  oracle rakudo-2026.07 → "00"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "00"
+
+- id     0504
+  from   inventory:infix:x
+  cell   (1..3) | [1,2]
+  level  3
+  code   ((1..3)) x ([1,2])
+  is     "1 2 31 2 3"
+  type   Str
+  oracle rakudo-2026.07 → "1 2 31 2 3"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "1 2 31 2 3"
+
+- id     0505
+  from   inventory:infix:x
+  cell   Int | [1,2]
+  level  3
+  code   (Int) x ([1,2])
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0506
+  from   inventory:infix:x
+  cell   "a b" | [1,2]
+  level  3
+  code   ("a b") x ([1,2])
+  is     "a ba b"
+  type   Str
+  oracle rakudo-2026.07 → "a ba b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a ba b"
+
+- id     0507
+  from   inventory:infix:x
+  cell   [1,2] | [1,2]
+  level  3
+  code   ([1,2]) x ([1,2])
+  is     "1 21 2"
+  type   Str
+  oracle rakudo-2026.07 → "1 21 2"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "1 21 2"
+
+- id     0508
+  from   inventory:infix:x
+  cell   [1,2] | 0
+  level  3
+  code   ([1,2]) x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0509
+  from   inventory:infix:x
+  cell   [1,2] | 1
+  level  3
+  code   ([1,2]) x (1)
+  is     "1 2"
+  type   Str
+  oracle rakudo-2026.07 → "1 2"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "1 2"
+
+- id     0510
+  from   inventory:infix:x
+  cell   [1,2] | -1
+  level  3
+  code   ([1,2]) x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0511
+  from   inventory:infix:x
+  cell   [1,2] | 1/2
+  level  3
+  code   ([1,2]) x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0512
+  from   inventory:infix:x
+  cell   [1,2] | 0e0
+  level  3
+  code   ([1,2]) x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0513
+  from   inventory:infix:x
+  cell   [1,2] | NaN
+  level  3
+  code   ([1,2]) x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0514
+  from   inventory:infix:x
+  cell   [1,2] | ""
+  level  3
+  code   ([1,2]) x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0515
+  from   inventory:infix:x
+  cell   [1,2] | "a"
+  level  3
+  code   ([1,2]) x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0516
+  from   inventory:infix:x
+  cell   [1,2] | True
+  level  3
+  code   ([1,2]) x (True)
+  is     "1 2"
+  type   Str
+  oracle rakudo-2026.07 → "1 2"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "1 2"
+
+- id     0517
+  from   inventory:infix:x
+  cell   [1,2] | Any
+  level  3
+  code   ([1,2]) x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0518
+  from   inventory:infix:x
+  cell   [1,2] | (1,2)
+  level  3
+  code   ([1,2]) x ((1,2))
+  is     "1 21 2"
+  type   Str
+  oracle rakudo-2026.07 → "1 21 2"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "1 21 2"
+
+- id     0519
+  from   inventory:infix:x
+  cell   [1,2] | {a=>1}
+  level  3
+  code   ([1,2]) x ({a=>1})
+  is     "1 2"
+  type   Str
+  oracle rakudo-2026.07 → "1 2"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "1 2"
+
+- id     0520
+  from   inventory:infix:x
+  cell   [1,2] | -0e0
+  level  3
+  code   ([1,2]) x (-0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0521
+  from   inventory:infix:x
+  cell   [1,2] | Inf
+  level  3
+  code   ([1,2]) x (Inf)
+  throws X::NYI
+  oracle rakudo-2026.07 → ERR:X::NYI
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → CRASH:0
+
+- id     0522
+  from   inventory:infix:x
+  cell   [1,2] | 2**64
+  level  3
+  code   ([1,2]) x (2**64)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → CRASH:0
+
+- id     0523
+  from   inventory:infix:x
+  cell   [1,2] | False
+  level  3
+  code   ([1,2]) x (False)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0524
+  from   inventory:infix:x
+  cell   [1,2] | Nil
+  level  3
+  code   ([1,2]) x (Nil)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0525
+  from   inventory:infix:x
+  cell   [1,2] | ()
+  level  3
+  code   ([1,2]) x (())
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0526
+  from   inventory:infix:x
+  cell   [1,2] | "0"
+  level  3
+  code   ([1,2]) x ("0")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0527
+  from   inventory:infix:x
+  cell   [1,2] | (1..3)
+  level  3
+  code   ([1,2]) x ((1..3))
+  is     "1 21 21 2"
+  type   Str
+  oracle rakudo-2026.07 → "1 21 21 2"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0528
+  from   inventory:infix:x
+  cell   [1,2] | Int
+  level  3
+  code   ([1,2]) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0529
+  from   inventory:infix:x
+  cell   [1,2] | "a b"
+  level  3
+  code   ([1,2]) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0530
+  from   inventory:infix:x
+  cell   0 | (a => 1)
+  level  3
+  code   (0) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0531
+  from   inventory:infix:x
+  cell   1 | (a => 1)
+  level  3
+  code   (1) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0532
+  from   inventory:infix:x
+  cell   -1 | (a => 1)
+  level  3
+  code   (-1) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0533
+  from   inventory:infix:x
+  cell   1/2 | (a => 1)
+  level  3
+  code   (1/2) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0534
+  from   inventory:infix:x
+  cell   0e0 | (a => 1)
+  level  3
+  code   (0e0) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0535
+  from   inventory:infix:x
+  cell   NaN | (a => 1)
+  level  3
+  code   (NaN) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0536
+  from   inventory:infix:x
+  cell   "" | (a => 1)
+  level  3
+  code   ("") x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0537
+  from   inventory:infix:x
+  cell   "a" | (a => 1)
+  level  3
+  code   ("a") x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0538
+  from   inventory:infix:x
+  cell   True | (a => 1)
+  level  3
+  code   (True) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0539
+  from   inventory:infix:x
+  cell   Any | (a => 1)
+  level  3
+  code   (Any) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0540
+  from   inventory:infix:x
+  cell   (1,2) | (a => 1)
+  level  3
+  code   ((1,2)) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0541
+  from   inventory:infix:x
+  cell   {a=>1} | (a => 1)
+  level  3
+  code   ({a=>1}) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0542
+  from   inventory:infix:x
+  cell   -0e0 | (a => 1)
+  level  3
+  code   (-0e0) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0543
+  from   inventory:infix:x
+  cell   Inf | (a => 1)
+  level  3
+  code   (Inf) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0544
+  from   inventory:infix:x
+  cell   2**64 | (a => 1)
+  level  3
+  code   (2**64) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0545
+  from   inventory:infix:x
+  cell   False | (a => 1)
+  level  3
+  code   (False) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0546
+  from   inventory:infix:x
+  cell   Nil | (a => 1)
+  level  3
+  code   (Nil) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0547
+  from   inventory:infix:x
+  cell   () | (a => 1)
+  level  3
+  code   (()) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0548
+  from   inventory:infix:x
+  cell   "0" | (a => 1)
+  level  3
+  code   ("0") x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0549
+  from   inventory:infix:x
+  cell   (1..3) | (a => 1)
+  level  3
+  code   ((1..3)) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0550
+  from   inventory:infix:x
+  cell   Int | (a => 1)
+  level  3
+  code   (Int) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0551
+  from   inventory:infix:x
+  cell   "a b" | (a => 1)
+  level  3
+  code   ("a b") x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0552
+  from   inventory:infix:x
+  cell   [1,2] | (a => 1)
+  level  3
+  code   ([1,2]) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0553
+  from   inventory:infix:x
+  cell   (a => 1) | (a => 1)
+  level  3
+  code   ((a => 1)) x ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0554
+  from   inventory:infix:x
+  cell   (a => 1) | 0
+  level  3
+  code   ((a => 1)) x (0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0555
+  from   inventory:infix:x
+  cell   (a => 1) | 1
+  level  3
+  code   ((a => 1)) x (1)
+  is     "a\t1"
+  type   Str
+  oracle rakudo-2026.07 → "a\t1"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a\t1"
+
+- id     0556
+  from   inventory:infix:x
+  cell   (a => 1) | -1
+  level  3
+  code   ((a => 1)) x (-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0557
+  from   inventory:infix:x
+  cell   (a => 1) | 1/2
+  level  3
+  code   ((a => 1)) x (1/2)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0558
+  from   inventory:infix:x
+  cell   (a => 1) | 0e0
+  level  3
+  code   ((a => 1)) x (0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0559
+  from   inventory:infix:x
+  cell   (a => 1) | NaN
+  level  3
+  code   ((a => 1)) x (NaN)
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0560
+  from   inventory:infix:x
+  cell   (a => 1) | ""
+  level  3
+  code   ((a => 1)) x ("")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0561
+  from   inventory:infix:x
+  cell   (a => 1) | "a"
+  level  3
+  code   ((a => 1)) x ("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0562
+  from   inventory:infix:x
+  cell   (a => 1) | True
+  level  3
+  code   ((a => 1)) x (True)
+  is     "a\t1"
+  type   Str
+  oracle rakudo-2026.07 → "a\t1"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a\t1"
+
+- id     0563
+  from   inventory:infix:x
+  cell   (a => 1) | Any
+  level  3
+  code   ((a => 1)) x (Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0564
+  from   inventory:infix:x
+  cell   (a => 1) | (1,2)
+  level  3
+  code   ((a => 1)) x ((1,2))
+  is     "a\t1a\t1"
+  type   Str
+  oracle rakudo-2026.07 → "a\t1a\t1"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a\t1a\t1"
+
+- id     0565
+  from   inventory:infix:x
+  cell   (a => 1) | {a=>1}
+  level  3
+  code   ((a => 1)) x ({a=>1})
+  is     "a\t1"
+  type   Str
+  oracle rakudo-2026.07 → "a\t1"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a\t1"
+
+- id     0566
+  from   inventory:infix:x
+  cell   (a => 1) | -0e0
+  level  3
+  code   ((a => 1)) x (-0e0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0567
+  from   inventory:infix:x
+  cell   (a => 1) | Inf
+  level  3
+  code   ((a => 1)) x (Inf)
+  throws X::NYI
+  oracle rakudo-2026.07 → ERR:X::NYI
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → CRASH:0
+
+- id     0568
+  from   inventory:infix:x
+  cell   (a => 1) | 2**64
+  level  3
+  code   ((a => 1)) x (2**64)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → CRASH:0
+
+- id     0569
+  from   inventory:infix:x
+  cell   (a => 1) | False
+  level  3
+  code   ((a => 1)) x (False)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0570
+  from   inventory:infix:x
+  cell   (a => 1) | Nil
+  level  3
+  code   ((a => 1)) x (Nil)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0571
+  from   inventory:infix:x
+  cell   (a => 1) | ()
+  level  3
+  code   ((a => 1)) x (())
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0572
+  from   inventory:infix:x
+  cell   (a => 1) | "0"
+  level  3
+  code   ((a => 1)) x ("0")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0573
+  from   inventory:infix:x
+  cell   (a => 1) | (1..3)
+  level  3
+  code   ((a => 1)) x ((1..3))
+  is     "a\t1a\t1a\t1"
+  type   Str
+  oracle rakudo-2026.07 → "a\t1a\t1a\t1"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0574
+  from   inventory:infix:x
+  cell   (a => 1) | Int
+  level  3
+  code   ((a => 1)) x (Int)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0575
+  from   inventory:infix:x
+  cell   (a => 1) | "a b"
+  level  3
+  code   ((a => 1)) x ("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0576
+  from   inventory:infix:x
+  cell   (a => 1) | [1,2]
+  level  3
+  code   ((a => 1)) x ([1,2])
+  is     "a\t1a\t1"
+  type   Str
+  oracle rakudo-2026.07 → "a\t1a\t1"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a\t1a\t1"

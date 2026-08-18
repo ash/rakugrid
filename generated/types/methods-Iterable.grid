@@ -3,7 +3,7 @@ source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
 axes     flat | hyper | item | iterator | lazy | lazy-if | race
-cols     (1,2) | [1,2] | (1..2)
+cols     (1,2) | [1,2] | (1..2) | () | (1,) | <a b> | (1..3).Seq | [] | (Any,) | (1,"a") | set(1) | bag(1,1)
 
 - id     0001
   from   inventory:Iterable.^methods
@@ -12,7 +12,7 @@ cols     (1,2) | [1,2] | (1..2)
   is     $((1, 2).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((1, 2).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2).Seq)
 
 - id     0002
   from   inventory:Iterable.^methods
@@ -21,7 +21,7 @@ cols     (1,2) | [1,2] | (1..2)
   is     $((1, 2).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((1, 2).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2).Seq)
 
 - id     0003
   from   inventory:Iterable.^methods
@@ -30,7 +30,7 @@ cols     (1,2) | [1,2] | (1..2)
   is     $((1, 2).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((1, 2).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2).Seq)
 
 - id     0004
   from   inventory:Iterable.^methods
@@ -38,7 +38,7 @@ cols     (1,2) | [1,2] | (1..2)
   code   ((1,2)).flat("a")
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((1, 2).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2).Seq)
 
 - id     0005
   from   inventory:Iterable.^methods
@@ -47,7 +47,7 @@ cols     (1,2) | [1,2] | (1..2)
   is     $((1, 2).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((1, 2).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2).Seq)
 
 - id     0006
   from   inventory:Iterable.^methods
@@ -56,7 +56,7 @@ cols     (1,2) | [1,2] | (1..2)
   is     $((1, 2).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((1, 2).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2).Seq)
 
 - id     0007
   from   inventory:Iterable.^methods
@@ -65,7 +65,7 @@ cols     (1,2) | [1,2] | (1..2)
   is     $((1, 2).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((1, 2).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2).Seq)
 
 - id     0008
   from   inventory:Iterable.^methods
@@ -74,7 +74,7 @@ cols     (1,2) | [1,2] | (1..2)
   is     $((1, 2).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((1, 2).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2).Seq)
 
 - id     0009
   from   inventory:Iterable.^methods
@@ -83,7 +83,7 @@ cols     (1,2) | [1,2] | (1..2)
   is     $((1, 2).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((1, 2).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2).Seq)
 
 - id     0010
   from   inventory:Iterable.^methods
@@ -92,7 +92,7 @@ cols     (1,2) | [1,2] | (1..2)
   is     $((1, 2).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((1, 2).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2).Seq)
 
 - id     0011
   from   inventory:Iterable.^methods
@@ -100,7 +100,7 @@ cols     (1,2) | [1,2] | (1..2)
   code   ((1..2)).flat(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((1, 2).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2).Seq)
 
 - id     0012
   from   inventory:Iterable.^methods
@@ -108,7 +108,7 @@ cols     (1,2) | [1,2] | (1..2)
   code   ((1..2)).flat(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((1, 2).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2).Seq)
 
 - id     0013
   from   inventory:Iterable.^methods
@@ -116,7 +116,7 @@ cols     (1,2) | [1,2] | (1..2)
   code   ((1..2)).flat(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((1, 2).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2).Seq)
 
 - id     0014
   from   inventory:Iterable.^methods
@@ -124,7 +124,7 @@ cols     (1,2) | [1,2] | (1..2)
   code   ((1..2)).flat("a")
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((1, 2).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2).Seq)
 
 - id     0015
   from   inventory:Iterable.^methods
@@ -132,274 +132,1467 @@ cols     (1,2) | [1,2] | (1..2)
   code   ((1..2)).flat(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((1, 2).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2).Seq)
 
 - id     0016
+  from   inventory:Iterable.^methods
+  cell   flat(0) | ()
+  code   (()).flat(0)
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(().Seq)
+
+- id     0017
+  from   inventory:Iterable.^methods
+  cell   flat(1) | ()
+  code   (()).flat(1)
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(().Seq)
+
+- id     0018
+  from   inventory:Iterable.^methods
+  cell   flat(-1) | ()
+  code   (()).flat(-1)
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(().Seq)
+
+- id     0019
+  from   inventory:Iterable.^methods
+  cell   flat("a") | ()
+  code   (()).flat("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(().Seq)
+
+- id     0020
+  from   inventory:Iterable.^methods
+  cell   flat(Any) | ()
+  code   (()).flat(Any)
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(().Seq)
+
+- id     0021
+  from   inventory:Iterable.^methods
+  cell   flat(0) | (1,)
+  code   ((1,)).flat(0)
+  is     $((1,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1,).Seq)
+
+- id     0022
+  from   inventory:Iterable.^methods
+  cell   flat(1) | (1,)
+  code   ((1,)).flat(1)
+  is     $((1,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1,).Seq)
+
+- id     0023
+  from   inventory:Iterable.^methods
+  cell   flat(-1) | (1,)
+  code   ((1,)).flat(-1)
+  is     $((1,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1,).Seq)
+
+- id     0024
+  from   inventory:Iterable.^methods
+  cell   flat("a") | (1,)
+  code   ((1,)).flat("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1,).Seq)
+
+- id     0025
+  from   inventory:Iterable.^methods
+  cell   flat(Any) | (1,)
+  code   ((1,)).flat(Any)
+  is     $((1,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1,).Seq)
+
+- id     0026
+  from   inventory:Iterable.^methods
+  cell   flat(0) | <a b>
+  code   (<a b>).flat(0)
+  is     $(("a", "b").Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("a", "b").Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(("a", "b").Seq)
+
+- id     0027
+  from   inventory:Iterable.^methods
+  cell   flat(1) | <a b>
+  code   (<a b>).flat(1)
+  is     $(("a", "b").Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("a", "b").Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(("a", "b").Seq)
+
+- id     0028
+  from   inventory:Iterable.^methods
+  cell   flat(-1) | <a b>
+  code   (<a b>).flat(-1)
+  is     $(("a", "b").Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("a", "b").Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(("a", "b").Seq)
+
+- id     0029
+  from   inventory:Iterable.^methods
+  cell   flat("a") | <a b>
+  code   (<a b>).flat("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(("a", "b").Seq)
+
+- id     0030
+  from   inventory:Iterable.^methods
+  cell   flat(Any) | <a b>
+  code   (<a b>).flat(Any)
+  is     $(("a", "b").Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("a", "b").Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(("a", "b").Seq)
+
+- id     0031
+  from   inventory:Iterable.^methods
+  cell   flat(0) | (1..3).Seq
+  code   ((1..3).Seq).flat(0)
+  is     $((1, 2, 3).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2, 3).Seq)
+
+- id     0032
+  from   inventory:Iterable.^methods
+  cell   flat(1) | (1..3).Seq
+  code   ((1..3).Seq).flat(1)
+  is     $((1, 2, 3).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2, 3).Seq)
+
+- id     0033
+  from   inventory:Iterable.^methods
+  cell   flat(-1) | (1..3).Seq
+  code   ((1..3).Seq).flat(-1)
+  is     $((1, 2, 3).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2, 3).Seq)
+
+- id     0034
+  from   inventory:Iterable.^methods
+  cell   flat("a") | (1..3).Seq
+  code   ((1..3).Seq).flat("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2, 3).Seq)
+
+- id     0035
+  from   inventory:Iterable.^methods
+  cell   flat(Any) | (1..3).Seq
+  code   ((1..3).Seq).flat(Any)
+  is     $((1, 2, 3).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2, 3).Seq)
+
+- id     0036
+  from   inventory:Iterable.^methods
+  cell   flat(0) | []
+  code   ([]).flat(0)
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(().Seq)
+
+- id     0037
+  from   inventory:Iterable.^methods
+  cell   flat(1) | []
+  code   ([]).flat(1)
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(().Seq)
+
+- id     0038
+  from   inventory:Iterable.^methods
+  cell   flat(-1) | []
+  code   ([]).flat(-1)
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(().Seq)
+
+- id     0039
+  from   inventory:Iterable.^methods
+  cell   flat("a") | []
+  code   ([]).flat("a")
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(().Seq)
+
+- id     0040
+  from   inventory:Iterable.^methods
+  cell   flat(Any) | []
+  code   ([]).flat(Any)
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(().Seq)
+
+- id     0041
+  from   inventory:Iterable.^methods
+  cell   flat(0) | (Any,)
+  code   ((Any,)).flat(0)
+  is     $((Any,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Any,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((Any,).Seq)
+
+- id     0042
+  from   inventory:Iterable.^methods
+  cell   flat(1) | (Any,)
+  code   ((Any,)).flat(1)
+  is     $((Any,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Any,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((Any,).Seq)
+
+- id     0043
+  from   inventory:Iterable.^methods
+  cell   flat(-1) | (Any,)
+  code   ((Any,)).flat(-1)
+  is     $((Any,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Any,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((Any,).Seq)
+
+- id     0044
+  from   inventory:Iterable.^methods
+  cell   flat("a") | (Any,)
+  code   ((Any,)).flat("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((Any,).Seq)
+
+- id     0045
+  from   inventory:Iterable.^methods
+  cell   flat(Any) | (Any,)
+  code   ((Any,)).flat(Any)
+  is     $((Any,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Any,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((Any,).Seq)
+
+- id     0046
+  from   inventory:Iterable.^methods
+  cell   flat(0) | (1,"a")
+  code   ((1,"a")).flat(0)
+  is     $((1, "a").Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, "a").Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, "a").Seq)
+
+- id     0047
+  from   inventory:Iterable.^methods
+  cell   flat(1) | (1,"a")
+  code   ((1,"a")).flat(1)
+  is     $((1, "a").Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, "a").Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, "a").Seq)
+
+- id     0048
+  from   inventory:Iterable.^methods
+  cell   flat(-1) | (1,"a")
+  code   ((1,"a")).flat(-1)
+  is     $((1, "a").Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, "a").Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, "a").Seq)
+
+- id     0049
+  from   inventory:Iterable.^methods
+  cell   flat("a") | (1,"a")
+  code   ((1,"a")).flat("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, "a").Seq)
+
+- id     0050
+  from   inventory:Iterable.^methods
+  cell   flat(Any) | (1,"a")
+  code   ((1,"a")).flat(Any)
+  is     $((1, "a").Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, "a").Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, "a").Seq)
+
+- id     0051
+  from   inventory:Iterable.^methods
+  cell   flat(0) | set(1)
+  code   (set(1)).flat(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1 => Bool::True,).Seq)
+
+- id     0052
+  from   inventory:Iterable.^methods
+  cell   flat(1) | set(1)
+  code   (set(1)).flat(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1 => Bool::True,).Seq)
+
+- id     0053
+  from   inventory:Iterable.^methods
+  cell   flat(-1) | set(1)
+  code   (set(1)).flat(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1 => Bool::True,).Seq)
+
+- id     0054
+  from   inventory:Iterable.^methods
+  cell   flat("a") | set(1)
+  code   (set(1)).flat("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1 => Bool::True,).Seq)
+
+- id     0055
+  from   inventory:Iterable.^methods
+  cell   flat(Any) | set(1)
+  code   (set(1)).flat(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1 => Bool::True,).Seq)
+
+- id     0056
+  from   inventory:Iterable.^methods
+  cell   flat(0) | bag(1,1)
+  code   (bag(1,1)).flat(0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1 => 2,).Seq)
+
+- id     0057
+  from   inventory:Iterable.^methods
+  cell   flat(1) | bag(1,1)
+  code   (bag(1,1)).flat(1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1 => 2,).Seq)
+
+- id     0058
+  from   inventory:Iterable.^methods
+  cell   flat(-1) | bag(1,1)
+  code   (bag(1,1)).flat(-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1 => 2,).Seq)
+
+- id     0059
+  from   inventory:Iterable.^methods
+  cell   flat("a") | bag(1,1)
+  code   (bag(1,1)).flat("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1 => 2,).Seq)
+
+- id     0060
+  from   inventory:Iterable.^methods
+  cell   flat(Any) | bag(1,1)
+  code   (bag(1,1)).flat(Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1 => 2,).Seq)
+
+- id     0061
   from   inventory:Iterable.^methods
   cell   hyper | (1,2)
   code   ((1,2)).hyper
   is     HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
   type   HyperSeq
   oracle rakudo-2026.07 → HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2)
 
-- id     0017
+- id     0062
   from   inventory:Iterable.^methods
   cell   hyper | [1,2]
   code   ([1,2]).hyper
   is     HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
   type   HyperSeq
   oracle rakudo-2026.07 → HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2)
 
-- id     0018
+- id     0063
   from   inventory:Iterable.^methods
   cell   hyper | (1..2)
   code   ((1..2)).hyper
   is     HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
   type   HyperSeq
   oracle rakudo-2026.07 → HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2)
 
-- id     0019
+- id     0064
+  from   inventory:Iterable.^methods
+  cell   hyper | ()
+  code   (()).hyper
+  is     HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  type   HyperSeq
+  oracle rakudo-2026.07 → HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0065
+  from   inventory:Iterable.^methods
+  cell   hyper | (1,)
+  code   ((1,)).hyper
+  is     HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  type   HyperSeq
+  oracle rakudo-2026.07 → HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1,)
+
+- id     0066
+  from   inventory:Iterable.^methods
+  cell   hyper | <a b>
+  code   (<a b>).hyper
+  is     HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  type   HyperSeq
+  oracle rakudo-2026.07 → HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $("a", "b")
+
+- id     0067
+  from   inventory:Iterable.^methods
+  cell   hyper | (1..3).Seq
+  code   ((1..3).Seq).hyper
+  is     HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  type   HyperSeq
+  oracle rakudo-2026.07 → HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2, 3)
+
+- id     0068
+  from   inventory:Iterable.^methods
+  cell   hyper | []
+  code   ([]).hyper
+  is     HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  type   HyperSeq
+  oracle rakudo-2026.07 → HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0069
+  from   inventory:Iterable.^methods
+  cell   hyper | (Any,)
+  code   ((Any,)).hyper
+  is     HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  type   HyperSeq
+  oracle rakudo-2026.07 → HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(Any,)
+
+- id     0070
+  from   inventory:Iterable.^methods
+  cell   hyper | (1,"a")
+  code   ((1,"a")).hyper
+  is     HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  type   HyperSeq
+  oracle rakudo-2026.07 → HyperSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, "a")
+
+- id     0071
+  from   inventory:Iterable.^methods
+  cell   hyper | set(1)
+  code   (set(1)).hyper
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1 => Bool::True,)
+
+- id     0072
+  from   inventory:Iterable.^methods
+  cell   hyper | bag(1,1)
+  code   (bag(1,1)).hyper
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1 => 2,)
+
+- id     0073
   from   inventory:Iterable.^methods
   cell   item | (1,2)
   code   ((1,2)).item
   is     $(1, 2)
   type   List
   oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2)
 
-- id     0020
+- id     0074
   from   inventory:Iterable.^methods
   cell   item | [1,2]
   code   ([1,2]).item
   is     $[1, 2]
   type   Array
   oracle rakudo-2026.07 → $[1, 2]
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $[1, 2]
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $[1, 2]
 
-- id     0021
+- id     0075
   from   inventory:Iterable.^methods
   cell   item | (1..2)
   code   ((1..2)).item
   is     1..2
   type   Range
   oracle rakudo-2026.07 → 1..2
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1..2
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1..2
 
-- id     0022
+- id     0076
+  from   inventory:Iterable.^methods
+  cell   item | ()
+  code   (()).item
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0077
+  from   inventory:Iterable.^methods
+  cell   item | (1,)
+  code   ((1,)).item
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1,)
+
+- id     0078
+  from   inventory:Iterable.^methods
+  cell   item | <a b>
+  code   (<a b>).item
+  is     $("a", "b")
+  type   List
+  oracle rakudo-2026.07 → $("a", "b")
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $("a", "b")
+
+- id     0079
+  from   inventory:Iterable.^methods
+  cell   item | (1..3).Seq
+  code   ((1..3).Seq).item
+  is     $((1, 2, 3).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1, 2, 3).Seq)
+
+- id     0080
+  from   inventory:Iterable.^methods
+  cell   item | []
+  code   ([]).item
+  is     $[]
+  type   Array
+  oracle rakudo-2026.07 → $[]
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $[]
+
+- id     0081
+  from   inventory:Iterable.^methods
+  cell   item | (Any,)
+  code   ((Any,)).item
+  is     $(Any,)
+  type   List
+  oracle rakudo-2026.07 → $(Any,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(Any,)
+
+- id     0082
+  from   inventory:Iterable.^methods
+  cell   item | (1,"a")
+  code   ((1,"a")).item
+  is     $(1, "a")
+  type   List
+  oracle rakudo-2026.07 → $(1, "a")
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, "a")
+
+- id     0083
+  from   inventory:Iterable.^methods
+  cell   item | set(1)
+  code   (set(1)).item
+  is     Set.new(1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Set.new(1)
+
+- id     0084
+  from   inventory:Iterable.^methods
+  cell   item | bag(1,1)
+  code   (bag(1,1)).item
+  is     (1=>2).Bag
+  type   Bag
+  oracle rakudo-2026.07 → (1=>2).Bag
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → (1=>2).Bag
+
+- id     0085
   from   inventory:Iterable.^methods
   cell   iterator | (1,2)
   code   ((1,2)).iterator
   is     Rakudo::Iterator::ReifiedListIterator.new
   type   Rakudo::Iterator::ReifiedListIterator
   oracle rakudo-2026.07 → Rakudo::Iterator::ReifiedListIterator.new
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:items($[1, 2]), :pos(0)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:items($[1, 2]), :pos(0)}
 
-- id     0023
+- id     0086
   from   inventory:Iterable.^methods
   cell   iterator | [1,2]
   code   ([1,2]).iterator
   is     Rakudo::Iterator::ReifiedArrayIterator.new
   type   Rakudo::Iterator::ReifiedArrayIterator
   oracle rakudo-2026.07 → Rakudo::Iterator::ReifiedArrayIterator.new
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:items($[1, 2]), :pos(0)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:items($[1, 2]), :pos(0)}
 
-- id     0024
+- id     0087
   from   inventory:Iterable.^methods
   cell   iterator | (1..2)
   code   ((1..2)).iterator
   is     Rakudo::Iterator::IntRange.new
   type   Rakudo::Iterator::IntRange
   oracle rakudo-2026.07 → Rakudo::Iterator::IntRange.new
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:items($[1, 2]), :pos(0)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:items($[1, 2]), :pos(0)}
 
-- id     0025
+- id     0088
+  from   inventory:Iterable.^methods
+  cell   iterator | ()
+  code   (()).iterator
+  is     Rakudo::Iterator::Empty.new
+  type   Rakudo::Iterator::Empty
+  oracle rakudo-2026.07 → Rakudo::Iterator::Empty.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:items($[]), :pos(0)}
+
+- id     0089
+  from   inventory:Iterable.^methods
+  cell   iterator | (1,)
+  code   ((1,)).iterator
+  is     Rakudo::Iterator::ReifiedListIterator.new
+  type   Rakudo::Iterator::ReifiedListIterator
+  oracle rakudo-2026.07 → Rakudo::Iterator::ReifiedListIterator.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:items($[1]), :pos(0)}
+
+- id     0090
+  from   inventory:Iterable.^methods
+  cell   iterator | <a b>
+  code   (<a b>).iterator
+  is     Rakudo::Iterator::ReifiedListIterator.new
+  type   Rakudo::Iterator::ReifiedListIterator
+  oracle rakudo-2026.07 → Rakudo::Iterator::ReifiedListIterator.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:items($["a", "b"]), :pos(0)}
+
+- id     0091
+  from   inventory:Iterable.^methods
+  cell   iterator | (1..3).Seq
+  code   ((1..3).Seq).iterator
+  is     Rakudo::Iterator::IntRange.new
+  type   Rakudo::Iterator::IntRange
+  oracle rakudo-2026.07 → Rakudo::Iterator::IntRange.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:items($[1, 2, 3]), :pos(0)}
+
+- id     0092
+  from   inventory:Iterable.^methods
+  cell   iterator | []
+  code   ([]).iterator
+  is     Rakudo::Iterator::ReifiedArrayIterator.new
+  type   Rakudo::Iterator::ReifiedArrayIterator
+  oracle rakudo-2026.07 → Rakudo::Iterator::ReifiedArrayIterator.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:items($[]), :pos(0)}
+
+- id     0093
+  from   inventory:Iterable.^methods
+  cell   iterator | (Any,)
+  code   ((Any,)).iterator
+  is     Rakudo::Iterator::ReifiedListIterator.new
+  type   Rakudo::Iterator::ReifiedListIterator
+  oracle rakudo-2026.07 → Rakudo::Iterator::ReifiedListIterator.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:items($[Any]), :pos(0)}
+
+- id     0094
+  from   inventory:Iterable.^methods
+  cell   iterator | (1,"a")
+  code   ((1,"a")).iterator
+  is     Rakudo::Iterator::ReifiedListIterator.new
+  type   Rakudo::Iterator::ReifiedListIterator
+  oracle rakudo-2026.07 → Rakudo::Iterator::ReifiedListIterator.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:items($[1, "a"]), :pos(0)}
+
+- id     0095
+  from   inventory:Iterable.^methods
+  cell   iterator | set(1)
+  code   (set(1)).iterator
+  is     Set::Iterate.new
+  type   Set::Iterate
+  oracle rakudo-2026.07 → Set::Iterate.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:items($[1 => Bool::True]), :nondeterministic(Bool::True), :pos(0)}
+
+- id     0096
+  from   inventory:Iterable.^methods
+  cell   iterator | bag(1,1)
+  code   (bag(1,1)).iterator
+  is     Rakudo::Iterator::Mappy-values.new
+  type   Rakudo::Iterator::Mappy-values
+  oracle rakudo-2026.07 → Rakudo::Iterator::Mappy-values.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:items($[1 => 2]), :nondeterministic(Bool::True), :pos(0)}
+
+- id     0097
   from   inventory:Iterable.^methods
   cell   lazy | (1,2)
   code   ((1,2)).lazy
   is     $((1, 2).lazy.Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).lazy.Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2)
 
-- id     0026
+- id     0098
   from   inventory:Iterable.^methods
   cell   lazy | [1,2]
   code   ([1,2]).lazy
   is     $((1, 2).lazy.Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).lazy.Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2)
 
-- id     0027
+- id     0099
   from   inventory:Iterable.^methods
   cell   lazy | (1..2)
   code   ((1..2)).lazy
   is     $((1, 2).lazy.Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).lazy.Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2)
 
-- id     0028
+- id     0100
+  from   inventory:Iterable.^methods
+  cell   lazy | ()
+  code   (()).lazy
+  is     $(().lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0101
+  from   inventory:Iterable.^methods
+  cell   lazy | (1,)
+  code   ((1,)).lazy
+  is     $((1).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1,)
+
+- id     0102
+  from   inventory:Iterable.^methods
+  cell   lazy | <a b>
+  code   (<a b>).lazy
+  is     $(("a", "b").lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("a", "b").lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $("a", "b")
+
+- id     0103
+  from   inventory:Iterable.^methods
+  cell   lazy | (1..3).Seq
+  code   ((1..3).Seq).lazy
+  is     $((1, 2, 3).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2, 3).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2, 3)
+
+- id     0104
+  from   inventory:Iterable.^methods
+  cell   lazy | []
+  code   ([]).lazy
+  is     $(().lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0105
+  from   inventory:Iterable.^methods
+  cell   lazy | (Any,)
+  code   ((Any,)).lazy
+  is     $((Any).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Any).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(Any,)
+
+- id     0106
+  from   inventory:Iterable.^methods
+  cell   lazy | (1,"a")
+  code   ((1,"a")).lazy
+  is     $((1, "a").lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, "a").lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, "a")
+
+- id     0107
+  from   inventory:Iterable.^methods
+  cell   lazy | set(1)
+  code   (set(1)).lazy
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1 => Bool::True,)
+
+- id     0108
+  from   inventory:Iterable.^methods
+  cell   lazy | bag(1,1)
+  code   (bag(1,1)).lazy
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1 => 2,)
+
+- id     0109
   from   inventory:Iterable.^methods
   cell   lazy-if(0) | (1,2)
   code   ((1,2)).lazy-if(0)
   is     $(1, 2)
   type   List
   oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0029
+- id     0110
   from   inventory:Iterable.^methods
   cell   lazy-if(1) | (1,2)
   code   ((1,2)).lazy-if(1)
   is     $((1, 2).lazy.Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).lazy.Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0030
+- id     0111
   from   inventory:Iterable.^methods
   cell   lazy-if(-1) | (1,2)
   code   ((1,2)).lazy-if(-1)
   is     $((1, 2).lazy.Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).lazy.Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0031
+- id     0112
   from   inventory:Iterable.^methods
   cell   lazy-if("a") | (1,2)
   code   ((1,2)).lazy-if("a")
   is     $((1, 2).lazy.Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).lazy.Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0032
+- id     0113
   from   inventory:Iterable.^methods
   cell   lazy-if(Any) | (1,2)
   code   ((1,2)).lazy-if(Any)
   is     $(1, 2)
   type   List
   oracle rakudo-2026.07 → $(1, 2)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0033
+- id     0114
   from   inventory:Iterable.^methods
   cell   lazy-if(0) | [1,2]
   code   ([1,2]).lazy-if(0)
   is     $[1, 2]
   type   Array
   oracle rakudo-2026.07 → $[1, 2]
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0034
+- id     0115
   from   inventory:Iterable.^methods
   cell   lazy-if(1) | [1,2]
   code   ([1,2]).lazy-if(1)
   is     $((1, 2).lazy.Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).lazy.Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0035
+- id     0116
   from   inventory:Iterable.^methods
   cell   lazy-if(-1) | [1,2]
   code   ([1,2]).lazy-if(-1)
   is     $((1, 2).lazy.Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).lazy.Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0036
+- id     0117
   from   inventory:Iterable.^methods
   cell   lazy-if("a") | [1,2]
   code   ([1,2]).lazy-if("a")
   is     $((1, 2).lazy.Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).lazy.Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0037
+- id     0118
   from   inventory:Iterable.^methods
   cell   lazy-if(Any) | [1,2]
   code   ([1,2]).lazy-if(Any)
   is     $[1, 2]
   type   Array
   oracle rakudo-2026.07 → $[1, 2]
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0038
+- id     0119
   from   inventory:Iterable.^methods
   cell   lazy-if(0) | (1..2)
   code   ((1..2)).lazy-if(0)
   is     1..2
   type   Range
   oracle rakudo-2026.07 → 1..2
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0039
+- id     0120
   from   inventory:Iterable.^methods
   cell   lazy-if(1) | (1..2)
   code   ((1..2)).lazy-if(1)
   is     $((1, 2).lazy.Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).lazy.Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0040
+- id     0121
   from   inventory:Iterable.^methods
   cell   lazy-if(-1) | (1..2)
   code   ((1..2)).lazy-if(-1)
   is     $((1, 2).lazy.Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).lazy.Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0041
+- id     0122
   from   inventory:Iterable.^methods
   cell   lazy-if("a") | (1..2)
   code   ((1..2)).lazy-if("a")
   is     $((1, 2).lazy.Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1, 2).lazy.Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0042
+- id     0123
   from   inventory:Iterable.^methods
   cell   lazy-if(Any) | (1..2)
   code   ((1..2)).lazy-if(Any)
   is     1..2
   type   Range
   oracle rakudo-2026.07 → 1..2
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0043
+- id     0124
+  from   inventory:Iterable.^methods
+  cell   lazy-if(0) | ()
+  code   (()).lazy-if(0)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0125
+  from   inventory:Iterable.^methods
+  cell   lazy-if(1) | ()
+  code   (()).lazy-if(1)
+  is     $(().lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0126
+  from   inventory:Iterable.^methods
+  cell   lazy-if(-1) | ()
+  code   (()).lazy-if(-1)
+  is     $(().lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0127
+  from   inventory:Iterable.^methods
+  cell   lazy-if("a") | ()
+  code   (()).lazy-if("a")
+  is     $(().lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0128
+  from   inventory:Iterable.^methods
+  cell   lazy-if(Any) | ()
+  code   (()).lazy-if(Any)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0129
+  from   inventory:Iterable.^methods
+  cell   lazy-if(0) | (1,)
+  code   ((1,)).lazy-if(0)
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0130
+  from   inventory:Iterable.^methods
+  cell   lazy-if(1) | (1,)
+  code   ((1,)).lazy-if(1)
+  is     $((1).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0131
+  from   inventory:Iterable.^methods
+  cell   lazy-if(-1) | (1,)
+  code   ((1,)).lazy-if(-1)
+  is     $((1).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0132
+  from   inventory:Iterable.^methods
+  cell   lazy-if("a") | (1,)
+  code   ((1,)).lazy-if("a")
+  is     $((1).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0133
+  from   inventory:Iterable.^methods
+  cell   lazy-if(Any) | (1,)
+  code   ((1,)).lazy-if(Any)
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0134
+  from   inventory:Iterable.^methods
+  cell   lazy-if(0) | <a b>
+  code   (<a b>).lazy-if(0)
+  is     $("a", "b")
+  type   List
+  oracle rakudo-2026.07 → $("a", "b")
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0135
+  from   inventory:Iterable.^methods
+  cell   lazy-if(1) | <a b>
+  code   (<a b>).lazy-if(1)
+  is     $(("a", "b").lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("a", "b").lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0136
+  from   inventory:Iterable.^methods
+  cell   lazy-if(-1) | <a b>
+  code   (<a b>).lazy-if(-1)
+  is     $(("a", "b").lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("a", "b").lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0137
+  from   inventory:Iterable.^methods
+  cell   lazy-if("a") | <a b>
+  code   (<a b>).lazy-if("a")
+  is     $(("a", "b").lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("a", "b").lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0138
+  from   inventory:Iterable.^methods
+  cell   lazy-if(Any) | <a b>
+  code   (<a b>).lazy-if(Any)
+  is     $("a", "b")
+  type   List
+  oracle rakudo-2026.07 → $("a", "b")
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0139
+  from   inventory:Iterable.^methods
+  cell   lazy-if(0) | (1..3).Seq
+  code   ((1..3).Seq).lazy-if(0)
+  is     $((1, 2, 3).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0140
+  from   inventory:Iterable.^methods
+  cell   lazy-if(1) | (1..3).Seq
+  code   ((1..3).Seq).lazy-if(1)
+  is     $((1, 2, 3).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2, 3).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0141
+  from   inventory:Iterable.^methods
+  cell   lazy-if(-1) | (1..3).Seq
+  code   ((1..3).Seq).lazy-if(-1)
+  is     $((1, 2, 3).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2, 3).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0142
+  from   inventory:Iterable.^methods
+  cell   lazy-if("a") | (1..3).Seq
+  code   ((1..3).Seq).lazy-if("a")
+  is     $((1, 2, 3).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2, 3).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0143
+  from   inventory:Iterable.^methods
+  cell   lazy-if(Any) | (1..3).Seq
+  code   ((1..3).Seq).lazy-if(Any)
+  is     $((1, 2, 3).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0144
+  from   inventory:Iterable.^methods
+  cell   lazy-if(0) | []
+  code   ([]).lazy-if(0)
+  is     $[]
+  type   Array
+  oracle rakudo-2026.07 → $[]
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0145
+  from   inventory:Iterable.^methods
+  cell   lazy-if(1) | []
+  code   ([]).lazy-if(1)
+  is     $(().lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0146
+  from   inventory:Iterable.^methods
+  cell   lazy-if(-1) | []
+  code   ([]).lazy-if(-1)
+  is     $(().lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0147
+  from   inventory:Iterable.^methods
+  cell   lazy-if("a") | []
+  code   ([]).lazy-if("a")
+  is     $(().lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0148
+  from   inventory:Iterable.^methods
+  cell   lazy-if(Any) | []
+  code   ([]).lazy-if(Any)
+  is     $[]
+  type   Array
+  oracle rakudo-2026.07 → $[]
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0149
+  from   inventory:Iterable.^methods
+  cell   lazy-if(0) | (Any,)
+  code   ((Any,)).lazy-if(0)
+  is     $(Any,)
+  type   List
+  oracle rakudo-2026.07 → $(Any,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0150
+  from   inventory:Iterable.^methods
+  cell   lazy-if(1) | (Any,)
+  code   ((Any,)).lazy-if(1)
+  is     $((Any).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Any).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0151
+  from   inventory:Iterable.^methods
+  cell   lazy-if(-1) | (Any,)
+  code   ((Any,)).lazy-if(-1)
+  is     $((Any).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Any).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0152
+  from   inventory:Iterable.^methods
+  cell   lazy-if("a") | (Any,)
+  code   ((Any,)).lazy-if("a")
+  is     $((Any).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Any).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0153
+  from   inventory:Iterable.^methods
+  cell   lazy-if(Any) | (Any,)
+  code   ((Any,)).lazy-if(Any)
+  is     $(Any,)
+  type   List
+  oracle rakudo-2026.07 → $(Any,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0154
+  from   inventory:Iterable.^methods
+  cell   lazy-if(0) | (1,"a")
+  code   ((1,"a")).lazy-if(0)
+  is     $(1, "a")
+  type   List
+  oracle rakudo-2026.07 → $(1, "a")
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0155
+  from   inventory:Iterable.^methods
+  cell   lazy-if(1) | (1,"a")
+  code   ((1,"a")).lazy-if(1)
+  is     $((1, "a").lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, "a").lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0156
+  from   inventory:Iterable.^methods
+  cell   lazy-if(-1) | (1,"a")
+  code   ((1,"a")).lazy-if(-1)
+  is     $((1, "a").lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, "a").lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0157
+  from   inventory:Iterable.^methods
+  cell   lazy-if("a") | (1,"a")
+  code   ((1,"a")).lazy-if("a")
+  is     $((1, "a").lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, "a").lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0158
+  from   inventory:Iterable.^methods
+  cell   lazy-if(Any) | (1,"a")
+  code   ((1,"a")).lazy-if(Any)
+  is     $(1, "a")
+  type   List
+  oracle rakudo-2026.07 → $(1, "a")
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0159
+  from   inventory:Iterable.^methods
+  cell   lazy-if(0) | set(1)
+  code   (set(1)).lazy-if(0)
+  is     Set.new(1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0160
+  from   inventory:Iterable.^methods
+  cell   lazy-if(1) | set(1)
+  code   (set(1)).lazy-if(1)
+  is     Set.new(1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0161
+  from   inventory:Iterable.^methods
+  cell   lazy-if(-1) | set(1)
+  code   (set(1)).lazy-if(-1)
+  is     Set.new(1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0162
+  from   inventory:Iterable.^methods
+  cell   lazy-if("a") | set(1)
+  code   (set(1)).lazy-if("a")
+  is     Set.new(1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0163
+  from   inventory:Iterable.^methods
+  cell   lazy-if(Any) | set(1)
+  code   (set(1)).lazy-if(Any)
+  is     Set.new(1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0164
+  from   inventory:Iterable.^methods
+  cell   lazy-if(0) | bag(1,1)
+  code   (bag(1,1)).lazy-if(0)
+  is     (1=>2).Bag
+  type   Bag
+  oracle rakudo-2026.07 → (1=>2).Bag
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0165
+  from   inventory:Iterable.^methods
+  cell   lazy-if(1) | bag(1,1)
+  code   (bag(1,1)).lazy-if(1)
+  is     (1=>2).Bag
+  type   Bag
+  oracle rakudo-2026.07 → (1=>2).Bag
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0166
+  from   inventory:Iterable.^methods
+  cell   lazy-if(-1) | bag(1,1)
+  code   (bag(1,1)).lazy-if(-1)
+  is     (1=>2).Bag
+  type   Bag
+  oracle rakudo-2026.07 → (1=>2).Bag
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0167
+  from   inventory:Iterable.^methods
+  cell   lazy-if("a") | bag(1,1)
+  code   (bag(1,1)).lazy-if("a")
+  is     (1=>2).Bag
+  type   Bag
+  oracle rakudo-2026.07 → (1=>2).Bag
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0168
+  from   inventory:Iterable.^methods
+  cell   lazy-if(Any) | bag(1,1)
+  code   (bag(1,1)).lazy-if(Any)
+  is     (1=>2).Bag
+  type   Bag
+  oracle rakudo-2026.07 → (1=>2).Bag
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0169
   from   inventory:Iterable.^methods
   cell   race | (1,2)
   code   ((1,2)).race
   is     RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
   type   RaceSeq
   oracle rakudo-2026.07 → RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2)
 
-- id     0044
+- id     0170
   from   inventory:Iterable.^methods
   cell   race | [1,2]
   code   ([1,2]).race
   is     RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
   type   RaceSeq
   oracle rakudo-2026.07 → RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2)
 
-- id     0045
+- id     0171
   from   inventory:Iterable.^methods
   cell   race | (1..2)
   code   ((1..2)).race
   is     RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
   type   RaceSeq
   oracle rakudo-2026.07 → RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2)
+
+- id     0172
+  from   inventory:Iterable.^methods
+  cell   race | ()
+  code   (()).race
+  is     RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  type   RaceSeq
+  oracle rakudo-2026.07 → RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0173
+  from   inventory:Iterable.^methods
+  cell   race | (1,)
+  code   ((1,)).race
+  is     RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  type   RaceSeq
+  oracle rakudo-2026.07 → RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1,)
+
+- id     0174
+  from   inventory:Iterable.^methods
+  cell   race | <a b>
+  code   (<a b>).race
+  is     RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  type   RaceSeq
+  oracle rakudo-2026.07 → RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $("a", "b")
+
+- id     0175
+  from   inventory:Iterable.^methods
+  cell   race | (1..3).Seq
+  code   ((1..3).Seq).race
+  is     RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  type   RaceSeq
+  oracle rakudo-2026.07 → RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2, 3)
+
+- id     0176
+  from   inventory:Iterable.^methods
+  cell   race | []
+  code   ([]).race
+  is     RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  type   RaceSeq
+  oracle rakudo-2026.07 → RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0177
+  from   inventory:Iterable.^methods
+  cell   race | (Any,)
+  code   ((Any,)).race
+  is     RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  type   RaceSeq
+  oracle rakudo-2026.07 → RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(Any,)
+
+- id     0178
+  from   inventory:Iterable.^methods
+  cell   race | (1,"a")
+  code   ((1,"a")).race
+  is     RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  type   RaceSeq
+  oracle rakudo-2026.07 → RaceSeq.new(configuration => HyperConfiguration.new(batch => 64, degree => 7))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, "a")
+
+- id     0179
+  from   inventory:Iterable.^methods
+  cell   race | set(1)
+  code   (set(1)).race
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1 => Bool::True,)
+
+- id     0180
+  from   inventory:Iterable.^methods
+  cell   race | bag(1,1)
+  code   (bag(1,1)).race
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1 => 2,)

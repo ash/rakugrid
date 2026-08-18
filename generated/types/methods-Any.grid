@@ -3,7 +3,7 @@ source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
 axes     Bool | Capture | DEFINITE | HOW | REPR | VAR | WHAT | WHO | all | any | bless | cache | can | chrs | does | is-generic | item | join | lazy-if | nl-out | none | not | one | reverse | self | so | sum | take
-cols     Any
+cols     Any | Mu | Int | Str | 1 | 0 | -1 | "a" | "" | (1,2) | {a=>1} | Nil | True | False | 1e0 | 1/2 | (1..3) | set(1)
 
 - id     0001
   from   inventory:Any.^methods
@@ -12,383 +12,6983 @@ cols     Any
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
 - id     0002
+  from   inventory:Any.^methods
+  cell   Bool | Mu
+  code   (Mu).Bool
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0003
+  from   inventory:Any.^methods
+  cell   Bool | Int
+  code   (Int).Bool
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0004
+  from   inventory:Any.^methods
+  cell   Bool | Str
+  code   (Str).Bool
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0005
+  from   inventory:Any.^methods
+  cell   Bool | 1
+  code   (1).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0006
+  from   inventory:Any.^methods
+  cell   Bool | 0
+  code   (0).Bool
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0007
+  from   inventory:Any.^methods
+  cell   Bool | -1
+  code   (-1).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0008
+  from   inventory:Any.^methods
+  cell   Bool | "a"
+  code   ("a").Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0009
+  from   inventory:Any.^methods
+  cell   Bool | ""
+  code   ("").Bool
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0010
+  from   inventory:Any.^methods
+  cell   Bool | (1,2)
+  code   ((1,2)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0011
+  from   inventory:Any.^methods
+  cell   Bool | {a=>1}
+  code   ({a=>1}).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0012
+  from   inventory:Any.^methods
+  cell   Bool | Nil
+  code   (Nil).Bool
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0013
+  from   inventory:Any.^methods
+  cell   Bool | True
+  code   (True).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0014
+  from   inventory:Any.^methods
+  cell   Bool | False
+  code   (False).Bool
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0015
+  from   inventory:Any.^methods
+  cell   Bool | 1e0
+  code   (1e0).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0016
+  from   inventory:Any.^methods
+  cell   Bool | 1/2
+  code   (1/2).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0017
+  from   inventory:Any.^methods
+  cell   Bool | (1..3)
+  code   ((1..3)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0018
+  from   inventory:Any.^methods
+  cell   Bool | set(1)
+  code   (set(1)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0019
   from   inventory:Any.^methods
   cell   Capture | Any
   code   (Any).Capture
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → \()
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → \()
 
-- id     0003
+- id     0020
+  from   inventory:Any.^methods
+  cell   Capture | Mu
+  code   (Mu).Capture
+  is     \()
+  type   Capture
+  oracle rakudo-2026.07 → \()
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → \()
+
+- id     0021
+  from   inventory:Any.^methods
+  cell   Capture | Int
+  code   (Int).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → \()
+
+- id     0022
+  from   inventory:Any.^methods
+  cell   Capture | Str
+  code   (Str).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → \()
+
+- id     0023
+  from   inventory:Any.^methods
+  cell   Capture | 1
+  code   (1).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+
+- id     0024
+  from   inventory:Any.^methods
+  cell   Capture | 0
+  code   (0).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+
+- id     0025
+  from   inventory:Any.^methods
+  cell   Capture | -1
+  code   (-1).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+
+- id     0026
+  from   inventory:Any.^methods
+  cell   Capture | "a"
+  code   ("a").Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+
+- id     0027
+  from   inventory:Any.^methods
+  cell   Capture | ""
+  code   ("").Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+
+- id     0028
+  from   inventory:Any.^methods
+  cell   Capture | (1,2)
+  code   ((1,2)).Capture
+  is     \(1, 2)
+  type   Capture
+  oracle rakudo-2026.07 → \(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → \(1, 2)
+
+- id     0029
+  from   inventory:Any.^methods
+  cell   Capture | {a=>1}
+  code   ({a=>1}).Capture
+  is     \(:a(1))
+  type   Capture
+  oracle rakudo-2026.07 → \(:a(1))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → \(:a(1))
+
+- id     0030
+  from   inventory:Any.^methods
+  cell   Capture | Nil
+  code   (Nil).Capture
+  is     \()
+  type   Capture
+  oracle rakudo-2026.07 → \()
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → \()
+
+- id     0031
+  from   inventory:Any.^methods
+  cell   Capture | True
+  code   (True).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+
+- id     0032
+  from   inventory:Any.^methods
+  cell   Capture | False
+  code   (False).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+
+- id     0033
+  from   inventory:Any.^methods
+  cell   Capture | 1e0
+  code   (1e0).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+
+- id     0034
+  from   inventory:Any.^methods
+  cell   Capture | 1/2
+  code   (1/2).Capture
+  is     \(:denominator(2), :numerator(1))
+  type   Capture
+  oracle rakudo-2026.07 → \(:denominator(2), :numerator(1))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+
+- id     0035
+  from   inventory:Any.^methods
+  cell   Capture | (1..3)
+  code   ((1..3)).Capture
+  is     \(:!excludes-max, :!excludes-min, :!infinite, :is-int, :max(3), :min(1))
+  type   Capture
+  oracle rakudo-2026.07 → \(:!excludes-max, :!excludes-min, :!infinite, :is-int, :max(3), :min(1))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+
+- id     0036
+  from   inventory:Any.^methods
+  cell   Capture | set(1)
+  code   (set(1)).Capture
+  is     \("1" => Bool::True)
+  type   Capture
+  oracle rakudo-2026.07 → \("1" => Bool::True)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → \(:1(Bool::True))
+
+- id     0037
   from   inventory:Any.^methods
   cell   DEFINITE | Any
   code   (Any).DEFINITE
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
-- id     0004
+- id     0038
+  from   inventory:Any.^methods
+  cell   DEFINITE | Mu
+  code   (Mu).DEFINITE
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0039
+  from   inventory:Any.^methods
+  cell   DEFINITE | Int
+  code   (Int).DEFINITE
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0040
+  from   inventory:Any.^methods
+  cell   DEFINITE | Str
+  code   (Str).DEFINITE
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0041
+  from   inventory:Any.^methods
+  cell   DEFINITE | 1
+  code   (1).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0042
+  from   inventory:Any.^methods
+  cell   DEFINITE | 0
+  code   (0).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0043
+  from   inventory:Any.^methods
+  cell   DEFINITE | -1
+  code   (-1).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0044
+  from   inventory:Any.^methods
+  cell   DEFINITE | "a"
+  code   ("a").DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0045
+  from   inventory:Any.^methods
+  cell   DEFINITE | ""
+  code   ("").DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0046
+  from   inventory:Any.^methods
+  cell   DEFINITE | (1,2)
+  code   ((1,2)).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0047
+  from   inventory:Any.^methods
+  cell   DEFINITE | {a=>1}
+  code   ({a=>1}).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0048
+  from   inventory:Any.^methods
+  cell   DEFINITE | Nil
+  code   (Nil).DEFINITE
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0049
+  from   inventory:Any.^methods
+  cell   DEFINITE | True
+  code   (True).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0050
+  from   inventory:Any.^methods
+  cell   DEFINITE | False
+  code   (False).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0051
+  from   inventory:Any.^methods
+  cell   DEFINITE | 1e0
+  code   (1e0).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0052
+  from   inventory:Any.^methods
+  cell   DEFINITE | 1/2
+  code   (1/2).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0053
+  from   inventory:Any.^methods
+  cell   DEFINITE | (1..3)
+  code   ((1..3)).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0054
+  from   inventory:Any.^methods
+  cell   DEFINITE | set(1)
+  code   (set(1)).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0055
   from   inventory:Any.^methods
   cell   HOW | Any
   code   (Any).HOW
   is     Perl6::Metamodel::ClassHOW.new
   type   Perl6::Metamodel::ClassHOW
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Metamodel::ClassHOW
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
 
-- id     0005
+- id     0056
+  from   inventory:Any.^methods
+  cell   HOW | Mu
+  code   (Mu).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+
+- id     0057
+  from   inventory:Any.^methods
+  cell   HOW | Int
+  code   (Int).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+
+- id     0058
+  from   inventory:Any.^methods
+  cell   HOW | Str
+  code   (Str).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+
+- id     0059
+  from   inventory:Any.^methods
+  cell   HOW | 1
+  code   (1).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+
+- id     0060
+  from   inventory:Any.^methods
+  cell   HOW | 0
+  code   (0).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+
+- id     0061
+  from   inventory:Any.^methods
+  cell   HOW | -1
+  code   (-1).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+
+- id     0062
+  from   inventory:Any.^methods
+  cell   HOW | "a"
+  code   ("a").HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+
+- id     0063
+  from   inventory:Any.^methods
+  cell   HOW | ""
+  code   ("").HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+
+- id     0064
+  from   inventory:Any.^methods
+  cell   HOW | (1,2)
+  code   ((1,2)).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+
+- id     0065
+  from   inventory:Any.^methods
+  cell   HOW | {a=>1}
+  code   ({a=>1}).HOW
+  is     UNRENDERABLE
+  type   Perl6::Metamodel::ClassHOW+{<anon>}
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0066
+  from   inventory:Any.^methods
+  cell   HOW | Nil
+  code   (Nil).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+
+- id     0067
+  from   inventory:Any.^methods
+  cell   HOW | True
+  code   (True).HOW
+  is     Perl6::Metamodel::EnumHOW.new
+  type   Perl6::Metamodel::EnumHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::EnumHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+
+- id     0068
+  from   inventory:Any.^methods
+  cell   HOW | False
+  code   (False).HOW
+  is     Perl6::Metamodel::EnumHOW.new
+  type   Perl6::Metamodel::EnumHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::EnumHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+
+- id     0069
+  from   inventory:Any.^methods
+  cell   HOW | 1e0
+  code   (1e0).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+
+- id     0070
+  from   inventory:Any.^methods
+  cell   HOW | 1/2
+  code   (1/2).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+
+- id     0071
+  from   inventory:Any.^methods
+  cell   HOW | (1..3)
+  code   ((1..3)).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+
+- id     0072
+  from   inventory:Any.^methods
+  cell   HOW | set(1)
+  code   (set(1)).HOW
+  is     UNRENDERABLE
+  type   Perl6::Metamodel::ClassHOW+{<anon>}
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0073
   from   inventory:Any.^methods
   cell   REPR | Any
   code   (Any).REPR
   is     "P6opaque"
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0006
+- id     0074
+  from   inventory:Any.^methods
+  cell   REPR | Mu
+  code   (Mu).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0075
+  from   inventory:Any.^methods
+  cell   REPR | Int
+  code   (Int).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0076
+  from   inventory:Any.^methods
+  cell   REPR | Str
+  code   (Str).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0077
+  from   inventory:Any.^methods
+  cell   REPR | 1
+  code   (1).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0078
+  from   inventory:Any.^methods
+  cell   REPR | 0
+  code   (0).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0079
+  from   inventory:Any.^methods
+  cell   REPR | -1
+  code   (-1).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0080
+  from   inventory:Any.^methods
+  cell   REPR | "a"
+  code   ("a").REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0081
+  from   inventory:Any.^methods
+  cell   REPR | ""
+  code   ("").REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0082
+  from   inventory:Any.^methods
+  cell   REPR | (1,2)
+  code   ((1,2)).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0083
+  from   inventory:Any.^methods
+  cell   REPR | {a=>1}
+  code   ({a=>1}).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0084
+  from   inventory:Any.^methods
+  cell   REPR | Nil
+  code   (Nil).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
+
+- id     0085
+  from   inventory:Any.^methods
+  cell   REPR | True
+  code   (True).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0086
+  from   inventory:Any.^methods
+  cell   REPR | False
+  code   (False).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0087
+  from   inventory:Any.^methods
+  cell   REPR | 1e0
+  code   (1e0).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0088
+  from   inventory:Any.^methods
+  cell   REPR | 1/2
+  code   (1/2).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0089
+  from   inventory:Any.^methods
+  cell   REPR | (1..3)
+  code   ((1..3)).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0090
+  from   inventory:Any.^methods
+  cell   REPR | set(1)
+  code   (set(1)).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0091
   from   inventory:Any.^methods
   cell   VAR | Any
   code   (Any).VAR
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Any
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
 
-- id     0007
+- id     0092
+  from   inventory:Any.^methods
+  cell   VAR | Mu
+  code   (Mu).VAR
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0093
+  from   inventory:Any.^methods
+  cell   VAR | Int
+  code   (Int).VAR
+  is     Int
+  type   Int
+  oracle rakudo-2026.07 → Int
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Int
+
+- id     0094
+  from   inventory:Any.^methods
+  cell   VAR | Str
+  code   (Str).VAR
+  is     Str
+  type   Str
+  oracle rakudo-2026.07 → Str
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Str
+
+- id     0095
+  from   inventory:Any.^methods
+  cell   VAR | 1
+  code   (1).VAR
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0096
+  from   inventory:Any.^methods
+  cell   VAR | 0
+  code   (0).VAR
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0097
+  from   inventory:Any.^methods
+  cell   VAR | -1
+  code   (-1).VAR
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0098
+  from   inventory:Any.^methods
+  cell   VAR | "a"
+  code   ("a").VAR
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "a"
+
+- id     0099
+  from   inventory:Any.^methods
+  cell   VAR | ""
+  code   ("").VAR
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+
+- id     0100
+  from   inventory:Any.^methods
+  cell   VAR | (1,2)
+  code   ((1,2)).VAR
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2)
+
+- id     0101
+  from   inventory:Any.^methods
+  cell   VAR | {a=>1}
+  code   ({a=>1}).VAR
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:a(1)}
+
+- id     0102
+  from   inventory:Any.^methods
+  cell   VAR | Nil
+  code   (Nil).VAR
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
+
+- id     0103
+  from   inventory:Any.^methods
+  cell   VAR | True
+  code   (True).VAR
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0104
+  from   inventory:Any.^methods
+  cell   VAR | False
+  code   (False).VAR
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0105
+  from   inventory:Any.^methods
+  cell   VAR | 1e0
+  code   (1e0).VAR
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0106
+  from   inventory:Any.^methods
+  cell   VAR | 1/2
+  code   (1/2).VAR
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5
+
+- id     0107
+  from   inventory:Any.^methods
+  cell   VAR | (1..3)
+  code   ((1..3)).VAR
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1..3
+
+- id     0108
+  from   inventory:Any.^methods
+  cell   VAR | set(1)
+  code   (set(1)).VAR
+  is     Set.new(1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Set.new(1)
+
+- id     0109
   from   inventory:Any.^methods
   cell   WHAT | Any
   code   (Any).WHAT
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Any
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
 
-- id     0008
+- id     0110
+  from   inventory:Any.^methods
+  cell   WHAT | Mu
+  code   (Mu).WHAT
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0111
+  from   inventory:Any.^methods
+  cell   WHAT | Int
+  code   (Int).WHAT
+  is     Int
+  type   Int
+  oracle rakudo-2026.07 → Int
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Int
+
+- id     0112
+  from   inventory:Any.^methods
+  cell   WHAT | Str
+  code   (Str).WHAT
+  is     Str
+  type   Str
+  oracle rakudo-2026.07 → Str
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Str
+
+- id     0113
+  from   inventory:Any.^methods
+  cell   WHAT | 1
+  code   (1).WHAT
+  is     Int
+  type   Int
+  oracle rakudo-2026.07 → Int
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Int
+
+- id     0114
+  from   inventory:Any.^methods
+  cell   WHAT | 0
+  code   (0).WHAT
+  is     Int
+  type   Int
+  oracle rakudo-2026.07 → Int
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Int
+
+- id     0115
+  from   inventory:Any.^methods
+  cell   WHAT | -1
+  code   (-1).WHAT
+  is     Int
+  type   Int
+  oracle rakudo-2026.07 → Int
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Int
+
+- id     0116
+  from   inventory:Any.^methods
+  cell   WHAT | "a"
+  code   ("a").WHAT
+  is     Str
+  type   Str
+  oracle rakudo-2026.07 → Str
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Str
+
+- id     0117
+  from   inventory:Any.^methods
+  cell   WHAT | ""
+  code   ("").WHAT
+  is     Str
+  type   Str
+  oracle rakudo-2026.07 → Str
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Str
+
+- id     0118
+  from   inventory:Any.^methods
+  cell   WHAT | (1,2)
+  code   ((1,2)).WHAT
+  is     List
+  type   List
+  oracle rakudo-2026.07 → List
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → List
+
+- id     0119
+  from   inventory:Any.^methods
+  cell   WHAT | {a=>1}
+  code   ({a=>1}).WHAT
+  is     Hash
+  type   Hash
+  oracle rakudo-2026.07 → Hash
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Hash
+
+- id     0120
+  from   inventory:Any.^methods
+  cell   WHAT | Nil
+  code   (Nil).WHAT
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Nil
+
+- id     0121
+  from   inventory:Any.^methods
+  cell   WHAT | True
+  code   (True).WHAT
+  is     Bool
+  type   Bool
+  oracle rakudo-2026.07 → Bool
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool
+
+- id     0122
+  from   inventory:Any.^methods
+  cell   WHAT | False
+  code   (False).WHAT
+  is     Bool
+  type   Bool
+  oracle rakudo-2026.07 → Bool
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool
+
+- id     0123
+  from   inventory:Any.^methods
+  cell   WHAT | 1e0
+  code   (1e0).WHAT
+  is     Num
+  type   Num
+  oracle rakudo-2026.07 → Num
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Num
+
+- id     0124
+  from   inventory:Any.^methods
+  cell   WHAT | 1/2
+  code   (1/2).WHAT
+  is     Rat
+  type   Rat
+  oracle rakudo-2026.07 → Rat
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Rat
+
+- id     0125
+  from   inventory:Any.^methods
+  cell   WHAT | (1..3)
+  code   ((1..3)).WHAT
+  is     Range
+  type   Range
+  oracle rakudo-2026.07 → Range
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Range
+
+- id     0126
+  from   inventory:Any.^methods
+  cell   WHAT | set(1)
+  code   (set(1)).WHAT
+  is     Set
+  type   Set
+  oracle rakudo-2026.07 → Set
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Set
+
+- id     0127
   from   inventory:Any.^methods
   cell   WHO | Any
   code   (Any).WHO
   is     ${}
   type   Stash
   oracle rakudo-2026.07 → ${}
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
 
-- id     0009
+- id     0128
+  from   inventory:Any.^methods
+  cell   WHO | Mu
+  code   (Mu).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0129
+  from   inventory:Any.^methods
+  cell   WHO | Int
+  code   (Int).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0130
+  from   inventory:Any.^methods
+  cell   WHO | Str
+  code   (Str).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0131
+  from   inventory:Any.^methods
+  cell   WHO | 1
+  code   (1).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0132
+  from   inventory:Any.^methods
+  cell   WHO | 0
+  code   (0).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0133
+  from   inventory:Any.^methods
+  cell   WHO | -1
+  code   (-1).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0134
+  from   inventory:Any.^methods
+  cell   WHO | "a"
+  code   ("a").WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0135
+  from   inventory:Any.^methods
+  cell   WHO | ""
+  code   ("").WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0136
+  from   inventory:Any.^methods
+  cell   WHO | (1,2)
+  code   ((1,2)).WHO
+  is     ${:Reifier(List::Reifier)}
+  type   Stash
+  oracle rakudo-2026.07 → ${:Reifier(List::Reifier)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0137
+  from   inventory:Any.^methods
+  cell   WHO | {a=>1}
+  code   ({a=>1}).WHO
+  is     ${:Object(Hash::Object), :Ordered(Hash::Ordered), :Typed(Hash::Typed)}
+  type   Stash
+  oracle rakudo-2026.07 → ${:Object(Hash::Object), :Ordered(Hash::Ordered), :Typed(Hash::Typed)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0138
+  from   inventory:Any.^methods
+  cell   WHO | Nil
+  code   (Nil).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0139
+  from   inventory:Any.^methods
+  cell   WHO | True
+  code   (True).WHO
+  is     ${:!False, :True}
+  type   Stash
+  oracle rakudo-2026.07 → ${:!False, :True}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:False(Bool::False), :True(Bool::True)}
+
+- id     0140
+  from   inventory:Any.^methods
+  cell   WHO | False
+  code   (False).WHO
+  is     ${:!False, :True}
+  type   Stash
+  oracle rakudo-2026.07 → ${:!False, :True}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:False(Bool::False), :True(Bool::True)}
+
+- id     0141
+  from   inventory:Any.^methods
+  cell   WHO | 1e0
+  code   (1e0).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0142
+  from   inventory:Any.^methods
+  cell   WHO | 1/2
+  code   (1/2).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0143
+  from   inventory:Any.^methods
+  cell   WHO | (1..3)
+  code   ((1..3)).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0144
+  from   inventory:Any.^methods
+  cell   WHO | set(1)
+  code   (set(1)).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0145
   from   inventory:Any.^methods
   cell   all | Any
   code   (Any).all
   is     all(Any)
   type   Junction
   oracle rakudo-2026.07 → all(Any)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → all(Any)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(Any)
 
-- id     0010
+- id     0146
+  from   inventory:Any.^methods
+  cell   all | Mu
+  code   (Mu).all
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(Mu)
+
+- id     0147
+  from   inventory:Any.^methods
+  cell   all | Int
+  code   (Int).all
+  is     all(Int)
+  type   Junction
+  oracle rakudo-2026.07 → all(Int)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(Int)
+
+- id     0148
+  from   inventory:Any.^methods
+  cell   all | Str
+  code   (Str).all
+  is     all(Str)
+  type   Junction
+  oracle rakudo-2026.07 → all(Str)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(Str)
+
+- id     0149
+  from   inventory:Any.^methods
+  cell   all | 1
+  code   (1).all
+  is     all(1)
+  type   Junction
+  oracle rakudo-2026.07 → all(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(1)
+
+- id     0150
+  from   inventory:Any.^methods
+  cell   all | 0
+  code   (0).all
+  is     all(0)
+  type   Junction
+  oracle rakudo-2026.07 → all(0)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(0)
+
+- id     0151
+  from   inventory:Any.^methods
+  cell   all | -1
+  code   (-1).all
+  is     all(-1)
+  type   Junction
+  oracle rakudo-2026.07 → all(-1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(-1)
+
+- id     0152
+  from   inventory:Any.^methods
+  cell   all | "a"
+  code   ("a").all
+  is     all("a")
+  type   Junction
+  oracle rakudo-2026.07 → all("a")
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all("a")
+
+- id     0153
+  from   inventory:Any.^methods
+  cell   all | ""
+  code   ("").all
+  is     all("")
+  type   Junction
+  oracle rakudo-2026.07 → all("")
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all("")
+
+- id     0154
+  from   inventory:Any.^methods
+  cell   all | (1,2)
+  code   ((1,2)).all
+  is     all(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → all(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(1, 2)
+
+- id     0155
+  from   inventory:Any.^methods
+  cell   all | {a=>1}
+  code   ({a=>1}).all
+  is     all(:a(1))
+  type   Junction
+  oracle rakudo-2026.07 → all(:a(1))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(:a(1))
+
+- id     0156
+  from   inventory:Any.^methods
+  cell   all | Nil
+  code   (Nil).all
+  is     all(Nil)
+  type   Junction
+  oracle rakudo-2026.07 → all(Nil)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(Nil)
+
+- id     0157
+  from   inventory:Any.^methods
+  cell   all | True
+  code   (True).all
+  is     all(Bool::True)
+  type   Junction
+  oracle rakudo-2026.07 → all(Bool::True)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(Bool::True)
+
+- id     0158
+  from   inventory:Any.^methods
+  cell   all | False
+  code   (False).all
+  is     all(Bool::False)
+  type   Junction
+  oracle rakudo-2026.07 → all(Bool::False)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(Bool::False)
+
+- id     0159
+  from   inventory:Any.^methods
+  cell   all | 1e0
+  code   (1e0).all
+  is     all(1e0)
+  type   Junction
+  oracle rakudo-2026.07 → all(1e0)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(1e0)
+
+- id     0160
+  from   inventory:Any.^methods
+  cell   all | 1/2
+  code   (1/2).all
+  is     all(0.5)
+  type   Junction
+  oracle rakudo-2026.07 → all(0.5)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(0.5)
+
+- id     0161
+  from   inventory:Any.^methods
+  cell   all | (1..3)
+  code   ((1..3)).all
+  is     all(1, 2, 3)
+  type   Junction
+  oracle rakudo-2026.07 → all(1, 2, 3)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(1, 2, 3)
+
+- id     0162
+  from   inventory:Any.^methods
+  cell   all | set(1)
+  code   (set(1)).all
+  is     all(1 => Bool::True)
+  type   Junction
+  oracle rakudo-2026.07 → all(1 => Bool::True)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(1 => Bool::True)
+
+- id     0163
   from   inventory:Any.^methods
   cell   any | Any
   code   (Any).any
   is     any(Any)
   type   Junction
   oracle rakudo-2026.07 → any(Any)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → any(Any)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(Any)
 
-- id     0011
+- id     0164
+  from   inventory:Any.^methods
+  cell   any | Mu
+  code   (Mu).any
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(Mu)
+
+- id     0165
+  from   inventory:Any.^methods
+  cell   any | Int
+  code   (Int).any
+  is     any(Int)
+  type   Junction
+  oracle rakudo-2026.07 → any(Int)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(Int)
+
+- id     0166
+  from   inventory:Any.^methods
+  cell   any | Str
+  code   (Str).any
+  is     any(Str)
+  type   Junction
+  oracle rakudo-2026.07 → any(Str)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(Str)
+
+- id     0167
+  from   inventory:Any.^methods
+  cell   any | 1
+  code   (1).any
+  is     any(1)
+  type   Junction
+  oracle rakudo-2026.07 → any(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(1)
+
+- id     0168
+  from   inventory:Any.^methods
+  cell   any | 0
+  code   (0).any
+  is     any(0)
+  type   Junction
+  oracle rakudo-2026.07 → any(0)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(0)
+
+- id     0169
+  from   inventory:Any.^methods
+  cell   any | -1
+  code   (-1).any
+  is     any(-1)
+  type   Junction
+  oracle rakudo-2026.07 → any(-1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(-1)
+
+- id     0170
+  from   inventory:Any.^methods
+  cell   any | "a"
+  code   ("a").any
+  is     any("a")
+  type   Junction
+  oracle rakudo-2026.07 → any("a")
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any("a")
+
+- id     0171
+  from   inventory:Any.^methods
+  cell   any | ""
+  code   ("").any
+  is     any("")
+  type   Junction
+  oracle rakudo-2026.07 → any("")
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any("")
+
+- id     0172
+  from   inventory:Any.^methods
+  cell   any | (1,2)
+  code   ((1,2)).any
+  is     any(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(1, 2)
+
+- id     0173
+  from   inventory:Any.^methods
+  cell   any | {a=>1}
+  code   ({a=>1}).any
+  is     any(:a(1))
+  type   Junction
+  oracle rakudo-2026.07 → any(:a(1))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(:a(1))
+
+- id     0174
+  from   inventory:Any.^methods
+  cell   any | Nil
+  code   (Nil).any
+  is     any(Nil)
+  type   Junction
+  oracle rakudo-2026.07 → any(Nil)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(Nil)
+
+- id     0175
+  from   inventory:Any.^methods
+  cell   any | True
+  code   (True).any
+  is     any(Bool::True)
+  type   Junction
+  oracle rakudo-2026.07 → any(Bool::True)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(Bool::True)
+
+- id     0176
+  from   inventory:Any.^methods
+  cell   any | False
+  code   (False).any
+  is     any(Bool::False)
+  type   Junction
+  oracle rakudo-2026.07 → any(Bool::False)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(Bool::False)
+
+- id     0177
+  from   inventory:Any.^methods
+  cell   any | 1e0
+  code   (1e0).any
+  is     any(1e0)
+  type   Junction
+  oracle rakudo-2026.07 → any(1e0)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(1e0)
+
+- id     0178
+  from   inventory:Any.^methods
+  cell   any | 1/2
+  code   (1/2).any
+  is     any(0.5)
+  type   Junction
+  oracle rakudo-2026.07 → any(0.5)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(0.5)
+
+- id     0179
+  from   inventory:Any.^methods
+  cell   any | (1..3)
+  code   ((1..3)).any
+  is     any(1, 2, 3)
+  type   Junction
+  oracle rakudo-2026.07 → any(1, 2, 3)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(1, 2, 3)
+
+- id     0180
+  from   inventory:Any.^methods
+  cell   any | set(1)
+  code   (set(1)).any
+  is     any(1 => Bool::True)
+  type   Junction
+  oracle rakudo-2026.07 → any(1 => Bool::True)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(1 => Bool::True)
+
+- id     0181
   from   inventory:Any.^methods
   cell   bless | Any
   code   (Any).bless
   is     Any.new
   type   Any
   oracle rakudo-2026.07 → Any.new
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
 
-- id     0012
+- id     0182
+  from   inventory:Any.^methods
+  cell   bless | Mu
+  code   (Mu).bless
+  is     Mu.new
+  type   Mu
+  oracle rakudo-2026.07 → Mu.new
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0183
+  from   inventory:Any.^methods
+  cell   bless | Int
+  code   (Int).bless
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0184
+  from   inventory:Any.^methods
+  cell   bless | Str
+  code   (Str).bless
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+
+- id     0185
+  from   inventory:Any.^methods
+  cell   bless | 1
+  code   (1).bless
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0186
+  from   inventory:Any.^methods
+  cell   bless | 0
+  code   (0).bless
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0187
+  from   inventory:Any.^methods
+  cell   bless | -1
+  code   (-1).bless
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0188
+  from   inventory:Any.^methods
+  cell   bless | "a"
+  code   ("a").bless
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+
+- id     0189
+  from   inventory:Any.^methods
+  cell   bless | ""
+  code   ("").bless
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+
+- id     0190
+  from   inventory:Any.^methods
+  cell   bless | (1,2)
+  code   ((1,2)).bless
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0191
+  from   inventory:Any.^methods
+  cell   bless | {a=>1}
+  code   ({a=>1}).bless
+  is     ${}
+  type   Hash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+
+- id     0192
+  from   inventory:Any.^methods
+  cell   bless | Nil
+  code   (Nil).bless
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0193
+  from   inventory:Any.^methods
+  cell   bless | True
+  code   (True).bless
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0194
+  from   inventory:Any.^methods
+  cell   bless | False
+  code   (False).bless
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0195
+  from   inventory:Any.^methods
+  cell   bless | 1e0
+  code   (1e0).bless
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0196
+  from   inventory:Any.^methods
+  cell   bless | 1/2
+  code   (1/2).bless
+  is     UNRENDERABLE
+  type   Rat
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0197
+  from   inventory:Any.^methods
+  cell   bless | (1..3)
+  code   ((1..3)).bless
+  is     Any..Any
+  type   Range
+  oracle rakudo-2026.07 → Any..Any
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0198
+  from   inventory:Any.^methods
+  cell   bless | set(1)
+  code   (set(1)).bless
+  is     UNRENDERABLE
+  type   Set
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Set.new()
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0199
   from   inventory:Any.^methods
   cell   cache | Any
   code   (Any).cache
   is     $(Any,)
   type   List
   oracle rakudo-2026.07 → $(Any,)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(Any,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(Any,)
 
-- id     0013
+- id     0200
+  from   inventory:Any.^methods
+  cell   cache | Mu
+  code   (Mu).cache
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(Mu,)
+
+- id     0201
+  from   inventory:Any.^methods
+  cell   cache | Int
+  code   (Int).cache
+  is     $(Int,)
+  type   List
+  oracle rakudo-2026.07 → $(Int,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(Int,)
+
+- id     0202
+  from   inventory:Any.^methods
+  cell   cache | Str
+  code   (Str).cache
+  is     $(Str,)
+  type   List
+  oracle rakudo-2026.07 → $(Str,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(Str,)
+
+- id     0203
+  from   inventory:Any.^methods
+  cell   cache | 1
+  code   (1).cache
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1,)
+
+- id     0204
+  from   inventory:Any.^methods
+  cell   cache | 0
+  code   (0).cache
+  is     $(0,)
+  type   List
+  oracle rakudo-2026.07 → $(0,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(0,)
+
+- id     0205
+  from   inventory:Any.^methods
+  cell   cache | -1
+  code   (-1).cache
+  is     $(-1,)
+  type   List
+  oracle rakudo-2026.07 → $(-1,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(-1,)
+
+- id     0206
+  from   inventory:Any.^methods
+  cell   cache | "a"
+  code   ("a").cache
+  is     $("a",)
+  type   List
+  oracle rakudo-2026.07 → $("a",)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $("a",)
+
+- id     0207
+  from   inventory:Any.^methods
+  cell   cache | ""
+  code   ("").cache
+  is     $("",)
+  type   List
+  oracle rakudo-2026.07 → $("",)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $("",)
+
+- id     0208
+  from   inventory:Any.^methods
+  cell   cache | (1,2)
+  code   ((1,2)).cache
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2)
+
+- id     0209
+  from   inventory:Any.^methods
+  cell   cache | {a=>1}
+  code   ({a=>1}).cache
+  is     $(:a(1),)
+  type   List
+  oracle rakudo-2026.07 → $(:a(1),)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(:a(1),)
+
+- id     0210
+  from   inventory:Any.^methods
+  cell   cache | Nil
+  code   (Nil).cache
+  is     $(Nil,)
+  type   List
+  oracle rakudo-2026.07 → $(Nil,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(Nil,)
+
+- id     0211
+  from   inventory:Any.^methods
+  cell   cache | True
+  code   (True).cache
+  is     $(Bool::True,)
+  type   List
+  oracle rakudo-2026.07 → $(Bool::True,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(Bool::True,)
+
+- id     0212
+  from   inventory:Any.^methods
+  cell   cache | False
+  code   (False).cache
+  is     $(Bool::False,)
+  type   List
+  oracle rakudo-2026.07 → $(Bool::False,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(Bool::False,)
+
+- id     0213
+  from   inventory:Any.^methods
+  cell   cache | 1e0
+  code   (1e0).cache
+  is     $(1e0,)
+  type   List
+  oracle rakudo-2026.07 → $(1e0,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1e0,)
+
+- id     0214
+  from   inventory:Any.^methods
+  cell   cache | 1/2
+  code   (1/2).cache
+  is     $(0.5,)
+  type   List
+  oracle rakudo-2026.07 → $(0.5,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(0.5,)
+
+- id     0215
+  from   inventory:Any.^methods
+  cell   cache | (1..3)
+  code   ((1..3)).cache
+  is     $(1, 2, 3)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2, 3)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2, 3)
+
+- id     0216
+  from   inventory:Any.^methods
+  cell   cache | set(1)
+  code   (set(1)).cache
+  is     $(1 => Bool::True,)
+  type   List
+  oracle rakudo-2026.07 → $(1 => Bool::True,)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1 => Bool::True,)
+
+- id     0217
   from   inventory:Any.^methods
   cell   can(0) | Any
   code   (Any).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
 
-- id     0014
+- id     0218
   from   inventory:Any.^methods
   cell   can(1) | Any
   code   (Any).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
 
-- id     0015
+- id     0219
   from   inventory:Any.^methods
   cell   can(-1) | Any
   code   (Any).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
 
-- id     0016
+- id     0220
   from   inventory:Any.^methods
   cell   can("a") | Any
   code   (Any).can("a")
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
 
-- id     0017
+- id     0221
   from   inventory:Any.^methods
   cell   can(Any) | Any
   code   (Any).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
 
-- id     0018
+- id     0222
+  from   inventory:Any.^methods
+  cell   can(0) | Mu
+  code   (Mu).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0223
+  from   inventory:Any.^methods
+  cell   can(1) | Mu
+  code   (Mu).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0224
+  from   inventory:Any.^methods
+  cell   can(-1) | Mu
+  code   (Mu).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0225
+  from   inventory:Any.^methods
+  cell   can("a") | Mu
+  code   (Mu).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0226
+  from   inventory:Any.^methods
+  cell   can(Any) | Mu
+  code   (Mu).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0227
+  from   inventory:Any.^methods
+  cell   can(0) | Int
+  code   (Int).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0228
+  from   inventory:Any.^methods
+  cell   can(1) | Int
+  code   (Int).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0229
+  from   inventory:Any.^methods
+  cell   can(-1) | Int
+  code   (Int).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0230
+  from   inventory:Any.^methods
+  cell   can("a") | Int
+  code   (Int).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0231
+  from   inventory:Any.^methods
+  cell   can(Any) | Int
+  code   (Int).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0232
+  from   inventory:Any.^methods
+  cell   can(0) | Str
+  code   (Str).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0233
+  from   inventory:Any.^methods
+  cell   can(1) | Str
+  code   (Str).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0234
+  from   inventory:Any.^methods
+  cell   can(-1) | Str
+  code   (Str).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0235
+  from   inventory:Any.^methods
+  cell   can("a") | Str
+  code   (Str).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0236
+  from   inventory:Any.^methods
+  cell   can(Any) | Str
+  code   (Str).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0237
+  from   inventory:Any.^methods
+  cell   can(0) | 1
+  code   (1).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0238
+  from   inventory:Any.^methods
+  cell   can(1) | 1
+  code   (1).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0239
+  from   inventory:Any.^methods
+  cell   can(-1) | 1
+  code   (1).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0240
+  from   inventory:Any.^methods
+  cell   can("a") | 1
+  code   (1).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0241
+  from   inventory:Any.^methods
+  cell   can(Any) | 1
+  code   (1).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0242
+  from   inventory:Any.^methods
+  cell   can(0) | 0
+  code   (0).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0243
+  from   inventory:Any.^methods
+  cell   can(1) | 0
+  code   (0).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0244
+  from   inventory:Any.^methods
+  cell   can(-1) | 0
+  code   (0).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0245
+  from   inventory:Any.^methods
+  cell   can("a") | 0
+  code   (0).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0246
+  from   inventory:Any.^methods
+  cell   can(Any) | 0
+  code   (0).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0247
+  from   inventory:Any.^methods
+  cell   can(0) | -1
+  code   (-1).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0248
+  from   inventory:Any.^methods
+  cell   can(1) | -1
+  code   (-1).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0249
+  from   inventory:Any.^methods
+  cell   can(-1) | -1
+  code   (-1).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0250
+  from   inventory:Any.^methods
+  cell   can("a") | -1
+  code   (-1).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0251
+  from   inventory:Any.^methods
+  cell   can(Any) | -1
+  code   (-1).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0252
+  from   inventory:Any.^methods
+  cell   can(0) | "a"
+  code   ("a").can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0253
+  from   inventory:Any.^methods
+  cell   can(1) | "a"
+  code   ("a").can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0254
+  from   inventory:Any.^methods
+  cell   can(-1) | "a"
+  code   ("a").can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0255
+  from   inventory:Any.^methods
+  cell   can("a") | "a"
+  code   ("a").can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0256
+  from   inventory:Any.^methods
+  cell   can(Any) | "a"
+  code   ("a").can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0257
+  from   inventory:Any.^methods
+  cell   can(0) | ""
+  code   ("").can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0258
+  from   inventory:Any.^methods
+  cell   can(1) | ""
+  code   ("").can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0259
+  from   inventory:Any.^methods
+  cell   can(-1) | ""
+  code   ("").can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0260
+  from   inventory:Any.^methods
+  cell   can("a") | ""
+  code   ("").can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0261
+  from   inventory:Any.^methods
+  cell   can(Any) | ""
+  code   ("").can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0262
+  from   inventory:Any.^methods
+  cell   can(0) | (1,2)
+  code   ((1,2)).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0263
+  from   inventory:Any.^methods
+  cell   can(1) | (1,2)
+  code   ((1,2)).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0264
+  from   inventory:Any.^methods
+  cell   can(-1) | (1,2)
+  code   ((1,2)).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0265
+  from   inventory:Any.^methods
+  cell   can("a") | (1,2)
+  code   ((1,2)).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0266
+  from   inventory:Any.^methods
+  cell   can(Any) | (1,2)
+  code   ((1,2)).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0267
+  from   inventory:Any.^methods
+  cell   can(0) | {a=>1}
+  code   ({a=>1}).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0268
+  from   inventory:Any.^methods
+  cell   can(1) | {a=>1}
+  code   ({a=>1}).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0269
+  from   inventory:Any.^methods
+  cell   can(-1) | {a=>1}
+  code   ({a=>1}).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0270
+  from   inventory:Any.^methods
+  cell   can("a") | {a=>1}
+  code   ({a=>1}).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0271
+  from   inventory:Any.^methods
+  cell   can(Any) | {a=>1}
+  code   ({a=>1}).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0272
+  from   inventory:Any.^methods
+  cell   can(0) | Nil
+  code   (Nil).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0273
+  from   inventory:Any.^methods
+  cell   can(1) | Nil
+  code   (Nil).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0274
+  from   inventory:Any.^methods
+  cell   can(-1) | Nil
+  code   (Nil).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0275
+  from   inventory:Any.^methods
+  cell   can("a") | Nil
+  code   (Nil).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0276
+  from   inventory:Any.^methods
+  cell   can(Any) | Nil
+  code   (Nil).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0277
+  from   inventory:Any.^methods
+  cell   can(0) | True
+  code   (True).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0278
+  from   inventory:Any.^methods
+  cell   can(1) | True
+  code   (True).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0279
+  from   inventory:Any.^methods
+  cell   can(-1) | True
+  code   (True).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0280
+  from   inventory:Any.^methods
+  cell   can("a") | True
+  code   (True).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0281
+  from   inventory:Any.^methods
+  cell   can(Any) | True
+  code   (True).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0282
+  from   inventory:Any.^methods
+  cell   can(0) | False
+  code   (False).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0283
+  from   inventory:Any.^methods
+  cell   can(1) | False
+  code   (False).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0284
+  from   inventory:Any.^methods
+  cell   can(-1) | False
+  code   (False).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0285
+  from   inventory:Any.^methods
+  cell   can("a") | False
+  code   (False).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0286
+  from   inventory:Any.^methods
+  cell   can(Any) | False
+  code   (False).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0287
+  from   inventory:Any.^methods
+  cell   can(0) | 1e0
+  code   (1e0).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0288
+  from   inventory:Any.^methods
+  cell   can(1) | 1e0
+  code   (1e0).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0289
+  from   inventory:Any.^methods
+  cell   can(-1) | 1e0
+  code   (1e0).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0290
+  from   inventory:Any.^methods
+  cell   can("a") | 1e0
+  code   (1e0).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0291
+  from   inventory:Any.^methods
+  cell   can(Any) | 1e0
+  code   (1e0).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0292
+  from   inventory:Any.^methods
+  cell   can(0) | 1/2
+  code   (1/2).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0293
+  from   inventory:Any.^methods
+  cell   can(1) | 1/2
+  code   (1/2).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0294
+  from   inventory:Any.^methods
+  cell   can(-1) | 1/2
+  code   (1/2).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0295
+  from   inventory:Any.^methods
+  cell   can("a") | 1/2
+  code   (1/2).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0296
+  from   inventory:Any.^methods
+  cell   can(Any) | 1/2
+  code   (1/2).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0297
+  from   inventory:Any.^methods
+  cell   can(0) | (1..3)
+  code   ((1..3)).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0298
+  from   inventory:Any.^methods
+  cell   can(1) | (1..3)
+  code   ((1..3)).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0299
+  from   inventory:Any.^methods
+  cell   can(-1) | (1..3)
+  code   ((1..3)).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0300
+  from   inventory:Any.^methods
+  cell   can("a") | (1..3)
+  code   ((1..3)).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0301
+  from   inventory:Any.^methods
+  cell   can(Any) | (1..3)
+  code   ((1..3)).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0302
+  from   inventory:Any.^methods
+  cell   can(0) | set(1)
+  code   (set(1)).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0303
+  from   inventory:Any.^methods
+  cell   can(1) | set(1)
+  code   (set(1)).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0304
+  from   inventory:Any.^methods
+  cell   can(-1) | set(1)
+  code   (set(1)).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0305
+  from   inventory:Any.^methods
+  cell   can("a") | set(1)
+  code   (set(1)).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0306
+  from   inventory:Any.^methods
+  cell   can(Any) | set(1)
+  code   (set(1)).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+
+- id     0307
   from   inventory:Any.^methods
   cell   chrs | Any
   code   (Any).chrs
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0019
+- id     0308
+  from   inventory:Any.^methods
+  cell   chrs | Mu
+  code   (Mu).chrs
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0309
+  from   inventory:Any.^methods
+  cell   chrs | Int
+  code   (Int).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0310
+  from   inventory:Any.^methods
+  cell   chrs | Str
+  code   (Str).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0311
+  from   inventory:Any.^methods
+  cell   chrs | 1
+  code   (1).chrs
+  is     "\x[1]"
+  type   Str
+  oracle rakudo-2026.07 → "\x[1]"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\x[1]"
+
+- id     0312
+  from   inventory:Any.^methods
+  cell   chrs | 0
+  code   (0).chrs
+  is     "\0"
+  type   Str
+  oracle rakudo-2026.07 → "\0"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\0"
+
+- id     0313
+  from   inventory:Any.^methods
+  cell   chrs | -1
+  code   (-1).chrs
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → INVALID-UTF8:22 FF BF BF BF 22
+
+- id     0314
+  from   inventory:Any.^methods
+  cell   chrs | "a"
+  code   ("a").chrs
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\0"
+
+- id     0315
+  from   inventory:Any.^methods
+  cell   chrs | ""
+  code   ("").chrs
+  is     "\0"
+  type   Str
+  oracle rakudo-2026.07 → "\0"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\0"
+
+- id     0316
+  from   inventory:Any.^methods
+  cell   chrs | (1,2)
+  code   ((1,2)).chrs
+  is     "\x[1]\x[2]"
+  type   Str
+  oracle rakudo-2026.07 → "\x[1]\x[2]"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\x[1]\x[2]"
+
+- id     0317
+  from   inventory:Any.^methods
+  cell   chrs | {a=>1}
+  code   ({a=>1}).chrs
+  throws X::TypeCheck
+  oracle rakudo-2026.07 → ERR:X::TypeCheck
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\0"
+
+- id     0318
+  from   inventory:Any.^methods
+  cell   chrs | Nil
+  code   (Nil).chrs
+  is     "\0"
+  type   Str
+  oracle rakudo-2026.07 → "\0"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
+
+- id     0319
+  from   inventory:Any.^methods
+  cell   chrs | True
+  code   (True).chrs
+  is     "\x[1]"
+  type   Str
+  oracle rakudo-2026.07 → "\x[1]"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\x[1]"
+
+- id     0320
+  from   inventory:Any.^methods
+  cell   chrs | False
+  code   (False).chrs
+  is     "\0"
+  type   Str
+  oracle rakudo-2026.07 → "\0"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\0"
+
+- id     0321
+  from   inventory:Any.^methods
+  cell   chrs | 1e0
+  code   (1e0).chrs
+  throws X::TypeCheck
+  oracle rakudo-2026.07 → ERR:X::TypeCheck
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\x[1]"
+
+- id     0322
+  from   inventory:Any.^methods
+  cell   chrs | 1/2
+  code   (1/2).chrs
+  throws X::TypeCheck
+  oracle rakudo-2026.07 → ERR:X::TypeCheck
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\0"
+
+- id     0323
+  from   inventory:Any.^methods
+  cell   chrs | (1..3)
+  code   ((1..3)).chrs
+  is     "\x[1]\x[2]\x[3]"
+  type   Str
+  oracle rakudo-2026.07 → "\x[1]\x[2]\x[3]"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\x[1]\x[2]\x[3]"
+
+- id     0324
+  from   inventory:Any.^methods
+  cell   chrs | set(1)
+  code   (set(1)).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\0"
+
+- id     0325
   from   inventory:Any.^methods
   cell   does(0) | Any
   code   (Any).does(0)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
-- id     0020
+- id     0326
   from   inventory:Any.^methods
   cell   does(1) | Any
   code   (Any).does(1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
-- id     0021
+- id     0327
   from   inventory:Any.^methods
   cell   does(-1) | Any
   code   (Any).does(-1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
-- id     0022
+- id     0328
   from   inventory:Any.^methods
   cell   does("a") | Any
   code   (Any).does("a")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
-- id     0023
+- id     0329
   from   inventory:Any.^methods
   cell   does(Any) | Any
   code   (Any).does(Any)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
 
-- id     0024
+- id     0330
+  from   inventory:Any.^methods
+  cell   does(0) | Mu
+  code   (Mu).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0331
+  from   inventory:Any.^methods
+  cell   does(1) | Mu
+  code   (Mu).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0332
+  from   inventory:Any.^methods
+  cell   does(-1) | Mu
+  code   (Mu).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0333
+  from   inventory:Any.^methods
+  cell   does("a") | Mu
+  code   (Mu).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0334
+  from   inventory:Any.^methods
+  cell   does(Any) | Mu
+  code   (Mu).does(Any)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0335
+  from   inventory:Any.^methods
+  cell   does(0) | Int
+  code   (Int).does(0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0336
+  from   inventory:Any.^methods
+  cell   does(1) | Int
+  code   (Int).does(1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0337
+  from   inventory:Any.^methods
+  cell   does(-1) | Int
+  code   (Int).does(-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0338
+  from   inventory:Any.^methods
+  cell   does("a") | Int
+  code   (Int).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0339
+  from   inventory:Any.^methods
+  cell   does(Any) | Int
+  code   (Int).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0340
+  from   inventory:Any.^methods
+  cell   does(0) | Str
+  code   (Str).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0341
+  from   inventory:Any.^methods
+  cell   does(1) | Str
+  code   (Str).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0342
+  from   inventory:Any.^methods
+  cell   does(-1) | Str
+  code   (Str).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0343
+  from   inventory:Any.^methods
+  cell   does("a") | Str
+  code   (Str).does("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0344
+  from   inventory:Any.^methods
+  cell   does(Any) | Str
+  code   (Str).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0345
+  from   inventory:Any.^methods
+  cell   does(0) | 1
+  code   (1).does(0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0346
+  from   inventory:Any.^methods
+  cell   does(1) | 1
+  code   (1).does(1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0347
+  from   inventory:Any.^methods
+  cell   does(-1) | 1
+  code   (1).does(-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0348
+  from   inventory:Any.^methods
+  cell   does("a") | 1
+  code   (1).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0349
+  from   inventory:Any.^methods
+  cell   does(Any) | 1
+  code   (1).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0350
+  from   inventory:Any.^methods
+  cell   does(0) | 0
+  code   (0).does(0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0351
+  from   inventory:Any.^methods
+  cell   does(1) | 0
+  code   (0).does(1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0352
+  from   inventory:Any.^methods
+  cell   does(-1) | 0
+  code   (0).does(-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0353
+  from   inventory:Any.^methods
+  cell   does("a") | 0
+  code   (0).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0354
+  from   inventory:Any.^methods
+  cell   does(Any) | 0
+  code   (0).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0355
+  from   inventory:Any.^methods
+  cell   does(0) | -1
+  code   (-1).does(0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0356
+  from   inventory:Any.^methods
+  cell   does(1) | -1
+  code   (-1).does(1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0357
+  from   inventory:Any.^methods
+  cell   does(-1) | -1
+  code   (-1).does(-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0358
+  from   inventory:Any.^methods
+  cell   does("a") | -1
+  code   (-1).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0359
+  from   inventory:Any.^methods
+  cell   does(Any) | -1
+  code   (-1).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0360
+  from   inventory:Any.^methods
+  cell   does(0) | "a"
+  code   ("a").does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0361
+  from   inventory:Any.^methods
+  cell   does(1) | "a"
+  code   ("a").does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0362
+  from   inventory:Any.^methods
+  cell   does(-1) | "a"
+  code   ("a").does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0363
+  from   inventory:Any.^methods
+  cell   does("a") | "a"
+  code   ("a").does("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0364
+  from   inventory:Any.^methods
+  cell   does(Any) | "a"
+  code   ("a").does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0365
+  from   inventory:Any.^methods
+  cell   does(0) | ""
+  code   ("").does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0366
+  from   inventory:Any.^methods
+  cell   does(1) | ""
+  code   ("").does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0367
+  from   inventory:Any.^methods
+  cell   does(-1) | ""
+  code   ("").does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0368
+  from   inventory:Any.^methods
+  cell   does("a") | ""
+  code   ("").does("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0369
+  from   inventory:Any.^methods
+  cell   does(Any) | ""
+  code   ("").does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0370
+  from   inventory:Any.^methods
+  cell   does(0) | (1,2)
+  code   ((1,2)).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0371
+  from   inventory:Any.^methods
+  cell   does(1) | (1,2)
+  code   ((1,2)).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0372
+  from   inventory:Any.^methods
+  cell   does(-1) | (1,2)
+  code   ((1,2)).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0373
+  from   inventory:Any.^methods
+  cell   does("a") | (1,2)
+  code   ((1,2)).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0374
+  from   inventory:Any.^methods
+  cell   does(Any) | (1,2)
+  code   ((1,2)).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0375
+  from   inventory:Any.^methods
+  cell   does(0) | {a=>1}
+  code   ({a=>1}).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0376
+  from   inventory:Any.^methods
+  cell   does(1) | {a=>1}
+  code   ({a=>1}).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0377
+  from   inventory:Any.^methods
+  cell   does(-1) | {a=>1}
+  code   ({a=>1}).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0378
+  from   inventory:Any.^methods
+  cell   does("a") | {a=>1}
+  code   ({a=>1}).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0379
+  from   inventory:Any.^methods
+  cell   does(Any) | {a=>1}
+  code   ({a=>1}).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0380
+  from   inventory:Any.^methods
+  cell   does(0) | Nil
+  code   (Nil).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0381
+  from   inventory:Any.^methods
+  cell   does(1) | Nil
+  code   (Nil).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0382
+  from   inventory:Any.^methods
+  cell   does(-1) | Nil
+  code   (Nil).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0383
+  from   inventory:Any.^methods
+  cell   does("a") | Nil
+  code   (Nil).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0384
+  from   inventory:Any.^methods
+  cell   does(Any) | Nil
+  code   (Nil).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0385
+  from   inventory:Any.^methods
+  cell   does(0) | True
+  code   (True).does(0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0386
+  from   inventory:Any.^methods
+  cell   does(1) | True
+  code   (True).does(1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0387
+  from   inventory:Any.^methods
+  cell   does(-1) | True
+  code   (True).does(-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0388
+  from   inventory:Any.^methods
+  cell   does("a") | True
+  code   (True).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0389
+  from   inventory:Any.^methods
+  cell   does(Any) | True
+  code   (True).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0390
+  from   inventory:Any.^methods
+  cell   does(0) | False
+  code   (False).does(0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0391
+  from   inventory:Any.^methods
+  cell   does(1) | False
+  code   (False).does(1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0392
+  from   inventory:Any.^methods
+  cell   does(-1) | False
+  code   (False).does(-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0393
+  from   inventory:Any.^methods
+  cell   does("a") | False
+  code   (False).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0394
+  from   inventory:Any.^methods
+  cell   does(Any) | False
+  code   (False).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0395
+  from   inventory:Any.^methods
+  cell   does(0) | 1e0
+  code   (1e0).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0396
+  from   inventory:Any.^methods
+  cell   does(1) | 1e0
+  code   (1e0).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0397
+  from   inventory:Any.^methods
+  cell   does(-1) | 1e0
+  code   (1e0).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0398
+  from   inventory:Any.^methods
+  cell   does("a") | 1e0
+  code   (1e0).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0399
+  from   inventory:Any.^methods
+  cell   does(Any) | 1e0
+  code   (1e0).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0400
+  from   inventory:Any.^methods
+  cell   does(0) | 1/2
+  code   (1/2).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0401
+  from   inventory:Any.^methods
+  cell   does(1) | 1/2
+  code   (1/2).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0402
+  from   inventory:Any.^methods
+  cell   does(-1) | 1/2
+  code   (1/2).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0403
+  from   inventory:Any.^methods
+  cell   does("a") | 1/2
+  code   (1/2).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0404
+  from   inventory:Any.^methods
+  cell   does(Any) | 1/2
+  code   (1/2).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0405
+  from   inventory:Any.^methods
+  cell   does(0) | (1..3)
+  code   ((1..3)).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0406
+  from   inventory:Any.^methods
+  cell   does(1) | (1..3)
+  code   ((1..3)).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0407
+  from   inventory:Any.^methods
+  cell   does(-1) | (1..3)
+  code   ((1..3)).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0408
+  from   inventory:Any.^methods
+  cell   does("a") | (1..3)
+  code   ((1..3)).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0409
+  from   inventory:Any.^methods
+  cell   does(Any) | (1..3)
+  code   ((1..3)).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0410
+  from   inventory:Any.^methods
+  cell   does(0) | set(1)
+  code   (set(1)).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0411
+  from   inventory:Any.^methods
+  cell   does(1) | set(1)
+  code   (set(1)).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0412
+  from   inventory:Any.^methods
+  cell   does(-1) | set(1)
+  code   (set(1)).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0413
+  from   inventory:Any.^methods
+  cell   does("a") | set(1)
+  code   (set(1)).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0414
+  from   inventory:Any.^methods
+  cell   does(Any) | set(1)
+  code   (set(1)).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0415
   from   inventory:Any.^methods
   cell   is-generic | Any
   code   (Any).is-generic
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0025
+- id     0416
+  from   inventory:Any.^methods
+  cell   is-generic | Mu
+  code   (Mu).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0417
+  from   inventory:Any.^methods
+  cell   is-generic | Int
+  code   (Int).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0418
+  from   inventory:Any.^methods
+  cell   is-generic | Str
+  code   (Str).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0419
+  from   inventory:Any.^methods
+  cell   is-generic | 1
+  code   (1).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0420
+  from   inventory:Any.^methods
+  cell   is-generic | 0
+  code   (0).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0421
+  from   inventory:Any.^methods
+  cell   is-generic | -1
+  code   (-1).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0422
+  from   inventory:Any.^methods
+  cell   is-generic | "a"
+  code   ("a").is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0423
+  from   inventory:Any.^methods
+  cell   is-generic | ""
+  code   ("").is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0424
+  from   inventory:Any.^methods
+  cell   is-generic | (1,2)
+  code   ((1,2)).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0425
+  from   inventory:Any.^methods
+  cell   is-generic | {a=>1}
+  code   ({a=>1}).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0426
+  from   inventory:Any.^methods
+  cell   is-generic | Nil
+  code   (Nil).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
+
+- id     0427
+  from   inventory:Any.^methods
+  cell   is-generic | True
+  code   (True).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0428
+  from   inventory:Any.^methods
+  cell   is-generic | False
+  code   (False).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0429
+  from   inventory:Any.^methods
+  cell   is-generic | 1e0
+  code   (1e0).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0430
+  from   inventory:Any.^methods
+  cell   is-generic | 1/2
+  code   (1/2).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0431
+  from   inventory:Any.^methods
+  cell   is-generic | (1..3)
+  code   ((1..3)).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0432
+  from   inventory:Any.^methods
+  cell   is-generic | set(1)
+  code   (set(1)).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0433
   from   inventory:Any.^methods
   cell   item | Any
   code   (Any).item
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Any
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
 
-- id     0026
+- id     0434
+  from   inventory:Any.^methods
+  cell   item | Mu
+  code   (Mu).item
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0435
+  from   inventory:Any.^methods
+  cell   item | Int
+  code   (Int).item
+  is     Int
+  type   Int
+  oracle rakudo-2026.07 → Int
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Int
+
+- id     0436
+  from   inventory:Any.^methods
+  cell   item | Str
+  code   (Str).item
+  is     Str
+  type   Str
+  oracle rakudo-2026.07 → Str
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Str
+
+- id     0437
+  from   inventory:Any.^methods
+  cell   item | 1
+  code   (1).item
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0438
+  from   inventory:Any.^methods
+  cell   item | 0
+  code   (0).item
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0439
+  from   inventory:Any.^methods
+  cell   item | -1
+  code   (-1).item
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0440
+  from   inventory:Any.^methods
+  cell   item | "a"
+  code   ("a").item
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "a"
+
+- id     0441
+  from   inventory:Any.^methods
+  cell   item | ""
+  code   ("").item
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+
+- id     0442
+  from   inventory:Any.^methods
+  cell   item | (1,2)
+  code   ((1,2)).item
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2)
+
+- id     0443
+  from   inventory:Any.^methods
+  cell   item | {a=>1}
+  code   ({a=>1}).item
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:a(1)}
+
+- id     0444
+  from   inventory:Any.^methods
+  cell   item | Nil
+  code   (Nil).item
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
+
+- id     0445
+  from   inventory:Any.^methods
+  cell   item | True
+  code   (True).item
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0446
+  from   inventory:Any.^methods
+  cell   item | False
+  code   (False).item
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0447
+  from   inventory:Any.^methods
+  cell   item | 1e0
+  code   (1e0).item
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0448
+  from   inventory:Any.^methods
+  cell   item | 1/2
+  code   (1/2).item
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5
+
+- id     0449
+  from   inventory:Any.^methods
+  cell   item | (1..3)
+  code   ((1..3)).item
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1..3
+
+- id     0450
+  from   inventory:Any.^methods
+  cell   item | set(1)
+  code   (set(1)).item
+  is     Set.new(1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Set.new(1)
+
+- id     0451
   from   inventory:Any.^methods
   cell   join(0) | Any
   code   (Any).join(0)
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0027
+- id     0452
   from   inventory:Any.^methods
   cell   join(1) | Any
   code   (Any).join(1)
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0028
+- id     0453
   from   inventory:Any.^methods
   cell   join(-1) | Any
   code   (Any).join(-1)
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0029
+- id     0454
   from   inventory:Any.^methods
   cell   join("a") | Any
   code   (Any).join("a")
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0030
+- id     0455
   from   inventory:Any.^methods
   cell   join(Any) | Any
   code   (Any).join(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0031
+- id     0456
+  from   inventory:Any.^methods
+  cell   join(0) | Mu
+  code   (Mu).join(0)
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0457
+  from   inventory:Any.^methods
+  cell   join(1) | Mu
+  code   (Mu).join(1)
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0458
+  from   inventory:Any.^methods
+  cell   join(-1) | Mu
+  code   (Mu).join(-1)
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0459
+  from   inventory:Any.^methods
+  cell   join("a") | Mu
+  code   (Mu).join("a")
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0460
+  from   inventory:Any.^methods
+  cell   join(Any) | Mu
+  code   (Mu).join(Any)
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0461
+  from   inventory:Any.^methods
+  cell   join(0) | Int
+  code   (Int).join(0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0462
+  from   inventory:Any.^methods
+  cell   join(1) | Int
+  code   (Int).join(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0463
+  from   inventory:Any.^methods
+  cell   join(-1) | Int
+  code   (Int).join(-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0464
+  from   inventory:Any.^methods
+  cell   join("a") | Int
+  code   (Int).join("a")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0465
+  from   inventory:Any.^methods
+  cell   join(Any) | Int
+  code   (Int).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0466
+  from   inventory:Any.^methods
+  cell   join(0) | Str
+  code   (Str).join(0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0467
+  from   inventory:Any.^methods
+  cell   join(1) | Str
+  code   (Str).join(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0468
+  from   inventory:Any.^methods
+  cell   join(-1) | Str
+  code   (Str).join(-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0469
+  from   inventory:Any.^methods
+  cell   join("a") | Str
+  code   (Str).join("a")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0470
+  from   inventory:Any.^methods
+  cell   join(Any) | Str
+  code   (Str).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0471
+  from   inventory:Any.^methods
+  cell   join(0) | 1
+  code   (1).join(0)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1"
+
+- id     0472
+  from   inventory:Any.^methods
+  cell   join(1) | 1
+  code   (1).join(1)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1"
+
+- id     0473
+  from   inventory:Any.^methods
+  cell   join(-1) | 1
+  code   (1).join(-1)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1"
+
+- id     0474
+  from   inventory:Any.^methods
+  cell   join("a") | 1
+  code   (1).join("a")
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1"
+
+- id     0475
+  from   inventory:Any.^methods
+  cell   join(Any) | 1
+  code   (1).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1"
+
+- id     0476
+  from   inventory:Any.^methods
+  cell   join(0) | 0
+  code   (0).join(0)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "0"
+
+- id     0477
+  from   inventory:Any.^methods
+  cell   join(1) | 0
+  code   (0).join(1)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "0"
+
+- id     0478
+  from   inventory:Any.^methods
+  cell   join(-1) | 0
+  code   (0).join(-1)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "0"
+
+- id     0479
+  from   inventory:Any.^methods
+  cell   join("a") | 0
+  code   (0).join("a")
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "0"
+
+- id     0480
+  from   inventory:Any.^methods
+  cell   join(Any) | 0
+  code   (0).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "0"
+
+- id     0481
+  from   inventory:Any.^methods
+  cell   join(0) | -1
+  code   (-1).join(0)
+  is     "-1"
+  type   Str
+  oracle rakudo-2026.07 → "-1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "-1"
+
+- id     0482
+  from   inventory:Any.^methods
+  cell   join(1) | -1
+  code   (-1).join(1)
+  is     "-1"
+  type   Str
+  oracle rakudo-2026.07 → "-1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "-1"
+
+- id     0483
+  from   inventory:Any.^methods
+  cell   join(-1) | -1
+  code   (-1).join(-1)
+  is     "-1"
+  type   Str
+  oracle rakudo-2026.07 → "-1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "-1"
+
+- id     0484
+  from   inventory:Any.^methods
+  cell   join("a") | -1
+  code   (-1).join("a")
+  is     "-1"
+  type   Str
+  oracle rakudo-2026.07 → "-1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "-1"
+
+- id     0485
+  from   inventory:Any.^methods
+  cell   join(Any) | -1
+  code   (-1).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "-1"
+
+- id     0486
+  from   inventory:Any.^methods
+  cell   join(0) | "a"
+  code   ("a").join(0)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "a"
+
+- id     0487
+  from   inventory:Any.^methods
+  cell   join(1) | "a"
+  code   ("a").join(1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "a"
+
+- id     0488
+  from   inventory:Any.^methods
+  cell   join(-1) | "a"
+  code   ("a").join(-1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "a"
+
+- id     0489
+  from   inventory:Any.^methods
+  cell   join("a") | "a"
+  code   ("a").join("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "a"
+
+- id     0490
+  from   inventory:Any.^methods
+  cell   join(Any) | "a"
+  code   ("a").join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "a"
+
+- id     0491
+  from   inventory:Any.^methods
+  cell   join(0) | ""
+  code   ("").join(0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+
+- id     0492
+  from   inventory:Any.^methods
+  cell   join(1) | ""
+  code   ("").join(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+
+- id     0493
+  from   inventory:Any.^methods
+  cell   join(-1) | ""
+  code   ("").join(-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+
+- id     0494
+  from   inventory:Any.^methods
+  cell   join("a") | ""
+  code   ("").join("a")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+
+- id     0495
+  from   inventory:Any.^methods
+  cell   join(Any) | ""
+  code   ("").join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+
+- id     0496
+  from   inventory:Any.^methods
+  cell   join(0) | (1,2)
+  code   ((1,2)).join(0)
+  is     "102"
+  type   Str
+  oracle rakudo-2026.07 → "102"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "102"
+
+- id     0497
+  from   inventory:Any.^methods
+  cell   join(1) | (1,2)
+  code   ((1,2)).join(1)
+  is     "112"
+  type   Str
+  oracle rakudo-2026.07 → "112"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "112"
+
+- id     0498
+  from   inventory:Any.^methods
+  cell   join(-1) | (1,2)
+  code   ((1,2)).join(-1)
+  is     "1-12"
+  type   Str
+  oracle rakudo-2026.07 → "1-12"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1-12"
+
+- id     0499
+  from   inventory:Any.^methods
+  cell   join("a") | (1,2)
+  code   ((1,2)).join("a")
+  is     "1a2"
+  type   Str
+  oracle rakudo-2026.07 → "1a2"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1a2"
+
+- id     0500
+  from   inventory:Any.^methods
+  cell   join(Any) | (1,2)
+  code   ((1,2)).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0501
+  from   inventory:Any.^methods
+  cell   join(0) | {a=>1}
+  code   ({a=>1}).join(0)
+  is     "a\t1"
+  type   Str
+  oracle rakudo-2026.07 → "a\t1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "a\t1"
+
+- id     0502
+  from   inventory:Any.^methods
+  cell   join(1) | {a=>1}
+  code   ({a=>1}).join(1)
+  is     "a\t1"
+  type   Str
+  oracle rakudo-2026.07 → "a\t1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "a\t1"
+
+- id     0503
+  from   inventory:Any.^methods
+  cell   join(-1) | {a=>1}
+  code   ({a=>1}).join(-1)
+  is     "a\t1"
+  type   Str
+  oracle rakudo-2026.07 → "a\t1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "a\t1"
+
+- id     0504
+  from   inventory:Any.^methods
+  cell   join("a") | {a=>1}
+  code   ({a=>1}).join("a")
+  is     "a\t1"
+  type   Str
+  oracle rakudo-2026.07 → "a\t1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "a\t1"
+
+- id     0505
+  from   inventory:Any.^methods
+  cell   join(Any) | {a=>1}
+  code   ({a=>1}).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0506
+  from   inventory:Any.^methods
+  cell   join(0) | Nil
+  code   (Nil).join(0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+
+- id     0507
+  from   inventory:Any.^methods
+  cell   join(1) | Nil
+  code   (Nil).join(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+
+- id     0508
+  from   inventory:Any.^methods
+  cell   join(-1) | Nil
+  code   (Nil).join(-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+
+- id     0509
+  from   inventory:Any.^methods
+  cell   join("a") | Nil
+  code   (Nil).join("a")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+
+- id     0510
+  from   inventory:Any.^methods
+  cell   join(Any) | Nil
+  code   (Nil).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0511
+  from   inventory:Any.^methods
+  cell   join(0) | True
+  code   (True).join(0)
+  is     "True"
+  type   Str
+  oracle rakudo-2026.07 → "True"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "True"
+
+- id     0512
+  from   inventory:Any.^methods
+  cell   join(1) | True
+  code   (True).join(1)
+  is     "True"
+  type   Str
+  oracle rakudo-2026.07 → "True"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "True"
+
+- id     0513
+  from   inventory:Any.^methods
+  cell   join(-1) | True
+  code   (True).join(-1)
+  is     "True"
+  type   Str
+  oracle rakudo-2026.07 → "True"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "True"
+
+- id     0514
+  from   inventory:Any.^methods
+  cell   join("a") | True
+  code   (True).join("a")
+  is     "True"
+  type   Str
+  oracle rakudo-2026.07 → "True"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "True"
+
+- id     0515
+  from   inventory:Any.^methods
+  cell   join(Any) | True
+  code   (True).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "True"
+
+- id     0516
+  from   inventory:Any.^methods
+  cell   join(0) | False
+  code   (False).join(0)
+  is     "False"
+  type   Str
+  oracle rakudo-2026.07 → "False"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "False"
+
+- id     0517
+  from   inventory:Any.^methods
+  cell   join(1) | False
+  code   (False).join(1)
+  is     "False"
+  type   Str
+  oracle rakudo-2026.07 → "False"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "False"
+
+- id     0518
+  from   inventory:Any.^methods
+  cell   join(-1) | False
+  code   (False).join(-1)
+  is     "False"
+  type   Str
+  oracle rakudo-2026.07 → "False"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "False"
+
+- id     0519
+  from   inventory:Any.^methods
+  cell   join("a") | False
+  code   (False).join("a")
+  is     "False"
+  type   Str
+  oracle rakudo-2026.07 → "False"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "False"
+
+- id     0520
+  from   inventory:Any.^methods
+  cell   join(Any) | False
+  code   (False).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "False"
+
+- id     0521
+  from   inventory:Any.^methods
+  cell   join(0) | 1e0
+  code   (1e0).join(0)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1"
+
+- id     0522
+  from   inventory:Any.^methods
+  cell   join(1) | 1e0
+  code   (1e0).join(1)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1"
+
+- id     0523
+  from   inventory:Any.^methods
+  cell   join(-1) | 1e0
+  code   (1e0).join(-1)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1"
+
+- id     0524
+  from   inventory:Any.^methods
+  cell   join("a") | 1e0
+  code   (1e0).join("a")
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1"
+
+- id     0525
+  from   inventory:Any.^methods
+  cell   join(Any) | 1e0
+  code   (1e0).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1"
+
+- id     0526
+  from   inventory:Any.^methods
+  cell   join(0) | 1/2
+  code   (1/2).join(0)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "0.5"
+
+- id     0527
+  from   inventory:Any.^methods
+  cell   join(1) | 1/2
+  code   (1/2).join(1)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "0.5"
+
+- id     0528
+  from   inventory:Any.^methods
+  cell   join(-1) | 1/2
+  code   (1/2).join(-1)
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "0.5"
+
+- id     0529
+  from   inventory:Any.^methods
+  cell   join("a") | 1/2
+  code   (1/2).join("a")
+  is     "0.5"
+  type   Str
+  oracle rakudo-2026.07 → "0.5"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "0.5"
+
+- id     0530
+  from   inventory:Any.^methods
+  cell   join(Any) | 1/2
+  code   (1/2).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "0.5"
+
+- id     0531
+  from   inventory:Any.^methods
+  cell   join(0) | (1..3)
+  code   ((1..3)).join(0)
+  is     "10203"
+  type   Str
+  oracle rakudo-2026.07 → "10203"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "10203"
+
+- id     0532
+  from   inventory:Any.^methods
+  cell   join(1) | (1..3)
+  code   ((1..3)).join(1)
+  is     "11213"
+  type   Str
+  oracle rakudo-2026.07 → "11213"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "11213"
+
+- id     0533
+  from   inventory:Any.^methods
+  cell   join(-1) | (1..3)
+  code   ((1..3)).join(-1)
+  is     "1-12-13"
+  type   Str
+  oracle rakudo-2026.07 → "1-12-13"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1-12-13"
+
+- id     0534
+  from   inventory:Any.^methods
+  cell   join("a") | (1..3)
+  code   ((1..3)).join("a")
+  is     "1a2a3"
+  type   Str
+  oracle rakudo-2026.07 → "1a2a3"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1a2a3"
+
+- id     0535
+  from   inventory:Any.^methods
+  cell   join(Any) | (1..3)
+  code   ((1..3)).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0536
+  from   inventory:Any.^methods
+  cell   join(0) | set(1)
+  code   (set(1)).join(0)
+  is     "1\tTrue"
+  type   Str
+  oracle rakudo-2026.07 → "1\tTrue"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1\tTrue"
+
+- id     0537
+  from   inventory:Any.^methods
+  cell   join(1) | set(1)
+  code   (set(1)).join(1)
+  is     "1\tTrue"
+  type   Str
+  oracle rakudo-2026.07 → "1\tTrue"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1\tTrue"
+
+- id     0538
+  from   inventory:Any.^methods
+  cell   join(-1) | set(1)
+  code   (set(1)).join(-1)
+  is     "1\tTrue"
+  type   Str
+  oracle rakudo-2026.07 → "1\tTrue"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1\tTrue"
+
+- id     0539
+  from   inventory:Any.^methods
+  cell   join("a") | set(1)
+  code   (set(1)).join("a")
+  is     "1\tTrue"
+  type   Str
+  oracle rakudo-2026.07 → "1\tTrue"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1\tTrue"
+
+- id     0540
+  from   inventory:Any.^methods
+  cell   join(Any) | set(1)
+  code   (set(1)).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0541
   from   inventory:Any.^methods
   cell   lazy-if(0) | Any
   code   (Any).lazy-if(0)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0032
+- id     0542
   from   inventory:Any.^methods
   cell   lazy-if(1) | Any
   code   (Any).lazy-if(1)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0033
+- id     0543
   from   inventory:Any.^methods
   cell   lazy-if(-1) | Any
   code   (Any).lazy-if(-1)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0034
+- id     0544
   from   inventory:Any.^methods
   cell   lazy-if("a") | Any
   code   (Any).lazy-if("a")
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0035
+- id     0545
   from   inventory:Any.^methods
   cell   lazy-if(Any) | Any
   code   (Any).lazy-if(Any)
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0036
+- id     0546
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | Mu
+  code   (Mu).lazy-if(0)
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0547
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | Mu
+  code   (Mu).lazy-if(1)
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0548
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | Mu
+  code   (Mu).lazy-if(-1)
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0549
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | Mu
+  code   (Mu).lazy-if("a")
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0550
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | Mu
+  code   (Mu).lazy-if(Any)
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0551
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | Int
+  code   (Int).lazy-if(0)
+  is     Int
+  type   Int
+  oracle rakudo-2026.07 → Int
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0552
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | Int
+  code   (Int).lazy-if(1)
+  is     Int
+  type   Int
+  oracle rakudo-2026.07 → Int
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0553
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | Int
+  code   (Int).lazy-if(-1)
+  is     Int
+  type   Int
+  oracle rakudo-2026.07 → Int
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0554
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | Int
+  code   (Int).lazy-if("a")
+  is     Int
+  type   Int
+  oracle rakudo-2026.07 → Int
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0555
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | Int
+  code   (Int).lazy-if(Any)
+  is     Int
+  type   Int
+  oracle rakudo-2026.07 → Int
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0556
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | Str
+  code   (Str).lazy-if(0)
+  is     Str
+  type   Str
+  oracle rakudo-2026.07 → Str
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0557
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | Str
+  code   (Str).lazy-if(1)
+  is     Str
+  type   Str
+  oracle rakudo-2026.07 → Str
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0558
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | Str
+  code   (Str).lazy-if(-1)
+  is     Str
+  type   Str
+  oracle rakudo-2026.07 → Str
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0559
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | Str
+  code   (Str).lazy-if("a")
+  is     Str
+  type   Str
+  oracle rakudo-2026.07 → Str
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0560
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | Str
+  code   (Str).lazy-if(Any)
+  is     Str
+  type   Str
+  oracle rakudo-2026.07 → Str
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0561
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | 1
+  code   (1).lazy-if(0)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0562
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | 1
+  code   (1).lazy-if(1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0563
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | 1
+  code   (1).lazy-if(-1)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0564
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | 1
+  code   (1).lazy-if("a")
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0565
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | 1
+  code   (1).lazy-if(Any)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0566
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | 0
+  code   (0).lazy-if(0)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0567
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | 0
+  code   (0).lazy-if(1)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0568
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | 0
+  code   (0).lazy-if(-1)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0569
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | 0
+  code   (0).lazy-if("a")
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0570
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | 0
+  code   (0).lazy-if(Any)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0571
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | -1
+  code   (-1).lazy-if(0)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0572
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | -1
+  code   (-1).lazy-if(1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0573
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | -1
+  code   (-1).lazy-if(-1)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0574
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | -1
+  code   (-1).lazy-if("a")
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0575
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | -1
+  code   (-1).lazy-if(Any)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0576
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | "a"
+  code   ("a").lazy-if(0)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0577
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | "a"
+  code   ("a").lazy-if(1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0578
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | "a"
+  code   ("a").lazy-if(-1)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0579
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | "a"
+  code   ("a").lazy-if("a")
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0580
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | "a"
+  code   ("a").lazy-if(Any)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0581
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | ""
+  code   ("").lazy-if(0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0582
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | ""
+  code   ("").lazy-if(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0583
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | ""
+  code   ("").lazy-if(-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0584
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | ""
+  code   ("").lazy-if("a")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0585
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | ""
+  code   ("").lazy-if(Any)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0586
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | (1,2)
+  code   ((1,2)).lazy-if(0)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0587
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | (1,2)
+  code   ((1,2)).lazy-if(1)
+  is     $((1, 2).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0588
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | (1,2)
+  code   ((1,2)).lazy-if(-1)
+  is     $((1, 2).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0589
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | (1,2)
+  code   ((1,2)).lazy-if("a")
+  is     $((1, 2).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0590
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | (1,2)
+  code   ((1,2)).lazy-if(Any)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0591
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | {a=>1}
+  code   ({a=>1}).lazy-if(0)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0592
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | {a=>1}
+  code   ({a=>1}).lazy-if(1)
+  is     $((:a(1)).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((:a(1)).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0593
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | {a=>1}
+  code   ({a=>1}).lazy-if(-1)
+  is     $((:a(1)).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((:a(1)).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0594
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | {a=>1}
+  code   ({a=>1}).lazy-if("a")
+  is     $((:a(1)).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((:a(1)).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0595
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | {a=>1}
+  code   ({a=>1}).lazy-if(Any)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0596
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | Nil
+  code   (Nil).lazy-if(0)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
+
+- id     0597
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | Nil
+  code   (Nil).lazy-if(1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
+
+- id     0598
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | Nil
+  code   (Nil).lazy-if(-1)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
+
+- id     0599
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | Nil
+  code   (Nil).lazy-if("a")
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
+
+- id     0600
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | Nil
+  code   (Nil).lazy-if(Any)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
+
+- id     0601
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | True
+  code   (True).lazy-if(0)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0602
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | True
+  code   (True).lazy-if(1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0603
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | True
+  code   (True).lazy-if(-1)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0604
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | True
+  code   (True).lazy-if("a")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0605
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | True
+  code   (True).lazy-if(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0606
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | False
+  code   (False).lazy-if(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0607
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | False
+  code   (False).lazy-if(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0608
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | False
+  code   (False).lazy-if(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0609
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | False
+  code   (False).lazy-if("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0610
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | False
+  code   (False).lazy-if(Any)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0611
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | 1e0
+  code   (1e0).lazy-if(0)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0612
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | 1e0
+  code   (1e0).lazy-if(1)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0613
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | 1e0
+  code   (1e0).lazy-if(-1)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0614
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | 1e0
+  code   (1e0).lazy-if("a")
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0615
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | 1e0
+  code   (1e0).lazy-if(Any)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0616
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | 1/2
+  code   (1/2).lazy-if(0)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0617
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | 1/2
+  code   (1/2).lazy-if(1)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0618
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | 1/2
+  code   (1/2).lazy-if(-1)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0619
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | 1/2
+  code   (1/2).lazy-if("a")
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0620
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | 1/2
+  code   (1/2).lazy-if(Any)
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0621
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | (1..3)
+  code   ((1..3)).lazy-if(0)
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0622
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | (1..3)
+  code   ((1..3)).lazy-if(1)
+  is     $((1, 2, 3).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2, 3).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0623
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | (1..3)
+  code   ((1..3)).lazy-if(-1)
+  is     $((1, 2, 3).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2, 3).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0624
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | (1..3)
+  code   ((1..3)).lazy-if("a")
+  is     $((1, 2, 3).lazy.Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1, 2, 3).lazy.Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0625
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | (1..3)
+  code   ((1..3)).lazy-if(Any)
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0626
+  from   inventory:Any.^methods
+  cell   lazy-if(0) | set(1)
+  code   (set(1)).lazy-if(0)
+  is     Set.new(1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0627
+  from   inventory:Any.^methods
+  cell   lazy-if(1) | set(1)
+  code   (set(1)).lazy-if(1)
+  is     Set.new(1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0628
+  from   inventory:Any.^methods
+  cell   lazy-if(-1) | set(1)
+  code   (set(1)).lazy-if(-1)
+  is     Set.new(1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0629
+  from   inventory:Any.^methods
+  cell   lazy-if("a") | set(1)
+  code   (set(1)).lazy-if("a")
+  is     Set.new(1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0630
+  from   inventory:Any.^methods
+  cell   lazy-if(Any) | set(1)
+  code   (set(1)).lazy-if(Any)
+  is     Set.new(1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0631
   from   inventory:Any.^methods
   cell   nl-out | Any
   code   (Any).nl-out
   is     "\n"
   type   Str
   oracle rakudo-2026.07 → "\n"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0037
+- id     0632
+  from   inventory:Any.^methods
+  cell   nl-out | Mu
+  code   (Mu).nl-out
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\n"
+
+- id     0633
+  from   inventory:Any.^methods
+  cell   nl-out | Int
+  code   (Int).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\n"
+
+- id     0634
+  from   inventory:Any.^methods
+  cell   nl-out | Str
+  code   (Str).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\n"
+
+- id     0635
+  from   inventory:Any.^methods
+  cell   nl-out | 1
+  code   (1).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0636
+  from   inventory:Any.^methods
+  cell   nl-out | 0
+  code   (0).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0637
+  from   inventory:Any.^methods
+  cell   nl-out | -1
+  code   (-1).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0638
+  from   inventory:Any.^methods
+  cell   nl-out | "a"
+  code   ("a").nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0639
+  from   inventory:Any.^methods
+  cell   nl-out | ""
+  code   ("").nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0640
+  from   inventory:Any.^methods
+  cell   nl-out | (1,2)
+  code   ((1,2)).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\n"
+
+- id     0641
+  from   inventory:Any.^methods
+  cell   nl-out | {a=>1}
+  code   ({a=>1}).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0642
+  from   inventory:Any.^methods
+  cell   nl-out | Nil
+  code   (Nil).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
+
+- id     0643
+  from   inventory:Any.^methods
+  cell   nl-out | True
+  code   (True).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0644
+  from   inventory:Any.^methods
+  cell   nl-out | False
+  code   (False).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0645
+  from   inventory:Any.^methods
+  cell   nl-out | 1e0
+  code   (1e0).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0646
+  from   inventory:Any.^methods
+  cell   nl-out | 1/2
+  code   (1/2).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0647
+  from   inventory:Any.^methods
+  cell   nl-out | (1..3)
+  code   ((1..3)).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0648
+  from   inventory:Any.^methods
+  cell   nl-out | set(1)
+  code   (set(1)).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0649
   from   inventory:Any.^methods
   cell   none | Any
   code   (Any).none
   is     none(Any)
   type   Junction
   oracle rakudo-2026.07 → none(Any)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → none(Any)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(Any)
 
-- id     0038
+- id     0650
+  from   inventory:Any.^methods
+  cell   none | Mu
+  code   (Mu).none
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(Mu)
+
+- id     0651
+  from   inventory:Any.^methods
+  cell   none | Int
+  code   (Int).none
+  is     none(Int)
+  type   Junction
+  oracle rakudo-2026.07 → none(Int)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(Int)
+
+- id     0652
+  from   inventory:Any.^methods
+  cell   none | Str
+  code   (Str).none
+  is     none(Str)
+  type   Junction
+  oracle rakudo-2026.07 → none(Str)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(Str)
+
+- id     0653
+  from   inventory:Any.^methods
+  cell   none | 1
+  code   (1).none
+  is     none(1)
+  type   Junction
+  oracle rakudo-2026.07 → none(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(1)
+
+- id     0654
+  from   inventory:Any.^methods
+  cell   none | 0
+  code   (0).none
+  is     none(0)
+  type   Junction
+  oracle rakudo-2026.07 → none(0)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(0)
+
+- id     0655
+  from   inventory:Any.^methods
+  cell   none | -1
+  code   (-1).none
+  is     none(-1)
+  type   Junction
+  oracle rakudo-2026.07 → none(-1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(-1)
+
+- id     0656
+  from   inventory:Any.^methods
+  cell   none | "a"
+  code   ("a").none
+  is     none("a")
+  type   Junction
+  oracle rakudo-2026.07 → none("a")
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none("a")
+
+- id     0657
+  from   inventory:Any.^methods
+  cell   none | ""
+  code   ("").none
+  is     none("")
+  type   Junction
+  oracle rakudo-2026.07 → none("")
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none("")
+
+- id     0658
+  from   inventory:Any.^methods
+  cell   none | (1,2)
+  code   ((1,2)).none
+  is     none(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → none(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(1, 2)
+
+- id     0659
+  from   inventory:Any.^methods
+  cell   none | {a=>1}
+  code   ({a=>1}).none
+  is     none(:a(1))
+  type   Junction
+  oracle rakudo-2026.07 → none(:a(1))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(:a(1))
+
+- id     0660
+  from   inventory:Any.^methods
+  cell   none | Nil
+  code   (Nil).none
+  is     none(Nil)
+  type   Junction
+  oracle rakudo-2026.07 → none(Nil)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(Nil)
+
+- id     0661
+  from   inventory:Any.^methods
+  cell   none | True
+  code   (True).none
+  is     none(Bool::True)
+  type   Junction
+  oracle rakudo-2026.07 → none(Bool::True)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(Bool::True)
+
+- id     0662
+  from   inventory:Any.^methods
+  cell   none | False
+  code   (False).none
+  is     none(Bool::False)
+  type   Junction
+  oracle rakudo-2026.07 → none(Bool::False)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(Bool::False)
+
+- id     0663
+  from   inventory:Any.^methods
+  cell   none | 1e0
+  code   (1e0).none
+  is     none(1e0)
+  type   Junction
+  oracle rakudo-2026.07 → none(1e0)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(1e0)
+
+- id     0664
+  from   inventory:Any.^methods
+  cell   none | 1/2
+  code   (1/2).none
+  is     none(0.5)
+  type   Junction
+  oracle rakudo-2026.07 → none(0.5)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(0.5)
+
+- id     0665
+  from   inventory:Any.^methods
+  cell   none | (1..3)
+  code   ((1..3)).none
+  is     none(1, 2, 3)
+  type   Junction
+  oracle rakudo-2026.07 → none(1, 2, 3)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(1, 2, 3)
+
+- id     0666
+  from   inventory:Any.^methods
+  cell   none | set(1)
+  code   (set(1)).none
+  is     none(1 => Bool::True)
+  type   Junction
+  oracle rakudo-2026.07 → none(1 => Bool::True)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(1 => Bool::True)
+
+- id     0667
   from   inventory:Any.^methods
   cell   not | Any
   code   (Any).not
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
 
-- id     0039
+- id     0668
+  from   inventory:Any.^methods
+  cell   not | Mu
+  code   (Mu).not
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0669
+  from   inventory:Any.^methods
+  cell   not | Int
+  code   (Int).not
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0670
+  from   inventory:Any.^methods
+  cell   not | Str
+  code   (Str).not
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0671
+  from   inventory:Any.^methods
+  cell   not | 1
+  code   (1).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0672
+  from   inventory:Any.^methods
+  cell   not | 0
+  code   (0).not
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0673
+  from   inventory:Any.^methods
+  cell   not | -1
+  code   (-1).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0674
+  from   inventory:Any.^methods
+  cell   not | "a"
+  code   ("a").not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0675
+  from   inventory:Any.^methods
+  cell   not | ""
+  code   ("").not
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0676
+  from   inventory:Any.^methods
+  cell   not | (1,2)
+  code   ((1,2)).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0677
+  from   inventory:Any.^methods
+  cell   not | {a=>1}
+  code   ({a=>1}).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0678
+  from   inventory:Any.^methods
+  cell   not | Nil
+  code   (Nil).not
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0679
+  from   inventory:Any.^methods
+  cell   not | True
+  code   (True).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0680
+  from   inventory:Any.^methods
+  cell   not | False
+  code   (False).not
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0681
+  from   inventory:Any.^methods
+  cell   not | 1e0
+  code   (1e0).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0682
+  from   inventory:Any.^methods
+  cell   not | 1/2
+  code   (1/2).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0683
+  from   inventory:Any.^methods
+  cell   not | (1..3)
+  code   ((1..3)).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0684
+  from   inventory:Any.^methods
+  cell   not | set(1)
+  code   (set(1)).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0685
   from   inventory:Any.^methods
   cell   one | Any
   code   (Any).one
   is     one(Any)
   type   Junction
   oracle rakudo-2026.07 → one(Any)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → one(Any)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(Any)
 
-- id     0040
+- id     0686
+  from   inventory:Any.^methods
+  cell   one | Mu
+  code   (Mu).one
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(Mu)
+
+- id     0687
+  from   inventory:Any.^methods
+  cell   one | Int
+  code   (Int).one
+  is     one(Int)
+  type   Junction
+  oracle rakudo-2026.07 → one(Int)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(Int)
+
+- id     0688
+  from   inventory:Any.^methods
+  cell   one | Str
+  code   (Str).one
+  is     one(Str)
+  type   Junction
+  oracle rakudo-2026.07 → one(Str)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(Str)
+
+- id     0689
+  from   inventory:Any.^methods
+  cell   one | 1
+  code   (1).one
+  is     one(1)
+  type   Junction
+  oracle rakudo-2026.07 → one(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(1)
+
+- id     0690
+  from   inventory:Any.^methods
+  cell   one | 0
+  code   (0).one
+  is     one(0)
+  type   Junction
+  oracle rakudo-2026.07 → one(0)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(0)
+
+- id     0691
+  from   inventory:Any.^methods
+  cell   one | -1
+  code   (-1).one
+  is     one(-1)
+  type   Junction
+  oracle rakudo-2026.07 → one(-1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(-1)
+
+- id     0692
+  from   inventory:Any.^methods
+  cell   one | "a"
+  code   ("a").one
+  is     one("a")
+  type   Junction
+  oracle rakudo-2026.07 → one("a")
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one("a")
+
+- id     0693
+  from   inventory:Any.^methods
+  cell   one | ""
+  code   ("").one
+  is     one("")
+  type   Junction
+  oracle rakudo-2026.07 → one("")
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one("")
+
+- id     0694
+  from   inventory:Any.^methods
+  cell   one | (1,2)
+  code   ((1,2)).one
+  is     one(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → one(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(1, 2)
+
+- id     0695
+  from   inventory:Any.^methods
+  cell   one | {a=>1}
+  code   ({a=>1}).one
+  is     one(:a(1))
+  type   Junction
+  oracle rakudo-2026.07 → one(:a(1))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(:a(1))
+
+- id     0696
+  from   inventory:Any.^methods
+  cell   one | Nil
+  code   (Nil).one
+  is     one(Nil)
+  type   Junction
+  oracle rakudo-2026.07 → one(Nil)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(Nil)
+
+- id     0697
+  from   inventory:Any.^methods
+  cell   one | True
+  code   (True).one
+  is     one(Bool::True)
+  type   Junction
+  oracle rakudo-2026.07 → one(Bool::True)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(Bool::True)
+
+- id     0698
+  from   inventory:Any.^methods
+  cell   one | False
+  code   (False).one
+  is     one(Bool::False)
+  type   Junction
+  oracle rakudo-2026.07 → one(Bool::False)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(Bool::False)
+
+- id     0699
+  from   inventory:Any.^methods
+  cell   one | 1e0
+  code   (1e0).one
+  is     one(1e0)
+  type   Junction
+  oracle rakudo-2026.07 → one(1e0)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(1e0)
+
+- id     0700
+  from   inventory:Any.^methods
+  cell   one | 1/2
+  code   (1/2).one
+  is     one(0.5)
+  type   Junction
+  oracle rakudo-2026.07 → one(0.5)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(0.5)
+
+- id     0701
+  from   inventory:Any.^methods
+  cell   one | (1..3)
+  code   ((1..3)).one
+  is     one(1, 2, 3)
+  type   Junction
+  oracle rakudo-2026.07 → one(1, 2, 3)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(1, 2, 3)
+
+- id     0702
+  from   inventory:Any.^methods
+  cell   one | set(1)
+  code   (set(1)).one
+  is     one(1 => Bool::True)
+  type   Junction
+  oracle rakudo-2026.07 → one(1 => Bool::True)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(1 => Bool::True)
+
+- id     0703
   from   inventory:Any.^methods
   cell   reverse | Any
   code   (Any).reverse
   is     $((Any,).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((Any,).Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((Any,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((Any,).Seq)
 
-- id     0041
+- id     0704
+  from   inventory:Any.^methods
+  cell   reverse | Mu
+  code   (Mu).reverse
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((Mu,).Seq)
+
+- id     0705
+  from   inventory:Any.^methods
+  cell   reverse | Int
+  code   (Int).reverse
+  is     $((Int,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Int,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((Int,).Seq)
+
+- id     0706
+  from   inventory:Any.^methods
+  cell   reverse | Str
+  code   (Str).reverse
+  is     $((Str,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Str,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((Str,).Seq)
+
+- id     0707
+  from   inventory:Any.^methods
+  cell   reverse | 1
+  code   (1).reverse
+  is     $((1,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1,).Seq)
+
+- id     0708
+  from   inventory:Any.^methods
+  cell   reverse | 0
+  code   (0).reverse
+  is     $((0,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((0,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((0,).Seq)
+
+- id     0709
+  from   inventory:Any.^methods
+  cell   reverse | -1
+  code   (-1).reverse
+  is     $((-1,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((-1,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((-1,).Seq)
+
+- id     0710
+  from   inventory:Any.^methods
+  cell   reverse | "a"
+  code   ("a").reverse
+  is     $(("a",).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("a",).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(("a",).Seq)
+
+- id     0711
+  from   inventory:Any.^methods
+  cell   reverse | ""
+  code   ("").reverse
+  is     $(("",).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(("",).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(("",).Seq)
+
+- id     0712
+  from   inventory:Any.^methods
+  cell   reverse | (1,2)
+  code   ((1,2)).reverse
+  is     $((2, 1).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((2, 1).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((2, 1).Seq)
+
+- id     0713
+  from   inventory:Any.^methods
+  cell   reverse | {a=>1}
+  code   ({a=>1}).reverse
+  is     $((:a(1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((:a(1),).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((:a(1),).Seq)
+
+- id     0714
+  from   inventory:Any.^methods
+  cell   reverse | Nil
+  code   (Nil).reverse
+  is     $((Nil,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Nil,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(().Seq)
+
+- id     0715
+  from   inventory:Any.^methods
+  cell   reverse | True
+  code   (True).reverse
+  is     $((Bool::True,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Bool::True,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((Bool::True,).Seq)
+
+- id     0716
+  from   inventory:Any.^methods
+  cell   reverse | False
+  code   (False).reverse
+  is     $((Bool::False,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Bool::False,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((Bool::False,).Seq)
+
+- id     0717
+  from   inventory:Any.^methods
+  cell   reverse | 1e0
+  code   (1e0).reverse
+  is     $((1e0,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1e0,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1e0,).Seq)
+
+- id     0718
+  from   inventory:Any.^methods
+  cell   reverse | 1/2
+  code   (1/2).reverse
+  is     $((0.5,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((0.5,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((0.5,).Seq)
+
+- id     0719
+  from   inventory:Any.^methods
+  cell   reverse | (1..3)
+  code   ((1..3)).reverse
+  is     $((3, 2, 1).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((3, 2, 1).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((3, 2, 1).Seq)
+
+- id     0720
+  from   inventory:Any.^methods
+  cell   reverse | set(1)
+  code   (set(1)).reverse
+  is     $((1 => Bool::True,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((1 => Bool::True,).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((1 => Bool::True,).Seq)
+
+- id     0721
   from   inventory:Any.^methods
   cell   self | Any
   code   (Any).self
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Any
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
 
-- id     0042
+- id     0722
+  from   inventory:Any.^methods
+  cell   self | Mu
+  code   (Mu).self
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0723
+  from   inventory:Any.^methods
+  cell   self | Int
+  code   (Int).self
+  is     Int
+  type   Int
+  oracle rakudo-2026.07 → Int
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Int
+
+- id     0724
+  from   inventory:Any.^methods
+  cell   self | Str
+  code   (Str).self
+  is     Str
+  type   Str
+  oracle rakudo-2026.07 → Str
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Str
+
+- id     0725
+  from   inventory:Any.^methods
+  cell   self | 1
+  code   (1).self
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0726
+  from   inventory:Any.^methods
+  cell   self | 0
+  code   (0).self
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0727
+  from   inventory:Any.^methods
+  cell   self | -1
+  code   (-1).self
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0728
+  from   inventory:Any.^methods
+  cell   self | "a"
+  code   ("a").self
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "a"
+
+- id     0729
+  from   inventory:Any.^methods
+  cell   self | ""
+  code   ("").self
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+
+- id     0730
+  from   inventory:Any.^methods
+  cell   self | (1,2)
+  code   ((1,2)).self
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, 2)
+
+- id     0731
+  from   inventory:Any.^methods
+  cell   self | {a=>1}
+  code   ({a=>1}).self
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:a(1)}
+
+- id     0732
+  from   inventory:Any.^methods
+  cell   self | Nil
+  code   (Nil).self
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Any
+
+- id     0733
+  from   inventory:Any.^methods
+  cell   self | True
+  code   (True).self
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0734
+  from   inventory:Any.^methods
+  cell   self | False
+  code   (False).self
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0735
+  from   inventory:Any.^methods
+  cell   self | 1e0
+  code   (1e0).self
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0736
+  from   inventory:Any.^methods
+  cell   self | 1/2
+  code   (1/2).self
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5
+
+- id     0737
+  from   inventory:Any.^methods
+  cell   self | (1..3)
+  code   ((1..3)).self
+  is     1..3
+  type   Range
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1..3
+
+- id     0738
+  from   inventory:Any.^methods
+  cell   self | set(1)
+  code   (set(1)).self
+  is     Set.new(1)
+  type   Set
+  oracle rakudo-2026.07 → Set.new(1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Set.new(1)
+
+- id     0739
   from   inventory:Any.^methods
   cell   so | Any
   code   (Any).so
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
-- id     0043
+- id     0740
+  from   inventory:Any.^methods
+  cell   so | Mu
+  code   (Mu).so
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0741
+  from   inventory:Any.^methods
+  cell   so | Int
+  code   (Int).so
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0742
+  from   inventory:Any.^methods
+  cell   so | Str
+  code   (Str).so
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0743
+  from   inventory:Any.^methods
+  cell   so | 1
+  code   (1).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0744
+  from   inventory:Any.^methods
+  cell   so | 0
+  code   (0).so
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0745
+  from   inventory:Any.^methods
+  cell   so | -1
+  code   (-1).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0746
+  from   inventory:Any.^methods
+  cell   so | "a"
+  code   ("a").so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0747
+  from   inventory:Any.^methods
+  cell   so | ""
+  code   ("").so
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0748
+  from   inventory:Any.^methods
+  cell   so | (1,2)
+  code   ((1,2)).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0749
+  from   inventory:Any.^methods
+  cell   so | {a=>1}
+  code   ({a=>1}).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0750
+  from   inventory:Any.^methods
+  cell   so | Nil
+  code   (Nil).so
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0751
+  from   inventory:Any.^methods
+  cell   so | True
+  code   (True).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0752
+  from   inventory:Any.^methods
+  cell   so | False
+  code   (False).so
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0753
+  from   inventory:Any.^methods
+  cell   so | 1e0
+  code   (1e0).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0754
+  from   inventory:Any.^methods
+  cell   so | 1/2
+  code   (1/2).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0755
+  from   inventory:Any.^methods
+  cell   so | (1..3)
+  code   ((1..3)).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0756
+  from   inventory:Any.^methods
+  cell   so | set(1)
+  code   (set(1)).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0757
   from   inventory:Any.^methods
   cell   sum | Any
   code   (Any).sum
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
-- id     0044
+- id     0758
+  from   inventory:Any.^methods
+  cell   sum | Mu
+  code   (Mu).sum
+  throws X::Method::NotFound
+  oracle rakudo-2026.07 → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0759
+  from   inventory:Any.^methods
+  cell   sum | Int
+  code   (Int).sum
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0760
+  from   inventory:Any.^methods
+  cell   sum | Str
+  code   (Str).sum
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+
+- id     0761
+  from   inventory:Any.^methods
+  cell   sum | 1
+  code   (1).sum
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0762
+  from   inventory:Any.^methods
+  cell   sum | 0
+  code   (0).sum
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0763
+  from   inventory:Any.^methods
+  cell   sum | -1
+  code   (-1).sum
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0764
+  from   inventory:Any.^methods
+  cell   sum | "a"
+  code   ("a").sum
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0765
+  from   inventory:Any.^methods
+  cell   sum | ""
+  code   ("").sum
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0766
+  from   inventory:Any.^methods
+  cell   sum | (1,2)
+  code   ((1,2)).sum
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 3
+
+- id     0767
+  from   inventory:Any.^methods
+  cell   sum | {a=>1}
+  code   ({a=>1}).sum
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0768
+  from   inventory:Any.^methods
+  cell   sum | Nil
+  code   (Nil).sum
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0769
+  from   inventory:Any.^methods
+  cell   sum | True
+  code   (True).sum
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0770
+  from   inventory:Any.^methods
+  cell   sum | False
+  code   (False).sum
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0771
+  from   inventory:Any.^methods
+  cell   sum | 1e0
+  code   (1e0).sum
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0772
+  from   inventory:Any.^methods
+  cell   sum | 1/2
+  code   (1/2).sum
+  is     0.5
+  type   Rat
+  oracle rakudo-2026.07 → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5
+
+- id     0773
+  from   inventory:Any.^methods
+  cell   sum | (1..3)
+  code   ((1..3)).sum
+  is     6
+  type   Int
+  oracle rakudo-2026.07 → 6
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 6
+
+- id     0774
+  from   inventory:Any.^methods
+  cell   sum | set(1)
+  code   (set(1)).sum
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0775
   from   inventory:Any.^methods
   cell   take | Any
   code   (Any).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0776
+  from   inventory:Any.^methods
+  cell   take | Mu
+  code   (Mu).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0777
+  from   inventory:Any.^methods
+  cell   take | Int
+  code   (Int).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0778
+  from   inventory:Any.^methods
+  cell   take | Str
+  code   (Str).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0779
+  from   inventory:Any.^methods
+  cell   take | 1
+  code   (1).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0780
+  from   inventory:Any.^methods
+  cell   take | 0
+  code   (0).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0781
+  from   inventory:Any.^methods
+  cell   take | -1
+  code   (-1).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0782
+  from   inventory:Any.^methods
+  cell   take | "a"
+  code   ("a").take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0783
+  from   inventory:Any.^methods
+  cell   take | ""
+  code   ("").take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0784
+  from   inventory:Any.^methods
+  cell   take | (1,2)
+  code   ((1,2)).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0785
+  from   inventory:Any.^methods
+  cell   take | {a=>1}
+  code   ({a=>1}).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0786
+  from   inventory:Any.^methods
+  cell   take | Nil
+  code   (Nil).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0787
+  from   inventory:Any.^methods
+  cell   take | True
+  code   (True).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0788
+  from   inventory:Any.^methods
+  cell   take | False
+  code   (False).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0789
+  from   inventory:Any.^methods
+  cell   take | 1e0
+  code   (1e0).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0790
+  from   inventory:Any.^methods
+  cell   take | 1/2
+  code   (1/2).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0791
+  from   inventory:Any.^methods
+  cell   take | (1..3)
+  code   ((1..3)).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+
+- id     0792
+  from   inventory:Any.^methods
+  cell   take | set(1)
+  code   (set(1)).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow

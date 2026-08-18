@@ -30,7 +30,9 @@ my $GUARD = 0;
 constant @LADDER =
     '0', '1', '-1', '1/2', '0e0', 'NaN', '""', '"a"', 'True', 'Any', '(1,2)', '{a=>1}',
     # --- appended 2026-08-16: the corners the first twelve did not reach ------
-    '-0e0', 'Inf', '2**64', 'False', 'Nil', '()', '"0"', '(1..3)';
+    '-0e0', 'Inf', '2**64', 'False', 'Nil', '()', '"0"', '(1..3)',
+    # --- appended 2026-08-16 (second): type object, spaced string, Array, Pair -
+    'Int', '"a b"', '[1,2]', '(a => 1)';
 
 # Operators whose result depends on reaching an endpoint, and which therefore do
 # not terminate for some perfectly ordinary operands: `0e0 ... NaN` never
@@ -81,9 +83,10 @@ sub run-parallel($cmd, @exprs, $jobs, $batch = 200, $secs = 120) {
     my $offset = 0;
 
     while $offset < $total {
+        my $now = adaptive-jobs($jobs);
         my @cmds;
         my @parts;
-        for ^$jobs -> $j {
+        for ^$now -> $j {
             my $from = $offset + $j * $batch;
             last if $from >= $total;
             my $to = min($from + $batch, $total) - 1;
@@ -112,7 +115,7 @@ sub run-parallel($cmd, @exprs, $jobs, $batch = 200, $secs = 120) {
             }
             $f.IO.unlink;
         }
-        $offset += $jobs * $batch;
+        $offset += $now * $batch;
         note "#     { min($offset, $total) } / $total" if min($offset, $total) %% 2000;
     }
     return %seen;
@@ -179,6 +182,36 @@ sub cache-save($id, %seen) {
 sub textual($v) {
     return $v if try { $v.encode('utf-8').decode('utf-8') === $v };
     return 'INVALID-UTF8:' ~ (try { $v.ords.map(*.base(16)).join(' ') } // 'unrenderable');
+}
+
+
+# How many probes to run at once. `--jobs=auto` samples the machine each round
+# and takes what is going spare: cores, minus the current load, minus one to
+# leave the person using this machine a core of their own. Clamped to a sane
+# band so a quiet moment does not spawn a swarm and a busy one never stalls
+# entirely. A fixed --jobs=N still overrides.
+sub cores() {
+    my $p = run('sysctl', '-n', 'hw.ncpu', :out, :err);
+    my $n = $p.out.slurp(:close).trim;
+    $p.err.slurp(:close);
+    return +$n || 4;
+}
+
+sub load-now() {
+    my $p = run('sysctl', '-n', 'vm.loadavg', :out, :err);
+    my $t = $p.out.slurp(:close);
+    $p.err.slurp(:close);
+    # `{ 2.03 2.80 2.84 }` — take the one-minute figure. Returning 0 on a parse
+    # failure would be the dangerous default: it makes a busy machine look idle
+    # and the sampler ask for every core. Fall back to the ceiling instead.
+    return +$0 if $t ~~ / (\d+ '.' \d+) /;
+    return 999;
+}
+
+sub adaptive-jobs($requested, $ceiling = 6) {
+    return $requested unless $requested ~~ Str && $requested eq 'auto';
+    my $spare = (cores() - load-now() - 1).floor;
+    return max(1, min($ceiling, $spare));
 }
 
 sub PREFIX() { "op" }
@@ -281,11 +314,11 @@ sub slug($cat, $sym) {
 # ------------------------------------------------------------------------ run
 
 my @engines = 'raku';
-my $JOBS = 2;
+my $JOBS = 2;   # or --jobs=auto to take what the machine has spare
 my $INV = '/Users/ash/raku.online/sites/spec/src/data/inventory.json';
 for @*ARGS -> $a {
     @engines = $a.substr(10).split(',') if $a.starts-with('--engines=');
-    $JOBS    = +$a.substr(7)            if $a.starts-with('--jobs=');
+    $JOBS    = ($a.substr(7) eq 'auto' ?? 'auto' !! +$a.substr(7)) if $a.starts-with('--jobs=');
     $INV     = $a.substr(12)            if $a.starts-with('--inventory=');
 }
 
@@ -314,26 +347,35 @@ for @wanted -> %o {
     my $sym = %o<sym>.trim;
     my @c;
     if %o<cat> eq 'infix' {
-        # shell order: every pair whose highest index is 0, then 1, then 2 …
+        # Shell order: every pair whose highest index is 0, then 1, then 2 …
+        # The shell number IS the density level, which is the happy accident of
+        # enumerating this way: shell 0 is one cell per operator (L0 smoke),
+        # the low shells are the core corners, and the outer shells are the
+        # exotic combinations you only want on a full run.
         for ^@LADDER.elems -> $shell {
+            my $lvl = $shell == 0 ?? 0 !! $shell <= 3 ?? 1 !! $shell <= 9 ?? 2 !! 3;
             for ^($shell + 1) -> $i {
-                @c.push: { a => @LADDER[$i], b => @LADDER[$shell],
+                @c.push: { a => @LADDER[$i], b => @LADDER[$shell], level => $lvl,
                            expr => "(@LADDER[$i]) $sym (@LADDER[$shell])" };
             }
             for ^$shell -> $j {
-                @c.push: { a => @LADDER[$shell], b => @LADDER[$j],
+                @c.push: { a => @LADDER[$shell], b => @LADDER[$j], level => $lvl,
                            expr => "(@LADDER[$shell]) $sym (@LADDER[$j])" };
             }
         }
     }
     elsif %o<cat> eq 'prefix' {
-        for @LADDER -> $a {
-            @c.push: { a => $a, b => Nil, expr => "$sym($a)" };
+        for ^@LADDER.elems -> $i {
+            @c.push: { a => @LADDER[$i], b => Nil,
+                       level => ($i == 0 ?? 0 !! $i <= 3 ?? 1 !! $i <= 9 ?? 2 !! 3),
+                       expr => "$sym(@LADDER[$i])" };
         }
     }
     else {
-        for @LADDER -> $a {
-            @c.push: { a => $a, b => Nil, expr => "($a)$sym" };
+        for ^@LADDER.elems -> $i {
+            @c.push: { a => @LADDER[$i], b => Nil,
+                       level => ($i == 0 ?? 0 !! $i <= 3 ?? 1 !! $i <= 9 ?? 2 !! 3),
+                       expr => "(@LADDER[$i])$sym" };
         }
     }
     my $atom = slug(%o<cat>, $sym);
@@ -412,6 +454,7 @@ for %cells.keys.sort -> $atom {
         @out.push: "- id     { sprintf('%04d', $i) }";
         @out.push: "  from   inventory:{ %spec<cat> }:{ %spec<sym> }";
         @out.push: %c<b>.defined ?? "  cell   { %c<a> } | { %c<b> }" !! "  cell   { %c<a> }";
+        @out.push: "  level  { %c<level> // 3 }";
         @out.push: "  code   { %c<expr> }";
 
         my $answered = !($r<value>.starts-with('CRASH') || $r<value> eq 'HANG'

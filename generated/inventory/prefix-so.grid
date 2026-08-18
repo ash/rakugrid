@@ -7,6 +7,7 @@ ladder   mixed
 - id     0001
   from   inventory:prefix:so
   cell   0
+  level  0
   code   so(0)
   is     Bool::False
   type   Bool
@@ -16,6 +17,7 @@ ladder   mixed
 - id     0002
   from   inventory:prefix:so
   cell   1
+  level  1
   code   so(1)
   is     Bool::True
   type   Bool
@@ -25,6 +27,7 @@ ladder   mixed
 - id     0003
   from   inventory:prefix:so
   cell   -1
+  level  1
   code   so(-1)
   is     Bool::True
   type   Bool
@@ -34,6 +37,7 @@ ladder   mixed
 - id     0004
   from   inventory:prefix:so
   cell   1/2
+  level  1
   code   so(1/2)
   is     Bool::True
   type   Bool
@@ -43,6 +47,7 @@ ladder   mixed
 - id     0005
   from   inventory:prefix:so
   cell   0e0
+  level  2
   code   so(0e0)
   is     Bool::False
   type   Bool
@@ -52,6 +57,7 @@ ladder   mixed
 - id     0006
   from   inventory:prefix:so
   cell   NaN
+  level  2
   code   so(NaN)
   is     Bool::True
   type   Bool
@@ -61,6 +67,7 @@ ladder   mixed
 - id     0007
   from   inventory:prefix:so
   cell   ""
+  level  2
   code   so("")
   is     Bool::False
   type   Bool
@@ -70,6 +77,7 @@ ladder   mixed
 - id     0008
   from   inventory:prefix:so
   cell   "a"
+  level  2
   code   so("a")
   is     Bool::True
   type   Bool
@@ -79,6 +87,7 @@ ladder   mixed
 - id     0009
   from   inventory:prefix:so
   cell   True
+  level  2
   code   so(True)
   is     Bool::True
   type   Bool
@@ -88,6 +97,7 @@ ladder   mixed
 - id     0010
   from   inventory:prefix:so
   cell   Any
+  level  2
   code   so(Any)
   is     Bool::False
   type   Bool
@@ -97,6 +107,7 @@ ladder   mixed
 - id     0011
   from   inventory:prefix:so
   cell   (1,2)
+  level  3
   code   so((1,2))
   is     Bool::True
   type   Bool
@@ -106,6 +117,7 @@ ladder   mixed
 - id     0012
   from   inventory:prefix:so
   cell   {a=>1}
+  level  3
   code   so({a=>1})
   is     Bool::True
   type   Bool
@@ -115,6 +127,7 @@ ladder   mixed
 - id     0013
   from   inventory:prefix:so
   cell   -0e0
+  level  3
   code   so(-0e0)
   is     Bool::False
   type   Bool
@@ -124,6 +137,7 @@ ladder   mixed
 - id     0014
   from   inventory:prefix:so
   cell   Inf
+  level  3
   code   so(Inf)
   is     Bool::True
   type   Bool
@@ -133,6 +147,7 @@ ladder   mixed
 - id     0015
   from   inventory:prefix:so
   cell   2**64
+  level  3
   code   so(2**64)
   is     Bool::True
   type   Bool
@@ -142,6 +157,7 @@ ladder   mixed
 - id     0016
   from   inventory:prefix:so
   cell   False
+  level  3
   code   so(False)
   is     Bool::False
   type   Bool
@@ -151,6 +167,7 @@ ladder   mixed
 - id     0017
   from   inventory:prefix:so
   cell   Nil
+  level  3
   code   so(Nil)
   is     Bool::False
   type   Bool
@@ -160,6 +177,7 @@ ladder   mixed
 - id     0018
   from   inventory:prefix:so
   cell   ()
+  level  3
   code   so(())
   is     Bool::False
   type   Bool
@@ -169,6 +187,7 @@ ladder   mixed
 - id     0019
   from   inventory:prefix:so
   cell   "0"
+  level  3
   code   so("0")
   is     Bool::True
   type   Bool
@@ -178,8 +197,49 @@ ladder   mixed
 - id     0020
   from   inventory:prefix:so
   cell   (1..3)
+  level  3
   code   so((1..3))
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
   oracle rakupp-v3.14.0-92-g78048b0-modified → Bool::True
+
+- id     0021
+  from   inventory:prefix:so
+  cell   Int
+  level  3
+  code   so(Int)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Bool::False
+
+- id     0022
+  from   inventory:prefix:so
+  cell   "a b"
+  level  3
+  code   so("a b")
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Bool::True
+
+- id     0023
+  from   inventory:prefix:so
+  cell   [1,2]
+  level  3
+  code   so([1,2])
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Bool::True
+
+- id     0024
+  from   inventory:prefix:so
+  cell   (a => 1)
+  level  3
+  code   so((a => 1))
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Bool::True

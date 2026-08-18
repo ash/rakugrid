@@ -3,7 +3,7 @@ source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
 axes     Bridge | Complex | Int | Num | Rat | abs | acos | acosec | acosech | acosh | acotan | acotanh | asec | asech | asin | asinh | atan | atanh | ceiling | cis | conj | cos | cosec | cosech | cosh | cotan | cotanh | floor | isNaN | rand | sec | sech | sign | sin | sinh | tan | tanh | truncate | unpolar
-cols     1 | 1e0 | 1/2
+cols     1 | 1e0 | 1/2 | 0 | -1 | Inf | NaN | 2**64 | -Inf | 0e0 | -0e0 | 42 | 1/3 | True
 
 - id     0001
   from   inventory:Real.^methods
@@ -12,7 +12,7 @@ cols     1 | 1e0 | 1/2
   is     1e0
   type   Num
   oracle rakudo-2026.07 → 1e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
 
 - id     0002
   from   inventory:Real.^methods
@@ -21,7 +21,7 @@ cols     1 | 1e0 | 1/2
   is     1e0
   type   Num
   oracle rakudo-2026.07 → 1e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
 
 - id     0003
   from   inventory:Real.^methods
@@ -30,1263 +30,5924 @@ cols     1 | 1e0 | 1/2
   is     0.5e0
   type   Num
   oracle rakudo-2026.07 → 0.5e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.5e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5e0
 
 - id     0004
+  from   inventory:Real.^methods
+  cell   Bridge | 0
+  code   (0).Bridge
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0005
+  from   inventory:Real.^methods
+  cell   Bridge | -1
+  code   (-1).Bridge
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1e0
+
+- id     0006
+  from   inventory:Real.^methods
+  cell   Bridge | Inf
+  code   (Inf).Bridge
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0007
+  from   inventory:Real.^methods
+  cell   Bridge | NaN
+  code   (NaN).Bridge
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0008
+  from   inventory:Real.^methods
+  cell   Bridge | 2**64
+  code   (2**64).Bridge
+  is     1.8446744073709552e+19
+  type   Num
+  oracle rakudo-2026.07 → 1.8446744073709552e+19
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.8446744073709552e+19
+
+- id     0009
+  from   inventory:Real.^methods
+  cell   Bridge | -Inf
+  code   (-Inf).Bridge
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0010
+  from   inventory:Real.^methods
+  cell   Bridge | 0e0
+  code   (0e0).Bridge
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0011
+  from   inventory:Real.^methods
+  cell   Bridge | -0e0
+  code   (-0e0).Bridge
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0012
+  from   inventory:Real.^methods
+  cell   Bridge | 42
+  code   (42).Bridge
+  is     42e0
+  type   Num
+  oracle rakudo-2026.07 → 42e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 42e0
+
+- id     0013
+  from   inventory:Real.^methods
+  cell   Bridge | 1/3
+  code   (1/3).Bridge
+  is     0.3333333333333333e0
+  type   Num
+  oracle rakudo-2026.07 → 0.3333333333333333e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.3333333333333333e0
+
+- id     0014
+  from   inventory:Real.^methods
+  cell   Bridge | True
+  code   (True).Bridge
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0015
   from   inventory:Real.^methods
   cell   Complex | 1
   code   (1).Complex
   is     <1+0i>
   type   Complex
   oracle rakudo-2026.07 → <1+0i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <1+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1+0i>
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0005
+- id     0016
   from   inventory:Real.^methods
   cell   Complex | 1e0
   code   (1e0).Complex
   is     <1+0i>
   type   Complex
   oracle rakudo-2026.07 → <1+0i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <1+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1+0i>
 
-- id     0006
+- id     0017
   from   inventory:Real.^methods
   cell   Complex | 1/2
   code   (1/2).Complex
   is     <0.5+0i>
   type   Complex
   oracle rakudo-2026.07 → <0.5+0i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <0.5+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.5+0i>
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0007
+- id     0018
+  from   inventory:Real.^methods
+  cell   Complex | 0
+  code   (0).Complex
+  is     <0+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0+0i>
+
+- id     0019
+  from   inventory:Real.^methods
+  cell   Complex | -1
+  code   (-1).Complex
+  is     <-1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <-1+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-1+0i>
+
+- id     0020
+  from   inventory:Real.^methods
+  cell   Complex | Inf
+  code   (Inf).Complex
+  is     <Inf+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <Inf+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <Inf+0i>
+
+- id     0021
+  from   inventory:Real.^methods
+  cell   Complex | NaN
+  code   (NaN).Complex
+  is     <NaN+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <NaN+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <NaN+0i>
+
+- id     0022
+  from   inventory:Real.^methods
+  cell   Complex | 2**64
+  code   (2**64).Complex
+  is     <1.8446744073709552e+19+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1.8446744073709552e+19+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1.8446744073709552e+19+0i>
+
+- id     0023
+  from   inventory:Real.^methods
+  cell   Complex | -Inf
+  code   (-Inf).Complex
+  is     <-Inf+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <-Inf+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-Inf+0i>
+
+- id     0024
+  from   inventory:Real.^methods
+  cell   Complex | 0e0
+  code   (0e0).Complex
+  is     <0+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0+0i>
+
+- id     0025
+  from   inventory:Real.^methods
+  cell   Complex | -0e0
+  code   (-0e0).Complex
+  is     <-0+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <-0+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-0+0i>
+
+- id     0026
+  from   inventory:Real.^methods
+  cell   Complex | 42
+  code   (42).Complex
+  is     <42+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <42+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <42+0i>
+
+- id     0027
+  from   inventory:Real.^methods
+  cell   Complex | 1/3
+  code   (1/3).Complex
+  is     <0.3333333333333333+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.3333333333333333+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.3333333333333333+0i>
+
+- id     0028
+  from   inventory:Real.^methods
+  cell   Complex | True
+  code   (True).Complex
+  is     <1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1+0i>
+
+- id     0029
   from   inventory:Real.^methods
   cell   Int | 1
   code   (1).Int
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
-- id     0008
+- id     0030
   from   inventory:Real.^methods
   cell   Int | 1e0
   code   (1e0).Int
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
-- id     0009
+- id     0031
   from   inventory:Real.^methods
   cell   Int | 1/2
   code   (1/2).Int
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
 
-- id     0010
+- id     0032
+  from   inventory:Real.^methods
+  cell   Int | 0
+  code   (0).Int
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0033
+  from   inventory:Real.^methods
+  cell   Int | -1
+  code   (-1).Int
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0034
+  from   inventory:Real.^methods
+  cell   Int | Inf
+  code   (Inf).Int
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Numeric::CannotConvert
+
+- id     0035
+  from   inventory:Real.^methods
+  cell   Int | NaN
+  code   (NaN).Int
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Numeric::CannotConvert
+
+- id     0036
+  from   inventory:Real.^methods
+  cell   Int | 2**64
+  code   (2**64).Int
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 18446744073709551616
+  verdict disputed
+  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0037
+  from   inventory:Real.^methods
+  cell   Int | -Inf
+  code   (-Inf).Int
+  throws X::Numeric::CannotConvert
+  oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Numeric::CannotConvert
+
+- id     0038
+  from   inventory:Real.^methods
+  cell   Int | 0e0
+  code   (0e0).Int
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0039
+  from   inventory:Real.^methods
+  cell   Int | -0e0
+  code   (-0e0).Int
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0040
+  from   inventory:Real.^methods
+  cell   Int | 42
+  code   (42).Int
+  is     42
+  type   Int
+  oracle rakudo-2026.07 → 42
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 42
+
+- id     0041
+  from   inventory:Real.^methods
+  cell   Int | 1/3
+  code   (1/3).Int
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0042
+  from   inventory:Real.^methods
+  cell   Int | True
+  code   (True).Int
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0043
   from   inventory:Real.^methods
   cell   Num | 1
   code   (1).Num
   is     1e0
   type   Num
   oracle rakudo-2026.07 → 1e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
 
-- id     0011
+- id     0044
   from   inventory:Real.^methods
   cell   Num | 1e0
   code   (1e0).Num
   is     1e0
   type   Num
   oracle rakudo-2026.07 → 1e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
 
-- id     0012
+- id     0045
   from   inventory:Real.^methods
   cell   Num | 1/2
   code   (1/2).Num
   is     0.5e0
   type   Num
   oracle rakudo-2026.07 → 0.5e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.5e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5e0
 
-- id     0013
+- id     0046
+  from   inventory:Real.^methods
+  cell   Num | 0
+  code   (0).Num
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0047
+  from   inventory:Real.^methods
+  cell   Num | -1
+  code   (-1).Num
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1e0
+
+- id     0048
+  from   inventory:Real.^methods
+  cell   Num | Inf
+  code   (Inf).Num
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0049
+  from   inventory:Real.^methods
+  cell   Num | NaN
+  code   (NaN).Num
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0050
+  from   inventory:Real.^methods
+  cell   Num | 2**64
+  code   (2**64).Num
+  is     1.8446744073709552e+19
+  type   Num
+  oracle rakudo-2026.07 → 1.8446744073709552e+19
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.8446744073709552e+19
+
+- id     0051
+  from   inventory:Real.^methods
+  cell   Num | -Inf
+  code   (-Inf).Num
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0052
+  from   inventory:Real.^methods
+  cell   Num | 0e0
+  code   (0e0).Num
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0053
+  from   inventory:Real.^methods
+  cell   Num | -0e0
+  code   (-0e0).Num
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0054
+  from   inventory:Real.^methods
+  cell   Num | 42
+  code   (42).Num
+  is     42e0
+  type   Num
+  oracle rakudo-2026.07 → 42e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 42e0
+
+- id     0055
+  from   inventory:Real.^methods
+  cell   Num | 1/3
+  code   (1/3).Num
+  is     0.3333333333333333e0
+  type   Num
+  oracle rakudo-2026.07 → 0.3333333333333333e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.3333333333333333e0
+
+- id     0056
+  from   inventory:Real.^methods
+  cell   Num | True
+  code   (True).Num
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0057
   from   inventory:Real.^methods
   cell   Rat(0) | 1
   code   (1).Rat(0)
   is     1.0
   type   Rat
   oracle rakudo-2026.07 → 1.0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0
 
-- id     0014
+- id     0058
   from   inventory:Real.^methods
   cell   Rat(1) | 1
   code   (1).Rat(1)
   is     1.0
   type   Rat
   oracle rakudo-2026.07 → 1.0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0
 
-- id     0015
+- id     0059
   from   inventory:Real.^methods
   cell   Rat(-1) | 1
   code   (1).Rat(-1)
   is     1.0
   type   Rat
   oracle rakudo-2026.07 → 1.0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0
 
-- id     0016
+- id     0060
   from   inventory:Real.^methods
   cell   Rat("a") | 1
   code   (1).Rat("a")
   is     1.0
   type   Rat
   oracle rakudo-2026.07 → 1.0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0
 
-- id     0017
+- id     0061
   from   inventory:Real.^methods
   cell   Rat(Any) | 1
   code   (1).Rat(Any)
   is     1.0
   type   Rat
   oracle rakudo-2026.07 → 1.0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0
 
-- id     0018
+- id     0062
   from   inventory:Real.^methods
   cell   Rat(0) | 1e0
   code   (1e0).Rat(0)
   is     1.0
   type   Rat
   oracle rakudo-2026.07 → 1.0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0
 
-- id     0019
+- id     0063
   from   inventory:Real.^methods
   cell   Rat(1) | 1e0
   code   (1e0).Rat(1)
   is     1.0
   type   Rat
   oracle rakudo-2026.07 → 1.0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0
 
-- id     0020
+- id     0064
   from   inventory:Real.^methods
   cell   Rat(-1) | 1e0
   code   (1e0).Rat(-1)
   is     1.0
   type   Rat
   oracle rakudo-2026.07 → 1.0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0
 
-- id     0021
+- id     0065
   from   inventory:Real.^methods
   cell   Rat("a") | 1e0
   code   (1e0).Rat("a")
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0
 
-- id     0022
+- id     0066
   from   inventory:Real.^methods
   cell   Rat(Any) | 1e0
   code   (1e0).Rat(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0
 
-- id     0023
+- id     0067
   from   inventory:Real.^methods
   cell   Rat(0) | 1/2
   code   (1/2).Rat(0)
   is     0.5
   type   Rat
   oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5
 
-- id     0024
+- id     0068
   from   inventory:Real.^methods
   cell   Rat(1) | 1/2
   code   (1/2).Rat(1)
   is     0.5
   type   Rat
   oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5
 
-- id     0025
+- id     0069
   from   inventory:Real.^methods
   cell   Rat(-1) | 1/2
   code   (1/2).Rat(-1)
   is     0.5
   type   Rat
   oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5
 
-- id     0026
+- id     0070
   from   inventory:Real.^methods
   cell   Rat("a") | 1/2
   code   (1/2).Rat("a")
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5
 
-- id     0027
+- id     0071
   from   inventory:Real.^methods
   cell   Rat(Any) | 1/2
   code   (1/2).Rat(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5
 
-- id     0028
+- id     0072
+  from   inventory:Real.^methods
+  cell   Rat(0) | 0
+  code   (0).Rat(0)
+  is     0.0
+  type   Rat
+  oracle rakudo-2026.07 → 0.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+
+- id     0073
+  from   inventory:Real.^methods
+  cell   Rat(1) | 0
+  code   (0).Rat(1)
+  is     0.0
+  type   Rat
+  oracle rakudo-2026.07 → 0.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+
+- id     0074
+  from   inventory:Real.^methods
+  cell   Rat(-1) | 0
+  code   (0).Rat(-1)
+  is     0.0
+  type   Rat
+  oracle rakudo-2026.07 → 0.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+
+- id     0075
+  from   inventory:Real.^methods
+  cell   Rat("a") | 0
+  code   (0).Rat("a")
+  is     0.0
+  type   Rat
+  oracle rakudo-2026.07 → 0.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+
+- id     0076
+  from   inventory:Real.^methods
+  cell   Rat(Any) | 0
+  code   (0).Rat(Any)
+  is     0.0
+  type   Rat
+  oracle rakudo-2026.07 → 0.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+
+- id     0077
+  from   inventory:Real.^methods
+  cell   Rat(0) | -1
+  code   (-1).Rat(0)
+  is     -1.0
+  type   Rat
+  oracle rakudo-2026.07 → -1.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.0
+
+- id     0078
+  from   inventory:Real.^methods
+  cell   Rat(1) | -1
+  code   (-1).Rat(1)
+  is     -1.0
+  type   Rat
+  oracle rakudo-2026.07 → -1.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.0
+
+- id     0079
+  from   inventory:Real.^methods
+  cell   Rat(-1) | -1
+  code   (-1).Rat(-1)
+  is     -1.0
+  type   Rat
+  oracle rakudo-2026.07 → -1.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.0
+
+- id     0080
+  from   inventory:Real.^methods
+  cell   Rat("a") | -1
+  code   (-1).Rat("a")
+  is     -1.0
+  type   Rat
+  oracle rakudo-2026.07 → -1.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.0
+
+- id     0081
+  from   inventory:Real.^methods
+  cell   Rat(Any) | -1
+  code   (-1).Rat(Any)
+  is     -1.0
+  type   Rat
+  oracle rakudo-2026.07 → -1.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.0
+
+- id     0082
+  from   inventory:Real.^methods
+  cell   Rat(0) | Inf
+  code   (Inf).Rat(0)
+  is     <1/0>
+  type   Rat
+  oracle rakudo-2026.07 → <1/0>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1/0>
+
+- id     0083
+  from   inventory:Real.^methods
+  cell   Rat(1) | Inf
+  code   (Inf).Rat(1)
+  is     <1/0>
+  type   Rat
+  oracle rakudo-2026.07 → <1/0>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1/0>
+
+- id     0084
+  from   inventory:Real.^methods
+  cell   Rat(-1) | Inf
+  code   (Inf).Rat(-1)
+  is     <1/0>
+  type   Rat
+  oracle rakudo-2026.07 → <1/0>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1/0>
+
+- id     0085
+  from   inventory:Real.^methods
+  cell   Rat("a") | Inf
+  code   (Inf).Rat("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1/0>
+
+- id     0086
+  from   inventory:Real.^methods
+  cell   Rat(Any) | Inf
+  code   (Inf).Rat(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1/0>
+
+- id     0087
+  from   inventory:Real.^methods
+  cell   Rat(0) | NaN
+  code   (NaN).Rat(0)
+  is     <0/0>
+  type   Rat
+  oracle rakudo-2026.07 → <0/0>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0/0>
+
+- id     0088
+  from   inventory:Real.^methods
+  cell   Rat(1) | NaN
+  code   (NaN).Rat(1)
+  is     <0/0>
+  type   Rat
+  oracle rakudo-2026.07 → <0/0>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0/0>
+
+- id     0089
+  from   inventory:Real.^methods
+  cell   Rat(-1) | NaN
+  code   (NaN).Rat(-1)
+  is     <0/0>
+  type   Rat
+  oracle rakudo-2026.07 → <0/0>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0/0>
+
+- id     0090
+  from   inventory:Real.^methods
+  cell   Rat("a") | NaN
+  code   (NaN).Rat("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0/0>
+
+- id     0091
+  from   inventory:Real.^methods
+  cell   Rat(Any) | NaN
+  code   (NaN).Rat(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0/0>
+
+- id     0092
+  from   inventory:Real.^methods
+  cell   Rat(0) | 2**64
+  code   (2**64).Rat(0)
+  is     18446744073709551616.0
+  type   Rat
+  oracle rakudo-2026.07 → 18446744073709551616.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 18446744073709551616.0
+
+- id     0093
+  from   inventory:Real.^methods
+  cell   Rat(1) | 2**64
+  code   (2**64).Rat(1)
+  is     18446744073709551616.0
+  type   Rat
+  oracle rakudo-2026.07 → 18446744073709551616.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 18446744073709551616.0
+
+- id     0094
+  from   inventory:Real.^methods
+  cell   Rat(-1) | 2**64
+  code   (2**64).Rat(-1)
+  is     18446744073709551616.0
+  type   Rat
+  oracle rakudo-2026.07 → 18446744073709551616.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 18446744073709551616.0
+
+- id     0095
+  from   inventory:Real.^methods
+  cell   Rat("a") | 2**64
+  code   (2**64).Rat("a")
+  is     18446744073709551616.0
+  type   Rat
+  oracle rakudo-2026.07 → 18446744073709551616.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 18446744073709551616.0
+
+- id     0096
+  from   inventory:Real.^methods
+  cell   Rat(Any) | 2**64
+  code   (2**64).Rat(Any)
+  is     18446744073709551616.0
+  type   Rat
+  oracle rakudo-2026.07 → 18446744073709551616.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 18446744073709551616.0
+
+- id     0097
+  from   inventory:Real.^methods
+  cell   Rat(0) | -Inf
+  code   (-Inf).Rat(0)
+  is     <-1/0>
+  type   Rat
+  oracle rakudo-2026.07 → <-1/0>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-1/0>
+
+- id     0098
+  from   inventory:Real.^methods
+  cell   Rat(1) | -Inf
+  code   (-Inf).Rat(1)
+  is     <-1/0>
+  type   Rat
+  oracle rakudo-2026.07 → <-1/0>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-1/0>
+
+- id     0099
+  from   inventory:Real.^methods
+  cell   Rat(-1) | -Inf
+  code   (-Inf).Rat(-1)
+  is     <-1/0>
+  type   Rat
+  oracle rakudo-2026.07 → <-1/0>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-1/0>
+
+- id     0100
+  from   inventory:Real.^methods
+  cell   Rat("a") | -Inf
+  code   (-Inf).Rat("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-1/0>
+
+- id     0101
+  from   inventory:Real.^methods
+  cell   Rat(Any) | -Inf
+  code   (-Inf).Rat(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-1/0>
+
+- id     0102
+  from   inventory:Real.^methods
+  cell   Rat(0) | 0e0
+  code   (0e0).Rat(0)
+  is     0.0
+  type   Rat
+  oracle rakudo-2026.07 → 0.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+
+- id     0103
+  from   inventory:Real.^methods
+  cell   Rat(1) | 0e0
+  code   (0e0).Rat(1)
+  is     0.0
+  type   Rat
+  oracle rakudo-2026.07 → 0.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+
+- id     0104
+  from   inventory:Real.^methods
+  cell   Rat(-1) | 0e0
+  code   (0e0).Rat(-1)
+  is     0.0
+  type   Rat
+  oracle rakudo-2026.07 → 0.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+
+- id     0105
+  from   inventory:Real.^methods
+  cell   Rat("a") | 0e0
+  code   (0e0).Rat("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+
+- id     0106
+  from   inventory:Real.^methods
+  cell   Rat(Any) | 0e0
+  code   (0e0).Rat(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+
+- id     0107
+  from   inventory:Real.^methods
+  cell   Rat(0) | -0e0
+  code   (-0e0).Rat(0)
+  is     0.0
+  type   Rat
+  oracle rakudo-2026.07 → 0.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+
+- id     0108
+  from   inventory:Real.^methods
+  cell   Rat(1) | -0e0
+  code   (-0e0).Rat(1)
+  is     0.0
+  type   Rat
+  oracle rakudo-2026.07 → 0.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+
+- id     0109
+  from   inventory:Real.^methods
+  cell   Rat(-1) | -0e0
+  code   (-0e0).Rat(-1)
+  is     0.0
+  type   Rat
+  oracle rakudo-2026.07 → 0.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+
+- id     0110
+  from   inventory:Real.^methods
+  cell   Rat("a") | -0e0
+  code   (-0e0).Rat("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+
+- id     0111
+  from   inventory:Real.^methods
+  cell   Rat(Any) | -0e0
+  code   (-0e0).Rat(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.0
+
+- id     0112
+  from   inventory:Real.^methods
+  cell   Rat(0) | 42
+  code   (42).Rat(0)
+  is     42.0
+  type   Rat
+  oracle rakudo-2026.07 → 42.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 42.0
+
+- id     0113
+  from   inventory:Real.^methods
+  cell   Rat(1) | 42
+  code   (42).Rat(1)
+  is     42.0
+  type   Rat
+  oracle rakudo-2026.07 → 42.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 42.0
+
+- id     0114
+  from   inventory:Real.^methods
+  cell   Rat(-1) | 42
+  code   (42).Rat(-1)
+  is     42.0
+  type   Rat
+  oracle rakudo-2026.07 → 42.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 42.0
+
+- id     0115
+  from   inventory:Real.^methods
+  cell   Rat("a") | 42
+  code   (42).Rat("a")
+  is     42.0
+  type   Rat
+  oracle rakudo-2026.07 → 42.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 42.0
+
+- id     0116
+  from   inventory:Real.^methods
+  cell   Rat(Any) | 42
+  code   (42).Rat(Any)
+  is     42.0
+  type   Rat
+  oracle rakudo-2026.07 → 42.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 42.0
+
+- id     0117
+  from   inventory:Real.^methods
+  cell   Rat(0) | 1/3
+  code   (1/3).Rat(0)
+  is     <1/3>
+  type   Rat
+  oracle rakudo-2026.07 → <1/3>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1/3>
+
+- id     0118
+  from   inventory:Real.^methods
+  cell   Rat(1) | 1/3
+  code   (1/3).Rat(1)
+  is     <1/3>
+  type   Rat
+  oracle rakudo-2026.07 → <1/3>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1/3>
+
+- id     0119
+  from   inventory:Real.^methods
+  cell   Rat(-1) | 1/3
+  code   (1/3).Rat(-1)
+  is     <1/3>
+  type   Rat
+  oracle rakudo-2026.07 → <1/3>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1/3>
+
+- id     0120
+  from   inventory:Real.^methods
+  cell   Rat("a") | 1/3
+  code   (1/3).Rat("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1/3>
+
+- id     0121
+  from   inventory:Real.^methods
+  cell   Rat(Any) | 1/3
+  code   (1/3).Rat(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1/3>
+
+- id     0122
+  from   inventory:Real.^methods
+  cell   Rat(0) | True
+  code   (True).Rat(0)
+  is     True.0
+  type   Rat
+  oracle rakudo-2026.07 → True.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0
+
+- id     0123
+  from   inventory:Real.^methods
+  cell   Rat(1) | True
+  code   (True).Rat(1)
+  is     True.0
+  type   Rat
+  oracle rakudo-2026.07 → True.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0
+
+- id     0124
+  from   inventory:Real.^methods
+  cell   Rat(-1) | True
+  code   (True).Rat(-1)
+  is     True.0
+  type   Rat
+  oracle rakudo-2026.07 → True.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0
+
+- id     0125
+  from   inventory:Real.^methods
+  cell   Rat("a") | True
+  code   (True).Rat("a")
+  is     True.0
+  type   Rat
+  oracle rakudo-2026.07 → True.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0
+
+- id     0126
+  from   inventory:Real.^methods
+  cell   Rat(Any) | True
+  code   (True).Rat(Any)
+  is     True.0
+  type   Rat
+  oracle rakudo-2026.07 → True.0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0
+
+- id     0127
   from   inventory:Real.^methods
   cell   abs | 1
   code   (1).abs
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
-- id     0029
+- id     0128
   from   inventory:Real.^methods
   cell   abs | 1e0
   code   (1e0).abs
   is     1e0
   type   Num
   oracle rakudo-2026.07 → 1e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
 
-- id     0030
+- id     0129
   from   inventory:Real.^methods
   cell   abs | 1/2
   code   (1/2).abs
   is     0.5
   type   Rat
   oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5
 
-- id     0031
+- id     0130
+  from   inventory:Real.^methods
+  cell   abs | 0
+  code   (0).abs
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0131
+  from   inventory:Real.^methods
+  cell   abs | -1
+  code   (-1).abs
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0132
+  from   inventory:Real.^methods
+  cell   abs | Inf
+  code   (Inf).abs
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0133
+  from   inventory:Real.^methods
+  cell   abs | NaN
+  code   (NaN).abs
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0134
+  from   inventory:Real.^methods
+  cell   abs | 2**64
+  code   (2**64).abs
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 18446744073709551616
+  verdict disputed
+  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0135
+  from   inventory:Real.^methods
+  cell   abs | -Inf
+  code   (-Inf).abs
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0136
+  from   inventory:Real.^methods
+  cell   abs | 0e0
+  code   (0e0).abs
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0137
+  from   inventory:Real.^methods
+  cell   abs | -0e0
+  code   (-0e0).abs
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0138
+  from   inventory:Real.^methods
+  cell   abs | 42
+  code   (42).abs
+  is     42
+  type   Int
+  oracle rakudo-2026.07 → 42
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 42
+
+- id     0139
+  from   inventory:Real.^methods
+  cell   abs | 1/3
+  code   (1/3).abs
+  is     <1/3>
+  type   Rat
+  oracle rakudo-2026.07 → <1/3>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1/3>
+
+- id     0140
+  from   inventory:Real.^methods
+  cell   abs | True
+  code   (True).abs
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0141
   from   inventory:Real.^methods
   cell   acos | 1
   code   (1).acos
   is     0e0
   type   Num
   oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
 
-- id     0032
+- id     0142
   from   inventory:Real.^methods
   cell   acos | 1e0
   code   (1e0).acos
   is     0e0
   type   Num
   oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
 
-- id     0033
+- id     0143
   from   inventory:Real.^methods
   cell   acos | 1/2
   code   (1/2).acos
   is     1.0471975511965976e0
   type   Num
   oracle rakudo-2026.07 → 1.0471975511965976e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.0471975511965976e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0471975511965976e0
 
-- id     0034
+- id     0144
+  from   inventory:Real.^methods
+  cell   acos | 0
+  code   (0).acos
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
+
+- id     0145
+  from   inventory:Real.^methods
+  cell   acos | -1
+  code   (-1).acos
+  is     3.141592653589793e0
+  type   Num
+  oracle rakudo-2026.07 → 3.141592653589793e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 3.141592653589793e0
+
+- id     0146
+  from   inventory:Real.^methods
+  cell   acos | Inf
+  code   (Inf).acos
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0147
+  from   inventory:Real.^methods
+  cell   acos | NaN
+  code   (NaN).acos
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0148
+  from   inventory:Real.^methods
+  cell   acos | 2**64
+  code   (2**64).acos
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0149
+  from   inventory:Real.^methods
+  cell   acos | -Inf
+  code   (-Inf).acos
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0150
+  from   inventory:Real.^methods
+  cell   acos | 0e0
+  code   (0e0).acos
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
+
+- id     0151
+  from   inventory:Real.^methods
+  cell   acos | -0e0
+  code   (-0e0).acos
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
+
+- id     0152
+  from   inventory:Real.^methods
+  cell   acos | 42
+  code   (42).acos
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0153
+  from   inventory:Real.^methods
+  cell   acos | 1/3
+  code   (1/3).acos
+  is     1.2309594173407747e0
+  type   Num
+  oracle rakudo-2026.07 → 1.2309594173407747e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.2309594173407747e0
+
+- id     0154
+  from   inventory:Real.^methods
+  cell   acos | True
+  code   (True).acos
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0155
   from   inventory:Real.^methods
   cell   acosec | 1
   code   (1).acosec
   is     1.5707963267948966e0
   type   Num
   oracle rakudo-2026.07 → 1.5707963267948966e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
 
-- id     0035
+- id     0156
   from   inventory:Real.^methods
   cell   acosec | 1e0
   code   (1e0).acosec
   is     1.5707963267948966e0
   type   Num
   oracle rakudo-2026.07 → 1.5707963267948966e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
 
-- id     0036
+- id     0157
   from   inventory:Real.^methods
   cell   acosec | 1/2
   code   (1/2).acosec
   is     NaN
   type   Num
   oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
 
-- id     0037
+- id     0158
+  from   inventory:Real.^methods
+  cell   acosec | 0
+  code   (0).acosec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0159
+  from   inventory:Real.^methods
+  cell   acosec | -1
+  code   (-1).acosec
+  is     -1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → -1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.5707963267948966e0
+
+- id     0160
+  from   inventory:Real.^methods
+  cell   acosec | Inf
+  code   (Inf).acosec
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0161
+  from   inventory:Real.^methods
+  cell   acosec | NaN
+  code   (NaN).acosec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0162
+  from   inventory:Real.^methods
+  cell   acosec | 2**64
+  code   (2**64).acosec
+  is     5.421010862427522e-20
+  type   Num
+  oracle rakudo-2026.07 → 5.421010862427522e-20
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 5.421010862427522e-20
+
+- id     0163
+  from   inventory:Real.^methods
+  cell   acosec | -Inf
+  code   (-Inf).acosec
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0164
+  from   inventory:Real.^methods
+  cell   acosec | 0e0
+  code   (0e0).acosec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0165
+  from   inventory:Real.^methods
+  cell   acosec | -0e0
+  code   (-0e0).acosec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0166
+  from   inventory:Real.^methods
+  cell   acosec | 42
+  code   (42).acosec
+  is     0.02381177396066874e0
+  type   Num
+  oracle rakudo-2026.07 → 0.02381177396066874e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.02381177396066874e0
+
+- id     0167
+  from   inventory:Real.^methods
+  cell   acosec | 1/3
+  code   (1/3).acosec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0168
+  from   inventory:Real.^methods
+  cell   acosec | True
+  code   (True).acosec
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
+
+- id     0169
   from   inventory:Real.^methods
   cell   acosech | 1
   code   (1).acosech
   is     0.881373587019543e0
   type   Num
   oracle rakudo-2026.07 → 0.8813735870195429e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.881373587019543e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.881373587019543e0
   verdict impl-bug
   why    the correctly-rounded double for acosech of this argument is 0.881373587019543; the reference is out by one or more units in the last place
   ruled  2026-08-16 against rakudo-2026.07
 
-- id     0038
+- id     0170
   from   inventory:Real.^methods
   cell   acosech | 1e0
   code   (1e0).acosech
   is     0.881373587019543e0
   type   Num
   oracle rakudo-2026.07 → 0.8813735870195429e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.881373587019543e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.881373587019543e0
   verdict impl-bug
   why    the correctly-rounded double for acosech of this argument is 0.881373587019543; the reference is out by one or more units in the last place
   ruled  2026-08-16 against rakudo-2026.07
 
-- id     0039
+- id     0171
   from   inventory:Real.^methods
   cell   acosech | 1/2
   code   (1/2).acosech
   is     1.4436354751788103e0
   type   Num
   oracle rakudo-2026.07 → 1.4436354751788103e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.4436354751788103e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.4436354751788103e0
 
-- id     0040
+- id     0172
+  from   inventory:Real.^methods
+  cell   acosech | 0
+  code   (0).acosech
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0173
+  from   inventory:Real.^methods
+  cell   acosech | -1
+  code   (-1).acosech
+  is     -0.881373587019543e0
+  type   Num
+  oracle rakudo-2026.07 → -0.8813735870195429e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0.881373587019543e0
+  verdict impl-bug
+  why    the correctly-rounded double for acosech of this argument is -0.881373587019543; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0174
+  from   inventory:Real.^methods
+  cell   acosech | Inf
+  code   (Inf).acosech
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0175
+  from   inventory:Real.^methods
+  cell   acosech | NaN
+  code   (NaN).acosech
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0176
+  from   inventory:Real.^methods
+  cell   acosech | 2**64
+  code   (2**64).acosech
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 5.421010862427522e-20
+
+- id     0177
+  from   inventory:Real.^methods
+  cell   acosech | -Inf
+  code   (-Inf).acosech
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0178
+  from   inventory:Real.^methods
+  cell   acosech | 0e0
+  code   (0e0).acosech
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0179
+  from   inventory:Real.^methods
+  cell   acosech | -0e0
+  code   (-0e0).acosech
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0180
+  from   inventory:Real.^methods
+  cell   acosech | 42
+  code   (42).acosech
+  is     0.023807274806122432e0
+  type   Num
+  oracle rakudo-2026.07 → 0.023807274806122304e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.023807274806122432e0
+  verdict impl-bug
+  why    the correctly-rounded double for acosech of this argument is 0.023807274806122432; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0181
+  from   inventory:Real.^methods
+  cell   acosech | 1/3
+  code   (1/3).acosech
+  is     1.8184464592320668e0
+  type   Num
+  oracle rakudo-2026.07 → 1.8184464592320668e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.8184464592320668e0
+
+- id     0182
+  from   inventory:Real.^methods
+  cell   acosech | True
+  code   (True).acosech
+  is     0.881373587019543e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8813735870195429e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.881373587019543e0
+  verdict impl-bug
+  why    the correctly-rounded double for acosech of this argument is 0.881373587019543; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0183
   from   inventory:Real.^methods
   cell   acosh | 1
   code   (1).acosh
   is     0e0
   type   Num
   oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
 
-- id     0041
+- id     0184
   from   inventory:Real.^methods
   cell   acosh | 1e0
   code   (1e0).acosh
   is     0e0
   type   Num
   oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
 
-- id     0042
+- id     0185
   from   inventory:Real.^methods
   cell   acosh | 1/2
   code   (1/2).acosh
   is     NaN
   type   Num
   oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
 
-- id     0043
+- id     0186
+  from   inventory:Real.^methods
+  cell   acosh | 0
+  code   (0).acosh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0187
+  from   inventory:Real.^methods
+  cell   acosh | -1
+  code   (-1).acosh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0188
+  from   inventory:Real.^methods
+  cell   acosh | Inf
+  code   (Inf).acosh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0189
+  from   inventory:Real.^methods
+  cell   acosh | NaN
+  code   (NaN).acosh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0190
+  from   inventory:Real.^methods
+  cell   acosh | 2**64
+  code   (2**64).acosh
+  is     45.054566736396445e0
+  type   Num
+  oracle rakudo-2026.07 → 45.054566736396445e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 45.054566736396445e0
+
+- id     0191
+  from   inventory:Real.^methods
+  cell   acosh | -Inf
+  code   (-Inf).acosh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0192
+  from   inventory:Real.^methods
+  cell   acosh | 0e0
+  code   (0e0).acosh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0193
+  from   inventory:Real.^methods
+  cell   acosh | -0e0
+  code   (-0e0).acosh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0194
+  from   inventory:Real.^methods
+  cell   acosh | 42
+  code   (42).acosh
+  is     4.430675045349548e0
+  type   Num
+  oracle rakudo-2026.07 → 4.430675045349548e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 4.430675045349548e0
+
+- id     0195
+  from   inventory:Real.^methods
+  cell   acosh | 1/3
+  code   (1/3).acosh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0196
+  from   inventory:Real.^methods
+  cell   acosh | True
+  code   (True).acosh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0197
   from   inventory:Real.^methods
   cell   acotan | 1
   code   (1).acotan
   is     0.7853981633974483e0
   type   Num
   oracle rakudo-2026.07 → 0.7853981633974483e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.7853981633974483e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.7853981633974483e0
 
-- id     0044
+- id     0198
   from   inventory:Real.^methods
   cell   acotan | 1e0
   code   (1e0).acotan
   is     0.7853981633974483e0
   type   Num
   oracle rakudo-2026.07 → 0.7853981633974483e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.7853981633974483e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.7853981633974483e0
 
-- id     0045
+- id     0199
   from   inventory:Real.^methods
   cell   acotan | 1/2
   code   (1/2).acotan
   is     1.1071487177940906e0
   type   Num
   oracle rakudo-2026.07 → 1.1071487177940906e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.1071487177940906e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.1071487177940906e0
 
-- id     0046
+- id     0200
+  from   inventory:Real.^methods
+  cell   acotan | 0
+  code   (0).acotan
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
+
+- id     0201
+  from   inventory:Real.^methods
+  cell   acotan | -1
+  code   (-1).acotan
+  is     -0.7853981633974483e0
+  type   Num
+  oracle rakudo-2026.07 → -0.7853981633974483e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0.7853981633974483e0
+
+- id     0202
+  from   inventory:Real.^methods
+  cell   acotan | Inf
+  code   (Inf).acotan
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0203
+  from   inventory:Real.^methods
+  cell   acotan | NaN
+  code   (NaN).acotan
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0204
+  from   inventory:Real.^methods
+  cell   acotan | 2**64
+  code   (2**64).acotan
+  is     5.421010862427522e-20
+  type   Num
+  oracle rakudo-2026.07 → 5.421010862427522e-20
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 5.421010862427522e-20
+
+- id     0205
+  from   inventory:Real.^methods
+  cell   acotan | -Inf
+  code   (-Inf).acotan
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0206
+  from   inventory:Real.^methods
+  cell   acotan | 0e0
+  code   (0e0).acotan
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
+
+- id     0207
+  from   inventory:Real.^methods
+  cell   acotan | -0e0
+  code   (-0e0).acotan
+  is     -1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → -1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.5707963267948966e0
+
+- id     0208
+  from   inventory:Real.^methods
+  cell   acotan | 42
+  code   (42).acotan
+  is     0.023805026185069942e0
+  type   Num
+  oracle rakudo-2026.07 → 0.023805026185069942e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.023805026185069942e0
+
+- id     0209
+  from   inventory:Real.^methods
+  cell   acotan | 1/3
+  code   (1/3).acotan
+  is     1.2490457723982544e0
+  type   Num
+  oracle rakudo-2026.07 → 1.2490457723982544e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.2490457723982544e0
+
+- id     0210
+  from   inventory:Real.^methods
+  cell   acotan | True
+  code   (True).acotan
+  is     0.7853981633974483e0
+  type   Num
+  oracle rakudo-2026.07 → 0.7853981633974483e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.7853981633974483e0
+
+- id     0211
   from   inventory:Real.^methods
   cell   acotanh | 1
   code   (1).acotanh
   is     Inf
   type   Num
   oracle rakudo-2026.07 → Inf
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
 
-- id     0047
+- id     0212
   from   inventory:Real.^methods
   cell   acotanh | 1e0
   code   (1e0).acotanh
   is     Inf
   type   Num
   oracle rakudo-2026.07 → Inf
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
 
-- id     0048
+- id     0213
   from   inventory:Real.^methods
   cell   acotanh | 1/2
   code   (1/2).acotanh
   is     NaN
   type   Num
   oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
 
-- id     0049
+- id     0214
+  from   inventory:Real.^methods
+  cell   acotanh | 0
+  code   (0).acotanh
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0215
+  from   inventory:Real.^methods
+  cell   acotanh | -1
+  code   (-1).acotanh
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0216
+  from   inventory:Real.^methods
+  cell   acotanh | Inf
+  code   (Inf).acotanh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0217
+  from   inventory:Real.^methods
+  cell   acotanh | NaN
+  code   (NaN).acotanh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0218
+  from   inventory:Real.^methods
+  cell   acotanh | 2**64
+  code   (2**64).acotanh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 5.421010862427522e-20
+
+- id     0219
+  from   inventory:Real.^methods
+  cell   acotanh | -Inf
+  code   (-Inf).acotanh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0220
+  from   inventory:Real.^methods
+  cell   acotanh | 0e0
+  code   (0e0).acotanh
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0221
+  from   inventory:Real.^methods
+  cell   acotanh | -0e0
+  code   (-0e0).acotanh
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0222
+  from   inventory:Real.^methods
+  cell   acotanh | 42
+  code   (42).acotanh
+  is     0.02381402449462731e0
+  type   Num
+  oracle rakudo-2026.07 → 0.023814024494627332e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.02381402449462731e0
+  verdict impl-bug
+  why    the correctly-rounded double for acotanh of this argument is 0.02381402449462731; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0223
+  from   inventory:Real.^methods
+  cell   acotanh | 1/3
+  code   (1/3).acotanh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0224
+  from   inventory:Real.^methods
+  cell   acotanh | True
+  code   (True).acotanh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0225
   from   inventory:Real.^methods
   cell   asec | 1
   code   (1).asec
   is     0e0
   type   Num
   oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
 
-- id     0050
+- id     0226
   from   inventory:Real.^methods
   cell   asec | 1e0
   code   (1e0).asec
   is     0e0
   type   Num
   oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
 
-- id     0051
+- id     0227
   from   inventory:Real.^methods
   cell   asec | 1/2
   code   (1/2).asec
   is     NaN
   type   Num
   oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
 
-- id     0052
+- id     0228
+  from   inventory:Real.^methods
+  cell   asec | 0
+  code   (0).asec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0229
+  from   inventory:Real.^methods
+  cell   asec | -1
+  code   (-1).asec
+  is     3.141592653589793e0
+  type   Num
+  oracle rakudo-2026.07 → 3.141592653589793e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 3.141592653589793e0
+
+- id     0230
+  from   inventory:Real.^methods
+  cell   asec | Inf
+  code   (Inf).asec
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
+
+- id     0231
+  from   inventory:Real.^methods
+  cell   asec | NaN
+  code   (NaN).asec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0232
+  from   inventory:Real.^methods
+  cell   asec | 2**64
+  code   (2**64).asec
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
+
+- id     0233
+  from   inventory:Real.^methods
+  cell   asec | -Inf
+  code   (-Inf).asec
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
+
+- id     0234
+  from   inventory:Real.^methods
+  cell   asec | 0e0
+  code   (0e0).asec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0235
+  from   inventory:Real.^methods
+  cell   asec | -0e0
+  code   (-0e0).asec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0236
+  from   inventory:Real.^methods
+  cell   asec | 42
+  code   (42).asec
+  is     1.5469845528342279e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5469845528342279e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5469845528342279e0
+
+- id     0237
+  from   inventory:Real.^methods
+  cell   asec | 1/3
+  code   (1/3).asec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0238
+  from   inventory:Real.^methods
+  cell   asec | True
+  code   (True).asec
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0239
   from   inventory:Real.^methods
   cell   asech | 1
   code   (1).asech
   is     0e0
   type   Num
   oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
 
-- id     0053
+- id     0240
   from   inventory:Real.^methods
   cell   asech | 1e0
   code   (1e0).asech
   is     0e0
   type   Num
   oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
 
-- id     0054
+- id     0241
   from   inventory:Real.^methods
   cell   asech | 1/2
   code   (1/2).asech
   is     1.3169578969248166e0
   type   Num
   oracle rakudo-2026.07 → 1.3169578969248166e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.3169578969248166e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.3169578969248166e0
 
-- id     0055
+- id     0242
+  from   inventory:Real.^methods
+  cell   asech | 0
+  code   (0).asech
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0243
+  from   inventory:Real.^methods
+  cell   asech | -1
+  code   (-1).asech
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0244
+  from   inventory:Real.^methods
+  cell   asech | Inf
+  code   (Inf).asech
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0245
+  from   inventory:Real.^methods
+  cell   asech | NaN
+  code   (NaN).asech
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0246
+  from   inventory:Real.^methods
+  cell   asech | 2**64
+  code   (2**64).asech
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0247
+  from   inventory:Real.^methods
+  cell   asech | -Inf
+  code   (-Inf).asech
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0248
+  from   inventory:Real.^methods
+  cell   asech | 0e0
+  code   (0e0).asech
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0249
+  from   inventory:Real.^methods
+  cell   asech | -0e0
+  code   (-0e0).asech
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0250
+  from   inventory:Real.^methods
+  cell   asech | 42
+  code   (42).asech
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0251
+  from   inventory:Real.^methods
+  cell   asech | 1/3
+  code   (1/3).asech
+  is     1.762747174039086e0
+  type   Num
+  oracle rakudo-2026.07 → 1.762747174039086e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.762747174039086e0
+
+- id     0252
+  from   inventory:Real.^methods
+  cell   asech | True
+  code   (True).asech
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0253
   from   inventory:Real.^methods
   cell   asin | 1
   code   (1).asin
   is     1.5707963267948966e0
   type   Num
   oracle rakudo-2026.07 → 1.5707963267948966e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
 
-- id     0056
+- id     0254
   from   inventory:Real.^methods
   cell   asin | 1e0
   code   (1e0).asin
   is     1.5707963267948966e0
   type   Num
   oracle rakudo-2026.07 → 1.5707963267948966e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
 
-- id     0057
+- id     0255
   from   inventory:Real.^methods
   cell   asin | 1/2
   code   (1/2).asin
   is     0.5235987755982988e0
   type   Num
   oracle rakudo-2026.07 → 0.5235987755982988e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.5235987755982988e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5235987755982988e0
 
-- id     0058
+- id     0256
+  from   inventory:Real.^methods
+  cell   asin | 0
+  code   (0).asin
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0257
+  from   inventory:Real.^methods
+  cell   asin | -1
+  code   (-1).asin
+  is     -1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → -1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.5707963267948966e0
+
+- id     0258
+  from   inventory:Real.^methods
+  cell   asin | Inf
+  code   (Inf).asin
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0259
+  from   inventory:Real.^methods
+  cell   asin | NaN
+  code   (NaN).asin
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0260
+  from   inventory:Real.^methods
+  cell   asin | 2**64
+  code   (2**64).asin
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0261
+  from   inventory:Real.^methods
+  cell   asin | -Inf
+  code   (-Inf).asin
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0262
+  from   inventory:Real.^methods
+  cell   asin | 0e0
+  code   (0e0).asin
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0263
+  from   inventory:Real.^methods
+  cell   asin | -0e0
+  code   (-0e0).asin
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0264
+  from   inventory:Real.^methods
+  cell   asin | 42
+  code   (42).asin
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0265
+  from   inventory:Real.^methods
+  cell   asin | 1/3
+  code   (1/3).asin
+  is     0.3398369094541219e0
+  type   Num
+  oracle rakudo-2026.07 → 0.3398369094541219e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.3398369094541219e0
+
+- id     0266
+  from   inventory:Real.^methods
+  cell   asin | True
+  code   (True).asin
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
+
+- id     0267
   from   inventory:Real.^methods
   cell   asinh | 1
   code   (1).asinh
   is     0.881373587019543e0
   type   Num
   oracle rakudo-2026.07 → 0.8813735870195429e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.881373587019543e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.881373587019543e0
   verdict impl-bug
   why    the correctly-rounded double for asinh of this argument is 0.881373587019543; the reference is out by one or more units in the last place
   ruled  2026-08-16 against rakudo-2026.07
 
-- id     0059
+- id     0268
   from   inventory:Real.^methods
   cell   asinh | 1e0
   code   (1e0).asinh
   is     0.881373587019543e0
   type   Num
   oracle rakudo-2026.07 → 0.8813735870195429e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.881373587019543e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.881373587019543e0
   verdict impl-bug
   why    the correctly-rounded double for asinh of this argument is 0.881373587019543; the reference is out by one or more units in the last place
   ruled  2026-08-16 against rakudo-2026.07
 
-- id     0060
+- id     0269
   from   inventory:Real.^methods
   cell   asinh | 1/2
   code   (1/2).asinh
   is     0.48121182505960347e0
   type   Num
   oracle rakudo-2026.07 → 0.48121182505960347e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.48121182505960347e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.48121182505960347e0
 
-- id     0061
+- id     0270
+  from   inventory:Real.^methods
+  cell   asinh | 0
+  code   (0).asinh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0271
+  from   inventory:Real.^methods
+  cell   asinh | -1
+  code   (-1).asinh
+  is     -0.881373587019543e0
+  type   Num
+  oracle rakudo-2026.07 → -0.8813735870195429e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0.881373587019543e0
+  verdict impl-bug
+  why    the correctly-rounded double for asinh of this argument is -0.881373587019543; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0272
+  from   inventory:Real.^methods
+  cell   asinh | Inf
+  code   (Inf).asinh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0273
+  from   inventory:Real.^methods
+  cell   asinh | NaN
+  code   (NaN).asinh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0274
+  from   inventory:Real.^methods
+  cell   asinh | 2**64
+  code   (2**64).asinh
+  is     45.054566736396445e0
+  type   Num
+  oracle rakudo-2026.07 → 45.054566736396445e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 45.054566736396445e0
+
+- id     0275
+  from   inventory:Real.^methods
+  cell   asinh | -Inf
+  code   (-Inf).asinh
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0276
+  from   inventory:Real.^methods
+  cell   asinh | 0e0
+  code   (0e0).asinh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0277
+  from   inventory:Real.^methods
+  cell   asinh | -0e0
+  code   (-0e0).asinh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0278
+  from   inventory:Real.^methods
+  cell   asinh | 42
+  code   (42).asinh
+  is     4.430958492080543e0
+  type   Num
+  oracle rakudo-2026.07 → 4.430958492080543e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 4.430958492080543e0
+
+- id     0279
+  from   inventory:Real.^methods
+  cell   asinh | 1/3
+  code   (1/3).asinh
+  is     0.32745015023725843e0
+  type   Num
+  oracle rakudo-2026.07 → 0.32745015023725843e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.32745015023725843e0
+
+- id     0280
+  from   inventory:Real.^methods
+  cell   asinh | True
+  code   (True).asinh
+  is     0.881373587019543e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8813735870195429e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.881373587019543e0
+  verdict impl-bug
+  why    the correctly-rounded double for asinh of this argument is 0.881373587019543; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0281
   from   inventory:Real.^methods
   cell   atan | 1
   code   (1).atan
   is     0.7853981633974483e0
   type   Num
   oracle rakudo-2026.07 → 0.7853981633974483e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.7853981633974483e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.7853981633974483e0
 
-- id     0062
+- id     0282
   from   inventory:Real.^methods
   cell   atan | 1e0
   code   (1e0).atan
   is     0.7853981633974483e0
   type   Num
   oracle rakudo-2026.07 → 0.7853981633974483e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.7853981633974483e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.7853981633974483e0
 
-- id     0063
+- id     0283
   from   inventory:Real.^methods
   cell   atan | 1/2
   code   (1/2).atan
   is     0.46364760900080615e0
   type   Num
   oracle rakudo-2026.07 → 0.46364760900080615e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.46364760900080615e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.46364760900080615e0
 
-- id     0064
+- id     0284
+  from   inventory:Real.^methods
+  cell   atan | 0
+  code   (0).atan
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0285
+  from   inventory:Real.^methods
+  cell   atan | -1
+  code   (-1).atan
+  is     -0.7853981633974483e0
+  type   Num
+  oracle rakudo-2026.07 → -0.7853981633974483e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0.7853981633974483e0
+
+- id     0286
+  from   inventory:Real.^methods
+  cell   atan | Inf
+  code   (Inf).atan
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
+
+- id     0287
+  from   inventory:Real.^methods
+  cell   atan | NaN
+  code   (NaN).atan
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0288
+  from   inventory:Real.^methods
+  cell   atan | 2**64
+  code   (2**64).atan
+  is     1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5707963267948966e0
+
+- id     0289
+  from   inventory:Real.^methods
+  cell   atan | -Inf
+  code   (-Inf).atan
+  is     -1.5707963267948966e0
+  type   Num
+  oracle rakudo-2026.07 → -1.5707963267948966e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.5707963267948966e0
+
+- id     0290
+  from   inventory:Real.^methods
+  cell   atan | 0e0
+  code   (0e0).atan
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0291
+  from   inventory:Real.^methods
+  cell   atan | -0e0
+  code   (-0e0).atan
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0292
+  from   inventory:Real.^methods
+  cell   atan | 42
+  code   (42).atan
+  is     1.5469913006098266e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5469913006098266e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5469913006098266e0
+
+- id     0293
+  from   inventory:Real.^methods
+  cell   atan | 1/3
+  code   (1/3).atan
+  is     0.3217505543966422e0
+  type   Num
+  oracle rakudo-2026.07 → 0.3217505543966422e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.3217505543966422e0
+
+- id     0294
+  from   inventory:Real.^methods
+  cell   atan | True
+  code   (True).atan
+  is     0.7853981633974483e0
+  type   Num
+  oracle rakudo-2026.07 → 0.7853981633974483e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.7853981633974483e0
+
+- id     0295
   from   inventory:Real.^methods
   cell   atanh | 1
   code   (1).atanh
   is     Inf
   type   Num
   oracle rakudo-2026.07 → Inf
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
 
-- id     0065
+- id     0296
   from   inventory:Real.^methods
   cell   atanh | 1e0
   code   (1e0).atanh
   is     Inf
   type   Num
   oracle rakudo-2026.07 → Inf
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
 
-- id     0066
+- id     0297
   from   inventory:Real.^methods
   cell   atanh | 1/2
   code   (1/2).atanh
   is     0.5493061443340549e0
   type   Num
   oracle rakudo-2026.07 → 0.5493061443340549e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.5493061443340549e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5493061443340549e0
 
-- id     0067
+- id     0298
+  from   inventory:Real.^methods
+  cell   atanh | 0
+  code   (0).atanh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0299
+  from   inventory:Real.^methods
+  cell   atanh | -1
+  code   (-1).atanh
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0300
+  from   inventory:Real.^methods
+  cell   atanh | Inf
+  code   (Inf).atanh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0301
+  from   inventory:Real.^methods
+  cell   atanh | NaN
+  code   (NaN).atanh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0302
+  from   inventory:Real.^methods
+  cell   atanh | 2**64
+  code   (2**64).atanh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0303
+  from   inventory:Real.^methods
+  cell   atanh | -Inf
+  code   (-Inf).atanh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0304
+  from   inventory:Real.^methods
+  cell   atanh | 0e0
+  code   (0e0).atanh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0305
+  from   inventory:Real.^methods
+  cell   atanh | -0e0
+  code   (-0e0).atanh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0306
+  from   inventory:Real.^methods
+  cell   atanh | 42
+  code   (42).atanh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0307
+  from   inventory:Real.^methods
+  cell   atanh | 1/3
+  code   (1/3).atanh
+  is     0.34657359027997264e0
+  type   Num
+  oracle rakudo-2026.07 → 0.3465735902799726e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.34657359027997264e0
+  verdict impl-bug
+  why    the correctly-rounded double for atanh of this argument is 0.34657359027997264; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0308
+  from   inventory:Real.^methods
+  cell   atanh | True
+  code   (True).atanh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0309
   from   inventory:Real.^methods
   cell   ceiling | 1
   code   (1).ceiling
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
-- id     0068
+- id     0310
   from   inventory:Real.^methods
   cell   ceiling | 1e0
   code   (1e0).ceiling
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
-- id     0069
+- id     0311
   from   inventory:Real.^methods
   cell   ceiling | 1/2
   code   (1/2).ceiling
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
-- id     0070
+- id     0312
+  from   inventory:Real.^methods
+  cell   ceiling | 0
+  code   (0).ceiling
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0313
+  from   inventory:Real.^methods
+  cell   ceiling | -1
+  code   (-1).ceiling
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0314
+  from   inventory:Real.^methods
+  cell   ceiling | Inf
+  code   (Inf).ceiling
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0315
+  from   inventory:Real.^methods
+  cell   ceiling | NaN
+  code   (NaN).ceiling
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0316
+  from   inventory:Real.^methods
+  cell   ceiling | 2**64
+  code   (2**64).ceiling
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 18446744073709551616
+  verdict disputed
+  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0317
+  from   inventory:Real.^methods
+  cell   ceiling | -Inf
+  code   (-Inf).ceiling
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0318
+  from   inventory:Real.^methods
+  cell   ceiling | 0e0
+  code   (0e0).ceiling
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0319
+  from   inventory:Real.^methods
+  cell   ceiling | -0e0
+  code   (-0e0).ceiling
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0320
+  from   inventory:Real.^methods
+  cell   ceiling | 42
+  code   (42).ceiling
+  is     42
+  type   Int
+  oracle rakudo-2026.07 → 42
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 42
+
+- id     0321
+  from   inventory:Real.^methods
+  cell   ceiling | 1/3
+  code   (1/3).ceiling
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0322
+  from   inventory:Real.^methods
+  cell   ceiling | True
+  code   (True).ceiling
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0323
   from   inventory:Real.^methods
   cell   cis | 1
   code   (1).cis
   is     <0.5403023058681398+0.8414709848078965i>
   type   Complex
   oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <0.5403023058681398+0.8414709848078965i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.5403023058681398+0.8414709848078965i>
 
-- id     0071
+- id     0324
   from   inventory:Real.^methods
   cell   cis | 1e0
   code   (1e0).cis
   is     <0.5403023058681398+0.8414709848078965i>
   type   Complex
   oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <0.5403023058681398+0.8414709848078965i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.5403023058681398+0.8414709848078965i>
 
-- id     0072
+- id     0325
   from   inventory:Real.^methods
   cell   cis | 1/2
   code   (1/2).cis
   is     <0.8775825618903728+0.479425538604203i>
   type   Complex
   oracle rakudo-2026.07 → <0.8775825618903728+0.479425538604203i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <0.8775825618903728+0.479425538604203i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.8775825618903728+0.479425538604203i>
 
-- id     0073
+- id     0326
+  from   inventory:Real.^methods
+  cell   cis | 0
+  code   (0).cis
+  is     <1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1+0i>
+
+- id     0327
+  from   inventory:Real.^methods
+  cell   cis | -1
+  code   (-1).cis
+  is     <0.5403023058681398-0.8414709848078965i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5403023058681398-0.8414709848078965i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.5403023058681398-0.8414709848078965i>
+
+- id     0328
+  from   inventory:Real.^methods
+  cell   cis | Inf
+  code   (Inf).cis
+  is     <NaN+NaN\i>
+  type   Complex
+  oracle rakudo-2026.07 → <NaN+NaN\i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <NaN+NaNi>
+
+- id     0329
+  from   inventory:Real.^methods
+  cell   cis | NaN
+  code   (NaN).cis
+  is     <NaN+NaN\i>
+  type   Complex
+  oracle rakudo-2026.07 → <NaN+NaN\i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <NaN+NaNi>
+
+- id     0330
+  from   inventory:Real.^methods
+  cell   cis | 2**64
+  code   (2**64).cis
+  is     <-0.9997215163885841+0.023598509904439558i>
+  type   Complex
+  oracle rakudo-2026.07 → <-0.9997215163885841+0.023598509904439558i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-0.9997215163885841+0.023598509904439558i>
+
+- id     0331
+  from   inventory:Real.^methods
+  cell   cis | -Inf
+  code   (-Inf).cis
+  is     <NaN+NaN\i>
+  type   Complex
+  oracle rakudo-2026.07 → <NaN+NaN\i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <NaN+NaNi>
+
+- id     0332
+  from   inventory:Real.^methods
+  cell   cis | 0e0
+  code   (0e0).cis
+  is     <1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1+0i>
+
+- id     0333
+  from   inventory:Real.^methods
+  cell   cis | -0e0
+  code   (-0e0).cis
+  is     <1-0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1-0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1-0i>
+
+- id     0334
+  from   inventory:Real.^methods
+  cell   cis | 42
+  code   (42).cis
+  is     <-0.3999853149883513-0.9165215479156338i>
+  type   Complex
+  oracle rakudo-2026.07 → <-0.3999853149883513-0.9165215479156338i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-0.3999853149883513-0.9165215479156338i>
+
+- id     0335
+  from   inventory:Real.^methods
+  cell   cis | 1/3
+  code   (1/3).cis
+  is     <0.9449569463147377+0.3271946967961522i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.9449569463147377+0.3271946967961522i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.9449569463147377+0.3271946967961522i>
+
+- id     0336
+  from   inventory:Real.^methods
+  cell   cis | True
+  code   (True).cis
+  is     <0.5403023058681398+0.8414709848078965i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.5403023058681398+0.8414709848078965i>
+
+- id     0337
   from   inventory:Real.^methods
   cell   conj | 1
   code   (1).conj
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
-- id     0074
+- id     0338
   from   inventory:Real.^methods
   cell   conj | 1e0
   code   (1e0).conj
   is     1e0
   type   Num
   oracle rakudo-2026.07 → 1e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
 
-- id     0075
+- id     0339
   from   inventory:Real.^methods
   cell   conj | 1/2
   code   (1/2).conj
   is     0.5
   type   Rat
   oracle rakudo-2026.07 → 0.5
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.5
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5
 
-- id     0076
+- id     0340
+  from   inventory:Real.^methods
+  cell   conj | 0
+  code   (0).conj
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0341
+  from   inventory:Real.^methods
+  cell   conj | -1
+  code   (-1).conj
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0342
+  from   inventory:Real.^methods
+  cell   conj | Inf
+  code   (Inf).conj
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0343
+  from   inventory:Real.^methods
+  cell   conj | NaN
+  code   (NaN).conj
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0344
+  from   inventory:Real.^methods
+  cell   conj | 2**64
+  code   (2**64).conj
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 18446744073709551616
+  verdict disputed
+  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0345
+  from   inventory:Real.^methods
+  cell   conj | -Inf
+  code   (-Inf).conj
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0346
+  from   inventory:Real.^methods
+  cell   conj | 0e0
+  code   (0e0).conj
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0347
+  from   inventory:Real.^methods
+  cell   conj | -0e0
+  code   (-0e0).conj
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0348
+  from   inventory:Real.^methods
+  cell   conj | 42
+  code   (42).conj
+  is     42
+  type   Int
+  oracle rakudo-2026.07 → 42
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 42
+
+- id     0349
+  from   inventory:Real.^methods
+  cell   conj | 1/3
+  code   (1/3).conj
+  is     <1/3>
+  type   Rat
+  oracle rakudo-2026.07 → <1/3>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1/3>
+
+- id     0350
+  from   inventory:Real.^methods
+  cell   conj | True
+  code   (True).conj
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0351
   from   inventory:Real.^methods
   cell   cos | 1
   code   (1).cos
   is     0.5403023058681398e0
   type   Num
   oracle rakudo-2026.07 → 0.5403023058681398e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.5403023058681398e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5403023058681398e0
 
-- id     0077
+- id     0352
   from   inventory:Real.^methods
   cell   cos | 1e0
   code   (1e0).cos
   is     0.5403023058681398e0
   type   Num
   oracle rakudo-2026.07 → 0.5403023058681398e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.5403023058681398e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5403023058681398e0
 
-- id     0078
+- id     0353
   from   inventory:Real.^methods
   cell   cos | 1/2
   code   (1/2).cos
   is     0.8775825618903728e0
   type   Num
   oracle rakudo-2026.07 → 0.8775825618903728e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.8775825618903728e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.8775825618903728e0
 
-- id     0079
+- id     0354
+  from   inventory:Real.^methods
+  cell   cos | 0
+  code   (0).cos
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0355
+  from   inventory:Real.^methods
+  cell   cos | -1
+  code   (-1).cos
+  is     0.5403023058681398e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5403023058681398e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5403023058681398e0
+
+- id     0356
+  from   inventory:Real.^methods
+  cell   cos | Inf
+  code   (Inf).cos
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0357
+  from   inventory:Real.^methods
+  cell   cos | NaN
+  code   (NaN).cos
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0358
+  from   inventory:Real.^methods
+  cell   cos | 2**64
+  code   (2**64).cos
+  is     -0.9997215163885841e0
+  type   Num
+  oracle rakudo-2026.07 → -0.9997215163885841e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0.9997215163885841e0
+
+- id     0359
+  from   inventory:Real.^methods
+  cell   cos | -Inf
+  code   (-Inf).cos
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0360
+  from   inventory:Real.^methods
+  cell   cos | 0e0
+  code   (0e0).cos
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0361
+  from   inventory:Real.^methods
+  cell   cos | -0e0
+  code   (-0e0).cos
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0362
+  from   inventory:Real.^methods
+  cell   cos | 42
+  code   (42).cos
+  is     -0.3999853149883513e0
+  type   Num
+  oracle rakudo-2026.07 → -0.3999853149883513e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0.3999853149883513e0
+
+- id     0363
+  from   inventory:Real.^methods
+  cell   cos | 1/3
+  code   (1/3).cos
+  is     0.9449569463147377e0
+  type   Num
+  oracle rakudo-2026.07 → 0.9449569463147377e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.9449569463147377e0
+
+- id     0364
+  from   inventory:Real.^methods
+  cell   cos | True
+  code   (True).cos
+  is     0.5403023058681398e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5403023058681398e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5403023058681398e0
+
+- id     0365
   from   inventory:Real.^methods
   cell   cosec | 1
   code   (1).cosec
   is     1.1883951057781212e0
   type   Num
   oracle rakudo-2026.07 → 1.1883951057781212e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.1883951057781212e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.1883951057781212e0
 
-- id     0080
+- id     0366
   from   inventory:Real.^methods
   cell   cosec | 1e0
   code   (1e0).cosec
   is     1.1883951057781212e0
   type   Num
   oracle rakudo-2026.07 → 1.1883951057781212e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.1883951057781212e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.1883951057781212e0
 
-- id     0081
+- id     0367
   from   inventory:Real.^methods
   cell   cosec | 1/2
   code   (1/2).cosec
   is     2.085829642933488e0
   type   Num
   oracle rakudo-2026.07 → 2.085829642933488e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 2.085829642933488e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 2.085829642933488e0
 
-- id     0082
+- id     0368
+  from   inventory:Real.^methods
+  cell   cosec | 0
+  code   (0).cosec
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0369
+  from   inventory:Real.^methods
+  cell   cosec | -1
+  code   (-1).cosec
+  is     -1.1883951057781212e0
+  type   Num
+  oracle rakudo-2026.07 → -1.1883951057781212e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.1883951057781212e0
+
+- id     0370
+  from   inventory:Real.^methods
+  cell   cosec | Inf
+  code   (Inf).cosec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0371
+  from   inventory:Real.^methods
+  cell   cosec | NaN
+  code   (NaN).cosec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0372
+  from   inventory:Real.^methods
+  cell   cosec | 2**64
+  code   (2**64).cosec
+  is     42.37555693344313e0
+  type   Num
+  oracle rakudo-2026.07 → 42.37555693344313e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 42.37555693344313e0
+
+- id     0373
+  from   inventory:Real.^methods
+  cell   cosec | -Inf
+  code   (-Inf).cosec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0374
+  from   inventory:Real.^methods
+  cell   cosec | 0e0
+  code   (0e0).cosec
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0375
+  from   inventory:Real.^methods
+  cell   cosec | -0e0
+  code   (-0e0).cosec
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0376
+  from   inventory:Real.^methods
+  cell   cosec | 42
+  code   (42).cosec
+  is     -1.0910818215613305e0
+  type   Num
+  oracle rakudo-2026.07 → -1.0910818215613305e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.0910818215613305e0
+
+- id     0377
+  from   inventory:Real.^methods
+  cell   cosec | 1/3
+  code   (1/3).cosec
+  is     3.0562842545795195e0
+  type   Num
+  oracle rakudo-2026.07 → 3.0562842545795195e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 3.0562842545795195e0
+
+- id     0378
+  from   inventory:Real.^methods
+  cell   cosec | True
+  code   (True).cosec
+  is     1.1883951057781212e0
+  type   Num
+  oracle rakudo-2026.07 → 1.1883951057781212e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.1883951057781212e0
+
+- id     0379
   from   inventory:Real.^methods
   cell   cosech | 1
   code   (1).cosech
   is     0.8509181282393216e0
   type   Num
   oracle rakudo-2026.07 → 0.8509181282393216e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.8509181282393216e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.8509181282393216e0
 
-- id     0083
+- id     0380
   from   inventory:Real.^methods
   cell   cosech | 1e0
   code   (1e0).cosech
   is     0.8509181282393216e0
   type   Num
   oracle rakudo-2026.07 → 0.8509181282393216e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.8509181282393216e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.8509181282393216e0
 
-- id     0084
+- id     0381
   from   inventory:Real.^methods
   cell   cosech | 1/2
   code   (1/2).cosech
   is     1.9190347513349437e0
   type   Num
   oracle rakudo-2026.07 → 1.9190347513349437e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.9190347513349437e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.9190347513349437e0
 
-- id     0085
+- id     0382
+  from   inventory:Real.^methods
+  cell   cosech | 0
+  code   (0).cosech
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0383
+  from   inventory:Real.^methods
+  cell   cosech | -1
+  code   (-1).cosech
+  is     -0.8509181282393216e0
+  type   Num
+  oracle rakudo-2026.07 → -0.8509181282393216e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0.8509181282393216e0
+
+- id     0384
+  from   inventory:Real.^methods
+  cell   cosech | Inf
+  code   (Inf).cosech
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0385
+  from   inventory:Real.^methods
+  cell   cosech | NaN
+  code   (NaN).cosech
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0386
+  from   inventory:Real.^methods
+  cell   cosech | 2**64
+  code   (2**64).cosech
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0387
+  from   inventory:Real.^methods
+  cell   cosech | -Inf
+  code   (-Inf).cosech
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0388
+  from   inventory:Real.^methods
+  cell   cosech | 0e0
+  code   (0e0).cosech
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0389
+  from   inventory:Real.^methods
+  cell   cosech | -0e0
+  code   (-0e0).cosech
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0390
+  from   inventory:Real.^methods
+  cell   cosech | 42
+  code   (42).cosech
+  is     1.149904452858712e-18
+  type   Num
+  oracle rakudo-2026.07 → 1.149904452858712e-18
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.149904452858712e-18
+
+- id     0391
+  from   inventory:Real.^methods
+  cell   cosech | 1/3
+  code   (1/3).cosech
+  is     2.9451562666948146e0
+  type   Num
+  oracle rakudo-2026.07 → 2.9451562666948146e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 2.9451562666948146e0
+
+- id     0392
+  from   inventory:Real.^methods
+  cell   cosech | True
+  code   (True).cosech
+  is     0.8509181282393216e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8509181282393216e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.8509181282393216e0
+
+- id     0393
   from   inventory:Real.^methods
   cell   cosh | 1
   code   (1).cosh
   is     1.5430806348152437e0
   type   Num
   oracle rakudo-2026.07 → 1.5430806348152437e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.5430806348152437e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5430806348152437e0
 
-- id     0086
+- id     0394
   from   inventory:Real.^methods
   cell   cosh | 1e0
   code   (1e0).cosh
   is     1.5430806348152437e0
   type   Num
   oracle rakudo-2026.07 → 1.5430806348152437e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.5430806348152437e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5430806348152437e0
 
-- id     0087
+- id     0395
   from   inventory:Real.^methods
   cell   cosh | 1/2
   code   (1/2).cosh
   is     1.1276259652063807e0
   type   Num
   oracle rakudo-2026.07 → 1.1276259652063807e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.1276259652063807e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.1276259652063807e0
 
-- id     0088
+- id     0396
+  from   inventory:Real.^methods
+  cell   cosh | 0
+  code   (0).cosh
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0397
+  from   inventory:Real.^methods
+  cell   cosh | -1
+  code   (-1).cosh
+  is     1.5430806348152437e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5430806348152437e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5430806348152437e0
+
+- id     0398
+  from   inventory:Real.^methods
+  cell   cosh | Inf
+  code   (Inf).cosh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0399
+  from   inventory:Real.^methods
+  cell   cosh | NaN
+  code   (NaN).cosh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0400
+  from   inventory:Real.^methods
+  cell   cosh | 2**64
+  code   (2**64).cosh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0401
+  from   inventory:Real.^methods
+  cell   cosh | -Inf
+  code   (-Inf).cosh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0402
+  from   inventory:Real.^methods
+  cell   cosh | 0e0
+  code   (0e0).cosh
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0403
+  from   inventory:Real.^methods
+  cell   cosh | -0e0
+  code   (-0e0).cosh
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0404
+  from   inventory:Real.^methods
+  cell   cosh | 42
+  code   (42).cosh
+  is     8.696374707602505e+17
+  type   Num
+  oracle rakudo-2026.07 → 8.696374707602505e+17
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 8.696374707602505e+17
+
+- id     0405
+  from   inventory:Real.^methods
+  cell   cosh | 1/3
+  code   (1/3).cosh
+  is     1.0560718678299394e0
+  type   Num
+  oracle rakudo-2026.07 → 1.0560718678299394e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0560718678299394e0
+
+- id     0406
+  from   inventory:Real.^methods
+  cell   cosh | True
+  code   (True).cosh
+  is     1.5430806348152437e0
+  type   Num
+  oracle rakudo-2026.07 → 1.5430806348152437e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.5430806348152437e0
+
+- id     0407
   from   inventory:Real.^methods
   cell   cotan | 1
   code   (1).cotan
   is     0.6420926159343308e0
   type   Num
   oracle rakudo-2026.07 → 0.6420926159343308e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.6420926159343308e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.6420926159343308e0
 
-- id     0089
+- id     0408
   from   inventory:Real.^methods
   cell   cotan | 1e0
   code   (1e0).cotan
   is     0.6420926159343308e0
   type   Num
   oracle rakudo-2026.07 → 0.6420926159343308e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.6420926159343308e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.6420926159343308e0
 
-- id     0090
+- id     0409
   from   inventory:Real.^methods
   cell   cotan | 1/2
   code   (1/2).cotan
   is     1.830487721712452e0
   type   Num
   oracle rakudo-2026.07 → 1.830487721712452e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.830487721712452e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.830487721712452e0
 
-- id     0091
+- id     0410
+  from   inventory:Real.^methods
+  cell   cotan | 0
+  code   (0).cotan
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0411
+  from   inventory:Real.^methods
+  cell   cotan | -1
+  code   (-1).cotan
+  is     -0.6420926159343308e0
+  type   Num
+  oracle rakudo-2026.07 → -0.6420926159343308e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0.6420926159343308e0
+
+- id     0412
+  from   inventory:Real.^methods
+  cell   cotan | Inf
+  code   (Inf).cotan
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0413
+  from   inventory:Real.^methods
+  cell   cotan | NaN
+  code   (NaN).cotan
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0414
+  from   inventory:Real.^methods
+  cell   cotan | 2**64
+  code   (2**64).cotan
+  is     -42.36375603531254e0
+  type   Num
+  oracle rakudo-2026.07 → -42.36375603531254e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -42.36375603531254e0
+
+- id     0415
+  from   inventory:Real.^methods
+  cell   cotan | -Inf
+  code   (-Inf).cotan
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0416
+  from   inventory:Real.^methods
+  cell   cotan | 0e0
+  code   (0e0).cotan
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0417
+  from   inventory:Real.^methods
+  cell   cotan | -0e0
+  code   (-0e0).cotan
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0418
+  from   inventory:Real.^methods
+  cell   cotan | 42
+  code   (42).cotan
+  is     0.43641670607527294e0
+  type   Num
+  oracle rakudo-2026.07 → 0.43641670607527294e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.43641670607527294e0
+
+- id     0419
+  from   inventory:Real.^methods
+  cell   cotan | 1/3
+  code   (1/3).cotan
+  is     2.888057036277277e0
+  type   Num
+  oracle rakudo-2026.07 → 2.888057036277277e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 2.888057036277277e0
+
+- id     0420
+  from   inventory:Real.^methods
+  cell   cotan | True
+  code   (True).cotan
+  is     0.6420926159343308e0
+  type   Num
+  oracle rakudo-2026.07 → 0.6420926159343308e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.6420926159343308e0
+
+- id     0421
   from   inventory:Real.^methods
   cell   cotanh | 1
   code   (1).cotanh
   is     1.3130352854993315e0
   type   Num
   oracle rakudo-2026.07 → 1.3130352854993315e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.3130352854993315e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.3130352854993315e0
 
-- id     0092
+- id     0422
   from   inventory:Real.^methods
   cell   cotanh | 1e0
   code   (1e0).cotanh
   is     1.3130352854993315e0
   type   Num
   oracle rakudo-2026.07 → 1.3130352854993315e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.3130352854993315e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.3130352854993315e0
 
-- id     0093
+- id     0423
   from   inventory:Real.^methods
   cell   cotanh | 1/2
   code   (1/2).cotanh
   is     2.163953413738653e0
   type   Num
   oracle rakudo-2026.07 → 2.163953413738653e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 2.163953413738653e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 2.163953413738653e0
 
-- id     0094
+- id     0424
+  from   inventory:Real.^methods
+  cell   cotanh | 0
+  code   (0).cotanh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0425
+  from   inventory:Real.^methods
+  cell   cotanh | -1
+  code   (-1).cotanh
+  is     -1.3130352854993315e0
+  type   Num
+  oracle rakudo-2026.07 → -1.3130352854993315e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.3130352854993315e0
+
+- id     0426
+  from   inventory:Real.^methods
+  cell   cotanh | Inf
+  code   (Inf).cotanh
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0427
+  from   inventory:Real.^methods
+  cell   cotanh | NaN
+  code   (NaN).cotanh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0428
+  from   inventory:Real.^methods
+  cell   cotanh | 2**64
+  code   (2**64).cotanh
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0429
+  from   inventory:Real.^methods
+  cell   cotanh | -Inf
+  code   (-Inf).cotanh
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1e0
+
+- id     0430
+  from   inventory:Real.^methods
+  cell   cotanh | 0e0
+  code   (0e0).cotanh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0431
+  from   inventory:Real.^methods
+  cell   cotanh | -0e0
+  code   (-0e0).cotanh
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0432
+  from   inventory:Real.^methods
+  cell   cotanh | 42
+  code   (42).cotanh
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0433
+  from   inventory:Real.^methods
+  cell   cotanh | 1/3
+  code   (1/3).cotanh
+  is     3.110296679619444e0
+  type   Num
+  oracle rakudo-2026.07 → 3.110296679619444e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 3.110296679619444e0
+
+- id     0434
+  from   inventory:Real.^methods
+  cell   cotanh | True
+  code   (True).cotanh
+  is     1.3130352854993315e0
+  type   Num
+  oracle rakudo-2026.07 → 1.3130352854993315e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.3130352854993315e0
+
+- id     0435
   from   inventory:Real.^methods
   cell   floor | 1
   code   (1).floor
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
-- id     0095
+- id     0436
   from   inventory:Real.^methods
   cell   floor | 1e0
   code   (1e0).floor
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
-- id     0096
+- id     0437
   from   inventory:Real.^methods
   cell   floor | 1/2
   code   (1/2).floor
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
 
-- id     0097
+- id     0438
+  from   inventory:Real.^methods
+  cell   floor | 0
+  code   (0).floor
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0439
+  from   inventory:Real.^methods
+  cell   floor | -1
+  code   (-1).floor
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0440
+  from   inventory:Real.^methods
+  cell   floor | Inf
+  code   (Inf).floor
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0441
+  from   inventory:Real.^methods
+  cell   floor | NaN
+  code   (NaN).floor
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0442
+  from   inventory:Real.^methods
+  cell   floor | 2**64
+  code   (2**64).floor
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 18446744073709551616
+  verdict disputed
+  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0443
+  from   inventory:Real.^methods
+  cell   floor | -Inf
+  code   (-Inf).floor
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0444
+  from   inventory:Real.^methods
+  cell   floor | 0e0
+  code   (0e0).floor
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0445
+  from   inventory:Real.^methods
+  cell   floor | -0e0
+  code   (-0e0).floor
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0446
+  from   inventory:Real.^methods
+  cell   floor | 42
+  code   (42).floor
+  is     42
+  type   Int
+  oracle rakudo-2026.07 → 42
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 42
+
+- id     0447
+  from   inventory:Real.^methods
+  cell   floor | 1/3
+  code   (1/3).floor
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0448
+  from   inventory:Real.^methods
+  cell   floor | True
+  code   (True).floor
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0449
   from   inventory:Real.^methods
   cell   isNaN | 1
   code   (1).isNaN
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
-- id     0098
+- id     0450
   from   inventory:Real.^methods
   cell   isNaN | 1e0
   code   (1e0).isNaN
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
-- id     0099
+- id     0451
   from   inventory:Real.^methods
   cell   isNaN | 1/2
   code   (1/2).isNaN
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
-- id     0100
+- id     0452
+  from   inventory:Real.^methods
+  cell   isNaN | 0
+  code   (0).isNaN
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0453
+  from   inventory:Real.^methods
+  cell   isNaN | -1
+  code   (-1).isNaN
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0454
+  from   inventory:Real.^methods
+  cell   isNaN | Inf
+  code   (Inf).isNaN
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0455
+  from   inventory:Real.^methods
+  cell   isNaN | NaN
+  code   (NaN).isNaN
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+
+- id     0456
+  from   inventory:Real.^methods
+  cell   isNaN | 2**64
+  code   (2**64).isNaN
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0457
+  from   inventory:Real.^methods
+  cell   isNaN | -Inf
+  code   (-Inf).isNaN
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0458
+  from   inventory:Real.^methods
+  cell   isNaN | 0e0
+  code   (0e0).isNaN
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0459
+  from   inventory:Real.^methods
+  cell   isNaN | -0e0
+  code   (-0e0).isNaN
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0460
+  from   inventory:Real.^methods
+  cell   isNaN | 42
+  code   (42).isNaN
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0461
+  from   inventory:Real.^methods
+  cell   isNaN | 1/3
+  code   (1/3).isNaN
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0462
+  from   inventory:Real.^methods
+  cell   isNaN | True
+  code   (True).isNaN
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+
+- id     0463
   from   inventory:Real.^methods
   cell   rand | 1
   code   (1).rand
   is     0.024072925221527597e0
   type   Num
   oracle rakudo-2026.07 → 0.024072925221527597e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.6832490990639215e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.6832490990639215e0
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0101
+- id     0464
   from   inventory:Real.^methods
   cell   rand | 1e0
   code   (1e0).rand
   is     0.6922147430248451e0
   type   Num
   oracle rakudo-2026.07 → 0.6922147430248451e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.11432776166273939e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.11432776166273939e0
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0102
+- id     0465
   from   inventory:Real.^methods
   cell   rand | 1/2
   code   (1/2).rand
   is     0.3092755588789963e0
   type   Num
   oracle rakudo-2026.07 → 0.3092755588789963e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.3854721845226763e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.3854721845226763e0
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0103
+- id     0466
+  from   inventory:Real.^methods
+  cell   rand | 0
+  code   (0).rand
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0467
+  from   inventory:Real.^methods
+  cell   rand | -1
+  code   (-1).rand
+  is     -0.4651961725767676e0
+  type   Num
+  oracle rakudo-2026.07 → -0.4651961725767676e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0.4086561706076104e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0468
+  from   inventory:Real.^methods
+  cell   rand | Inf
+  code   (Inf).rand
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0469
+  from   inventory:Real.^methods
+  cell   rand | NaN
+  code   (NaN).rand
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0470
+  from   inventory:Real.^methods
+  cell   rand | 2**64
+  code   (2**64).rand
+  is     3.585857950245075e+18
+  type   Num
+  oracle rakudo-2026.07 → 3.585857950245075e+18
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.7709898762642129e+19
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0471
+  from   inventory:Real.^methods
+  cell   rand | -Inf
+  code   (-Inf).rand
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0472
+  from   inventory:Real.^methods
+  cell   rand | 0e0
+  code   (0e0).rand
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0473
+  from   inventory:Real.^methods
+  cell   rand | -0e0
+  code   (-0e0).rand
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0474
+  from   inventory:Real.^methods
+  cell   rand | 42
+  code   (42).rand
+  is     8.318318510669151e0
+  type   Num
+  oracle rakudo-2026.07 → 8.318318510669151e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 17.04986351564233e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0475
+  from   inventory:Real.^methods
+  cell   rand | 1/3
+  code   (1/3).rand
+  is     0.084145557631818e0
+  type   Num
+  oracle rakudo-2026.07 → 0.084145557631818e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.25697369251006086e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0476
+  from   inventory:Real.^methods
+  cell   rand | True
+  code   (True).rand
+  is     0.5198838791592781e0
+  type   Num
+  oracle rakudo-2026.07 → 0.5198838791592781e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.27176225462887516e0
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0477
   from   inventory:Real.^methods
   cell   sec | 1
   code   (1).sec
   is     1.8508157176809255e0
   type   Num
   oracle rakudo-2026.07 → 1.8508157176809255e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.8508157176809255e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.8508157176809255e0
 
-- id     0104
+- id     0478
   from   inventory:Real.^methods
   cell   sec | 1e0
   code   (1e0).sec
   is     1.8508157176809255e0
   type   Num
   oracle rakudo-2026.07 → 1.8508157176809255e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.8508157176809255e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.8508157176809255e0
 
-- id     0105
+- id     0479
   from   inventory:Real.^methods
   cell   sec | 1/2
   code   (1/2).sec
   is     1.139493927324549e0
   type   Num
   oracle rakudo-2026.07 → 1.139493927324549e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.139493927324549e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.139493927324549e0
 
-- id     0106
+- id     0480
+  from   inventory:Real.^methods
+  cell   sec | 0
+  code   (0).sec
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0481
+  from   inventory:Real.^methods
+  cell   sec | -1
+  code   (-1).sec
+  is     1.8508157176809255e0
+  type   Num
+  oracle rakudo-2026.07 → 1.8508157176809255e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.8508157176809255e0
+
+- id     0482
+  from   inventory:Real.^methods
+  cell   sec | Inf
+  code   (Inf).sec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0483
+  from   inventory:Real.^methods
+  cell   sec | NaN
+  code   (NaN).sec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0484
+  from   inventory:Real.^methods
+  cell   sec | 2**64
+  code   (2**64).sec
+  is     -1.0002785611861411e0
+  type   Num
+  oracle rakudo-2026.07 → -1.0002785611861411e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.0002785611861411e0
+
+- id     0485
+  from   inventory:Real.^methods
+  cell   sec | -Inf
+  code   (-Inf).sec
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0486
+  from   inventory:Real.^methods
+  cell   sec | 0e0
+  code   (0e0).sec
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0487
+  from   inventory:Real.^methods
+  cell   sec | -0e0
+  code   (-0e0).sec
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0488
+  from   inventory:Real.^methods
+  cell   sec | 42
+  code   (42).sec
+  is     -2.500091784692452e0
+  type   Num
+  oracle rakudo-2026.07 → -2.500091784692452e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -2.500091784692452e0
+
+- id     0489
+  from   inventory:Real.^methods
+  cell   sec | 1/3
+  code   (1/3).sec
+  is     1.0582492714614418e0
+  type   Num
+  oracle rakudo-2026.07 → 1.0582492714614418e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.0582492714614418e0
+
+- id     0490
+  from   inventory:Real.^methods
+  cell   sec | True
+  code   (True).sec
+  is     1.8508157176809255e0
+  type   Num
+  oracle rakudo-2026.07 → 1.8508157176809255e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.8508157176809255e0
+
+- id     0491
   from   inventory:Real.^methods
   cell   sech | 1
   code   (1).sech
   is     0.6480542736638855e0
   type   Num
   oracle rakudo-2026.07 → 0.6480542736638855e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.6480542736638855e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.6480542736638855e0
 
-- id     0107
+- id     0492
   from   inventory:Real.^methods
   cell   sech | 1e0
   code   (1e0).sech
   is     0.6480542736638855e0
   type   Num
   oracle rakudo-2026.07 → 0.6480542736638855e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.6480542736638855e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.6480542736638855e0
 
-- id     0108
+- id     0493
   from   inventory:Real.^methods
   cell   sech | 1/2
   code   (1/2).sech
   is     0.886818883970074e0
   type   Num
   oracle rakudo-2026.07 → 0.886818883970074e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.886818883970074e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.886818883970074e0
 
-- id     0109
+- id     0494
+  from   inventory:Real.^methods
+  cell   sech | 0
+  code   (0).sech
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0495
+  from   inventory:Real.^methods
+  cell   sech | -1
+  code   (-1).sech
+  is     0.6480542736638855e0
+  type   Num
+  oracle rakudo-2026.07 → 0.6480542736638855e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.6480542736638855e0
+
+- id     0496
+  from   inventory:Real.^methods
+  cell   sech | Inf
+  code   (Inf).sech
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0497
+  from   inventory:Real.^methods
+  cell   sech | NaN
+  code   (NaN).sech
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0498
+  from   inventory:Real.^methods
+  cell   sech | 2**64
+  code   (2**64).sech
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0499
+  from   inventory:Real.^methods
+  cell   sech | -Inf
+  code   (-Inf).sech
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0500
+  from   inventory:Real.^methods
+  cell   sech | 0e0
+  code   (0e0).sech
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0501
+  from   inventory:Real.^methods
+  cell   sech | -0e0
+  code   (-0e0).sech
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0502
+  from   inventory:Real.^methods
+  cell   sech | 42
+  code   (42).sech
+  is     1.149904452858712e-18
+  type   Num
+  oracle rakudo-2026.07 → 1.149904452858712e-18
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.149904452858712e-18
+
+- id     0503
+  from   inventory:Real.^methods
+  cell   sech | 1/3
+  code   (1/3).sech
+  is     0.9469052537634979e0
+  type   Num
+  oracle rakudo-2026.07 → 0.9469052537634979e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.9469052537634979e0
+
+- id     0504
+  from   inventory:Real.^methods
+  cell   sech | True
+  code   (True).sech
+  is     0.6480542736638855e0
+  type   Num
+  oracle rakudo-2026.07 → 0.6480542736638855e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.6480542736638855e0
+
+- id     0505
   from   inventory:Real.^methods
   cell   sign | 1
   code   (1).sign
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
-- id     0110
+- id     0506
   from   inventory:Real.^methods
   cell   sign | 1e0
   code   (1e0).sign
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
-- id     0111
+- id     0507
   from   inventory:Real.^methods
   cell   sign | 1/2
   code   (1/2).sign
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
-- id     0112
+- id     0508
+  from   inventory:Real.^methods
+  cell   sign | 0
+  code   (0).sign
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0509
+  from   inventory:Real.^methods
+  cell   sign | -1
+  code   (-1).sign
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0510
+  from   inventory:Real.^methods
+  cell   sign | Inf
+  code   (Inf).sign
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0511
+  from   inventory:Real.^methods
+  cell   sign | NaN
+  code   (NaN).sign
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0512
+  from   inventory:Real.^methods
+  cell   sign | 2**64
+  code   (2**64).sign
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0513
+  from   inventory:Real.^methods
+  cell   sign | -Inf
+  code   (-Inf).sign
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0514
+  from   inventory:Real.^methods
+  cell   sign | 0e0
+  code   (0e0).sign
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0515
+  from   inventory:Real.^methods
+  cell   sign | -0e0
+  code   (-0e0).sign
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0516
+  from   inventory:Real.^methods
+  cell   sign | 42
+  code   (42).sign
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0517
+  from   inventory:Real.^methods
+  cell   sign | 1/3
+  code   (1/3).sign
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0518
+  from   inventory:Real.^methods
+  cell   sign | True
+  code   (True).sign
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0519
   from   inventory:Real.^methods
   cell   sin | 1
   code   (1).sin
   is     0.8414709848078965e0
   type   Num
   oracle rakudo-2026.07 → 0.8414709848078965e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.8414709848078965e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.8414709848078965e0
 
-- id     0113
+- id     0520
   from   inventory:Real.^methods
   cell   sin | 1e0
   code   (1e0).sin
   is     0.8414709848078965e0
   type   Num
   oracle rakudo-2026.07 → 0.8414709848078965e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.8414709848078965e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.8414709848078965e0
 
-- id     0114
+- id     0521
   from   inventory:Real.^methods
   cell   sin | 1/2
   code   (1/2).sin
   is     0.479425538604203e0
   type   Num
   oracle rakudo-2026.07 → 0.479425538604203e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.479425538604203e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.479425538604203e0
 
-- id     0115
+- id     0522
+  from   inventory:Real.^methods
+  cell   sin | 0
+  code   (0).sin
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0523
+  from   inventory:Real.^methods
+  cell   sin | -1
+  code   (-1).sin
+  is     -0.8414709848078965e0
+  type   Num
+  oracle rakudo-2026.07 → -0.8414709848078965e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0.8414709848078965e0
+
+- id     0524
+  from   inventory:Real.^methods
+  cell   sin | Inf
+  code   (Inf).sin
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0525
+  from   inventory:Real.^methods
+  cell   sin | NaN
+  code   (NaN).sin
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0526
+  from   inventory:Real.^methods
+  cell   sin | 2**64
+  code   (2**64).sin
+  is     0.023598509904439558e0
+  type   Num
+  oracle rakudo-2026.07 → 0.023598509904439558e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.023598509904439558e0
+
+- id     0527
+  from   inventory:Real.^methods
+  cell   sin | -Inf
+  code   (-Inf).sin
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0528
+  from   inventory:Real.^methods
+  cell   sin | 0e0
+  code   (0e0).sin
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0529
+  from   inventory:Real.^methods
+  cell   sin | -0e0
+  code   (-0e0).sin
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0530
+  from   inventory:Real.^methods
+  cell   sin | 42
+  code   (42).sin
+  is     -0.9165215479156338e0
+  type   Num
+  oracle rakudo-2026.07 → -0.9165215479156338e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0.9165215479156338e0
+
+- id     0531
+  from   inventory:Real.^methods
+  cell   sin | 1/3
+  code   (1/3).sin
+  is     0.3271946967961522e0
+  type   Num
+  oracle rakudo-2026.07 → 0.3271946967961522e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.3271946967961522e0
+
+- id     0532
+  from   inventory:Real.^methods
+  cell   sin | True
+  code   (True).sin
+  is     0.8414709848078965e0
+  type   Num
+  oracle rakudo-2026.07 → 0.8414709848078965e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.8414709848078965e0
+
+- id     0533
   from   inventory:Real.^methods
   cell   sinh | 1
   code   (1).sinh
   is     1.1752011936438014e0
   type   Num
   oracle rakudo-2026.07 → 1.1752011936438014e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.1752011936438014e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.1752011936438014e0
 
-- id     0116
+- id     0534
   from   inventory:Real.^methods
   cell   sinh | 1e0
   code   (1e0).sinh
   is     1.1752011936438014e0
   type   Num
   oracle rakudo-2026.07 → 1.1752011936438014e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.1752011936438014e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.1752011936438014e0
 
-- id     0117
+- id     0535
   from   inventory:Real.^methods
   cell   sinh | 1/2
   code   (1/2).sinh
   is     0.5210953054937474e0
   type   Num
   oracle rakudo-2026.07 → 0.5210953054937474e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.5210953054937474e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5210953054937474e0
 
-- id     0118
+- id     0536
+  from   inventory:Real.^methods
+  cell   sinh | 0
+  code   (0).sinh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0537
+  from   inventory:Real.^methods
+  cell   sinh | -1
+  code   (-1).sinh
+  is     -1.1752011936438014e0
+  type   Num
+  oracle rakudo-2026.07 → -1.1752011936438014e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.1752011936438014e0
+
+- id     0538
+  from   inventory:Real.^methods
+  cell   sinh | Inf
+  code   (Inf).sinh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0539
+  from   inventory:Real.^methods
+  cell   sinh | NaN
+  code   (NaN).sinh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0540
+  from   inventory:Real.^methods
+  cell   sinh | 2**64
+  code   (2**64).sinh
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0541
+  from   inventory:Real.^methods
+  cell   sinh | -Inf
+  code   (-Inf).sinh
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0542
+  from   inventory:Real.^methods
+  cell   sinh | 0e0
+  code   (0e0).sinh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0543
+  from   inventory:Real.^methods
+  cell   sinh | -0e0
+  code   (-0e0).sinh
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0544
+  from   inventory:Real.^methods
+  cell   sinh | 42
+  code   (42).sinh
+  is     8.696374707602505e+17
+  type   Num
+  oracle rakudo-2026.07 → 8.696374707602505e+17
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 8.696374707602505e+17
+
+- id     0545
+  from   inventory:Real.^methods
+  cell   sinh | 1/3
+  code   (1/3).sinh
+  is     0.3395405572561501e0
+  type   Num
+  oracle rakudo-2026.07 → 0.3395405572561501e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.3395405572561501e0
+
+- id     0546
+  from   inventory:Real.^methods
+  cell   sinh | True
+  code   (True).sinh
+  is     1.1752011936438014e0
+  type   Num
+  oracle rakudo-2026.07 → 1.1752011936438014e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.1752011936438014e0
+
+- id     0547
   from   inventory:Real.^methods
   cell   tan | 1
   code   (1).tan
   is     1.557407724654902e0
   type   Num
   oracle rakudo-2026.07 → 1.557407724654902e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.557407724654902e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.557407724654902e0
 
-- id     0119
+- id     0548
   from   inventory:Real.^methods
   cell   tan | 1e0
   code   (1e0).tan
   is     1.557407724654902e0
   type   Num
   oracle rakudo-2026.07 → 1.557407724654902e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1.557407724654902e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.557407724654902e0
 
-- id     0120
+- id     0549
   from   inventory:Real.^methods
   cell   tan | 1/2
   code   (1/2).tan
   is     0.5463024898437905e0
   type   Num
   oracle rakudo-2026.07 → 0.5463024898437905e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.5463024898437905e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.5463024898437905e0
 
-- id     0121
+- id     0550
+  from   inventory:Real.^methods
+  cell   tan | 0
+  code   (0).tan
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0551
+  from   inventory:Real.^methods
+  cell   tan | -1
+  code   (-1).tan
+  is     -1.557407724654902e0
+  type   Num
+  oracle rakudo-2026.07 → -1.557407724654902e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.557407724654902e0
+
+- id     0552
+  from   inventory:Real.^methods
+  cell   tan | Inf
+  code   (Inf).tan
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0553
+  from   inventory:Real.^methods
+  cell   tan | NaN
+  code   (NaN).tan
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0554
+  from   inventory:Real.^methods
+  cell   tan | 2**64
+  code   (2**64).tan
+  is     -0.0236050835333497e0
+  type   Num
+  oracle rakudo-2026.07 → -0.0236050835333497e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0.0236050835333497e0
+
+- id     0555
+  from   inventory:Real.^methods
+  cell   tan | -Inf
+  code   (-Inf).tan
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0556
+  from   inventory:Real.^methods
+  cell   tan | 0e0
+  code   (0e0).tan
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0557
+  from   inventory:Real.^methods
+  cell   tan | -0e0
+  code   (-0e0).tan
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0558
+  from   inventory:Real.^methods
+  cell   tan | 42
+  code   (42).tan
+  is     2.291387992437486e0
+  type   Num
+  oracle rakudo-2026.07 → 2.291387992437486e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 2.291387992437486e0
+
+- id     0559
+  from   inventory:Real.^methods
+  cell   tan | 1/3
+  code   (1/3).tan
+  is     0.34625354951057546e0
+  type   Num
+  oracle rakudo-2026.07 → 0.34625354951057546e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.34625354951057546e0
+
+- id     0560
+  from   inventory:Real.^methods
+  cell   tan | True
+  code   (True).tan
+  is     1.557407724654902e0
+  type   Num
+  oracle rakudo-2026.07 → 1.557407724654902e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.557407724654902e0
+
+- id     0561
   from   inventory:Real.^methods
   cell   tanh | 1
   code   (1).tanh
   is     0.7615941559557649e0
   type   Num
   oracle rakudo-2026.07 → 0.7615941559557649e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.7615941559557649e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.7615941559557649e0
 
-- id     0122
+- id     0562
   from   inventory:Real.^methods
   cell   tanh | 1e0
   code   (1e0).tanh
   is     0.7615941559557649e0
   type   Num
   oracle rakudo-2026.07 → 0.7615941559557649e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.7615941559557649e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.7615941559557649e0
 
-- id     0123
+- id     0563
   from   inventory:Real.^methods
   cell   tanh | 1/2
   code   (1/2).tanh
   is     0.46211715726000974e0
   type   Num
   oracle rakudo-2026.07 → 0.46211715726000974e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0.46211715726000974e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.46211715726000974e0
 
-- id     0124
+- id     0564
+  from   inventory:Real.^methods
+  cell   tanh | 0
+  code   (0).tanh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0565
+  from   inventory:Real.^methods
+  cell   tanh | -1
+  code   (-1).tanh
+  is     -0.7615941559557649e0
+  type   Num
+  oracle rakudo-2026.07 → -0.7615941559557649e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0.7615941559557649e0
+
+- id     0566
+  from   inventory:Real.^methods
+  cell   tanh | Inf
+  code   (Inf).tanh
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0567
+  from   inventory:Real.^methods
+  cell   tanh | NaN
+  code   (NaN).tanh
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0568
+  from   inventory:Real.^methods
+  cell   tanh | 2**64
+  code   (2**64).tanh
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0569
+  from   inventory:Real.^methods
+  cell   tanh | -Inf
+  code   (-Inf).tanh
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1e0
+
+- id     0570
+  from   inventory:Real.^methods
+  cell   tanh | 0e0
+  code   (0e0).tanh
+  is     0e0
+  type   Num
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
+
+- id     0571
+  from   inventory:Real.^methods
+  cell   tanh | -0e0
+  code   (-0e0).tanh
+  is     -0e0
+  type   Num
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0e0
+
+- id     0572
+  from   inventory:Real.^methods
+  cell   tanh | 42
+  code   (42).tanh
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+
+- id     0573
+  from   inventory:Real.^methods
+  cell   tanh | 1/3
+  code   (1/3).tanh
+  is     0.32151273753163434e0
+  type   Num
+  oracle rakudo-2026.07 → 0.32151273753163434e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.32151273753163434e0
+
+- id     0574
+  from   inventory:Real.^methods
+  cell   tanh | True
+  code   (True).tanh
+  is     0.7615941559557649e0
+  type   Num
+  oracle rakudo-2026.07 → 0.7615941559557649e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0.7615941559557649e0
+
+- id     0575
   from   inventory:Real.^methods
   cell   truncate | 1
   code   (1).truncate
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
-- id     0125
+- id     0576
   from   inventory:Real.^methods
   cell   truncate | 1e0
   code   (1e0).truncate
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
-- id     0126
+- id     0577
   from   inventory:Real.^methods
   cell   truncate | 1/2
   code   (1/2).truncate
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
 
-- id     0127
+- id     0578
+  from   inventory:Real.^methods
+  cell   truncate | 0
+  code   (0).truncate
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0579
+  from   inventory:Real.^methods
+  cell   truncate | -1
+  code   (-1).truncate
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0580
+  from   inventory:Real.^methods
+  cell   truncate | Inf
+  code   (Inf).truncate
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0581
+  from   inventory:Real.^methods
+  cell   truncate | NaN
+  code   (NaN).truncate
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0582
+  from   inventory:Real.^methods
+  cell   truncate | 2**64
+  code   (2**64).truncate
+  is     18446744073709551616
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 18446744073709551616
+  verdict disputed
+  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0583
+  from   inventory:Real.^methods
+  cell   truncate | -Inf
+  code   (-Inf).truncate
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0584
+  from   inventory:Real.^methods
+  cell   truncate | 0e0
+  code   (0e0).truncate
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0585
+  from   inventory:Real.^methods
+  cell   truncate | -0e0
+  code   (-0e0).truncate
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0586
+  from   inventory:Real.^methods
+  cell   truncate | 42
+  code   (42).truncate
+  is     42
+  type   Int
+  oracle rakudo-2026.07 → 42
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 42
+
+- id     0587
+  from   inventory:Real.^methods
+  cell   truncate | 1/3
+  code   (1/3).truncate
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0588
+  from   inventory:Real.^methods
+  cell   truncate | True
+  code   (True).truncate
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0589
   from   inventory:Real.^methods
   cell   unpolar(0) | 1
   code   (1).unpolar(0)
   is     <1+0i>
   type   Complex
   oracle rakudo-2026.07 → <1+0i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <1+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1+0i>
 
-- id     0128
+- id     0590
   from   inventory:Real.^methods
   cell   unpolar(1) | 1
   code   (1).unpolar(1)
   is     <0.5403023058681398+0.8414709848078965i>
   type   Complex
   oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <0.5403023058681398+0.8414709848078965i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.5403023058681398+0.8414709848078965i>
 
-- id     0129
+- id     0591
   from   inventory:Real.^methods
   cell   unpolar(-1) | 1
   code   (1).unpolar(-1)
   is     <0.5403023058681398-0.8414709848078965i>
   type   Complex
   oracle rakudo-2026.07 → <0.5403023058681398-0.8414709848078965i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <0.5403023058681398-0.8414709848078965i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.5403023058681398-0.8414709848078965i>
 
-- id     0130
+- id     0592
   from   inventory:Real.^methods
   cell   unpolar("a") | 1
   code   (1).unpolar("a")
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
 
-- id     0131
+- id     0593
   from   inventory:Real.^methods
   cell   unpolar(Any) | 1
   code   (1).unpolar(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
 
-- id     0132
+- id     0594
   from   inventory:Real.^methods
   cell   unpolar(0) | 1e0
   code   (1e0).unpolar(0)
   is     <1+0i>
   type   Complex
   oracle rakudo-2026.07 → <1+0i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <1+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1+0i>
 
-- id     0133
+- id     0595
   from   inventory:Real.^methods
   cell   unpolar(1) | 1e0
   code   (1e0).unpolar(1)
   is     <0.5403023058681398+0.8414709848078965i>
   type   Complex
   oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <0.5403023058681398+0.8414709848078965i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.5403023058681398+0.8414709848078965i>
 
-- id     0134
+- id     0596
   from   inventory:Real.^methods
   cell   unpolar(-1) | 1e0
   code   (1e0).unpolar(-1)
   is     <0.5403023058681398-0.8414709848078965i>
   type   Complex
   oracle rakudo-2026.07 → <0.5403023058681398-0.8414709848078965i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <0.5403023058681398-0.8414709848078965i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.5403023058681398-0.8414709848078965i>
 
-- id     0135
+- id     0597
   from   inventory:Real.^methods
   cell   unpolar("a") | 1e0
   code   (1e0).unpolar("a")
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
 
-- id     0136
+- id     0598
   from   inventory:Real.^methods
   cell   unpolar(Any) | 1e0
   code   (1e0).unpolar(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
 
-- id     0137
+- id     0599
   from   inventory:Real.^methods
   cell   unpolar(0) | 1/2
   code   (1/2).unpolar(0)
   is     <0.5+0i>
   type   Complex
   oracle rakudo-2026.07 → <0.5+0i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <0.5+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.5+0i>
 
-- id     0138
+- id     0600
   from   inventory:Real.^methods
   cell   unpolar(1) | 1/2
   code   (1/2).unpolar(1)
   is     <0.2701511529340699+0.42073549240394825i>
   type   Complex
   oracle rakudo-2026.07 → <0.2701511529340699+0.42073549240394825i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <0.2701511529340699+0.42073549240394825i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.2701511529340699+0.42073549240394825i>
 
-- id     0139
+- id     0601
   from   inventory:Real.^methods
   cell   unpolar(-1) | 1/2
   code   (1/2).unpolar(-1)
   is     <0.2701511529340699-0.42073549240394825i>
   type   Complex
   oracle rakudo-2026.07 → <0.2701511529340699-0.42073549240394825i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <0.2701511529340699-0.42073549240394825i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.2701511529340699-0.42073549240394825i>
 
-- id     0140
+- id     0602
   from   inventory:Real.^methods
   cell   unpolar("a") | 1/2
   code   (1/2).unpolar("a")
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
 
-- id     0141
+- id     0603
   from   inventory:Real.^methods
   cell   unpolar(Any) | 1/2
   code   (1/2).unpolar(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0604
+  from   inventory:Real.^methods
+  cell   unpolar(0) | 0
+  code   (0).unpolar(0)
+  is     <0+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0+0i>
+
+- id     0605
+  from   inventory:Real.^methods
+  cell   unpolar(1) | 0
+  code   (0).unpolar(1)
+  is     <0+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0+0i>
+
+- id     0606
+  from   inventory:Real.^methods
+  cell   unpolar(-1) | 0
+  code   (0).unpolar(-1)
+  is     <0-0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0-0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0-0i>
+
+- id     0607
+  from   inventory:Real.^methods
+  cell   unpolar("a") | 0
+  code   (0).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0608
+  from   inventory:Real.^methods
+  cell   unpolar(Any) | 0
+  code   (0).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0609
+  from   inventory:Real.^methods
+  cell   unpolar(0) | -1
+  code   (-1).unpolar(0)
+  is     <-1-0i>
+  type   Complex
+  oracle rakudo-2026.07 → <-1-0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-1-0i>
+
+- id     0610
+  from   inventory:Real.^methods
+  cell   unpolar(1) | -1
+  code   (-1).unpolar(1)
+  is     <-0.5403023058681398-0.8414709848078965i>
+  type   Complex
+  oracle rakudo-2026.07 → <-0.5403023058681398-0.8414709848078965i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-0.5403023058681398-0.8414709848078965i>
+
+- id     0611
+  from   inventory:Real.^methods
+  cell   unpolar(-1) | -1
+  code   (-1).unpolar(-1)
+  is     <-0.5403023058681398+0.8414709848078965i>
+  type   Complex
+  oracle rakudo-2026.07 → <-0.5403023058681398+0.8414709848078965i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-0.5403023058681398+0.8414709848078965i>
+
+- id     0612
+  from   inventory:Real.^methods
+  cell   unpolar("a") | -1
+  code   (-1).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0613
+  from   inventory:Real.^methods
+  cell   unpolar(Any) | -1
+  code   (-1).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0614
+  from   inventory:Real.^methods
+  cell   unpolar(0) | Inf
+  code   (Inf).unpolar(0)
+  is     <Inf+NaN\i>
+  type   Complex
+  oracle rakudo-2026.07 → <Inf+NaN\i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <Inf+NaNi>
+
+- id     0615
+  from   inventory:Real.^methods
+  cell   unpolar(1) | Inf
+  code   (Inf).unpolar(1)
+  is     <Inf+Inf\i>
+  type   Complex
+  oracle rakudo-2026.07 → <Inf+Inf\i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <Inf+Infi>
+
+- id     0616
+  from   inventory:Real.^methods
+  cell   unpolar(-1) | Inf
+  code   (Inf).unpolar(-1)
+  is     <Inf-Inf\i>
+  type   Complex
+  oracle rakudo-2026.07 → <Inf-Inf\i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <Inf-Infi>
+
+- id     0617
+  from   inventory:Real.^methods
+  cell   unpolar("a") | Inf
+  code   (Inf).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0618
+  from   inventory:Real.^methods
+  cell   unpolar(Any) | Inf
+  code   (Inf).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0619
+  from   inventory:Real.^methods
+  cell   unpolar(0) | NaN
+  code   (NaN).unpolar(0)
+  is     <NaN+NaN\i>
+  type   Complex
+  oracle rakudo-2026.07 → <NaN+NaN\i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <NaN+NaNi>
+
+- id     0620
+  from   inventory:Real.^methods
+  cell   unpolar(1) | NaN
+  code   (NaN).unpolar(1)
+  is     <NaN+NaN\i>
+  type   Complex
+  oracle rakudo-2026.07 → <NaN+NaN\i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <NaN+NaNi>
+
+- id     0621
+  from   inventory:Real.^methods
+  cell   unpolar(-1) | NaN
+  code   (NaN).unpolar(-1)
+  is     <NaN+NaN\i>
+  type   Complex
+  oracle rakudo-2026.07 → <NaN+NaN\i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <NaN+NaNi>
+
+- id     0622
+  from   inventory:Real.^methods
+  cell   unpolar("a") | NaN
+  code   (NaN).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0623
+  from   inventory:Real.^methods
+  cell   unpolar(Any) | NaN
+  code   (NaN).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0624
+  from   inventory:Real.^methods
+  cell   unpolar(0) | 2**64
+  code   (2**64).unpolar(0)
+  is     <1.8446744073709552e+19+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1.8446744073709552e+19+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1.8446744073709552e+19+0i>
+
+- id     0625
+  from   inventory:Real.^methods
+  cell   unpolar(1) | 2**64
+  code   (2**64).unpolar(1)
+  is     <9.966818358784713e+18+1.5522399902203605e+19i>
+  type   Complex
+  oracle rakudo-2026.07 → <9.966818358784713e+18+1.5522399902203605e+19i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <9.966818358784713e+18+1.5522399902203605e+19i>
+
+- id     0626
+  from   inventory:Real.^methods
+  cell   unpolar(-1) | 2**64
+  code   (2**64).unpolar(-1)
+  is     <9.966818358784713e+18-1.5522399902203605e+19i>
+  type   Complex
+  oracle rakudo-2026.07 → <9.966818358784713e+18-1.5522399902203605e+19i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <9.966818358784713e+18-1.5522399902203605e+19i>
+
+- id     0627
+  from   inventory:Real.^methods
+  cell   unpolar("a") | 2**64
+  code   (2**64).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0628
+  from   inventory:Real.^methods
+  cell   unpolar(Any) | 2**64
+  code   (2**64).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0629
+  from   inventory:Real.^methods
+  cell   unpolar(0) | -Inf
+  code   (-Inf).unpolar(0)
+  is     <-Inf+NaN\i>
+  type   Complex
+  oracle rakudo-2026.07 → <-Inf+NaN\i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-Inf+NaNi>
+
+- id     0630
+  from   inventory:Real.^methods
+  cell   unpolar(1) | -Inf
+  code   (-Inf).unpolar(1)
+  is     <-Inf-Inf\i>
+  type   Complex
+  oracle rakudo-2026.07 → <-Inf-Inf\i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-Inf-Infi>
+
+- id     0631
+  from   inventory:Real.^methods
+  cell   unpolar(-1) | -Inf
+  code   (-Inf).unpolar(-1)
+  is     <-Inf+Inf\i>
+  type   Complex
+  oracle rakudo-2026.07 → <-Inf+Inf\i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-Inf+Infi>
+
+- id     0632
+  from   inventory:Real.^methods
+  cell   unpolar("a") | -Inf
+  code   (-Inf).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0633
+  from   inventory:Real.^methods
+  cell   unpolar(Any) | -Inf
+  code   (-Inf).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0634
+  from   inventory:Real.^methods
+  cell   unpolar(0) | 0e0
+  code   (0e0).unpolar(0)
+  is     <0+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0+0i>
+
+- id     0635
+  from   inventory:Real.^methods
+  cell   unpolar(1) | 0e0
+  code   (0e0).unpolar(1)
+  is     <0+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0+0i>
+
+- id     0636
+  from   inventory:Real.^methods
+  cell   unpolar(-1) | 0e0
+  code   (0e0).unpolar(-1)
+  is     <0-0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0-0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0-0i>
+
+- id     0637
+  from   inventory:Real.^methods
+  cell   unpolar("a") | 0e0
+  code   (0e0).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0638
+  from   inventory:Real.^methods
+  cell   unpolar(Any) | 0e0
+  code   (0e0).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0639
+  from   inventory:Real.^methods
+  cell   unpolar(0) | -0e0
+  code   (-0e0).unpolar(0)
+  is     <-0-0i>
+  type   Complex
+  oracle rakudo-2026.07 → <-0-0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-0-0i>
+
+- id     0640
+  from   inventory:Real.^methods
+  cell   unpolar(1) | -0e0
+  code   (-0e0).unpolar(1)
+  is     <-0-0i>
+  type   Complex
+  oracle rakudo-2026.07 → <-0-0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-0-0i>
+
+- id     0641
+  from   inventory:Real.^methods
+  cell   unpolar(-1) | -0e0
+  code   (-0e0).unpolar(-1)
+  is     <-0+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <-0+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-0+0i>
+
+- id     0642
+  from   inventory:Real.^methods
+  cell   unpolar("a") | -0e0
+  code   (-0e0).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0643
+  from   inventory:Real.^methods
+  cell   unpolar(Any) | -0e0
+  code   (-0e0).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0644
+  from   inventory:Real.^methods
+  cell   unpolar(0) | 42
+  code   (42).unpolar(0)
+  is     <42+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <42+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <42+0i>
+
+- id     0645
+  from   inventory:Real.^methods
+  cell   unpolar(1) | 42
+  code   (42).unpolar(1)
+  is     <22.69269684646187+35.34178136193165i>
+  type   Complex
+  oracle rakudo-2026.07 → <22.69269684646187+35.34178136193165i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <22.69269684646187+35.34178136193165i>
+
+- id     0646
+  from   inventory:Real.^methods
+  cell   unpolar(-1) | 42
+  code   (42).unpolar(-1)
+  is     <22.69269684646187-35.34178136193165i>
+  type   Complex
+  oracle rakudo-2026.07 → <22.69269684646187-35.34178136193165i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <22.69269684646187-35.34178136193165i>
+
+- id     0647
+  from   inventory:Real.^methods
+  cell   unpolar("a") | 42
+  code   (42).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0648
+  from   inventory:Real.^methods
+  cell   unpolar(Any) | 42
+  code   (42).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0649
+  from   inventory:Real.^methods
+  cell   unpolar(0) | 1/3
+  code   (1/3).unpolar(0)
+  is     <0.3333333333333333+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.3333333333333333+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.3333333333333333+0i>
+
+- id     0650
+  from   inventory:Real.^methods
+  cell   unpolar(1) | 1/3
+  code   (1/3).unpolar(1)
+  is     <0.18010076862271324+0.2804903282692988i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.18010076862271324+0.2804903282692988i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.18010076862271324+0.2804903282692988i>
+
+- id     0651
+  from   inventory:Real.^methods
+  cell   unpolar(-1) | 1/3
+  code   (1/3).unpolar(-1)
+  is     <0.18010076862271324-0.2804903282692988i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.18010076862271324-0.2804903282692988i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.18010076862271324-0.2804903282692988i>
+
+- id     0652
+  from   inventory:Real.^methods
+  cell   unpolar("a") | 1/3
+  code   (1/3).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0653
+  from   inventory:Real.^methods
+  cell   unpolar(Any) | 1/3
+  code   (1/3).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0654
+  from   inventory:Real.^methods
+  cell   unpolar(0) | True
+  code   (True).unpolar(0)
+  is     <1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1+0i>
+
+- id     0655
+  from   inventory:Real.^methods
+  cell   unpolar(1) | True
+  code   (True).unpolar(1)
+  is     <0.5403023058681398+0.8414709848078965i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5403023058681398+0.8414709848078965i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.5403023058681398+0.8414709848078965i>
+
+- id     0656
+  from   inventory:Real.^methods
+  cell   unpolar(-1) | True
+  code   (True).unpolar(-1)
+  is     <0.5403023058681398-0.8414709848078965i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.5403023058681398-0.8414709848078965i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.5403023058681398-0.8414709848078965i>
+
+- id     0657
+  from   inventory:Real.^methods
+  cell   unpolar("a") | True
+  code   (True).unpolar("a")
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0658
+  from   inventory:Real.^methods
+  cell   unpolar(Any) | True
+  code   (True).unpolar(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter

@@ -3,7 +3,7 @@ source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
 axes     FatRat | log10 | log2 | pred | roots | succ
-cols     1 | 1e0 | 1/2 | 1+0i
+cols     1 | 1e0 | 1/2 | 1+0i | 0 | -1 | Inf | NaN | -Inf | 2**64 | 0e0 | -0e0 | 42 | 1/3
 
 - id     0001
   from   inventory:Numeric.^methods
@@ -12,7 +12,7 @@ cols     1 | 1e0 | 1/2 | 1+0i
   is     FatRat.new(1, 1)
   type   FatRat
   oracle rakudo-2026.07 → FatRat.new(1, 1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → FatRat.new(1, 1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → FatRat.new(1, 1)
 
 - id     0002
   from   inventory:Numeric.^methods
@@ -21,7 +21,7 @@ cols     1 | 1e0 | 1/2 | 1+0i
   is     FatRat.new(1, 1)
   type   FatRat
   oracle rakudo-2026.07 → FatRat.new(1, 1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → FatRat.new(1, 1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → FatRat.new(1, 1)
 
 - id     0003
   from   inventory:Numeric.^methods
@@ -30,7 +30,7 @@ cols     1 | 1e0 | 1/2 | 1+0i
   is     FatRat.new(1, 2)
   type   FatRat
   oracle rakudo-2026.07 → FatRat.new(1, 2)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → FatRat.new(1, 2)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → FatRat.new(1, 2)
 
 - id     0004
   from   inventory:Numeric.^methods
@@ -39,324 +39,1216 @@ cols     1 | 1e0 | 1/2 | 1+0i
   is     FatRat.new(1, 1)
   type   FatRat
   oracle rakudo-2026.07 → FatRat.new(1, 1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → FatRat.new(1, 1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → FatRat.new(1, 1)
 
 - id     0005
+  from   inventory:Numeric.^methods
+  cell   FatRat | 0
+  code   (0).FatRat
+  is     FatRat.new(0, 1)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(0, 1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → FatRat.new(0, 1)
+
+- id     0006
+  from   inventory:Numeric.^methods
+  cell   FatRat | -1
+  code   (-1).FatRat
+  is     FatRat.new(-1, 1)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(-1, 1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → FatRat.new(-1, 1)
+
+- id     0007
+  from   inventory:Numeric.^methods
+  cell   FatRat | Inf
+  code   (Inf).FatRat
+  is     FatRat.new(1, 0)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(1, 0)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → FatRat.new(1, 0)
+
+- id     0008
+  from   inventory:Numeric.^methods
+  cell   FatRat | NaN
+  code   (NaN).FatRat
+  is     FatRat.new(0, 0)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(0, 0)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → FatRat.new(0, 0)
+
+- id     0009
+  from   inventory:Numeric.^methods
+  cell   FatRat | -Inf
+  code   (-Inf).FatRat
+  is     FatRat.new(-1, 0)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(-1, 0)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → FatRat.new(-1, 0)
+
+- id     0010
+  from   inventory:Numeric.^methods
+  cell   FatRat | 2**64
+  code   (2**64).FatRat
+  is     FatRat.new(18446744073709551616, 1)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(18446744073709551616, 1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → FatRat.new(18446744073709551616, 1)
+
+- id     0011
+  from   inventory:Numeric.^methods
+  cell   FatRat | 0e0
+  code   (0e0).FatRat
+  is     FatRat.new(0, 1)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(0, 1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → FatRat.new(0, 1)
+
+- id     0012
+  from   inventory:Numeric.^methods
+  cell   FatRat | -0e0
+  code   (-0e0).FatRat
+  is     FatRat.new(0, 1)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(0, 1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → FatRat.new(0, 1)
+
+- id     0013
+  from   inventory:Numeric.^methods
+  cell   FatRat | 42
+  code   (42).FatRat
+  is     FatRat.new(42, 1)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(42, 1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → FatRat.new(42, 1)
+
+- id     0014
+  from   inventory:Numeric.^methods
+  cell   FatRat | 1/3
+  code   (1/3).FatRat
+  is     FatRat.new(1, 3)
+  type   FatRat
+  oracle rakudo-2026.07 → FatRat.new(1, 3)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → FatRat.new(1, 3)
+
+- id     0015
   from   inventory:Numeric.^methods
   cell   log10 | 1
   code   (1).log10
   is     0e0
   type   Num
   oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
 
-- id     0006
+- id     0016
   from   inventory:Numeric.^methods
   cell   log10 | 1e0
   code   (1e0).log10
   is     0e0
   type   Num
   oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
 
-- id     0007
+- id     0017
   from   inventory:Numeric.^methods
   cell   log10 | 1/2
   code   (1/2).log10
   is     -0.3010299956639812e0
   type   Num
   oracle rakudo-2026.07 → -0.30102999566398114e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → -0.3010299956639812e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0.3010299956639812e0
   verdict impl-bug
   why    the correctly-rounded double for log10 of this argument is -0.3010299956639812; the reference is out by one or more units in the last place
   ruled  2026-08-16 against rakudo-2026.07
 
-- id     0008
+- id     0018
   from   inventory:Numeric.^methods
   cell   log10 | 1+0i
   code   (1+0i).log10
   is     <0+0i>
   type   Complex
   oracle rakudo-2026.07 → <0+0i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <0+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0+0i>
 
-- id     0009
+- id     0019
+  from   inventory:Numeric.^methods
+  cell   log10 | 0
+  code   (0).log10
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0020
+  from   inventory:Numeric.^methods
+  cell   log10 | -1
+  code   (-1).log10
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0021
+  from   inventory:Numeric.^methods
+  cell   log10 | Inf
+  code   (Inf).log10
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0022
+  from   inventory:Numeric.^methods
+  cell   log10 | NaN
+  code   (NaN).log10
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0023
+  from   inventory:Numeric.^methods
+  cell   log10 | -Inf
+  code   (-Inf).log10
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0024
+  from   inventory:Numeric.^methods
+  cell   log10 | 2**64
+  code   (2**64).log10
+  is     19.265919722494797e0
+  type   Num
+  oracle rakudo-2026.07 → 19.265919722494793e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 19.265919722494797e0
+  verdict impl-bug
+  why    the correctly-rounded double for log10 of this argument is 19.265919722494797; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0025
+  from   inventory:Numeric.^methods
+  cell   log10 | 0e0
+  code   (0e0).log10
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0026
+  from   inventory:Numeric.^methods
+  cell   log10 | -0e0
+  code   (-0e0).log10
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0027
+  from   inventory:Numeric.^methods
+  cell   log10 | 42
+  code   (42).log10
+  is     1.6232492903979006e0
+  type   Num
+  oracle rakudo-2026.07 → 1.6232492903979003e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1.6232492903979006e0
+  verdict impl-bug
+  why    the correctly-rounded double for log10 of this argument is 1.6232492903979006; the reference is out by one or more units in the last place
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0028
+  from   inventory:Numeric.^methods
+  cell   log10 | 1/3
+  code   (1/3).log10
+  is     -0.47712125471966244e0
+  type   Num
+  oracle rakudo-2026.07 → -0.47712125471966244e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -0.47712125471966244e0
+
+- id     0029
   from   inventory:Numeric.^methods
   cell   log2 | 1
   code   (1).log2
   is     0e0
   type   Num
   oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
 
-- id     0010
+- id     0030
   from   inventory:Numeric.^methods
   cell   log2 | 1e0
   code   (1e0).log2
   is     0e0
   type   Num
   oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
 
-- id     0011
+- id     0031
   from   inventory:Numeric.^methods
   cell   log2 | 1/2
   code   (1/2).log2
   is     -1e0
   type   Num
   oracle rakudo-2026.07 → -1e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → -1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1e0
 
-- id     0012
+- id     0032
   from   inventory:Numeric.^methods
   cell   log2 | 1+0i
   code   (1+0i).log2
   is     <0+0i>
   type   Complex
   oracle rakudo-2026.07 → <0+0i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <0+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0+0i>
 
-- id     0013
+- id     0033
+  from   inventory:Numeric.^methods
+  cell   log2 | 0
+  code   (0).log2
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0034
+  from   inventory:Numeric.^methods
+  cell   log2 | -1
+  code   (-1).log2
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0035
+  from   inventory:Numeric.^methods
+  cell   log2 | Inf
+  code   (Inf).log2
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Inf
+
+- id     0036
+  from   inventory:Numeric.^methods
+  cell   log2 | NaN
+  code   (NaN).log2
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0037
+  from   inventory:Numeric.^methods
+  cell   log2 | -Inf
+  code   (-Inf).log2
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0038
+  from   inventory:Numeric.^methods
+  cell   log2 | 2**64
+  code   (2**64).log2
+  is     64e0
+  type   Num
+  oracle rakudo-2026.07 → 64e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 64e0
+
+- id     0039
+  from   inventory:Numeric.^methods
+  cell   log2 | 0e0
+  code   (0e0).log2
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0040
+  from   inventory:Numeric.^methods
+  cell   log2 | -0e0
+  code   (-0e0).log2
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -Inf
+
+- id     0041
+  from   inventory:Numeric.^methods
+  cell   log2 | 42
+  code   (42).log2
+  is     5.392317422778761e0
+  type   Num
+  oracle rakudo-2026.07 → 5.392317422778761e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 5.392317422778761e0
+
+- id     0042
+  from   inventory:Numeric.^methods
+  cell   log2 | 1/3
+  code   (1/3).log2
+  is     -1.5849625007211563e0
+  type   Num
+  oracle rakudo-2026.07 → -1.5849625007211563e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1.5849625007211563e0
+
+- id     0043
   from   inventory:Numeric.^methods
   cell   pred | 1
   code   (1).pred
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
 
-- id     0014
+- id     0044
   from   inventory:Numeric.^methods
   cell   pred | 1e0
   code   (1e0).pred
   is     0e0
   type   Num
   oracle rakudo-2026.07 → 0e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
 
-- id     0015
+- id     0045
   from   inventory:Numeric.^methods
   cell   pred | 1/2
   code   (1/2).pred
   is     -0.5
   type   Rat
   oracle rakudo-2026.07 → -0.5
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
 
-- id     0016
+- id     0046
   from   inventory:Numeric.^methods
   cell   pred | 1+0i
   code   (1+0i).pred
   is     <0+0i>
   type   Complex
   oracle rakudo-2026.07 → <0+0i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
 
-- id     0017
+- id     0047
+  from   inventory:Numeric.^methods
+  cell   pred | 0
+  code   (0).pred
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0048
+  from   inventory:Numeric.^methods
+  cell   pred | -1
+  code   (-1).pred
+  is     -2
+  type   Int
+  oracle rakudo-2026.07 → -2
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -2
+
+- id     0049
+  from   inventory:Numeric.^methods
+  cell   pred | Inf
+  code   (Inf).pred
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 9223372036854775806
+
+- id     0050
+  from   inventory:Numeric.^methods
+  cell   pred | NaN
+  code   (NaN).pred
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0051
+  from   inventory:Numeric.^methods
+  cell   pred | -Inf
+  code   (-Inf).pred
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 9223372036854775807
+
+- id     0052
+  from   inventory:Numeric.^methods
+  cell   pred | 2**64
+  code   (2**64).pred
+  is     18446744073709551615
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551615
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 9223372036854775806
+  verdict disputed
+  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0053
+  from   inventory:Numeric.^methods
+  cell   pred | 0e0
+  code   (0e0).pred
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0054
+  from   inventory:Numeric.^methods
+  cell   pred | -0e0
+  code   (-0e0).pred
+  is     -1e0
+  type   Num
+  oracle rakudo-2026.07 → -1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0055
+  from   inventory:Numeric.^methods
+  cell   pred | 42
+  code   (42).pred
+  is     41
+  type   Int
+  oracle rakudo-2026.07 → 41
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 41
+
+- id     0056
+  from   inventory:Numeric.^methods
+  cell   pred | 1/3
+  code   (1/3).pred
+  is     <-2/3>
+  type   Rat
+  oracle rakudo-2026.07 → <-2/3>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -1
+
+- id     0057
   from   inventory:Numeric.^methods
   cell   roots(0) | 1
   code   (1).roots(0)
   is     NaN
   type   Num
   oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
 
-- id     0018
+- id     0058
   from   inventory:Numeric.^methods
   cell   roots(1) | 1
   code   (1).roots(1)
   is     <1+0i>
   type   Complex
   oracle rakudo-2026.07 → <1+0i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <1+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1+0i>
 
-- id     0019
+- id     0059
   from   inventory:Numeric.^methods
   cell   roots(-1) | 1
   code   (1).roots(-1)
   is     NaN
   type   Num
   oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
 
-- id     0020
+- id     0060
   from   inventory:Numeric.^methods
   cell   roots("a") | 1
   code   (1).roots("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Str::Numeric
 
-- id     0021
+- id     0061
   from   inventory:Numeric.^methods
   cell   roots(Any) | 1
   code   (1).roots(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
 
-- id     0022
+- id     0062
   from   inventory:Numeric.^methods
   cell   roots(0) | 1e0
   code   (1e0).roots(0)
   is     NaN
   type   Num
   oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
 
-- id     0023
+- id     0063
   from   inventory:Numeric.^methods
   cell   roots(1) | 1e0
   code   (1e0).roots(1)
   is     <1+0i>
   type   Complex
   oracle rakudo-2026.07 → <1+0i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <1+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1+0i>
 
-- id     0024
+- id     0064
   from   inventory:Numeric.^methods
   cell   roots(-1) | 1e0
   code   (1e0).roots(-1)
   is     NaN
   type   Num
   oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
 
-- id     0025
+- id     0065
   from   inventory:Numeric.^methods
   cell   roots("a") | 1e0
   code   (1e0).roots("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Str::Numeric
 
-- id     0026
+- id     0066
   from   inventory:Numeric.^methods
   cell   roots(Any) | 1e0
   code   (1e0).roots(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
 
-- id     0027
+- id     0067
   from   inventory:Numeric.^methods
   cell   roots(0) | 1/2
   code   (1/2).roots(0)
   is     NaN
   type   Num
   oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
 
-- id     0028
+- id     0068
   from   inventory:Numeric.^methods
   cell   roots(1) | 1/2
   code   (1/2).roots(1)
   is     <0.5+0i>
   type   Complex
   oracle rakudo-2026.07 → <0.5+0i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <0.5+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.5+0i>
 
-- id     0029
+- id     0069
   from   inventory:Numeric.^methods
   cell   roots(-1) | 1/2
   code   (1/2).roots(-1)
   is     NaN
   type   Num
   oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
 
-- id     0030
+- id     0070
   from   inventory:Numeric.^methods
   cell   roots("a") | 1/2
   code   (1/2).roots("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Str::Numeric
 
-- id     0031
+- id     0071
   from   inventory:Numeric.^methods
   cell   roots(Any) | 1/2
   code   (1/2).roots(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
 
-- id     0032
+- id     0072
   from   inventory:Numeric.^methods
   cell   roots(0) | 1+0i
   code   (1+0i).roots(0)
   is     NaN
   type   Num
   oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
 
-- id     0033
+- id     0073
   from   inventory:Numeric.^methods
   cell   roots(1) | 1+0i
   code   (1+0i).roots(1)
   is     <1+0i>
   type   Complex
   oracle rakudo-2026.07 → <1+0i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → <1+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1+0i>
 
-- id     0034
+- id     0074
   from   inventory:Numeric.^methods
   cell   roots(-1) | 1+0i
   code   (1+0i).roots(-1)
   is     NaN
   type   Num
   oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
 
-- id     0035
+- id     0075
   from   inventory:Numeric.^methods
   cell   roots("a") | 1+0i
   code   (1+0i).roots("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
 
-- id     0036
+- id     0076
   from   inventory:Numeric.^methods
   cell   roots(Any) | 1+0i
   code   (1+0i).roots(Any)
   is     NaN
   type   Num
   oracle rakudo-2026.07 → NaN
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
 
-- id     0037
+- id     0077
+  from   inventory:Numeric.^methods
+  cell   roots(0) | 0
+  code   (0).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0078
+  from   inventory:Numeric.^methods
+  cell   roots(1) | 0
+  code   (0).roots(1)
+  is     <0+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0+0i>
+
+- id     0079
+  from   inventory:Numeric.^methods
+  cell   roots(-1) | 0
+  code   (0).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0080
+  from   inventory:Numeric.^methods
+  cell   roots("a") | 0
+  code   (0).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Str::Numeric
+
+- id     0081
+  from   inventory:Numeric.^methods
+  cell   roots(Any) | 0
+  code   (0).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0082
+  from   inventory:Numeric.^methods
+  cell   roots(0) | -1
+  code   (-1).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0083
+  from   inventory:Numeric.^methods
+  cell   roots(1) | -1
+  code   (-1).roots(1)
+  is     <-1+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <-1+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-1+0i>
+
+- id     0084
+  from   inventory:Numeric.^methods
+  cell   roots(-1) | -1
+  code   (-1).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0085
+  from   inventory:Numeric.^methods
+  cell   roots("a") | -1
+  code   (-1).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Str::Numeric
+
+- id     0086
+  from   inventory:Numeric.^methods
+  cell   roots(Any) | -1
+  code   (-1).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0087
+  from   inventory:Numeric.^methods
+  cell   roots(0) | Inf
+  code   (Inf).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0088
+  from   inventory:Numeric.^methods
+  cell   roots(1) | Inf
+  code   (Inf).roots(1)
+  is     <Inf+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <Inf+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <Inf+0i>
+
+- id     0089
+  from   inventory:Numeric.^methods
+  cell   roots(-1) | Inf
+  code   (Inf).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0090
+  from   inventory:Numeric.^methods
+  cell   roots("a") | Inf
+  code   (Inf).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Str::Numeric
+
+- id     0091
+  from   inventory:Numeric.^methods
+  cell   roots(Any) | Inf
+  code   (Inf).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0092
+  from   inventory:Numeric.^methods
+  cell   roots(0) | NaN
+  code   (NaN).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0093
+  from   inventory:Numeric.^methods
+  cell   roots(1) | NaN
+  code   (NaN).roots(1)
+  is     <NaN+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <NaN+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0094
+  from   inventory:Numeric.^methods
+  cell   roots(-1) | NaN
+  code   (NaN).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0095
+  from   inventory:Numeric.^methods
+  cell   roots("a") | NaN
+  code   (NaN).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Str::Numeric
+
+- id     0096
+  from   inventory:Numeric.^methods
+  cell   roots(Any) | NaN
+  code   (NaN).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0097
+  from   inventory:Numeric.^methods
+  cell   roots(0) | -Inf
+  code   (-Inf).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0098
+  from   inventory:Numeric.^methods
+  cell   roots(1) | -Inf
+  code   (-Inf).roots(1)
+  is     <-Inf+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <-Inf+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-Inf+0i>
+
+- id     0099
+  from   inventory:Numeric.^methods
+  cell   roots(-1) | -Inf
+  code   (-Inf).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0100
+  from   inventory:Numeric.^methods
+  cell   roots("a") | -Inf
+  code   (-Inf).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Str::Numeric
+
+- id     0101
+  from   inventory:Numeric.^methods
+  cell   roots(Any) | -Inf
+  code   (-Inf).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0102
+  from   inventory:Numeric.^methods
+  cell   roots(0) | 2**64
+  code   (2**64).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0103
+  from   inventory:Numeric.^methods
+  cell   roots(1) | 2**64
+  code   (2**64).roots(1)
+  is     <1.8446744073709552e+19+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <1.8446744073709552e+19+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <1.8446744073709552e+19+0i>
+
+- id     0104
+  from   inventory:Numeric.^methods
+  cell   roots(-1) | 2**64
+  code   (2**64).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0105
+  from   inventory:Numeric.^methods
+  cell   roots("a") | 2**64
+  code   (2**64).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Str::Numeric
+
+- id     0106
+  from   inventory:Numeric.^methods
+  cell   roots(Any) | 2**64
+  code   (2**64).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0107
+  from   inventory:Numeric.^methods
+  cell   roots(0) | 0e0
+  code   (0e0).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0108
+  from   inventory:Numeric.^methods
+  cell   roots(1) | 0e0
+  code   (0e0).roots(1)
+  is     <0+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0+0i>
+
+- id     0109
+  from   inventory:Numeric.^methods
+  cell   roots(-1) | 0e0
+  code   (0e0).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0110
+  from   inventory:Numeric.^methods
+  cell   roots("a") | 0e0
+  code   (0e0).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Str::Numeric
+
+- id     0111
+  from   inventory:Numeric.^methods
+  cell   roots(Any) | 0e0
+  code   (0e0).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0112
+  from   inventory:Numeric.^methods
+  cell   roots(0) | -0e0
+  code   (-0e0).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0113
+  from   inventory:Numeric.^methods
+  cell   roots(1) | -0e0
+  code   (-0e0).roots(1)
+  is     <-0+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <-0+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <-0+0i>
+
+- id     0114
+  from   inventory:Numeric.^methods
+  cell   roots(-1) | -0e0
+  code   (-0e0).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0115
+  from   inventory:Numeric.^methods
+  cell   roots("a") | -0e0
+  code   (-0e0).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Str::Numeric
+
+- id     0116
+  from   inventory:Numeric.^methods
+  cell   roots(Any) | -0e0
+  code   (-0e0).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0117
+  from   inventory:Numeric.^methods
+  cell   roots(0) | 42
+  code   (42).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0118
+  from   inventory:Numeric.^methods
+  cell   roots(1) | 42
+  code   (42).roots(1)
+  is     <42+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <42+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <42+0i>
+
+- id     0119
+  from   inventory:Numeric.^methods
+  cell   roots(-1) | 42
+  code   (42).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0120
+  from   inventory:Numeric.^methods
+  cell   roots("a") | 42
+  code   (42).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Str::Numeric
+
+- id     0121
+  from   inventory:Numeric.^methods
+  cell   roots(Any) | 42
+  code   (42).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0122
+  from   inventory:Numeric.^methods
+  cell   roots(0) | 1/3
+  code   (1/3).roots(0)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0123
+  from   inventory:Numeric.^methods
+  cell   roots(1) | 1/3
+  code   (1/3).roots(1)
+  is     <0.3333333333333333+0i>
+  type   Complex
+  oracle rakudo-2026.07 → <0.3333333333333333+0i>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → <0.3333333333333333+0i>
+
+- id     0124
+  from   inventory:Numeric.^methods
+  cell   roots(-1) | 1/3
+  code   (1/3).roots(-1)
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → NaN
+
+- id     0125
+  from   inventory:Numeric.^methods
+  cell   roots("a") | 1/3
+  code   (1/3).roots("a")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Str::Numeric
+
+- id     0126
+  from   inventory:Numeric.^methods
+  cell   roots(Any) | 1/3
+  code   (1/3).roots(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0127
   from   inventory:Numeric.^methods
   cell   succ | 1
   code   (1).succ
   is     2
   type   Int
   oracle rakudo-2026.07 → 2
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 2
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 2
 
-- id     0038
+- id     0128
   from   inventory:Numeric.^methods
   cell   succ | 1e0
   code   (1e0).succ
   is     2e0
   type   Num
   oracle rakudo-2026.07 → 2e0
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 2
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 2
 
-- id     0039
+- id     0129
   from   inventory:Numeric.^methods
   cell   succ | 1/2
   code   (1/2).succ
   is     1.5
   type   Rat
   oracle rakudo-2026.07 → 1.5
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
-- id     0040
+- id     0130
   from   inventory:Numeric.^methods
   cell   succ | 1+0i
   code   (1+0i).succ
   is     <2+0i>
   type   Complex
   oracle rakudo-2026.07 → <2+0i>
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0131
+  from   inventory:Numeric.^methods
+  cell   succ | 0
+  code   (0).succ
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0132
+  from   inventory:Numeric.^methods
+  cell   succ | -1
+  code   (-1).succ
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+
+- id     0133
+  from   inventory:Numeric.^methods
+  cell   succ | Inf
+  code   (Inf).succ
+  is     Inf
+  type   Num
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -9223372036854775808
+
+- id     0134
+  from   inventory:Numeric.^methods
+  cell   succ | NaN
+  code   (NaN).succ
+  is     NaN
+  type   Num
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0135
+  from   inventory:Numeric.^methods
+  cell   succ | -Inf
+  code   (-Inf).succ
+  is     -Inf
+  type   Num
+  oracle rakudo-2026.07 → -Inf
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -9223372036854775807
+
+- id     0136
+  from   inventory:Numeric.^methods
+  cell   succ | 2**64
+  code   (2**64).succ
+  is     18446744073709551617
+  type   Int
+  oracle rakudo-2026.07 → 18446744073709551617
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -9223372036854775808
+  verdict disputed
+  why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
+  ruled  2026-08-16 against rakudo-2026.07
+
+- id     0137
+  from   inventory:Numeric.^methods
+  cell   succ | 0e0
+  code   (0e0).succ
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0138
+  from   inventory:Numeric.^methods
+  cell   succ | -0e0
+  code   (-0e0).succ
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
+
+- id     0139
+  from   inventory:Numeric.^methods
+  cell   succ | 42
+  code   (42).succ
+  is     43
+  type   Int
+  oracle rakudo-2026.07 → 43
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 43
+
+- id     0140
+  from   inventory:Numeric.^methods
+  cell   succ | 1/3
+  code   (1/3).succ
+  is     <4/3>
+  type   Rat
+  oracle rakudo-2026.07 → <4/3>
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1

@@ -3,7 +3,7 @@ source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
 axes     Capture | of | returns
-cols     { 1 } | &say
+cols     { 1 } | &say | -> $x { $x } | { $_ } | (* + 1) | (* > 0) | { ; } | -> { 1 }
 
 - id     0001
   from   inventory:Callable.^methods
@@ -11,7 +11,7 @@ cols     { 1 } | &say
   code   ({ 1 }).Capture
   throws X::Cannot::Capture
   oracle rakudo-2026.07 → ERR:X::Cannot::Capture
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
 
 - id     0002
   from   inventory:Callable.^methods
@@ -19,40 +19,196 @@ cols     { 1 } | &say
   code   (&say).Capture
   throws X::Cannot::Capture
   oracle rakudo-2026.07 → ERR:X::Cannot::Capture
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
 
 - id     0003
+  from   inventory:Callable.^methods
+  cell   Capture | -> $x { $x }
+  code   (-> $x { $x }).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+
+- id     0004
+  from   inventory:Callable.^methods
+  cell   Capture | { $_ }
+  code   ({ $_ }).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+
+- id     0005
+  from   inventory:Callable.^methods
+  cell   Capture | (* + 1)
+  code   ((* + 1)).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → WhateverCode.new
+
+- id     0006
+  from   inventory:Callable.^methods
+  cell   Capture | (* > 0)
+  code   ((* > 0)).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → WhateverCode.new
+
+- id     0007
+  from   inventory:Callable.^methods
+  cell   Capture | { ; }
+  code   ({ ; }).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+
+- id     0008
+  from   inventory:Callable.^methods
+  cell   Capture | -> { 1 }
+  code   (-> { 1 }).Capture
+  throws X::Cannot::Capture
+  oracle rakudo-2026.07 → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+
+- id     0009
   from   inventory:Callable.^methods
   cell   of | { 1 }
   code   ({ 1 }).of
   is     Mu
   type   Mu
   oracle rakudo-2026.07 → Mu
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
 
-- id     0004
+- id     0010
   from   inventory:Callable.^methods
   cell   of | &say
   code   (&say).of
   is     Mu
   type   Mu
   oracle rakudo-2026.07 → Mu
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
 
-- id     0005
+- id     0011
+  from   inventory:Callable.^methods
+  cell   of | -> $x { $x }
+  code   (-> $x { $x }).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0012
+  from   inventory:Callable.^methods
+  cell   of | { $_ }
+  code   ({ $_ }).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0013
+  from   inventory:Callable.^methods
+  cell   of | (* + 1)
+  code   ((* + 1)).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → WhateverCode.new
+
+- id     0014
+  from   inventory:Callable.^methods
+  cell   of | (* > 0)
+  code   ((* > 0)).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → WhateverCode.new
+
+- id     0015
+  from   inventory:Callable.^methods
+  cell   of | { ; }
+  code   ({ ; }).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0016
+  from   inventory:Callable.^methods
+  cell   of | -> { 1 }
+  code   (-> { 1 }).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0017
   from   inventory:Callable.^methods
   cell   returns | { 1 }
   code   ({ 1 }).returns
   is     Mu
   type   Mu
   oracle rakudo-2026.07 → Mu
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
 
-- id     0006
+- id     0018
   from   inventory:Callable.^methods
   cell   returns | &say
   code   (&say).returns
   is     Mu
   type   Mu
   oracle rakudo-2026.07 → Mu
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0019
+  from   inventory:Callable.^methods
+  cell   returns | -> $x { $x }
+  code   (-> $x { $x }).returns
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0020
+  from   inventory:Callable.^methods
+  cell   returns | { $_ }
+  code   ({ $_ }).returns
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0021
+  from   inventory:Callable.^methods
+  cell   returns | (* + 1)
+  code   ((* + 1)).returns
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → WhateverCode.new
+
+- id     0022
+  from   inventory:Callable.^methods
+  cell   returns | (* > 0)
+  code   ((* > 0)).returns
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → WhateverCode.new
+
+- id     0023
+  from   inventory:Callable.^methods
+  cell   returns | { ; }
+  code   ({ ; }).returns
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0024
+  from   inventory:Callable.^methods
+  cell   returns | -> { 1 }
+  code   (-> { 1 }).returns
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu

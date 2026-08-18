@@ -25,6 +25,13 @@ my $GUARD  = 0;
 my $VERB   = False;
 my $CLASSIFY = False;
 
+# Density level. A record carries `level N`; `fire --level=N` runs everything at
+# or below N. The plan's L0-L4: 0 touches every atom once, 1 is the core corners,
+# 2 the working set, 3 everything generated, 4 the exhaustive dials. A record
+# with no level is 1 — curated tests are core by default, since each one traces
+# to a bug somebody actually hit.
+my $LEVEL = 3;
+
 # ---------------------------------------------------------------- the format
 
 # A .grid file is a header of `name value` lines at column 0, then records.
@@ -375,6 +382,7 @@ sub emit-record(%parsed, %r, $kind) {
 my $SEQ = 0;
 my $BAD = 0;
 my $PARKED = 0;
+my $SKIPPED-LEVEL = 0;
 my $RULED = 0;
 
 # Which implementation are we testing? Needed to tell an ordinary failure from
@@ -551,6 +559,10 @@ sub cmd-fire(@selector) {
         for %parsed<records>.list -> %r {
             my @a = assertion-of(%r);
             next unless @a == 1;
+            if (+(%r<level> // 1)) > $LEVEL {
+                $SKIPPED-LEVEL++;
+                next;
+            }
             if parked(%r) {
                 $PARKED++;
                 next;
@@ -610,7 +622,8 @@ sub cmd-fire(@selector) {
     my $note = $recovered ?? ", $recovered re-run individually after a dense-run failure" !! '';
     my $park = $PARKED ?? ", $PARKED parked on an unresolved ruling" !! '';
     my $rule = $RULED  ?? ", $RULED failed as ruled"                  !! '';
-    say "# $SEQ ran, $BAD failed$note$park$rule";
+    my $lvl  = $SKIPPED-LEVEL ?? ", $SKIPPED-LEVEL above level $LEVEL" !! '';
+    say "# $SEQ ran, $BAD failed$note$park$rule$lvl";
     exit $BAD ?? 1 !! 0;
 }
 
@@ -1035,6 +1048,9 @@ for @*ARGS -> $a {
     }
     elsif $a eq '--classify' {
         $CLASSIFY = True;
+    }
+    elsif $a.starts-with('--level=') {
+        $LEVEL = +$a.substr(8);
     }
     else {
         @args.push: $a;

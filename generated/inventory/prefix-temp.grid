@@ -7,6 +7,7 @@ ladder   mixed
 - id     0001
   from   inventory:prefix:temp
   cell   0
+  level  0
   code   temp(0)
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -15,6 +16,7 @@ ladder   mixed
 - id     0002
   from   inventory:prefix:temp
   cell   1
+  level  1
   code   temp(1)
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -23,6 +25,7 @@ ladder   mixed
 - id     0003
   from   inventory:prefix:temp
   cell   -1
+  level  1
   code   temp(-1)
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -31,6 +34,7 @@ ladder   mixed
 - id     0004
   from   inventory:prefix:temp
   cell   1/2
+  level  1
   code   temp(1/2)
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -39,6 +43,7 @@ ladder   mixed
 - id     0005
   from   inventory:prefix:temp
   cell   0e0
+  level  2
   code   temp(0e0)
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -47,6 +52,7 @@ ladder   mixed
 - id     0006
   from   inventory:prefix:temp
   cell   NaN
+  level  2
   code   temp(NaN)
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -55,6 +61,7 @@ ladder   mixed
 - id     0007
   from   inventory:prefix:temp
   cell   ""
+  level  2
   code   temp("")
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -63,6 +70,7 @@ ladder   mixed
 - id     0008
   from   inventory:prefix:temp
   cell   "a"
+  level  2
   code   temp("a")
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -71,6 +79,7 @@ ladder   mixed
 - id     0009
   from   inventory:prefix:temp
   cell   True
+  level  2
   code   temp(True)
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -79,6 +88,7 @@ ladder   mixed
 - id     0010
   from   inventory:prefix:temp
   cell   Any
+  level  2
   code   temp(Any)
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -87,6 +97,7 @@ ladder   mixed
 - id     0011
   from   inventory:prefix:temp
   cell   (1,2)
+  level  3
   code   temp((1,2))
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -95,6 +106,7 @@ ladder   mixed
 - id     0012
   from   inventory:prefix:temp
   cell   {a=>1}
+  level  3
   code   temp({a=>1})
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -103,6 +115,7 @@ ladder   mixed
 - id     0013
   from   inventory:prefix:temp
   cell   -0e0
+  level  3
   code   temp(-0e0)
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -111,6 +124,7 @@ ladder   mixed
 - id     0014
   from   inventory:prefix:temp
   cell   Inf
+  level  3
   code   temp(Inf)
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -119,6 +133,7 @@ ladder   mixed
 - id     0015
   from   inventory:prefix:temp
   cell   2**64
+  level  3
   code   temp(2**64)
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -127,6 +142,7 @@ ladder   mixed
 - id     0016
   from   inventory:prefix:temp
   cell   False
+  level  3
   code   temp(False)
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -135,6 +151,7 @@ ladder   mixed
 - id     0017
   from   inventory:prefix:temp
   cell   Nil
+  level  3
   code   temp(Nil)
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -143,6 +160,7 @@ ladder   mixed
 - id     0018
   from   inventory:prefix:temp
   cell   ()
+  level  3
   code   temp(())
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -151,6 +169,7 @@ ladder   mixed
 - id     0019
   from   inventory:prefix:temp
   cell   "0"
+  level  3
   code   temp("0")
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
@@ -159,7 +178,44 @@ ladder   mixed
 - id     0020
   from   inventory:prefix:temp
   cell   (1..3)
+  level  3
   code   temp((1..3))
   throws X::Undeclared::Symbols
   oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
   oracle rakupp-v3.14.0-92-g78048b0-modified → ERR:X::Assignment::RO
+
+- id     0021
+  from   inventory:prefix:temp
+  cell   Int
+  level  3
+  code   temp(Int)
+  throws X::Undeclared::Symbols
+  oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0022
+  from   inventory:prefix:temp
+  cell   "a b"
+  level  3
+  code   temp("a b")
+  throws X::Undeclared::Symbols
+  oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0023
+  from   inventory:prefix:temp
+  cell   [1,2]
+  level  3
+  code   temp([1,2])
+  throws X::Undeclared::Symbols
+  oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0024
+  from   inventory:prefix:temp
+  cell   (a => 1)
+  level  3
+  code   temp((a => 1))
+  throws X::Undeclared::Symbols
+  oracle rakudo-2026.07 → ERR:X::Undeclared::Symbols
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO

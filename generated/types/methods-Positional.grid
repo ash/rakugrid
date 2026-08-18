@@ -3,7 +3,7 @@ source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
 axes     of
-cols     [1,2] | ()
+cols     [1,2] | () | [] | (1,2,3) | [Any] | (1,) | <a b> | [1,"a"] | [[1],[2]]
 
 - id     0001
   from   inventory:Positional.^methods
@@ -12,7 +12,7 @@ cols     [1,2] | ()
   is     Mu
   type   Mu
   oracle rakudo-2026.07 → Mu
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
 
 - id     0002
   from   inventory:Positional.^methods
@@ -21,4 +21,67 @@ cols     [1,2] | ()
   is     Mu
   type   Mu
   oracle rakudo-2026.07 → Mu
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0003
+  from   inventory:Positional.^methods
+  cell   of | []
+  code   ([]).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0004
+  from   inventory:Positional.^methods
+  cell   of | (1,2,3)
+  code   ((1,2,3)).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0005
+  from   inventory:Positional.^methods
+  cell   of | [Any]
+  code   ([Any]).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0006
+  from   inventory:Positional.^methods
+  cell   of | (1,)
+  code   ((1,)).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0007
+  from   inventory:Positional.^methods
+  cell   of | <a b>
+  code   (<a b>).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0008
+  from   inventory:Positional.^methods
+  cell   of | [1,"a"]
+  code   ([1,"a"]).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu
+
+- id     0009
+  from   inventory:Positional.^methods
+  cell   of | [[1],[2]]
+  code   ([[1],[2]]).of
+  is     Mu
+  type   Mu
+  oracle rakudo-2026.07 → Mu
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Mu

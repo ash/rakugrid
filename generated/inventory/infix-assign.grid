@@ -3,12 +3,13 @@ source   generated
 gen      gen/operators.raku
 from-inventory infix =
 ladder   mixed
-axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
-cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
 
 - id     0001
   from   inventory:infix:=
   cell   0 | 0
+  level  0
   code   (0) = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -17,6 +18,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0002
   from   inventory:infix:=
   cell   0 | 1
+  level  1
   code   (0) = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -25,6 +27,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0003
   from   inventory:infix:=
   cell   1 | 1
+  level  1
   code   (1) = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -33,6 +36,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0004
   from   inventory:infix:=
   cell   1 | 0
+  level  1
   code   (1) = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -41,6 +45,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0005
   from   inventory:infix:=
   cell   0 | -1
+  level  1
   code   (0) = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -49,6 +54,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0006
   from   inventory:infix:=
   cell   1 | -1
+  level  1
   code   (1) = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -57,6 +63,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0007
   from   inventory:infix:=
   cell   -1 | -1
+  level  1
   code   (-1) = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -65,6 +72,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0008
   from   inventory:infix:=
   cell   -1 | 0
+  level  1
   code   (-1) = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -73,6 +81,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0009
   from   inventory:infix:=
   cell   -1 | 1
+  level  1
   code   (-1) = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -81,6 +90,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0010
   from   inventory:infix:=
   cell   0 | 1/2
+  level  1
   code   (0) = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -89,6 +99,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0011
   from   inventory:infix:=
   cell   1 | 1/2
+  level  1
   code   (1) = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -97,6 +108,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0012
   from   inventory:infix:=
   cell   -1 | 1/2
+  level  1
   code   (-1) = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -105,6 +117,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0013
   from   inventory:infix:=
   cell   1/2 | 1/2
+  level  1
   code   (1/2) = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -113,6 +126,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0014
   from   inventory:infix:=
   cell   1/2 | 0
+  level  1
   code   (1/2) = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -121,6 +135,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0015
   from   inventory:infix:=
   cell   1/2 | 1
+  level  1
   code   (1/2) = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -129,6 +144,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0016
   from   inventory:infix:=
   cell   1/2 | -1
+  level  1
   code   (1/2) = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -137,6 +153,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0017
   from   inventory:infix:=
   cell   0 | 0e0
+  level  2
   code   (0) = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -145,6 +162,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0018
   from   inventory:infix:=
   cell   1 | 0e0
+  level  2
   code   (1) = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -153,6 +171,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0019
   from   inventory:infix:=
   cell   -1 | 0e0
+  level  2
   code   (-1) = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -161,6 +180,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0020
   from   inventory:infix:=
   cell   1/2 | 0e0
+  level  2
   code   (1/2) = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -169,6 +189,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0021
   from   inventory:infix:=
   cell   0e0 | 0e0
+  level  2
   code   (0e0) = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -177,6 +198,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0022
   from   inventory:infix:=
   cell   0e0 | 0
+  level  2
   code   (0e0) = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -185,6 +207,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0023
   from   inventory:infix:=
   cell   0e0 | 1
+  level  2
   code   (0e0) = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -193,6 +216,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0024
   from   inventory:infix:=
   cell   0e0 | -1
+  level  2
   code   (0e0) = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -201,6 +225,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0025
   from   inventory:infix:=
   cell   0e0 | 1/2
+  level  2
   code   (0e0) = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -209,6 +234,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0026
   from   inventory:infix:=
   cell   0 | NaN
+  level  2
   code   (0) = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -217,6 +243,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0027
   from   inventory:infix:=
   cell   1 | NaN
+  level  2
   code   (1) = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -225,6 +252,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0028
   from   inventory:infix:=
   cell   -1 | NaN
+  level  2
   code   (-1) = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -233,6 +261,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0029
   from   inventory:infix:=
   cell   1/2 | NaN
+  level  2
   code   (1/2) = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -241,6 +270,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0030
   from   inventory:infix:=
   cell   0e0 | NaN
+  level  2
   code   (0e0) = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -249,6 +279,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0031
   from   inventory:infix:=
   cell   NaN | NaN
+  level  2
   code   (NaN) = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -257,6 +288,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0032
   from   inventory:infix:=
   cell   NaN | 0
+  level  2
   code   (NaN) = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -265,6 +297,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0033
   from   inventory:infix:=
   cell   NaN | 1
+  level  2
   code   (NaN) = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -273,6 +306,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0034
   from   inventory:infix:=
   cell   NaN | -1
+  level  2
   code   (NaN) = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -281,6 +315,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0035
   from   inventory:infix:=
   cell   NaN | 1/2
+  level  2
   code   (NaN) = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -289,6 +324,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0036
   from   inventory:infix:=
   cell   NaN | 0e0
+  level  2
   code   (NaN) = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -297,6 +333,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0037
   from   inventory:infix:=
   cell   0 | ""
+  level  2
   code   (0) = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -305,6 +342,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0038
   from   inventory:infix:=
   cell   1 | ""
+  level  2
   code   (1) = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -313,6 +351,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0039
   from   inventory:infix:=
   cell   -1 | ""
+  level  2
   code   (-1) = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -321,6 +360,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0040
   from   inventory:infix:=
   cell   1/2 | ""
+  level  2
   code   (1/2) = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -329,6 +369,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0041
   from   inventory:infix:=
   cell   0e0 | ""
+  level  2
   code   (0e0) = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -337,6 +378,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0042
   from   inventory:infix:=
   cell   NaN | ""
+  level  2
   code   (NaN) = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -345,6 +387,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0043
   from   inventory:infix:=
   cell   "" | ""
+  level  2
   code   ("") = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -353,6 +396,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0044
   from   inventory:infix:=
   cell   "" | 0
+  level  2
   code   ("") = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -361,6 +405,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0045
   from   inventory:infix:=
   cell   "" | 1
+  level  2
   code   ("") = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -369,6 +414,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0046
   from   inventory:infix:=
   cell   "" | -1
+  level  2
   code   ("") = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -377,6 +423,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0047
   from   inventory:infix:=
   cell   "" | 1/2
+  level  2
   code   ("") = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -385,6 +432,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0048
   from   inventory:infix:=
   cell   "" | 0e0
+  level  2
   code   ("") = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -393,6 +441,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0049
   from   inventory:infix:=
   cell   "" | NaN
+  level  2
   code   ("") = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -401,6 +450,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0050
   from   inventory:infix:=
   cell   0 | "a"
+  level  2
   code   (0) = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -409,6 +459,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0051
   from   inventory:infix:=
   cell   1 | "a"
+  level  2
   code   (1) = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -417,6 +468,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0052
   from   inventory:infix:=
   cell   -1 | "a"
+  level  2
   code   (-1) = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -425,6 +477,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0053
   from   inventory:infix:=
   cell   1/2 | "a"
+  level  2
   code   (1/2) = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -433,6 +486,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0054
   from   inventory:infix:=
   cell   0e0 | "a"
+  level  2
   code   (0e0) = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -441,6 +495,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0055
   from   inventory:infix:=
   cell   NaN | "a"
+  level  2
   code   (NaN) = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -449,6 +504,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0056
   from   inventory:infix:=
   cell   "" | "a"
+  level  2
   code   ("") = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -457,6 +513,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0057
   from   inventory:infix:=
   cell   "a" | "a"
+  level  2
   code   ("a") = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -465,6 +522,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0058
   from   inventory:infix:=
   cell   "a" | 0
+  level  2
   code   ("a") = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -473,6 +531,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0059
   from   inventory:infix:=
   cell   "a" | 1
+  level  2
   code   ("a") = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -481,6 +540,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0060
   from   inventory:infix:=
   cell   "a" | -1
+  level  2
   code   ("a") = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -489,6 +549,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0061
   from   inventory:infix:=
   cell   "a" | 1/2
+  level  2
   code   ("a") = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -497,6 +558,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0062
   from   inventory:infix:=
   cell   "a" | 0e0
+  level  2
   code   ("a") = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -505,6 +567,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0063
   from   inventory:infix:=
   cell   "a" | NaN
+  level  2
   code   ("a") = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -513,6 +576,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0064
   from   inventory:infix:=
   cell   "a" | ""
+  level  2
   code   ("a") = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -521,6 +585,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0065
   from   inventory:infix:=
   cell   0 | True
+  level  2
   code   (0) = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -529,6 +594,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0066
   from   inventory:infix:=
   cell   1 | True
+  level  2
   code   (1) = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -537,6 +603,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0067
   from   inventory:infix:=
   cell   -1 | True
+  level  2
   code   (-1) = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -545,6 +612,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0068
   from   inventory:infix:=
   cell   1/2 | True
+  level  2
   code   (1/2) = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -553,6 +621,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0069
   from   inventory:infix:=
   cell   0e0 | True
+  level  2
   code   (0e0) = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -561,6 +630,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0070
   from   inventory:infix:=
   cell   NaN | True
+  level  2
   code   (NaN) = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -569,6 +639,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0071
   from   inventory:infix:=
   cell   "" | True
+  level  2
   code   ("") = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -577,6 +648,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0072
   from   inventory:infix:=
   cell   "a" | True
+  level  2
   code   ("a") = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -585,6 +657,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0073
   from   inventory:infix:=
   cell   True | True
+  level  2
   code   (True) = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -593,6 +666,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0074
   from   inventory:infix:=
   cell   True | 0
+  level  2
   code   (True) = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -601,6 +675,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0075
   from   inventory:infix:=
   cell   True | 1
+  level  2
   code   (True) = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -609,6 +684,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0076
   from   inventory:infix:=
   cell   True | -1
+  level  2
   code   (True) = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -617,6 +693,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0077
   from   inventory:infix:=
   cell   True | 1/2
+  level  2
   code   (True) = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -625,6 +702,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0078
   from   inventory:infix:=
   cell   True | 0e0
+  level  2
   code   (True) = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -633,6 +711,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0079
   from   inventory:infix:=
   cell   True | NaN
+  level  2
   code   (True) = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -641,6 +720,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0080
   from   inventory:infix:=
   cell   True | ""
+  level  2
   code   (True) = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -649,6 +729,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0081
   from   inventory:infix:=
   cell   True | "a"
+  level  2
   code   (True) = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -657,6 +738,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0082
   from   inventory:infix:=
   cell   0 | Any
+  level  2
   code   (0) = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -665,6 +747,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0083
   from   inventory:infix:=
   cell   1 | Any
+  level  2
   code   (1) = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -673,6 +756,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0084
   from   inventory:infix:=
   cell   -1 | Any
+  level  2
   code   (-1) = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -681,6 +765,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0085
   from   inventory:infix:=
   cell   1/2 | Any
+  level  2
   code   (1/2) = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -689,6 +774,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0086
   from   inventory:infix:=
   cell   0e0 | Any
+  level  2
   code   (0e0) = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -697,6 +783,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0087
   from   inventory:infix:=
   cell   NaN | Any
+  level  2
   code   (NaN) = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -705,6 +792,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0088
   from   inventory:infix:=
   cell   "" | Any
+  level  2
   code   ("") = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -713,6 +801,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0089
   from   inventory:infix:=
   cell   "a" | Any
+  level  2
   code   ("a") = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -721,6 +810,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0090
   from   inventory:infix:=
   cell   True | Any
+  level  2
   code   (True) = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -729,6 +819,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0091
   from   inventory:infix:=
   cell   Any | Any
+  level  2
   code   (Any) = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -737,6 +828,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0092
   from   inventory:infix:=
   cell   Any | 0
+  level  2
   code   (Any) = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -745,6 +837,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0093
   from   inventory:infix:=
   cell   Any | 1
+  level  2
   code   (Any) = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -753,6 +846,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0094
   from   inventory:infix:=
   cell   Any | -1
+  level  2
   code   (Any) = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -761,6 +855,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0095
   from   inventory:infix:=
   cell   Any | 1/2
+  level  2
   code   (Any) = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -769,6 +864,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0096
   from   inventory:infix:=
   cell   Any | 0e0
+  level  2
   code   (Any) = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -777,6 +873,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0097
   from   inventory:infix:=
   cell   Any | NaN
+  level  2
   code   (Any) = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -785,6 +882,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0098
   from   inventory:infix:=
   cell   Any | ""
+  level  2
   code   (Any) = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -793,6 +891,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0099
   from   inventory:infix:=
   cell   Any | "a"
+  level  2
   code   (Any) = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -801,6 +900,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0100
   from   inventory:infix:=
   cell   Any | True
+  level  2
   code   (Any) = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -809,6 +909,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0101
   from   inventory:infix:=
   cell   0 | (1,2)
+  level  3
   code   (0) = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -817,6 +918,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0102
   from   inventory:infix:=
   cell   1 | (1,2)
+  level  3
   code   (1) = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -825,6 +927,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0103
   from   inventory:infix:=
   cell   -1 | (1,2)
+  level  3
   code   (-1) = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -833,6 +936,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0104
   from   inventory:infix:=
   cell   1/2 | (1,2)
+  level  3
   code   (1/2) = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -841,6 +945,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0105
   from   inventory:infix:=
   cell   0e0 | (1,2)
+  level  3
   code   (0e0) = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -849,6 +954,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0106
   from   inventory:infix:=
   cell   NaN | (1,2)
+  level  3
   code   (NaN) = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -857,6 +963,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0107
   from   inventory:infix:=
   cell   "" | (1,2)
+  level  3
   code   ("") = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -865,6 +972,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0108
   from   inventory:infix:=
   cell   "a" | (1,2)
+  level  3
   code   ("a") = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -873,6 +981,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0109
   from   inventory:infix:=
   cell   True | (1,2)
+  level  3
   code   (True) = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -881,6 +990,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0110
   from   inventory:infix:=
   cell   Any | (1,2)
+  level  3
   code   (Any) = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -889,6 +999,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0111
   from   inventory:infix:=
   cell   (1,2) | (1,2)
+  level  3
   code   ((1,2)) = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -897,6 +1008,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0112
   from   inventory:infix:=
   cell   (1,2) | 0
+  level  3
   code   ((1,2)) = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -905,6 +1017,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0113
   from   inventory:infix:=
   cell   (1,2) | 1
+  level  3
   code   ((1,2)) = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -913,6 +1026,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0114
   from   inventory:infix:=
   cell   (1,2) | -1
+  level  3
   code   ((1,2)) = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -921,6 +1035,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0115
   from   inventory:infix:=
   cell   (1,2) | 1/2
+  level  3
   code   ((1,2)) = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -929,6 +1044,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0116
   from   inventory:infix:=
   cell   (1,2) | 0e0
+  level  3
   code   ((1,2)) = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -937,6 +1053,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0117
   from   inventory:infix:=
   cell   (1,2) | NaN
+  level  3
   code   ((1,2)) = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -945,6 +1062,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0118
   from   inventory:infix:=
   cell   (1,2) | ""
+  level  3
   code   ((1,2)) = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -953,6 +1071,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0119
   from   inventory:infix:=
   cell   (1,2) | "a"
+  level  3
   code   ((1,2)) = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -961,6 +1080,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0120
   from   inventory:infix:=
   cell   (1,2) | True
+  level  3
   code   ((1,2)) = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -969,6 +1089,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0121
   from   inventory:infix:=
   cell   (1,2) | Any
+  level  3
   code   ((1,2)) = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -977,6 +1098,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0122
   from   inventory:infix:=
   cell   0 | {a=>1}
+  level  3
   code   (0) = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -985,6 +1107,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0123
   from   inventory:infix:=
   cell   1 | {a=>1}
+  level  3
   code   (1) = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -993,6 +1116,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0124
   from   inventory:infix:=
   cell   -1 | {a=>1}
+  level  3
   code   (-1) = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1001,6 +1125,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0125
   from   inventory:infix:=
   cell   1/2 | {a=>1}
+  level  3
   code   (1/2) = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1009,6 +1134,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0126
   from   inventory:infix:=
   cell   0e0 | {a=>1}
+  level  3
   code   (0e0) = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1017,6 +1143,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0127
   from   inventory:infix:=
   cell   NaN | {a=>1}
+  level  3
   code   (NaN) = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1025,6 +1152,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0128
   from   inventory:infix:=
   cell   "" | {a=>1}
+  level  3
   code   ("") = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1033,6 +1161,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0129
   from   inventory:infix:=
   cell   "a" | {a=>1}
+  level  3
   code   ("a") = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1041,6 +1170,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0130
   from   inventory:infix:=
   cell   True | {a=>1}
+  level  3
   code   (True) = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1049,6 +1179,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0131
   from   inventory:infix:=
   cell   Any | {a=>1}
+  level  3
   code   (Any) = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1057,6 +1188,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0132
   from   inventory:infix:=
   cell   (1,2) | {a=>1}
+  level  3
   code   ((1,2)) = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1065,6 +1197,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0133
   from   inventory:infix:=
   cell   {a=>1} | {a=>1}
+  level  3
   code   ({a=>1}) = ({a=>1})
   is     ${:a(1)}
   type   Hash
@@ -1074,6 +1207,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0134
   from   inventory:infix:=
   cell   {a=>1} | 0
+  level  3
   code   ({a=>1}) = (0)
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -1082,6 +1216,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0135
   from   inventory:infix:=
   cell   {a=>1} | 1
+  level  3
   code   ({a=>1}) = (1)
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -1090,6 +1225,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0136
   from   inventory:infix:=
   cell   {a=>1} | -1
+  level  3
   code   ({a=>1}) = (-1)
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -1098,6 +1234,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0137
   from   inventory:infix:=
   cell   {a=>1} | 1/2
+  level  3
   code   ({a=>1}) = (1/2)
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -1106,6 +1243,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0138
   from   inventory:infix:=
   cell   {a=>1} | 0e0
+  level  3
   code   ({a=>1}) = (0e0)
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -1114,6 +1252,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0139
   from   inventory:infix:=
   cell   {a=>1} | NaN
+  level  3
   code   ({a=>1}) = (NaN)
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -1122,6 +1261,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0140
   from   inventory:infix:=
   cell   {a=>1} | ""
+  level  3
   code   ({a=>1}) = ("")
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -1130,6 +1270,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0141
   from   inventory:infix:=
   cell   {a=>1} | "a"
+  level  3
   code   ({a=>1}) = ("a")
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -1138,6 +1279,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0142
   from   inventory:infix:=
   cell   {a=>1} | True
+  level  3
   code   ({a=>1}) = (True)
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -1146,6 +1288,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0143
   from   inventory:infix:=
   cell   {a=>1} | Any
+  level  3
   code   ({a=>1}) = (Any)
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -1154,6 +1297,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0144
   from   inventory:infix:=
   cell   {a=>1} | (1,2)
+  level  3
   code   ({a=>1}) = ((1,2))
   is     ${"1" => 2}
   type   Hash
@@ -1163,6 +1307,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0145
   from   inventory:infix:=
   cell   0 | -0e0
+  level  3
   code   (0) = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1171,6 +1316,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0146
   from   inventory:infix:=
   cell   1 | -0e0
+  level  3
   code   (1) = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1179,6 +1325,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0147
   from   inventory:infix:=
   cell   -1 | -0e0
+  level  3
   code   (-1) = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1187,6 +1334,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0148
   from   inventory:infix:=
   cell   1/2 | -0e0
+  level  3
   code   (1/2) = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1195,6 +1343,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0149
   from   inventory:infix:=
   cell   0e0 | -0e0
+  level  3
   code   (0e0) = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1203,6 +1352,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0150
   from   inventory:infix:=
   cell   NaN | -0e0
+  level  3
   code   (NaN) = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1211,6 +1361,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0151
   from   inventory:infix:=
   cell   "" | -0e0
+  level  3
   code   ("") = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1219,6 +1370,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0152
   from   inventory:infix:=
   cell   "a" | -0e0
+  level  3
   code   ("a") = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1227,6 +1379,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0153
   from   inventory:infix:=
   cell   True | -0e0
+  level  3
   code   (True) = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1235,6 +1388,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0154
   from   inventory:infix:=
   cell   Any | -0e0
+  level  3
   code   (Any) = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1243,6 +1397,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0155
   from   inventory:infix:=
   cell   (1,2) | -0e0
+  level  3
   code   ((1,2)) = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1251,6 +1406,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0156
   from   inventory:infix:=
   cell   {a=>1} | -0e0
+  level  3
   code   ({a=>1}) = (-0e0)
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -1259,6 +1415,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0157
   from   inventory:infix:=
   cell   -0e0 | -0e0
+  level  3
   code   (-0e0) = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1267,6 +1424,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0158
   from   inventory:infix:=
   cell   -0e0 | 0
+  level  3
   code   (-0e0) = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1275,6 +1433,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0159
   from   inventory:infix:=
   cell   -0e0 | 1
+  level  3
   code   (-0e0) = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1283,6 +1442,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0160
   from   inventory:infix:=
   cell   -0e0 | -1
+  level  3
   code   (-0e0) = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1291,6 +1451,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0161
   from   inventory:infix:=
   cell   -0e0 | 1/2
+  level  3
   code   (-0e0) = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1299,6 +1460,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0162
   from   inventory:infix:=
   cell   -0e0 | 0e0
+  level  3
   code   (-0e0) = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1307,6 +1469,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0163
   from   inventory:infix:=
   cell   -0e0 | NaN
+  level  3
   code   (-0e0) = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1315,6 +1478,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0164
   from   inventory:infix:=
   cell   -0e0 | ""
+  level  3
   code   (-0e0) = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1323,6 +1487,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0165
   from   inventory:infix:=
   cell   -0e0 | "a"
+  level  3
   code   (-0e0) = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1331,6 +1496,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0166
   from   inventory:infix:=
   cell   -0e0 | True
+  level  3
   code   (-0e0) = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1339,6 +1505,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0167
   from   inventory:infix:=
   cell   -0e0 | Any
+  level  3
   code   (-0e0) = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1347,6 +1514,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0168
   from   inventory:infix:=
   cell   -0e0 | (1,2)
+  level  3
   code   (-0e0) = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1355,6 +1523,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0169
   from   inventory:infix:=
   cell   -0e0 | {a=>1}
+  level  3
   code   (-0e0) = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1363,6 +1532,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0170
   from   inventory:infix:=
   cell   0 | Inf
+  level  3
   code   (0) = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1371,6 +1541,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0171
   from   inventory:infix:=
   cell   1 | Inf
+  level  3
   code   (1) = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1379,6 +1550,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0172
   from   inventory:infix:=
   cell   -1 | Inf
+  level  3
   code   (-1) = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1387,6 +1559,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0173
   from   inventory:infix:=
   cell   1/2 | Inf
+  level  3
   code   (1/2) = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1395,6 +1568,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0174
   from   inventory:infix:=
   cell   0e0 | Inf
+  level  3
   code   (0e0) = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1403,6 +1577,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0175
   from   inventory:infix:=
   cell   NaN | Inf
+  level  3
   code   (NaN) = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1411,6 +1586,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0176
   from   inventory:infix:=
   cell   "" | Inf
+  level  3
   code   ("") = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1419,6 +1595,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0177
   from   inventory:infix:=
   cell   "a" | Inf
+  level  3
   code   ("a") = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1427,6 +1604,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0178
   from   inventory:infix:=
   cell   True | Inf
+  level  3
   code   (True) = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1435,6 +1613,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0179
   from   inventory:infix:=
   cell   Any | Inf
+  level  3
   code   (Any) = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1443,6 +1622,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0180
   from   inventory:infix:=
   cell   (1,2) | Inf
+  level  3
   code   ((1,2)) = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1451,6 +1631,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0181
   from   inventory:infix:=
   cell   {a=>1} | Inf
+  level  3
   code   ({a=>1}) = (Inf)
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -1459,6 +1640,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0182
   from   inventory:infix:=
   cell   -0e0 | Inf
+  level  3
   code   (-0e0) = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1467,6 +1649,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0183
   from   inventory:infix:=
   cell   Inf | Inf
+  level  3
   code   (Inf) = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1475,6 +1658,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0184
   from   inventory:infix:=
   cell   Inf | 0
+  level  3
   code   (Inf) = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1483,6 +1667,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0185
   from   inventory:infix:=
   cell   Inf | 1
+  level  3
   code   (Inf) = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1491,6 +1676,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0186
   from   inventory:infix:=
   cell   Inf | -1
+  level  3
   code   (Inf) = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1499,6 +1685,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0187
   from   inventory:infix:=
   cell   Inf | 1/2
+  level  3
   code   (Inf) = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1507,6 +1694,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0188
   from   inventory:infix:=
   cell   Inf | 0e0
+  level  3
   code   (Inf) = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1515,6 +1703,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0189
   from   inventory:infix:=
   cell   Inf | NaN
+  level  3
   code   (Inf) = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1523,6 +1712,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0190
   from   inventory:infix:=
   cell   Inf | ""
+  level  3
   code   (Inf) = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1531,6 +1721,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0191
   from   inventory:infix:=
   cell   Inf | "a"
+  level  3
   code   (Inf) = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1539,6 +1730,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0192
   from   inventory:infix:=
   cell   Inf | True
+  level  3
   code   (Inf) = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1547,6 +1739,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0193
   from   inventory:infix:=
   cell   Inf | Any
+  level  3
   code   (Inf) = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1555,6 +1748,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0194
   from   inventory:infix:=
   cell   Inf | (1,2)
+  level  3
   code   (Inf) = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1563,6 +1757,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0195
   from   inventory:infix:=
   cell   Inf | {a=>1}
+  level  3
   code   (Inf) = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1571,6 +1766,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0196
   from   inventory:infix:=
   cell   Inf | -0e0
+  level  3
   code   (Inf) = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1579,6 +1775,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0197
   from   inventory:infix:=
   cell   0 | 2**64
+  level  3
   code   (0) = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1587,6 +1784,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0198
   from   inventory:infix:=
   cell   1 | 2**64
+  level  3
   code   (1) = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1595,6 +1793,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0199
   from   inventory:infix:=
   cell   -1 | 2**64
+  level  3
   code   (-1) = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1603,6 +1802,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0200
   from   inventory:infix:=
   cell   1/2 | 2**64
+  level  3
   code   (1/2) = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1611,6 +1811,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0201
   from   inventory:infix:=
   cell   0e0 | 2**64
+  level  3
   code   (0e0) = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1619,6 +1820,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0202
   from   inventory:infix:=
   cell   NaN | 2**64
+  level  3
   code   (NaN) = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1627,6 +1829,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0203
   from   inventory:infix:=
   cell   "" | 2**64
+  level  3
   code   ("") = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1635,6 +1838,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0204
   from   inventory:infix:=
   cell   "a" | 2**64
+  level  3
   code   ("a") = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1643,6 +1847,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0205
   from   inventory:infix:=
   cell   True | 2**64
+  level  3
   code   (True) = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1651,6 +1856,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0206
   from   inventory:infix:=
   cell   Any | 2**64
+  level  3
   code   (Any) = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1659,6 +1865,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0207
   from   inventory:infix:=
   cell   (1,2) | 2**64
+  level  3
   code   ((1,2)) = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1667,6 +1874,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0208
   from   inventory:infix:=
   cell   {a=>1} | 2**64
+  level  3
   code   ({a=>1}) = (2**64)
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -1675,6 +1883,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0209
   from   inventory:infix:=
   cell   -0e0 | 2**64
+  level  3
   code   (-0e0) = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1683,6 +1892,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0210
   from   inventory:infix:=
   cell   Inf | 2**64
+  level  3
   code   (Inf) = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1691,6 +1901,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0211
   from   inventory:infix:=
   cell   2**64 | 2**64
+  level  3
   code   (2**64) = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1699,6 +1910,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0212
   from   inventory:infix:=
   cell   2**64 | 0
+  level  3
   code   (2**64) = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1707,6 +1919,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0213
   from   inventory:infix:=
   cell   2**64 | 1
+  level  3
   code   (2**64) = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1715,6 +1928,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0214
   from   inventory:infix:=
   cell   2**64 | -1
+  level  3
   code   (2**64) = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1723,6 +1937,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0215
   from   inventory:infix:=
   cell   2**64 | 1/2
+  level  3
   code   (2**64) = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1731,6 +1946,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0216
   from   inventory:infix:=
   cell   2**64 | 0e0
+  level  3
   code   (2**64) = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1739,6 +1955,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0217
   from   inventory:infix:=
   cell   2**64 | NaN
+  level  3
   code   (2**64) = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1747,6 +1964,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0218
   from   inventory:infix:=
   cell   2**64 | ""
+  level  3
   code   (2**64) = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1755,6 +1973,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0219
   from   inventory:infix:=
   cell   2**64 | "a"
+  level  3
   code   (2**64) = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1763,6 +1982,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0220
   from   inventory:infix:=
   cell   2**64 | True
+  level  3
   code   (2**64) = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1771,6 +1991,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0221
   from   inventory:infix:=
   cell   2**64 | Any
+  level  3
   code   (2**64) = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1779,6 +2000,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0222
   from   inventory:infix:=
   cell   2**64 | (1,2)
+  level  3
   code   (2**64) = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1787,6 +2009,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0223
   from   inventory:infix:=
   cell   2**64 | {a=>1}
+  level  3
   code   (2**64) = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1795,6 +2018,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0224
   from   inventory:infix:=
   cell   2**64 | -0e0
+  level  3
   code   (2**64) = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1803,6 +2027,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0225
   from   inventory:infix:=
   cell   2**64 | Inf
+  level  3
   code   (2**64) = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1811,6 +2036,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0226
   from   inventory:infix:=
   cell   0 | False
+  level  3
   code   (0) = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1819,6 +2045,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0227
   from   inventory:infix:=
   cell   1 | False
+  level  3
   code   (1) = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1827,6 +2054,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0228
   from   inventory:infix:=
   cell   -1 | False
+  level  3
   code   (-1) = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1835,6 +2063,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0229
   from   inventory:infix:=
   cell   1/2 | False
+  level  3
   code   (1/2) = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1843,6 +2072,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0230
   from   inventory:infix:=
   cell   0e0 | False
+  level  3
   code   (0e0) = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1851,6 +2081,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0231
   from   inventory:infix:=
   cell   NaN | False
+  level  3
   code   (NaN) = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1859,6 +2090,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0232
   from   inventory:infix:=
   cell   "" | False
+  level  3
   code   ("") = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1867,6 +2099,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0233
   from   inventory:infix:=
   cell   "a" | False
+  level  3
   code   ("a") = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1875,6 +2108,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0234
   from   inventory:infix:=
   cell   True | False
+  level  3
   code   (True) = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1883,6 +2117,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0235
   from   inventory:infix:=
   cell   Any | False
+  level  3
   code   (Any) = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1891,6 +2126,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0236
   from   inventory:infix:=
   cell   (1,2) | False
+  level  3
   code   ((1,2)) = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1899,6 +2135,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0237
   from   inventory:infix:=
   cell   {a=>1} | False
+  level  3
   code   ({a=>1}) = (False)
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -1907,6 +2144,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0238
   from   inventory:infix:=
   cell   -0e0 | False
+  level  3
   code   (-0e0) = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1915,6 +2153,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0239
   from   inventory:infix:=
   cell   Inf | False
+  level  3
   code   (Inf) = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1923,6 +2162,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0240
   from   inventory:infix:=
   cell   2**64 | False
+  level  3
   code   (2**64) = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1931,6 +2171,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0241
   from   inventory:infix:=
   cell   False | False
+  level  3
   code   (False) = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1939,6 +2180,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0242
   from   inventory:infix:=
   cell   False | 0
+  level  3
   code   (False) = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1947,6 +2189,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0243
   from   inventory:infix:=
   cell   False | 1
+  level  3
   code   (False) = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1955,6 +2198,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0244
   from   inventory:infix:=
   cell   False | -1
+  level  3
   code   (False) = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1963,6 +2207,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0245
   from   inventory:infix:=
   cell   False | 1/2
+  level  3
   code   (False) = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1971,6 +2216,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0246
   from   inventory:infix:=
   cell   False | 0e0
+  level  3
   code   (False) = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1979,6 +2225,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0247
   from   inventory:infix:=
   cell   False | NaN
+  level  3
   code   (False) = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1987,6 +2234,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0248
   from   inventory:infix:=
   cell   False | ""
+  level  3
   code   (False) = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -1995,6 +2243,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0249
   from   inventory:infix:=
   cell   False | "a"
+  level  3
   code   (False) = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2003,6 +2252,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0250
   from   inventory:infix:=
   cell   False | True
+  level  3
   code   (False) = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2011,6 +2261,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0251
   from   inventory:infix:=
   cell   False | Any
+  level  3
   code   (False) = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2019,6 +2270,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0252
   from   inventory:infix:=
   cell   False | (1,2)
+  level  3
   code   (False) = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2027,6 +2279,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0253
   from   inventory:infix:=
   cell   False | {a=>1}
+  level  3
   code   (False) = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2035,6 +2288,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0254
   from   inventory:infix:=
   cell   False | -0e0
+  level  3
   code   (False) = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2043,6 +2297,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0255
   from   inventory:infix:=
   cell   False | Inf
+  level  3
   code   (False) = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2051,6 +2306,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0256
   from   inventory:infix:=
   cell   False | 2**64
+  level  3
   code   (False) = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2059,6 +2315,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0257
   from   inventory:infix:=
   cell   0 | Nil
+  level  3
   code   (0) = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2067,6 +2324,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0258
   from   inventory:infix:=
   cell   1 | Nil
+  level  3
   code   (1) = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2075,6 +2333,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0259
   from   inventory:infix:=
   cell   -1 | Nil
+  level  3
   code   (-1) = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2083,6 +2342,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0260
   from   inventory:infix:=
   cell   1/2 | Nil
+  level  3
   code   (1/2) = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2091,6 +2351,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0261
   from   inventory:infix:=
   cell   0e0 | Nil
+  level  3
   code   (0e0) = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2099,6 +2360,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0262
   from   inventory:infix:=
   cell   NaN | Nil
+  level  3
   code   (NaN) = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2107,6 +2369,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0263
   from   inventory:infix:=
   cell   "" | Nil
+  level  3
   code   ("") = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2115,6 +2378,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0264
   from   inventory:infix:=
   cell   "a" | Nil
+  level  3
   code   ("a") = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2123,6 +2387,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0265
   from   inventory:infix:=
   cell   True | Nil
+  level  3
   code   (True) = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2131,6 +2396,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0266
   from   inventory:infix:=
   cell   Any | Nil
+  level  3
   code   (Any) = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2139,6 +2405,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0267
   from   inventory:infix:=
   cell   (1,2) | Nil
+  level  3
   code   ((1,2)) = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2147,6 +2414,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0268
   from   inventory:infix:=
   cell   {a=>1} | Nil
+  level  3
   code   ({a=>1}) = (Nil)
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -2155,6 +2423,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0269
   from   inventory:infix:=
   cell   -0e0 | Nil
+  level  3
   code   (-0e0) = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2163,6 +2432,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0270
   from   inventory:infix:=
   cell   Inf | Nil
+  level  3
   code   (Inf) = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2171,6 +2441,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0271
   from   inventory:infix:=
   cell   2**64 | Nil
+  level  3
   code   (2**64) = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2179,6 +2450,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0272
   from   inventory:infix:=
   cell   False | Nil
+  level  3
   code   (False) = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2187,6 +2459,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0273
   from   inventory:infix:=
   cell   Nil | Nil
+  level  3
   code   (Nil) = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2195,6 +2468,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0274
   from   inventory:infix:=
   cell   Nil | 0
+  level  3
   code   (Nil) = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2203,6 +2477,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0275
   from   inventory:infix:=
   cell   Nil | 1
+  level  3
   code   (Nil) = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2211,6 +2486,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0276
   from   inventory:infix:=
   cell   Nil | -1
+  level  3
   code   (Nil) = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2219,6 +2495,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0277
   from   inventory:infix:=
   cell   Nil | 1/2
+  level  3
   code   (Nil) = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2227,6 +2504,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0278
   from   inventory:infix:=
   cell   Nil | 0e0
+  level  3
   code   (Nil) = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2235,6 +2513,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0279
   from   inventory:infix:=
   cell   Nil | NaN
+  level  3
   code   (Nil) = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2243,6 +2522,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0280
   from   inventory:infix:=
   cell   Nil | ""
+  level  3
   code   (Nil) = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2251,6 +2531,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0281
   from   inventory:infix:=
   cell   Nil | "a"
+  level  3
   code   (Nil) = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2259,6 +2540,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0282
   from   inventory:infix:=
   cell   Nil | True
+  level  3
   code   (Nil) = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2267,6 +2549,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0283
   from   inventory:infix:=
   cell   Nil | Any
+  level  3
   code   (Nil) = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2275,6 +2558,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0284
   from   inventory:infix:=
   cell   Nil | (1,2)
+  level  3
   code   (Nil) = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2283,6 +2567,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0285
   from   inventory:infix:=
   cell   Nil | {a=>1}
+  level  3
   code   (Nil) = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2291,6 +2576,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0286
   from   inventory:infix:=
   cell   Nil | -0e0
+  level  3
   code   (Nil) = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2299,6 +2585,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0287
   from   inventory:infix:=
   cell   Nil | Inf
+  level  3
   code   (Nil) = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2307,6 +2594,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0288
   from   inventory:infix:=
   cell   Nil | 2**64
+  level  3
   code   (Nil) = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2315,6 +2603,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0289
   from   inventory:infix:=
   cell   Nil | False
+  level  3
   code   (Nil) = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2323,6 +2612,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0290
   from   inventory:infix:=
   cell   0 | ()
+  level  3
   code   (0) = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2331,6 +2621,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0291
   from   inventory:infix:=
   cell   1 | ()
+  level  3
   code   (1) = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2339,6 +2630,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0292
   from   inventory:infix:=
   cell   -1 | ()
+  level  3
   code   (-1) = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2347,6 +2639,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0293
   from   inventory:infix:=
   cell   1/2 | ()
+  level  3
   code   (1/2) = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2355,6 +2648,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0294
   from   inventory:infix:=
   cell   0e0 | ()
+  level  3
   code   (0e0) = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2363,6 +2657,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0295
   from   inventory:infix:=
   cell   NaN | ()
+  level  3
   code   (NaN) = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2371,6 +2666,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0296
   from   inventory:infix:=
   cell   "" | ()
+  level  3
   code   ("") = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2379,6 +2675,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0297
   from   inventory:infix:=
   cell   "a" | ()
+  level  3
   code   ("a") = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2387,6 +2684,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0298
   from   inventory:infix:=
   cell   True | ()
+  level  3
   code   (True) = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2395,6 +2693,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0299
   from   inventory:infix:=
   cell   Any | ()
+  level  3
   code   (Any) = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2403,6 +2702,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0300
   from   inventory:infix:=
   cell   (1,2) | ()
+  level  3
   code   ((1,2)) = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2411,6 +2711,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0301
   from   inventory:infix:=
   cell   {a=>1} | ()
+  level  3
   code   ({a=>1}) = (())
   is     ${}
   type   Hash
@@ -2420,6 +2721,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0302
   from   inventory:infix:=
   cell   -0e0 | ()
+  level  3
   code   (-0e0) = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2428,6 +2730,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0303
   from   inventory:infix:=
   cell   Inf | ()
+  level  3
   code   (Inf) = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2436,6 +2739,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0304
   from   inventory:infix:=
   cell   2**64 | ()
+  level  3
   code   (2**64) = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2444,6 +2748,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0305
   from   inventory:infix:=
   cell   False | ()
+  level  3
   code   (False) = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2452,6 +2757,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0306
   from   inventory:infix:=
   cell   Nil | ()
+  level  3
   code   (Nil) = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2460,6 +2766,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0307
   from   inventory:infix:=
   cell   () | ()
+  level  3
   code   (()) = (())
   is     $( )
   type   List
@@ -2469,6 +2776,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0308
   from   inventory:infix:=
   cell   () | 0
+  level  3
   code   (()) = (0)
   is     $( )
   type   List
@@ -2478,6 +2786,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0309
   from   inventory:infix:=
   cell   () | 1
+  level  3
   code   (()) = (1)
   is     $( )
   type   List
@@ -2487,6 +2796,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0310
   from   inventory:infix:=
   cell   () | -1
+  level  3
   code   (()) = (-1)
   is     $( )
   type   List
@@ -2496,6 +2806,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0311
   from   inventory:infix:=
   cell   () | 1/2
+  level  3
   code   (()) = (1/2)
   is     $( )
   type   List
@@ -2505,6 +2816,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0312
   from   inventory:infix:=
   cell   () | 0e0
+  level  3
   code   (()) = (0e0)
   is     $( )
   type   List
@@ -2514,6 +2826,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0313
   from   inventory:infix:=
   cell   () | NaN
+  level  3
   code   (()) = (NaN)
   is     $( )
   type   List
@@ -2523,6 +2836,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0314
   from   inventory:infix:=
   cell   () | ""
+  level  3
   code   (()) = ("")
   is     $( )
   type   List
@@ -2532,6 +2846,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0315
   from   inventory:infix:=
   cell   () | "a"
+  level  3
   code   (()) = ("a")
   is     $( )
   type   List
@@ -2541,6 +2856,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0316
   from   inventory:infix:=
   cell   () | True
+  level  3
   code   (()) = (True)
   is     $( )
   type   List
@@ -2550,6 +2866,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0317
   from   inventory:infix:=
   cell   () | Any
+  level  3
   code   (()) = (Any)
   is     $( )
   type   List
@@ -2559,6 +2876,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0318
   from   inventory:infix:=
   cell   () | (1,2)
+  level  3
   code   (()) = ((1,2))
   is     $( )
   type   List
@@ -2568,6 +2886,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0319
   from   inventory:infix:=
   cell   () | {a=>1}
+  level  3
   code   (()) = ({a=>1})
   is     $( )
   type   List
@@ -2577,6 +2896,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0320
   from   inventory:infix:=
   cell   () | -0e0
+  level  3
   code   (()) = (-0e0)
   is     $( )
   type   List
@@ -2586,6 +2906,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0321
   from   inventory:infix:=
   cell   () | Inf
+  level  3
   code   (()) = (Inf)
   is     $( )
   type   List
@@ -2595,6 +2916,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0322
   from   inventory:infix:=
   cell   () | 2**64
+  level  3
   code   (()) = (2**64)
   is     $( )
   type   List
@@ -2604,6 +2926,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0323
   from   inventory:infix:=
   cell   () | False
+  level  3
   code   (()) = (False)
   is     $( )
   type   List
@@ -2613,6 +2936,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0324
   from   inventory:infix:=
   cell   () | Nil
+  level  3
   code   (()) = (Nil)
   is     $( )
   type   List
@@ -2622,6 +2946,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0325
   from   inventory:infix:=
   cell   0 | "0"
+  level  3
   code   (0) = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2630,6 +2955,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0326
   from   inventory:infix:=
   cell   1 | "0"
+  level  3
   code   (1) = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2638,6 +2964,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0327
   from   inventory:infix:=
   cell   -1 | "0"
+  level  3
   code   (-1) = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2646,6 +2973,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0328
   from   inventory:infix:=
   cell   1/2 | "0"
+  level  3
   code   (1/2) = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2654,6 +2982,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0329
   from   inventory:infix:=
   cell   0e0 | "0"
+  level  3
   code   (0e0) = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2662,6 +2991,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0330
   from   inventory:infix:=
   cell   NaN | "0"
+  level  3
   code   (NaN) = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2670,6 +3000,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0331
   from   inventory:infix:=
   cell   "" | "0"
+  level  3
   code   ("") = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2678,6 +3009,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0332
   from   inventory:infix:=
   cell   "a" | "0"
+  level  3
   code   ("a") = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2686,6 +3018,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0333
   from   inventory:infix:=
   cell   True | "0"
+  level  3
   code   (True) = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2694,6 +3027,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0334
   from   inventory:infix:=
   cell   Any | "0"
+  level  3
   code   (Any) = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2702,6 +3036,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0335
   from   inventory:infix:=
   cell   (1,2) | "0"
+  level  3
   code   ((1,2)) = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2710,6 +3045,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0336
   from   inventory:infix:=
   cell   {a=>1} | "0"
+  level  3
   code   ({a=>1}) = ("0")
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -2718,6 +3054,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0337
   from   inventory:infix:=
   cell   -0e0 | "0"
+  level  3
   code   (-0e0) = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2726,6 +3063,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0338
   from   inventory:infix:=
   cell   Inf | "0"
+  level  3
   code   (Inf) = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2734,6 +3072,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0339
   from   inventory:infix:=
   cell   2**64 | "0"
+  level  3
   code   (2**64) = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2742,6 +3081,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0340
   from   inventory:infix:=
   cell   False | "0"
+  level  3
   code   (False) = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2750,6 +3090,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0341
   from   inventory:infix:=
   cell   Nil | "0"
+  level  3
   code   (Nil) = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2758,6 +3099,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0342
   from   inventory:infix:=
   cell   () | "0"
+  level  3
   code   (()) = ("0")
   is     $( )
   type   List
@@ -2767,6 +3109,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0343
   from   inventory:infix:=
   cell   "0" | "0"
+  level  3
   code   ("0") = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2775,6 +3118,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0344
   from   inventory:infix:=
   cell   "0" | 0
+  level  3
   code   ("0") = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2783,6 +3127,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0345
   from   inventory:infix:=
   cell   "0" | 1
+  level  3
   code   ("0") = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2791,6 +3136,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0346
   from   inventory:infix:=
   cell   "0" | -1
+  level  3
   code   ("0") = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2799,6 +3145,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0347
   from   inventory:infix:=
   cell   "0" | 1/2
+  level  3
   code   ("0") = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2807,6 +3154,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0348
   from   inventory:infix:=
   cell   "0" | 0e0
+  level  3
   code   ("0") = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2815,6 +3163,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0349
   from   inventory:infix:=
   cell   "0" | NaN
+  level  3
   code   ("0") = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2823,6 +3172,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0350
   from   inventory:infix:=
   cell   "0" | ""
+  level  3
   code   ("0") = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2831,6 +3181,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0351
   from   inventory:infix:=
   cell   "0" | "a"
+  level  3
   code   ("0") = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2839,6 +3190,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0352
   from   inventory:infix:=
   cell   "0" | True
+  level  3
   code   ("0") = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2847,6 +3199,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0353
   from   inventory:infix:=
   cell   "0" | Any
+  level  3
   code   ("0") = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2855,6 +3208,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0354
   from   inventory:infix:=
   cell   "0" | (1,2)
+  level  3
   code   ("0") = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2863,6 +3217,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0355
   from   inventory:infix:=
   cell   "0" | {a=>1}
+  level  3
   code   ("0") = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2871,6 +3226,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0356
   from   inventory:infix:=
   cell   "0" | -0e0
+  level  3
   code   ("0") = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2879,6 +3235,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0357
   from   inventory:infix:=
   cell   "0" | Inf
+  level  3
   code   ("0") = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2887,6 +3244,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0358
   from   inventory:infix:=
   cell   "0" | 2**64
+  level  3
   code   ("0") = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2895,6 +3253,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0359
   from   inventory:infix:=
   cell   "0" | False
+  level  3
   code   ("0") = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2903,6 +3262,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0360
   from   inventory:infix:=
   cell   "0" | Nil
+  level  3
   code   ("0") = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2911,6 +3271,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0361
   from   inventory:infix:=
   cell   "0" | ()
+  level  3
   code   ("0") = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2919,6 +3280,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0362
   from   inventory:infix:=
   cell   0 | (1..3)
+  level  3
   code   (0) = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2927,6 +3289,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0363
   from   inventory:infix:=
   cell   1 | (1..3)
+  level  3
   code   (1) = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2935,6 +3298,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0364
   from   inventory:infix:=
   cell   -1 | (1..3)
+  level  3
   code   (-1) = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2943,6 +3307,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0365
   from   inventory:infix:=
   cell   1/2 | (1..3)
+  level  3
   code   (1/2) = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2951,6 +3316,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0366
   from   inventory:infix:=
   cell   0e0 | (1..3)
+  level  3
   code   (0e0) = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2959,6 +3325,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0367
   from   inventory:infix:=
   cell   NaN | (1..3)
+  level  3
   code   (NaN) = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2967,6 +3334,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0368
   from   inventory:infix:=
   cell   "" | (1..3)
+  level  3
   code   ("") = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2975,6 +3343,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0369
   from   inventory:infix:=
   cell   "a" | (1..3)
+  level  3
   code   ("a") = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2983,6 +3352,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0370
   from   inventory:infix:=
   cell   True | (1..3)
+  level  3
   code   (True) = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2991,6 +3361,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0371
   from   inventory:infix:=
   cell   Any | (1..3)
+  level  3
   code   (Any) = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -2999,6 +3370,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0372
   from   inventory:infix:=
   cell   (1,2) | (1..3)
+  level  3
   code   ((1,2)) = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3007,6 +3379,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0373
   from   inventory:infix:=
   cell   {a=>1} | (1..3)
+  level  3
   code   ({a=>1}) = ((1..3))
   throws X::Hash::Store::OddNumber
   oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
@@ -3015,6 +3388,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0374
   from   inventory:infix:=
   cell   -0e0 | (1..3)
+  level  3
   code   (-0e0) = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3023,6 +3397,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0375
   from   inventory:infix:=
   cell   Inf | (1..3)
+  level  3
   code   (Inf) = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3031,6 +3406,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0376
   from   inventory:infix:=
   cell   2**64 | (1..3)
+  level  3
   code   (2**64) = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3039,6 +3415,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0377
   from   inventory:infix:=
   cell   False | (1..3)
+  level  3
   code   (False) = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3047,6 +3424,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0378
   from   inventory:infix:=
   cell   Nil | (1..3)
+  level  3
   code   (Nil) = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3055,6 +3433,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0379
   from   inventory:infix:=
   cell   () | (1..3)
+  level  3
   code   (()) = ((1..3))
   is     $( )
   type   List
@@ -3064,6 +3443,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0380
   from   inventory:infix:=
   cell   "0" | (1..3)
+  level  3
   code   ("0") = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3072,6 +3452,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0381
   from   inventory:infix:=
   cell   (1..3) | (1..3)
+  level  3
   code   ((1..3)) = ((1..3))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3080,6 +3461,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0382
   from   inventory:infix:=
   cell   (1..3) | 0
+  level  3
   code   ((1..3)) = (0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3088,6 +3470,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0383
   from   inventory:infix:=
   cell   (1..3) | 1
+  level  3
   code   ((1..3)) = (1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3096,6 +3479,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0384
   from   inventory:infix:=
   cell   (1..3) | -1
+  level  3
   code   ((1..3)) = (-1)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3104,6 +3488,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0385
   from   inventory:infix:=
   cell   (1..3) | 1/2
+  level  3
   code   ((1..3)) = (1/2)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3112,6 +3497,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0386
   from   inventory:infix:=
   cell   (1..3) | 0e0
+  level  3
   code   ((1..3)) = (0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3120,6 +3506,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0387
   from   inventory:infix:=
   cell   (1..3) | NaN
+  level  3
   code   ((1..3)) = (NaN)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3128,6 +3515,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0388
   from   inventory:infix:=
   cell   (1..3) | ""
+  level  3
   code   ((1..3)) = ("")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3136,6 +3524,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0389
   from   inventory:infix:=
   cell   (1..3) | "a"
+  level  3
   code   ((1..3)) = ("a")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3144,6 +3533,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0390
   from   inventory:infix:=
   cell   (1..3) | True
+  level  3
   code   ((1..3)) = (True)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3152,6 +3542,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0391
   from   inventory:infix:=
   cell   (1..3) | Any
+  level  3
   code   ((1..3)) = (Any)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3160,6 +3551,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0392
   from   inventory:infix:=
   cell   (1..3) | (1,2)
+  level  3
   code   ((1..3)) = ((1,2))
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3168,6 +3560,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0393
   from   inventory:infix:=
   cell   (1..3) | {a=>1}
+  level  3
   code   ((1..3)) = ({a=>1})
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3176,6 +3569,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0394
   from   inventory:infix:=
   cell   (1..3) | -0e0
+  level  3
   code   ((1..3)) = (-0e0)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3184,6 +3578,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0395
   from   inventory:infix:=
   cell   (1..3) | Inf
+  level  3
   code   ((1..3)) = (Inf)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3192,6 +3587,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0396
   from   inventory:infix:=
   cell   (1..3) | 2**64
+  level  3
   code   ((1..3)) = (2**64)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3200,6 +3596,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0397
   from   inventory:infix:=
   cell   (1..3) | False
+  level  3
   code   ((1..3)) = (False)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3208,6 +3605,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0398
   from   inventory:infix:=
   cell   (1..3) | Nil
+  level  3
   code   ((1..3)) = (Nil)
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3216,6 +3614,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0399
   from   inventory:infix:=
   cell   (1..3) | ()
+  level  3
   code   ((1..3)) = (())
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
@@ -3224,7 +3623,1622 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0400
   from   inventory:infix:=
   cell   (1..3) | "0"
+  level  3
   code   ((1..3)) = ("0")
   throws X::Assignment::RO
   oracle rakudo-2026.07 → ERR:X::Assignment::RO
   oracle rakupp-v3.14.0-92-g78048b0-modified → ERR:X::Assignment::RO
+
+- id     0401
+  from   inventory:infix:=
+  cell   0 | Int
+  level  3
+  code   (0) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0402
+  from   inventory:infix:=
+  cell   1 | Int
+  level  3
+  code   (1) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0403
+  from   inventory:infix:=
+  cell   -1 | Int
+  level  3
+  code   (-1) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0404
+  from   inventory:infix:=
+  cell   1/2 | Int
+  level  3
+  code   (1/2) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0405
+  from   inventory:infix:=
+  cell   0e0 | Int
+  level  3
+  code   (0e0) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0406
+  from   inventory:infix:=
+  cell   NaN | Int
+  level  3
+  code   (NaN) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0407
+  from   inventory:infix:=
+  cell   "" | Int
+  level  3
+  code   ("") = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0408
+  from   inventory:infix:=
+  cell   "a" | Int
+  level  3
+  code   ("a") = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0409
+  from   inventory:infix:=
+  cell   True | Int
+  level  3
+  code   (True) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0410
+  from   inventory:infix:=
+  cell   Any | Int
+  level  3
+  code   (Any) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0411
+  from   inventory:infix:=
+  cell   (1,2) | Int
+  level  3
+  code   ((1,2)) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0412
+  from   inventory:infix:=
+  cell   {a=>1} | Int
+  level  3
+  code   ({a=>1}) = (Int)
+  throws X::Hash::Store::OddNumber
+  oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0413
+  from   inventory:infix:=
+  cell   -0e0 | Int
+  level  3
+  code   (-0e0) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0414
+  from   inventory:infix:=
+  cell   Inf | Int
+  level  3
+  code   (Inf) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0415
+  from   inventory:infix:=
+  cell   2**64 | Int
+  level  3
+  code   (2**64) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0416
+  from   inventory:infix:=
+  cell   False | Int
+  level  3
+  code   (False) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0417
+  from   inventory:infix:=
+  cell   Nil | Int
+  level  3
+  code   (Nil) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0418
+  from   inventory:infix:=
+  cell   () | Int
+  level  3
+  code   (()) = (Int)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0419
+  from   inventory:infix:=
+  cell   "0" | Int
+  level  3
+  code   ("0") = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0420
+  from   inventory:infix:=
+  cell   (1..3) | Int
+  level  3
+  code   ((1..3)) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0421
+  from   inventory:infix:=
+  cell   Int | Int
+  level  3
+  code   (Int) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0422
+  from   inventory:infix:=
+  cell   Int | 0
+  level  3
+  code   (Int) = (0)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0423
+  from   inventory:infix:=
+  cell   Int | 1
+  level  3
+  code   (Int) = (1)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0424
+  from   inventory:infix:=
+  cell   Int | -1
+  level  3
+  code   (Int) = (-1)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0425
+  from   inventory:infix:=
+  cell   Int | 1/2
+  level  3
+  code   (Int) = (1/2)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0426
+  from   inventory:infix:=
+  cell   Int | 0e0
+  level  3
+  code   (Int) = (0e0)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0427
+  from   inventory:infix:=
+  cell   Int | NaN
+  level  3
+  code   (Int) = (NaN)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0428
+  from   inventory:infix:=
+  cell   Int | ""
+  level  3
+  code   (Int) = ("")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0429
+  from   inventory:infix:=
+  cell   Int | "a"
+  level  3
+  code   (Int) = ("a")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0430
+  from   inventory:infix:=
+  cell   Int | True
+  level  3
+  code   (Int) = (True)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0431
+  from   inventory:infix:=
+  cell   Int | Any
+  level  3
+  code   (Int) = (Any)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0432
+  from   inventory:infix:=
+  cell   Int | (1,2)
+  level  3
+  code   (Int) = ((1,2))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0433
+  from   inventory:infix:=
+  cell   Int | {a=>1}
+  level  3
+  code   (Int) = ({a=>1})
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0434
+  from   inventory:infix:=
+  cell   Int | -0e0
+  level  3
+  code   (Int) = (-0e0)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0435
+  from   inventory:infix:=
+  cell   Int | Inf
+  level  3
+  code   (Int) = (Inf)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0436
+  from   inventory:infix:=
+  cell   Int | 2**64
+  level  3
+  code   (Int) = (2**64)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0437
+  from   inventory:infix:=
+  cell   Int | False
+  level  3
+  code   (Int) = (False)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0438
+  from   inventory:infix:=
+  cell   Int | Nil
+  level  3
+  code   (Int) = (Nil)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0439
+  from   inventory:infix:=
+  cell   Int | ()
+  level  3
+  code   (Int) = (())
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0440
+  from   inventory:infix:=
+  cell   Int | "0"
+  level  3
+  code   (Int) = ("0")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0441
+  from   inventory:infix:=
+  cell   Int | (1..3)
+  level  3
+  code   (Int) = ((1..3))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0442
+  from   inventory:infix:=
+  cell   0 | "a b"
+  level  3
+  code   (0) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0443
+  from   inventory:infix:=
+  cell   1 | "a b"
+  level  3
+  code   (1) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0444
+  from   inventory:infix:=
+  cell   -1 | "a b"
+  level  3
+  code   (-1) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0445
+  from   inventory:infix:=
+  cell   1/2 | "a b"
+  level  3
+  code   (1/2) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0446
+  from   inventory:infix:=
+  cell   0e0 | "a b"
+  level  3
+  code   (0e0) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0447
+  from   inventory:infix:=
+  cell   NaN | "a b"
+  level  3
+  code   (NaN) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0448
+  from   inventory:infix:=
+  cell   "" | "a b"
+  level  3
+  code   ("") = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0449
+  from   inventory:infix:=
+  cell   "a" | "a b"
+  level  3
+  code   ("a") = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0450
+  from   inventory:infix:=
+  cell   True | "a b"
+  level  3
+  code   (True) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0451
+  from   inventory:infix:=
+  cell   Any | "a b"
+  level  3
+  code   (Any) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0452
+  from   inventory:infix:=
+  cell   (1,2) | "a b"
+  level  3
+  code   ((1,2)) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0453
+  from   inventory:infix:=
+  cell   {a=>1} | "a b"
+  level  3
+  code   ({a=>1}) = ("a b")
+  throws X::Hash::Store::OddNumber
+  oracle rakudo-2026.07 → ERR:X::Hash::Store::OddNumber
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0454
+  from   inventory:infix:=
+  cell   -0e0 | "a b"
+  level  3
+  code   (-0e0) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0455
+  from   inventory:infix:=
+  cell   Inf | "a b"
+  level  3
+  code   (Inf) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0456
+  from   inventory:infix:=
+  cell   2**64 | "a b"
+  level  3
+  code   (2**64) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0457
+  from   inventory:infix:=
+  cell   False | "a b"
+  level  3
+  code   (False) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0458
+  from   inventory:infix:=
+  cell   Nil | "a b"
+  level  3
+  code   (Nil) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0459
+  from   inventory:infix:=
+  cell   () | "a b"
+  level  3
+  code   (()) = ("a b")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0460
+  from   inventory:infix:=
+  cell   "0" | "a b"
+  level  3
+  code   ("0") = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0461
+  from   inventory:infix:=
+  cell   (1..3) | "a b"
+  level  3
+  code   ((1..3)) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0462
+  from   inventory:infix:=
+  cell   Int | "a b"
+  level  3
+  code   (Int) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0463
+  from   inventory:infix:=
+  cell   "a b" | "a b"
+  level  3
+  code   ("a b") = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0464
+  from   inventory:infix:=
+  cell   "a b" | 0
+  level  3
+  code   ("a b") = (0)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0465
+  from   inventory:infix:=
+  cell   "a b" | 1
+  level  3
+  code   ("a b") = (1)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0466
+  from   inventory:infix:=
+  cell   "a b" | -1
+  level  3
+  code   ("a b") = (-1)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0467
+  from   inventory:infix:=
+  cell   "a b" | 1/2
+  level  3
+  code   ("a b") = (1/2)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0468
+  from   inventory:infix:=
+  cell   "a b" | 0e0
+  level  3
+  code   ("a b") = (0e0)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0469
+  from   inventory:infix:=
+  cell   "a b" | NaN
+  level  3
+  code   ("a b") = (NaN)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0470
+  from   inventory:infix:=
+  cell   "a b" | ""
+  level  3
+  code   ("a b") = ("")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0471
+  from   inventory:infix:=
+  cell   "a b" | "a"
+  level  3
+  code   ("a b") = ("a")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0472
+  from   inventory:infix:=
+  cell   "a b" | True
+  level  3
+  code   ("a b") = (True)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0473
+  from   inventory:infix:=
+  cell   "a b" | Any
+  level  3
+  code   ("a b") = (Any)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0474
+  from   inventory:infix:=
+  cell   "a b" | (1,2)
+  level  3
+  code   ("a b") = ((1,2))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0475
+  from   inventory:infix:=
+  cell   "a b" | {a=>1}
+  level  3
+  code   ("a b") = ({a=>1})
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0476
+  from   inventory:infix:=
+  cell   "a b" | -0e0
+  level  3
+  code   ("a b") = (-0e0)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0477
+  from   inventory:infix:=
+  cell   "a b" | Inf
+  level  3
+  code   ("a b") = (Inf)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0478
+  from   inventory:infix:=
+  cell   "a b" | 2**64
+  level  3
+  code   ("a b") = (2**64)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0479
+  from   inventory:infix:=
+  cell   "a b" | False
+  level  3
+  code   ("a b") = (False)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0480
+  from   inventory:infix:=
+  cell   "a b" | Nil
+  level  3
+  code   ("a b") = (Nil)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0481
+  from   inventory:infix:=
+  cell   "a b" | ()
+  level  3
+  code   ("a b") = (())
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0482
+  from   inventory:infix:=
+  cell   "a b" | "0"
+  level  3
+  code   ("a b") = ("0")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0483
+  from   inventory:infix:=
+  cell   "a b" | (1..3)
+  level  3
+  code   ("a b") = ((1..3))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0484
+  from   inventory:infix:=
+  cell   "a b" | Int
+  level  3
+  code   ("a b") = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0485
+  from   inventory:infix:=
+  cell   0 | [1,2]
+  level  3
+  code   (0) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0486
+  from   inventory:infix:=
+  cell   1 | [1,2]
+  level  3
+  code   (1) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0487
+  from   inventory:infix:=
+  cell   -1 | [1,2]
+  level  3
+  code   (-1) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0488
+  from   inventory:infix:=
+  cell   1/2 | [1,2]
+  level  3
+  code   (1/2) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0489
+  from   inventory:infix:=
+  cell   0e0 | [1,2]
+  level  3
+  code   (0e0) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0490
+  from   inventory:infix:=
+  cell   NaN | [1,2]
+  level  3
+  code   (NaN) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0491
+  from   inventory:infix:=
+  cell   "" | [1,2]
+  level  3
+  code   ("") = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0492
+  from   inventory:infix:=
+  cell   "a" | [1,2]
+  level  3
+  code   ("a") = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0493
+  from   inventory:infix:=
+  cell   True | [1,2]
+  level  3
+  code   (True) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0494
+  from   inventory:infix:=
+  cell   Any | [1,2]
+  level  3
+  code   (Any) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0495
+  from   inventory:infix:=
+  cell   (1,2) | [1,2]
+  level  3
+  code   ((1,2)) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0496
+  from   inventory:infix:=
+  cell   {a=>1} | [1,2]
+  level  3
+  code   ({a=>1}) = ([1,2])
+  is     ${"1" => 2}
+  type   Hash
+  oracle rakudo-2026.07 → ${"1" => 2}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0497
+  from   inventory:infix:=
+  cell   -0e0 | [1,2]
+  level  3
+  code   (-0e0) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0498
+  from   inventory:infix:=
+  cell   Inf | [1,2]
+  level  3
+  code   (Inf) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0499
+  from   inventory:infix:=
+  cell   2**64 | [1,2]
+  level  3
+  code   (2**64) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0500
+  from   inventory:infix:=
+  cell   False | [1,2]
+  level  3
+  code   (False) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0501
+  from   inventory:infix:=
+  cell   Nil | [1,2]
+  level  3
+  code   (Nil) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0502
+  from   inventory:infix:=
+  cell   () | [1,2]
+  level  3
+  code   (()) = ([1,2])
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $[1, 2]
+
+- id     0503
+  from   inventory:infix:=
+  cell   "0" | [1,2]
+  level  3
+  code   ("0") = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0504
+  from   inventory:infix:=
+  cell   (1..3) | [1,2]
+  level  3
+  code   ((1..3)) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0505
+  from   inventory:infix:=
+  cell   Int | [1,2]
+  level  3
+  code   (Int) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0506
+  from   inventory:infix:=
+  cell   "a b" | [1,2]
+  level  3
+  code   ("a b") = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0507
+  from   inventory:infix:=
+  cell   [1,2] | [1,2]
+  level  3
+  code   ([1,2]) = ([1,2])
+  is     $[1, 2]
+  type   Array
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0508
+  from   inventory:infix:=
+  cell   [1,2] | 0
+  level  3
+  code   ([1,2]) = (0)
+  is     $[0]
+  type   Array
+  oracle rakudo-2026.07 → $[0]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0509
+  from   inventory:infix:=
+  cell   [1,2] | 1
+  level  3
+  code   ([1,2]) = (1)
+  is     $[1]
+  type   Array
+  oracle rakudo-2026.07 → $[1]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0510
+  from   inventory:infix:=
+  cell   [1,2] | -1
+  level  3
+  code   ([1,2]) = (-1)
+  is     $[-1]
+  type   Array
+  oracle rakudo-2026.07 → $[-1]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0511
+  from   inventory:infix:=
+  cell   [1,2] | 1/2
+  level  3
+  code   ([1,2]) = (1/2)
+  is     $[0.5]
+  type   Array
+  oracle rakudo-2026.07 → $[0.5]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0512
+  from   inventory:infix:=
+  cell   [1,2] | 0e0
+  level  3
+  code   ([1,2]) = (0e0)
+  is     $[0e0]
+  type   Array
+  oracle rakudo-2026.07 → $[0e0]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0513
+  from   inventory:infix:=
+  cell   [1,2] | NaN
+  level  3
+  code   ([1,2]) = (NaN)
+  is     $[NaN]
+  type   Array
+  oracle rakudo-2026.07 → $[NaN]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0514
+  from   inventory:infix:=
+  cell   [1,2] | ""
+  level  3
+  code   ([1,2]) = ("")
+  is     $[""]
+  type   Array
+  oracle rakudo-2026.07 → $[""]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0515
+  from   inventory:infix:=
+  cell   [1,2] | "a"
+  level  3
+  code   ([1,2]) = ("a")
+  is     $["a"]
+  type   Array
+  oracle rakudo-2026.07 → $["a"]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0516
+  from   inventory:infix:=
+  cell   [1,2] | True
+  level  3
+  code   ([1,2]) = (True)
+  is     $[Bool::True]
+  type   Array
+  oracle rakudo-2026.07 → $[Bool::True]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0517
+  from   inventory:infix:=
+  cell   [1,2] | Any
+  level  3
+  code   ([1,2]) = (Any)
+  is     $[Any]
+  type   Array
+  oracle rakudo-2026.07 → $[Any]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0518
+  from   inventory:infix:=
+  cell   [1,2] | (1,2)
+  level  3
+  code   ([1,2]) = ((1,2))
+  is     $[1, 2]
+  type   Array
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0519
+  from   inventory:infix:=
+  cell   [1,2] | {a=>1}
+  level  3
+  code   ([1,2]) = ({a=>1})
+  is     $[:a(1)]
+  type   Array
+  oracle rakudo-2026.07 → $[:a(1)]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0520
+  from   inventory:infix:=
+  cell   [1,2] | -0e0
+  level  3
+  code   ([1,2]) = (-0e0)
+  is     $[-0e0]
+  type   Array
+  oracle rakudo-2026.07 → $[-0e0]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0521
+  from   inventory:infix:=
+  cell   [1,2] | Inf
+  level  3
+  code   ([1,2]) = (Inf)
+  is     $[Inf]
+  type   Array
+  oracle rakudo-2026.07 → $[Inf]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0522
+  from   inventory:infix:=
+  cell   [1,2] | 2**64
+  level  3
+  code   ([1,2]) = (2**64)
+  is     $[18446744073709551616]
+  type   Array
+  oracle rakudo-2026.07 → $[18446744073709551616]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0523
+  from   inventory:infix:=
+  cell   [1,2] | False
+  level  3
+  code   ([1,2]) = (False)
+  is     $[Bool::False]
+  type   Array
+  oracle rakudo-2026.07 → $[Bool::False]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0524
+  from   inventory:infix:=
+  cell   [1,2] | Nil
+  level  3
+  code   ([1,2]) = (Nil)
+  is     $[Any]
+  type   Array
+  oracle rakudo-2026.07 → $[Any]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0525
+  from   inventory:infix:=
+  cell   [1,2] | ()
+  level  3
+  code   ([1,2]) = (())
+  is     $[]
+  type   Array
+  oracle rakudo-2026.07 → $[]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0526
+  from   inventory:infix:=
+  cell   [1,2] | "0"
+  level  3
+  code   ([1,2]) = ("0")
+  is     $["0"]
+  type   Array
+  oracle rakudo-2026.07 → $["0"]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0527
+  from   inventory:infix:=
+  cell   [1,2] | (1..3)
+  level  3
+  code   ([1,2]) = ((1..3))
+  is     $[1, 2, 3]
+  type   Array
+  oracle rakudo-2026.07 → $[1, 2, 3]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0528
+  from   inventory:infix:=
+  cell   [1,2] | Int
+  level  3
+  code   ([1,2]) = (Int)
+  is     $[Int]
+  type   Array
+  oracle rakudo-2026.07 → $[Int]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0529
+  from   inventory:infix:=
+  cell   [1,2] | "a b"
+  level  3
+  code   ([1,2]) = ("a b")
+  is     $["a b"]
+  type   Array
+  oracle rakudo-2026.07 → $["a b"]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0530
+  from   inventory:infix:=
+  cell   0 | (a => 1)
+  level  3
+  code   (0) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0531
+  from   inventory:infix:=
+  cell   1 | (a => 1)
+  level  3
+  code   (1) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0532
+  from   inventory:infix:=
+  cell   -1 | (a => 1)
+  level  3
+  code   (-1) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0533
+  from   inventory:infix:=
+  cell   1/2 | (a => 1)
+  level  3
+  code   (1/2) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0534
+  from   inventory:infix:=
+  cell   0e0 | (a => 1)
+  level  3
+  code   (0e0) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0535
+  from   inventory:infix:=
+  cell   NaN | (a => 1)
+  level  3
+  code   (NaN) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0536
+  from   inventory:infix:=
+  cell   "" | (a => 1)
+  level  3
+  code   ("") = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0537
+  from   inventory:infix:=
+  cell   "a" | (a => 1)
+  level  3
+  code   ("a") = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0538
+  from   inventory:infix:=
+  cell   True | (a => 1)
+  level  3
+  code   (True) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0539
+  from   inventory:infix:=
+  cell   Any | (a => 1)
+  level  3
+  code   (Any) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0540
+  from   inventory:infix:=
+  cell   (1,2) | (a => 1)
+  level  3
+  code   ((1,2)) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0541
+  from   inventory:infix:=
+  cell   {a=>1} | (a => 1)
+  level  3
+  code   ({a=>1}) = ((a => 1))
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0542
+  from   inventory:infix:=
+  cell   -0e0 | (a => 1)
+  level  3
+  code   (-0e0) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0543
+  from   inventory:infix:=
+  cell   Inf | (a => 1)
+  level  3
+  code   (Inf) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0544
+  from   inventory:infix:=
+  cell   2**64 | (a => 1)
+  level  3
+  code   (2**64) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0545
+  from   inventory:infix:=
+  cell   False | (a => 1)
+  level  3
+  code   (False) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0546
+  from   inventory:infix:=
+  cell   Nil | (a => 1)
+  level  3
+  code   (Nil) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0547
+  from   inventory:infix:=
+  cell   () | (a => 1)
+  level  3
+  code   (()) = ((a => 1))
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0548
+  from   inventory:infix:=
+  cell   "0" | (a => 1)
+  level  3
+  code   ("0") = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0549
+  from   inventory:infix:=
+  cell   (1..3) | (a => 1)
+  level  3
+  code   ((1..3)) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0550
+  from   inventory:infix:=
+  cell   Int | (a => 1)
+  level  3
+  code   (Int) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0551
+  from   inventory:infix:=
+  cell   "a b" | (a => 1)
+  level  3
+  code   ("a b") = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0552
+  from   inventory:infix:=
+  cell   [1,2] | (a => 1)
+  level  3
+  code   ([1,2]) = ((a => 1))
+  is     $[:a(1)]
+  type   Array
+  oracle rakudo-2026.07 → $[:a(1)]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0553
+  from   inventory:infix:=
+  cell   (a => 1) | (a => 1)
+  level  3
+  code   ((a => 1)) = ((a => 1))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0554
+  from   inventory:infix:=
+  cell   (a => 1) | 0
+  level  3
+  code   ((a => 1)) = (0)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0555
+  from   inventory:infix:=
+  cell   (a => 1) | 1
+  level  3
+  code   ((a => 1)) = (1)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0556
+  from   inventory:infix:=
+  cell   (a => 1) | -1
+  level  3
+  code   ((a => 1)) = (-1)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0557
+  from   inventory:infix:=
+  cell   (a => 1) | 1/2
+  level  3
+  code   ((a => 1)) = (1/2)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0558
+  from   inventory:infix:=
+  cell   (a => 1) | 0e0
+  level  3
+  code   ((a => 1)) = (0e0)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0559
+  from   inventory:infix:=
+  cell   (a => 1) | NaN
+  level  3
+  code   ((a => 1)) = (NaN)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0560
+  from   inventory:infix:=
+  cell   (a => 1) | ""
+  level  3
+  code   ((a => 1)) = ("")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0561
+  from   inventory:infix:=
+  cell   (a => 1) | "a"
+  level  3
+  code   ((a => 1)) = ("a")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0562
+  from   inventory:infix:=
+  cell   (a => 1) | True
+  level  3
+  code   ((a => 1)) = (True)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0563
+  from   inventory:infix:=
+  cell   (a => 1) | Any
+  level  3
+  code   ((a => 1)) = (Any)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0564
+  from   inventory:infix:=
+  cell   (a => 1) | (1,2)
+  level  3
+  code   ((a => 1)) = ((1,2))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0565
+  from   inventory:infix:=
+  cell   (a => 1) | {a=>1}
+  level  3
+  code   ((a => 1)) = ({a=>1})
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0566
+  from   inventory:infix:=
+  cell   (a => 1) | -0e0
+  level  3
+  code   ((a => 1)) = (-0e0)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0567
+  from   inventory:infix:=
+  cell   (a => 1) | Inf
+  level  3
+  code   ((a => 1)) = (Inf)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0568
+  from   inventory:infix:=
+  cell   (a => 1) | 2**64
+  level  3
+  code   ((a => 1)) = (2**64)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0569
+  from   inventory:infix:=
+  cell   (a => 1) | False
+  level  3
+  code   ((a => 1)) = (False)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0570
+  from   inventory:infix:=
+  cell   (a => 1) | Nil
+  level  3
+  code   ((a => 1)) = (Nil)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0571
+  from   inventory:infix:=
+  cell   (a => 1) | ()
+  level  3
+  code   ((a => 1)) = (())
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0572
+  from   inventory:infix:=
+  cell   (a => 1) | "0"
+  level  3
+  code   ((a => 1)) = ("0")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0573
+  from   inventory:infix:=
+  cell   (a => 1) | (1..3)
+  level  3
+  code   ((a => 1)) = ((1..3))
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0574
+  from   inventory:infix:=
+  cell   (a => 1) | Int
+  level  3
+  code   ((a => 1)) = (Int)
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0575
+  from   inventory:infix:=
+  cell   (a => 1) | "a b"
+  level  3
+  code   ((a => 1)) = ("a b")
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO
+
+- id     0576
+  from   inventory:infix:=
+  cell   (a => 1) | [1,2]
+  level  3
+  code   ((a => 1)) = ([1,2])
+  throws X::Assignment::RO
+  oracle rakudo-2026.07 → ERR:X::Assignment::RO
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Assignment::RO

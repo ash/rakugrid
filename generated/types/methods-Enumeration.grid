@@ -12,7 +12,7 @@ cols     Order::Less
   is     Order::Less
   type   Order
   oracle rakudo-2026.07 → Order::Less
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Order::Less
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Order::Less
 
 - id     0002
   from   inventory:Enumeration.^methods
@@ -21,7 +21,7 @@ cols     Order::Less
   is     $(Map.new((:Less(-1),:More(1),:Same(0))))
   type   Map
   oracle rakudo-2026.07 → $(Map.new((:Less(-1),:More(1),:Same(0))))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0003
   from   inventory:Enumeration.^methods
@@ -29,7 +29,7 @@ cols     Order::Less
   code   (Order::Less).new
   throws X::Constructor::BadType
   oracle rakudo-2026.07 → ERR:X::Constructor::BadType
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0004
   from   inventory:Enumeration.^methods
@@ -38,7 +38,7 @@ cols     Order::Less
   is     :Less(-1)
   type   Pair
   oracle rakudo-2026.07 → :Less(-1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → :Less(-1)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → :Less(-1)
 
 - id     0005
   from   inventory:Enumeration.^methods
@@ -47,7 +47,7 @@ cols     Order::Less
   is     Order::Less
   type   Order
   oracle rakudo-2026.07 → Order::Less
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → -2
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → -2
 
 - id     0006
   from   inventory:Enumeration.^methods
@@ -56,4 +56,4 @@ cols     Order::Less
   is     Order::Same
   type   Order
   oracle rakudo-2026.07 → Order::Same
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0

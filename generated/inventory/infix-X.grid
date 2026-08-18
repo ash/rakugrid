@@ -3,12 +3,13 @@ source   generated
 gen      gen/operators.raku
 from-inventory infix X
 ladder   mixed
-axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
-cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
 
 - id     0001
   from   inventory:infix:X
   cell   0 | 0
+  level  0
   code   (0) X (0)
   is     $(((0, 0),).Seq)
   type   Seq
@@ -18,6 +19,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0002
   from   inventory:infix:X
   cell   0 | 1
+  level  1
   code   (0) X (1)
   is     $(((0, 1),).Seq)
   type   Seq
@@ -27,6 +29,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0003
   from   inventory:infix:X
   cell   1 | 1
+  level  1
   code   (1) X (1)
   is     $(((1, 1),).Seq)
   type   Seq
@@ -36,6 +39,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0004
   from   inventory:infix:X
   cell   1 | 0
+  level  1
   code   (1) X (0)
   is     $(((1, 0),).Seq)
   type   Seq
@@ -45,6 +49,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0005
   from   inventory:infix:X
   cell   0 | -1
+  level  1
   code   (0) X (-1)
   is     $(((0, -1),).Seq)
   type   Seq
@@ -54,6 +59,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0006
   from   inventory:infix:X
   cell   1 | -1
+  level  1
   code   (1) X (-1)
   is     $(((1, -1),).Seq)
   type   Seq
@@ -63,6 +69,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0007
   from   inventory:infix:X
   cell   -1 | -1
+  level  1
   code   (-1) X (-1)
   is     $(((-1, -1),).Seq)
   type   Seq
@@ -72,6 +79,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0008
   from   inventory:infix:X
   cell   -1 | 0
+  level  1
   code   (-1) X (0)
   is     $(((-1, 0),).Seq)
   type   Seq
@@ -81,6 +89,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0009
   from   inventory:infix:X
   cell   -1 | 1
+  level  1
   code   (-1) X (1)
   is     $(((-1, 1),).Seq)
   type   Seq
@@ -90,6 +99,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0010
   from   inventory:infix:X
   cell   0 | 1/2
+  level  1
   code   (0) X (1/2)
   is     $(((0, 0.5),).Seq)
   type   Seq
@@ -99,6 +109,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0011
   from   inventory:infix:X
   cell   1 | 1/2
+  level  1
   code   (1) X (1/2)
   is     $(((1, 0.5),).Seq)
   type   Seq
@@ -108,6 +119,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0012
   from   inventory:infix:X
   cell   -1 | 1/2
+  level  1
   code   (-1) X (1/2)
   is     $(((-1, 0.5),).Seq)
   type   Seq
@@ -117,6 +129,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0013
   from   inventory:infix:X
   cell   1/2 | 1/2
+  level  1
   code   (1/2) X (1/2)
   is     $(((0.5, 0.5),).Seq)
   type   Seq
@@ -126,6 +139,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0014
   from   inventory:infix:X
   cell   1/2 | 0
+  level  1
   code   (1/2) X (0)
   is     $(((0.5, 0),).Seq)
   type   Seq
@@ -135,6 +149,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0015
   from   inventory:infix:X
   cell   1/2 | 1
+  level  1
   code   (1/2) X (1)
   is     $(((0.5, 1),).Seq)
   type   Seq
@@ -144,6 +159,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0016
   from   inventory:infix:X
   cell   1/2 | -1
+  level  1
   code   (1/2) X (-1)
   is     $(((0.5, -1),).Seq)
   type   Seq
@@ -153,6 +169,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0017
   from   inventory:infix:X
   cell   0 | 0e0
+  level  2
   code   (0) X (0e0)
   is     $(((0, 0e0),).Seq)
   type   Seq
@@ -162,6 +179,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0018
   from   inventory:infix:X
   cell   1 | 0e0
+  level  2
   code   (1) X (0e0)
   is     $(((1, 0e0),).Seq)
   type   Seq
@@ -171,6 +189,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0019
   from   inventory:infix:X
   cell   -1 | 0e0
+  level  2
   code   (-1) X (0e0)
   is     $(((-1, 0e0),).Seq)
   type   Seq
@@ -180,6 +199,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0020
   from   inventory:infix:X
   cell   1/2 | 0e0
+  level  2
   code   (1/2) X (0e0)
   is     $(((0.5, 0e0),).Seq)
   type   Seq
@@ -189,6 +209,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0021
   from   inventory:infix:X
   cell   0e0 | 0e0
+  level  2
   code   (0e0) X (0e0)
   is     $(((0e0, 0e0),).Seq)
   type   Seq
@@ -198,6 +219,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0022
   from   inventory:infix:X
   cell   0e0 | 0
+  level  2
   code   (0e0) X (0)
   is     $(((0e0, 0),).Seq)
   type   Seq
@@ -207,6 +229,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0023
   from   inventory:infix:X
   cell   0e0 | 1
+  level  2
   code   (0e0) X (1)
   is     $(((0e0, 1),).Seq)
   type   Seq
@@ -216,6 +239,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0024
   from   inventory:infix:X
   cell   0e0 | -1
+  level  2
   code   (0e0) X (-1)
   is     $(((0e0, -1),).Seq)
   type   Seq
@@ -225,6 +249,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0025
   from   inventory:infix:X
   cell   0e0 | 1/2
+  level  2
   code   (0e0) X (1/2)
   is     $(((0e0, 0.5),).Seq)
   type   Seq
@@ -234,6 +259,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0026
   from   inventory:infix:X
   cell   0 | NaN
+  level  2
   code   (0) X (NaN)
   is     $(((0, NaN),).Seq)
   type   Seq
@@ -243,6 +269,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0027
   from   inventory:infix:X
   cell   1 | NaN
+  level  2
   code   (1) X (NaN)
   is     $(((1, NaN),).Seq)
   type   Seq
@@ -252,6 +279,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0028
   from   inventory:infix:X
   cell   -1 | NaN
+  level  2
   code   (-1) X (NaN)
   is     $(((-1, NaN),).Seq)
   type   Seq
@@ -261,6 +289,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0029
   from   inventory:infix:X
   cell   1/2 | NaN
+  level  2
   code   (1/2) X (NaN)
   is     $(((0.5, NaN),).Seq)
   type   Seq
@@ -270,6 +299,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0030
   from   inventory:infix:X
   cell   0e0 | NaN
+  level  2
   code   (0e0) X (NaN)
   is     $(((0e0, NaN),).Seq)
   type   Seq
@@ -279,6 +309,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0031
   from   inventory:infix:X
   cell   NaN | NaN
+  level  2
   code   (NaN) X (NaN)
   is     $(((NaN, NaN),).Seq)
   type   Seq
@@ -288,6 +319,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0032
   from   inventory:infix:X
   cell   NaN | 0
+  level  2
   code   (NaN) X (0)
   is     $(((NaN, 0),).Seq)
   type   Seq
@@ -297,6 +329,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0033
   from   inventory:infix:X
   cell   NaN | 1
+  level  2
   code   (NaN) X (1)
   is     $(((NaN, 1),).Seq)
   type   Seq
@@ -306,6 +339,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0034
   from   inventory:infix:X
   cell   NaN | -1
+  level  2
   code   (NaN) X (-1)
   is     $(((NaN, -1),).Seq)
   type   Seq
@@ -315,6 +349,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0035
   from   inventory:infix:X
   cell   NaN | 1/2
+  level  2
   code   (NaN) X (1/2)
   is     $(((NaN, 0.5),).Seq)
   type   Seq
@@ -324,6 +359,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0036
   from   inventory:infix:X
   cell   NaN | 0e0
+  level  2
   code   (NaN) X (0e0)
   is     $(((NaN, 0e0),).Seq)
   type   Seq
@@ -333,6 +369,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0037
   from   inventory:infix:X
   cell   0 | ""
+  level  2
   code   (0) X ("")
   is     $(((0, ""),).Seq)
   type   Seq
@@ -342,6 +379,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0038
   from   inventory:infix:X
   cell   1 | ""
+  level  2
   code   (1) X ("")
   is     $(((1, ""),).Seq)
   type   Seq
@@ -351,6 +389,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0039
   from   inventory:infix:X
   cell   -1 | ""
+  level  2
   code   (-1) X ("")
   is     $(((-1, ""),).Seq)
   type   Seq
@@ -360,6 +399,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0040
   from   inventory:infix:X
   cell   1/2 | ""
+  level  2
   code   (1/2) X ("")
   is     $(((0.5, ""),).Seq)
   type   Seq
@@ -369,6 +409,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0041
   from   inventory:infix:X
   cell   0e0 | ""
+  level  2
   code   (0e0) X ("")
   is     $(((0e0, ""),).Seq)
   type   Seq
@@ -378,6 +419,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0042
   from   inventory:infix:X
   cell   NaN | ""
+  level  2
   code   (NaN) X ("")
   is     $(((NaN, ""),).Seq)
   type   Seq
@@ -387,6 +429,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0043
   from   inventory:infix:X
   cell   "" | ""
+  level  2
   code   ("") X ("")
   is     $((("", ""),).Seq)
   type   Seq
@@ -396,6 +439,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0044
   from   inventory:infix:X
   cell   "" | 0
+  level  2
   code   ("") X (0)
   is     $((("", 0),).Seq)
   type   Seq
@@ -405,6 +449,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0045
   from   inventory:infix:X
   cell   "" | 1
+  level  2
   code   ("") X (1)
   is     $((("", 1),).Seq)
   type   Seq
@@ -414,6 +459,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0046
   from   inventory:infix:X
   cell   "" | -1
+  level  2
   code   ("") X (-1)
   is     $((("", -1),).Seq)
   type   Seq
@@ -423,6 +469,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0047
   from   inventory:infix:X
   cell   "" | 1/2
+  level  2
   code   ("") X (1/2)
   is     $((("", 0.5),).Seq)
   type   Seq
@@ -432,6 +479,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0048
   from   inventory:infix:X
   cell   "" | 0e0
+  level  2
   code   ("") X (0e0)
   is     $((("", 0e0),).Seq)
   type   Seq
@@ -441,6 +489,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0049
   from   inventory:infix:X
   cell   "" | NaN
+  level  2
   code   ("") X (NaN)
   is     $((("", NaN),).Seq)
   type   Seq
@@ -450,6 +499,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0050
   from   inventory:infix:X
   cell   0 | "a"
+  level  2
   code   (0) X ("a")
   is     $(((0, "a"),).Seq)
   type   Seq
@@ -459,6 +509,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0051
   from   inventory:infix:X
   cell   1 | "a"
+  level  2
   code   (1) X ("a")
   is     $(((1, "a"),).Seq)
   type   Seq
@@ -468,6 +519,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0052
   from   inventory:infix:X
   cell   -1 | "a"
+  level  2
   code   (-1) X ("a")
   is     $(((-1, "a"),).Seq)
   type   Seq
@@ -477,6 +529,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0053
   from   inventory:infix:X
   cell   1/2 | "a"
+  level  2
   code   (1/2) X ("a")
   is     $(((0.5, "a"),).Seq)
   type   Seq
@@ -486,6 +539,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0054
   from   inventory:infix:X
   cell   0e0 | "a"
+  level  2
   code   (0e0) X ("a")
   is     $(((0e0, "a"),).Seq)
   type   Seq
@@ -495,6 +549,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0055
   from   inventory:infix:X
   cell   NaN | "a"
+  level  2
   code   (NaN) X ("a")
   is     $(((NaN, "a"),).Seq)
   type   Seq
@@ -504,6 +559,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0056
   from   inventory:infix:X
   cell   "" | "a"
+  level  2
   code   ("") X ("a")
   is     $((("", "a"),).Seq)
   type   Seq
@@ -513,6 +569,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0057
   from   inventory:infix:X
   cell   "a" | "a"
+  level  2
   code   ("a") X ("a")
   is     $((("a", "a"),).Seq)
   type   Seq
@@ -522,6 +579,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0058
   from   inventory:infix:X
   cell   "a" | 0
+  level  2
   code   ("a") X (0)
   is     $((("a", 0),).Seq)
   type   Seq
@@ -531,6 +589,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0059
   from   inventory:infix:X
   cell   "a" | 1
+  level  2
   code   ("a") X (1)
   is     $((("a", 1),).Seq)
   type   Seq
@@ -540,6 +599,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0060
   from   inventory:infix:X
   cell   "a" | -1
+  level  2
   code   ("a") X (-1)
   is     $((("a", -1),).Seq)
   type   Seq
@@ -549,6 +609,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0061
   from   inventory:infix:X
   cell   "a" | 1/2
+  level  2
   code   ("a") X (1/2)
   is     $((("a", 0.5),).Seq)
   type   Seq
@@ -558,6 +619,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0062
   from   inventory:infix:X
   cell   "a" | 0e0
+  level  2
   code   ("a") X (0e0)
   is     $((("a", 0e0),).Seq)
   type   Seq
@@ -567,6 +629,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0063
   from   inventory:infix:X
   cell   "a" | NaN
+  level  2
   code   ("a") X (NaN)
   is     $((("a", NaN),).Seq)
   type   Seq
@@ -576,6 +639,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0064
   from   inventory:infix:X
   cell   "a" | ""
+  level  2
   code   ("a") X ("")
   is     $((("a", ""),).Seq)
   type   Seq
@@ -585,6 +649,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0065
   from   inventory:infix:X
   cell   0 | True
+  level  2
   code   (0) X (True)
   is     $(((0, Bool::True),).Seq)
   type   Seq
@@ -594,6 +659,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0066
   from   inventory:infix:X
   cell   1 | True
+  level  2
   code   (1) X (True)
   is     $(((1, Bool::True),).Seq)
   type   Seq
@@ -603,6 +669,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0067
   from   inventory:infix:X
   cell   -1 | True
+  level  2
   code   (-1) X (True)
   is     $(((-1, Bool::True),).Seq)
   type   Seq
@@ -612,6 +679,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0068
   from   inventory:infix:X
   cell   1/2 | True
+  level  2
   code   (1/2) X (True)
   is     $(((0.5, Bool::True),).Seq)
   type   Seq
@@ -621,6 +689,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0069
   from   inventory:infix:X
   cell   0e0 | True
+  level  2
   code   (0e0) X (True)
   is     $(((0e0, Bool::True),).Seq)
   type   Seq
@@ -630,6 +699,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0070
   from   inventory:infix:X
   cell   NaN | True
+  level  2
   code   (NaN) X (True)
   is     $(((NaN, Bool::True),).Seq)
   type   Seq
@@ -639,6 +709,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0071
   from   inventory:infix:X
   cell   "" | True
+  level  2
   code   ("") X (True)
   is     $((("", Bool::True),).Seq)
   type   Seq
@@ -648,6 +719,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0072
   from   inventory:infix:X
   cell   "a" | True
+  level  2
   code   ("a") X (True)
   is     $((("a", Bool::True),).Seq)
   type   Seq
@@ -657,6 +729,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0073
   from   inventory:infix:X
   cell   True | True
+  level  2
   code   (True) X (True)
   is     $(((Bool::True, Bool::True),).Seq)
   type   Seq
@@ -666,6 +739,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0074
   from   inventory:infix:X
   cell   True | 0
+  level  2
   code   (True) X (0)
   is     $(((Bool::True, 0),).Seq)
   type   Seq
@@ -675,6 +749,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0075
   from   inventory:infix:X
   cell   True | 1
+  level  2
   code   (True) X (1)
   is     $(((Bool::True, 1),).Seq)
   type   Seq
@@ -684,6 +759,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0076
   from   inventory:infix:X
   cell   True | -1
+  level  2
   code   (True) X (-1)
   is     $(((Bool::True, -1),).Seq)
   type   Seq
@@ -693,6 +769,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0077
   from   inventory:infix:X
   cell   True | 1/2
+  level  2
   code   (True) X (1/2)
   is     $(((Bool::True, 0.5),).Seq)
   type   Seq
@@ -702,6 +779,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0078
   from   inventory:infix:X
   cell   True | 0e0
+  level  2
   code   (True) X (0e0)
   is     $(((Bool::True, 0e0),).Seq)
   type   Seq
@@ -711,6 +789,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0079
   from   inventory:infix:X
   cell   True | NaN
+  level  2
   code   (True) X (NaN)
   is     $(((Bool::True, NaN),).Seq)
   type   Seq
@@ -720,6 +799,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0080
   from   inventory:infix:X
   cell   True | ""
+  level  2
   code   (True) X ("")
   is     $(((Bool::True, ""),).Seq)
   type   Seq
@@ -729,6 +809,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0081
   from   inventory:infix:X
   cell   True | "a"
+  level  2
   code   (True) X ("a")
   is     $(((Bool::True, "a"),).Seq)
   type   Seq
@@ -738,6 +819,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0082
   from   inventory:infix:X
   cell   0 | Any
+  level  2
   code   (0) X (Any)
   is     $(((0, Any),).Seq)
   type   Seq
@@ -747,6 +829,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0083
   from   inventory:infix:X
   cell   1 | Any
+  level  2
   code   (1) X (Any)
   is     $(((1, Any),).Seq)
   type   Seq
@@ -756,6 +839,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0084
   from   inventory:infix:X
   cell   -1 | Any
+  level  2
   code   (-1) X (Any)
   is     $(((-1, Any),).Seq)
   type   Seq
@@ -765,6 +849,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0085
   from   inventory:infix:X
   cell   1/2 | Any
+  level  2
   code   (1/2) X (Any)
   is     $(((0.5, Any),).Seq)
   type   Seq
@@ -774,6 +859,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0086
   from   inventory:infix:X
   cell   0e0 | Any
+  level  2
   code   (0e0) X (Any)
   is     $(((0e0, Any),).Seq)
   type   Seq
@@ -783,6 +869,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0087
   from   inventory:infix:X
   cell   NaN | Any
+  level  2
   code   (NaN) X (Any)
   is     $(((NaN, Any),).Seq)
   type   Seq
@@ -792,6 +879,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0088
   from   inventory:infix:X
   cell   "" | Any
+  level  2
   code   ("") X (Any)
   is     $((("", Any),).Seq)
   type   Seq
@@ -801,6 +889,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0089
   from   inventory:infix:X
   cell   "a" | Any
+  level  2
   code   ("a") X (Any)
   is     $((("a", Any),).Seq)
   type   Seq
@@ -810,6 +899,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0090
   from   inventory:infix:X
   cell   True | Any
+  level  2
   code   (True) X (Any)
   is     $(((Bool::True, Any),).Seq)
   type   Seq
@@ -819,6 +909,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0091
   from   inventory:infix:X
   cell   Any | Any
+  level  2
   code   (Any) X (Any)
   is     $(((Any, Any),).Seq)
   type   Seq
@@ -828,6 +919,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0092
   from   inventory:infix:X
   cell   Any | 0
+  level  2
   code   (Any) X (0)
   is     $(((Any, 0),).Seq)
   type   Seq
@@ -837,6 +929,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0093
   from   inventory:infix:X
   cell   Any | 1
+  level  2
   code   (Any) X (1)
   is     $(((Any, 1),).Seq)
   type   Seq
@@ -846,6 +939,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0094
   from   inventory:infix:X
   cell   Any | -1
+  level  2
   code   (Any) X (-1)
   is     $(((Any, -1),).Seq)
   type   Seq
@@ -855,6 +949,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0095
   from   inventory:infix:X
   cell   Any | 1/2
+  level  2
   code   (Any) X (1/2)
   is     $(((Any, 0.5),).Seq)
   type   Seq
@@ -864,6 +959,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0096
   from   inventory:infix:X
   cell   Any | 0e0
+  level  2
   code   (Any) X (0e0)
   is     $(((Any, 0e0),).Seq)
   type   Seq
@@ -873,6 +969,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0097
   from   inventory:infix:X
   cell   Any | NaN
+  level  2
   code   (Any) X (NaN)
   is     $(((Any, NaN),).Seq)
   type   Seq
@@ -882,6 +979,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0098
   from   inventory:infix:X
   cell   Any | ""
+  level  2
   code   (Any) X ("")
   is     $(((Any, ""),).Seq)
   type   Seq
@@ -891,6 +989,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0099
   from   inventory:infix:X
   cell   Any | "a"
+  level  2
   code   (Any) X ("a")
   is     $(((Any, "a"),).Seq)
   type   Seq
@@ -900,6 +999,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0100
   from   inventory:infix:X
   cell   Any | True
+  level  2
   code   (Any) X (True)
   is     $(((Any, Bool::True),).Seq)
   type   Seq
@@ -909,6 +1009,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0101
   from   inventory:infix:X
   cell   0 | (1,2)
+  level  3
   code   (0) X ((1,2))
   is     $(((0, 1), (0, 2)).Seq)
   type   Seq
@@ -918,6 +1019,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0102
   from   inventory:infix:X
   cell   1 | (1,2)
+  level  3
   code   (1) X ((1,2))
   is     $(((1, 1), (1, 2)).Seq)
   type   Seq
@@ -927,6 +1029,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0103
   from   inventory:infix:X
   cell   -1 | (1,2)
+  level  3
   code   (-1) X ((1,2))
   is     $(((-1, 1), (-1, 2)).Seq)
   type   Seq
@@ -936,6 +1039,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0104
   from   inventory:infix:X
   cell   1/2 | (1,2)
+  level  3
   code   (1/2) X ((1,2))
   is     $(((0.5, 1), (0.5, 2)).Seq)
   type   Seq
@@ -945,6 +1049,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0105
   from   inventory:infix:X
   cell   0e0 | (1,2)
+  level  3
   code   (0e0) X ((1,2))
   is     $(((0e0, 1), (0e0, 2)).Seq)
   type   Seq
@@ -954,6 +1059,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0106
   from   inventory:infix:X
   cell   NaN | (1,2)
+  level  3
   code   (NaN) X ((1,2))
   is     $(((NaN, 1), (NaN, 2)).Seq)
   type   Seq
@@ -963,6 +1069,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0107
   from   inventory:infix:X
   cell   "" | (1,2)
+  level  3
   code   ("") X ((1,2))
   is     $((("", 1), ("", 2)).Seq)
   type   Seq
@@ -972,6 +1079,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0108
   from   inventory:infix:X
   cell   "a" | (1,2)
+  level  3
   code   ("a") X ((1,2))
   is     $((("a", 1), ("a", 2)).Seq)
   type   Seq
@@ -981,6 +1089,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0109
   from   inventory:infix:X
   cell   True | (1,2)
+  level  3
   code   (True) X ((1,2))
   is     $(((Bool::True, 1), (Bool::True, 2)).Seq)
   type   Seq
@@ -990,6 +1099,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0110
   from   inventory:infix:X
   cell   Any | (1,2)
+  level  3
   code   (Any) X ((1,2))
   is     $(((Any, 1), (Any, 2)).Seq)
   type   Seq
@@ -999,6 +1109,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0111
   from   inventory:infix:X
   cell   (1,2) | (1,2)
+  level  3
   code   ((1,2)) X ((1,2))
   is     $(((1, 1), (1, 2), (2, 1), (2, 2)).Seq)
   type   Seq
@@ -1008,6 +1119,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0112
   from   inventory:infix:X
   cell   (1,2) | 0
+  level  3
   code   ((1,2)) X (0)
   is     $(((1, 0), (2, 0)).Seq)
   type   Seq
@@ -1017,6 +1129,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0113
   from   inventory:infix:X
   cell   (1,2) | 1
+  level  3
   code   ((1,2)) X (1)
   is     $(((1, 1), (2, 1)).Seq)
   type   Seq
@@ -1026,6 +1139,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0114
   from   inventory:infix:X
   cell   (1,2) | -1
+  level  3
   code   ((1,2)) X (-1)
   is     $(((1, -1), (2, -1)).Seq)
   type   Seq
@@ -1035,6 +1149,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0115
   from   inventory:infix:X
   cell   (1,2) | 1/2
+  level  3
   code   ((1,2)) X (1/2)
   is     $(((1, 0.5), (2, 0.5)).Seq)
   type   Seq
@@ -1044,6 +1159,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0116
   from   inventory:infix:X
   cell   (1,2) | 0e0
+  level  3
   code   ((1,2)) X (0e0)
   is     $(((1, 0e0), (2, 0e0)).Seq)
   type   Seq
@@ -1053,6 +1169,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0117
   from   inventory:infix:X
   cell   (1,2) | NaN
+  level  3
   code   ((1,2)) X (NaN)
   is     $(((1, NaN), (2, NaN)).Seq)
   type   Seq
@@ -1062,6 +1179,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0118
   from   inventory:infix:X
   cell   (1,2) | ""
+  level  3
   code   ((1,2)) X ("")
   is     $(((1, ""), (2, "")).Seq)
   type   Seq
@@ -1071,6 +1189,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0119
   from   inventory:infix:X
   cell   (1,2) | "a"
+  level  3
   code   ((1,2)) X ("a")
   is     $(((1, "a"), (2, "a")).Seq)
   type   Seq
@@ -1080,6 +1199,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0120
   from   inventory:infix:X
   cell   (1,2) | True
+  level  3
   code   ((1,2)) X (True)
   is     $(((1, Bool::True), (2, Bool::True)).Seq)
   type   Seq
@@ -1089,6 +1209,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0121
   from   inventory:infix:X
   cell   (1,2) | Any
+  level  3
   code   ((1,2)) X (Any)
   is     $(((1, Any), (2, Any)).Seq)
   type   Seq
@@ -1098,6 +1219,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0122
   from   inventory:infix:X
   cell   0 | {a=>1}
+  level  3
   code   (0) X ({a=>1})
   is     $(((0, :a(1)),).Seq)
   type   Seq
@@ -1107,6 +1229,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0123
   from   inventory:infix:X
   cell   1 | {a=>1}
+  level  3
   code   (1) X ({a=>1})
   is     $(((1, :a(1)),).Seq)
   type   Seq
@@ -1116,6 +1239,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0124
   from   inventory:infix:X
   cell   -1 | {a=>1}
+  level  3
   code   (-1) X ({a=>1})
   is     $(((-1, :a(1)),).Seq)
   type   Seq
@@ -1125,6 +1249,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0125
   from   inventory:infix:X
   cell   1/2 | {a=>1}
+  level  3
   code   (1/2) X ({a=>1})
   is     $(((0.5, :a(1)),).Seq)
   type   Seq
@@ -1134,6 +1259,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0126
   from   inventory:infix:X
   cell   0e0 | {a=>1}
+  level  3
   code   (0e0) X ({a=>1})
   is     $(((0e0, :a(1)),).Seq)
   type   Seq
@@ -1143,6 +1269,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0127
   from   inventory:infix:X
   cell   NaN | {a=>1}
+  level  3
   code   (NaN) X ({a=>1})
   is     $(((NaN, :a(1)),).Seq)
   type   Seq
@@ -1152,6 +1279,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0128
   from   inventory:infix:X
   cell   "" | {a=>1}
+  level  3
   code   ("") X ({a=>1})
   is     $((("", :a(1)),).Seq)
   type   Seq
@@ -1161,6 +1289,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0129
   from   inventory:infix:X
   cell   "a" | {a=>1}
+  level  3
   code   ("a") X ({a=>1})
   is     $((("a", :a(1)),).Seq)
   type   Seq
@@ -1170,6 +1299,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0130
   from   inventory:infix:X
   cell   True | {a=>1}
+  level  3
   code   (True) X ({a=>1})
   is     $(((Bool::True, :a(1)),).Seq)
   type   Seq
@@ -1179,6 +1309,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0131
   from   inventory:infix:X
   cell   Any | {a=>1}
+  level  3
   code   (Any) X ({a=>1})
   is     $(((Any, :a(1)),).Seq)
   type   Seq
@@ -1188,6 +1319,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0132
   from   inventory:infix:X
   cell   (1,2) | {a=>1}
+  level  3
   code   ((1,2)) X ({a=>1})
   is     $(((1, :a(1)), (2, :a(1))).Seq)
   type   Seq
@@ -1197,6 +1329,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0133
   from   inventory:infix:X
   cell   {a=>1} | {a=>1}
+  level  3
   code   ({a=>1}) X ({a=>1})
   is     $(((:a(1), :a(1)),).Seq)
   type   Seq
@@ -1206,6 +1339,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0134
   from   inventory:infix:X
   cell   {a=>1} | 0
+  level  3
   code   ({a=>1}) X (0)
   is     $(((:a(1), 0),).Seq)
   type   Seq
@@ -1215,6 +1349,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0135
   from   inventory:infix:X
   cell   {a=>1} | 1
+  level  3
   code   ({a=>1}) X (1)
   is     $(((:a(1), 1),).Seq)
   type   Seq
@@ -1224,6 +1359,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0136
   from   inventory:infix:X
   cell   {a=>1} | -1
+  level  3
   code   ({a=>1}) X (-1)
   is     $(((:a(1), -1),).Seq)
   type   Seq
@@ -1233,6 +1369,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0137
   from   inventory:infix:X
   cell   {a=>1} | 1/2
+  level  3
   code   ({a=>1}) X (1/2)
   is     $(((:a(1), 0.5),).Seq)
   type   Seq
@@ -1242,6 +1379,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0138
   from   inventory:infix:X
   cell   {a=>1} | 0e0
+  level  3
   code   ({a=>1}) X (0e0)
   is     $(((:a(1), 0e0),).Seq)
   type   Seq
@@ -1251,6 +1389,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0139
   from   inventory:infix:X
   cell   {a=>1} | NaN
+  level  3
   code   ({a=>1}) X (NaN)
   is     $(((:a(1), NaN),).Seq)
   type   Seq
@@ -1260,6 +1399,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0140
   from   inventory:infix:X
   cell   {a=>1} | ""
+  level  3
   code   ({a=>1}) X ("")
   is     $(((:a(1), ""),).Seq)
   type   Seq
@@ -1269,6 +1409,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0141
   from   inventory:infix:X
   cell   {a=>1} | "a"
+  level  3
   code   ({a=>1}) X ("a")
   is     $(((:a(1), "a"),).Seq)
   type   Seq
@@ -1278,6 +1419,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0142
   from   inventory:infix:X
   cell   {a=>1} | True
+  level  3
   code   ({a=>1}) X (True)
   is     $(((:a(1), Bool::True),).Seq)
   type   Seq
@@ -1287,6 +1429,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0143
   from   inventory:infix:X
   cell   {a=>1} | Any
+  level  3
   code   ({a=>1}) X (Any)
   is     $(((:a(1), Any),).Seq)
   type   Seq
@@ -1296,6 +1439,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0144
   from   inventory:infix:X
   cell   {a=>1} | (1,2)
+  level  3
   code   ({a=>1}) X ((1,2))
   is     $(((:a(1), 1), (:a(1), 2)).Seq)
   type   Seq
@@ -1305,6 +1449,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0145
   from   inventory:infix:X
   cell   0 | -0e0
+  level  3
   code   (0) X (-0e0)
   is     $(((0, -0e0),).Seq)
   type   Seq
@@ -1314,6 +1459,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0146
   from   inventory:infix:X
   cell   1 | -0e0
+  level  3
   code   (1) X (-0e0)
   is     $(((1, -0e0),).Seq)
   type   Seq
@@ -1323,6 +1469,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0147
   from   inventory:infix:X
   cell   -1 | -0e0
+  level  3
   code   (-1) X (-0e0)
   is     $(((-1, -0e0),).Seq)
   type   Seq
@@ -1332,6 +1479,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0148
   from   inventory:infix:X
   cell   1/2 | -0e0
+  level  3
   code   (1/2) X (-0e0)
   is     $(((0.5, -0e0),).Seq)
   type   Seq
@@ -1341,6 +1489,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0149
   from   inventory:infix:X
   cell   0e0 | -0e0
+  level  3
   code   (0e0) X (-0e0)
   is     $(((0e0, -0e0),).Seq)
   type   Seq
@@ -1350,6 +1499,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0150
   from   inventory:infix:X
   cell   NaN | -0e0
+  level  3
   code   (NaN) X (-0e0)
   is     $(((NaN, -0e0),).Seq)
   type   Seq
@@ -1359,6 +1509,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0151
   from   inventory:infix:X
   cell   "" | -0e0
+  level  3
   code   ("") X (-0e0)
   is     $((("", -0e0),).Seq)
   type   Seq
@@ -1368,6 +1519,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0152
   from   inventory:infix:X
   cell   "a" | -0e0
+  level  3
   code   ("a") X (-0e0)
   is     $((("a", -0e0),).Seq)
   type   Seq
@@ -1377,6 +1529,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0153
   from   inventory:infix:X
   cell   True | -0e0
+  level  3
   code   (True) X (-0e0)
   is     $(((Bool::True, -0e0),).Seq)
   type   Seq
@@ -1386,6 +1539,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0154
   from   inventory:infix:X
   cell   Any | -0e0
+  level  3
   code   (Any) X (-0e0)
   is     $(((Any, -0e0),).Seq)
   type   Seq
@@ -1395,6 +1549,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0155
   from   inventory:infix:X
   cell   (1,2) | -0e0
+  level  3
   code   ((1,2)) X (-0e0)
   is     $(((1, -0e0), (2, -0e0)).Seq)
   type   Seq
@@ -1404,6 +1559,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0156
   from   inventory:infix:X
   cell   {a=>1} | -0e0
+  level  3
   code   ({a=>1}) X (-0e0)
   is     $(((:a(1), -0e0),).Seq)
   type   Seq
@@ -1413,6 +1569,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0157
   from   inventory:infix:X
   cell   -0e0 | -0e0
+  level  3
   code   (-0e0) X (-0e0)
   is     $(((-0e0, -0e0),).Seq)
   type   Seq
@@ -1422,6 +1579,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0158
   from   inventory:infix:X
   cell   -0e0 | 0
+  level  3
   code   (-0e0) X (0)
   is     $(((-0e0, 0),).Seq)
   type   Seq
@@ -1431,6 +1589,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0159
   from   inventory:infix:X
   cell   -0e0 | 1
+  level  3
   code   (-0e0) X (1)
   is     $(((-0e0, 1),).Seq)
   type   Seq
@@ -1440,6 +1599,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0160
   from   inventory:infix:X
   cell   -0e0 | -1
+  level  3
   code   (-0e0) X (-1)
   is     $(((-0e0, -1),).Seq)
   type   Seq
@@ -1449,6 +1609,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0161
   from   inventory:infix:X
   cell   -0e0 | 1/2
+  level  3
   code   (-0e0) X (1/2)
   is     $(((-0e0, 0.5),).Seq)
   type   Seq
@@ -1458,6 +1619,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0162
   from   inventory:infix:X
   cell   -0e0 | 0e0
+  level  3
   code   (-0e0) X (0e0)
   is     $(((-0e0, 0e0),).Seq)
   type   Seq
@@ -1467,6 +1629,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0163
   from   inventory:infix:X
   cell   -0e0 | NaN
+  level  3
   code   (-0e0) X (NaN)
   is     $(((-0e0, NaN),).Seq)
   type   Seq
@@ -1476,6 +1639,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0164
   from   inventory:infix:X
   cell   -0e0 | ""
+  level  3
   code   (-0e0) X ("")
   is     $(((-0e0, ""),).Seq)
   type   Seq
@@ -1485,6 +1649,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0165
   from   inventory:infix:X
   cell   -0e0 | "a"
+  level  3
   code   (-0e0) X ("a")
   is     $(((-0e0, "a"),).Seq)
   type   Seq
@@ -1494,6 +1659,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0166
   from   inventory:infix:X
   cell   -0e0 | True
+  level  3
   code   (-0e0) X (True)
   is     $(((-0e0, Bool::True),).Seq)
   type   Seq
@@ -1503,6 +1669,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0167
   from   inventory:infix:X
   cell   -0e0 | Any
+  level  3
   code   (-0e0) X (Any)
   is     $(((-0e0, Any),).Seq)
   type   Seq
@@ -1512,6 +1679,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0168
   from   inventory:infix:X
   cell   -0e0 | (1,2)
+  level  3
   code   (-0e0) X ((1,2))
   is     $(((-0e0, 1), (-0e0, 2)).Seq)
   type   Seq
@@ -1521,6 +1689,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0169
   from   inventory:infix:X
   cell   -0e0 | {a=>1}
+  level  3
   code   (-0e0) X ({a=>1})
   is     $(((-0e0, :a(1)),).Seq)
   type   Seq
@@ -1530,6 +1699,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0170
   from   inventory:infix:X
   cell   0 | Inf
+  level  3
   code   (0) X (Inf)
   is     $(((0, Inf),).Seq)
   type   Seq
@@ -1539,6 +1709,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0171
   from   inventory:infix:X
   cell   1 | Inf
+  level  3
   code   (1) X (Inf)
   is     $(((1, Inf),).Seq)
   type   Seq
@@ -1548,6 +1719,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0172
   from   inventory:infix:X
   cell   -1 | Inf
+  level  3
   code   (-1) X (Inf)
   is     $(((-1, Inf),).Seq)
   type   Seq
@@ -1557,6 +1729,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0173
   from   inventory:infix:X
   cell   1/2 | Inf
+  level  3
   code   (1/2) X (Inf)
   is     $(((0.5, Inf),).Seq)
   type   Seq
@@ -1566,6 +1739,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0174
   from   inventory:infix:X
   cell   0e0 | Inf
+  level  3
   code   (0e0) X (Inf)
   is     $(((0e0, Inf),).Seq)
   type   Seq
@@ -1575,6 +1749,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0175
   from   inventory:infix:X
   cell   NaN | Inf
+  level  3
   code   (NaN) X (Inf)
   is     $(((NaN, Inf),).Seq)
   type   Seq
@@ -1584,6 +1759,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0176
   from   inventory:infix:X
   cell   "" | Inf
+  level  3
   code   ("") X (Inf)
   is     $((("", Inf),).Seq)
   type   Seq
@@ -1593,6 +1769,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0177
   from   inventory:infix:X
   cell   "a" | Inf
+  level  3
   code   ("a") X (Inf)
   is     $((("a", Inf),).Seq)
   type   Seq
@@ -1602,6 +1779,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0178
   from   inventory:infix:X
   cell   True | Inf
+  level  3
   code   (True) X (Inf)
   is     $(((Bool::True, Inf),).Seq)
   type   Seq
@@ -1611,6 +1789,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0179
   from   inventory:infix:X
   cell   Any | Inf
+  level  3
   code   (Any) X (Inf)
   is     $(((Any, Inf),).Seq)
   type   Seq
@@ -1620,6 +1799,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0180
   from   inventory:infix:X
   cell   (1,2) | Inf
+  level  3
   code   ((1,2)) X (Inf)
   is     $(((1, Inf), (2, Inf)).Seq)
   type   Seq
@@ -1629,6 +1809,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0181
   from   inventory:infix:X
   cell   {a=>1} | Inf
+  level  3
   code   ({a=>1}) X (Inf)
   is     $(((:a(1), Inf),).Seq)
   type   Seq
@@ -1638,6 +1819,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0182
   from   inventory:infix:X
   cell   -0e0 | Inf
+  level  3
   code   (-0e0) X (Inf)
   is     $(((-0e0, Inf),).Seq)
   type   Seq
@@ -1647,6 +1829,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0183
   from   inventory:infix:X
   cell   Inf | Inf
+  level  3
   code   (Inf) X (Inf)
   is     $(((Inf, Inf),).Seq)
   type   Seq
@@ -1656,6 +1839,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0184
   from   inventory:infix:X
   cell   Inf | 0
+  level  3
   code   (Inf) X (0)
   is     $(((Inf, 0),).Seq)
   type   Seq
@@ -1665,6 +1849,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0185
   from   inventory:infix:X
   cell   Inf | 1
+  level  3
   code   (Inf) X (1)
   is     $(((Inf, 1),).Seq)
   type   Seq
@@ -1674,6 +1859,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0186
   from   inventory:infix:X
   cell   Inf | -1
+  level  3
   code   (Inf) X (-1)
   is     $(((Inf, -1),).Seq)
   type   Seq
@@ -1683,6 +1869,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0187
   from   inventory:infix:X
   cell   Inf | 1/2
+  level  3
   code   (Inf) X (1/2)
   is     $(((Inf, 0.5),).Seq)
   type   Seq
@@ -1692,6 +1879,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0188
   from   inventory:infix:X
   cell   Inf | 0e0
+  level  3
   code   (Inf) X (0e0)
   is     $(((Inf, 0e0),).Seq)
   type   Seq
@@ -1701,6 +1889,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0189
   from   inventory:infix:X
   cell   Inf | NaN
+  level  3
   code   (Inf) X (NaN)
   is     $(((Inf, NaN),).Seq)
   type   Seq
@@ -1710,6 +1899,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0190
   from   inventory:infix:X
   cell   Inf | ""
+  level  3
   code   (Inf) X ("")
   is     $(((Inf, ""),).Seq)
   type   Seq
@@ -1719,6 +1909,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0191
   from   inventory:infix:X
   cell   Inf | "a"
+  level  3
   code   (Inf) X ("a")
   is     $(((Inf, "a"),).Seq)
   type   Seq
@@ -1728,6 +1919,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0192
   from   inventory:infix:X
   cell   Inf | True
+  level  3
   code   (Inf) X (True)
   is     $(((Inf, Bool::True),).Seq)
   type   Seq
@@ -1737,6 +1929,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0193
   from   inventory:infix:X
   cell   Inf | Any
+  level  3
   code   (Inf) X (Any)
   is     $(((Inf, Any),).Seq)
   type   Seq
@@ -1746,6 +1939,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0194
   from   inventory:infix:X
   cell   Inf | (1,2)
+  level  3
   code   (Inf) X ((1,2))
   is     $(((Inf, 1), (Inf, 2)).Seq)
   type   Seq
@@ -1755,6 +1949,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0195
   from   inventory:infix:X
   cell   Inf | {a=>1}
+  level  3
   code   (Inf) X ({a=>1})
   is     $(((Inf, :a(1)),).Seq)
   type   Seq
@@ -1764,6 +1959,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0196
   from   inventory:infix:X
   cell   Inf | -0e0
+  level  3
   code   (Inf) X (-0e0)
   is     $(((Inf, -0e0),).Seq)
   type   Seq
@@ -1773,6 +1969,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0197
   from   inventory:infix:X
   cell   0 | 2**64
+  level  3
   code   (0) X (2**64)
   is     $(((0, 18446744073709551616),).Seq)
   type   Seq
@@ -1782,6 +1979,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0198
   from   inventory:infix:X
   cell   1 | 2**64
+  level  3
   code   (1) X (2**64)
   is     $(((1, 18446744073709551616),).Seq)
   type   Seq
@@ -1791,6 +1989,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0199
   from   inventory:infix:X
   cell   -1 | 2**64
+  level  3
   code   (-1) X (2**64)
   is     $(((-1, 18446744073709551616),).Seq)
   type   Seq
@@ -1800,6 +1999,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0200
   from   inventory:infix:X
   cell   1/2 | 2**64
+  level  3
   code   (1/2) X (2**64)
   is     $(((0.5, 18446744073709551616),).Seq)
   type   Seq
@@ -1809,6 +2009,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0201
   from   inventory:infix:X
   cell   0e0 | 2**64
+  level  3
   code   (0e0) X (2**64)
   is     $(((0e0, 18446744073709551616),).Seq)
   type   Seq
@@ -1818,6 +2019,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0202
   from   inventory:infix:X
   cell   NaN | 2**64
+  level  3
   code   (NaN) X (2**64)
   is     $(((NaN, 18446744073709551616),).Seq)
   type   Seq
@@ -1827,6 +2029,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0203
   from   inventory:infix:X
   cell   "" | 2**64
+  level  3
   code   ("") X (2**64)
   is     $((("", 18446744073709551616),).Seq)
   type   Seq
@@ -1836,6 +2039,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0204
   from   inventory:infix:X
   cell   "a" | 2**64
+  level  3
   code   ("a") X (2**64)
   is     $((("a", 18446744073709551616),).Seq)
   type   Seq
@@ -1845,6 +2049,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0205
   from   inventory:infix:X
   cell   True | 2**64
+  level  3
   code   (True) X (2**64)
   is     $(((Bool::True, 18446744073709551616),).Seq)
   type   Seq
@@ -1854,6 +2059,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0206
   from   inventory:infix:X
   cell   Any | 2**64
+  level  3
   code   (Any) X (2**64)
   is     $(((Any, 18446744073709551616),).Seq)
   type   Seq
@@ -1863,6 +2069,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0207
   from   inventory:infix:X
   cell   (1,2) | 2**64
+  level  3
   code   ((1,2)) X (2**64)
   is     $(((1, 18446744073709551616), (2, 18446744073709551616)).Seq)
   type   Seq
@@ -1872,6 +2079,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0208
   from   inventory:infix:X
   cell   {a=>1} | 2**64
+  level  3
   code   ({a=>1}) X (2**64)
   is     $(((:a(1), 18446744073709551616),).Seq)
   type   Seq
@@ -1881,6 +2089,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0209
   from   inventory:infix:X
   cell   -0e0 | 2**64
+  level  3
   code   (-0e0) X (2**64)
   is     $(((-0e0, 18446744073709551616),).Seq)
   type   Seq
@@ -1890,6 +2099,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0210
   from   inventory:infix:X
   cell   Inf | 2**64
+  level  3
   code   (Inf) X (2**64)
   is     $(((Inf, 18446744073709551616),).Seq)
   type   Seq
@@ -1899,6 +2109,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0211
   from   inventory:infix:X
   cell   2**64 | 2**64
+  level  3
   code   (2**64) X (2**64)
   is     $(((18446744073709551616, 18446744073709551616),).Seq)
   type   Seq
@@ -1908,6 +2119,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0212
   from   inventory:infix:X
   cell   2**64 | 0
+  level  3
   code   (2**64) X (0)
   is     $(((18446744073709551616, 0),).Seq)
   type   Seq
@@ -1917,6 +2129,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0213
   from   inventory:infix:X
   cell   2**64 | 1
+  level  3
   code   (2**64) X (1)
   is     $(((18446744073709551616, 1),).Seq)
   type   Seq
@@ -1926,6 +2139,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0214
   from   inventory:infix:X
   cell   2**64 | -1
+  level  3
   code   (2**64) X (-1)
   is     $(((18446744073709551616, -1),).Seq)
   type   Seq
@@ -1935,6 +2149,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0215
   from   inventory:infix:X
   cell   2**64 | 1/2
+  level  3
   code   (2**64) X (1/2)
   is     $(((18446744073709551616, 0.5),).Seq)
   type   Seq
@@ -1944,6 +2159,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0216
   from   inventory:infix:X
   cell   2**64 | 0e0
+  level  3
   code   (2**64) X (0e0)
   is     $(((18446744073709551616, 0e0),).Seq)
   type   Seq
@@ -1953,6 +2169,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0217
   from   inventory:infix:X
   cell   2**64 | NaN
+  level  3
   code   (2**64) X (NaN)
   is     $(((18446744073709551616, NaN),).Seq)
   type   Seq
@@ -1962,6 +2179,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0218
   from   inventory:infix:X
   cell   2**64 | ""
+  level  3
   code   (2**64) X ("")
   is     $(((18446744073709551616, ""),).Seq)
   type   Seq
@@ -1971,6 +2189,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0219
   from   inventory:infix:X
   cell   2**64 | "a"
+  level  3
   code   (2**64) X ("a")
   is     $(((18446744073709551616, "a"),).Seq)
   type   Seq
@@ -1980,6 +2199,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0220
   from   inventory:infix:X
   cell   2**64 | True
+  level  3
   code   (2**64) X (True)
   is     $(((18446744073709551616, Bool::True),).Seq)
   type   Seq
@@ -1989,6 +2209,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0221
   from   inventory:infix:X
   cell   2**64 | Any
+  level  3
   code   (2**64) X (Any)
   is     $(((18446744073709551616, Any),).Seq)
   type   Seq
@@ -1998,6 +2219,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0222
   from   inventory:infix:X
   cell   2**64 | (1,2)
+  level  3
   code   (2**64) X ((1,2))
   is     $(((18446744073709551616, 1), (18446744073709551616, 2)).Seq)
   type   Seq
@@ -2007,6 +2229,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0223
   from   inventory:infix:X
   cell   2**64 | {a=>1}
+  level  3
   code   (2**64) X ({a=>1})
   is     $(((18446744073709551616, :a(1)),).Seq)
   type   Seq
@@ -2016,6 +2239,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0224
   from   inventory:infix:X
   cell   2**64 | -0e0
+  level  3
   code   (2**64) X (-0e0)
   is     $(((18446744073709551616, -0e0),).Seq)
   type   Seq
@@ -2025,6 +2249,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0225
   from   inventory:infix:X
   cell   2**64 | Inf
+  level  3
   code   (2**64) X (Inf)
   is     $(((18446744073709551616, Inf),).Seq)
   type   Seq
@@ -2034,6 +2259,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0226
   from   inventory:infix:X
   cell   0 | False
+  level  3
   code   (0) X (False)
   is     $(((0, Bool::False),).Seq)
   type   Seq
@@ -2043,6 +2269,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0227
   from   inventory:infix:X
   cell   1 | False
+  level  3
   code   (1) X (False)
   is     $(((1, Bool::False),).Seq)
   type   Seq
@@ -2052,6 +2279,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0228
   from   inventory:infix:X
   cell   -1 | False
+  level  3
   code   (-1) X (False)
   is     $(((-1, Bool::False),).Seq)
   type   Seq
@@ -2061,6 +2289,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0229
   from   inventory:infix:X
   cell   1/2 | False
+  level  3
   code   (1/2) X (False)
   is     $(((0.5, Bool::False),).Seq)
   type   Seq
@@ -2070,6 +2299,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0230
   from   inventory:infix:X
   cell   0e0 | False
+  level  3
   code   (0e0) X (False)
   is     $(((0e0, Bool::False),).Seq)
   type   Seq
@@ -2079,6 +2309,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0231
   from   inventory:infix:X
   cell   NaN | False
+  level  3
   code   (NaN) X (False)
   is     $(((NaN, Bool::False),).Seq)
   type   Seq
@@ -2088,6 +2319,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0232
   from   inventory:infix:X
   cell   "" | False
+  level  3
   code   ("") X (False)
   is     $((("", Bool::False),).Seq)
   type   Seq
@@ -2097,6 +2329,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0233
   from   inventory:infix:X
   cell   "a" | False
+  level  3
   code   ("a") X (False)
   is     $((("a", Bool::False),).Seq)
   type   Seq
@@ -2106,6 +2339,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0234
   from   inventory:infix:X
   cell   True | False
+  level  3
   code   (True) X (False)
   is     $(((Bool::True, Bool::False),).Seq)
   type   Seq
@@ -2115,6 +2349,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0235
   from   inventory:infix:X
   cell   Any | False
+  level  3
   code   (Any) X (False)
   is     $(((Any, Bool::False),).Seq)
   type   Seq
@@ -2124,6 +2359,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0236
   from   inventory:infix:X
   cell   (1,2) | False
+  level  3
   code   ((1,2)) X (False)
   is     $(((1, Bool::False), (2, Bool::False)).Seq)
   type   Seq
@@ -2133,6 +2369,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0237
   from   inventory:infix:X
   cell   {a=>1} | False
+  level  3
   code   ({a=>1}) X (False)
   is     $(((:a(1), Bool::False),).Seq)
   type   Seq
@@ -2142,6 +2379,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0238
   from   inventory:infix:X
   cell   -0e0 | False
+  level  3
   code   (-0e0) X (False)
   is     $(((-0e0, Bool::False),).Seq)
   type   Seq
@@ -2151,6 +2389,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0239
   from   inventory:infix:X
   cell   Inf | False
+  level  3
   code   (Inf) X (False)
   is     $(((Inf, Bool::False),).Seq)
   type   Seq
@@ -2160,6 +2399,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0240
   from   inventory:infix:X
   cell   2**64 | False
+  level  3
   code   (2**64) X (False)
   is     $(((18446744073709551616, Bool::False),).Seq)
   type   Seq
@@ -2169,6 +2409,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0241
   from   inventory:infix:X
   cell   False | False
+  level  3
   code   (False) X (False)
   is     $(((Bool::False, Bool::False),).Seq)
   type   Seq
@@ -2178,6 +2419,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0242
   from   inventory:infix:X
   cell   False | 0
+  level  3
   code   (False) X (0)
   is     $(((Bool::False, 0),).Seq)
   type   Seq
@@ -2187,6 +2429,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0243
   from   inventory:infix:X
   cell   False | 1
+  level  3
   code   (False) X (1)
   is     $(((Bool::False, 1),).Seq)
   type   Seq
@@ -2196,6 +2439,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0244
   from   inventory:infix:X
   cell   False | -1
+  level  3
   code   (False) X (-1)
   is     $(((Bool::False, -1),).Seq)
   type   Seq
@@ -2205,6 +2449,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0245
   from   inventory:infix:X
   cell   False | 1/2
+  level  3
   code   (False) X (1/2)
   is     $(((Bool::False, 0.5),).Seq)
   type   Seq
@@ -2214,6 +2459,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0246
   from   inventory:infix:X
   cell   False | 0e0
+  level  3
   code   (False) X (0e0)
   is     $(((Bool::False, 0e0),).Seq)
   type   Seq
@@ -2223,6 +2469,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0247
   from   inventory:infix:X
   cell   False | NaN
+  level  3
   code   (False) X (NaN)
   is     $(((Bool::False, NaN),).Seq)
   type   Seq
@@ -2232,6 +2479,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0248
   from   inventory:infix:X
   cell   False | ""
+  level  3
   code   (False) X ("")
   is     $(((Bool::False, ""),).Seq)
   type   Seq
@@ -2241,6 +2489,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0249
   from   inventory:infix:X
   cell   False | "a"
+  level  3
   code   (False) X ("a")
   is     $(((Bool::False, "a"),).Seq)
   type   Seq
@@ -2250,6 +2499,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0250
   from   inventory:infix:X
   cell   False | True
+  level  3
   code   (False) X (True)
   is     $(((Bool::False, Bool::True),).Seq)
   type   Seq
@@ -2259,6 +2509,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0251
   from   inventory:infix:X
   cell   False | Any
+  level  3
   code   (False) X (Any)
   is     $(((Bool::False, Any),).Seq)
   type   Seq
@@ -2268,6 +2519,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0252
   from   inventory:infix:X
   cell   False | (1,2)
+  level  3
   code   (False) X ((1,2))
   is     $(((Bool::False, 1), (Bool::False, 2)).Seq)
   type   Seq
@@ -2277,6 +2529,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0253
   from   inventory:infix:X
   cell   False | {a=>1}
+  level  3
   code   (False) X ({a=>1})
   is     $(((Bool::False, :a(1)),).Seq)
   type   Seq
@@ -2286,6 +2539,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0254
   from   inventory:infix:X
   cell   False | -0e0
+  level  3
   code   (False) X (-0e0)
   is     $(((Bool::False, -0e0),).Seq)
   type   Seq
@@ -2295,6 +2549,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0255
   from   inventory:infix:X
   cell   False | Inf
+  level  3
   code   (False) X (Inf)
   is     $(((Bool::False, Inf),).Seq)
   type   Seq
@@ -2304,6 +2559,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0256
   from   inventory:infix:X
   cell   False | 2**64
+  level  3
   code   (False) X (2**64)
   is     $(((Bool::False, 18446744073709551616),).Seq)
   type   Seq
@@ -2313,6 +2569,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0257
   from   inventory:infix:X
   cell   0 | Nil
+  level  3
   code   (0) X (Nil)
   is     $(((0, Nil),).Seq)
   type   Seq
@@ -2322,6 +2579,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0258
   from   inventory:infix:X
   cell   1 | Nil
+  level  3
   code   (1) X (Nil)
   is     $(((1, Nil),).Seq)
   type   Seq
@@ -2331,6 +2589,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0259
   from   inventory:infix:X
   cell   -1 | Nil
+  level  3
   code   (-1) X (Nil)
   is     $(((-1, Nil),).Seq)
   type   Seq
@@ -2340,6 +2599,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0260
   from   inventory:infix:X
   cell   1/2 | Nil
+  level  3
   code   (1/2) X (Nil)
   is     $(((0.5, Nil),).Seq)
   type   Seq
@@ -2349,6 +2609,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0261
   from   inventory:infix:X
   cell   0e0 | Nil
+  level  3
   code   (0e0) X (Nil)
   is     $(((0e0, Nil),).Seq)
   type   Seq
@@ -2358,6 +2619,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0262
   from   inventory:infix:X
   cell   NaN | Nil
+  level  3
   code   (NaN) X (Nil)
   is     $(((NaN, Nil),).Seq)
   type   Seq
@@ -2367,6 +2629,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0263
   from   inventory:infix:X
   cell   "" | Nil
+  level  3
   code   ("") X (Nil)
   is     $((("", Nil),).Seq)
   type   Seq
@@ -2376,6 +2639,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0264
   from   inventory:infix:X
   cell   "a" | Nil
+  level  3
   code   ("a") X (Nil)
   is     $((("a", Nil),).Seq)
   type   Seq
@@ -2385,6 +2649,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0265
   from   inventory:infix:X
   cell   True | Nil
+  level  3
   code   (True) X (Nil)
   is     $(((Bool::True, Nil),).Seq)
   type   Seq
@@ -2394,6 +2659,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0266
   from   inventory:infix:X
   cell   Any | Nil
+  level  3
   code   (Any) X (Nil)
   is     $(((Any, Nil),).Seq)
   type   Seq
@@ -2403,6 +2669,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0267
   from   inventory:infix:X
   cell   (1,2) | Nil
+  level  3
   code   ((1,2)) X (Nil)
   is     $(((1, Nil), (2, Nil)).Seq)
   type   Seq
@@ -2412,6 +2679,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0268
   from   inventory:infix:X
   cell   {a=>1} | Nil
+  level  3
   code   ({a=>1}) X (Nil)
   is     $(((:a(1), Nil),).Seq)
   type   Seq
@@ -2421,6 +2689,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0269
   from   inventory:infix:X
   cell   -0e0 | Nil
+  level  3
   code   (-0e0) X (Nil)
   is     $(((-0e0, Nil),).Seq)
   type   Seq
@@ -2430,6 +2699,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0270
   from   inventory:infix:X
   cell   Inf | Nil
+  level  3
   code   (Inf) X (Nil)
   is     $(((Inf, Nil),).Seq)
   type   Seq
@@ -2439,6 +2709,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0271
   from   inventory:infix:X
   cell   2**64 | Nil
+  level  3
   code   (2**64) X (Nil)
   is     $(((18446744073709551616, Nil),).Seq)
   type   Seq
@@ -2448,6 +2719,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0272
   from   inventory:infix:X
   cell   False | Nil
+  level  3
   code   (False) X (Nil)
   is     $(((Bool::False, Nil),).Seq)
   type   Seq
@@ -2457,6 +2729,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0273
   from   inventory:infix:X
   cell   Nil | Nil
+  level  3
   code   (Nil) X (Nil)
   is     $(((Nil, Nil),).Seq)
   type   Seq
@@ -2466,6 +2739,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0274
   from   inventory:infix:X
   cell   Nil | 0
+  level  3
   code   (Nil) X (0)
   is     $(((Nil, 0),).Seq)
   type   Seq
@@ -2475,6 +2749,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0275
   from   inventory:infix:X
   cell   Nil | 1
+  level  3
   code   (Nil) X (1)
   is     $(((Nil, 1),).Seq)
   type   Seq
@@ -2484,6 +2759,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0276
   from   inventory:infix:X
   cell   Nil | -1
+  level  3
   code   (Nil) X (-1)
   is     $(((Nil, -1),).Seq)
   type   Seq
@@ -2493,6 +2769,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0277
   from   inventory:infix:X
   cell   Nil | 1/2
+  level  3
   code   (Nil) X (1/2)
   is     $(((Nil, 0.5),).Seq)
   type   Seq
@@ -2502,6 +2779,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0278
   from   inventory:infix:X
   cell   Nil | 0e0
+  level  3
   code   (Nil) X (0e0)
   is     $(((Nil, 0e0),).Seq)
   type   Seq
@@ -2511,6 +2789,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0279
   from   inventory:infix:X
   cell   Nil | NaN
+  level  3
   code   (Nil) X (NaN)
   is     $(((Nil, NaN),).Seq)
   type   Seq
@@ -2520,6 +2799,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0280
   from   inventory:infix:X
   cell   Nil | ""
+  level  3
   code   (Nil) X ("")
   is     $(((Nil, ""),).Seq)
   type   Seq
@@ -2529,6 +2809,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0281
   from   inventory:infix:X
   cell   Nil | "a"
+  level  3
   code   (Nil) X ("a")
   is     $(((Nil, "a"),).Seq)
   type   Seq
@@ -2538,6 +2819,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0282
   from   inventory:infix:X
   cell   Nil | True
+  level  3
   code   (Nil) X (True)
   is     $(((Nil, Bool::True),).Seq)
   type   Seq
@@ -2547,6 +2829,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0283
   from   inventory:infix:X
   cell   Nil | Any
+  level  3
   code   (Nil) X (Any)
   is     $(((Nil, Any),).Seq)
   type   Seq
@@ -2556,6 +2839,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0284
   from   inventory:infix:X
   cell   Nil | (1,2)
+  level  3
   code   (Nil) X ((1,2))
   is     $(((Nil, 1), (Nil, 2)).Seq)
   type   Seq
@@ -2565,6 +2849,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0285
   from   inventory:infix:X
   cell   Nil | {a=>1}
+  level  3
   code   (Nil) X ({a=>1})
   is     $(((Nil, :a(1)),).Seq)
   type   Seq
@@ -2574,6 +2859,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0286
   from   inventory:infix:X
   cell   Nil | -0e0
+  level  3
   code   (Nil) X (-0e0)
   is     $(((Nil, -0e0),).Seq)
   type   Seq
@@ -2583,6 +2869,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0287
   from   inventory:infix:X
   cell   Nil | Inf
+  level  3
   code   (Nil) X (Inf)
   is     $(((Nil, Inf),).Seq)
   type   Seq
@@ -2592,6 +2879,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0288
   from   inventory:infix:X
   cell   Nil | 2**64
+  level  3
   code   (Nil) X (2**64)
   is     $(((Nil, 18446744073709551616),).Seq)
   type   Seq
@@ -2601,6 +2889,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0289
   from   inventory:infix:X
   cell   Nil | False
+  level  3
   code   (Nil) X (False)
   is     $(((Nil, Bool::False),).Seq)
   type   Seq
@@ -2610,6 +2899,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0290
   from   inventory:infix:X
   cell   0 | ()
+  level  3
   code   (0) X (())
   is     $(().Seq)
   type   Seq
@@ -2619,6 +2909,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0291
   from   inventory:infix:X
   cell   1 | ()
+  level  3
   code   (1) X (())
   is     $(().Seq)
   type   Seq
@@ -2628,6 +2919,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0292
   from   inventory:infix:X
   cell   -1 | ()
+  level  3
   code   (-1) X (())
   is     $(().Seq)
   type   Seq
@@ -2637,6 +2929,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0293
   from   inventory:infix:X
   cell   1/2 | ()
+  level  3
   code   (1/2) X (())
   is     $(().Seq)
   type   Seq
@@ -2646,6 +2939,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0294
   from   inventory:infix:X
   cell   0e0 | ()
+  level  3
   code   (0e0) X (())
   is     $(().Seq)
   type   Seq
@@ -2655,6 +2949,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0295
   from   inventory:infix:X
   cell   NaN | ()
+  level  3
   code   (NaN) X (())
   is     $(().Seq)
   type   Seq
@@ -2664,6 +2959,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0296
   from   inventory:infix:X
   cell   "" | ()
+  level  3
   code   ("") X (())
   is     $(().Seq)
   type   Seq
@@ -2673,6 +2969,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0297
   from   inventory:infix:X
   cell   "a" | ()
+  level  3
   code   ("a") X (())
   is     $(().Seq)
   type   Seq
@@ -2682,6 +2979,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0298
   from   inventory:infix:X
   cell   True | ()
+  level  3
   code   (True) X (())
   is     $(().Seq)
   type   Seq
@@ -2691,6 +2989,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0299
   from   inventory:infix:X
   cell   Any | ()
+  level  3
   code   (Any) X (())
   is     $(().Seq)
   type   Seq
@@ -2700,6 +2999,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0300
   from   inventory:infix:X
   cell   (1,2) | ()
+  level  3
   code   ((1,2)) X (())
   is     $(().Seq)
   type   Seq
@@ -2709,6 +3009,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0301
   from   inventory:infix:X
   cell   {a=>1} | ()
+  level  3
   code   ({a=>1}) X (())
   is     $(().Seq)
   type   Seq
@@ -2718,6 +3019,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0302
   from   inventory:infix:X
   cell   -0e0 | ()
+  level  3
   code   (-0e0) X (())
   is     $(().Seq)
   type   Seq
@@ -2727,6 +3029,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0303
   from   inventory:infix:X
   cell   Inf | ()
+  level  3
   code   (Inf) X (())
   is     $(().Seq)
   type   Seq
@@ -2736,6 +3039,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0304
   from   inventory:infix:X
   cell   2**64 | ()
+  level  3
   code   (2**64) X (())
   is     $(().Seq)
   type   Seq
@@ -2745,6 +3049,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0305
   from   inventory:infix:X
   cell   False | ()
+  level  3
   code   (False) X (())
   is     $(().Seq)
   type   Seq
@@ -2754,6 +3059,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0306
   from   inventory:infix:X
   cell   Nil | ()
+  level  3
   code   (Nil) X (())
   is     $(().Seq)
   type   Seq
@@ -2763,6 +3069,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0307
   from   inventory:infix:X
   cell   () | ()
+  level  3
   code   (()) X (())
   is     $(().Seq)
   type   Seq
@@ -2772,6 +3079,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0308
   from   inventory:infix:X
   cell   () | 0
+  level  3
   code   (()) X (0)
   is     $(().Seq)
   type   Seq
@@ -2781,6 +3089,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0309
   from   inventory:infix:X
   cell   () | 1
+  level  3
   code   (()) X (1)
   is     $(().Seq)
   type   Seq
@@ -2790,6 +3099,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0310
   from   inventory:infix:X
   cell   () | -1
+  level  3
   code   (()) X (-1)
   is     $(().Seq)
   type   Seq
@@ -2799,6 +3109,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0311
   from   inventory:infix:X
   cell   () | 1/2
+  level  3
   code   (()) X (1/2)
   is     $(().Seq)
   type   Seq
@@ -2808,6 +3119,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0312
   from   inventory:infix:X
   cell   () | 0e0
+  level  3
   code   (()) X (0e0)
   is     $(().Seq)
   type   Seq
@@ -2817,6 +3129,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0313
   from   inventory:infix:X
   cell   () | NaN
+  level  3
   code   (()) X (NaN)
   is     $(().Seq)
   type   Seq
@@ -2826,6 +3139,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0314
   from   inventory:infix:X
   cell   () | ""
+  level  3
   code   (()) X ("")
   is     $(().Seq)
   type   Seq
@@ -2835,6 +3149,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0315
   from   inventory:infix:X
   cell   () | "a"
+  level  3
   code   (()) X ("a")
   is     $(().Seq)
   type   Seq
@@ -2844,6 +3159,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0316
   from   inventory:infix:X
   cell   () | True
+  level  3
   code   (()) X (True)
   is     $(().Seq)
   type   Seq
@@ -2853,6 +3169,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0317
   from   inventory:infix:X
   cell   () | Any
+  level  3
   code   (()) X (Any)
   is     $(().Seq)
   type   Seq
@@ -2862,6 +3179,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0318
   from   inventory:infix:X
   cell   () | (1,2)
+  level  3
   code   (()) X ((1,2))
   is     $(().Seq)
   type   Seq
@@ -2871,6 +3189,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0319
   from   inventory:infix:X
   cell   () | {a=>1}
+  level  3
   code   (()) X ({a=>1})
   is     $(().Seq)
   type   Seq
@@ -2880,6 +3199,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0320
   from   inventory:infix:X
   cell   () | -0e0
+  level  3
   code   (()) X (-0e0)
   is     $(().Seq)
   type   Seq
@@ -2889,6 +3209,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0321
   from   inventory:infix:X
   cell   () | Inf
+  level  3
   code   (()) X (Inf)
   is     $(().Seq)
   type   Seq
@@ -2898,6 +3219,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0322
   from   inventory:infix:X
   cell   () | 2**64
+  level  3
   code   (()) X (2**64)
   is     $(().Seq)
   type   Seq
@@ -2907,6 +3229,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0323
   from   inventory:infix:X
   cell   () | False
+  level  3
   code   (()) X (False)
   is     $(().Seq)
   type   Seq
@@ -2916,6 +3239,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0324
   from   inventory:infix:X
   cell   () | Nil
+  level  3
   code   (()) X (Nil)
   is     $(().Seq)
   type   Seq
@@ -2925,6 +3249,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0325
   from   inventory:infix:X
   cell   0 | "0"
+  level  3
   code   (0) X ("0")
   is     $(((0, "0"),).Seq)
   type   Seq
@@ -2934,6 +3259,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0326
   from   inventory:infix:X
   cell   1 | "0"
+  level  3
   code   (1) X ("0")
   is     $(((1, "0"),).Seq)
   type   Seq
@@ -2943,6 +3269,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0327
   from   inventory:infix:X
   cell   -1 | "0"
+  level  3
   code   (-1) X ("0")
   is     $(((-1, "0"),).Seq)
   type   Seq
@@ -2952,6 +3279,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0328
   from   inventory:infix:X
   cell   1/2 | "0"
+  level  3
   code   (1/2) X ("0")
   is     $(((0.5, "0"),).Seq)
   type   Seq
@@ -2961,6 +3289,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0329
   from   inventory:infix:X
   cell   0e0 | "0"
+  level  3
   code   (0e0) X ("0")
   is     $(((0e0, "0"),).Seq)
   type   Seq
@@ -2970,6 +3299,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0330
   from   inventory:infix:X
   cell   NaN | "0"
+  level  3
   code   (NaN) X ("0")
   is     $(((NaN, "0"),).Seq)
   type   Seq
@@ -2979,6 +3309,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0331
   from   inventory:infix:X
   cell   "" | "0"
+  level  3
   code   ("") X ("0")
   is     $((("", "0"),).Seq)
   type   Seq
@@ -2988,6 +3319,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0332
   from   inventory:infix:X
   cell   "a" | "0"
+  level  3
   code   ("a") X ("0")
   is     $((("a", "0"),).Seq)
   type   Seq
@@ -2997,6 +3329,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0333
   from   inventory:infix:X
   cell   True | "0"
+  level  3
   code   (True) X ("0")
   is     $(((Bool::True, "0"),).Seq)
   type   Seq
@@ -3006,6 +3339,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0334
   from   inventory:infix:X
   cell   Any | "0"
+  level  3
   code   (Any) X ("0")
   is     $(((Any, "0"),).Seq)
   type   Seq
@@ -3015,6 +3349,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0335
   from   inventory:infix:X
   cell   (1,2) | "0"
+  level  3
   code   ((1,2)) X ("0")
   is     $(((1, "0"), (2, "0")).Seq)
   type   Seq
@@ -3024,6 +3359,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0336
   from   inventory:infix:X
   cell   {a=>1} | "0"
+  level  3
   code   ({a=>1}) X ("0")
   is     $(((:a(1), "0"),).Seq)
   type   Seq
@@ -3033,6 +3369,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0337
   from   inventory:infix:X
   cell   -0e0 | "0"
+  level  3
   code   (-0e0) X ("0")
   is     $(((-0e0, "0"),).Seq)
   type   Seq
@@ -3042,6 +3379,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0338
   from   inventory:infix:X
   cell   Inf | "0"
+  level  3
   code   (Inf) X ("0")
   is     $(((Inf, "0"),).Seq)
   type   Seq
@@ -3051,6 +3389,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0339
   from   inventory:infix:X
   cell   2**64 | "0"
+  level  3
   code   (2**64) X ("0")
   is     $(((18446744073709551616, "0"),).Seq)
   type   Seq
@@ -3060,6 +3399,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0340
   from   inventory:infix:X
   cell   False | "0"
+  level  3
   code   (False) X ("0")
   is     $(((Bool::False, "0"),).Seq)
   type   Seq
@@ -3069,6 +3409,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0341
   from   inventory:infix:X
   cell   Nil | "0"
+  level  3
   code   (Nil) X ("0")
   is     $(((Nil, "0"),).Seq)
   type   Seq
@@ -3078,6 +3419,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0342
   from   inventory:infix:X
   cell   () | "0"
+  level  3
   code   (()) X ("0")
   is     $(().Seq)
   type   Seq
@@ -3087,6 +3429,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0343
   from   inventory:infix:X
   cell   "0" | "0"
+  level  3
   code   ("0") X ("0")
   is     $((("0", "0"),).Seq)
   type   Seq
@@ -3096,6 +3439,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0344
   from   inventory:infix:X
   cell   "0" | 0
+  level  3
   code   ("0") X (0)
   is     $((("0", 0),).Seq)
   type   Seq
@@ -3105,6 +3449,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0345
   from   inventory:infix:X
   cell   "0" | 1
+  level  3
   code   ("0") X (1)
   is     $((("0", 1),).Seq)
   type   Seq
@@ -3114,6 +3459,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0346
   from   inventory:infix:X
   cell   "0" | -1
+  level  3
   code   ("0") X (-1)
   is     $((("0", -1),).Seq)
   type   Seq
@@ -3123,6 +3469,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0347
   from   inventory:infix:X
   cell   "0" | 1/2
+  level  3
   code   ("0") X (1/2)
   is     $((("0", 0.5),).Seq)
   type   Seq
@@ -3132,6 +3479,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0348
   from   inventory:infix:X
   cell   "0" | 0e0
+  level  3
   code   ("0") X (0e0)
   is     $((("0", 0e0),).Seq)
   type   Seq
@@ -3141,6 +3489,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0349
   from   inventory:infix:X
   cell   "0" | NaN
+  level  3
   code   ("0") X (NaN)
   is     $((("0", NaN),).Seq)
   type   Seq
@@ -3150,6 +3499,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0350
   from   inventory:infix:X
   cell   "0" | ""
+  level  3
   code   ("0") X ("")
   is     $((("0", ""),).Seq)
   type   Seq
@@ -3159,6 +3509,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0351
   from   inventory:infix:X
   cell   "0" | "a"
+  level  3
   code   ("0") X ("a")
   is     $((("0", "a"),).Seq)
   type   Seq
@@ -3168,6 +3519,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0352
   from   inventory:infix:X
   cell   "0" | True
+  level  3
   code   ("0") X (True)
   is     $((("0", Bool::True),).Seq)
   type   Seq
@@ -3177,6 +3529,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0353
   from   inventory:infix:X
   cell   "0" | Any
+  level  3
   code   ("0") X (Any)
   is     $((("0", Any),).Seq)
   type   Seq
@@ -3186,6 +3539,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0354
   from   inventory:infix:X
   cell   "0" | (1,2)
+  level  3
   code   ("0") X ((1,2))
   is     $((("0", 1), ("0", 2)).Seq)
   type   Seq
@@ -3195,6 +3549,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0355
   from   inventory:infix:X
   cell   "0" | {a=>1}
+  level  3
   code   ("0") X ({a=>1})
   is     $((("0", :a(1)),).Seq)
   type   Seq
@@ -3204,6 +3559,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0356
   from   inventory:infix:X
   cell   "0" | -0e0
+  level  3
   code   ("0") X (-0e0)
   is     $((("0", -0e0),).Seq)
   type   Seq
@@ -3213,6 +3569,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0357
   from   inventory:infix:X
   cell   "0" | Inf
+  level  3
   code   ("0") X (Inf)
   is     $((("0", Inf),).Seq)
   type   Seq
@@ -3222,6 +3579,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0358
   from   inventory:infix:X
   cell   "0" | 2**64
+  level  3
   code   ("0") X (2**64)
   is     $((("0", 18446744073709551616),).Seq)
   type   Seq
@@ -3231,6 +3589,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0359
   from   inventory:infix:X
   cell   "0" | False
+  level  3
   code   ("0") X (False)
   is     $((("0", Bool::False),).Seq)
   type   Seq
@@ -3240,6 +3599,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0360
   from   inventory:infix:X
   cell   "0" | Nil
+  level  3
   code   ("0") X (Nil)
   is     $((("0", Nil),).Seq)
   type   Seq
@@ -3249,6 +3609,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0361
   from   inventory:infix:X
   cell   "0" | ()
+  level  3
   code   ("0") X (())
   is     $(().Seq)
   type   Seq
@@ -3258,6 +3619,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0362
   from   inventory:infix:X
   cell   0 | (1..3)
+  level  3
   code   (0) X ((1..3))
   is     $(((0, 1), (0, 2), (0, 3)).Seq)
   type   Seq
@@ -3267,6 +3629,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0363
   from   inventory:infix:X
   cell   1 | (1..3)
+  level  3
   code   (1) X ((1..3))
   is     $(((1, 1), (1, 2), (1, 3)).Seq)
   type   Seq
@@ -3276,6 +3639,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0364
   from   inventory:infix:X
   cell   -1 | (1..3)
+  level  3
   code   (-1) X ((1..3))
   is     $(((-1, 1), (-1, 2), (-1, 3)).Seq)
   type   Seq
@@ -3285,6 +3649,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0365
   from   inventory:infix:X
   cell   1/2 | (1..3)
+  level  3
   code   (1/2) X ((1..3))
   is     $(((0.5, 1), (0.5, 2), (0.5, 3)).Seq)
   type   Seq
@@ -3294,6 +3659,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0366
   from   inventory:infix:X
   cell   0e0 | (1..3)
+  level  3
   code   (0e0) X ((1..3))
   is     $(((0e0, 1), (0e0, 2), (0e0, 3)).Seq)
   type   Seq
@@ -3303,6 +3669,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0367
   from   inventory:infix:X
   cell   NaN | (1..3)
+  level  3
   code   (NaN) X ((1..3))
   is     $(((NaN, 1), (NaN, 2), (NaN, 3)).Seq)
   type   Seq
@@ -3312,6 +3679,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0368
   from   inventory:infix:X
   cell   "" | (1..3)
+  level  3
   code   ("") X ((1..3))
   is     $((("", 1), ("", 2), ("", 3)).Seq)
   type   Seq
@@ -3321,6 +3689,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0369
   from   inventory:infix:X
   cell   "a" | (1..3)
+  level  3
   code   ("a") X ((1..3))
   is     $((("a", 1), ("a", 2), ("a", 3)).Seq)
   type   Seq
@@ -3330,6 +3699,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0370
   from   inventory:infix:X
   cell   True | (1..3)
+  level  3
   code   (True) X ((1..3))
   is     $(((Bool::True, 1), (Bool::True, 2), (Bool::True, 3)).Seq)
   type   Seq
@@ -3339,6 +3709,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0371
   from   inventory:infix:X
   cell   Any | (1..3)
+  level  3
   code   (Any) X ((1..3))
   is     $(((Any, 1), (Any, 2), (Any, 3)).Seq)
   type   Seq
@@ -3348,6 +3719,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0372
   from   inventory:infix:X
   cell   (1,2) | (1..3)
+  level  3
   code   ((1,2)) X ((1..3))
   is     $(((1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)).Seq)
   type   Seq
@@ -3357,6 +3729,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0373
   from   inventory:infix:X
   cell   {a=>1} | (1..3)
+  level  3
   code   ({a=>1}) X ((1..3))
   is     $(((:a(1), 1), (:a(1), 2), (:a(1), 3)).Seq)
   type   Seq
@@ -3366,6 +3739,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0374
   from   inventory:infix:X
   cell   -0e0 | (1..3)
+  level  3
   code   (-0e0) X ((1..3))
   is     $(((-0e0, 1), (-0e0, 2), (-0e0, 3)).Seq)
   type   Seq
@@ -3375,6 +3749,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0375
   from   inventory:infix:X
   cell   Inf | (1..3)
+  level  3
   code   (Inf) X ((1..3))
   is     $(((Inf, 1), (Inf, 2), (Inf, 3)).Seq)
   type   Seq
@@ -3384,6 +3759,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0376
   from   inventory:infix:X
   cell   2**64 | (1..3)
+  level  3
   code   (2**64) X ((1..3))
   is     $(((18446744073709551616, 1), (18446744073709551616, 2), (18446744073709551616, 3)).Seq)
   type   Seq
@@ -3393,6 +3769,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0377
   from   inventory:infix:X
   cell   False | (1..3)
+  level  3
   code   (False) X ((1..3))
   is     $(((Bool::False, 1), (Bool::False, 2), (Bool::False, 3)).Seq)
   type   Seq
@@ -3402,6 +3779,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0378
   from   inventory:infix:X
   cell   Nil | (1..3)
+  level  3
   code   (Nil) X ((1..3))
   is     $(((Nil, 1), (Nil, 2), (Nil, 3)).Seq)
   type   Seq
@@ -3411,6 +3789,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0379
   from   inventory:infix:X
   cell   () | (1..3)
+  level  3
   code   (()) X ((1..3))
   is     $(().Seq)
   type   Seq
@@ -3420,6 +3799,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0380
   from   inventory:infix:X
   cell   "0" | (1..3)
+  level  3
   code   ("0") X ((1..3))
   is     $((("0", 1), ("0", 2), ("0", 3)).Seq)
   type   Seq
@@ -3429,6 +3809,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0381
   from   inventory:infix:X
   cell   (1..3) | (1..3)
+  level  3
   code   ((1..3)) X ((1..3))
   is     $(((1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3)).Seq)
   type   Seq
@@ -3438,6 +3819,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0382
   from   inventory:infix:X
   cell   (1..3) | 0
+  level  3
   code   ((1..3)) X (0)
   is     $(((1, 0), (2, 0), (3, 0)).Seq)
   type   Seq
@@ -3447,6 +3829,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0383
   from   inventory:infix:X
   cell   (1..3) | 1
+  level  3
   code   ((1..3)) X (1)
   is     $(((1, 1), (2, 1), (3, 1)).Seq)
   type   Seq
@@ -3456,6 +3839,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0384
   from   inventory:infix:X
   cell   (1..3) | -1
+  level  3
   code   ((1..3)) X (-1)
   is     $(((1, -1), (2, -1), (3, -1)).Seq)
   type   Seq
@@ -3465,6 +3849,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0385
   from   inventory:infix:X
   cell   (1..3) | 1/2
+  level  3
   code   ((1..3)) X (1/2)
   is     $(((1, 0.5), (2, 0.5), (3, 0.5)).Seq)
   type   Seq
@@ -3474,6 +3859,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0386
   from   inventory:infix:X
   cell   (1..3) | 0e0
+  level  3
   code   ((1..3)) X (0e0)
   is     $(((1, 0e0), (2, 0e0), (3, 0e0)).Seq)
   type   Seq
@@ -3483,6 +3869,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0387
   from   inventory:infix:X
   cell   (1..3) | NaN
+  level  3
   code   ((1..3)) X (NaN)
   is     $(((1, NaN), (2, NaN), (3, NaN)).Seq)
   type   Seq
@@ -3492,6 +3879,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0388
   from   inventory:infix:X
   cell   (1..3) | ""
+  level  3
   code   ((1..3)) X ("")
   is     $(((1, ""), (2, ""), (3, "")).Seq)
   type   Seq
@@ -3501,6 +3889,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0389
   from   inventory:infix:X
   cell   (1..3) | "a"
+  level  3
   code   ((1..3)) X ("a")
   is     $(((1, "a"), (2, "a"), (3, "a")).Seq)
   type   Seq
@@ -3510,6 +3899,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0390
   from   inventory:infix:X
   cell   (1..3) | True
+  level  3
   code   ((1..3)) X (True)
   is     $(((1, Bool::True), (2, Bool::True), (3, Bool::True)).Seq)
   type   Seq
@@ -3519,6 +3909,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0391
   from   inventory:infix:X
   cell   (1..3) | Any
+  level  3
   code   ((1..3)) X (Any)
   is     $(((1, Any), (2, Any), (3, Any)).Seq)
   type   Seq
@@ -3528,6 +3919,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0392
   from   inventory:infix:X
   cell   (1..3) | (1,2)
+  level  3
   code   ((1..3)) X ((1,2))
   is     $(((1, 1), (1, 2), (2, 1), (2, 2), (3, 1), (3, 2)).Seq)
   type   Seq
@@ -3537,6 +3929,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0393
   from   inventory:infix:X
   cell   (1..3) | {a=>1}
+  level  3
   code   ((1..3)) X ({a=>1})
   is     $(((1, :a(1)), (2, :a(1)), (3, :a(1))).Seq)
   type   Seq
@@ -3546,6 +3939,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0394
   from   inventory:infix:X
   cell   (1..3) | -0e0
+  level  3
   code   ((1..3)) X (-0e0)
   is     $(((1, -0e0), (2, -0e0), (3, -0e0)).Seq)
   type   Seq
@@ -3555,6 +3949,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0395
   from   inventory:infix:X
   cell   (1..3) | Inf
+  level  3
   code   ((1..3)) X (Inf)
   is     $(((1, Inf), (2, Inf), (3, Inf)).Seq)
   type   Seq
@@ -3564,6 +3959,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0396
   from   inventory:infix:X
   cell   (1..3) | 2**64
+  level  3
   code   ((1..3)) X (2**64)
   is     $(((1, 18446744073709551616), (2, 18446744073709551616), (3, 18446744073709551616)).Seq)
   type   Seq
@@ -3573,6 +3969,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0397
   from   inventory:infix:X
   cell   (1..3) | False
+  level  3
   code   ((1..3)) X (False)
   is     $(((1, Bool::False), (2, Bool::False), (3, Bool::False)).Seq)
   type   Seq
@@ -3582,6 +3979,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0398
   from   inventory:infix:X
   cell   (1..3) | Nil
+  level  3
   code   ((1..3)) X (Nil)
   is     $(((1, Nil), (2, Nil), (3, Nil)).Seq)
   type   Seq
@@ -3591,6 +3989,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0399
   from   inventory:infix:X
   cell   (1..3) | ()
+  level  3
   code   ((1..3)) X (())
   is     $(().Seq)
   type   Seq
@@ -3600,8 +3999,1769 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0400
   from   inventory:infix:X
   cell   (1..3) | "0"
+  level  3
   code   ((1..3)) X ("0")
   is     $(((1, "0"), (2, "0"), (3, "0")).Seq)
   type   Seq
   oracle rakudo-2026.07 → $(((1, "0"), (2, "0"), (3, "0")).Seq)
   oracle rakupp-v3.14.0-92-g78048b0-modified → $(((1, "0"), (2, "0"), (3, "0")).Seq)
+
+- id     0401
+  from   inventory:infix:X
+  cell   0 | Int
+  level  3
+  code   (0) X (Int)
+  is     $(((0, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0, Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((0, Int),).Seq)
+
+- id     0402
+  from   inventory:infix:X
+  cell   1 | Int
+  level  3
+  code   (1) X (Int)
+  is     $(((1, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, Int),).Seq)
+
+- id     0403
+  from   inventory:infix:X
+  cell   -1 | Int
+  level  3
+  code   (-1) X (Int)
+  is     $(((-1, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-1, Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((-1, Int),).Seq)
+
+- id     0404
+  from   inventory:infix:X
+  cell   1/2 | Int
+  level  3
+  code   (1/2) X (Int)
+  is     $(((0.5, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0.5, Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((0.5, Int),).Seq)
+
+- id     0405
+  from   inventory:infix:X
+  cell   0e0 | Int
+  level  3
+  code   (0e0) X (Int)
+  is     $(((0e0, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0e0, Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((0e0, Int),).Seq)
+
+- id     0406
+  from   inventory:infix:X
+  cell   NaN | Int
+  level  3
+  code   (NaN) X (Int)
+  is     $(((NaN, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((NaN, Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((NaN, Int),).Seq)
+
+- id     0407
+  from   inventory:infix:X
+  cell   "" | Int
+  level  3
+  code   ("") X (Int)
+  is     $((("", Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("", Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("", Int),).Seq)
+
+- id     0408
+  from   inventory:infix:X
+  cell   "a" | Int
+  level  3
+  code   ("a") X (Int)
+  is     $((("a", Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a", Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a", Int),).Seq)
+
+- id     0409
+  from   inventory:infix:X
+  cell   True | Int
+  level  3
+  code   (True) X (Int)
+  is     $(((Bool::True, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::True, Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Bool::True, Int),).Seq)
+
+- id     0410
+  from   inventory:infix:X
+  cell   Any | Int
+  level  3
+  code   (Any) X (Int)
+  is     $(((Any, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Any, Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Any, Int),).Seq)
+
+- id     0411
+  from   inventory:infix:X
+  cell   (1,2) | Int
+  level  3
+  code   ((1,2)) X (Int)
+  is     $(((1, Int), (2, Int)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Int), (2, Int)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, Int), (2, Int)).Seq)
+
+- id     0412
+  from   inventory:infix:X
+  cell   {a=>1} | Int
+  level  3
+  code   ({a=>1}) X (Int)
+  is     $(((:a(1), Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((({:a(1)}, Int),).Seq)
+
+- id     0413
+  from   inventory:infix:X
+  cell   -0e0 | Int
+  level  3
+  code   (-0e0) X (Int)
+  is     $(((-0e0, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-0e0, Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((-0e0, Int),).Seq)
+
+- id     0414
+  from   inventory:infix:X
+  cell   Inf | Int
+  level  3
+  code   (Inf) X (Int)
+  is     $(((Inf, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Inf, Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Inf, Int),).Seq)
+
+- id     0415
+  from   inventory:infix:X
+  cell   2**64 | Int
+  level  3
+  code   (2**64) X (Int)
+  is     $(((18446744073709551616, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((18446744073709551616, Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((18446744073709551616, Int),).Seq)
+
+- id     0416
+  from   inventory:infix:X
+  cell   False | Int
+  level  3
+  code   (False) X (Int)
+  is     $(((Bool::False, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::False, Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Bool::False, Int),).Seq)
+
+- id     0417
+  from   inventory:infix:X
+  cell   Nil | Int
+  level  3
+  code   (Nil) X (Int)
+  is     $(((Nil, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Nil, Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Nil, Int),).Seq)
+
+- id     0418
+  from   inventory:infix:X
+  cell   () | Int
+  level  3
+  code   (()) X (Int)
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(().Seq)
+
+- id     0419
+  from   inventory:infix:X
+  cell   "0" | Int
+  level  3
+  code   ("0") X (Int)
+  is     $((("0", Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("0", Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("0", Int),).Seq)
+
+- id     0420
+  from   inventory:infix:X
+  cell   (1..3) | Int
+  level  3
+  code   ((1..3)) X (Int)
+  is     $(((1, Int), (2, Int), (3, Int)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Int), (2, Int), (3, Int)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, Int), (2, Int), (3, Int)).Seq)
+
+- id     0421
+  from   inventory:infix:X
+  cell   Int | Int
+  level  3
+  code   (Int) X (Int)
+  is     $(((Int, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, Int),).Seq)
+
+- id     0422
+  from   inventory:infix:X
+  cell   Int | 0
+  level  3
+  code   (Int) X (0)
+  is     $(((Int, 0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, 0),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, 0),).Seq)
+
+- id     0423
+  from   inventory:infix:X
+  cell   Int | 1
+  level  3
+  code   (Int) X (1)
+  is     $(((Int, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, 1),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, 1),).Seq)
+
+- id     0424
+  from   inventory:infix:X
+  cell   Int | -1
+  level  3
+  code   (Int) X (-1)
+  is     $(((Int, -1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, -1),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, -1),).Seq)
+
+- id     0425
+  from   inventory:infix:X
+  cell   Int | 1/2
+  level  3
+  code   (Int) X (1/2)
+  is     $(((Int, 0.5),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, 0.5),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, 0.5),).Seq)
+
+- id     0426
+  from   inventory:infix:X
+  cell   Int | 0e0
+  level  3
+  code   (Int) X (0e0)
+  is     $(((Int, 0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, 0e0),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, 0e0),).Seq)
+
+- id     0427
+  from   inventory:infix:X
+  cell   Int | NaN
+  level  3
+  code   (Int) X (NaN)
+  is     $(((Int, NaN),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, NaN),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, NaN),).Seq)
+
+- id     0428
+  from   inventory:infix:X
+  cell   Int | ""
+  level  3
+  code   (Int) X ("")
+  is     $(((Int, ""),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, ""),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, ""),).Seq)
+
+- id     0429
+  from   inventory:infix:X
+  cell   Int | "a"
+  level  3
+  code   (Int) X ("a")
+  is     $(((Int, "a"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, "a"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, "a"),).Seq)
+
+- id     0430
+  from   inventory:infix:X
+  cell   Int | True
+  level  3
+  code   (Int) X (True)
+  is     $(((Int, Bool::True),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, Bool::True),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, Bool::True),).Seq)
+
+- id     0431
+  from   inventory:infix:X
+  cell   Int | Any
+  level  3
+  code   (Int) X (Any)
+  is     $(((Int, Any),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, Any),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, Any),).Seq)
+
+- id     0432
+  from   inventory:infix:X
+  cell   Int | (1,2)
+  level  3
+  code   (Int) X ((1,2))
+  is     $(((Int, 1), (Int, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, 1), (Int, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, 1), (Int, 2)).Seq)
+
+- id     0433
+  from   inventory:infix:X
+  cell   Int | {a=>1}
+  level  3
+  code   (Int) X ({a=>1})
+  is     $(((Int, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, {:a(1)}),).Seq)
+
+- id     0434
+  from   inventory:infix:X
+  cell   Int | -0e0
+  level  3
+  code   (Int) X (-0e0)
+  is     $(((Int, -0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, -0e0),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, -0e0),).Seq)
+
+- id     0435
+  from   inventory:infix:X
+  cell   Int | Inf
+  level  3
+  code   (Int) X (Inf)
+  is     $(((Int, Inf),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, Inf),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, Inf),).Seq)
+
+- id     0436
+  from   inventory:infix:X
+  cell   Int | 2**64
+  level  3
+  code   (Int) X (2**64)
+  is     $(((Int, 18446744073709551616),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, 18446744073709551616),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, 18446744073709551616),).Seq)
+
+- id     0437
+  from   inventory:infix:X
+  cell   Int | False
+  level  3
+  code   (Int) X (False)
+  is     $(((Int, Bool::False),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, Bool::False),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, Bool::False),).Seq)
+
+- id     0438
+  from   inventory:infix:X
+  cell   Int | Nil
+  level  3
+  code   (Int) X (Nil)
+  is     $(((Int, Nil),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, Nil),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, Nil),).Seq)
+
+- id     0439
+  from   inventory:infix:X
+  cell   Int | ()
+  level  3
+  code   (Int) X (())
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(().Seq)
+
+- id     0440
+  from   inventory:infix:X
+  cell   Int | "0"
+  level  3
+  code   (Int) X ("0")
+  is     $(((Int, "0"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, "0"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, "0"),).Seq)
+
+- id     0441
+  from   inventory:infix:X
+  cell   Int | (1..3)
+  level  3
+  code   (Int) X ((1..3))
+  is     $(((Int, 1), (Int, 2), (Int, 3)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, 1), (Int, 2), (Int, 3)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, 1), (Int, 2), (Int, 3)).Seq)
+
+- id     0442
+  from   inventory:infix:X
+  cell   0 | "a b"
+  level  3
+  code   (0) X ("a b")
+  is     $(((0, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0, "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((0, "a b"),).Seq)
+
+- id     0443
+  from   inventory:infix:X
+  cell   1 | "a b"
+  level  3
+  code   (1) X ("a b")
+  is     $(((1, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, "a b"),).Seq)
+
+- id     0444
+  from   inventory:infix:X
+  cell   -1 | "a b"
+  level  3
+  code   (-1) X ("a b")
+  is     $(((-1, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-1, "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((-1, "a b"),).Seq)
+
+- id     0445
+  from   inventory:infix:X
+  cell   1/2 | "a b"
+  level  3
+  code   (1/2) X ("a b")
+  is     $(((0.5, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0.5, "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((0.5, "a b"),).Seq)
+
+- id     0446
+  from   inventory:infix:X
+  cell   0e0 | "a b"
+  level  3
+  code   (0e0) X ("a b")
+  is     $(((0e0, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0e0, "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((0e0, "a b"),).Seq)
+
+- id     0447
+  from   inventory:infix:X
+  cell   NaN | "a b"
+  level  3
+  code   (NaN) X ("a b")
+  is     $(((NaN, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((NaN, "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((NaN, "a b"),).Seq)
+
+- id     0448
+  from   inventory:infix:X
+  cell   "" | "a b"
+  level  3
+  code   ("") X ("a b")
+  is     $((("", "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("", "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("", "a b"),).Seq)
+
+- id     0449
+  from   inventory:infix:X
+  cell   "a" | "a b"
+  level  3
+  code   ("a") X ("a b")
+  is     $((("a", "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a", "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a", "a b"),).Seq)
+
+- id     0450
+  from   inventory:infix:X
+  cell   True | "a b"
+  level  3
+  code   (True) X ("a b")
+  is     $(((Bool::True, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::True, "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Bool::True, "a b"),).Seq)
+
+- id     0451
+  from   inventory:infix:X
+  cell   Any | "a b"
+  level  3
+  code   (Any) X ("a b")
+  is     $(((Any, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Any, "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Any, "a b"),).Seq)
+
+- id     0452
+  from   inventory:infix:X
+  cell   (1,2) | "a b"
+  level  3
+  code   ((1,2)) X ("a b")
+  is     $(((1, "a b"), (2, "a b")).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, "a b"), (2, "a b")).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, "a b"), (2, "a b")).Seq)
+
+- id     0453
+  from   inventory:infix:X
+  cell   {a=>1} | "a b"
+  level  3
+  code   ({a=>1}) X ("a b")
+  is     $(((:a(1), "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((({:a(1)}, "a b"),).Seq)
+
+- id     0454
+  from   inventory:infix:X
+  cell   -0e0 | "a b"
+  level  3
+  code   (-0e0) X ("a b")
+  is     $(((-0e0, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-0e0, "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((-0e0, "a b"),).Seq)
+
+- id     0455
+  from   inventory:infix:X
+  cell   Inf | "a b"
+  level  3
+  code   (Inf) X ("a b")
+  is     $(((Inf, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Inf, "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Inf, "a b"),).Seq)
+
+- id     0456
+  from   inventory:infix:X
+  cell   2**64 | "a b"
+  level  3
+  code   (2**64) X ("a b")
+  is     $(((18446744073709551616, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((18446744073709551616, "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((18446744073709551616, "a b"),).Seq)
+
+- id     0457
+  from   inventory:infix:X
+  cell   False | "a b"
+  level  3
+  code   (False) X ("a b")
+  is     $(((Bool::False, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::False, "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Bool::False, "a b"),).Seq)
+
+- id     0458
+  from   inventory:infix:X
+  cell   Nil | "a b"
+  level  3
+  code   (Nil) X ("a b")
+  is     $(((Nil, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Nil, "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Nil, "a b"),).Seq)
+
+- id     0459
+  from   inventory:infix:X
+  cell   () | "a b"
+  level  3
+  code   (()) X ("a b")
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(().Seq)
+
+- id     0460
+  from   inventory:infix:X
+  cell   "0" | "a b"
+  level  3
+  code   ("0") X ("a b")
+  is     $((("0", "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("0", "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("0", "a b"),).Seq)
+
+- id     0461
+  from   inventory:infix:X
+  cell   (1..3) | "a b"
+  level  3
+  code   ((1..3)) X ("a b")
+  is     $(((1, "a b"), (2, "a b"), (3, "a b")).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, "a b"), (2, "a b"), (3, "a b")).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, "a b"), (2, "a b"), (3, "a b")).Seq)
+
+- id     0462
+  from   inventory:infix:X
+  cell   Int | "a b"
+  level  3
+  code   (Int) X ("a b")
+  is     $(((Int, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, "a b"),).Seq)
+
+- id     0463
+  from   inventory:infix:X
+  cell   "a b" | "a b"
+  level  3
+  code   ("a b") X ("a b")
+  is     $((("a b", "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", "a b"),).Seq)
+
+- id     0464
+  from   inventory:infix:X
+  cell   "a b" | 0
+  level  3
+  code   ("a b") X (0)
+  is     $((("a b", 0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", 0),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", 0),).Seq)
+
+- id     0465
+  from   inventory:infix:X
+  cell   "a b" | 1
+  level  3
+  code   ("a b") X (1)
+  is     $((("a b", 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", 1),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", 1),).Seq)
+
+- id     0466
+  from   inventory:infix:X
+  cell   "a b" | -1
+  level  3
+  code   ("a b") X (-1)
+  is     $((("a b", -1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", -1),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", -1),).Seq)
+
+- id     0467
+  from   inventory:infix:X
+  cell   "a b" | 1/2
+  level  3
+  code   ("a b") X (1/2)
+  is     $((("a b", 0.5),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", 0.5),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", 0.5),).Seq)
+
+- id     0468
+  from   inventory:infix:X
+  cell   "a b" | 0e0
+  level  3
+  code   ("a b") X (0e0)
+  is     $((("a b", 0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", 0e0),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", 0e0),).Seq)
+
+- id     0469
+  from   inventory:infix:X
+  cell   "a b" | NaN
+  level  3
+  code   ("a b") X (NaN)
+  is     $((("a b", NaN),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", NaN),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", NaN),).Seq)
+
+- id     0470
+  from   inventory:infix:X
+  cell   "a b" | ""
+  level  3
+  code   ("a b") X ("")
+  is     $((("a b", ""),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", ""),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", ""),).Seq)
+
+- id     0471
+  from   inventory:infix:X
+  cell   "a b" | "a"
+  level  3
+  code   ("a b") X ("a")
+  is     $((("a b", "a"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", "a"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", "a"),).Seq)
+
+- id     0472
+  from   inventory:infix:X
+  cell   "a b" | True
+  level  3
+  code   ("a b") X (True)
+  is     $((("a b", Bool::True),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", Bool::True),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", Bool::True),).Seq)
+
+- id     0473
+  from   inventory:infix:X
+  cell   "a b" | Any
+  level  3
+  code   ("a b") X (Any)
+  is     $((("a b", Any),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", Any),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", Any),).Seq)
+
+- id     0474
+  from   inventory:infix:X
+  cell   "a b" | (1,2)
+  level  3
+  code   ("a b") X ((1,2))
+  is     $((("a b", 1), ("a b", 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", 1), ("a b", 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", 1), ("a b", 2)).Seq)
+
+- id     0475
+  from   inventory:infix:X
+  cell   "a b" | {a=>1}
+  level  3
+  code   ("a b") X ({a=>1})
+  is     $((("a b", :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", {:a(1)}),).Seq)
+
+- id     0476
+  from   inventory:infix:X
+  cell   "a b" | -0e0
+  level  3
+  code   ("a b") X (-0e0)
+  is     $((("a b", -0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", -0e0),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", -0e0),).Seq)
+
+- id     0477
+  from   inventory:infix:X
+  cell   "a b" | Inf
+  level  3
+  code   ("a b") X (Inf)
+  is     $((("a b", Inf),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", Inf),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", Inf),).Seq)
+
+- id     0478
+  from   inventory:infix:X
+  cell   "a b" | 2**64
+  level  3
+  code   ("a b") X (2**64)
+  is     $((("a b", 18446744073709551616),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", 18446744073709551616),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", 18446744073709551616),).Seq)
+
+- id     0479
+  from   inventory:infix:X
+  cell   "a b" | False
+  level  3
+  code   ("a b") X (False)
+  is     $((("a b", Bool::False),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", Bool::False),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", Bool::False),).Seq)
+
+- id     0480
+  from   inventory:infix:X
+  cell   "a b" | Nil
+  level  3
+  code   ("a b") X (Nil)
+  is     $((("a b", Nil),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", Nil),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", Nil),).Seq)
+
+- id     0481
+  from   inventory:infix:X
+  cell   "a b" | ()
+  level  3
+  code   ("a b") X (())
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(().Seq)
+
+- id     0482
+  from   inventory:infix:X
+  cell   "a b" | "0"
+  level  3
+  code   ("a b") X ("0")
+  is     $((("a b", "0"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", "0"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", "0"),).Seq)
+
+- id     0483
+  from   inventory:infix:X
+  cell   "a b" | (1..3)
+  level  3
+  code   ("a b") X ((1..3))
+  is     $((("a b", 1), ("a b", 2), ("a b", 3)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", 1), ("a b", 2), ("a b", 3)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", 1), ("a b", 2), ("a b", 3)).Seq)
+
+- id     0484
+  from   inventory:infix:X
+  cell   "a b" | Int
+  level  3
+  code   ("a b") X (Int)
+  is     $((("a b", Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", Int),).Seq)
+
+- id     0485
+  from   inventory:infix:X
+  cell   0 | [1,2]
+  level  3
+  code   (0) X ([1,2])
+  is     $(((0, 1), (0, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0, 1), (0, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((0, 1), (0, 2)).Seq)
+
+- id     0486
+  from   inventory:infix:X
+  cell   1 | [1,2]
+  level  3
+  code   (1) X ([1,2])
+  is     $(((1, 1), (1, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1), (1, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, 1), (1, 2)).Seq)
+
+- id     0487
+  from   inventory:infix:X
+  cell   -1 | [1,2]
+  level  3
+  code   (-1) X ([1,2])
+  is     $(((-1, 1), (-1, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-1, 1), (-1, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((-1, 1), (-1, 2)).Seq)
+
+- id     0488
+  from   inventory:infix:X
+  cell   1/2 | [1,2]
+  level  3
+  code   (1/2) X ([1,2])
+  is     $(((0.5, 1), (0.5, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0.5, 1), (0.5, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((0.5, 1), (0.5, 2)).Seq)
+
+- id     0489
+  from   inventory:infix:X
+  cell   0e0 | [1,2]
+  level  3
+  code   (0e0) X ([1,2])
+  is     $(((0e0, 1), (0e0, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0e0, 1), (0e0, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((0e0, 1), (0e0, 2)).Seq)
+
+- id     0490
+  from   inventory:infix:X
+  cell   NaN | [1,2]
+  level  3
+  code   (NaN) X ([1,2])
+  is     $(((NaN, 1), (NaN, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((NaN, 1), (NaN, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((NaN, 1), (NaN, 2)).Seq)
+
+- id     0491
+  from   inventory:infix:X
+  cell   "" | [1,2]
+  level  3
+  code   ("") X ([1,2])
+  is     $((("", 1), ("", 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("", 1), ("", 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("", 1), ("", 2)).Seq)
+
+- id     0492
+  from   inventory:infix:X
+  cell   "a" | [1,2]
+  level  3
+  code   ("a") X ([1,2])
+  is     $((("a", 1), ("a", 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a", 1), ("a", 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a", 1), ("a", 2)).Seq)
+
+- id     0493
+  from   inventory:infix:X
+  cell   True | [1,2]
+  level  3
+  code   (True) X ([1,2])
+  is     $(((Bool::True, 1), (Bool::True, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::True, 1), (Bool::True, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Bool::True, 1), (Bool::True, 2)).Seq)
+
+- id     0494
+  from   inventory:infix:X
+  cell   Any | [1,2]
+  level  3
+  code   (Any) X ([1,2])
+  is     $(((Any, 1), (Any, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Any, 1), (Any, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Any, 1), (Any, 2)).Seq)
+
+- id     0495
+  from   inventory:infix:X
+  cell   (1,2) | [1,2]
+  level  3
+  code   ((1,2)) X ([1,2])
+  is     $(((1, 1), (1, 2), (2, 1), (2, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1), (1, 2), (2, 1), (2, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, 1), (1, 2), (2, 1), (2, 2)).Seq)
+
+- id     0496
+  from   inventory:infix:X
+  cell   {a=>1} | [1,2]
+  level  3
+  code   ({a=>1}) X ([1,2])
+  is     $(((:a(1), 1), (:a(1), 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), 1), (:a(1), 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((({:a(1)}, 1), ({:a(1)}, 2)).Seq)
+
+- id     0497
+  from   inventory:infix:X
+  cell   -0e0 | [1,2]
+  level  3
+  code   (-0e0) X ([1,2])
+  is     $(((-0e0, 1), (-0e0, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-0e0, 1), (-0e0, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((-0e0, 1), (-0e0, 2)).Seq)
+
+- id     0498
+  from   inventory:infix:X
+  cell   Inf | [1,2]
+  level  3
+  code   (Inf) X ([1,2])
+  is     $(((Inf, 1), (Inf, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Inf, 1), (Inf, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Inf, 1), (Inf, 2)).Seq)
+
+- id     0499
+  from   inventory:infix:X
+  cell   2**64 | [1,2]
+  level  3
+  code   (2**64) X ([1,2])
+  is     $(((18446744073709551616, 1), (18446744073709551616, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((18446744073709551616, 1), (18446744073709551616, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((18446744073709551616, 1), (18446744073709551616, 2)).Seq)
+
+- id     0500
+  from   inventory:infix:X
+  cell   False | [1,2]
+  level  3
+  code   (False) X ([1,2])
+  is     $(((Bool::False, 1), (Bool::False, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::False, 1), (Bool::False, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Bool::False, 1), (Bool::False, 2)).Seq)
+
+- id     0501
+  from   inventory:infix:X
+  cell   Nil | [1,2]
+  level  3
+  code   (Nil) X ([1,2])
+  is     $(((Nil, 1), (Nil, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Nil, 1), (Nil, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Nil, 1), (Nil, 2)).Seq)
+
+- id     0502
+  from   inventory:infix:X
+  cell   () | [1,2]
+  level  3
+  code   (()) X ([1,2])
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(().Seq)
+
+- id     0503
+  from   inventory:infix:X
+  cell   "0" | [1,2]
+  level  3
+  code   ("0") X ([1,2])
+  is     $((("0", 1), ("0", 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("0", 1), ("0", 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("0", 1), ("0", 2)).Seq)
+
+- id     0504
+  from   inventory:infix:X
+  cell   (1..3) | [1,2]
+  level  3
+  code   ((1..3)) X ([1,2])
+  is     $(((1, 1), (1, 2), (2, 1), (2, 2), (3, 1), (3, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1), (1, 2), (2, 1), (2, 2), (3, 1), (3, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, 1), (1, 2), (2, 1), (2, 2), (3, 1), (3, 2)).Seq)
+
+- id     0505
+  from   inventory:infix:X
+  cell   Int | [1,2]
+  level  3
+  code   (Int) X ([1,2])
+  is     $(((Int, 1), (Int, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, 1), (Int, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, 1), (Int, 2)).Seq)
+
+- id     0506
+  from   inventory:infix:X
+  cell   "a b" | [1,2]
+  level  3
+  code   ("a b") X ([1,2])
+  is     $((("a b", 1), ("a b", 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", 1), ("a b", 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", 1), ("a b", 2)).Seq)
+
+- id     0507
+  from   inventory:infix:X
+  cell   [1,2] | [1,2]
+  level  3
+  code   ([1,2]) X ([1,2])
+  is     $(((1, 1), (1, 2), (2, 1), (2, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1), (1, 2), (2, 1), (2, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, 1), (1, 2), (2, 1), (2, 2)).Seq)
+
+- id     0508
+  from   inventory:infix:X
+  cell   [1,2] | 0
+  level  3
+  code   ([1,2]) X (0)
+  is     $(((1, 0), (2, 0)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 0), (2, 0)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, 0), (2, 0)).Seq)
+
+- id     0509
+  from   inventory:infix:X
+  cell   [1,2] | 1
+  level  3
+  code   ([1,2]) X (1)
+  is     $(((1, 1), (2, 1)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1), (2, 1)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, 1), (2, 1)).Seq)
+
+- id     0510
+  from   inventory:infix:X
+  cell   [1,2] | -1
+  level  3
+  code   ([1,2]) X (-1)
+  is     $(((1, -1), (2, -1)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, -1), (2, -1)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, -1), (2, -1)).Seq)
+
+- id     0511
+  from   inventory:infix:X
+  cell   [1,2] | 1/2
+  level  3
+  code   ([1,2]) X (1/2)
+  is     $(((1, 0.5), (2, 0.5)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 0.5), (2, 0.5)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, 0.5), (2, 0.5)).Seq)
+
+- id     0512
+  from   inventory:infix:X
+  cell   [1,2] | 0e0
+  level  3
+  code   ([1,2]) X (0e0)
+  is     $(((1, 0e0), (2, 0e0)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 0e0), (2, 0e0)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, 0e0), (2, 0e0)).Seq)
+
+- id     0513
+  from   inventory:infix:X
+  cell   [1,2] | NaN
+  level  3
+  code   ([1,2]) X (NaN)
+  is     $(((1, NaN), (2, NaN)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, NaN), (2, NaN)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, NaN), (2, NaN)).Seq)
+
+- id     0514
+  from   inventory:infix:X
+  cell   [1,2] | ""
+  level  3
+  code   ([1,2]) X ("")
+  is     $(((1, ""), (2, "")).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, ""), (2, "")).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, ""), (2, "")).Seq)
+
+- id     0515
+  from   inventory:infix:X
+  cell   [1,2] | "a"
+  level  3
+  code   ([1,2]) X ("a")
+  is     $(((1, "a"), (2, "a")).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, "a"), (2, "a")).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, "a"), (2, "a")).Seq)
+
+- id     0516
+  from   inventory:infix:X
+  cell   [1,2] | True
+  level  3
+  code   ([1,2]) X (True)
+  is     $(((1, Bool::True), (2, Bool::True)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Bool::True), (2, Bool::True)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, Bool::True), (2, Bool::True)).Seq)
+
+- id     0517
+  from   inventory:infix:X
+  cell   [1,2] | Any
+  level  3
+  code   ([1,2]) X (Any)
+  is     $(((1, Any), (2, Any)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Any), (2, Any)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, Any), (2, Any)).Seq)
+
+- id     0518
+  from   inventory:infix:X
+  cell   [1,2] | (1,2)
+  level  3
+  code   ([1,2]) X ((1,2))
+  is     $(((1, 1), (1, 2), (2, 1), (2, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1), (1, 2), (2, 1), (2, 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, 1), (1, 2), (2, 1), (2, 2)).Seq)
+
+- id     0519
+  from   inventory:infix:X
+  cell   [1,2] | {a=>1}
+  level  3
+  code   ([1,2]) X ({a=>1})
+  is     $(((1, :a(1)), (2, :a(1))).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, :a(1)), (2, :a(1))).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, {:a(1)}), (2, {:a(1)})).Seq)
+
+- id     0520
+  from   inventory:infix:X
+  cell   [1,2] | -0e0
+  level  3
+  code   ([1,2]) X (-0e0)
+  is     $(((1, -0e0), (2, -0e0)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, -0e0), (2, -0e0)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, -0e0), (2, -0e0)).Seq)
+
+- id     0521
+  from   inventory:infix:X
+  cell   [1,2] | Inf
+  level  3
+  code   ([1,2]) X (Inf)
+  is     $(((1, Inf), (2, Inf)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Inf), (2, Inf)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, Inf), (2, Inf)).Seq)
+
+- id     0522
+  from   inventory:infix:X
+  cell   [1,2] | 2**64
+  level  3
+  code   ([1,2]) X (2**64)
+  is     $(((1, 18446744073709551616), (2, 18446744073709551616)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 18446744073709551616), (2, 18446744073709551616)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, 18446744073709551616), (2, 18446744073709551616)).Seq)
+
+- id     0523
+  from   inventory:infix:X
+  cell   [1,2] | False
+  level  3
+  code   ([1,2]) X (False)
+  is     $(((1, Bool::False), (2, Bool::False)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Bool::False), (2, Bool::False)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, Bool::False), (2, Bool::False)).Seq)
+
+- id     0524
+  from   inventory:infix:X
+  cell   [1,2] | Nil
+  level  3
+  code   ([1,2]) X (Nil)
+  is     $(((1, Nil), (2, Nil)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Nil), (2, Nil)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, Nil), (2, Nil)).Seq)
+
+- id     0525
+  from   inventory:infix:X
+  cell   [1,2] | ()
+  level  3
+  code   ([1,2]) X (())
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(().Seq)
+
+- id     0526
+  from   inventory:infix:X
+  cell   [1,2] | "0"
+  level  3
+  code   ([1,2]) X ("0")
+  is     $(((1, "0"), (2, "0")).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, "0"), (2, "0")).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, "0"), (2, "0")).Seq)
+
+- id     0527
+  from   inventory:infix:X
+  cell   [1,2] | (1..3)
+  level  3
+  code   ([1,2]) X ((1..3))
+  is     $(((1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3)).Seq)
+
+- id     0528
+  from   inventory:infix:X
+  cell   [1,2] | Int
+  level  3
+  code   ([1,2]) X (Int)
+  is     $(((1, Int), (2, Int)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Int), (2, Int)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, Int), (2, Int)).Seq)
+
+- id     0529
+  from   inventory:infix:X
+  cell   [1,2] | "a b"
+  level  3
+  code   ([1,2]) X ("a b")
+  is     $(((1, "a b"), (2, "a b")).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, "a b"), (2, "a b")).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, "a b"), (2, "a b")).Seq)
+
+- id     0530
+  from   inventory:infix:X
+  cell   0 | (a => 1)
+  level  3
+  code   (0) X ((a => 1))
+  is     $(((0, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((0, :a(1)),).Seq)
+
+- id     0531
+  from   inventory:infix:X
+  cell   1 | (a => 1)
+  level  3
+  code   (1) X ((a => 1))
+  is     $(((1, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, :a(1)),).Seq)
+
+- id     0532
+  from   inventory:infix:X
+  cell   -1 | (a => 1)
+  level  3
+  code   (-1) X ((a => 1))
+  is     $(((-1, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-1, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((-1, :a(1)),).Seq)
+
+- id     0533
+  from   inventory:infix:X
+  cell   1/2 | (a => 1)
+  level  3
+  code   (1/2) X ((a => 1))
+  is     $(((0.5, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0.5, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((0.5, :a(1)),).Seq)
+
+- id     0534
+  from   inventory:infix:X
+  cell   0e0 | (a => 1)
+  level  3
+  code   (0e0) X ((a => 1))
+  is     $(((0e0, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0e0, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((0e0, :a(1)),).Seq)
+
+- id     0535
+  from   inventory:infix:X
+  cell   NaN | (a => 1)
+  level  3
+  code   (NaN) X ((a => 1))
+  is     $(((NaN, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((NaN, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((NaN, :a(1)),).Seq)
+
+- id     0536
+  from   inventory:infix:X
+  cell   "" | (a => 1)
+  level  3
+  code   ("") X ((a => 1))
+  is     $((("", :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("", :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("", :a(1)),).Seq)
+
+- id     0537
+  from   inventory:infix:X
+  cell   "a" | (a => 1)
+  level  3
+  code   ("a") X ((a => 1))
+  is     $((("a", :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a", :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a", :a(1)),).Seq)
+
+- id     0538
+  from   inventory:infix:X
+  cell   True | (a => 1)
+  level  3
+  code   (True) X ((a => 1))
+  is     $(((Bool::True, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::True, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Bool::True, :a(1)),).Seq)
+
+- id     0539
+  from   inventory:infix:X
+  cell   Any | (a => 1)
+  level  3
+  code   (Any) X ((a => 1))
+  is     $(((Any, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Any, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Any, :a(1)),).Seq)
+
+- id     0540
+  from   inventory:infix:X
+  cell   (1,2) | (a => 1)
+  level  3
+  code   ((1,2)) X ((a => 1))
+  is     $(((1, :a(1)), (2, :a(1))).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, :a(1)), (2, :a(1))).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, :a(1)), (2, :a(1))).Seq)
+
+- id     0541
+  from   inventory:infix:X
+  cell   {a=>1} | (a => 1)
+  level  3
+  code   ({a=>1}) X ((a => 1))
+  is     $(((:a(1), :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((({:a(1)}, :a(1)),).Seq)
+
+- id     0542
+  from   inventory:infix:X
+  cell   -0e0 | (a => 1)
+  level  3
+  code   (-0e0) X ((a => 1))
+  is     $(((-0e0, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-0e0, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((-0e0, :a(1)),).Seq)
+
+- id     0543
+  from   inventory:infix:X
+  cell   Inf | (a => 1)
+  level  3
+  code   (Inf) X ((a => 1))
+  is     $(((Inf, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Inf, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Inf, :a(1)),).Seq)
+
+- id     0544
+  from   inventory:infix:X
+  cell   2**64 | (a => 1)
+  level  3
+  code   (2**64) X ((a => 1))
+  is     $(((18446744073709551616, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((18446744073709551616, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((18446744073709551616, :a(1)),).Seq)
+
+- id     0545
+  from   inventory:infix:X
+  cell   False | (a => 1)
+  level  3
+  code   (False) X ((a => 1))
+  is     $(((Bool::False, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::False, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Bool::False, :a(1)),).Seq)
+
+- id     0546
+  from   inventory:infix:X
+  cell   Nil | (a => 1)
+  level  3
+  code   (Nil) X ((a => 1))
+  is     $(((Nil, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Nil, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Nil, :a(1)),).Seq)
+
+- id     0547
+  from   inventory:infix:X
+  cell   () | (a => 1)
+  level  3
+  code   (()) X ((a => 1))
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(().Seq)
+
+- id     0548
+  from   inventory:infix:X
+  cell   "0" | (a => 1)
+  level  3
+  code   ("0") X ((a => 1))
+  is     $((("0", :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("0", :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("0", :a(1)),).Seq)
+
+- id     0549
+  from   inventory:infix:X
+  cell   (1..3) | (a => 1)
+  level  3
+  code   ((1..3)) X ((a => 1))
+  is     $(((1, :a(1)), (2, :a(1)), (3, :a(1))).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, :a(1)), (2, :a(1)), (3, :a(1))).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, :a(1)), (2, :a(1)), (3, :a(1))).Seq)
+
+- id     0550
+  from   inventory:infix:X
+  cell   Int | (a => 1)
+  level  3
+  code   (Int) X ((a => 1))
+  is     $(((Int, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((Int, :a(1)),).Seq)
+
+- id     0551
+  from   inventory:infix:X
+  cell   "a b" | (a => 1)
+  level  3
+  code   ("a b") X ((a => 1))
+  is     $((("a b", :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $((("a b", :a(1)),).Seq)
+
+- id     0552
+  from   inventory:infix:X
+  cell   [1,2] | (a => 1)
+  level  3
+  code   ([1,2]) X ((a => 1))
+  is     $(((1, :a(1)), (2, :a(1))).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, :a(1)), (2, :a(1))).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((1, :a(1)), (2, :a(1))).Seq)
+
+- id     0553
+  from   inventory:infix:X
+  cell   (a => 1) | (a => 1)
+  level  3
+  code   ((a => 1)) X ((a => 1))
+  is     $(((:a(1), :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), :a(1)),).Seq)
+
+- id     0554
+  from   inventory:infix:X
+  cell   (a => 1) | 0
+  level  3
+  code   ((a => 1)) X (0)
+  is     $(((:a(1), 0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), 0),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), 0),).Seq)
+
+- id     0555
+  from   inventory:infix:X
+  cell   (a => 1) | 1
+  level  3
+  code   ((a => 1)) X (1)
+  is     $(((:a(1), 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), 1),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), 1),).Seq)
+
+- id     0556
+  from   inventory:infix:X
+  cell   (a => 1) | -1
+  level  3
+  code   ((a => 1)) X (-1)
+  is     $(((:a(1), -1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), -1),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), -1),).Seq)
+
+- id     0557
+  from   inventory:infix:X
+  cell   (a => 1) | 1/2
+  level  3
+  code   ((a => 1)) X (1/2)
+  is     $(((:a(1), 0.5),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), 0.5),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), 0.5),).Seq)
+
+- id     0558
+  from   inventory:infix:X
+  cell   (a => 1) | 0e0
+  level  3
+  code   ((a => 1)) X (0e0)
+  is     $(((:a(1), 0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), 0e0),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), 0e0),).Seq)
+
+- id     0559
+  from   inventory:infix:X
+  cell   (a => 1) | NaN
+  level  3
+  code   ((a => 1)) X (NaN)
+  is     $(((:a(1), NaN),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), NaN),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), NaN),).Seq)
+
+- id     0560
+  from   inventory:infix:X
+  cell   (a => 1) | ""
+  level  3
+  code   ((a => 1)) X ("")
+  is     $(((:a(1), ""),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), ""),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), ""),).Seq)
+
+- id     0561
+  from   inventory:infix:X
+  cell   (a => 1) | "a"
+  level  3
+  code   ((a => 1)) X ("a")
+  is     $(((:a(1), "a"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), "a"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), "a"),).Seq)
+
+- id     0562
+  from   inventory:infix:X
+  cell   (a => 1) | True
+  level  3
+  code   ((a => 1)) X (True)
+  is     $(((:a(1), Bool::True),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), Bool::True),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), Bool::True),).Seq)
+
+- id     0563
+  from   inventory:infix:X
+  cell   (a => 1) | Any
+  level  3
+  code   ((a => 1)) X (Any)
+  is     $(((:a(1), Any),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), Any),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), Any),).Seq)
+
+- id     0564
+  from   inventory:infix:X
+  cell   (a => 1) | (1,2)
+  level  3
+  code   ((a => 1)) X ((1,2))
+  is     $(((:a(1), 1), (:a(1), 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), 1), (:a(1), 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), 1), (:a(1), 2)).Seq)
+
+- id     0565
+  from   inventory:infix:X
+  cell   (a => 1) | {a=>1}
+  level  3
+  code   ((a => 1)) X ({a=>1})
+  is     $(((:a(1), :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), :a(1)),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), {:a(1)}),).Seq)
+
+- id     0566
+  from   inventory:infix:X
+  cell   (a => 1) | -0e0
+  level  3
+  code   ((a => 1)) X (-0e0)
+  is     $(((:a(1), -0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), -0e0),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), -0e0),).Seq)
+
+- id     0567
+  from   inventory:infix:X
+  cell   (a => 1) | Inf
+  level  3
+  code   ((a => 1)) X (Inf)
+  is     $(((:a(1), Inf),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), Inf),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), Inf),).Seq)
+
+- id     0568
+  from   inventory:infix:X
+  cell   (a => 1) | 2**64
+  level  3
+  code   ((a => 1)) X (2**64)
+  is     $(((:a(1), 18446744073709551616),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), 18446744073709551616),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), 18446744073709551616),).Seq)
+
+- id     0569
+  from   inventory:infix:X
+  cell   (a => 1) | False
+  level  3
+  code   ((a => 1)) X (False)
+  is     $(((:a(1), Bool::False),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), Bool::False),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), Bool::False),).Seq)
+
+- id     0570
+  from   inventory:infix:X
+  cell   (a => 1) | Nil
+  level  3
+  code   ((a => 1)) X (Nil)
+  is     $(((:a(1), Nil),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), Nil),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), Nil),).Seq)
+
+- id     0571
+  from   inventory:infix:X
+  cell   (a => 1) | ()
+  level  3
+  code   ((a => 1)) X (())
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(().Seq)
+
+- id     0572
+  from   inventory:infix:X
+  cell   (a => 1) | "0"
+  level  3
+  code   ((a => 1)) X ("0")
+  is     $(((:a(1), "0"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), "0"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), "0"),).Seq)
+
+- id     0573
+  from   inventory:infix:X
+  cell   (a => 1) | (1..3)
+  level  3
+  code   ((a => 1)) X ((1..3))
+  is     $(((:a(1), 1), (:a(1), 2), (:a(1), 3)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), 1), (:a(1), 2), (:a(1), 3)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), 1), (:a(1), 2), (:a(1), 3)).Seq)
+
+- id     0574
+  from   inventory:infix:X
+  cell   (a => 1) | Int
+  level  3
+  code   ((a => 1)) X (Int)
+  is     $(((:a(1), Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), Int),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), Int),).Seq)
+
+- id     0575
+  from   inventory:infix:X
+  cell   (a => 1) | "a b"
+  level  3
+  code   ((a => 1)) X ("a b")
+  is     $(((:a(1), "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), "a b"),).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), "a b"),).Seq)
+
+- id     0576
+  from   inventory:infix:X
+  cell   (a => 1) | [1,2]
+  level  3
+  code   ((a => 1)) X ([1,2])
+  is     $(((:a(1), 1), (:a(1), 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), 1), (:a(1), 2)).Seq)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), 1), (:a(1), 2)).Seq)

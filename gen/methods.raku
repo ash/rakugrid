@@ -31,14 +31,14 @@ my $GUARD = 0;
 # vary: empty, or a single distinct key. Multi-key behaviour belongs in atoms
 # that assert order-independent properties (`.elems`, `.total`, `.keys.sort`).
 constant %TYPES =
-    'Int'      => ['0', '1', '-1', '2**64', '-2**64', '42'],
-    'Rat'      => ['1/3', '0/1', '-1/3', '1/1', '(2**64)/3'],
-    'Num'      => ['0e0', '-0e0', '1e0', '-1e0', 'Inf', '-Inf', 'NaN'],
+    'Int'      => ['0', '1', '-1', '2**64', '-2**64', '42', '2', '10', '-42', '2**63-1'],
+    'Rat'      => ['1/3', '0/1', '-1/3', '1/1', '(2**64)/3', '1/2', '3/1', '-1/1'],
+    'Num'      => ['0e0', '-0e0', '1e0', '-1e0', 'Inf', '-Inf', 'NaN', '2e0', '0.5e0', '1e308'],
     'Complex'  => ['1+2i', '0+0i', '-1-1i', 'Inf+0i'],
-    'Str'      => ['""', '" "', '"0"', '"a"', '"ABC"', '"e\c[COMBINING ACUTE ACCENT]"', '"a b  c"'],
-    'Bool'     => ['True', 'False'],
-    'List'     => ['()', '(1,)', '(1,2,3)', '(1,(2,3))', '("a","b")'],
-    'Array'    => ['[]', '[1]', '[1,2,3]', '[[1],[2]]'],
+    'Str'      => ['""', '" "', '"0"', '"a"', '"ABC"', '"e\c[COMBINING ACUTE ACCENT]"', '"a b  c"', '"-1"', '"Inf"', '"\n"', '"aa"'],
+    'Bool'     => ['True', 'False', 'so(1)', 'not(1)'],
+    'List'     => ['()', '(1,)', '(1,2,3)', '(1,(2,3))', '("a","b")', '(Any,)', '(1,Nil)', '(1..3).list'],
+    'Array'    => ['[]', '[1]', '[1,2,3]', '[[1],[2]]', '[Any]', '["a","b"]', '[1,"a"]'],
     'Hash'     => ['{}', '{a=>1}', '{"" => 1}'],
     'Pair'     => ['(a => 1)', '(1 => "x")'],
     'Range'    => ['(1..3)', '(1^..^3)', '(3..1)', '("a".."c")'],
@@ -57,8 +57,8 @@ constant %TYPES =
     'Buf'      => ['Buf.new(1,2,3)', 'Buf.new()'],
     'Junction' => ['any(1,2)', 'all(1,2)'],
     'Nil'      => ['Nil'],
-    'Mu'       => ['Mu'],
-    'Any'      => ['Any'],
+    'Mu'       => ['Any', 'Mu', 'Int', 'Str', '1', '0', '-1', '"a"', '""', '(1,2)', '{a=>1}', 'Nil', 'True', 'False', '1e0', '1/2', '(1..3)', 'set(1)'],
+    'Any'      => ['Any', 'Mu', 'Int', 'Str', '1', '0', '-1', '"a"', '""', '(1,2)', '{a=>1}', 'Nil', 'True', 'False', '1e0', '1/2', '(1..3)', 'set(1)'],
     'Signature' => [':(Int $a)', ':()'],
     'Match'    => ['("abc" ~~ /b/)'],
     'Failure'  => ['(try { die "x" } // $!)'],
@@ -72,14 +72,14 @@ constant %TYPES =
     'Code'     => ['{ 1 }', '-> $x { $x }'],
     'Block'    => ['{ 1 }', '{ $_ }'],
     'Regex'    => ['/a/', '/^ \\d+ $/'],
-    'Cool'     => ['1', '"a"', '1/2'],
-    'Numeric'  => ['1', '1e0', '1/2', '1+0i'],
-    'Real'     => ['1', '1e0', '1/2'],
-    'Stringy'  => ['"a"', '""'],
-    'Iterable' => ['(1,2)', '[1,2]', '(1..2)'],
-    'Positional' => ['[1,2]', '()'],
-    'Associative' => ['{a=>1}', '{}'],
-    'Callable' => ['{ 1 }', '&say'],
+    'Cool'     => ['1', '"a"', '1/2', '0', '""', '1e0', '-1', '"0"', 'True', '2**64', '"ABC"', '" "', '42', '-1e0', 'False'],
+    'Numeric'  => ['1', '1e0', '1/2', '1+0i', '0', '-1', 'Inf', 'NaN', '-Inf', '2**64', '0e0', '-0e0', '42', '1/3'],
+    'Real'     => ['1', '1e0', '1/2', '0', '-1', 'Inf', 'NaN', '2**64', '-Inf', '0e0', '-0e0', '42', '1/3', 'True'],
+    'Stringy'  => ['"a"', '""', '" "', '"0"', '"ABC"', '"a b"', '"-1"', '"Inf"', '"aa"', '"e\c[COMBINING ACUTE ACCENT]"'],
+    'Iterable' => ['(1,2)', '[1,2]', '(1..2)', '()', '(1,)', '<a b>', '(1..3).Seq', '[]', '(Any,)', '(1,"a")', 'set(1)', 'bag(1,1)'],
+    'Positional' => ['[1,2]', '()', '[]', '(1,2,3)', '[Any]', '(1,)', '<a b>', '[1,"a"]', '[[1],[2]]'],
+    'Associative' => ['{a=>1}', '{}', '{"" => 1}', 'Map.new((a=>1))', '{a=>Any}', 'Map.new()', 'SetHash.new(1)'],
+    'Callable' => ['{ 1 }', '&say', '-> $x { $x }', '{ $_ }', '(* + 1)', '(* > 0)', '{ ; }', '-> { 1 }'],
     'Exception' => ['X::AdHoc.new(payload => "x")'],
     'IntStr'   => ['<42>', '<-1>'],
     'RatStr'   => ['<1.5>', '<0.0>'],
@@ -220,7 +220,7 @@ sub run-parallel($cmd, @exprs, $probe-src, $jobs, $batch = 200, $secs = 120) {
             $f.IO.unlink;
         }
 
-        $offset += $jobs * $batch;
+        $offset += $now * $batch;
         $done = min($offset, $total);
         note "#     { $done } / $total" if $done %% 2000 || $done == $total;
     }
@@ -302,6 +302,36 @@ sub textual($v) {
     return 'INVALID-UTF8:' ~ (try { $v.ords.map(*.base(16)).join(' ') } // 'unrenderable');
 }
 
+
+# How many probes to run at once. `--jobs=auto` samples the machine each round
+# and takes what is going spare: cores, minus the current load, minus one to
+# leave the person using this machine a core of their own. Clamped to a sane
+# band so a quiet moment does not spawn a swarm and a busy one never stalls
+# entirely. A fixed --jobs=N still overrides.
+sub cores() {
+    my $p = run('sysctl', '-n', 'hw.ncpu', :out, :err);
+    my $n = $p.out.slurp(:close).trim;
+    $p.err.slurp(:close);
+    return +$n || 4;
+}
+
+sub load-now() {
+    my $p = run('sysctl', '-n', 'vm.loadavg', :out, :err);
+    my $t = $p.out.slurp(:close);
+    $p.err.slurp(:close);
+    # `{ 2.03 2.80 2.84 }` — take the one-minute figure. Returning 0 on a parse
+    # failure would be the dangerous default: it makes a busy machine look idle
+    # and the sampler ask for every core. Fall back to the ceiling instead.
+    return +$0 if $t ~~ / (\d+ '.' \d+) /;
+    return 999;
+}
+
+sub adaptive-jobs($requested, $ceiling = 6) {
+    return $requested unless $requested ~~ Str && $requested eq 'auto';
+    my $spare = (cores() - load-now() - 1).floor;
+    return max(1, min($ceiling, $spare));
+}
+
 sub PREFIX() { "mm" }
 sub TMPD() { $TMP }
 
@@ -377,10 +407,10 @@ sub engine-id($cmd) {
 # ------------------------------------------------------------------------ run
 
 my @engines = 'raku';
-my $JOBS = 2;   # deliberately low: this machine is used while the suite generates
+my $JOBS = 2;   # or --jobs=auto to take what the machine has spare
 for @*ARGS -> $a {
     @engines = $a.substr(10).split(',') if $a.starts-with('--engines=');
-    $JOBS    = +$a.substr(7)            if $a.starts-with('--jobs=');
+    $JOBS    = ($a.substr(7) eq 'auto' ?? 'auto' !! +$a.substr(7)) if $a.starts-with('--jobs=');
 }
 # Standing rulings, applied at emit time so that generated files stay
 # generated. A row here says: the reference's answer for this expression is not
@@ -464,7 +494,9 @@ for %TYPES.keys.sort -> $t {
     @all.append: @c.map(*<expr>);
 }
 @all = @all.unique;
-say "# { @all.elems } cells";
+my $records = 0;
+for %cells.keys -> $t { $records += %cells{$t}.elems }
+say "# { @all.elems } distinct expressions to probe, { $records } records to write";
 exit 0 if @*ARGS.first({ $_ eq '--count-only' });
 
 # --- step 3: observe, in parallel -------------------------------------------

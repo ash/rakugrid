@@ -3,12 +3,13 @@ source   generated
 gen      gen/operators.raku
 from-inventory infix but
 ladder   mixed
-axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
-cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3)
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
 
 - id     0001
   from   inventory:infix:but
   cell   0 | 0
+  level  0
   code   (0) but (0)
   is     0
   type   Int+{<anon|56>}
@@ -18,6 +19,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0002
   from   inventory:infix:but
   cell   0 | 1
+  level  1
   code   (0) but (1)
   is     0
   type   Int+{<anon|57>}
@@ -27,6 +29,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0003
   from   inventory:infix:but
   cell   1 | 1
+  level  1
   code   (1) but (1)
   is     1
   type   Int+{<anon|68>}
@@ -36,6 +39,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0004
   from   inventory:infix:but
   cell   1 | 0
+  level  1
   code   (1) but (0)
   is     1
   type   Int+{<anon|67>}
@@ -45,6 +49,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0005
   from   inventory:infix:but
   cell   0 | -1
+  level  1
   code   (0) but (-1)
   is     0
   type   Int+{<anon|58>}
@@ -54,6 +59,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0006
   from   inventory:infix:but
   cell   1 | -1
+  level  1
   code   (1) but (-1)
   is     1
   type   Int+{<anon|69>}
@@ -63,6 +69,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0007
   from   inventory:infix:but
   cell   -1 | -1
+  level  1
   code   (-1) but (-1)
   is     -1
   type   Int+{<anon|80>}
@@ -72,6 +79,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0008
   from   inventory:infix:but
   cell   -1 | 0
+  level  1
   code   (-1) but (0)
   is     -1
   type   Int+{<anon|78>}
@@ -81,6 +89,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0009
   from   inventory:infix:but
   cell   -1 | 1
+  level  1
   code   (-1) but (1)
   is     -1
   type   Int+{<anon|79>}
@@ -90,6 +99,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0010
   from   inventory:infix:but
   cell   0 | 1/2
+  level  1
   code   (0) but (1/2)
   is     0
   type   Int+{<anon|59>}
@@ -99,6 +109,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0011
   from   inventory:infix:but
   cell   1 | 1/2
+  level  1
   code   (1) but (1/2)
   is     1
   type   Int+{<anon|70>}
@@ -108,6 +119,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0012
   from   inventory:infix:but
   cell   -1 | 1/2
+  level  1
   code   (-1) but (1/2)
   is     -1
   type   Int+{<anon|81>}
@@ -117,6 +129,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0013
   from   inventory:infix:but
   cell   1/2 | 1/2
+  level  1
   code   (1/2) but (1/2)
   is     <1/2>
   type   Rat+{<anon|4>}
@@ -126,6 +139,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0014
   from   inventory:infix:but
   cell   1/2 | 0
+  level  1
   code   (1/2) but (0)
   is     <1/2>
   type   Rat+{<anon|1>}
@@ -135,6 +149,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0015
   from   inventory:infix:but
   cell   1/2 | 1
+  level  1
   code   (1/2) but (1)
   is     <1/2>
   type   Rat+{<anon|2>}
@@ -144,6 +159,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0016
   from   inventory:infix:but
   cell   1/2 | -1
+  level  1
   code   (1/2) but (-1)
   is     <1/2>
   type   Rat+{<anon|3>}
@@ -153,6 +169,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0017
   from   inventory:infix:but
   cell   0 | 0e0
+  level  2
   code   (0) but (0e0)
   is     0
   type   Int+{<anon|60>}
@@ -162,6 +179,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0018
   from   inventory:infix:but
   cell   1 | 0e0
+  level  2
   code   (1) but (0e0)
   is     1
   type   Int+{<anon|71>}
@@ -171,6 +189,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0019
   from   inventory:infix:but
   cell   -1 | 0e0
+  level  2
   code   (-1) but (0e0)
   is     -1
   type   Int+{<anon|82>}
@@ -180,6 +199,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0020
   from   inventory:infix:but
   cell   1/2 | 0e0
+  level  2
   code   (1/2) but (0e0)
   is     <1/2>
   type   Rat+{<anon|5>}
@@ -189,6 +209,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0021
   from   inventory:infix:but
   cell   0e0 | 0e0
+  level  2
   code   (0e0) but (0e0)
   is     0e0
   type   Num+{<anon|16>}
@@ -198,6 +219,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0022
   from   inventory:infix:but
   cell   0e0 | 0
+  level  2
   code   (0e0) but (0)
   is     0e0
   type   Num+{<anon|12>}
@@ -207,6 +229,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0023
   from   inventory:infix:but
   cell   0e0 | 1
+  level  2
   code   (0e0) but (1)
   is     0e0
   type   Num+{<anon|13>}
@@ -216,6 +239,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0024
   from   inventory:infix:but
   cell   0e0 | -1
+  level  2
   code   (0e0) but (-1)
   is     0e0
   type   Num+{<anon|14>}
@@ -225,6 +249,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0025
   from   inventory:infix:but
   cell   0e0 | 1/2
+  level  2
   code   (0e0) but (1/2)
   is     0e0
   type   Num+{<anon|15>}
@@ -234,6 +259,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0026
   from   inventory:infix:but
   cell   0 | NaN
+  level  2
   code   (0) but (NaN)
   is     0
   type   Int+{<anon|61>}
@@ -243,6 +269,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0027
   from   inventory:infix:but
   cell   1 | NaN
+  level  2
   code   (1) but (NaN)
   is     1
   type   Int+{<anon|72>}
@@ -252,6 +279,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0028
   from   inventory:infix:but
   cell   -1 | NaN
+  level  2
   code   (-1) but (NaN)
   is     -1
   type   Int+{<anon|83>}
@@ -261,6 +289,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0029
   from   inventory:infix:but
   cell   1/2 | NaN
+  level  2
   code   (1/2) but (NaN)
   is     <1/2>
   type   Rat+{<anon|6>}
@@ -270,6 +299,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0030
   from   inventory:infix:but
   cell   0e0 | NaN
+  level  2
   code   (0e0) but (NaN)
   is     0e0
   type   Num+{<anon|17>}
@@ -279,6 +309,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0031
   from   inventory:infix:but
   cell   NaN | NaN
+  level  2
   code   (NaN) but (NaN)
   is     NaN
   type   Num+{<anon|28>}
@@ -288,6 +319,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0032
   from   inventory:infix:but
   cell   NaN | 0
+  level  2
   code   (NaN) but (0)
   is     NaN
   type   Num+{<anon|23>}
@@ -297,6 +329,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0033
   from   inventory:infix:but
   cell   NaN | 1
+  level  2
   code   (NaN) but (1)
   is     NaN
   type   Num+{<anon|24>}
@@ -306,6 +339,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0034
   from   inventory:infix:but
   cell   NaN | -1
+  level  2
   code   (NaN) but (-1)
   is     NaN
   type   Num+{<anon|25>}
@@ -315,6 +349,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0035
   from   inventory:infix:but
   cell   NaN | 1/2
+  level  2
   code   (NaN) but (1/2)
   is     NaN
   type   Num+{<anon|26>}
@@ -324,6 +359,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0036
   from   inventory:infix:but
   cell   NaN | 0e0
+  level  2
   code   (NaN) but (0e0)
   is     NaN
   type   Num+{<anon|27>}
@@ -333,6 +369,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0037
   from   inventory:infix:but
   cell   0 | ""
+  level  2
   code   (0) but ("")
   is     
   type   Int+{<anon|62>}
@@ -342,6 +379,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0038
   from   inventory:infix:but
   cell   1 | ""
+  level  2
   code   (1) but ("")
   is     
   type   Int+{<anon|73>}
@@ -351,6 +389,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0039
   from   inventory:infix:but
   cell   -1 | ""
+  level  2
   code   (-1) but ("")
   is     
   type   Int+{<anon|84>}
@@ -360,6 +399,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0040
   from   inventory:infix:but
   cell   1/2 | ""
+  level  2
   code   (1/2) but ("")
   is     <1/2>
   type   Rat+{<anon|7>}
@@ -369,6 +409,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0041
   from   inventory:infix:but
   cell   0e0 | ""
+  level  2
   code   (0e0) but ("")
   is     e0
   type   Num+{<anon|18>}
@@ -378,6 +419,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0042
   from   inventory:infix:but
   cell   NaN | ""
+  level  2
   code   (NaN) but ("")
   is     
   type   Num+{<anon|29>}
@@ -387,6 +429,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0043
   from   inventory:infix:but
   cell   "" | ""
+  level  2
   code   ("") but ("")
   is     ""
   type   Str+{<anon|40>}
@@ -396,6 +439,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0044
   from   inventory:infix:but
   cell   "" | 0
+  level  2
   code   ("") but (0)
   is     ""
   type   Str+{<anon|34>}
@@ -405,6 +449,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0045
   from   inventory:infix:but
   cell   "" | 1
+  level  2
   code   ("") but (1)
   is     ""
   type   Str+{<anon|35>}
@@ -414,6 +459,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0046
   from   inventory:infix:but
   cell   "" | -1
+  level  2
   code   ("") but (-1)
   is     ""
   type   Str+{<anon|36>}
@@ -423,6 +469,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0047
   from   inventory:infix:but
   cell   "" | 1/2
+  level  2
   code   ("") but (1/2)
   is     ""
   type   Str+{<anon|37>}
@@ -432,6 +479,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0048
   from   inventory:infix:but
   cell   "" | 0e0
+  level  2
   code   ("") but (0e0)
   is     ""
   type   Str+{<anon|38>}
@@ -441,6 +489,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0049
   from   inventory:infix:but
   cell   "" | NaN
+  level  2
   code   ("") but (NaN)
   is     ""
   type   Str+{<anon|39>}
@@ -450,6 +499,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0050
   from   inventory:infix:but
   cell   0 | "a"
+  level  2
   code   (0) but ("a")
   is     a
   type   Int+{<anon|63>}
@@ -459,6 +509,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0051
   from   inventory:infix:but
   cell   1 | "a"
+  level  2
   code   (1) but ("a")
   is     a
   type   Int+{<anon|74>}
@@ -468,6 +519,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0052
   from   inventory:infix:but
   cell   -1 | "a"
+  level  2
   code   (-1) but ("a")
   is     a
   type   Int+{<anon|85>}
@@ -477,6 +529,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0053
   from   inventory:infix:but
   cell   1/2 | "a"
+  level  2
   code   (1/2) but ("a")
   is     <1/2>
   type   Rat+{<anon|8>}
@@ -486,6 +539,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0054
   from   inventory:infix:but
   cell   0e0 | "a"
+  level  2
   code   (0e0) but ("a")
   is     ae0
   type   Num+{<anon|19>}
@@ -495,6 +549,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0055
   from   inventory:infix:but
   cell   NaN | "a"
+  level  2
   code   (NaN) but ("a")
   is     a
   type   Num+{<anon|30>}
@@ -504,6 +559,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0056
   from   inventory:infix:but
   cell   "" | "a"
+  level  2
   code   ("") but ("a")
   is     ""
   type   Str+{<anon|41>}
@@ -513,6 +569,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0057
   from   inventory:infix:but
   cell   "a" | "a"
+  level  2
   code   ("a") but ("a")
   is     "a"
   type   Str+{<anon|52>}
@@ -522,6 +579,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0058
   from   inventory:infix:but
   cell   "a" | 0
+  level  2
   code   ("a") but (0)
   is     "a"
   type   Str+{<anon|45>}
@@ -531,6 +589,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0059
   from   inventory:infix:but
   cell   "a" | 1
+  level  2
   code   ("a") but (1)
   is     "a"
   type   Str+{<anon|46>}
@@ -540,6 +599,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0060
   from   inventory:infix:but
   cell   "a" | -1
+  level  2
   code   ("a") but (-1)
   is     "a"
   type   Str+{<anon|47>}
@@ -549,6 +609,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0061
   from   inventory:infix:but
   cell   "a" | 1/2
+  level  2
   code   ("a") but (1/2)
   is     "a"
   type   Str+{<anon|48>}
@@ -558,6 +619,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0062
   from   inventory:infix:but
   cell   "a" | 0e0
+  level  2
   code   ("a") but (0e0)
   is     "a"
   type   Str+{<anon|49>}
@@ -567,6 +629,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0063
   from   inventory:infix:but
   cell   "a" | NaN
+  level  2
   code   ("a") but (NaN)
   is     "a"
   type   Str+{<anon|50>}
@@ -576,6 +639,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0064
   from   inventory:infix:but
   cell   "a" | ""
+  level  2
   code   ("a") but ("")
   is     "a"
   type   Str+{<anon|51>}
@@ -585,6 +649,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0065
   from   inventory:infix:but
   cell   0 | True
+  level  2
   code   (0) but (True)
   is     0
   type   Int+{<anon|64>}
@@ -594,6 +659,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0066
   from   inventory:infix:but
   cell   1 | True
+  level  2
   code   (1) but (True)
   is     1
   type   Int+{<anon|75>}
@@ -603,6 +669,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0067
   from   inventory:infix:but
   cell   -1 | True
+  level  2
   code   (-1) but (True)
   is     -1
   type   Int+{<anon|86>}
@@ -612,6 +679,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0068
   from   inventory:infix:but
   cell   1/2 | True
+  level  2
   code   (1/2) but (True)
   is     <1/2>
   type   Rat+{<anon|9>}
@@ -621,6 +689,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0069
   from   inventory:infix:but
   cell   0e0 | True
+  level  2
   code   (0e0) but (True)
   is     0e0
   type   Num+{<anon|20>}
@@ -630,6 +699,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0070
   from   inventory:infix:but
   cell   NaN | True
+  level  2
   code   (NaN) but (True)
   is     NaN
   type   Num+{<anon|31>}
@@ -639,6 +709,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0071
   from   inventory:infix:but
   cell   "" | True
+  level  2
   code   ("") but (True)
   is     ""
   type   Str+{<anon|42>}
@@ -648,6 +719,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0072
   from   inventory:infix:but
   cell   "a" | True
+  level  2
   code   ("a") but (True)
   is     "a"
   type   Str+{<anon|53>}
@@ -657,6 +729,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0073
   from   inventory:infix:but
   cell   True | True
+  level  2
   code   (True) but (True)
   is     Bool::True
   type   Bool+{<anon|64>}
@@ -666,6 +739,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0074
   from   inventory:infix:but
   cell   True | 0
+  level  2
   code   (True) but (0)
   is     Bool::True
   type   Bool+{<anon|56>}
@@ -675,6 +749,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0075
   from   inventory:infix:but
   cell   True | 1
+  level  2
   code   (True) but (1)
   is     Bool::True
   type   Bool+{<anon|57>}
@@ -684,6 +759,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0076
   from   inventory:infix:but
   cell   True | -1
+  level  2
   code   (True) but (-1)
   is     Bool::True
   type   Bool+{<anon|58>}
@@ -693,6 +769,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0077
   from   inventory:infix:but
   cell   True | 1/2
+  level  2
   code   (True) but (1/2)
   is     Bool::True
   type   Bool+{<anon|59>}
@@ -702,6 +779,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0078
   from   inventory:infix:but
   cell   True | 0e0
+  level  2
   code   (True) but (0e0)
   is     Bool::True
   type   Bool+{<anon|60>}
@@ -711,6 +789,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0079
   from   inventory:infix:but
   cell   True | NaN
+  level  2
   code   (True) but (NaN)
   is     Bool::True
   type   Bool+{<anon|61>}
@@ -720,6 +799,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0080
   from   inventory:infix:but
   cell   True | ""
+  level  2
   code   (True) but ("")
   is     Bool::True
   type   Bool+{<anon|62>}
@@ -729,6 +809,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0081
   from   inventory:infix:but
   cell   True | "a"
+  level  2
   code   (True) but ("a")
   is     Bool::True
   type   Bool+{<anon|63>}
@@ -738,6 +819,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0082
   from   inventory:infix:but
   cell   0 | Any
+  level  2
   code   (0) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -746,6 +828,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0083
   from   inventory:infix:but
   cell   1 | Any
+  level  2
   code   (1) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -754,6 +837,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0084
   from   inventory:infix:but
   cell   -1 | Any
+  level  2
   code   (-1) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -762,6 +846,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0085
   from   inventory:infix:but
   cell   1/2 | Any
+  level  2
   code   (1/2) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -770,6 +855,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0086
   from   inventory:infix:but
   cell   0e0 | Any
+  level  2
   code   (0e0) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -778,6 +864,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0087
   from   inventory:infix:but
   cell   NaN | Any
+  level  2
   code   (NaN) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -786,6 +873,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0088
   from   inventory:infix:but
   cell   "" | Any
+  level  2
   code   ("") but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -794,6 +882,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0089
   from   inventory:infix:but
   cell   "a" | Any
+  level  2
   code   ("a") but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -802,6 +891,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0090
   from   inventory:infix:but
   cell   True | Any
+  level  2
   code   (True) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -810,6 +900,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0091
   from   inventory:infix:but
   cell   Any | Any
+  level  2
   code   (Any) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -818,6 +909,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0092
   from   inventory:infix:but
   cell   Any | 0
+  level  2
   code   (Any) but (0)
   is     Any+{<anon|67>}
   type   Any+{<anon|67>}
@@ -827,6 +919,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0093
   from   inventory:infix:but
   cell   Any | 1
+  level  2
   code   (Any) but (1)
   is     Any+{<anon|68>}
   type   Any+{<anon|68>}
@@ -836,6 +929,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0094
   from   inventory:infix:but
   cell   Any | -1
+  level  2
   code   (Any) but (-1)
   is     Any+{<anon|69>}
   type   Any+{<anon|69>}
@@ -845,6 +939,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0095
   from   inventory:infix:but
   cell   Any | 1/2
+  level  2
   code   (Any) but (1/2)
   is     Any+{<anon|70>}
   type   Any+{<anon|70>}
@@ -854,6 +949,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0096
   from   inventory:infix:but
   cell   Any | 0e0
+  level  2
   code   (Any) but (0e0)
   is     Any+{<anon|71>}
   type   Any+{<anon|71>}
@@ -863,6 +959,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0097
   from   inventory:infix:but
   cell   Any | NaN
+  level  2
   code   (Any) but (NaN)
   is     Any+{<anon|72>}
   type   Any+{<anon|72>}
@@ -872,6 +969,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0098
   from   inventory:infix:but
   cell   Any | ""
+  level  2
   code   (Any) but ("")
   is     Any+{<anon|73>}
   type   Any+{<anon|73>}
@@ -881,6 +979,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0099
   from   inventory:infix:but
   cell   Any | "a"
+  level  2
   code   (Any) but ("a")
   is     Any+{<anon|74>}
   type   Any+{<anon|74>}
@@ -890,6 +989,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0100
   from   inventory:infix:but
   cell   Any | True
+  level  2
   code   (Any) but (True)
   is     Any+{<anon|75>}
   type   Any+{<anon|75>}
@@ -899,6 +999,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0101
   from   inventory:infix:but
   cell   0 | (1,2)
+  level  3
   code   (0) but ((1,2))
   is     0
   type   Int+{<anon|65>}
@@ -908,6 +1009,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0102
   from   inventory:infix:but
   cell   1 | (1,2)
+  level  3
   code   (1) but ((1,2))
   is     1
   type   Int+{<anon|76>}
@@ -917,6 +1019,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0103
   from   inventory:infix:but
   cell   -1 | (1,2)
+  level  3
   code   (-1) but ((1,2))
   is     -1
   type   Int+{<anon|87>}
@@ -926,6 +1029,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0104
   from   inventory:infix:but
   cell   1/2 | (1,2)
+  level  3
   code   (1/2) but ((1,2))
   is     <1/2>
   type   Rat+{<anon|10>}
@@ -935,6 +1039,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0105
   from   inventory:infix:but
   cell   0e0 | (1,2)
+  level  3
   code   (0e0) but ((1,2))
   is     0e0
   type   Num+{<anon|21>}
@@ -944,6 +1049,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0106
   from   inventory:infix:but
   cell   NaN | (1,2)
+  level  3
   code   (NaN) but ((1,2))
   is     NaN
   type   Num+{<anon|32>}
@@ -953,6 +1059,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0107
   from   inventory:infix:but
   cell   "" | (1,2)
+  level  3
   code   ("") but ((1,2))
   is     ""
   type   Str+{<anon|43>}
@@ -962,6 +1069,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0108
   from   inventory:infix:but
   cell   "a" | (1,2)
+  level  3
   code   ("a") but ((1,2))
   is     "a"
   type   Str+{<anon|54>}
@@ -971,6 +1079,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0109
   from   inventory:infix:but
   cell   True | (1,2)
+  level  3
   code   (True) but ((1,2))
   is     Bool::True
   type   Bool+{<anon|65>}
@@ -980,6 +1089,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0110
   from   inventory:infix:but
   cell   Any | (1,2)
+  level  3
   code   (Any) but ((1,2))
   is     Any+{<anon|76>}
   type   Any+{<anon|76>}
@@ -989,6 +1099,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0111
   from   inventory:infix:but
   cell   (1,2) | (1,2)
+  level  3
   code   ((1,2)) but ((1,2))
   is     $(1, 2)
   type   List+{<anon|87>}
@@ -998,6 +1109,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0112
   from   inventory:infix:but
   cell   (1,2) | 0
+  level  3
   code   ((1,2)) but (0)
   is     $(1, 2)
   type   List+{<anon|78>}
@@ -1007,6 +1119,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0113
   from   inventory:infix:but
   cell   (1,2) | 1
+  level  3
   code   ((1,2)) but (1)
   is     $(1, 2)
   type   List+{<anon|79>}
@@ -1016,6 +1129,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0114
   from   inventory:infix:but
   cell   (1,2) | -1
+  level  3
   code   ((1,2)) but (-1)
   is     $(1, 2)
   type   List+{<anon|80>}
@@ -1025,6 +1139,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0115
   from   inventory:infix:but
   cell   (1,2) | 1/2
+  level  3
   code   ((1,2)) but (1/2)
   is     $(1, 2)
   type   List+{<anon|81>}
@@ -1034,6 +1149,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0116
   from   inventory:infix:but
   cell   (1,2) | 0e0
+  level  3
   code   ((1,2)) but (0e0)
   is     $(1, 2)
   type   List+{<anon|82>}
@@ -1043,6 +1159,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0117
   from   inventory:infix:but
   cell   (1,2) | NaN
+  level  3
   code   ((1,2)) but (NaN)
   is     $(1, 2)
   type   List+{<anon|83>}
@@ -1052,6 +1169,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0118
   from   inventory:infix:but
   cell   (1,2) | ""
+  level  3
   code   ((1,2)) but ("")
   is     $(1, 2)
   type   List+{<anon|84>}
@@ -1061,6 +1179,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0119
   from   inventory:infix:but
   cell   (1,2) | "a"
+  level  3
   code   ((1,2)) but ("a")
   is     $(1, 2)
   type   List+{<anon|85>}
@@ -1070,6 +1189,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0120
   from   inventory:infix:but
   cell   (1,2) | True
+  level  3
   code   ((1,2)) but (True)
   is     $(1, 2)
   type   List+{<anon|86>}
@@ -1079,6 +1199,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0121
   from   inventory:infix:but
   cell   (1,2) | Any
+  level  3
   code   ((1,2)) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -1087,6 +1208,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0122
   from   inventory:infix:but
   cell   0 | {a=>1}
+  level  3
   code   (0) but ({a=>1})
   is     0
   type   Int+{<anon|66>}
@@ -1096,6 +1218,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0123
   from   inventory:infix:but
   cell   1 | {a=>1}
+  level  3
   code   (1) but ({a=>1})
   is     1
   type   Int+{<anon|77>}
@@ -1105,6 +1228,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0124
   from   inventory:infix:but
   cell   -1 | {a=>1}
+  level  3
   code   (-1) but ({a=>1})
   is     -1
   type   Int+{<anon|88>}
@@ -1114,6 +1238,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0125
   from   inventory:infix:but
   cell   1/2 | {a=>1}
+  level  3
   code   (1/2) but ({a=>1})
   is     <1/2>
   type   Rat+{<anon|11>}
@@ -1123,6 +1248,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0126
   from   inventory:infix:but
   cell   0e0 | {a=>1}
+  level  3
   code   (0e0) but ({a=>1})
   is     0e0
   type   Num+{<anon|22>}
@@ -1132,6 +1258,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0127
   from   inventory:infix:but
   cell   NaN | {a=>1}
+  level  3
   code   (NaN) but ({a=>1})
   is     NaN
   type   Num+{<anon|33>}
@@ -1141,6 +1268,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0128
   from   inventory:infix:but
   cell   "" | {a=>1}
+  level  3
   code   ("") but ({a=>1})
   is     ""
   type   Str+{<anon|44>}
@@ -1150,6 +1278,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0129
   from   inventory:infix:but
   cell   "a" | {a=>1}
+  level  3
   code   ("a") but ({a=>1})
   is     "a"
   type   Str+{<anon|55>}
@@ -1159,6 +1288,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0130
   from   inventory:infix:but
   cell   True | {a=>1}
+  level  3
   code   (True) but ({a=>1})
   is     Bool::True
   type   Bool+{<anon|66>}
@@ -1168,6 +1298,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0131
   from   inventory:infix:but
   cell   Any | {a=>1}
+  level  3
   code   (Any) but ({a=>1})
   is     Any+{<anon|77>}
   type   Any+{<anon|77>}
@@ -1177,6 +1308,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0132
   from   inventory:infix:but
   cell   (1,2) | {a=>1}
+  level  3
   code   ((1,2)) but ({a=>1})
   is     $(1, 2)
   type   List+{<anon|88>}
@@ -1186,6 +1318,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0133
   from   inventory:infix:but
   cell   {a=>1} | {a=>1}
+  level  3
   code   ({a=>1}) but ({a=>1})
   is     ${:a(1)}
   type   Hash+{<anon|99>}
@@ -1195,6 +1328,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0134
   from   inventory:infix:but
   cell   {a=>1} | 0
+  level  3
   code   ({a=>1}) but (0)
   is     ${:a(1)}
   type   Hash+{<anon|89>}
@@ -1204,6 +1338,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0135
   from   inventory:infix:but
   cell   {a=>1} | 1
+  level  3
   code   ({a=>1}) but (1)
   is     ${:a(1)}
   type   Hash+{<anon|90>}
@@ -1213,6 +1348,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0136
   from   inventory:infix:but
   cell   {a=>1} | -1
+  level  3
   code   ({a=>1}) but (-1)
   is     ${:a(1)}
   type   Hash+{<anon|91>}
@@ -1222,6 +1358,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0137
   from   inventory:infix:but
   cell   {a=>1} | 1/2
+  level  3
   code   ({a=>1}) but (1/2)
   is     ${:a(1)}
   type   Hash+{<anon|92>}
@@ -1231,6 +1368,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0138
   from   inventory:infix:but
   cell   {a=>1} | 0e0
+  level  3
   code   ({a=>1}) but (0e0)
   is     ${:a(1)}
   type   Hash+{<anon|93>}
@@ -1240,6 +1378,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0139
   from   inventory:infix:but
   cell   {a=>1} | NaN
+  level  3
   code   ({a=>1}) but (NaN)
   is     ${:a(1)}
   type   Hash+{<anon|94>}
@@ -1249,6 +1388,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0140
   from   inventory:infix:but
   cell   {a=>1} | ""
+  level  3
   code   ({a=>1}) but ("")
   is     ${:a(1)}
   type   Hash+{<anon|95>}
@@ -1258,6 +1398,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0141
   from   inventory:infix:but
   cell   {a=>1} | "a"
+  level  3
   code   ({a=>1}) but ("a")
   is     ${:a(1)}
   type   Hash+{<anon|96>}
@@ -1267,6 +1408,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0142
   from   inventory:infix:but
   cell   {a=>1} | True
+  level  3
   code   ({a=>1}) but (True)
   is     ${:a(1)}
   type   Hash+{<anon|97>}
@@ -1276,6 +1418,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0143
   from   inventory:infix:but
   cell   {a=>1} | Any
+  level  3
   code   ({a=>1}) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -1284,6 +1427,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0144
   from   inventory:infix:but
   cell   {a=>1} | (1,2)
+  level  3
   code   ({a=>1}) but ((1,2))
   is     ${:a(1)}
   type   Hash+{<anon|98>}
@@ -1293,6 +1437,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0145
   from   inventory:infix:but
   cell   0 | -0e0
+  level  3
   code   (0) but (-0e0)
   is     0
   type   Int+{<anon|65>}
@@ -1302,6 +1447,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0146
   from   inventory:infix:but
   cell   1 | -0e0
+  level  3
   code   (1) but (-0e0)
   is     1
   type   Int+{<anon|66>}
@@ -1311,6 +1457,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0147
   from   inventory:infix:but
   cell   -1 | -0e0
+  level  3
   code   (-1) but (-0e0)
   is     -1
   type   Int+{<anon|67>}
@@ -1320,6 +1467,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0148
   from   inventory:infix:but
   cell   1/2 | -0e0
+  level  3
   code   (1/2) but (-0e0)
   is     <1/2>
   type   Rat+{<anon|68>}
@@ -1329,6 +1477,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0149
   from   inventory:infix:but
   cell   0e0 | -0e0
+  level  3
   code   (0e0) but (-0e0)
   is     0e0
   type   Num+{<anon|69>}
@@ -1338,6 +1487,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0150
   from   inventory:infix:but
   cell   NaN | -0e0
+  level  3
   code   (NaN) but (-0e0)
   is     NaN
   type   Num+{<anon|70>}
@@ -1347,6 +1497,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0151
   from   inventory:infix:but
   cell   "" | -0e0
+  level  3
   code   ("") but (-0e0)
   is     ""
   type   Str+{<anon|71>}
@@ -1356,6 +1507,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0152
   from   inventory:infix:but
   cell   "a" | -0e0
+  level  3
   code   ("a") but (-0e0)
   is     "a"
   type   Str+{<anon|72>}
@@ -1365,6 +1517,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0153
   from   inventory:infix:but
   cell   True | -0e0
+  level  3
   code   (True) but (-0e0)
   is     Bool::True
   type   Bool+{<anon|73>}
@@ -1374,6 +1527,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0154
   from   inventory:infix:but
   cell   Any | -0e0
+  level  3
   code   (Any) but (-0e0)
   is     Any+{<anon|74>}
   type   Any+{<anon|74>}
@@ -1383,6 +1537,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0155
   from   inventory:infix:but
   cell   (1,2) | -0e0
+  level  3
   code   ((1,2)) but (-0e0)
   is     $(1, 2)
   type   List+{<anon|75>}
@@ -1392,6 +1547,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0156
   from   inventory:infix:but
   cell   {a=>1} | -0e0
+  level  3
   code   ({a=>1}) but (-0e0)
   is     ${:a(1)}
   type   Hash+{<anon|76>}
@@ -1401,6 +1557,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0157
   from   inventory:infix:but
   cell   -0e0 | -0e0
+  level  3
   code   (-0e0) but (-0e0)
   is     -0e0
   type   Num+{<anon|77>}
@@ -1410,6 +1567,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0158
   from   inventory:infix:but
   cell   -0e0 | 0
+  level  3
   code   (-0e0) but (0)
   is     -0e0
   type   Num+{<anon|78>}
@@ -1419,6 +1577,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0159
   from   inventory:infix:but
   cell   -0e0 | 1
+  level  3
   code   (-0e0) but (1)
   is     -0e0
   type   Num+{<anon|79>}
@@ -1428,6 +1587,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0160
   from   inventory:infix:but
   cell   -0e0 | -1
+  level  3
   code   (-0e0) but (-1)
   is     -0e0
   type   Num+{<anon|80>}
@@ -1437,6 +1597,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0161
   from   inventory:infix:but
   cell   -0e0 | 1/2
+  level  3
   code   (-0e0) but (1/2)
   is     -0e0
   type   Num+{<anon|81>}
@@ -1446,6 +1607,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0162
   from   inventory:infix:but
   cell   -0e0 | 0e0
+  level  3
   code   (-0e0) but (0e0)
   is     -0e0
   type   Num+{<anon|82>}
@@ -1455,6 +1617,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0163
   from   inventory:infix:but
   cell   -0e0 | NaN
+  level  3
   code   (-0e0) but (NaN)
   is     -0e0
   type   Num+{<anon|83>}
@@ -1464,6 +1627,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0164
   from   inventory:infix:but
   cell   -0e0 | ""
+  level  3
   code   (-0e0) but ("")
   is     e0
   type   Num+{<anon|84>}
@@ -1473,6 +1637,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0165
   from   inventory:infix:but
   cell   -0e0 | "a"
+  level  3
   code   (-0e0) but ("a")
   is     ae0
   type   Num+{<anon|85>}
@@ -1482,6 +1647,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0166
   from   inventory:infix:but
   cell   -0e0 | True
+  level  3
   code   (-0e0) but (True)
   is     -0e0
   type   Num+{<anon|86>}
@@ -1491,6 +1657,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0167
   from   inventory:infix:but
   cell   -0e0 | Any
+  level  3
   code   (-0e0) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -1499,6 +1666,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0168
   from   inventory:infix:but
   cell   -0e0 | (1,2)
+  level  3
   code   (-0e0) but ((1,2))
   is     -0e0
   type   Num+{<anon|87>}
@@ -1508,6 +1676,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0169
   from   inventory:infix:but
   cell   -0e0 | {a=>1}
+  level  3
   code   (-0e0) but ({a=>1})
   is     -0e0
   type   Num+{<anon|1>}
@@ -1517,6 +1686,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0170
   from   inventory:infix:but
   cell   0 | Inf
+  level  3
   code   (0) but (Inf)
   is     0
   type   Int+{<anon|2>}
@@ -1526,6 +1696,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0171
   from   inventory:infix:but
   cell   1 | Inf
+  level  3
   code   (1) but (Inf)
   is     1
   type   Int+{<anon|3>}
@@ -1535,6 +1706,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0172
   from   inventory:infix:but
   cell   -1 | Inf
+  level  3
   code   (-1) but (Inf)
   is     -1
   type   Int+{<anon|4>}
@@ -1544,6 +1716,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0173
   from   inventory:infix:but
   cell   1/2 | Inf
+  level  3
   code   (1/2) but (Inf)
   is     <1/2>
   type   Rat+{<anon|5>}
@@ -1553,6 +1726,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0174
   from   inventory:infix:but
   cell   0e0 | Inf
+  level  3
   code   (0e0) but (Inf)
   is     0e0
   type   Num+{<anon|6>}
@@ -1562,6 +1736,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0175
   from   inventory:infix:but
   cell   NaN | Inf
+  level  3
   code   (NaN) but (Inf)
   is     NaN
   type   Num+{<anon|7>}
@@ -1571,6 +1746,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0176
   from   inventory:infix:but
   cell   "" | Inf
+  level  3
   code   ("") but (Inf)
   is     ""
   type   Str+{<anon|8>}
@@ -1580,6 +1756,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0177
   from   inventory:infix:but
   cell   "a" | Inf
+  level  3
   code   ("a") but (Inf)
   is     "a"
   type   Str+{<anon|9>}
@@ -1589,6 +1766,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0178
   from   inventory:infix:but
   cell   True | Inf
+  level  3
   code   (True) but (Inf)
   is     Bool::True
   type   Bool+{<anon|10>}
@@ -1598,6 +1776,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0179
   from   inventory:infix:but
   cell   Any | Inf
+  level  3
   code   (Any) but (Inf)
   is     Any+{<anon|11>}
   type   Any+{<anon|11>}
@@ -1607,6 +1786,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0180
   from   inventory:infix:but
   cell   (1,2) | Inf
+  level  3
   code   ((1,2)) but (Inf)
   is     $(1, 2)
   type   List+{<anon|12>}
@@ -1616,6 +1796,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0181
   from   inventory:infix:but
   cell   {a=>1} | Inf
+  level  3
   code   ({a=>1}) but (Inf)
   is     ${:a(1)}
   type   Hash+{<anon|13>}
@@ -1625,6 +1806,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0182
   from   inventory:infix:but
   cell   -0e0 | Inf
+  level  3
   code   (-0e0) but (Inf)
   is     -0e0
   type   Num+{<anon|14>}
@@ -1634,6 +1816,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0183
   from   inventory:infix:but
   cell   Inf | Inf
+  level  3
   code   (Inf) but (Inf)
   is     Inf
   type   Num+{<anon|15>}
@@ -1643,6 +1826,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0184
   from   inventory:infix:but
   cell   Inf | 0
+  level  3
   code   (Inf) but (0)
   is     Inf
   type   Num+{<anon|16>}
@@ -1652,6 +1836,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0185
   from   inventory:infix:but
   cell   Inf | 1
+  level  3
   code   (Inf) but (1)
   is     Inf
   type   Num+{<anon|17>}
@@ -1661,6 +1846,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0186
   from   inventory:infix:but
   cell   Inf | -1
+  level  3
   code   (Inf) but (-1)
   is     Inf
   type   Num+{<anon|18>}
@@ -1670,6 +1856,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0187
   from   inventory:infix:but
   cell   Inf | 1/2
+  level  3
   code   (Inf) but (1/2)
   is     Inf
   type   Num+{<anon|19>}
@@ -1679,6 +1866,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0188
   from   inventory:infix:but
   cell   Inf | 0e0
+  level  3
   code   (Inf) but (0e0)
   is     Inf
   type   Num+{<anon|20>}
@@ -1688,6 +1876,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0189
   from   inventory:infix:but
   cell   Inf | NaN
+  level  3
   code   (Inf) but (NaN)
   is     Inf
   type   Num+{<anon|21>}
@@ -1697,6 +1886,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0190
   from   inventory:infix:but
   cell   Inf | ""
+  level  3
   code   (Inf) but ("")
   is     
   type   Num+{<anon|22>}
@@ -1706,6 +1896,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0191
   from   inventory:infix:but
   cell   Inf | "a"
+  level  3
   code   (Inf) but ("a")
   is     a
   type   Num+{<anon|23>}
@@ -1715,6 +1906,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0192
   from   inventory:infix:but
   cell   Inf | True
+  level  3
   code   (Inf) but (True)
   is     Inf
   type   Num+{<anon|24>}
@@ -1724,6 +1916,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0193
   from   inventory:infix:but
   cell   Inf | Any
+  level  3
   code   (Inf) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -1732,6 +1925,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0194
   from   inventory:infix:but
   cell   Inf | (1,2)
+  level  3
   code   (Inf) but ((1,2))
   is     Inf
   type   Num+{<anon|25>}
@@ -1741,6 +1935,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0195
   from   inventory:infix:but
   cell   Inf | {a=>1}
+  level  3
   code   (Inf) but ({a=>1})
   is     Inf
   type   Num+{<anon|26>}
@@ -1750,6 +1945,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0196
   from   inventory:infix:but
   cell   Inf | -0e0
+  level  3
   code   (Inf) but (-0e0)
   is     Inf
   type   Num+{<anon|27>}
@@ -1759,6 +1955,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0197
   from   inventory:infix:but
   cell   0 | 2**64
+  level  3
   code   (0) but (2**64)
   is     0
   type   Int+{<anon|28>}
@@ -1768,6 +1965,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0198
   from   inventory:infix:but
   cell   1 | 2**64
+  level  3
   code   (1) but (2**64)
   is     1
   type   Int+{<anon|29>}
@@ -1777,6 +1975,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0199
   from   inventory:infix:but
   cell   -1 | 2**64
+  level  3
   code   (-1) but (2**64)
   is     -1
   type   Int+{<anon|30>}
@@ -1786,6 +1985,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0200
   from   inventory:infix:but
   cell   1/2 | 2**64
+  level  3
   code   (1/2) but (2**64)
   is     <1/2>
   type   Rat+{<anon|31>}
@@ -1795,6 +1995,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0201
   from   inventory:infix:but
   cell   0e0 | 2**64
+  level  3
   code   (0e0) but (2**64)
   is     0e0
   type   Num+{<anon|32>}
@@ -1804,6 +2005,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0202
   from   inventory:infix:but
   cell   NaN | 2**64
+  level  3
   code   (NaN) but (2**64)
   is     NaN
   type   Num+{<anon|33>}
@@ -1813,6 +2015,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0203
   from   inventory:infix:but
   cell   "" | 2**64
+  level  3
   code   ("") but (2**64)
   is     ""
   type   Str+{<anon|34>}
@@ -1822,6 +2025,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0204
   from   inventory:infix:but
   cell   "a" | 2**64
+  level  3
   code   ("a") but (2**64)
   is     "a"
   type   Str+{<anon|35>}
@@ -1831,6 +2035,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0205
   from   inventory:infix:but
   cell   True | 2**64
+  level  3
   code   (True) but (2**64)
   is     Bool::True
   type   Bool+{<anon|36>}
@@ -1840,6 +2045,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0206
   from   inventory:infix:but
   cell   Any | 2**64
+  level  3
   code   (Any) but (2**64)
   is     Any+{<anon|37>}
   type   Any+{<anon|37>}
@@ -1849,6 +2055,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0207
   from   inventory:infix:but
   cell   (1,2) | 2**64
+  level  3
   code   ((1,2)) but (2**64)
   is     $(1, 2)
   type   List+{<anon|38>}
@@ -1858,6 +2065,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0208
   from   inventory:infix:but
   cell   {a=>1} | 2**64
+  level  3
   code   ({a=>1}) but (2**64)
   is     ${:a(1)}
   type   Hash+{<anon|39>}
@@ -1867,6 +2075,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0209
   from   inventory:infix:but
   cell   -0e0 | 2**64
+  level  3
   code   (-0e0) but (2**64)
   is     -0e0
   type   Num+{<anon|40>}
@@ -1876,6 +2085,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0210
   from   inventory:infix:but
   cell   Inf | 2**64
+  level  3
   code   (Inf) but (2**64)
   is     Inf
   type   Num+{<anon|41>}
@@ -1885,6 +2095,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0211
   from   inventory:infix:but
   cell   2**64 | 2**64
+  level  3
   code   (2**64) but (2**64)
   is     18446744073709551616
   type   Int+{<anon|42>}
@@ -1894,6 +2105,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0212
   from   inventory:infix:but
   cell   2**64 | 0
+  level  3
   code   (2**64) but (0)
   is     18446744073709551616
   type   Int+{<anon|43>}
@@ -1903,6 +2115,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0213
   from   inventory:infix:but
   cell   2**64 | 1
+  level  3
   code   (2**64) but (1)
   is     18446744073709551616
   type   Int+{<anon|44>}
@@ -1912,6 +2125,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0214
   from   inventory:infix:but
   cell   2**64 | -1
+  level  3
   code   (2**64) but (-1)
   is     18446744073709551616
   type   Int+{<anon|45>}
@@ -1921,6 +2135,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0215
   from   inventory:infix:but
   cell   2**64 | 1/2
+  level  3
   code   (2**64) but (1/2)
   is     18446744073709551616
   type   Int+{<anon|46>}
@@ -1930,6 +2145,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0216
   from   inventory:infix:but
   cell   2**64 | 0e0
+  level  3
   code   (2**64) but (0e0)
   is     18446744073709551616
   type   Int+{<anon|47>}
@@ -1939,6 +2155,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0217
   from   inventory:infix:but
   cell   2**64 | NaN
+  level  3
   code   (2**64) but (NaN)
   is     18446744073709551616
   type   Int+{<anon|48>}
@@ -1948,6 +2165,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0218
   from   inventory:infix:but
   cell   2**64 | ""
+  level  3
   code   (2**64) but ("")
   is     
   type   Int+{<anon|49>}
@@ -1957,6 +2175,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0219
   from   inventory:infix:but
   cell   2**64 | "a"
+  level  3
   code   (2**64) but ("a")
   is     a
   type   Int+{<anon|50>}
@@ -1966,6 +2185,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0220
   from   inventory:infix:but
   cell   2**64 | True
+  level  3
   code   (2**64) but (True)
   is     18446744073709551616
   type   Int+{<anon|51>}
@@ -1975,6 +2195,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0221
   from   inventory:infix:but
   cell   2**64 | Any
+  level  3
   code   (2**64) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -1983,6 +2204,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0222
   from   inventory:infix:but
   cell   2**64 | (1,2)
+  level  3
   code   (2**64) but ((1,2))
   is     18446744073709551616
   type   Int+{<anon|52>}
@@ -1992,6 +2214,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0223
   from   inventory:infix:but
   cell   2**64 | {a=>1}
+  level  3
   code   (2**64) but ({a=>1})
   is     18446744073709551616
   type   Int+{<anon|53>}
@@ -2001,6 +2224,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0224
   from   inventory:infix:but
   cell   2**64 | -0e0
+  level  3
   code   (2**64) but (-0e0)
   is     18446744073709551616
   type   Int+{<anon|54>}
@@ -2010,6 +2234,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0225
   from   inventory:infix:but
   cell   2**64 | Inf
+  level  3
   code   (2**64) but (Inf)
   is     18446744073709551616
   type   Int+{<anon|55>}
@@ -2019,6 +2244,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0226
   from   inventory:infix:but
   cell   0 | False
+  level  3
   code   (0) but (False)
   is     0
   type   Int+{<anon|56>}
@@ -2028,6 +2254,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0227
   from   inventory:infix:but
   cell   1 | False
+  level  3
   code   (1) but (False)
   is     1
   type   Int+{<anon|57>}
@@ -2037,6 +2264,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0228
   from   inventory:infix:but
   cell   -1 | False
+  level  3
   code   (-1) but (False)
   is     -1
   type   Int+{<anon|58>}
@@ -2046,6 +2274,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0229
   from   inventory:infix:but
   cell   1/2 | False
+  level  3
   code   (1/2) but (False)
   is     <1/2>
   type   Rat+{<anon|59>}
@@ -2055,6 +2284,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0230
   from   inventory:infix:but
   cell   0e0 | False
+  level  3
   code   (0e0) but (False)
   is     0e0
   type   Num+{<anon|60>}
@@ -2064,6 +2294,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0231
   from   inventory:infix:but
   cell   NaN | False
+  level  3
   code   (NaN) but (False)
   is     NaN
   type   Num+{<anon|61>}
@@ -2073,6 +2304,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0232
   from   inventory:infix:but
   cell   "" | False
+  level  3
   code   ("") but (False)
   is     ""
   type   Str+{<anon|62>}
@@ -2082,6 +2314,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0233
   from   inventory:infix:but
   cell   "a" | False
+  level  3
   code   ("a") but (False)
   is     "a"
   type   Str+{<anon|63>}
@@ -2091,6 +2324,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0234
   from   inventory:infix:but
   cell   True | False
+  level  3
   code   (True) but (False)
   is     Bool::False
   type   Bool+{<anon|64>}
@@ -2100,6 +2334,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0235
   from   inventory:infix:but
   cell   Any | False
+  level  3
   code   (Any) but (False)
   is     Any+{<anon|65>}
   type   Any+{<anon|65>}
@@ -2109,6 +2344,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0236
   from   inventory:infix:but
   cell   (1,2) | False
+  level  3
   code   ((1,2)) but (False)
   is     $(1, 2)
   type   List+{<anon|66>}
@@ -2118,6 +2354,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0237
   from   inventory:infix:but
   cell   {a=>1} | False
+  level  3
   code   ({a=>1}) but (False)
   is     ${:a(1)}
   type   Hash+{<anon|67>}
@@ -2127,6 +2364,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0238
   from   inventory:infix:but
   cell   -0e0 | False
+  level  3
   code   (-0e0) but (False)
   is     -0e0
   type   Num+{<anon|68>}
@@ -2136,6 +2374,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0239
   from   inventory:infix:but
   cell   Inf | False
+  level  3
   code   (Inf) but (False)
   is     Inf
   type   Num+{<anon|69>}
@@ -2145,6 +2384,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0240
   from   inventory:infix:but
   cell   2**64 | False
+  level  3
   code   (2**64) but (False)
   is     18446744073709551616
   type   Int+{<anon|70>}
@@ -2154,6 +2394,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0241
   from   inventory:infix:but
   cell   False | False
+  level  3
   code   (False) but (False)
   is     Bool::False
   type   Bool+{<anon|71>}
@@ -2163,6 +2404,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0242
   from   inventory:infix:but
   cell   False | 0
+  level  3
   code   (False) but (0)
   is     Bool::False
   type   Bool+{<anon|72>}
@@ -2172,6 +2414,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0243
   from   inventory:infix:but
   cell   False | 1
+  level  3
   code   (False) but (1)
   is     Bool::False
   type   Bool+{<anon|73>}
@@ -2181,6 +2424,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0244
   from   inventory:infix:but
   cell   False | -1
+  level  3
   code   (False) but (-1)
   is     Bool::False
   type   Bool+{<anon|74>}
@@ -2190,6 +2434,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0245
   from   inventory:infix:but
   cell   False | 1/2
+  level  3
   code   (False) but (1/2)
   is     Bool::False
   type   Bool+{<anon|75>}
@@ -2199,6 +2444,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0246
   from   inventory:infix:but
   cell   False | 0e0
+  level  3
   code   (False) but (0e0)
   is     Bool::False
   type   Bool+{<anon|76>}
@@ -2208,6 +2454,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0247
   from   inventory:infix:but
   cell   False | NaN
+  level  3
   code   (False) but (NaN)
   is     Bool::False
   type   Bool+{<anon|77>}
@@ -2217,6 +2464,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0248
   from   inventory:infix:but
   cell   False | ""
+  level  3
   code   (False) but ("")
   is     Bool::False
   type   Bool+{<anon|78>}
@@ -2226,6 +2474,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0249
   from   inventory:infix:but
   cell   False | "a"
+  level  3
   code   (False) but ("a")
   is     Bool::False
   type   Bool+{<anon|79>}
@@ -2235,6 +2484,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0250
   from   inventory:infix:but
   cell   False | True
+  level  3
   code   (False) but (True)
   is     Bool::True
   type   Bool+{<anon|80>}
@@ -2244,6 +2494,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0251
   from   inventory:infix:but
   cell   False | Any
+  level  3
   code   (False) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2252,6 +2503,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0252
   from   inventory:infix:but
   cell   False | (1,2)
+  level  3
   code   (False) but ((1,2))
   is     Bool::False
   type   Bool+{<anon|81>}
@@ -2261,6 +2513,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0253
   from   inventory:infix:but
   cell   False | {a=>1}
+  level  3
   code   (False) but ({a=>1})
   is     Bool::False
   type   Bool+{<anon|82>}
@@ -2270,6 +2523,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0254
   from   inventory:infix:but
   cell   False | -0e0
+  level  3
   code   (False) but (-0e0)
   is     Bool::False
   type   Bool+{<anon|83>}
@@ -2279,6 +2533,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0255
   from   inventory:infix:but
   cell   False | Inf
+  level  3
   code   (False) but (Inf)
   is     Bool::False
   type   Bool+{<anon|84>}
@@ -2288,6 +2543,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0256
   from   inventory:infix:but
   cell   False | 2**64
+  level  3
   code   (False) but (2**64)
   is     Bool::False
   type   Bool+{<anon|85>}
@@ -2297,6 +2553,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0257
   from   inventory:infix:but
   cell   0 | Nil
+  level  3
   code   (0) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2305,6 +2562,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0258
   from   inventory:infix:but
   cell   1 | Nil
+  level  3
   code   (1) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2313,6 +2571,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0259
   from   inventory:infix:but
   cell   -1 | Nil
+  level  3
   code   (-1) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2321,6 +2580,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0260
   from   inventory:infix:but
   cell   1/2 | Nil
+  level  3
   code   (1/2) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2329,6 +2589,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0261
   from   inventory:infix:but
   cell   0e0 | Nil
+  level  3
   code   (0e0) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2337,6 +2598,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0262
   from   inventory:infix:but
   cell   NaN | Nil
+  level  3
   code   (NaN) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2345,6 +2607,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0263
   from   inventory:infix:but
   cell   "" | Nil
+  level  3
   code   ("") but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2353,6 +2616,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0264
   from   inventory:infix:but
   cell   "a" | Nil
+  level  3
   code   ("a") but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2361,6 +2625,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0265
   from   inventory:infix:but
   cell   True | Nil
+  level  3
   code   (True) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2369,6 +2634,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0266
   from   inventory:infix:but
   cell   Any | Nil
+  level  3
   code   (Any) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2377,6 +2643,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0267
   from   inventory:infix:but
   cell   (1,2) | Nil
+  level  3
   code   ((1,2)) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2385,6 +2652,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0268
   from   inventory:infix:but
   cell   {a=>1} | Nil
+  level  3
   code   ({a=>1}) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2393,6 +2661,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0269
   from   inventory:infix:but
   cell   -0e0 | Nil
+  level  3
   code   (-0e0) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2401,6 +2670,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0270
   from   inventory:infix:but
   cell   Inf | Nil
+  level  3
   code   (Inf) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2409,6 +2679,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0271
   from   inventory:infix:but
   cell   2**64 | Nil
+  level  3
   code   (2**64) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2417,6 +2688,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0272
   from   inventory:infix:but
   cell   False | Nil
+  level  3
   code   (False) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2425,6 +2697,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0273
   from   inventory:infix:but
   cell   Nil | Nil
+  level  3
   code   (Nil) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2433,6 +2706,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0274
   from   inventory:infix:but
   cell   Nil | 0
+  level  3
   code   (Nil) but (0)
   is     Nil
   type   Nil+{<anon|86>}
@@ -2442,6 +2716,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0275
   from   inventory:infix:but
   cell   Nil | 1
+  level  3
   code   (Nil) but (1)
   is     Nil
   type   Nil+{<anon|87>}
@@ -2451,6 +2726,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0276
   from   inventory:infix:but
   cell   Nil | -1
+  level  3
   code   (Nil) but (-1)
   is     Nil
   type   Nil+{<anon|88>}
@@ -2460,6 +2736,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0277
   from   inventory:infix:but
   cell   Nil | 1/2
+  level  3
   code   (Nil) but (1/2)
   is     Nil
   type   Nil+{<anon|89>}
@@ -2469,6 +2746,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0278
   from   inventory:infix:but
   cell   Nil | 0e0
+  level  3
   code   (Nil) but (0e0)
   is     Nil
   type   Nil+{<anon|90>}
@@ -2478,6 +2756,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0279
   from   inventory:infix:but
   cell   Nil | NaN
+  level  3
   code   (Nil) but (NaN)
   is     Nil
   type   Nil+{<anon|91>}
@@ -2487,6 +2766,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0280
   from   inventory:infix:but
   cell   Nil | ""
+  level  3
   code   (Nil) but ("")
   is     Nil
   type   Nil+{<anon|92>}
@@ -2496,6 +2776,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0281
   from   inventory:infix:but
   cell   Nil | "a"
+  level  3
   code   (Nil) but ("a")
   is     Nil
   type   Nil+{<anon|93>}
@@ -2505,6 +2786,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0282
   from   inventory:infix:but
   cell   Nil | True
+  level  3
   code   (Nil) but (True)
   is     Nil
   type   Nil+{<anon|94>}
@@ -2514,6 +2796,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0283
   from   inventory:infix:but
   cell   Nil | Any
+  level  3
   code   (Nil) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2522,6 +2805,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0284
   from   inventory:infix:but
   cell   Nil | (1,2)
+  level  3
   code   (Nil) but ((1,2))
   is     Nil
   type   Nil+{<anon|95>}
@@ -2531,6 +2815,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0285
   from   inventory:infix:but
   cell   Nil | {a=>1}
+  level  3
   code   (Nil) but ({a=>1})
   is     Nil
   type   Nil+{<anon|96>}
@@ -2540,6 +2825,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0286
   from   inventory:infix:but
   cell   Nil | -0e0
+  level  3
   code   (Nil) but (-0e0)
   is     Nil
   type   Nil+{<anon|97>}
@@ -2549,6 +2835,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0287
   from   inventory:infix:but
   cell   Nil | Inf
+  level  3
   code   (Nil) but (Inf)
   is     Nil
   type   Nil+{<anon|98>}
@@ -2558,6 +2845,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0288
   from   inventory:infix:but
   cell   Nil | 2**64
+  level  3
   code   (Nil) but (2**64)
   is     Nil
   type   Nil+{<anon|99>}
@@ -2567,6 +2855,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0289
   from   inventory:infix:but
   cell   Nil | False
+  level  3
   code   (Nil) but (False)
   is     Nil
   type   Nil+{<anon|100>}
@@ -2576,6 +2865,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0290
   from   inventory:infix:but
   cell   0 | ()
+  level  3
   code   (0) but (())
   is     0
   type   Int+{<anon|101>}
@@ -2585,6 +2875,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0291
   from   inventory:infix:but
   cell   1 | ()
+  level  3
   code   (1) but (())
   is     1
   type   Int+{<anon|102>}
@@ -2594,6 +2885,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0292
   from   inventory:infix:but
   cell   -1 | ()
+  level  3
   code   (-1) but (())
   is     -1
   type   Int+{<anon|103>}
@@ -2603,6 +2895,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0293
   from   inventory:infix:but
   cell   1/2 | ()
+  level  3
   code   (1/2) but (())
   is     <1/2>
   type   Rat+{<anon|104>}
@@ -2612,6 +2905,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0294
   from   inventory:infix:but
   cell   0e0 | ()
+  level  3
   code   (0e0) but (())
   is     0e0
   type   Num+{<anon|105>}
@@ -2621,6 +2915,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0295
   from   inventory:infix:but
   cell   NaN | ()
+  level  3
   code   (NaN) but (())
   is     NaN
   type   Num+{<anon|106>}
@@ -2630,6 +2925,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0296
   from   inventory:infix:but
   cell   "" | ()
+  level  3
   code   ("") but (())
   is     ""
   type   Str+{<anon|107>}
@@ -2639,6 +2935,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0297
   from   inventory:infix:but
   cell   "a" | ()
+  level  3
   code   ("a") but (())
   is     "a"
   type   Str+{<anon|108>}
@@ -2648,6 +2945,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0298
   from   inventory:infix:but
   cell   True | ()
+  level  3
   code   (True) but (())
   is     Bool::True
   type   Bool+{<anon|109>}
@@ -2657,6 +2955,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0299
   from   inventory:infix:but
   cell   Any | ()
+  level  3
   code   (Any) but (())
   is     Any+{<anon|110>}
   type   Any+{<anon|110>}
@@ -2666,6 +2965,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0300
   from   inventory:infix:but
   cell   (1,2) | ()
+  level  3
   code   ((1,2)) but (())
   is     $(1, 2)
   type   List+{<anon|111>}
@@ -2675,6 +2975,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0301
   from   inventory:infix:but
   cell   {a=>1} | ()
+  level  3
   code   ({a=>1}) but (())
   is     ${:a(1)}
   type   Hash+{<anon|112>}
@@ -2684,6 +2985,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0302
   from   inventory:infix:but
   cell   -0e0 | ()
+  level  3
   code   (-0e0) but (())
   is     -0e0
   type   Num+{<anon|113>}
@@ -2693,6 +2995,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0303
   from   inventory:infix:but
   cell   Inf | ()
+  level  3
   code   (Inf) but (())
   is     Inf
   type   Num+{<anon|114>}
@@ -2702,6 +3005,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0304
   from   inventory:infix:but
   cell   2**64 | ()
+  level  3
   code   (2**64) but (())
   is     18446744073709551616
   type   Int+{<anon|115>}
@@ -2711,6 +3015,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0305
   from   inventory:infix:but
   cell   False | ()
+  level  3
   code   (False) but (())
   is     Bool::False
   type   Bool+{<anon|116>}
@@ -2720,6 +3025,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0306
   from   inventory:infix:but
   cell   Nil | ()
+  level  3
   code   (Nil) but (())
   is     Nil
   type   Nil+{<anon|117>}
@@ -2729,6 +3035,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0307
   from   inventory:infix:but
   cell   () | ()
+  level  3
   code   (()) but (())
   is     $( )
   type   List+{<anon|118>}
@@ -2738,6 +3045,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0308
   from   inventory:infix:but
   cell   () | 0
+  level  3
   code   (()) but (0)
   is     $( )
   type   List+{<anon|119>}
@@ -2747,6 +3055,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0309
   from   inventory:infix:but
   cell   () | 1
+  level  3
   code   (()) but (1)
   is     $( )
   type   List+{<anon|120>}
@@ -2756,6 +3065,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0310
   from   inventory:infix:but
   cell   () | -1
+  level  3
   code   (()) but (-1)
   is     $( )
   type   List+{<anon|121>}
@@ -2765,6 +3075,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0311
   from   inventory:infix:but
   cell   () | 1/2
+  level  3
   code   (()) but (1/2)
   is     $( )
   type   List+{<anon|122>}
@@ -2774,6 +3085,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0312
   from   inventory:infix:but
   cell   () | 0e0
+  level  3
   code   (()) but (0e0)
   is     $( )
   type   List+{<anon|123>}
@@ -2783,6 +3095,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0313
   from   inventory:infix:but
   cell   () | NaN
+  level  3
   code   (()) but (NaN)
   is     $( )
   type   List+{<anon|124>}
@@ -2792,6 +3105,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0314
   from   inventory:infix:but
   cell   () | ""
+  level  3
   code   (()) but ("")
   is     $( )
   type   List+{<anon|125>}
@@ -2801,6 +3115,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0315
   from   inventory:infix:but
   cell   () | "a"
+  level  3
   code   (()) but ("a")
   is     $( )
   type   List+{<anon|126>}
@@ -2810,6 +3125,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0316
   from   inventory:infix:but
   cell   () | True
+  level  3
   code   (()) but (True)
   is     $( )
   type   List+{<anon|127>}
@@ -2819,6 +3135,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0317
   from   inventory:infix:but
   cell   () | Any
+  level  3
   code   (()) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2827,6 +3144,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0318
   from   inventory:infix:but
   cell   () | (1,2)
+  level  3
   code   (()) but ((1,2))
   is     $( )
   type   List+{<anon|128>}
@@ -2836,6 +3154,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0319
   from   inventory:infix:but
   cell   () | {a=>1}
+  level  3
   code   (()) but ({a=>1})
   is     $( )
   type   List+{<anon|129>}
@@ -2845,6 +3164,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0320
   from   inventory:infix:but
   cell   () | -0e0
+  level  3
   code   (()) but (-0e0)
   is     $( )
   type   List+{<anon|130>}
@@ -2854,6 +3174,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0321
   from   inventory:infix:but
   cell   () | Inf
+  level  3
   code   (()) but (Inf)
   is     $( )
   type   List+{<anon|131>}
@@ -2863,6 +3184,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0322
   from   inventory:infix:but
   cell   () | 2**64
+  level  3
   code   (()) but (2**64)
   is     $( )
   type   List+{<anon|132>}
@@ -2872,6 +3194,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0323
   from   inventory:infix:but
   cell   () | False
+  level  3
   code   (()) but (False)
   is     $( )
   type   List+{<anon|133>}
@@ -2881,6 +3204,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0324
   from   inventory:infix:but
   cell   () | Nil
+  level  3
   code   (()) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -2889,6 +3213,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0325
   from   inventory:infix:but
   cell   0 | "0"
+  level  3
   code   (0) but ("0")
   is     0
   type   Int+{<anon|134>}
@@ -2898,6 +3223,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0326
   from   inventory:infix:but
   cell   1 | "0"
+  level  3
   code   (1) but ("0")
   is     0
   type   Int+{<anon|135>}
@@ -2907,6 +3233,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0327
   from   inventory:infix:but
   cell   -1 | "0"
+  level  3
   code   (-1) but ("0")
   is     0
   type   Int+{<anon|136>}
@@ -2916,6 +3243,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0328
   from   inventory:infix:but
   cell   1/2 | "0"
+  level  3
   code   (1/2) but ("0")
   is     <1/2>
   type   Rat+{<anon|137>}
@@ -2925,6 +3253,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0329
   from   inventory:infix:but
   cell   0e0 | "0"
+  level  3
   code   (0e0) but ("0")
   is     0e0
   type   Num+{<anon|138>}
@@ -2934,6 +3263,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0330
   from   inventory:infix:but
   cell   NaN | "0"
+  level  3
   code   (NaN) but ("0")
   is     0
   type   Num+{<anon|139>}
@@ -2943,6 +3273,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0331
   from   inventory:infix:but
   cell   "" | "0"
+  level  3
   code   ("") but ("0")
   is     ""
   type   Str+{<anon|140>}
@@ -2952,6 +3283,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0332
   from   inventory:infix:but
   cell   "a" | "0"
+  level  3
   code   ("a") but ("0")
   is     "a"
   type   Str+{<anon|141>}
@@ -2961,6 +3293,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0333
   from   inventory:infix:but
   cell   True | "0"
+  level  3
   code   (True) but ("0")
   is     Bool::True
   type   Bool+{<anon|142>}
@@ -2970,6 +3303,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0334
   from   inventory:infix:but
   cell   Any | "0"
+  level  3
   code   (Any) but ("0")
   is     Any+{<anon|143>}
   type   Any+{<anon|143>}
@@ -2979,6 +3313,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0335
   from   inventory:infix:but
   cell   (1,2) | "0"
+  level  3
   code   ((1,2)) but ("0")
   is     $(1, 2)
   type   List+{<anon|144>}
@@ -2988,6 +3323,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0336
   from   inventory:infix:but
   cell   {a=>1} | "0"
+  level  3
   code   ({a=>1}) but ("0")
   is     ${:a(1)}
   type   Hash+{<anon|145>}
@@ -2997,6 +3333,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0337
   from   inventory:infix:but
   cell   -0e0 | "0"
+  level  3
   code   (-0e0) but ("0")
   is     0e0
   type   Num+{<anon|146>}
@@ -3006,6 +3343,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0338
   from   inventory:infix:but
   cell   Inf | "0"
+  level  3
   code   (Inf) but ("0")
   is     0
   type   Num+{<anon|147>}
@@ -3015,6 +3353,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0339
   from   inventory:infix:but
   cell   2**64 | "0"
+  level  3
   code   (2**64) but ("0")
   is     0
   type   Int+{<anon|148>}
@@ -3024,6 +3363,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0340
   from   inventory:infix:but
   cell   False | "0"
+  level  3
   code   (False) but ("0")
   is     Bool::False
   type   Bool+{<anon|149>}
@@ -3033,6 +3373,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0341
   from   inventory:infix:but
   cell   Nil | "0"
+  level  3
   code   (Nil) but ("0")
   is     Nil
   type   Nil+{<anon|150>}
@@ -3042,6 +3383,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0342
   from   inventory:infix:but
   cell   () | "0"
+  level  3
   code   (()) but ("0")
   is     $( )
   type   List+{<anon|151>}
@@ -3051,6 +3393,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0343
   from   inventory:infix:but
   cell   "0" | "0"
+  level  3
   code   ("0") but ("0")
   is     "0"
   type   Str+{<anon|152>}
@@ -3060,6 +3403,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0344
   from   inventory:infix:but
   cell   "0" | 0
+  level  3
   code   ("0") but (0)
   is     "0"
   type   Str+{<anon|153>}
@@ -3069,6 +3413,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0345
   from   inventory:infix:but
   cell   "0" | 1
+  level  3
   code   ("0") but (1)
   is     "0"
   type   Str+{<anon|154>}
@@ -3078,6 +3423,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0346
   from   inventory:infix:but
   cell   "0" | -1
+  level  3
   code   ("0") but (-1)
   is     "0"
   type   Str+{<anon|155>}
@@ -3087,6 +3433,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0347
   from   inventory:infix:but
   cell   "0" | 1/2
+  level  3
   code   ("0") but (1/2)
   is     "0"
   type   Str+{<anon|156>}
@@ -3096,6 +3443,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0348
   from   inventory:infix:but
   cell   "0" | 0e0
+  level  3
   code   ("0") but (0e0)
   is     "0"
   type   Str+{<anon|157>}
@@ -3105,6 +3453,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0349
   from   inventory:infix:but
   cell   "0" | NaN
+  level  3
   code   ("0") but (NaN)
   is     "0"
   type   Str+{<anon|158>}
@@ -3114,6 +3463,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0350
   from   inventory:infix:but
   cell   "0" | ""
+  level  3
   code   ("0") but ("")
   is     "0"
   type   Str+{<anon|159>}
@@ -3123,6 +3473,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0351
   from   inventory:infix:but
   cell   "0" | "a"
+  level  3
   code   ("0") but ("a")
   is     "0"
   type   Str+{<anon|160>}
@@ -3132,6 +3483,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0352
   from   inventory:infix:but
   cell   "0" | True
+  level  3
   code   ("0") but (True)
   is     "0"
   type   Str+{<anon|161>}
@@ -3141,6 +3493,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0353
   from   inventory:infix:but
   cell   "0" | Any
+  level  3
   code   ("0") but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -3149,6 +3502,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0354
   from   inventory:infix:but
   cell   "0" | (1,2)
+  level  3
   code   ("0") but ((1,2))
   is     "0"
   type   Str+{<anon|162>}
@@ -3158,6 +3512,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0355
   from   inventory:infix:but
   cell   "0" | {a=>1}
+  level  3
   code   ("0") but ({a=>1})
   is     "0"
   type   Str+{<anon|163>}
@@ -3167,6 +3522,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0356
   from   inventory:infix:but
   cell   "0" | -0e0
+  level  3
   code   ("0") but (-0e0)
   is     "0"
   type   Str+{<anon|164>}
@@ -3176,6 +3532,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0357
   from   inventory:infix:but
   cell   "0" | Inf
+  level  3
   code   ("0") but (Inf)
   is     "0"
   type   Str+{<anon|165>}
@@ -3185,6 +3542,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0358
   from   inventory:infix:but
   cell   "0" | 2**64
+  level  3
   code   ("0") but (2**64)
   is     "0"
   type   Str+{<anon|166>}
@@ -3194,6 +3552,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0359
   from   inventory:infix:but
   cell   "0" | False
+  level  3
   code   ("0") but (False)
   is     "0"
   type   Str+{<anon|167>}
@@ -3203,6 +3562,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0360
   from   inventory:infix:but
   cell   "0" | Nil
+  level  3
   code   ("0") but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -3211,6 +3571,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0361
   from   inventory:infix:but
   cell   "0" | ()
+  level  3
   code   ("0") but (())
   is     "0"
   type   Str+{<anon|168>}
@@ -3220,6 +3581,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0362
   from   inventory:infix:but
   cell   0 | (1..3)
+  level  3
   code   (0) but ((1..3))
   is     0
   type   Int+{<anon|169>}
@@ -3229,6 +3591,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0363
   from   inventory:infix:but
   cell   1 | (1..3)
+  level  3
   code   (1) but ((1..3))
   is     1
   type   Int+{<anon|170>}
@@ -3238,6 +3601,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0364
   from   inventory:infix:but
   cell   -1 | (1..3)
+  level  3
   code   (-1) but ((1..3))
   is     -1
   type   Int+{<anon|171>}
@@ -3247,6 +3611,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0365
   from   inventory:infix:but
   cell   1/2 | (1..3)
+  level  3
   code   (1/2) but ((1..3))
   is     <1/2>
   type   Rat+{<anon|172>}
@@ -3256,6 +3621,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0366
   from   inventory:infix:but
   cell   0e0 | (1..3)
+  level  3
   code   (0e0) but ((1..3))
   is     0e0
   type   Num+{<anon|173>}
@@ -3265,6 +3631,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0367
   from   inventory:infix:but
   cell   NaN | (1..3)
+  level  3
   code   (NaN) but ((1..3))
   is     NaN
   type   Num+{<anon|174>}
@@ -3274,6 +3641,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0368
   from   inventory:infix:but
   cell   "" | (1..3)
+  level  3
   code   ("") but ((1..3))
   is     ""
   type   Str+{<anon|175>}
@@ -3283,6 +3651,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0369
   from   inventory:infix:but
   cell   "a" | (1..3)
+  level  3
   code   ("a") but ((1..3))
   is     "a"
   type   Str+{<anon|1>}
@@ -3292,6 +3661,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0370
   from   inventory:infix:but
   cell   True | (1..3)
+  level  3
   code   (True) but ((1..3))
   is     Bool::True
   type   Bool+{<anon|2>}
@@ -3301,6 +3671,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0371
   from   inventory:infix:but
   cell   Any | (1..3)
+  level  3
   code   (Any) but ((1..3))
   is     Any+{<anon|3>}
   type   Any+{<anon|3>}
@@ -3310,6 +3681,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0372
   from   inventory:infix:but
   cell   (1,2) | (1..3)
+  level  3
   code   ((1,2)) but ((1..3))
   is     $(1, 2)
   type   List+{<anon|4>}
@@ -3319,6 +3691,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0373
   from   inventory:infix:but
   cell   {a=>1} | (1..3)
+  level  3
   code   ({a=>1}) but ((1..3))
   is     ${:a(1)}
   type   Hash+{<anon|5>}
@@ -3328,6 +3701,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0374
   from   inventory:infix:but
   cell   -0e0 | (1..3)
+  level  3
   code   (-0e0) but ((1..3))
   is     -0e0
   type   Num+{<anon|6>}
@@ -3337,6 +3711,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0375
   from   inventory:infix:but
   cell   Inf | (1..3)
+  level  3
   code   (Inf) but ((1..3))
   is     Inf
   type   Num+{<anon|7>}
@@ -3346,6 +3721,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0376
   from   inventory:infix:but
   cell   2**64 | (1..3)
+  level  3
   code   (2**64) but ((1..3))
   is     18446744073709551616
   type   Int+{<anon|8>}
@@ -3355,6 +3731,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0377
   from   inventory:infix:but
   cell   False | (1..3)
+  level  3
   code   (False) but ((1..3))
   is     Bool::False
   type   Bool+{<anon|9>}
@@ -3364,6 +3741,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0378
   from   inventory:infix:but
   cell   Nil | (1..3)
+  level  3
   code   (Nil) but ((1..3))
   is     Nil
   type   Nil+{<anon|10>}
@@ -3373,6 +3751,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0379
   from   inventory:infix:but
   cell   () | (1..3)
+  level  3
   code   (()) but ((1..3))
   is     $( )
   type   List+{<anon|11>}
@@ -3382,6 +3761,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0380
   from   inventory:infix:but
   cell   "0" | (1..3)
+  level  3
   code   ("0") but ((1..3))
   is     "0"
   type   Str+{<anon|12>}
@@ -3391,6 +3771,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0381
   from   inventory:infix:but
   cell   (1..3) | (1..3)
+  level  3
   code   ((1..3)) but ((1..3))
   is     1..3
   type   Range+{<anon|13>}
@@ -3400,6 +3781,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0382
   from   inventory:infix:but
   cell   (1..3) | 0
+  level  3
   code   ((1..3)) but (0)
   is     1..3
   type   Range+{<anon|14>}
@@ -3409,6 +3791,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0383
   from   inventory:infix:but
   cell   (1..3) | 1
+  level  3
   code   ((1..3)) but (1)
   is     1..3
   type   Range+{<anon|15>}
@@ -3418,6 +3801,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0384
   from   inventory:infix:but
   cell   (1..3) | -1
+  level  3
   code   ((1..3)) but (-1)
   is     1..3
   type   Range+{<anon|16>}
@@ -3427,6 +3811,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0385
   from   inventory:infix:but
   cell   (1..3) | 1/2
+  level  3
   code   ((1..3)) but (1/2)
   is     1..3
   type   Range+{<anon|17>}
@@ -3436,6 +3821,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0386
   from   inventory:infix:but
   cell   (1..3) | 0e0
+  level  3
   code   ((1..3)) but (0e0)
   is     1..3
   type   Range+{<anon|18>}
@@ -3445,6 +3831,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0387
   from   inventory:infix:but
   cell   (1..3) | NaN
+  level  3
   code   ((1..3)) but (NaN)
   is     1..3
   type   Range+{<anon|19>}
@@ -3454,6 +3841,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0388
   from   inventory:infix:but
   cell   (1..3) | ""
+  level  3
   code   ((1..3)) but ("")
   is     1..3
   type   Range+{<anon|20>}
@@ -3463,6 +3851,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0389
   from   inventory:infix:but
   cell   (1..3) | "a"
+  level  3
   code   ((1..3)) but ("a")
   is     1..3
   type   Range+{<anon|21>}
@@ -3472,6 +3861,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0390
   from   inventory:infix:but
   cell   (1..3) | True
+  level  3
   code   ((1..3)) but (True)
   is     1..3
   type   Range+{<anon|22>}
@@ -3481,6 +3871,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0391
   from   inventory:infix:but
   cell   (1..3) | Any
+  level  3
   code   ((1..3)) but (Any)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -3489,6 +3880,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0392
   from   inventory:infix:but
   cell   (1..3) | (1,2)
+  level  3
   code   ((1..3)) but ((1,2))
   is     1..3
   type   Range+{<anon|23>}
@@ -3498,6 +3890,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0393
   from   inventory:infix:but
   cell   (1..3) | {a=>1}
+  level  3
   code   ((1..3)) but ({a=>1})
   is     1..3
   type   Range+{<anon|24>}
@@ -3507,6 +3900,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0394
   from   inventory:infix:but
   cell   (1..3) | -0e0
+  level  3
   code   ((1..3)) but (-0e0)
   is     1..3
   type   Range+{<anon|25>}
@@ -3516,6 +3910,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0395
   from   inventory:infix:but
   cell   (1..3) | Inf
+  level  3
   code   ((1..3)) but (Inf)
   is     1..3
   type   Range+{<anon|26>}
@@ -3525,6 +3920,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0396
   from   inventory:infix:but
   cell   (1..3) | 2**64
+  level  3
   code   ((1..3)) but (2**64)
   is     1..3
   type   Range+{<anon|27>}
@@ -3534,6 +3930,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0397
   from   inventory:infix:but
   cell   (1..3) | False
+  level  3
   code   ((1..3)) but (False)
   is     1..3
   type   Range+{<anon|28>}
@@ -3543,6 +3940,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0398
   from   inventory:infix:but
   cell   (1..3) | Nil
+  level  3
   code   ((1..3)) but (Nil)
   throws X::Mixin::NotComposable
   oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
@@ -3551,6 +3949,7 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0399
   from   inventory:infix:but
   cell   (1..3) | ()
+  level  3
   code   ((1..3)) but (())
   is     1..3
   type   Range+{<anon|29>}
@@ -3560,8 +3959,1737 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
 - id     0400
   from   inventory:infix:but
   cell   (1..3) | "0"
+  level  3
   code   ((1..3)) but ("0")
   is     1..3
   type   Range+{<anon|30>}
   oracle rakudo-2026.07 → 1..3
   oracle rakupp-v3.14.0-92-g78048b0-modified → 1..3
+
+- id     0401
+  from   inventory:infix:but
+  cell   0 | Int
+  level  3
+  code   (0) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 0
+
+- id     0402
+  from   inventory:infix:but
+  cell   1 | Int
+  level  3
+  code   (1) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 1
+
+- id     0403
+  from   inventory:infix:but
+  cell   -1 | Int
+  level  3
+  code   (-1) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → -1
+
+- id     0404
+  from   inventory:infix:but
+  cell   1/2 | Int
+  level  3
+  code   (1/2) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 0.5
+
+- id     0405
+  from   inventory:infix:but
+  cell   0e0 | Int
+  level  3
+  code   (0e0) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 0e0
+
+- id     0406
+  from   inventory:infix:but
+  cell   NaN | Int
+  level  3
+  code   (NaN) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → NaN
+
+- id     0407
+  from   inventory:infix:but
+  cell   "" | Int
+  level  3
+  code   ("") but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0408
+  from   inventory:infix:but
+  cell   "a" | Int
+  level  3
+  code   ("a") but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a"
+
+- id     0409
+  from   inventory:infix:but
+  cell   True | Int
+  level  3
+  code   (True) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Bool::True
+
+- id     0410
+  from   inventory:infix:but
+  cell   Any | Int
+  level  3
+  code   (Any) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Any
+
+- id     0411
+  from   inventory:infix:but
+  cell   (1,2) | Int
+  level  3
+  code   ((1,2)) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → (1, 2)
+
+- id     0412
+  from   inventory:infix:but
+  cell   {a=>1} | Int
+  level  3
+  code   ({a=>1}) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → {:a(1)}
+
+- id     0413
+  from   inventory:infix:but
+  cell   -0e0 | Int
+  level  3
+  code   (-0e0) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → -0e0
+
+- id     0414
+  from   inventory:infix:but
+  cell   Inf | Int
+  level  3
+  code   (Inf) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Inf
+
+- id     0415
+  from   inventory:infix:but
+  cell   2**64 | Int
+  level  3
+  code   (2**64) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 18446744073709551616
+
+- id     0416
+  from   inventory:infix:but
+  cell   False | Int
+  level  3
+  code   (False) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Bool::False
+
+- id     0417
+  from   inventory:infix:but
+  cell   Nil | Int
+  level  3
+  code   (Nil) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Nil
+
+- id     0418
+  from   inventory:infix:but
+  cell   () | Int
+  level  3
+  code   (()) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ()
+
+- id     0419
+  from   inventory:infix:but
+  cell   "0" | Int
+  level  3
+  code   ("0") but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "0"
+
+- id     0420
+  from   inventory:infix:but
+  cell   (1..3) | Int
+  level  3
+  code   ((1..3)) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 1..3
+
+- id     0421
+  from   inventory:infix:but
+  cell   Int | Int
+  level  3
+  code   (Int) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0422
+  from   inventory:infix:but
+  cell   Int | 0
+  level  3
+  code   (Int) but (0)
+  is     Int+{<anon|61>}
+  type   Int+{<anon|61>}
+  oracle rakudo-2026.07 → Int+{<anon|61>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0423
+  from   inventory:infix:but
+  cell   Int | 1
+  level  3
+  code   (Int) but (1)
+  is     Int+{<anon|62>}
+  type   Int+{<anon|62>}
+  oracle rakudo-2026.07 → Int+{<anon|62>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0424
+  from   inventory:infix:but
+  cell   Int | -1
+  level  3
+  code   (Int) but (-1)
+  is     Int+{<anon|63>}
+  type   Int+{<anon|63>}
+  oracle rakudo-2026.07 → Int+{<anon|63>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0425
+  from   inventory:infix:but
+  cell   Int | 1/2
+  level  3
+  code   (Int) but (1/2)
+  is     Int+{<anon|64>}
+  type   Int+{<anon|64>}
+  oracle rakudo-2026.07 → Int+{<anon|64>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0426
+  from   inventory:infix:but
+  cell   Int | 0e0
+  level  3
+  code   (Int) but (0e0)
+  is     Int+{<anon|65>}
+  type   Int+{<anon|65>}
+  oracle rakudo-2026.07 → Int+{<anon|65>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0427
+  from   inventory:infix:but
+  cell   Int | NaN
+  level  3
+  code   (Int) but (NaN)
+  is     Int+{<anon|66>}
+  type   Int+{<anon|66>}
+  oracle rakudo-2026.07 → Int+{<anon|66>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0428
+  from   inventory:infix:but
+  cell   Int | ""
+  level  3
+  code   (Int) but ("")
+  is     Int+{<anon|67>}
+  type   Int+{<anon|67>}
+  oracle rakudo-2026.07 → Int+{<anon|67>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0429
+  from   inventory:infix:but
+  cell   Int | "a"
+  level  3
+  code   (Int) but ("a")
+  is     Int+{<anon|68>}
+  type   Int+{<anon|68>}
+  oracle rakudo-2026.07 → Int+{<anon|68>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0430
+  from   inventory:infix:but
+  cell   Int | True
+  level  3
+  code   (Int) but (True)
+  is     Int+{<anon|69>}
+  type   Int+{<anon|69>}
+  oracle rakudo-2026.07 → Int+{<anon|69>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0431
+  from   inventory:infix:but
+  cell   Int | Any
+  level  3
+  code   (Int) but (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0432
+  from   inventory:infix:but
+  cell   Int | (1,2)
+  level  3
+  code   (Int) but ((1,2))
+  is     Int+{<anon|70>}
+  type   Int+{<anon|70>}
+  oracle rakudo-2026.07 → Int+{<anon|70>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0433
+  from   inventory:infix:but
+  cell   Int | {a=>1}
+  level  3
+  code   (Int) but ({a=>1})
+  is     Int+{<anon|71>}
+  type   Int+{<anon|71>}
+  oracle rakudo-2026.07 → Int+{<anon|71>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0434
+  from   inventory:infix:but
+  cell   Int | -0e0
+  level  3
+  code   (Int) but (-0e0)
+  is     Int+{<anon|72>}
+  type   Int+{<anon|72>}
+  oracle rakudo-2026.07 → Int+{<anon|72>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0435
+  from   inventory:infix:but
+  cell   Int | Inf
+  level  3
+  code   (Int) but (Inf)
+  is     Int+{<anon|73>}
+  type   Int+{<anon|73>}
+  oracle rakudo-2026.07 → Int+{<anon|73>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0436
+  from   inventory:infix:but
+  cell   Int | 2**64
+  level  3
+  code   (Int) but (2**64)
+  is     Int+{<anon|74>}
+  type   Int+{<anon|74>}
+  oracle rakudo-2026.07 → Int+{<anon|74>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0437
+  from   inventory:infix:but
+  cell   Int | False
+  level  3
+  code   (Int) but (False)
+  is     Int+{<anon|75>}
+  type   Int+{<anon|75>}
+  oracle rakudo-2026.07 → Int+{<anon|75>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0438
+  from   inventory:infix:but
+  cell   Int | Nil
+  level  3
+  code   (Int) but (Nil)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0439
+  from   inventory:infix:but
+  cell   Int | ()
+  level  3
+  code   (Int) but (())
+  is     Int+{<anon|76>}
+  type   Int+{<anon|76>}
+  oracle rakudo-2026.07 → Int+{<anon|76>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0440
+  from   inventory:infix:but
+  cell   Int | "0"
+  level  3
+  code   (Int) but ("0")
+  is     Int+{<anon|77>}
+  type   Int+{<anon|77>}
+  oracle rakudo-2026.07 → Int+{<anon|77>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0441
+  from   inventory:infix:but
+  cell   Int | (1..3)
+  level  3
+  code   (Int) but ((1..3))
+  is     Int+{<anon|78>}
+  type   Int+{<anon|78>}
+  oracle rakudo-2026.07 → Int+{<anon|78>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0442
+  from   inventory:infix:but
+  cell   0 | "a b"
+  level  3
+  code   (0) but ("a b")
+  is     a b
+  type   Int+{<anon|79>}
+  oracle rakudo-2026.07 → a b
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 0
+
+- id     0443
+  from   inventory:infix:but
+  cell   1 | "a b"
+  level  3
+  code   (1) but ("a b")
+  is     a b
+  type   Int+{<anon|80>}
+  oracle rakudo-2026.07 → a b
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 1
+
+- id     0444
+  from   inventory:infix:but
+  cell   -1 | "a b"
+  level  3
+  code   (-1) but ("a b")
+  is     a b
+  type   Int+{<anon|81>}
+  oracle rakudo-2026.07 → a b
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → -1
+
+- id     0445
+  from   inventory:infix:but
+  cell   1/2 | "a b"
+  level  3
+  code   (1/2) but ("a b")
+  is     <1/2>
+  type   Rat+{<anon|82>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 0.5
+
+- id     0446
+  from   inventory:infix:but
+  cell   0e0 | "a b"
+  level  3
+  code   (0e0) but ("a b")
+  is     a be0
+  type   Num+{<anon|83>}
+  oracle rakudo-2026.07 → a be0
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 0e0
+
+- id     0447
+  from   inventory:infix:but
+  cell   NaN | "a b"
+  level  3
+  code   (NaN) but ("a b")
+  is     a b
+  type   Num+{<anon|84>}
+  oracle rakudo-2026.07 → a b
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → NaN
+
+- id     0448
+  from   inventory:infix:but
+  cell   "" | "a b"
+  level  3
+  code   ("") but ("a b")
+  is     ""
+  type   Str+{<anon|85>}
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0449
+  from   inventory:infix:but
+  cell   "a" | "a b"
+  level  3
+  code   ("a") but ("a b")
+  is     "a"
+  type   Str+{<anon|86>}
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a"
+
+- id     0450
+  from   inventory:infix:but
+  cell   True | "a b"
+  level  3
+  code   (True) but ("a b")
+  is     Bool::True
+  type   Bool+{<anon|87>}
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Bool::True
+
+- id     0451
+  from   inventory:infix:but
+  cell   Any | "a b"
+  level  3
+  code   (Any) but ("a b")
+  is     Any+{<anon|88>}
+  type   Any+{<anon|88>}
+  oracle rakudo-2026.07 → Any+{<anon|88>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Any
+
+- id     0452
+  from   inventory:infix:but
+  cell   (1,2) | "a b"
+  level  3
+  code   ((1,2)) but ("a b")
+  is     $(1, 2)
+  type   List+{<anon|89>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → (1, 2)
+
+- id     0453
+  from   inventory:infix:but
+  cell   {a=>1} | "a b"
+  level  3
+  code   ({a=>1}) but ("a b")
+  is     ${:a(1)}
+  type   Hash+{<anon|90>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → {:a(1)}
+
+- id     0454
+  from   inventory:infix:but
+  cell   -0e0 | "a b"
+  level  3
+  code   (-0e0) but ("a b")
+  is     a be0
+  type   Num+{<anon|91>}
+  oracle rakudo-2026.07 → a be0
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → -0e0
+
+- id     0455
+  from   inventory:infix:but
+  cell   Inf | "a b"
+  level  3
+  code   (Inf) but ("a b")
+  is     a b
+  type   Num+{<anon|92>}
+  oracle rakudo-2026.07 → a b
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Inf
+
+- id     0456
+  from   inventory:infix:but
+  cell   2**64 | "a b"
+  level  3
+  code   (2**64) but ("a b")
+  is     a b
+  type   Int+{<anon|93>}
+  oracle rakudo-2026.07 → a b
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 18446744073709551616
+
+- id     0457
+  from   inventory:infix:but
+  cell   False | "a b"
+  level  3
+  code   (False) but ("a b")
+  is     Bool::False
+  type   Bool+{<anon|94>}
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Bool::False
+
+- id     0458
+  from   inventory:infix:but
+  cell   Nil | "a b"
+  level  3
+  code   (Nil) but ("a b")
+  is     Nil
+  type   Nil+{<anon|95>}
+  oracle rakudo-2026.07 → Nil
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Nil
+
+- id     0459
+  from   inventory:infix:but
+  cell   () | "a b"
+  level  3
+  code   (()) but ("a b")
+  is     $( )
+  type   List+{<anon|96>}
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ()
+
+- id     0460
+  from   inventory:infix:but
+  cell   "0" | "a b"
+  level  3
+  code   ("0") but ("a b")
+  is     "0"
+  type   Str+{<anon|97>}
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "0"
+
+- id     0461
+  from   inventory:infix:but
+  cell   (1..3) | "a b"
+  level  3
+  code   ((1..3)) but ("a b")
+  is     1..3
+  type   Range+{<anon|98>}
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 1..3
+
+- id     0462
+  from   inventory:infix:but
+  cell   Int | "a b"
+  level  3
+  code   (Int) but ("a b")
+  is     Int+{<anon|99>}
+  type   Int+{<anon|99>}
+  oracle rakudo-2026.07 → Int+{<anon|99>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0463
+  from   inventory:infix:but
+  cell   "a b" | "a b"
+  level  3
+  code   ("a b") but ("a b")
+  is     "a b"
+  type   Str+{<anon|100>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0464
+  from   inventory:infix:but
+  cell   "a b" | 0
+  level  3
+  code   ("a b") but (0)
+  is     "a b"
+  type   Str+{<anon|101>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0465
+  from   inventory:infix:but
+  cell   "a b" | 1
+  level  3
+  code   ("a b") but (1)
+  is     "a b"
+  type   Str+{<anon|102>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0466
+  from   inventory:infix:but
+  cell   "a b" | -1
+  level  3
+  code   ("a b") but (-1)
+  is     "a b"
+  type   Str+{<anon|103>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0467
+  from   inventory:infix:but
+  cell   "a b" | 1/2
+  level  3
+  code   ("a b") but (1/2)
+  is     "a b"
+  type   Str+{<anon|104>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0468
+  from   inventory:infix:but
+  cell   "a b" | 0e0
+  level  3
+  code   ("a b") but (0e0)
+  is     "a b"
+  type   Str+{<anon|105>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0469
+  from   inventory:infix:but
+  cell   "a b" | NaN
+  level  3
+  code   ("a b") but (NaN)
+  is     "a b"
+  type   Str+{<anon|106>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0470
+  from   inventory:infix:but
+  cell   "a b" | ""
+  level  3
+  code   ("a b") but ("")
+  is     "a b"
+  type   Str+{<anon|107>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0471
+  from   inventory:infix:but
+  cell   "a b" | "a"
+  level  3
+  code   ("a b") but ("a")
+  is     "a b"
+  type   Str+{<anon|108>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0472
+  from   inventory:infix:but
+  cell   "a b" | True
+  level  3
+  code   ("a b") but (True)
+  is     "a b"
+  type   Str+{<anon|109>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0473
+  from   inventory:infix:but
+  cell   "a b" | Any
+  level  3
+  code   ("a b") but (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0474
+  from   inventory:infix:but
+  cell   "a b" | (1,2)
+  level  3
+  code   ("a b") but ((1,2))
+  is     "a b"
+  type   Str+{<anon|110>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0475
+  from   inventory:infix:but
+  cell   "a b" | {a=>1}
+  level  3
+  code   ("a b") but ({a=>1})
+  is     "a b"
+  type   Str+{<anon|111>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0476
+  from   inventory:infix:but
+  cell   "a b" | -0e0
+  level  3
+  code   ("a b") but (-0e0)
+  is     "a b"
+  type   Str+{<anon|112>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0477
+  from   inventory:infix:but
+  cell   "a b" | Inf
+  level  3
+  code   ("a b") but (Inf)
+  is     "a b"
+  type   Str+{<anon|113>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0478
+  from   inventory:infix:but
+  cell   "a b" | 2**64
+  level  3
+  code   ("a b") but (2**64)
+  is     "a b"
+  type   Str+{<anon|114>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0479
+  from   inventory:infix:but
+  cell   "a b" | False
+  level  3
+  code   ("a b") but (False)
+  is     "a b"
+  type   Str+{<anon|115>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0480
+  from   inventory:infix:but
+  cell   "a b" | Nil
+  level  3
+  code   ("a b") but (Nil)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0481
+  from   inventory:infix:but
+  cell   "a b" | ()
+  level  3
+  code   ("a b") but (())
+  is     "a b"
+  type   Str+{<anon|116>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0482
+  from   inventory:infix:but
+  cell   "a b" | "0"
+  level  3
+  code   ("a b") but ("0")
+  is     "a b"
+  type   Str+{<anon|117>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0483
+  from   inventory:infix:but
+  cell   "a b" | (1..3)
+  level  3
+  code   ("a b") but ((1..3))
+  is     "a b"
+  type   Str+{<anon|118>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0484
+  from   inventory:infix:but
+  cell   "a b" | Int
+  level  3
+  code   ("a b") but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0485
+  from   inventory:infix:but
+  cell   0 | [1,2]
+  level  3
+  code   (0) but ([1,2])
+  is     0
+  type   Int+{<anon|119>}
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 0
+
+- id     0486
+  from   inventory:infix:but
+  cell   1 | [1,2]
+  level  3
+  code   (1) but ([1,2])
+  is     1
+  type   Int+{<anon|120>}
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 1
+
+- id     0487
+  from   inventory:infix:but
+  cell   -1 | [1,2]
+  level  3
+  code   (-1) but ([1,2])
+  is     -1
+  type   Int+{<anon|121>}
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → -1
+
+- id     0488
+  from   inventory:infix:but
+  cell   1/2 | [1,2]
+  level  3
+  code   (1/2) but ([1,2])
+  is     <1/2>
+  type   Rat+{<anon|122>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 0.5
+
+- id     0489
+  from   inventory:infix:but
+  cell   0e0 | [1,2]
+  level  3
+  code   (0e0) but ([1,2])
+  is     0e0
+  type   Num+{<anon|123>}
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 0e0
+
+- id     0490
+  from   inventory:infix:but
+  cell   NaN | [1,2]
+  level  3
+  code   (NaN) but ([1,2])
+  is     NaN
+  type   Num+{<anon|124>}
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → NaN
+
+- id     0491
+  from   inventory:infix:but
+  cell   "" | [1,2]
+  level  3
+  code   ("") but ([1,2])
+  is     ""
+  type   Str+{<anon|125>}
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0492
+  from   inventory:infix:but
+  cell   "a" | [1,2]
+  level  3
+  code   ("a") but ([1,2])
+  is     "a"
+  type   Str+{<anon|126>}
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a"
+
+- id     0493
+  from   inventory:infix:but
+  cell   True | [1,2]
+  level  3
+  code   (True) but ([1,2])
+  is     Bool::True
+  type   Bool+{<anon|1>}
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Bool::True
+
+- id     0494
+  from   inventory:infix:but
+  cell   Any | [1,2]
+  level  3
+  code   (Any) but ([1,2])
+  is     Any+{<anon|2>}
+  type   Any+{<anon|2>}
+  oracle rakudo-2026.07 → Any+{<anon|2>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Any
+
+- id     0495
+  from   inventory:infix:but
+  cell   (1,2) | [1,2]
+  level  3
+  code   ((1,2)) but ([1,2])
+  is     $(1, 2)
+  type   List+{<anon|3>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → (1, 2)
+
+- id     0496
+  from   inventory:infix:but
+  cell   {a=>1} | [1,2]
+  level  3
+  code   ({a=>1}) but ([1,2])
+  is     ${:a(1)}
+  type   Hash+{<anon|4>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → {:a(1)}
+
+- id     0497
+  from   inventory:infix:but
+  cell   -0e0 | [1,2]
+  level  3
+  code   (-0e0) but ([1,2])
+  is     -0e0
+  type   Num+{<anon|5>}
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → -0e0
+
+- id     0498
+  from   inventory:infix:but
+  cell   Inf | [1,2]
+  level  3
+  code   (Inf) but ([1,2])
+  is     Inf
+  type   Num+{<anon|6>}
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Inf
+
+- id     0499
+  from   inventory:infix:but
+  cell   2**64 | [1,2]
+  level  3
+  code   (2**64) but ([1,2])
+  is     18446744073709551616
+  type   Int+{<anon|7>}
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 18446744073709551616
+
+- id     0500
+  from   inventory:infix:but
+  cell   False | [1,2]
+  level  3
+  code   (False) but ([1,2])
+  is     Bool::False
+  type   Bool+{<anon|8>}
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Bool::False
+
+- id     0501
+  from   inventory:infix:but
+  cell   Nil | [1,2]
+  level  3
+  code   (Nil) but ([1,2])
+  is     Nil
+  type   Nil+{<anon|9>}
+  oracle rakudo-2026.07 → Nil
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Nil
+
+- id     0502
+  from   inventory:infix:but
+  cell   () | [1,2]
+  level  3
+  code   (()) but ([1,2])
+  is     $( )
+  type   List+{<anon|10>}
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ()
+
+- id     0503
+  from   inventory:infix:but
+  cell   "0" | [1,2]
+  level  3
+  code   ("0") but ([1,2])
+  is     "0"
+  type   Str+{<anon|11>}
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "0"
+
+- id     0504
+  from   inventory:infix:but
+  cell   (1..3) | [1,2]
+  level  3
+  code   ((1..3)) but ([1,2])
+  is     1..3
+  type   Range+{<anon|12>}
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 1..3
+
+- id     0505
+  from   inventory:infix:but
+  cell   Int | [1,2]
+  level  3
+  code   (Int) but ([1,2])
+  is     Int+{<anon|13>}
+  type   Int+{<anon|13>}
+  oracle rakudo-2026.07 → Int+{<anon|13>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0506
+  from   inventory:infix:but
+  cell   "a b" | [1,2]
+  level  3
+  code   ("a b") but ([1,2])
+  is     "a b"
+  type   Str+{<anon|14>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0507
+  from   inventory:infix:but
+  cell   [1,2] | [1,2]
+  level  3
+  code   ([1,2]) but ([1,2])
+  is     $[1, 2]
+  type   Array+{<anon|15>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0508
+  from   inventory:infix:but
+  cell   [1,2] | 0
+  level  3
+  code   ([1,2]) but (0)
+  is     $[1, 2]
+  type   Array+{<anon|16>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0509
+  from   inventory:infix:but
+  cell   [1,2] | 1
+  level  3
+  code   ([1,2]) but (1)
+  is     $[1, 2]
+  type   Array+{<anon|17>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0510
+  from   inventory:infix:but
+  cell   [1,2] | -1
+  level  3
+  code   ([1,2]) but (-1)
+  is     $[1, 2]
+  type   Array+{<anon|18>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0511
+  from   inventory:infix:but
+  cell   [1,2] | 1/2
+  level  3
+  code   ([1,2]) but (1/2)
+  is     $[1, 2]
+  type   Array+{<anon|19>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0512
+  from   inventory:infix:but
+  cell   [1,2] | 0e0
+  level  3
+  code   ([1,2]) but (0e0)
+  is     $[1, 2]
+  type   Array+{<anon|20>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0513
+  from   inventory:infix:but
+  cell   [1,2] | NaN
+  level  3
+  code   ([1,2]) but (NaN)
+  is     $[1, 2]
+  type   Array+{<anon|21>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0514
+  from   inventory:infix:but
+  cell   [1,2] | ""
+  level  3
+  code   ([1,2]) but ("")
+  is     $[1, 2]
+  type   Array+{<anon|22>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0515
+  from   inventory:infix:but
+  cell   [1,2] | "a"
+  level  3
+  code   ([1,2]) but ("a")
+  is     $[1, 2]
+  type   Array+{<anon|23>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0516
+  from   inventory:infix:but
+  cell   [1,2] | True
+  level  3
+  code   ([1,2]) but (True)
+  is     $[1, 2]
+  type   Array+{<anon|24>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0517
+  from   inventory:infix:but
+  cell   [1,2] | Any
+  level  3
+  code   ([1,2]) but (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0518
+  from   inventory:infix:but
+  cell   [1,2] | (1,2)
+  level  3
+  code   ([1,2]) but ((1,2))
+  is     $[1, 2]
+  type   Array+{<anon|25>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0519
+  from   inventory:infix:but
+  cell   [1,2] | {a=>1}
+  level  3
+  code   ([1,2]) but ({a=>1})
+  is     $[1, 2]
+  type   Array+{<anon|26>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0520
+  from   inventory:infix:but
+  cell   [1,2] | -0e0
+  level  3
+  code   ([1,2]) but (-0e0)
+  is     $[1, 2]
+  type   Array+{<anon|27>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0521
+  from   inventory:infix:but
+  cell   [1,2] | Inf
+  level  3
+  code   ([1,2]) but (Inf)
+  is     $[1, 2]
+  type   Array+{<anon|28>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0522
+  from   inventory:infix:but
+  cell   [1,2] | 2**64
+  level  3
+  code   ([1,2]) but (2**64)
+  is     $[1, 2]
+  type   Array+{<anon|29>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0523
+  from   inventory:infix:but
+  cell   [1,2] | False
+  level  3
+  code   ([1,2]) but (False)
+  is     $[1, 2]
+  type   Array+{<anon|30>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0524
+  from   inventory:infix:but
+  cell   [1,2] | Nil
+  level  3
+  code   ([1,2]) but (Nil)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0525
+  from   inventory:infix:but
+  cell   [1,2] | ()
+  level  3
+  code   ([1,2]) but (())
+  is     $[1, 2]
+  type   Array+{<anon|31>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0526
+  from   inventory:infix:but
+  cell   [1,2] | "0"
+  level  3
+  code   ([1,2]) but ("0")
+  is     $[1, 2]
+  type   Array+{<anon|32>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0527
+  from   inventory:infix:but
+  cell   [1,2] | (1..3)
+  level  3
+  code   ([1,2]) but ((1..3))
+  is     $[1, 2]
+  type   Array+{<anon|33>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0528
+  from   inventory:infix:but
+  cell   [1,2] | Int
+  level  3
+  code   ([1,2]) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0529
+  from   inventory:infix:but
+  cell   [1,2] | "a b"
+  level  3
+  code   ([1,2]) but ("a b")
+  is     $[1, 2]
+  type   Array+{<anon|34>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0530
+  from   inventory:infix:but
+  cell   0 | (a => 1)
+  level  3
+  code   (0) but ((a => 1))
+  is     0
+  type   Int+{<anon|35>}
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 0
+
+- id     0531
+  from   inventory:infix:but
+  cell   1 | (a => 1)
+  level  3
+  code   (1) but ((a => 1))
+  is     1
+  type   Int+{<anon|36>}
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 1
+
+- id     0532
+  from   inventory:infix:but
+  cell   -1 | (a => 1)
+  level  3
+  code   (-1) but ((a => 1))
+  is     -1
+  type   Int+{<anon|37>}
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → -1
+
+- id     0533
+  from   inventory:infix:but
+  cell   1/2 | (a => 1)
+  level  3
+  code   (1/2) but ((a => 1))
+  is     <1/2>
+  type   Rat+{<anon|38>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 0.5
+
+- id     0534
+  from   inventory:infix:but
+  cell   0e0 | (a => 1)
+  level  3
+  code   (0e0) but ((a => 1))
+  is     0e0
+  type   Num+{<anon|39>}
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 0e0
+
+- id     0535
+  from   inventory:infix:but
+  cell   NaN | (a => 1)
+  level  3
+  code   (NaN) but ((a => 1))
+  is     NaN
+  type   Num+{<anon|40>}
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → NaN
+
+- id     0536
+  from   inventory:infix:but
+  cell   "" | (a => 1)
+  level  3
+  code   ("") but ((a => 1))
+  is     ""
+  type   Str+{<anon|41>}
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ""
+
+- id     0537
+  from   inventory:infix:but
+  cell   "a" | (a => 1)
+  level  3
+  code   ("a") but ((a => 1))
+  is     "a"
+  type   Str+{<anon|42>}
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a"
+
+- id     0538
+  from   inventory:infix:but
+  cell   True | (a => 1)
+  level  3
+  code   (True) but ((a => 1))
+  is     Bool::True
+  type   Bool+{<anon|43>}
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Bool::True
+
+- id     0539
+  from   inventory:infix:but
+  cell   Any | (a => 1)
+  level  3
+  code   (Any) but ((a => 1))
+  is     Any+{<anon|44>}
+  type   Any+{<anon|44>}
+  oracle rakudo-2026.07 → Any+{<anon|44>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Any
+
+- id     0540
+  from   inventory:infix:but
+  cell   (1,2) | (a => 1)
+  level  3
+  code   ((1,2)) but ((a => 1))
+  is     $(1, 2)
+  type   List+{<anon|45>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → (1, 2)
+
+- id     0541
+  from   inventory:infix:but
+  cell   {a=>1} | (a => 1)
+  level  3
+  code   ({a=>1}) but ((a => 1))
+  is     ${:a(1)}
+  type   Hash+{<anon|46>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → {:a(1)}
+
+- id     0542
+  from   inventory:infix:but
+  cell   -0e0 | (a => 1)
+  level  3
+  code   (-0e0) but ((a => 1))
+  is     -0e0
+  type   Num+{<anon|47>}
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → -0e0
+
+- id     0543
+  from   inventory:infix:but
+  cell   Inf | (a => 1)
+  level  3
+  code   (Inf) but ((a => 1))
+  is     Inf
+  type   Num+{<anon|48>}
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Inf
+
+- id     0544
+  from   inventory:infix:but
+  cell   2**64 | (a => 1)
+  level  3
+  code   (2**64) but ((a => 1))
+  is     18446744073709551616
+  type   Int+{<anon|49>}
+  oracle rakudo-2026.07 → 18446744073709551616
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 18446744073709551616
+
+- id     0545
+  from   inventory:infix:but
+  cell   False | (a => 1)
+  level  3
+  code   (False) but ((a => 1))
+  is     Bool::False
+  type   Bool+{<anon|50>}
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Bool::False
+
+- id     0546
+  from   inventory:infix:but
+  cell   Nil | (a => 1)
+  level  3
+  code   (Nil) but ((a => 1))
+  is     Nil
+  type   Nil+{<anon|51>}
+  oracle rakudo-2026.07 → Nil
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Nil
+
+- id     0547
+  from   inventory:infix:but
+  cell   () | (a => 1)
+  level  3
+  code   (()) but ((a => 1))
+  is     $( )
+  type   List+{<anon|52>}
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ()
+
+- id     0548
+  from   inventory:infix:but
+  cell   "0" | (a => 1)
+  level  3
+  code   ("0") but ((a => 1))
+  is     "0"
+  type   Str+{<anon|53>}
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "0"
+
+- id     0549
+  from   inventory:infix:but
+  cell   (1..3) | (a => 1)
+  level  3
+  code   ((1..3)) but ((a => 1))
+  is     1..3
+  type   Range+{<anon|54>}
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → 1..3
+
+- id     0550
+  from   inventory:infix:but
+  cell   Int | (a => 1)
+  level  3
+  code   (Int) but ((a => 1))
+  is     Int+{<anon|55>}
+  type   Int+{<anon|55>}
+  oracle rakudo-2026.07 → Int+{<anon|55>}
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → Int
+
+- id     0551
+  from   inventory:infix:but
+  cell   "a b" | (a => 1)
+  level  3
+  code   ("a b") but ((a => 1))
+  is     "a b"
+  type   Str+{<anon|56>}
+  oracle rakudo-2026.07 → "a b"
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → "a b"
+
+- id     0552
+  from   inventory:infix:but
+  cell   [1,2] | (a => 1)
+  level  3
+  code   ([1,2]) but ((a => 1))
+  is     $[1, 2]
+  type   Array+{<anon|57>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → [1, 2]
+
+- id     0553
+  from   inventory:infix:but
+  cell   (a => 1) | (a => 1)
+  level  3
+  code   ((a => 1)) but ((a => 1))
+  is     :a(1)
+  type   Pair+{<anon|58>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0554
+  from   inventory:infix:but
+  cell   (a => 1) | 0
+  level  3
+  code   ((a => 1)) but (0)
+  is     :a(1)
+  type   Pair+{<anon|59>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0555
+  from   inventory:infix:but
+  cell   (a => 1) | 1
+  level  3
+  code   ((a => 1)) but (1)
+  is     :a(1)
+  type   Pair+{<anon|60>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0556
+  from   inventory:infix:but
+  cell   (a => 1) | -1
+  level  3
+  code   ((a => 1)) but (-1)
+  is     :a(1)
+  type   Pair+{<anon|61>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0557
+  from   inventory:infix:but
+  cell   (a => 1) | 1/2
+  level  3
+  code   ((a => 1)) but (1/2)
+  is     :a(1)
+  type   Pair+{<anon|62>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0558
+  from   inventory:infix:but
+  cell   (a => 1) | 0e0
+  level  3
+  code   ((a => 1)) but (0e0)
+  is     :a(1)
+  type   Pair+{<anon|63>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0559
+  from   inventory:infix:but
+  cell   (a => 1) | NaN
+  level  3
+  code   ((a => 1)) but (NaN)
+  is     :a(1)
+  type   Pair+{<anon|64>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0560
+  from   inventory:infix:but
+  cell   (a => 1) | ""
+  level  3
+  code   ((a => 1)) but ("")
+  is     :a(1)
+  type   Pair+{<anon|65>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0561
+  from   inventory:infix:but
+  cell   (a => 1) | "a"
+  level  3
+  code   ((a => 1)) but ("a")
+  is     :a(1)
+  type   Pair+{<anon|66>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0562
+  from   inventory:infix:but
+  cell   (a => 1) | True
+  level  3
+  code   ((a => 1)) but (True)
+  is     :a(1)
+  type   Pair+{<anon|67>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0563
+  from   inventory:infix:but
+  cell   (a => 1) | Any
+  level  3
+  code   ((a => 1)) but (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0564
+  from   inventory:infix:but
+  cell   (a => 1) | (1,2)
+  level  3
+  code   ((a => 1)) but ((1,2))
+  is     :a(1)
+  type   Pair+{<anon|68>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0565
+  from   inventory:infix:but
+  cell   (a => 1) | {a=>1}
+  level  3
+  code   ((a => 1)) but ({a=>1})
+  is     :a(1)
+  type   Pair+{<anon|69>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0566
+  from   inventory:infix:but
+  cell   (a => 1) | -0e0
+  level  3
+  code   ((a => 1)) but (-0e0)
+  is     :a(1)
+  type   Pair+{<anon|70>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0567
+  from   inventory:infix:but
+  cell   (a => 1) | Inf
+  level  3
+  code   ((a => 1)) but (Inf)
+  is     :a(1)
+  type   Pair+{<anon|71>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0568
+  from   inventory:infix:but
+  cell   (a => 1) | 2**64
+  level  3
+  code   ((a => 1)) but (2**64)
+  is     :a(1)
+  type   Pair+{<anon|72>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0569
+  from   inventory:infix:but
+  cell   (a => 1) | False
+  level  3
+  code   ((a => 1)) but (False)
+  is     :a(1)
+  type   Pair+{<anon|73>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0570
+  from   inventory:infix:but
+  cell   (a => 1) | Nil
+  level  3
+  code   ((a => 1)) but (Nil)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0571
+  from   inventory:infix:but
+  cell   (a => 1) | ()
+  level  3
+  code   ((a => 1)) but (())
+  is     :a(1)
+  type   Pair+{<anon|74>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0572
+  from   inventory:infix:but
+  cell   (a => 1) | "0"
+  level  3
+  code   ((a => 1)) but ("0")
+  is     :a(1)
+  type   Pair+{<anon|75>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0573
+  from   inventory:infix:but
+  cell   (a => 1) | (1..3)
+  level  3
+  code   ((a => 1)) but ((1..3))
+  is     :a(1)
+  type   Pair+{<anon|76>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0574
+  from   inventory:infix:but
+  cell   (a => 1) | Int
+  level  3
+  code   ((a => 1)) but (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0575
+  from   inventory:infix:but
+  cell   (a => 1) | "a b"
+  level  3
+  code   ((a => 1)) but ("a b")
+  is     :a(1)
+  type   Pair+{<anon|77>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0576
+  from   inventory:infix:but
+  cell   (a => 1) | [1,2]
+  level  3
+  code   ((a => 1)) but ([1,2])
+  is     :a(1)
+  type   Pair+{<anon|78>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)

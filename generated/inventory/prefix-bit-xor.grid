@@ -7,6 +7,7 @@ ladder   mixed
 - id     0001
   from   inventory:prefix:+^
   cell   0
+  level  0
   code   +^(0)
   is     -1
   type   Int
@@ -16,6 +17,7 @@ ladder   mixed
 - id     0002
   from   inventory:prefix:+^
   cell   1
+  level  1
   code   +^(1)
   is     -2
   type   Int
@@ -25,6 +27,7 @@ ladder   mixed
 - id     0003
   from   inventory:prefix:+^
   cell   -1
+  level  1
   code   +^(-1)
   is     0
   type   Int
@@ -34,6 +37,7 @@ ladder   mixed
 - id     0004
   from   inventory:prefix:+^
   cell   1/2
+  level  1
   code   +^(1/2)
   is     -1
   type   Int
@@ -43,6 +47,7 @@ ladder   mixed
 - id     0005
   from   inventory:prefix:+^
   cell   0e0
+  level  2
   code   +^(0e0)
   is     -1
   type   Int
@@ -52,6 +57,7 @@ ladder   mixed
 - id     0006
   from   inventory:prefix:+^
   cell   NaN
+  level  2
   code   +^(NaN)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -60,6 +66,7 @@ ladder   mixed
 - id     0007
   from   inventory:prefix:+^
   cell   ""
+  level  2
   code   +^("")
   is     -1
   type   Int
@@ -69,6 +76,7 @@ ladder   mixed
 - id     0008
   from   inventory:prefix:+^
   cell   "a"
+  level  2
   code   +^("a")
   throws X::Str::Numeric
   oracle rakudo-2026.07 → ERR:X::Str::Numeric
@@ -77,6 +85,7 @@ ladder   mixed
 - id     0009
   from   inventory:prefix:+^
   cell   True
+  level  2
   code   +^(True)
   is     -2
   type   Int
@@ -86,6 +95,7 @@ ladder   mixed
 - id     0010
   from   inventory:prefix:+^
   cell   Any
+  level  2
   code   +^(Any)
   is     -1
   type   Int
@@ -95,6 +105,7 @@ ladder   mixed
 - id     0011
   from   inventory:prefix:+^
   cell   (1,2)
+  level  3
   code   +^((1,2))
   is     -3
   type   Int
@@ -104,6 +115,7 @@ ladder   mixed
 - id     0012
   from   inventory:prefix:+^
   cell   {a=>1}
+  level  3
   code   +^({a=>1})
   is     -2
   type   Int
@@ -113,6 +125,7 @@ ladder   mixed
 - id     0013
   from   inventory:prefix:+^
   cell   -0e0
+  level  3
   code   +^(-0e0)
   is     -1
   type   Int
@@ -122,6 +135,7 @@ ladder   mixed
 - id     0014
   from   inventory:prefix:+^
   cell   Inf
+  level  3
   code   +^(Inf)
   throws X::Numeric::CannotConvert
   oracle rakudo-2026.07 → ERR:X::Numeric::CannotConvert
@@ -130,6 +144,7 @@ ladder   mixed
 - id     0015
   from   inventory:prefix:+^
   cell   2**64
+  level  3
   code   +^(2**64)
   is     -18446744073709551617
   type   Int
@@ -139,6 +154,7 @@ ladder   mixed
 - id     0016
   from   inventory:prefix:+^
   cell   False
+  level  3
   code   +^(False)
   is     -1
   type   Int
@@ -148,6 +164,7 @@ ladder   mixed
 - id     0017
   from   inventory:prefix:+^
   cell   Nil
+  level  3
   code   +^(Nil)
   is     -1
   type   Int
@@ -157,6 +174,7 @@ ladder   mixed
 - id     0018
   from   inventory:prefix:+^
   cell   ()
+  level  3
   code   +^(())
   is     -1
   type   Int
@@ -166,6 +184,7 @@ ladder   mixed
 - id     0019
   from   inventory:prefix:+^
   cell   "0"
+  level  3
   code   +^("0")
   is     -1
   type   Int
@@ -175,8 +194,47 @@ ladder   mixed
 - id     0020
   from   inventory:prefix:+^
   cell   (1..3)
+  level  3
   code   +^((1..3))
   is     -4
   type   Int
   oracle rakudo-2026.07 → -4
   oracle rakupp-v3.14.0-92-g78048b0-modified → -1
+
+- id     0021
+  from   inventory:prefix:+^
+  cell   Int
+  level  3
+  code   +^(Int)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → -1
+
+- id     0022
+  from   inventory:prefix:+^
+  cell   "a b"
+  level  3
+  code   +^("a b")
+  throws X::Str::Numeric
+  oracle rakudo-2026.07 → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Str::Numeric
+
+- id     0023
+  from   inventory:prefix:+^
+  cell   [1,2]
+  level  3
+  code   +^([1,2])
+  is     -3
+  type   Int
+  oracle rakudo-2026.07 → -3
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → -3
+
+- id     0024
+  from   inventory:prefix:+^
+  cell   (a => 1)
+  level  3
+  code   +^((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-104-g2295fb0-modified → -1

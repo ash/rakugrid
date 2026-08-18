@@ -12,7 +12,7 @@ cols     Date.new(2000,1,1)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
 
 - id     0002
   from   inventory:Date.^methods
@@ -21,7 +21,7 @@ cols     Date.new(2000,1,1)
   is     \(:day(1), :daycount(51544), :formatter(Callable), :month(1), :year(2000))
   type   Capture
   oracle rakudo-2026.07 → \(:day(1), :daycount(51544), :formatter(Callable), :month(1), :year(2000))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
 
 - id     0003
   from   inventory:Date.^methods
@@ -30,7 +30,7 @@ cols     Date.new(2000,1,1)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
 
 - id     0004
   from   inventory:Date.^methods
@@ -39,7 +39,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:day(1), :month(1), :year(2000)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:day(1), :month(1), :year(2000)}
 
 - id     0005
   from   inventory:Date.^methods
@@ -48,7 +48,7 @@ cols     Date.new(2000,1,1)
   is     DateTime.new(2000,1,1,0,0,0)
   type   DateTime
   oracle rakudo-2026.07 → DateTime.new(2000,1,1,0,0,0)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → DateTime.new(:year(2000), :month(1), :day(1), :hour(0), :minute(0), :second(0), :timezone(0))
 
 - id     0006
   from   inventory:Date.^methods
@@ -57,7 +57,7 @@ cols     Date.new(2000,1,1)
   is     Perl6::Metamodel::ClassHOW.new
   type   Perl6::Metamodel::ClassHOW
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Metamodel::ClassHOW
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
 
 - id     0007
   from   inventory:Date.^methods
@@ -66,7 +66,7 @@ cols     Date.new(2000,1,1)
   is     IO::Path.new("2000-01-01", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
   type   IO::Path
   oracle rakudo-2026.07 → IO::Path.new("2000-01-01", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → IO::Path.new("2000-01-01", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → IO::Path.new("2000-01-01", :SPEC(IO::Spec::Unix), :CWD("/Users/ash/rakugrid"))
   verdict disputed
   why    the value describes where it was evaluated (an EVAL frame name, a path, an object address) rather than what it is, so it is stable under the probe and still not an expectation
   ruled  2026-08-16 against rakudo-2026.07
@@ -78,7 +78,7 @@ cols     Date.new(2000,1,1)
   is     "P6opaque"
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0009
   from   inventory:Date.^methods
@@ -87,7 +87,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000)}
 
 - id     0010
   from   inventory:Date.^methods
@@ -96,7 +96,7 @@ cols     Date.new(2000,1,1)
   is     Date
   type   Date
   oracle rakudo-2026.07 → Date
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Date
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Date
 
 - id     0011
   from   inventory:Date.^methods
@@ -105,7 +105,7 @@ cols     Date.new(2000,1,1)
   is     ${}
   type   Stash
   oracle rakudo-2026.07 → ${}
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
 
 - id     0012
   from   inventory:Date.^methods
@@ -114,7 +114,7 @@ cols     Date.new(2000,1,1)
   is     all(Date.new(2000,1,1))
   type   Junction
   oracle rakudo-2026.07 → all(Date.new(2000,1,1))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → all(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000))
 
 - id     0013
   from   inventory:Date.^methods
@@ -123,7 +123,7 @@ cols     Date.new(2000,1,1)
   is     any(Date.new(2000,1,1))
   type   Junction
   oracle rakudo-2026.07 → any(Date.new(2000,1,1))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → any(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000))
 
 - id     0014
   from   inventory:Date.^methods
@@ -132,7 +132,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(0,0,0)
   type   Date
   oracle rakudo-2026.07 → Date.new(0,0,0)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Temporal
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Temporal
 
 - id     0015
   from   inventory:Date.^methods
@@ -141,7 +141,7 @@ cols     Date.new(2000,1,1)
   is     $(Date.new(2000,1,1),)
   type   List
   oracle rakudo-2026.07 → $(Date.new(2000,1,1),)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000))
 
 - id     0016
   from   inventory:Date.^methods
@@ -149,7 +149,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
 
 - id     0017
   from   inventory:Date.^methods
@@ -157,7 +157,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
 
 - id     0018
   from   inventory:Date.^methods
@@ -165,7 +165,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
 
 - id     0019
   from   inventory:Date.^methods
@@ -174,7 +174,7 @@ cols     Date.new(2000,1,1)
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
 
 - id     0020
   from   inventory:Date.^methods
@@ -182,7 +182,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $( )
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
 
 - id     0021
   from   inventory:Date.^methods
@@ -190,7 +190,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).chrs
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "\0\0\0\0\0\0\0"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\0\0\0\0\0\0\0"
 
 - id     0022
   from   inventory:Date.^methods
@@ -199,7 +199,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000)}
 
 - id     0023
   from   inventory:Date.^methods
@@ -208,7 +208,7 @@ cols     Date.new(2000,1,1)
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
 - id     0024
   from   inventory:Date.^methods
@@ -217,7 +217,7 @@ cols     Date.new(2000,1,1)
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
 - id     0025
   from   inventory:Date.^methods
@@ -226,7 +226,7 @@ cols     Date.new(2000,1,1)
   is     6
   type   Int
   oracle rakudo-2026.07 → 6
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 6
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 6
 
 - id     0026
   from   inventory:Date.^methods
@@ -235,7 +235,7 @@ cols     Date.new(2000,1,1)
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
 - id     0027
   from   inventory:Date.^methods
@@ -244,7 +244,7 @@ cols     Date.new(2000,1,1)
   is     51544
   type   Int
   oracle rakudo-2026.07 → 51544
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 51544
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 51544
 
 - id     0028
   from   inventory:Date.^methods
@@ -252,7 +252,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).dd-mm-yyyy(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "01-01-2000"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "01-01-2000"
 
 - id     0029
   from   inventory:Date.^methods
@@ -260,7 +260,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).dd-mm-yyyy(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "01-01-2000"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "01-01-2000"
 
 - id     0030
   from   inventory:Date.^methods
@@ -268,7 +268,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).dd-mm-yyyy(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "01-01-2000"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "01-01-2000"
 
 - id     0031
   from   inventory:Date.^methods
@@ -277,7 +277,7 @@ cols     Date.new(2000,1,1)
   is     "01a01a2000"
   type   Str
   oracle rakudo-2026.07 → "01a01a2000"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "01-01-2000"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "01-01-2000"
 
 - id     0032
   from   inventory:Date.^methods
@@ -285,7 +285,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).dd-mm-yyyy(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "01-01-2000"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "01-01-2000"
 
 - id     0033
   from   inventory:Date.^methods
@@ -294,7 +294,7 @@ cols     Date.new(2000,1,1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
 - id     0034
   from   inventory:Date.^methods
@@ -303,7 +303,7 @@ cols     Date.new(2000,1,1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
 - id     0035
   from   inventory:Date.^methods
@@ -312,7 +312,7 @@ cols     Date.new(2000,1,1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
 - id     0036
   from   inventory:Date.^methods
@@ -321,7 +321,7 @@ cols     Date.new(2000,1,1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
 - id     0037
   from   inventory:Date.^methods
@@ -330,7 +330,7 @@ cols     Date.new(2000,1,1)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
 
 - id     0038
   from   inventory:Date.^methods
@@ -339,7 +339,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:day(1), :month(1), :year(2000)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:day(1), :month(1), :year(2000)}
 
 - id     0039
   from   inventory:Date.^methods
@@ -348,7 +348,7 @@ cols     Date.new(2000,1,1)
   is     Callable
   type   Callable
   oracle rakudo-2026.07 → Callable
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Callable
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Callable
 
 - id     0040
   from   inventory:Date.^methods
@@ -357,7 +357,7 @@ cols     Date.new(2000,1,1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0041
   from   inventory:Date.^methods
@@ -366,7 +366,7 @@ cols     Date.new(2000,1,1)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
 
 - id     0042
   from   inventory:Date.^methods
@@ -375,7 +375,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000)}
 
 - id     0043
   from   inventory:Date.^methods
@@ -384,7 +384,7 @@ cols     Date.new(2000,1,1)
   is     "2000-01-01"
   type   Str
   oracle rakudo-2026.07 → "2000-01-01"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "day\t10hour\t00minute\t00month\t10posix\t9466848000second\t00year\t2000"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "day\t10hour\t00minute\t00month\t10posix\t9466848000second\t00year\t2000"
 
 - id     0044
   from   inventory:Date.^methods
@@ -393,7 +393,7 @@ cols     Date.new(2000,1,1)
   is     "2000-01-01"
   type   Str
   oracle rakudo-2026.07 → "2000-01-01"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "day\t11hour\t01minute\t01month\t11posix\t9466848001second\t01year\t2000"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "day\t11hour\t01minute\t01month\t11posix\t9466848001second\t01year\t2000"
 
 - id     0045
   from   inventory:Date.^methods
@@ -402,7 +402,7 @@ cols     Date.new(2000,1,1)
   is     "2000-01-01"
   type   Str
   oracle rakudo-2026.07 → "2000-01-01"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "day\t1-1hour\t0-1minute\t0-1month\t1-1posix\t946684800-1second\t0-1year\t2000"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "day\t1-1hour\t0-1minute\t0-1month\t1-1posix\t946684800-1second\t0-1year\t2000"
 
 - id     0046
   from   inventory:Date.^methods
@@ -411,7 +411,7 @@ cols     Date.new(2000,1,1)
   is     "2000-01-01"
   type   Str
   oracle rakudo-2026.07 → "2000-01-01"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "day\t1ahour\t0aminute\t0amonth\t1aposix\t946684800asecond\t0ayear\t2000"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "day\t1ahour\t0aminute\t0amonth\t1aposix\t946684800asecond\t0ayear\t2000"
 
 - id     0047
   from   inventory:Date.^methods
@@ -419,7 +419,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).join(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
 
 - id     0048
   from   inventory:Date.^methods
@@ -428,7 +428,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(2000,1,31)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,31)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:day(31), :month(1), :year(2000)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:day(31), :month(1), :year(2000)}
 
 - id     0049
   from   inventory:Date.^methods
@@ -437,7 +437,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0050
   from   inventory:Date.^methods
@@ -446,7 +446,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0051
   from   inventory:Date.^methods
@@ -455,7 +455,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0052
   from   inventory:Date.^methods
@@ -464,7 +464,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0053
   from   inventory:Date.^methods
@@ -473,7 +473,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0054
   from   inventory:Date.^methods
@@ -481,7 +481,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0055
   from   inventory:Date.^methods
@@ -489,7 +489,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0056
   from   inventory:Date.^methods
@@ -497,7 +497,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0057
   from   inventory:Date.^methods
@@ -506,7 +506,7 @@ cols     Date.new(2000,1,1)
   is     "01a01"
   type   Str
   oracle rakudo-2026.07 → "01a01"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0058
   from   inventory:Date.^methods
@@ -514,7 +514,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0059
   from   inventory:Date.^methods
@@ -522,7 +522,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd-yyyy(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "01-01-2000"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "01-01-2000"
 
 - id     0060
   from   inventory:Date.^methods
@@ -530,7 +530,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd-yyyy(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "01-01-2000"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "01-01-2000"
 
 - id     0061
   from   inventory:Date.^methods
@@ -538,7 +538,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd-yyyy(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "01-01-2000"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "01-01-2000"
 
 - id     0062
   from   inventory:Date.^methods
@@ -547,7 +547,7 @@ cols     Date.new(2000,1,1)
   is     "01a01a2000"
   type   Str
   oracle rakudo-2026.07 → "01a01a2000"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "01-01-2000"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "01-01-2000"
 
 - id     0063
   from   inventory:Date.^methods
@@ -555,7 +555,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).mm-dd-yyyy(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "01-01-2000"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "01-01-2000"
 
 - id     0064
   from   inventory:Date.^methods
@@ -564,7 +564,7 @@ cols     Date.new(2000,1,1)
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
 - id     0065
   from   inventory:Date.^methods
@@ -573,7 +573,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(1858,11,17)
   type   Date
   oracle rakudo-2026.07 → Date.new(1858,11,17)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0066
   from   inventory:Date.^methods
@@ -582,7 +582,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(1858,11,18)
   type   Date
   oracle rakudo-2026.07 → Date.new(1858,11,18)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0067
   from   inventory:Date.^methods
@@ -591,7 +591,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(1858,11,16)
   type   Date
   oracle rakudo-2026.07 → Date.new(1858,11,16)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0068
   from   inventory:Date.^methods
@@ -599,7 +599,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).new-from-daycount("a")
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0069
   from   inventory:Date.^methods
@@ -607,7 +607,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).new-from-daycount(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0070
   from   inventory:Date.^methods
@@ -616,7 +616,7 @@ cols     Date.new(2000,1,1)
   is     "\n"
   type   Str
   oracle rakudo-2026.07 → "\n"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0071
   from   inventory:Date.^methods
@@ -625,7 +625,7 @@ cols     Date.new(2000,1,1)
   is     none(Date.new(2000,1,1))
   type   Junction
   oracle rakudo-2026.07 → none(Date.new(2000,1,1))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → none(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000))
 
 - id     0072
   from   inventory:Date.^methods
@@ -634,7 +634,7 @@ cols     Date.new(2000,1,1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::False
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
 
 - id     0073
   from   inventory:Date.^methods
@@ -643,7 +643,7 @@ cols     Date.new(2000,1,1)
   is     one(Date.new(2000,1,1))
   type   Junction
   oracle rakudo-2026.07 → one(Date.new(2000,1,1))
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → one(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000))
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000))
 
 - id     0074
   from   inventory:Date.^methods
@@ -652,7 +652,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(1999,12,31)
   type   Date
   oracle rakudo-2026.07 → Date.new(1999,12,31)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:day(31), :month(12), :year(1999)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:day(31), :month(12), :year(1999)}
 
 - id     0075
   from   inventory:Date.^methods
@@ -661,7 +661,7 @@ cols     Date.new(2000,1,1)
   is     $((Date.new(2000,1,1),).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((Date.new(2000,1,1),).Seq)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $((:year(2000), :second(0), :posix(946684800), :month(1), :minute(0), :hour(0), :day(1)).Seq)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((:year(2000), :second(0), :posix(946684800), :month(1), :minute(0), :hour(0), :day(1)).Seq)
 
 - id     0076
   from   inventory:Date.^methods
@@ -670,7 +670,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:day(1), :hour(0), :minute(0), :month(1), :posix(946684800), :second(0), :year(2000)}
 
 - id     0077
   from   inventory:Date.^methods
@@ -679,7 +679,7 @@ cols     Date.new(2000,1,1)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → Bool::True
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
 
 - id     0078
   from   inventory:Date.^methods
@@ -688,7 +688,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(2000,1,2)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,2)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:day(2), :month(1), :year(2000)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:day(2), :month(1), :year(2000)}
 
 - id     0079
   from   inventory:Date.^methods
@@ -697,7 +697,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(2000,1,1)
   type   Date
   oracle rakudo-2026.07 → Date.new(2000,1,1)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 0e0
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0e0
 
 - id     0080
   from   inventory:Date.^methods
@@ -705,7 +705,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
 
 - id     0081
   from   inventory:Date.^methods
@@ -714,7 +714,7 @@ cols     Date.new(2000,1,1)
   is     Date.new(2026,8,15)
   type   Date
   oracle rakudo-2026.07 → Date.new(2026,8,15)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
   verdict disputed
   why    the reference answers differently on two identical runs, so there is nothing stable to assert
   ruled  2026-08-15 against rakudo-2026.07
@@ -725,7 +725,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).truncated-to(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:day(1), :month(1), :year(2000)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:day(1), :month(1), :year(2000)}
 
 - id     0083
   from   inventory:Date.^methods
@@ -733,7 +733,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).truncated-to(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:day(1), :month(1), :year(2000)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:day(1), :month(1), :year(2000)}
 
 - id     0084
   from   inventory:Date.^methods
@@ -741,7 +741,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).truncated-to(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:day(1), :month(1), :year(2000)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:day(1), :month(1), :year(2000)}
 
 - id     0085
   from   inventory:Date.^methods
@@ -749,7 +749,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).truncated-to("a")
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:day(1), :month(1), :year(2000)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:day(1), :month(1), :year(2000)}
 
 - id     0086
   from   inventory:Date.^methods
@@ -757,7 +757,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).truncated-to(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ${:day(1), :month(1), :year(2000)}
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${:day(1), :month(1), :year(2000)}
 
 - id     0087
   from   inventory:Date.^methods
@@ -766,7 +766,7 @@ cols     Date.new(2000,1,1)
   is     $(1999, 52)
   type   List
   oracle rakudo-2026.07 → $(1999, 52)
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → $(1999, 52)
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1999, 52)
 
 - id     0088
   from   inventory:Date.^methods
@@ -775,7 +775,7 @@ cols     Date.new(2000,1,1)
   is     52
   type   Int
   oracle rakudo-2026.07 → 52
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 52
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 52
 
 - id     0089
   from   inventory:Date.^methods
@@ -784,7 +784,7 @@ cols     Date.new(2000,1,1)
   is     1999
   type   Int
   oracle rakudo-2026.07 → 1999
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1999
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1999
 
 - id     0090
   from   inventory:Date.^methods
@@ -793,7 +793,7 @@ cols     Date.new(2000,1,1)
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 1
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1
 
 - id     0091
   from   inventory:Date.^methods
@@ -802,7 +802,7 @@ cols     Date.new(2000,1,1)
   is     2000
   type   Int
   oracle rakudo-2026.07 → 2000
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → 2000
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → 2000
 
 - id     0092
   from   inventory:Date.^methods
@@ -810,7 +810,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0093
   from   inventory:Date.^methods
@@ -818,7 +818,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0094
   from   inventory:Date.^methods
@@ -826,7 +826,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0095
   from   inventory:Date.^methods
@@ -835,7 +835,7 @@ cols     Date.new(2000,1,1)
   is     "2000a01"
   type   Str
   oracle rakudo-2026.07 → "2000a01"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0096
   from   inventory:Date.^methods
@@ -843,7 +843,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
 
 - id     0097
   from   inventory:Date.^methods
@@ -851,7 +851,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm-dd(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "2000-01-01"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "2000-01-01"
 
 - id     0098
   from   inventory:Date.^methods
@@ -859,7 +859,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm-dd(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "2000-01-01"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "2000-01-01"
 
 - id     0099
   from   inventory:Date.^methods
@@ -867,7 +867,7 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm-dd(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "2000-01-01"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "2000-01-01"
 
 - id     0100
   from   inventory:Date.^methods
@@ -876,7 +876,7 @@ cols     Date.new(2000,1,1)
   is     "2000a01a01"
   type   Str
   oracle rakudo-2026.07 → "2000a01a01"
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "2000-01-01"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "2000-01-01"
 
 - id     0101
   from   inventory:Date.^methods
@@ -884,4 +884,4 @@ cols     Date.new(2000,1,1)
   code   (Date.new(2000,1,1)).yyyy-mm-dd(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-82-gacc4eab-modified → "2000-01-01"
+  oracle rakupp-v3.14.0-100-g899ad9f-modified → "2000-01-01"
