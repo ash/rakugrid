@@ -1,0 +1,58 @@
+atom     signatures/capture-parameter-order
+source   curated
+kind     parse grid — compiled with -c, never run
+
+# A capture parameter takes everything that is left, so a REQUIRED parameter
+# after it could never be filled. Rakudo rejects such a signature at compile
+# time — "Cannot put required parameter ... after variadic parameters" — for
+# both the `$b` and the `\b` form. rakupp accepts both. A NAMED parameter after
+# a capture is legal, and so is a raw sigil BEFORE one, which is why those
+# neighbours are here: they bound the divergence.
+#
+# Recorded from files written byte-exactly and compiled with -c. Two earlier
+# readings of this atom were wrong — one taken from an EVAL probe, one from a
+# file written with `echo`, which turned the `\b` into a backspace and compiled
+# a different program. The lesson is the atom's own: an observation must be
+# captured the way the test will reproduce it.
+
+- id     0001
+  from   review:2026-08-18 · a positional after a capture can never be filled
+  code   sub f(|c, $b) { 1 }
+  no-parse yes
+  oracle rakudo-2026.07 → rejected: Cannot put required parameter $b after variadic parameters
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → compiles
+
+- id     0002
+  from   review:2026-08-18 · the raw-sigil form is rejected for the same reason
+  code   sub f(|c, \b) { 1 }
+  no-parse yes
+  oracle rakudo-2026.07 → rejected: Cannot put required parameter b after variadic parameters
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → compiles
+
+- id     0003
+  from   review:2026-08-18 · a named after a capture is legal
+  code   sub f(|c, :$b) { 1 }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → compiles
+
+- id     0004
+  from   review:2026-08-18 · the ordinary form
+  code   sub f($a, |c) { 1 }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → compiles
+
+- id     0005
+  from   review:2026-08-18 · a capture alone
+  code   sub f(|c) { 1 }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → compiles
+
+- id     0006
+  from   review:2026-08-18 · a raw sigil BEFORE a capture is fine on both
+  code   sub f(\a, |c) { 1 }
+  parses yes
+  oracle rakudo-2026.07 → compiles
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → compiles

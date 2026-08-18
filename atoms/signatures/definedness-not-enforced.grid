@@ -1,0 +1,51 @@
+atom     signatures/definedness-not-enforced
+source   curated
+kind     binding — a `:D` constraint must reject a type object
+
+# The `:D` smiley constrains a parameter to a DEFINED value: an instance, not a
+# type object. Rakudo rejects the binding; rakupp binds the type object and runs
+# the body. Documented behaviour, not a matter of taste — so the assertion is
+# Rakudo's answer, and rakupp's is recorded as the divergence it is.
+#
+# Arguments go through a capture so the question stays a RUNTIME binding one.
+# Passed literally, Rakudo settles some of these at compile time instead, and a
+# compile error is a different observation from a binding failure.
+#
+# `rejected` / `bound` rather than an exception type, deliberately: the two
+# engines disagree about the exception's CLASS as well (see the sibling atom),
+# and this atom is about whether the constraint is enforced at all.
+
+- id     0001
+  from   review:2026-08-18 · found sampling gen/signatures.raku before its first run
+  code   my $A = \(Int); sub f(Int:D $a) { "bound" }; (try f(|$A)) // "rejected"
+  is     "rejected"
+  oracle rakudo-2026.07 → "rejected"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "bound"
+
+- id     0002
+  from   review:2026-08-18
+  code   my $A = \(Any); sub f(Any:D $a) { "bound" }; (try f(|$A)) // "rejected"
+  is     "rejected"
+  oracle rakudo-2026.07 → "rejected"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "bound"
+
+- id     0003
+  from   review:2026-08-18 · the control — a DEFINED argument must bind on both
+  code   my $A = \(1); sub f(Int:D $a) { "bound" }; (try f(|$A)) // "rejected"
+  is     "bound"
+  oracle rakudo-2026.07 → "bound"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "bound"
+
+- id     0004
+  from   review:2026-08-18 · a method binds by the same rules as a sub
+  code   my $A = \(Int); my $C = class { method m(Int:D $a) { "bound" } }; (try $C.m(|$A)) // "rejected"
+  is     "rejected"
+  oracle rakudo-2026.07 → "rejected"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "bound"
+
+- id     0005
+  from   review:2026-08-18 · a default does not excuse an argument that was passed
+  code   my $A = \(Int); sub f(Int:D $a = 7) { "bound" }; (try f(|$A)) // "rejected"
+  is     "rejected"
+  oracle rakudo-2026.07 → "rejected"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "bound"

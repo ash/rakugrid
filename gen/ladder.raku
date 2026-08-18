@@ -332,7 +332,7 @@ sub run-batch($cmd, @exprs, $tmp, $secs = 180) {
     my $script = "exec >/dev/null 2>&1; set -m 2>/dev/null || true; "
                ~ "$line > { sh-quote($base ~ '.out') } 2> { sh-quote($base ~ '.err') } & p=\$!; "
                ~ "( sleep $secs; kill -9 -\$p 2>/dev/null || kill -9 \$p 2>/dev/null ) & w=\$!; "
-               ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; exit \$rc";
+               ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; wait \$w 2>/dev/null; exit \$rc";
 
     my $p = run('/bin/sh', '-c', $script);
     my $out = ($base ~ '.out').IO.e ?? ($base ~ '.out').IO.slurp !! '';
@@ -397,7 +397,7 @@ sub run-cmd($cmd, @args, $tmp, $secs = 15) {
     my $script = "exec >/dev/null 2>&1; set -m 2>/dev/null || true; "
                ~ "$line > { sh-quote($base ~ '.out') } 2> { sh-quote($base ~ '.err') } & p=\$!; "
                ~ "( sleep $secs; kill -9 -\$p 2>/dev/null || kill -9 \$p 2>/dev/null ) & w=\$!; "
-               ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; exit \$rc";
+               ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; wait \$w 2>/dev/null; exit \$rc";
     my $p = run('/bin/sh', '-c', $script);
     my $out = ($base ~ '.out').IO.e ?? ($base ~ '.out').IO.slurp !! '';
     my $err = ($base ~ '.err').IO.e ?? ($base ~ '.err').IO.slurp !! '';

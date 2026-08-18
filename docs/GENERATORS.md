@@ -39,7 +39,7 @@ usable, reproducible answer, the record is parked with a written reason and
 counted separately. That is the difference between a suite that is green because
 it is right and one that is green because it looked away.
 
-## The six generators
+## The nine generators
 
 | Generator | Enumerates | Produces |
 |---|---|---|
@@ -50,10 +50,28 @@ it is right and one that is green because it looked away.
 | `laws.raku` | algebraic laws over ladders | `same-as` — no oracle needed |
 | `molecules.raku` | two facet axes crossed | one atom per crossing |
 | `import-regression.raku` | an existing repository's regression programs | curated whole-program records |
+| `regex.raku` | 94 patterns × 16 subjects × 8 match forms | derived facts, never Match objects |
+| `signatures.raku` | parameter forms × arguments × call forms, and parameter **pairs** | what bound, or what it threw |
 
 `syntax.raku` is the odd one: it compiles complete programs with `-c` and never
 runs them, and it asserts only whether they compile — never the wording of the
 diagnostic, which is not specified.
+
+`regex.raku` asserts *derived facts* — `so(…)`, `.from`, the captures joined,
+`.subst`, `.comb.elems` — never a Match object, whose rendering is not
+specified and differs between engines for reasons that are not bugs.
+
+`signatures.raku` is the only generator whose ladder crosses itself: one
+parameter against every argument answers what a parameter accepts, but two
+parameters dividing one argument list is where binding actually gets
+interesting — an optional before a slurpy, a named after a positional, two
+constraints competing for one value.
+
+Its call forms deliberately use an **anonymous** class. `class C {...}` installs
+a symbol, and Rakudo throws `X::Redeclaration` the second time one process
+compiles it; since both the probe and `fire` evaluate many cells per process, a
+named class would have recorded a redeclaration error as the binding result for
+every method cell but the first.
 
 `laws.raku` is the other odd one: it needs no reference at all. `a + b` must
 equal `b + a` whatever either is, so an engine that disagrees with *itself* is

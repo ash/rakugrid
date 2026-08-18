@@ -34,33 +34,33 @@ constant %TYPES =
     'Int'      => ['0', '1', '-1', '2**64', '-2**64', '42', '2', '10', '-42', '2**63-1'],
     'Rat'      => ['1/3', '0/1', '-1/3', '1/1', '(2**64)/3', '1/2', '3/1', '-1/1'],
     'Num'      => ['0e0', '-0e0', '1e0', '-1e0', 'Inf', '-Inf', 'NaN', '2e0', '0.5e0', '1e308'],
-    'Complex'  => ['1+2i', '0+0i', '-1-1i', 'Inf+0i'],
+    'Complex'  => ['1+2i', '0+0i', '-1-1i', 'Inf+0i', '0+1i', '-0e0+0e0i', 'NaN+0i', '1e0+1e0i'],
     'Str'      => ['""', '" "', '"0"', '"a"', '"ABC"', '"e\c[COMBINING ACUTE ACCENT]"', '"a b  c"', '"-1"', '"Inf"', '"\n"', '"aa"'],
-    'Bool'     => ['True', 'False', 'so(1)', 'not(1)'],
+    'Bool'     => ['True', 'False', 'so(1)', 'not(1)', '(1 == 1)', '(1 == 2)'],
     'List'     => ['()', '(1,)', '(1,2,3)', '(1,(2,3))', '("a","b")', '(Any,)', '(1,Nil)', '(1..3).list'],
     'Array'    => ['[]', '[1]', '[1,2,3]', '[[1],[2]]', '[Any]', '["a","b"]', '[1,"a"]'],
     'Hash'     => ['{}', '{a=>1}', '{"" => 1}'],
-    'Pair'     => ['(a => 1)', '(1 => "x")'],
+    'Pair'     => ['(a => 1)', '(1 => "x")', '(a => Any)', '("" => 0)', '(a => (1,2))'],
     'Range'    => ['(1..3)', '(1^..^3)', '(3..1)', '("a".."c")'],
-    'Seq'      => ['(1..3).Seq', '().Seq'],
+    'Seq'      => ['(1..3).Seq', '().Seq', '(1,).Seq', '<a b>.Seq', '(1..3).map(*+1).Seq'],
     'Set'      => ['set(1)', 'set()'],
     'Bag'      => ['bag(1,1)', 'bag()'],
     'Map'      => ['Map.new((a=>1))', 'Map.new()'],
-    'Capture'  => ['\\(1, :a)', '\\()'],
-    'Version'  => ['v1.2.3', 'v0'],
+    'Capture'  => ['\\(1, :a)', '\\()', '\\(1,2)', '\\(:a, :b)', '\\(Any)'],
+    'Version'  => ['v1.2.3', 'v0', 'v1', 'v1.2.3+', 'v0.0.1'],
     'Order'    => ['Order::Less', 'Order::Same', 'Order::More'],
     'Instant'  => ['Instant.from-posix(0)'],
-    'Duration' => ['Duration.new(1)', 'Duration.new(0)'],
-    'Date'     => ['Date.new(2000,1,1)'],
+    'Duration' => ['Duration.new(1)', 'Duration.new(0)', 'Duration.new(-1)', 'Duration.new(1/3)'],
+    'Date'     => ['Date.new(2000,1,1)', 'Date.new(2000,2,29)', 'Date.new(1970,1,1)', 'Date.new(2026,12,31)'],
     'DateTime' => ['DateTime.new(2000,1,1,0,0,0)'],
-    'Blob'     => ['Blob.new(1,2,3)', 'Blob.new()'],
-    'Buf'      => ['Buf.new(1,2,3)', 'Buf.new()'],
-    'Junction' => ['any(1,2)', 'all(1,2)'],
+    'Blob'     => ['Blob.new(1,2,3)', 'Blob.new()', 'Blob.new(0)', 'Blob.new(255)'],
+    'Buf'      => ['Buf.new(1,2,3)', 'Buf.new()', 'Buf.new(0)', 'Buf.new(255)'],
+    'Junction' => ['any(1,2)', 'all(1,2)', 'one(1,2)', 'none(1,2)', 'any()', 'all()'],
     'Nil'      => ['Nil'],
     'Mu'       => ['Any', 'Mu', 'Int', 'Str', '1', '0', '-1', '"a"', '""', '(1,2)', '{a=>1}', 'Nil', 'True', 'False', '1e0', '1/2', '(1..3)', 'set(1)'],
     'Any'      => ['Any', 'Mu', 'Int', 'Str', '1', '0', '-1', '"a"', '""', '(1,2)', '{a=>1}', 'Nil', 'True', 'False', '1e0', '1/2', '(1..3)', 'set(1)'],
-    'Signature' => [':(Int $a)', ':()'],
-    'Match'    => ['("abc" ~~ /b/)'],
+    'Signature' => [':(Int $a)', ':()', ':($a, $b)', ':(*@a)', ':(:$a)', ':($a where * > 0)'],
+    'Match'    => ['("abc" ~~ /b/)', '("abc" ~~ /x/)', '("abc" ~~ /(b)/)', '("abc" ~~ /\\w+/)'],
     'Failure'  => ['(try { die "x" } // $!)'],
 
     # --- widened: more of the value surface ---------------------------------
@@ -157,7 +157,7 @@ sub run-sh($line, $secs) {
     my $script = "exec >/dev/null 2>&1; set -m 2>/dev/null || true; "
                ~ "$line > { sh-quote($base ~ '.out') } 2> { sh-quote($base ~ '.err') } & p=\$!; "
                ~ "( sleep $secs; kill -9 -\$p 2>/dev/null || kill -9 \$p 2>/dev/null ) & w=\$!; "
-               ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; exit \$rc";
+               ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; wait \$w 2>/dev/null; exit \$rc";
     my $p = run('/bin/sh', '-c', $script);
     my $out = ($base ~ '.out').IO.e ?? ($base ~ '.out').IO.slurp !! '';
     ($base ~ '.out').IO.unlink if ($base ~ '.out').IO.e;
@@ -206,8 +206,8 @@ sub run-parallel($cmd, @exprs, $probe-src, $jobs, $batch = 200, $secs = 120) {
         # Capture it and read the code instead.
         my $proc = run('/bin/sh', '-c',
             "( $script ) & p=\$!; "
-          ~ "( sleep $secs; pkill -9 -f mm-probe 2>/dev/null; kill -9 \$p 2>/dev/null ) & w=\$!; "
-          ~ "wait \$p; kill \$w 2>/dev/null; exit 0");
+          ~ "( sleep $secs; kill -9 \$p 2>/dev/null ) & w=\$!; "
+          ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; wait \$w 2>/dev/null; exit 0");
         my $ignored = $proc.exitcode;
 
         for @parts -> $f {

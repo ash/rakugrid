@@ -1,49 +1,19 @@
 #!/usr/bin/env raku
-# gen/operators.raku — the operator matrix, driven by the documented inventory.
+# gen/signatures.raku — parameter binding and dispatch.
 #
-#   rakupp gen/operators.raku --engines=raku,/path/to/rakupp \
-#                             --inventory=/path/to/inventory.json [--jobs=2]
+#   rakupp gen/signatures.raku --engines=raku
 #
-# gen/ladder.raku works from a hand-written table of 53 operators, which is a
-# guess about what the language contains. This one reads the inventory extracted
-# from the official documentation — 125 infix, 18 prefix, 2 postfix — and
-# crosses every one of them with a ladder. An operator the language documents and
-# nobody tested becomes impossible rather than merely unlikely, which is the
-# whole point of measuring coverage against an inventory instead of against
-# whatever occurred to the person writing tests.
+# Two families: one parameter against every argument in every call form, and
+# two parameters dividing one argument list between them. The second is where
+# the binder gets interesting — an optional before a slurpy, a named after a
+# positional, two constraints competing for one value.
 #
-# One atom per operator, so `rakugrid matrix infix-plus` renders its cross.
+# Ladders are APPEND ONLY and enumerated in shells, so widening never
+# renumbers an existing cell.
 
 my $ROOT  = $*PROGRAM.IO.absolute.IO.parent.parent;
 my $TMP   = $ROOT.add('tmp');
 $TMP.mkdir unless $TMP.e;
-my $GUARD = 0;
-
-# Deliberately mixed rather than numeric: an operator's own type domain is
-# already covered by gen/ladder.raku, and what an inventory-wide sweep adds is
-# what happens ACROSS the type boundary, where the coercion bugs live.
-# APPEND ONLY. Ids are derived from a cell's position in the cross, and the
-# cross is enumerated in SHELLS — all pairs whose highest ladder index is 0,
-# then 1, then 2 — precisely so that adding values to the end of this list adds
-# new shells without moving any existing cell. Row-major order would renumber
-# everything on every widening, and an id that moves is not an id.
-constant @LADDER =
-    '0', '1', '-1', '1/2', '0e0', 'NaN', '""', '"a"', 'True', 'Any', '(1,2)', '{a=>1}',
-    # --- appended 2026-08-16: the corners the first twelve did not reach ------
-    '-0e0', 'Inf', '2**64', 'False', 'Nil', '()', '"0"', '(1..3)',
-    # --- appended 2026-08-16 (second): type object, spaced string, Array, Pair -
-    'Int', '"a b"', '[1,2]', '(a => 1)',
-    # --- appended 2026-08-18: toward 200k — a Bag, a lazy Seq, a Junction, a
-    # Version, a Complex, a Failure. Each reaches a type family the first
-    # twenty-four never put on the other side of an operator.
-    'bag(1,1)', '(1..3).Seq', 'any(1,2)', 'v1.2', '1+2i', 'Str';
-
-# Operators whose result depends on reaching an endpoint, and which therefore do
-# not terminate for some perfectly ordinary operands: `0e0 ... NaN` never
-# arrives. They need their own ladder rather than this one, so they are left to
-# a later pass instead of being generated wrongly here.
-constant @SKIP-SYM = '...', '...^', '^...', '^...^', 'xx', 'X~', 'X*';
-
 constant $VALUE-PROBE = q:to/END/;
     use MONKEY-SEE-NO-EVAL;
     for @*ARGS[0].IO.lines -> $expr {
@@ -219,7 +189,7 @@ sub adaptive-jobs($requested, $ceiling = 6) {
     return max(1, min($ceiling, $spare));
 }
 
-sub PREFIX() { "op" }
+sub PREFIX() { "sig" }
 sub TMPD() { $TMP }
 
 # Every observation already on record for one implementation, whatever build
@@ -292,103 +262,197 @@ sub engine-id($cmd) {
 }
 
 # A symbol turns into a filename-safe atom name.
-sub slug($cat, $sym) {
-    my $s = $sym.trim;
-    my %named =
-        '+' => 'plus', '-' => 'minus', '*' => 'times', '/' => 'divide',
-        '%' => 'modulo', '**' => 'power', '~' => 'concat', 'x' => 'repeat',
-        '==' => 'num-eq', '!=' => 'num-ne', '<' => 'lt', '>' => 'gt',
-        '<=' => 'le', '>=' => 'ge', '<=>' => 'num-cmp', 'eq' => 'str-eq',
-        'ne' => 'str-ne', 'lt' => 'str-lt', 'gt' => 'str-gt', 'le' => 'str-le',
-        'ge' => 'str-ge', '&&' => 'and', '||' => 'or', '//' => 'defined-or',
-        '^^' => 'xor', '=' => 'assign', ':=' => 'bind', ',' => 'comma',
-        '..' => 'range', '..^' => 'range-excl-hi', '^..' => 'range-excl-lo',
-        '^..^' => 'range-excl-both', '=>' => 'fatarrow', '~~' => 'smartmatch',
-        '!~~' => 'not-smartmatch', '+&' => 'bit-and', '+|' => 'bit-or',
-        '+^' => 'bit-xor', '+<' => 'shift-left', '+>' => 'shift-right',
-        '?' => 'question', '!' => 'not', '++' => 'increment', '--' => 'decrement';
+# ---------------------------------------------------------------- the axes
 
-    return "$cat-{ %named{$s} }" if %named{$s}:exists;
+# Parameter forms. Each binds to a fixed name so one render expression serves
+# every cell: scalars to $a, positionals to @a, associatives to %h, callables
+# to &c, captures to |c or \a.
+#
+# APPEND ONLY, for the same reason as the operator ladder: ids come from a
+# cell's position in the cross, enumerated in shells, so appending adds shells
+# without moving an existing cell.
+constant @PARAMS =
+    # --- the plain positional and its type constraints -------------------
+    { sig => '$a',                  show => '$a'  },
+    { sig => 'Int $a',              show => '$a'  },
+    { sig => 'Str $a',              show => '$a'  },
+    { sig => 'Num $a',              show => '$a'  },
+    { sig => 'Any $a',              show => '$a'  },
+    { sig => 'Mu $a',               show => '$a'  },
+    { sig => 'Cool $a',             show => '$a'  },
+    { sig => 'Numeric $a',          show => '$a'  },
 
-    my $safe = $s.comb.map({
-        /<[A..Za..z0..9-]>/ ?? $_ !! sprintf('u%02x', .ord)
-    }).join;
-    return "$cat-$safe";
+    # --- definedness, the smartmatch constraint, subsets ------------------
+    { sig => 'Int:D $a',            show => '$a'  },
+    { sig => 'Int:U $a',            show => '$a'  },
+    { sig => 'Any:D $a',            show => '$a'  },
+    { sig => '$a where * > 0',      show => '$a'  },
+    { sig => '$a where Int',        show => '$a'  },
+
+    # --- optional and defaulted -------------------------------------------
+    { sig => '$a?',                 show => '$a'  },
+    { sig => '$a = 42',             show => '$a'  },
+    { sig => 'Int $a = 42',         show => '$a'  },
+    { sig => '$a = Nil',            show => '$a'  },
+
+    # --- named -------------------------------------------------------------
+    { sig => ':$a',                 show => '$a'  },
+    { sig => ':$a!',                show => '$a'  },
+    { sig => ':$a = 42',            show => '$a'  },
+    { sig => 'Int :$a',             show => '$a'  },
+    { sig => ':a($a)',              show => '$a'  },
+
+    # --- slurpy -------------------------------------------------------------
+    { sig => '*@a',                 show => '@a.raku' },
+    { sig => '**@a',                show => '@a.raku' },
+    { sig => '+@a',                 show => '@a.raku' },
+    { sig => '*%h',                 show => '%h.raku' },
+    { sig => '*@a, *%h',            show => '(@a, %h).raku' },
+
+    # --- traits: the ones that change what the callee may do to the caller --
+    { sig => '$a is rw',            show => '$a'  },
+    { sig => '$a is copy',          show => '$a'  },
+    { sig => '$a is raw',           show => '$a'  },
+
+    # --- sigils that impose a shape ----------------------------------------
+    { sig => '@a',                  show => '@a.raku' },
+    { sig => '%h',                  show => '%h.raku' },
+    { sig => '&c',                  show => '&c.WHAT.^name' },
+
+    # --- capture and destructuring -----------------------------------------
+    { sig => '|c',                  show => 'c.raku'  },
+    { sig => '\a',                  show => 'a.raku'  },
+    { sig => '[$x, $y]',            show => '($x, $y).raku' },
+    { sig => '::T $a',              show => '(T.^name, $a).raku' };
+
+# What we try to bind to it.
+constant @ARGS =
+    '1', '"a"', '0', 'Any', 'Nil', '()', '(1,2)', '[1,2]', '{a=>1}',
+    ':a', ':a(1)', '\(1)', '1, 2', '', '1e0', '(1,)';
+
+# Arguments always reach the callee through a CAPTURE. Passed literally,
+# `f("a")` against `Int $a` is rejected by Rakudo at compile time — "will never
+# work with declared signature" — and a compile error is not a value this
+# generator can assert, nor what the probe observed. Routing through `\(...)`
+# keeps every cell a RUNTIME binding question, which is what this generator is
+# for. Compile-time signature analysis belongs in gen/syntax.raku, which has
+# the separate compile probe it needs.
+#
+# How the callee is reached. Binding is not one algorithm — a multi candidate
+# is chosen before it is bound, a method has an invocant in front, and a block
+# binds without a dispatcher at all.
+constant @FORMS =
+    { name => 'sub',    code => 'my $A = \\(ARGS); sub f(SIG) { SHOW }; f(|$A)' },
+    { name => 'multi',  code => 'my $A = \\(ARGS); multi f(SIG) { SHOW }; f(|$A)' },
+    # An ANONYMOUS class, deliberately: `class C {...}` installs a symbol, and
+    # Rakudo throws X::Redeclaration the second time one process compiles it.
+    # Both the probe and `fire` evaluate many cells per process, so a named
+    # class would record a redeclaration error as if it were the binding result
+    # for every method cell but the first.
+    { name => 'method', code => 'my $A = \\(ARGS); my $C = class { method m(SIG) { SHOW } }; $C.m(|$A)' },
+    { name => 'block',  code => 'my $A = \\(ARGS); my $b = -> SIG { SHOW }; $b.(|$A)' },
+    { name => 'ampcall', code => 'my $A = \\(ARGS); sub f(SIG) { SHOW }; my &g = &f; g(|$A)' };
+
+# Argument lists for the two-parameter family: the interesting question is not
+# what one parameter accepts but how two of them divide a list between them.
+constant @PAIR-ARGS = '1, 2', '1', '', ':a, :b', '1, :b', '(1,2)', 'Any, Any', '1, 2, 3';
+
+# The second parameter of a pair needs its own names — two parameters cannot
+# both be `$a`. Rename identifiers, not text: `:a($a)` has to become `:b($b)`
+# in both halves or the named argument stops matching.
+sub rename2($s) {
+    my $r = $s;
+    $r = $r.subst('$a', '$b', :g);
+    $r = $r.subst('@a', '@b', :g);
+    $r = $r.subst('%h', '%g', :g);
+    $r = $r.subst('&c', '&d', :g);
+    $r = $r.subst('|c', '|d', :g);
+    $r = $r.subst('\a', '\b', :g);
+    $r = $r.subst('a(',  'b(', :g);
+    $r = $r.subst('$x', '$p', :g);
+    $r = $r.subst('$y', '$q', :g);
+    $r = $r.subst('::T', '::U', :g);
+    $r = $r.subst('T.^name', 'U.^name', :g);
+    $r = $r.subst('c.raku', 'd.raku', :g);
+    $r = $r.subst('a.raku', 'b.raku', :g);
+    return $r;
+}
+
+sub argslug($s) {
+    return 'none' if $s.trim eq '';
+    my $safe = $s.comb.map({ /<[A..Za..z0..9]>/ ?? $_ !! sprintf('u%02x', .ord) }).join;
+    return $safe;
+}
+
+sub level-of($shell) {
+    return $shell == 0 ?? 0 !! $shell <= 3 ?? 1 !! $shell <= 9 ?? 2 !! 3;
+}
+
+sub build($form, $sig, $show, $args) {
+    my $c = $form<code>;
+    $c = $c.subst('SIG',  $sig);
+    $c = $c.subst('SHOW', $show);
+    $c = $c.subst('ARGS', $args);
+    return $c;
 }
 
 # ------------------------------------------------------------------------ run
 
 my @engines = 'raku';
-my $JOBS = 2;   # or --jobs=auto to take what the machine has spare
-my $INV = '/Users/ash/raku.online/sites/spec/src/data/inventory.json';
+my $JOBS = 2;
 for @*ARGS -> $a {
     @engines = $a.substr(10).split(',') if $a.starts-with('--engines=');
     $JOBS    = ($a.substr(7) eq 'auto' ?? 'auto' !! +$a.substr(7)) if $a.starts-with('--jobs=');
-    $INV     = $a.substr(12)            if $a.starts-with('--inventory=');
 }
-
-die "no inventory at $INV" unless $INV.IO.e;
-my $raw = $INV.IO.slurp;
-
-# The inventory is a small, flat JSON document; pull the fields we need without
-# depending on a JSON module being installed for whichever engine runs this.
-my @ops;
-for $raw.split('{') -> $chunk {
-    next unless $chunk.contains('"cat"') && $chunk.contains('"sym"');
-    my $cat = $chunk ~~ /'"cat"' \s* ':' \s* '"' (<-["]>*) '"'/ ?? ~$0 !! '';
-    my $sym = $chunk ~~ /'"sym"' \s* ':' \s* '"' (<-["]>*) '"'/ ?? ~$0 !! '';
-    next unless $cat && $sym;
-    @ops.push: { cat => $cat, sym => $sym };
-}
-
-my @wanted = @ops.grep({ .<cat> eq 'infix' | 'prefix' | 'postfix' })
-                 .grep({ !@SKIP-SYM.first(-> $x { $x eq .<sym>.trim }) });
-
-say "# inventory: { @ops.elems } operators, { @wanted.elems } usable here";
 
 my %cells;
 my @all;
-for @wanted -> %o {
-    my $sym = %o<sym>.trim;
+
+# --- family one: one parameter, every argument, every way of calling --------
+for @FORMS -> %f {
     my @c;
-    if %o<cat> eq 'infix' {
-        # Shell order: every pair whose highest index is 0, then 1, then 2 …
-        # The shell number IS the density level, which is the happy accident of
-        # enumerating this way: shell 0 is one cell per operator (L0 smoke),
-        # the low shells are the core corners, and the outer shells are the
-        # exotic combinations you only want on a full run.
-        for ^@LADDER.elems -> $shell {
-            my $lvl = $shell == 0 ?? 0 !! $shell <= 3 ?? 1 !! $shell <= 9 ?? 2 !! 3;
-            for ^($shell + 1) -> $i {
-                @c.push: { a => @LADDER[$i], b => @LADDER[$shell], level => $lvl,
-                           expr => "(@LADDER[$i]) $sym (@LADDER[$shell])" };
-            }
-            for ^$shell -> $j {
-                @c.push: { a => @LADDER[$shell], b => @LADDER[$j], level => $lvl,
-                           expr => "(@LADDER[$shell]) $sym (@LADDER[$j])" };
-            }
+    for ^max(@PARAMS.elems, @ARGS.elems) -> $shell {
+        my $lvl = level-of($shell);
+        for ^($shell + 1) -> $i {
+            next unless $i < @PARAMS.elems && $shell < @ARGS.elems;
+            @c.push: { a => @PARAMS[$i]<sig>, b => @ARGS[$shell], level => $lvl,
+                       expr => build(%f, @PARAMS[$i]<sig>, @PARAMS[$i]<show>, @ARGS[$shell]) };
+        }
+        for ^$shell -> $j {
+            next unless $shell < @PARAMS.elems && $j < @ARGS.elems;
+            @c.push: { a => @PARAMS[$shell]<sig>, b => @ARGS[$j], level => $lvl,
+                       expr => build(%f, @PARAMS[$shell]<sig>, @PARAMS[$shell]<show>, @ARGS[$j]) };
         }
     }
-    elsif %o<cat> eq 'prefix' {
-        for ^@LADDER.elems -> $i {
-            @c.push: { a => @LADDER[$i], b => Nil,
-                       level => ($i == 0 ?? 0 !! $i <= 3 ?? 1 !! $i <= 9 ?? 2 !! 3),
-                       expr => "$sym(@LADDER[$i])" };
-        }
-    }
-    else {
-        for ^@LADDER.elems -> $i {
-            @c.push: { a => @LADDER[$i], b => Nil,
-                       level => ($i == 0 ?? 0 !! $i <= 3 ?? 1 !! $i <= 9 ?? 2 !! 3),
-                       expr => "(@LADDER[$i])$sym" };
-        }
-    }
-    my $atom = slug(%o<cat>, $sym);
-    %cells{$atom} = { cat => %o<cat>, sym => $sym, cells => @c };
+    %cells{"bind-{ %f<name> }"} = { kind => 'unary', form => %f<name>, cells => @c };
     @all.append: @c.map(*<expr>);
 }
-@all = @all.unique;
 
+# --- family two: two parameters dividing one argument list ------------------
+# This is where the binder actually gets interesting: an optional before a
+# slurpy, a named after a positional, two constraints competing for one value.
+for @PAIR-ARGS -> $args {
+    my @c;
+    for ^@PARAMS.elems -> $shell {
+        my $lvl = level-of($shell);
+        for ^($shell + 1) -> $i {
+            my $sig  = @PARAMS[$i]<sig> ~ ', ' ~ rename2(@PARAMS[$shell]<sig>);
+            my $show = '(' ~ @PARAMS[$i]<show> ~ ', ' ~ rename2(@PARAMS[$shell]<show>) ~ ').raku';
+            @c.push: { a => @PARAMS[$i]<sig>, b => @PARAMS[$shell]<sig>, level => $lvl,
+                       expr => "my \$A = \\($args); sub f($sig) \{ $show \}; f(|\$A)" };
+        }
+        for ^$shell -> $j {
+            my $sig  = @PARAMS[$shell]<sig> ~ ', ' ~ rename2(@PARAMS[$j]<sig>);
+            my $show = '(' ~ @PARAMS[$shell]<show> ~ ', ' ~ rename2(@PARAMS[$j]<show>) ~ ').raku';
+            @c.push: { a => @PARAMS[$shell]<sig>, b => @PARAMS[$j]<sig>, level => $lvl,
+                       expr => "my \$A = \\($args); sub f($sig) \{ $show \}; f(|\$A)" };
+        }
+    }
+    %cells{"pair-{ argslug($args) }"} = { kind => 'pair', args => $args, cells => @c };
+    @all.append: @c.map(*<expr>);
+}
+
+@all = @all.unique;
 say "# { %cells.elems } atoms, { @all.elems } cells";
 exit 0 if @*ARGS.first({ $_ eq '--count-only' });
 
@@ -403,7 +467,7 @@ for ^@engines -> $e {
         @obs.push: %seen;
         next;
     }
-    say "# probing { @ids[$e] }: { @todo.elems } new of { @all.elems } ({ @all.elems - @todo.elems } carried forward from earlier builds) …";
+    say "# probing { @ids[$e] }: { @todo.elems } new of { @all.elems } …";
     my %fresh = run-parallel(@engines[$e], @todo, $JOBS);
     for %fresh.keys -> $k { %fresh{$k}<label> = @ids[$e]; %seen{$k} = %fresh{$k} }
 
@@ -413,7 +477,6 @@ for ^@engines -> $e {
         my %filled = recover(@engines[$e], @missing);
         for %filled.keys -> $k { %filled{$k}<label> = @ids[$e]; %seen{$k} = %filled{$k} }
     }
-    # this build's file records only what THIS build answered
     my %mine;
     for %seen.keys -> $k { %mine{$k} = %seen{$k} if (%seen{$k}<label> // '') eq @ids[$e] }
     cache-save(@ids[$e], %mine) if %mine;
@@ -429,8 +492,10 @@ if @re {
     cache-save(@ids[0] ~ '-again', %again);
 }
 
+# ----------------------------------------------------------------------- emit
+
 my $ref = @obs[0];
-my $outdir = $ROOT.add('generated/inventory');
+my $outdir = $ROOT.add('generated/signatures');
 $outdir.mkdir unless $outdir.e;
 
 my $written = 0;
@@ -439,15 +504,12 @@ my $parked  = 0;
 for %cells.keys.sort -> $atom {
     my %spec = %cells{$atom};
     my @out;
-    @out.push: "atom     operators/$atom";
+    @out.push: "atom     signatures/$atom";
     @out.push: "source   generated";
-    @out.push: "gen      gen/operators.raku";
-    @out.push: "from-inventory { %spec<cat> } { %spec<sym> }";
-    @out.push: "ladder   mixed";
-    if %spec<cat> eq 'infix' {
-        @out.push: "axes     { @LADDER.join(' | ') }";
-        @out.push: "cols     { @LADDER.join(' | ') }";
-    }
+    @out.push: "gen      gen/signatures.raku";
+    @out.push: %spec<kind> eq 'pair'
+        ?? "arguments { %spec<args> eq '' ?? '(none)' !! %spec<args> }"
+        !! "callform { %spec<form> }";
     @out.push: '';
 
     my $i = 0;
@@ -457,8 +519,8 @@ for %cells.keys.sort -> $atom {
         next unless $r;
 
         @out.push: "- id     { sprintf('%04d', $i) }";
-        @out.push: "  from   inventory:{ %spec<cat> }:{ %spec<sym> }";
-        @out.push: %c<b>.defined ?? "  cell   { %c<a> } | { %c<b> }" !! "  cell   { %c<a> }";
+        @out.push: "  from   signatures:{ %spec<kind> }";
+        @out.push: "  cell   { %c<a> } | { %c<b> }";
         @out.push: "  level  { %c<level> // 3 }";
         @out.push: "  code   { %c<expr> }";
 
@@ -483,13 +545,13 @@ for %cells.keys.sort -> $atom {
         if !$answered {
             @out.push: "  verdict disputed";
             @out.push: "  why    the reference produced no usable answer for this cell";
-            @out.push: "  ruled  2026-08-15 against { @ids[0] }";
+            @out.push: "  ruled  2026-08-18 against { @ids[0] }";
             $parked++;
         }
         elsif !$stable {
             @out.push: "  verdict disputed";
             @out.push: "  why    the reference answers differently on two identical runs, so there is nothing stable to assert";
-            @out.push: "  ruled  2026-08-15 against { @ids[0] }";
+            @out.push: "  ruled  2026-08-18 against { @ids[0] }";
             $parked++;
         }
         @out.push: '';
@@ -499,4 +561,4 @@ for %cells.keys.sort -> $atom {
     $outdir.add("$atom.grid").spurt(@out.join("\n"));
 }
 
-say "# wrote $written cells across { %cells.elems } operators, $parked parked";
+say "# wrote $written cells across { %cells.elems } signature atoms, $parked parked";

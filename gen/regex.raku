@@ -100,7 +100,7 @@ sub run-sh($line, $secs) {
     my $base = $TMP.add('rx-' ~ $*PID ~ '-' ~ $GUARD++).absolute;
     my $script = "exec >/dev/null 2>&1; set -m 2>/dev/null || true; "
                ~ "$line > { sh-quote($base ~ '.out') } 2> { sh-quote($base ~ '.err') } & p=\$!; "
-               ~ "( sleep $secs; pkill -9 -f rx-probe 2>/dev/null; kill -9 \$p 2>/dev/null ) & w=\$!; "
+               ~ "( sleep $secs; kill -9 \$p 2>/dev/null ) & w=\$!; "
                ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; exit 0";
     my $p = run('/bin/sh', '-c', $script);
     my $rc = $p.exitcode;
@@ -160,7 +160,7 @@ sub run-parallel($cmd, @exprs, $jobs, $batch = 200, $secs = 120) {
         my $script = "exec >/dev/null 2>&1; set -m 2>/dev/null || true; " ~ @cmds.join(' ') ~ " wait";
         my $proc = run('/bin/sh', '-c',
             "( $script ) & p=\$!; "
-          ~ "( sleep $secs; pkill -9 -f rx-probe 2>/dev/null; kill -9 \$p 2>/dev/null ) & w=\$!; "
+          ~ "( sleep $secs; kill -9 \$p 2>/dev/null ) & w=\$!; "
           ~ "wait \$p; kill \$w 2>/dev/null; exit 0");
         my $ignored = $proc.exitcode;
 
