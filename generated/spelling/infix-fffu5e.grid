@@ -1,0 +1,71 @@
+atom     spelling/infix-fffu5e
+source   generated
+gen      gen/spelling.raku
+operator fff^
+forms    ({A}) fff^ ({B})  ·  {A} fff^ {B}  ·  {A}fff^{B}
+axes     1 | 2 · 1 | -1 · "a" | "b" · (1,2) | (3,)
+cols     spaced | tight
+
+- id     0001
+  from   spelling:spaced · lexical:digit · digit
+  cell   1 | 2 | spaced
+  code   1 fff^ 2
+  baseline compiles
+  same-as (1) fff^ (2)
+  oracle rakudo-2026.07 → AGREE
+
+- id     0002
+  from   spelling:tight · lexical:digit · digit
+  cell   1 | 2 | tight
+  code   1fff^2
+  baseline compiles
+  no-parse the reference rejects this spelling
+  oracle rakudo-2026.07 → no-parse
+
+- id     0003
+  from   spelling:spaced · lexical:digit · minus
+  cell   1 | -1 | spaced
+  code   1 fff^ -1
+  baseline compiles
+  same-as (1) fff^ (-1)
+  oracle rakudo-2026.07 → AGREE
+
+- id     0004
+  from   spelling:tight · lexical:digit · minus
+  cell   1 | -1 | tight
+  code   1fff^-1
+  baseline compiles
+  no-parse the reference rejects this spelling
+  oracle rakudo-2026.07 → no-parse
+
+- id     0005
+  from   spelling:spaced · lexical:quote · quote
+  cell   "a" | "b" | spaced
+  code   "a" fff^ "b"
+  baseline compiles
+  same-as ("a") fff^ ("b")
+  oracle rakudo-2026.07 → AGREE
+
+- id     0006
+  from   spelling:tight · lexical:quote · quote
+  cell   "a" | "b" | tight
+  code   "a"fff^"b"
+  baseline compiles
+  same-as ("a") fff^ ("b")
+  oracle rakudo-2026.07 → AGREE
+
+- id     0007
+  from   spelling:spaced · lexical:paren · paren
+  cell   (1,2) | (3,) | spaced
+  code   (1,2) fff^ (3,)
+  baseline compiles
+  same-as ((1,2)) fff^ ((3,))
+  oracle rakudo-2026.07 → AGREE
+
+- id     0008
+  from   spelling:tight · lexical:paren · paren
+  cell   (1,2) | (3,) | tight
+  code   (1,2)fff^(3,)
+  baseline compiles
+  same-as ((1,2)) fff^ ((3,))
+  oracle rakudo-2026.07 → AGREE

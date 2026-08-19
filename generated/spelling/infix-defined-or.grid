@@ -1,0 +1,71 @@
+atom     spelling/infix-defined-or
+source   generated
+gen      gen/spelling.raku
+operator //
+forms    ({A}) // ({B})  ·  {A} // {B}  ·  {A}//{B}
+axes     1 | 2 · 1 | -1 · "a" | "b" · (1,2) | (3,)
+cols     spaced | tight
+
+- id     0001
+  from   spelling:spaced · lexical:digit · digit
+  cell   1 | 2 | spaced
+  code   1 // 2
+  baseline compiles
+  same-as (1) // (2)
+  oracle rakudo-2026.07 → AGREE
+
+- id     0002
+  from   spelling:tight · lexical:digit · digit
+  cell   1 | 2 | tight
+  code   1//2
+  baseline compiles
+  same-as (1) // (2)
+  oracle rakudo-2026.07 → AGREE
+
+- id     0003
+  from   spelling:spaced · lexical:digit · minus
+  cell   1 | -1 | spaced
+  code   1 // -1
+  baseline compiles
+  same-as (1) // (-1)
+  oracle rakudo-2026.07 → AGREE
+
+- id     0004
+  from   spelling:tight · lexical:digit · minus
+  cell   1 | -1 | tight
+  code   1//-1
+  baseline compiles
+  same-as (1) // (-1)
+  oracle rakudo-2026.07 → AGREE
+
+- id     0005
+  from   spelling:spaced · lexical:quote · quote
+  cell   "a" | "b" | spaced
+  code   "a" // "b"
+  baseline compiles
+  same-as ("a") // ("b")
+  oracle rakudo-2026.07 → AGREE
+
+- id     0006
+  from   spelling:tight · lexical:quote · quote
+  cell   "a" | "b" | tight
+  code   "a"//"b"
+  baseline compiles
+  same-as ("a") // ("b")
+  oracle rakudo-2026.07 → AGREE
+
+- id     0007
+  from   spelling:spaced · lexical:paren · paren
+  cell   (1,2) | (3,) | spaced
+  code   (1,2) // (3,)
+  baseline compiles
+  same-as ((1,2)) // ((3,))
+  oracle rakudo-2026.07 → AGREE
+
+- id     0008
+  from   spelling:tight · lexical:paren · paren
+  cell   (1,2) | (3,) | tight
+  code   (1,2)//(3,)
+  baseline compiles
+  same-as ((1,2)) // ((3,))
+  oracle rakudo-2026.07 → AGREE
