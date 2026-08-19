@@ -92,6 +92,7 @@ from, but nothing in the suite depends on it.
 | `adjudications/` | signed rulings where `expect` diverges from `oracle` |
 | `lib/`, `bin/` | the harness, written in Raku |
 | `docs/` | [the plan](docs/PLAN.md), [the file format](docs/FORMAT.md), [how the generators work](docs/GENERATORS.md) |
+| `presentation/` | a slide deck introducing Rakugrid — [`index.html`](presentation/index.html) interactive, or [the PDF](presentation/rakugrid-presentation.pdf) for a quick flip-through |
 
 ## Regenerating
 
