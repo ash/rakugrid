@@ -1,0 +1,1158 @@
+atom     regexes/empty
+source   generated
+gen      gen/regex.raku
+pattern  //
+axes     "a" | "abc" | "" | "aaa" | "ABC" | "a b" | "a,b" | "123" | "a\nb" | " a " | "aä" | "e\c[COMBINING ACUTE ACCENT]" | "abcabc" | "0" | "_" | "a1b2"
+cols     matches | matched | from | captures | subst | subst-g | comb-count | split
+
+- id     0001
+  from   regex:matches
+  cell   "a" | matches
+  level  3
+  code   so("a" ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0002
+  from   regex:matched
+  cell   "a" | matched
+  level  3
+  code   ("a" ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0003
+  from   regex:from
+  cell   "a" | from
+  level  3
+  code   ("a" ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0004
+  from   regex:captures
+  cell   "a" | captures
+  level  3
+  code   ("a" ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0005
+  from   regex:subst
+  cell   "a" | subst
+  level  3
+  code   "a".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0006
+  from   regex:subst-g
+  cell   "a" | subst-g
+  level  3
+  code   "a".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0007
+  from   regex:comb-count
+  cell   "a" | comb-count
+  level  3
+  code   "a".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0008
+  from   regex:split
+  cell   "a" | split
+  level  3
+  code   "a".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0009
+  from   regex:matches
+  cell   "abc" | matches
+  level  3
+  code   so("abc" ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0010
+  from   regex:matched
+  cell   "abc" | matched
+  level  3
+  code   ("abc" ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0011
+  from   regex:from
+  cell   "abc" | from
+  level  3
+  code   ("abc" ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0012
+  from   regex:captures
+  cell   "abc" | captures
+  level  3
+  code   ("abc" ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0013
+  from   regex:subst
+  cell   "abc" | subst
+  level  3
+  code   "abc".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0014
+  from   regex:subst-g
+  cell   "abc" | subst-g
+  level  3
+  code   "abc".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0015
+  from   regex:comb-count
+  cell   "abc" | comb-count
+  level  3
+  code   "abc".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0016
+  from   regex:split
+  cell   "abc" | split
+  level  3
+  code   "abc".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0017
+  from   regex:matches
+  cell   "" | matches
+  level  3
+  code   so("" ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0018
+  from   regex:matched
+  cell   "" | matched
+  level  3
+  code   ("" ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0019
+  from   regex:from
+  cell   "" | from
+  level  3
+  code   ("" ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0020
+  from   regex:captures
+  cell   "" | captures
+  level  3
+  code   ("" ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0021
+  from   regex:subst
+  cell   "" | subst
+  level  3
+  code   "".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0022
+  from   regex:subst-g
+  cell   "" | subst-g
+  level  3
+  code   "".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0023
+  from   regex:comb-count
+  cell   "" | comb-count
+  level  3
+  code   "".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0024
+  from   regex:split
+  cell   "" | split
+  level  3
+  code   "".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0025
+  from   regex:matches
+  cell   "aaa" | matches
+  level  3
+  code   so("aaa" ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0026
+  from   regex:matched
+  cell   "aaa" | matched
+  level  3
+  code   ("aaa" ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0027
+  from   regex:from
+  cell   "aaa" | from
+  level  3
+  code   ("aaa" ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0028
+  from   regex:captures
+  cell   "aaa" | captures
+  level  3
+  code   ("aaa" ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0029
+  from   regex:subst
+  cell   "aaa" | subst
+  level  3
+  code   "aaa".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0030
+  from   regex:subst-g
+  cell   "aaa" | subst-g
+  level  3
+  code   "aaa".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0031
+  from   regex:comb-count
+  cell   "aaa" | comb-count
+  level  3
+  code   "aaa".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0032
+  from   regex:split
+  cell   "aaa" | split
+  level  3
+  code   "aaa".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0033
+  from   regex:matches
+  cell   "ABC" | matches
+  level  3
+  code   so("ABC" ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0034
+  from   regex:matched
+  cell   "ABC" | matched
+  level  3
+  code   ("ABC" ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0035
+  from   regex:from
+  cell   "ABC" | from
+  level  3
+  code   ("ABC" ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0036
+  from   regex:captures
+  cell   "ABC" | captures
+  level  3
+  code   ("ABC" ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0037
+  from   regex:subst
+  cell   "ABC" | subst
+  level  3
+  code   "ABC".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0038
+  from   regex:subst-g
+  cell   "ABC" | subst-g
+  level  3
+  code   "ABC".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0039
+  from   regex:comb-count
+  cell   "ABC" | comb-count
+  level  3
+  code   "ABC".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0040
+  from   regex:split
+  cell   "ABC" | split
+  level  3
+  code   "ABC".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0041
+  from   regex:matches
+  cell   "a b" | matches
+  level  3
+  code   so("a b" ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0042
+  from   regex:matched
+  cell   "a b" | matched
+  level  3
+  code   ("a b" ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0043
+  from   regex:from
+  cell   "a b" | from
+  level  3
+  code   ("a b" ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0044
+  from   regex:captures
+  cell   "a b" | captures
+  level  3
+  code   ("a b" ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0045
+  from   regex:subst
+  cell   "a b" | subst
+  level  3
+  code   "a b".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0046
+  from   regex:subst-g
+  cell   "a b" | subst-g
+  level  3
+  code   "a b".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0047
+  from   regex:comb-count
+  cell   "a b" | comb-count
+  level  3
+  code   "a b".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0048
+  from   regex:split
+  cell   "a b" | split
+  level  3
+  code   "a b".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0049
+  from   regex:matches
+  cell   "a,b" | matches
+  level  3
+  code   so("a,b" ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0050
+  from   regex:matched
+  cell   "a,b" | matched
+  level  3
+  code   ("a,b" ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0051
+  from   regex:from
+  cell   "a,b" | from
+  level  3
+  code   ("a,b" ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0052
+  from   regex:captures
+  cell   "a,b" | captures
+  level  3
+  code   ("a,b" ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0053
+  from   regex:subst
+  cell   "a,b" | subst
+  level  3
+  code   "a,b".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0054
+  from   regex:subst-g
+  cell   "a,b" | subst-g
+  level  3
+  code   "a,b".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0055
+  from   regex:comb-count
+  cell   "a,b" | comb-count
+  level  3
+  code   "a,b".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0056
+  from   regex:split
+  cell   "a,b" | split
+  level  3
+  code   "a,b".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0057
+  from   regex:matches
+  cell   "123" | matches
+  level  3
+  code   so("123" ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0058
+  from   regex:matched
+  cell   "123" | matched
+  level  3
+  code   ("123" ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0059
+  from   regex:from
+  cell   "123" | from
+  level  3
+  code   ("123" ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0060
+  from   regex:captures
+  cell   "123" | captures
+  level  3
+  code   ("123" ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0061
+  from   regex:subst
+  cell   "123" | subst
+  level  3
+  code   "123".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0062
+  from   regex:subst-g
+  cell   "123" | subst-g
+  level  3
+  code   "123".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0063
+  from   regex:comb-count
+  cell   "123" | comb-count
+  level  3
+  code   "123".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0064
+  from   regex:split
+  cell   "123" | split
+  level  3
+  code   "123".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0065
+  from   regex:matches
+  cell   "a\nb" | matches
+  level  3
+  code   so("a\nb" ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0066
+  from   regex:matched
+  cell   "a\nb" | matched
+  level  3
+  code   ("a\nb" ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0067
+  from   regex:from
+  cell   "a\nb" | from
+  level  3
+  code   ("a\nb" ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0068
+  from   regex:captures
+  cell   "a\nb" | captures
+  level  3
+  code   ("a\nb" ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0069
+  from   regex:subst
+  cell   "a\nb" | subst
+  level  3
+  code   "a\nb".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0070
+  from   regex:subst-g
+  cell   "a\nb" | subst-g
+  level  3
+  code   "a\nb".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0071
+  from   regex:comb-count
+  cell   "a\nb" | comb-count
+  level  3
+  code   "a\nb".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0072
+  from   regex:split
+  cell   "a\nb" | split
+  level  3
+  code   "a\nb".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0073
+  from   regex:matches
+  cell   " a " | matches
+  level  3
+  code   so(" a " ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0074
+  from   regex:matched
+  cell   " a " | matched
+  level  3
+  code   (" a " ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0075
+  from   regex:from
+  cell   " a " | from
+  level  3
+  code   (" a " ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0076
+  from   regex:captures
+  cell   " a " | captures
+  level  3
+  code   (" a " ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0077
+  from   regex:subst
+  cell   " a " | subst
+  level  3
+  code   " a ".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0078
+  from   regex:subst-g
+  cell   " a " | subst-g
+  level  3
+  code   " a ".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0079
+  from   regex:comb-count
+  cell   " a " | comb-count
+  level  3
+  code   " a ".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0080
+  from   regex:split
+  cell   " a " | split
+  level  3
+  code   " a ".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0081
+  from   regex:matches
+  cell   "aä" | matches
+  level  3
+  code   so("aä" ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0082
+  from   regex:matched
+  cell   "aä" | matched
+  level  3
+  code   ("aä" ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0083
+  from   regex:from
+  cell   "aä" | from
+  level  3
+  code   ("aä" ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0084
+  from   regex:captures
+  cell   "aä" | captures
+  level  3
+  code   ("aä" ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0085
+  from   regex:subst
+  cell   "aä" | subst
+  level  3
+  code   "aä".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0086
+  from   regex:subst-g
+  cell   "aä" | subst-g
+  level  3
+  code   "aä".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0087
+  from   regex:comb-count
+  cell   "aä" | comb-count
+  level  3
+  code   "aä".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0088
+  from   regex:split
+  cell   "aä" | split
+  level  3
+  code   "aä".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0089
+  from   regex:matches
+  cell   "e\c[COMBINING ACUTE ACCENT]" | matches
+  level  3
+  code   so("e\c[COMBINING ACUTE ACCENT]" ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0090
+  from   regex:matched
+  cell   "e\c[COMBINING ACUTE ACCENT]" | matched
+  level  3
+  code   ("e\c[COMBINING ACUTE ACCENT]" ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0091
+  from   regex:from
+  cell   "e\c[COMBINING ACUTE ACCENT]" | from
+  level  3
+  code   ("e\c[COMBINING ACUTE ACCENT]" ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0092
+  from   regex:captures
+  cell   "e\c[COMBINING ACUTE ACCENT]" | captures
+  level  3
+  code   ("e\c[COMBINING ACUTE ACCENT]" ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0093
+  from   regex:subst
+  cell   "e\c[COMBINING ACUTE ACCENT]" | subst
+  level  3
+  code   "e\c[COMBINING ACUTE ACCENT]".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0094
+  from   regex:subst-g
+  cell   "e\c[COMBINING ACUTE ACCENT]" | subst-g
+  level  3
+  code   "e\c[COMBINING ACUTE ACCENT]".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0095
+  from   regex:comb-count
+  cell   "e\c[COMBINING ACUTE ACCENT]" | comb-count
+  level  3
+  code   "e\c[COMBINING ACUTE ACCENT]".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0096
+  from   regex:split
+  cell   "e\c[COMBINING ACUTE ACCENT]" | split
+  level  3
+  code   "e\c[COMBINING ACUTE ACCENT]".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0097
+  from   regex:matches
+  cell   "abcabc" | matches
+  level  3
+  code   so("abcabc" ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0098
+  from   regex:matched
+  cell   "abcabc" | matched
+  level  3
+  code   ("abcabc" ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0099
+  from   regex:from
+  cell   "abcabc" | from
+  level  3
+  code   ("abcabc" ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0100
+  from   regex:captures
+  cell   "abcabc" | captures
+  level  3
+  code   ("abcabc" ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0101
+  from   regex:subst
+  cell   "abcabc" | subst
+  level  3
+  code   "abcabc".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0102
+  from   regex:subst-g
+  cell   "abcabc" | subst-g
+  level  3
+  code   "abcabc".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0103
+  from   regex:comb-count
+  cell   "abcabc" | comb-count
+  level  3
+  code   "abcabc".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0104
+  from   regex:split
+  cell   "abcabc" | split
+  level  3
+  code   "abcabc".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0105
+  from   regex:matches
+  cell   "0" | matches
+  level  3
+  code   so("0" ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0106
+  from   regex:matched
+  cell   "0" | matched
+  level  3
+  code   ("0" ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0107
+  from   regex:from
+  cell   "0" | from
+  level  3
+  code   ("0" ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0108
+  from   regex:captures
+  cell   "0" | captures
+  level  3
+  code   ("0" ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0109
+  from   regex:subst
+  cell   "0" | subst
+  level  3
+  code   "0".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0110
+  from   regex:subst-g
+  cell   "0" | subst-g
+  level  3
+  code   "0".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0111
+  from   regex:comb-count
+  cell   "0" | comb-count
+  level  3
+  code   "0".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0112
+  from   regex:split
+  cell   "0" | split
+  level  3
+  code   "0".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0113
+  from   regex:matches
+  cell   "_" | matches
+  level  3
+  code   so("_" ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0114
+  from   regex:matched
+  cell   "_" | matched
+  level  3
+  code   ("_" ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0115
+  from   regex:from
+  cell   "_" | from
+  level  3
+  code   ("_" ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0116
+  from   regex:captures
+  cell   "_" | captures
+  level  3
+  code   ("_" ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0117
+  from   regex:subst
+  cell   "_" | subst
+  level  3
+  code   "_".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0118
+  from   regex:subst-g
+  cell   "_" | subst-g
+  level  3
+  code   "_".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0119
+  from   regex:comb-count
+  cell   "_" | comb-count
+  level  3
+  code   "_".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0120
+  from   regex:split
+  cell   "_" | split
+  level  3
+  code   "_".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0121
+  from   regex:matches
+  cell   "a1b2" | matches
+  level  3
+  code   so("a1b2" ~~ //)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0122
+  from   regex:matched
+  cell   "a1b2" | matched
+  level  3
+  code   ("a1b2" ~~ //).Str
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0123
+  from   regex:from
+  cell   "a1b2" | from
+  level  3
+  code   ("a1b2" ~~ //).from
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0124
+  from   regex:captures
+  cell   "a1b2" | captures
+  level  3
+  code   ("a1b2" ~~ //).list.map(*.Str).join(",")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0125
+  from   regex:subst
+  cell   "a1b2" | subst
+  level  3
+  code   "a1b2".subst(//, "X")
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0126
+  from   regex:subst-g
+  cell   "a1b2" | subst-g
+  level  3
+  code   "a1b2".subst(//, "X", :g)
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0127
+  from   regex:comb-count
+  cell   "a1b2" | comb-count
+  level  3
+  code   "a1b2".comb(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused
+
+- id     0128
+  from   regex:split
+  cell   "a1b2" | split
+  level  3
+  code   "a1b2".split(//).elems
+  throws X::Syntax::Regex::NullRegex
+  oracle rakudo-2026.07 → ERR:X::Syntax::Regex::NullRegex
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Syntax::Confused

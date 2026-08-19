@@ -3,8 +3,8 @@ source   generated
 gen      gen/operators.raku
 from-inventory infix ~<
 ladder   mixed
-axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
-cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1) | bag(1,1) | (1..3).Seq | any(1,2) | v1.2 | 1+2i | Str
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1) | bag(1,1) | (1..3).Seq | any(1,2) | v1.2 | 1+2i | Str
 
 - id     0001
   from   inventory:infix:~<
@@ -5189,3 +5189,2919 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-v3.14.0-104-g2295fb0-modified → ERR:X::Multi::NoMatch
+
+- id     0577
+  from   inventory:infix:~<
+  cell   0 | bag(1,1)
+  level  3
+  code   (0) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0578
+  from   inventory:infix:~<
+  cell   1 | bag(1,1)
+  level  3
+  code   (1) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0579
+  from   inventory:infix:~<
+  cell   -1 | bag(1,1)
+  level  3
+  code   (-1) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0580
+  from   inventory:infix:~<
+  cell   1/2 | bag(1,1)
+  level  3
+  code   (1/2) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0581
+  from   inventory:infix:~<
+  cell   0e0 | bag(1,1)
+  level  3
+  code   (0e0) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0582
+  from   inventory:infix:~<
+  cell   NaN | bag(1,1)
+  level  3
+  code   (NaN) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0583
+  from   inventory:infix:~<
+  cell   "" | bag(1,1)
+  level  3
+  code   ("") ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0584
+  from   inventory:infix:~<
+  cell   "a" | bag(1,1)
+  level  3
+  code   ("a") ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0585
+  from   inventory:infix:~<
+  cell   True | bag(1,1)
+  level  3
+  code   (True) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0586
+  from   inventory:infix:~<
+  cell   Any | bag(1,1)
+  level  3
+  code   (Any) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0587
+  from   inventory:infix:~<
+  cell   (1,2) | bag(1,1)
+  level  3
+  code   ((1,2)) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0588
+  from   inventory:infix:~<
+  cell   {a=>1} | bag(1,1)
+  level  3
+  code   ({a=>1}) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0589
+  from   inventory:infix:~<
+  cell   -0e0 | bag(1,1)
+  level  3
+  code   (-0e0) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0590
+  from   inventory:infix:~<
+  cell   Inf | bag(1,1)
+  level  3
+  code   (Inf) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0591
+  from   inventory:infix:~<
+  cell   2**64 | bag(1,1)
+  level  3
+  code   (2**64) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0592
+  from   inventory:infix:~<
+  cell   False | bag(1,1)
+  level  3
+  code   (False) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0593
+  from   inventory:infix:~<
+  cell   Nil | bag(1,1)
+  level  3
+  code   (Nil) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0594
+  from   inventory:infix:~<
+  cell   () | bag(1,1)
+  level  3
+  code   (()) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0595
+  from   inventory:infix:~<
+  cell   "0" | bag(1,1)
+  level  3
+  code   ("0") ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0596
+  from   inventory:infix:~<
+  cell   (1..3) | bag(1,1)
+  level  3
+  code   ((1..3)) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0597
+  from   inventory:infix:~<
+  cell   Int | bag(1,1)
+  level  3
+  code   (Int) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0598
+  from   inventory:infix:~<
+  cell   "a b" | bag(1,1)
+  level  3
+  code   ("a b") ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0599
+  from   inventory:infix:~<
+  cell   [1,2] | bag(1,1)
+  level  3
+  code   ([1,2]) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0600
+  from   inventory:infix:~<
+  cell   (a => 1) | bag(1,1)
+  level  3
+  code   ((a => 1)) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0601
+  from   inventory:infix:~<
+  cell   bag(1,1) | bag(1,1)
+  level  3
+  code   (bag(1,1)) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0602
+  from   inventory:infix:~<
+  cell   bag(1,1) | 0
+  level  3
+  code   (bag(1,1)) ~< (0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0603
+  from   inventory:infix:~<
+  cell   bag(1,1) | 1
+  level  3
+  code   (bag(1,1)) ~< (1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0604
+  from   inventory:infix:~<
+  cell   bag(1,1) | -1
+  level  3
+  code   (bag(1,1)) ~< (-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0605
+  from   inventory:infix:~<
+  cell   bag(1,1) | 1/2
+  level  3
+  code   (bag(1,1)) ~< (1/2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0606
+  from   inventory:infix:~<
+  cell   bag(1,1) | 0e0
+  level  3
+  code   (bag(1,1)) ~< (0e0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0607
+  from   inventory:infix:~<
+  cell   bag(1,1) | NaN
+  level  3
+  code   (bag(1,1)) ~< (NaN)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0608
+  from   inventory:infix:~<
+  cell   bag(1,1) | ""
+  level  3
+  code   (bag(1,1)) ~< ("")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0609
+  from   inventory:infix:~<
+  cell   bag(1,1) | "a"
+  level  3
+  code   (bag(1,1)) ~< ("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0610
+  from   inventory:infix:~<
+  cell   bag(1,1) | True
+  level  3
+  code   (bag(1,1)) ~< (True)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0611
+  from   inventory:infix:~<
+  cell   bag(1,1) | Any
+  level  3
+  code   (bag(1,1)) ~< (Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0612
+  from   inventory:infix:~<
+  cell   bag(1,1) | (1,2)
+  level  3
+  code   (bag(1,1)) ~< ((1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0613
+  from   inventory:infix:~<
+  cell   bag(1,1) | {a=>1}
+  level  3
+  code   (bag(1,1)) ~< ({a=>1})
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0614
+  from   inventory:infix:~<
+  cell   bag(1,1) | -0e0
+  level  3
+  code   (bag(1,1)) ~< (-0e0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0615
+  from   inventory:infix:~<
+  cell   bag(1,1) | Inf
+  level  3
+  code   (bag(1,1)) ~< (Inf)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0616
+  from   inventory:infix:~<
+  cell   bag(1,1) | 2**64
+  level  3
+  code   (bag(1,1)) ~< (2**64)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0617
+  from   inventory:infix:~<
+  cell   bag(1,1) | False
+  level  3
+  code   (bag(1,1)) ~< (False)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0618
+  from   inventory:infix:~<
+  cell   bag(1,1) | Nil
+  level  3
+  code   (bag(1,1)) ~< (Nil)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0619
+  from   inventory:infix:~<
+  cell   bag(1,1) | ()
+  level  3
+  code   (bag(1,1)) ~< (())
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0620
+  from   inventory:infix:~<
+  cell   bag(1,1) | "0"
+  level  3
+  code   (bag(1,1)) ~< ("0")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0621
+  from   inventory:infix:~<
+  cell   bag(1,1) | (1..3)
+  level  3
+  code   (bag(1,1)) ~< ((1..3))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0622
+  from   inventory:infix:~<
+  cell   bag(1,1) | Int
+  level  3
+  code   (bag(1,1)) ~< (Int)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0623
+  from   inventory:infix:~<
+  cell   bag(1,1) | "a b"
+  level  3
+  code   (bag(1,1)) ~< ("a b")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0624
+  from   inventory:infix:~<
+  cell   bag(1,1) | [1,2]
+  level  3
+  code   (bag(1,1)) ~< ([1,2])
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0625
+  from   inventory:infix:~<
+  cell   bag(1,1) | (a => 1)
+  level  3
+  code   (bag(1,1)) ~< ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0626
+  from   inventory:infix:~<
+  cell   0 | (1..3).Seq
+  level  3
+  code   (0) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0627
+  from   inventory:infix:~<
+  cell   1 | (1..3).Seq
+  level  3
+  code   (1) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0628
+  from   inventory:infix:~<
+  cell   -1 | (1..3).Seq
+  level  3
+  code   (-1) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0629
+  from   inventory:infix:~<
+  cell   1/2 | (1..3).Seq
+  level  3
+  code   (1/2) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0630
+  from   inventory:infix:~<
+  cell   0e0 | (1..3).Seq
+  level  3
+  code   (0e0) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0631
+  from   inventory:infix:~<
+  cell   NaN | (1..3).Seq
+  level  3
+  code   (NaN) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0632
+  from   inventory:infix:~<
+  cell   "" | (1..3).Seq
+  level  3
+  code   ("") ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0633
+  from   inventory:infix:~<
+  cell   "a" | (1..3).Seq
+  level  3
+  code   ("a") ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0634
+  from   inventory:infix:~<
+  cell   True | (1..3).Seq
+  level  3
+  code   (True) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0635
+  from   inventory:infix:~<
+  cell   Any | (1..3).Seq
+  level  3
+  code   (Any) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0636
+  from   inventory:infix:~<
+  cell   (1,2) | (1..3).Seq
+  level  3
+  code   ((1,2)) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0637
+  from   inventory:infix:~<
+  cell   {a=>1} | (1..3).Seq
+  level  3
+  code   ({a=>1}) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0638
+  from   inventory:infix:~<
+  cell   -0e0 | (1..3).Seq
+  level  3
+  code   (-0e0) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0639
+  from   inventory:infix:~<
+  cell   Inf | (1..3).Seq
+  level  3
+  code   (Inf) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0640
+  from   inventory:infix:~<
+  cell   2**64 | (1..3).Seq
+  level  3
+  code   (2**64) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0641
+  from   inventory:infix:~<
+  cell   False | (1..3).Seq
+  level  3
+  code   (False) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0642
+  from   inventory:infix:~<
+  cell   Nil | (1..3).Seq
+  level  3
+  code   (Nil) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0643
+  from   inventory:infix:~<
+  cell   () | (1..3).Seq
+  level  3
+  code   (()) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0644
+  from   inventory:infix:~<
+  cell   "0" | (1..3).Seq
+  level  3
+  code   ("0") ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0645
+  from   inventory:infix:~<
+  cell   (1..3) | (1..3).Seq
+  level  3
+  code   ((1..3)) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0646
+  from   inventory:infix:~<
+  cell   Int | (1..3).Seq
+  level  3
+  code   (Int) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0647
+  from   inventory:infix:~<
+  cell   "a b" | (1..3).Seq
+  level  3
+  code   ("a b") ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0648
+  from   inventory:infix:~<
+  cell   [1,2] | (1..3).Seq
+  level  3
+  code   ([1,2]) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0649
+  from   inventory:infix:~<
+  cell   (a => 1) | (1..3).Seq
+  level  3
+  code   ((a => 1)) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0650
+  from   inventory:infix:~<
+  cell   bag(1,1) | (1..3).Seq
+  level  3
+  code   (bag(1,1)) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0651
+  from   inventory:infix:~<
+  cell   (1..3).Seq | (1..3).Seq
+  level  3
+  code   ((1..3).Seq) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0652
+  from   inventory:infix:~<
+  cell   (1..3).Seq | 0
+  level  3
+  code   ((1..3).Seq) ~< (0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0653
+  from   inventory:infix:~<
+  cell   (1..3).Seq | 1
+  level  3
+  code   ((1..3).Seq) ~< (1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0654
+  from   inventory:infix:~<
+  cell   (1..3).Seq | -1
+  level  3
+  code   ((1..3).Seq) ~< (-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0655
+  from   inventory:infix:~<
+  cell   (1..3).Seq | 1/2
+  level  3
+  code   ((1..3).Seq) ~< (1/2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0656
+  from   inventory:infix:~<
+  cell   (1..3).Seq | 0e0
+  level  3
+  code   ((1..3).Seq) ~< (0e0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0657
+  from   inventory:infix:~<
+  cell   (1..3).Seq | NaN
+  level  3
+  code   ((1..3).Seq) ~< (NaN)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0658
+  from   inventory:infix:~<
+  cell   (1..3).Seq | ""
+  level  3
+  code   ((1..3).Seq) ~< ("")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0659
+  from   inventory:infix:~<
+  cell   (1..3).Seq | "a"
+  level  3
+  code   ((1..3).Seq) ~< ("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0660
+  from   inventory:infix:~<
+  cell   (1..3).Seq | True
+  level  3
+  code   ((1..3).Seq) ~< (True)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0661
+  from   inventory:infix:~<
+  cell   (1..3).Seq | Any
+  level  3
+  code   ((1..3).Seq) ~< (Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0662
+  from   inventory:infix:~<
+  cell   (1..3).Seq | (1,2)
+  level  3
+  code   ((1..3).Seq) ~< ((1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0663
+  from   inventory:infix:~<
+  cell   (1..3).Seq | {a=>1}
+  level  3
+  code   ((1..3).Seq) ~< ({a=>1})
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0664
+  from   inventory:infix:~<
+  cell   (1..3).Seq | -0e0
+  level  3
+  code   ((1..3).Seq) ~< (-0e0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0665
+  from   inventory:infix:~<
+  cell   (1..3).Seq | Inf
+  level  3
+  code   ((1..3).Seq) ~< (Inf)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0666
+  from   inventory:infix:~<
+  cell   (1..3).Seq | 2**64
+  level  3
+  code   ((1..3).Seq) ~< (2**64)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0667
+  from   inventory:infix:~<
+  cell   (1..3).Seq | False
+  level  3
+  code   ((1..3).Seq) ~< (False)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0668
+  from   inventory:infix:~<
+  cell   (1..3).Seq | Nil
+  level  3
+  code   ((1..3).Seq) ~< (Nil)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0669
+  from   inventory:infix:~<
+  cell   (1..3).Seq | ()
+  level  3
+  code   ((1..3).Seq) ~< (())
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0670
+  from   inventory:infix:~<
+  cell   (1..3).Seq | "0"
+  level  3
+  code   ((1..3).Seq) ~< ("0")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0671
+  from   inventory:infix:~<
+  cell   (1..3).Seq | (1..3)
+  level  3
+  code   ((1..3).Seq) ~< ((1..3))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0672
+  from   inventory:infix:~<
+  cell   (1..3).Seq | Int
+  level  3
+  code   ((1..3).Seq) ~< (Int)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0673
+  from   inventory:infix:~<
+  cell   (1..3).Seq | "a b"
+  level  3
+  code   ((1..3).Seq) ~< ("a b")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0674
+  from   inventory:infix:~<
+  cell   (1..3).Seq | [1,2]
+  level  3
+  code   ((1..3).Seq) ~< ([1,2])
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0675
+  from   inventory:infix:~<
+  cell   (1..3).Seq | (a => 1)
+  level  3
+  code   ((1..3).Seq) ~< ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0676
+  from   inventory:infix:~<
+  cell   (1..3).Seq | bag(1,1)
+  level  3
+  code   ((1..3).Seq) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0677
+  from   inventory:infix:~<
+  cell   0 | any(1,2)
+  level  3
+  code   (0) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0678
+  from   inventory:infix:~<
+  cell   1 | any(1,2)
+  level  3
+  code   (1) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0679
+  from   inventory:infix:~<
+  cell   -1 | any(1,2)
+  level  3
+  code   (-1) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0680
+  from   inventory:infix:~<
+  cell   1/2 | any(1,2)
+  level  3
+  code   (1/2) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0681
+  from   inventory:infix:~<
+  cell   0e0 | any(1,2)
+  level  3
+  code   (0e0) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0682
+  from   inventory:infix:~<
+  cell   NaN | any(1,2)
+  level  3
+  code   (NaN) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0683
+  from   inventory:infix:~<
+  cell   "" | any(1,2)
+  level  3
+  code   ("") ~< (any(1,2))
+  throws X::NYI
+  oracle rakudo-2026.07 → ERR:X::NYI
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0684
+  from   inventory:infix:~<
+  cell   "a" | any(1,2)
+  level  3
+  code   ("a") ~< (any(1,2))
+  throws X::NYI
+  oracle rakudo-2026.07 → ERR:X::NYI
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0685
+  from   inventory:infix:~<
+  cell   True | any(1,2)
+  level  3
+  code   (True) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0686
+  from   inventory:infix:~<
+  cell   Any | any(1,2)
+  level  3
+  code   (Any) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0687
+  from   inventory:infix:~<
+  cell   (1,2) | any(1,2)
+  level  3
+  code   ((1,2)) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0688
+  from   inventory:infix:~<
+  cell   {a=>1} | any(1,2)
+  level  3
+  code   ({a=>1}) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0689
+  from   inventory:infix:~<
+  cell   -0e0 | any(1,2)
+  level  3
+  code   (-0e0) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0690
+  from   inventory:infix:~<
+  cell   Inf | any(1,2)
+  level  3
+  code   (Inf) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0691
+  from   inventory:infix:~<
+  cell   2**64 | any(1,2)
+  level  3
+  code   (2**64) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0692
+  from   inventory:infix:~<
+  cell   False | any(1,2)
+  level  3
+  code   (False) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0693
+  from   inventory:infix:~<
+  cell   Nil | any(1,2)
+  level  3
+  code   (Nil) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0694
+  from   inventory:infix:~<
+  cell   () | any(1,2)
+  level  3
+  code   (()) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0695
+  from   inventory:infix:~<
+  cell   "0" | any(1,2)
+  level  3
+  code   ("0") ~< (any(1,2))
+  throws X::NYI
+  oracle rakudo-2026.07 → ERR:X::NYI
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0696
+  from   inventory:infix:~<
+  cell   (1..3) | any(1,2)
+  level  3
+  code   ((1..3)) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0697
+  from   inventory:infix:~<
+  cell   Int | any(1,2)
+  level  3
+  code   (Int) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0698
+  from   inventory:infix:~<
+  cell   "a b" | any(1,2)
+  level  3
+  code   ("a b") ~< (any(1,2))
+  throws X::NYI
+  oracle rakudo-2026.07 → ERR:X::NYI
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0699
+  from   inventory:infix:~<
+  cell   [1,2] | any(1,2)
+  level  3
+  code   ([1,2]) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0700
+  from   inventory:infix:~<
+  cell   (a => 1) | any(1,2)
+  level  3
+  code   ((a => 1)) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0701
+  from   inventory:infix:~<
+  cell   bag(1,1) | any(1,2)
+  level  3
+  code   (bag(1,1)) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0702
+  from   inventory:infix:~<
+  cell   (1..3).Seq | any(1,2)
+  level  3
+  code   ((1..3).Seq) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0703
+  from   inventory:infix:~<
+  cell   any(1,2) | any(1,2)
+  level  3
+  code   (any(1,2)) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0704
+  from   inventory:infix:~<
+  cell   any(1,2) | 0
+  level  3
+  code   (any(1,2)) ~< (0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0705
+  from   inventory:infix:~<
+  cell   any(1,2) | 1
+  level  3
+  code   (any(1,2)) ~< (1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0706
+  from   inventory:infix:~<
+  cell   any(1,2) | -1
+  level  3
+  code   (any(1,2)) ~< (-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0707
+  from   inventory:infix:~<
+  cell   any(1,2) | 1/2
+  level  3
+  code   (any(1,2)) ~< (1/2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0708
+  from   inventory:infix:~<
+  cell   any(1,2) | 0e0
+  level  3
+  code   (any(1,2)) ~< (0e0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0709
+  from   inventory:infix:~<
+  cell   any(1,2) | NaN
+  level  3
+  code   (any(1,2)) ~< (NaN)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0710
+  from   inventory:infix:~<
+  cell   any(1,2) | ""
+  level  3
+  code   (any(1,2)) ~< ("")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0711
+  from   inventory:infix:~<
+  cell   any(1,2) | "a"
+  level  3
+  code   (any(1,2)) ~< ("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0712
+  from   inventory:infix:~<
+  cell   any(1,2) | True
+  level  3
+  code   (any(1,2)) ~< (True)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0713
+  from   inventory:infix:~<
+  cell   any(1,2) | Any
+  level  3
+  code   (any(1,2)) ~< (Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0714
+  from   inventory:infix:~<
+  cell   any(1,2) | (1,2)
+  level  3
+  code   (any(1,2)) ~< ((1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0715
+  from   inventory:infix:~<
+  cell   any(1,2) | {a=>1}
+  level  3
+  code   (any(1,2)) ~< ({a=>1})
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0716
+  from   inventory:infix:~<
+  cell   any(1,2) | -0e0
+  level  3
+  code   (any(1,2)) ~< (-0e0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0717
+  from   inventory:infix:~<
+  cell   any(1,2) | Inf
+  level  3
+  code   (any(1,2)) ~< (Inf)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0718
+  from   inventory:infix:~<
+  cell   any(1,2) | 2**64
+  level  3
+  code   (any(1,2)) ~< (2**64)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0719
+  from   inventory:infix:~<
+  cell   any(1,2) | False
+  level  3
+  code   (any(1,2)) ~< (False)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0720
+  from   inventory:infix:~<
+  cell   any(1,2) | Nil
+  level  3
+  code   (any(1,2)) ~< (Nil)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0721
+  from   inventory:infix:~<
+  cell   any(1,2) | ()
+  level  3
+  code   (any(1,2)) ~< (())
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0722
+  from   inventory:infix:~<
+  cell   any(1,2) | "0"
+  level  3
+  code   (any(1,2)) ~< ("0")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0723
+  from   inventory:infix:~<
+  cell   any(1,2) | (1..3)
+  level  3
+  code   (any(1,2)) ~< ((1..3))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0724
+  from   inventory:infix:~<
+  cell   any(1,2) | Int
+  level  3
+  code   (any(1,2)) ~< (Int)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0725
+  from   inventory:infix:~<
+  cell   any(1,2) | "a b"
+  level  3
+  code   (any(1,2)) ~< ("a b")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0726
+  from   inventory:infix:~<
+  cell   any(1,2) | [1,2]
+  level  3
+  code   (any(1,2)) ~< ([1,2])
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0727
+  from   inventory:infix:~<
+  cell   any(1,2) | (a => 1)
+  level  3
+  code   (any(1,2)) ~< ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0728
+  from   inventory:infix:~<
+  cell   any(1,2) | bag(1,1)
+  level  3
+  code   (any(1,2)) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0729
+  from   inventory:infix:~<
+  cell   any(1,2) | (1..3).Seq
+  level  3
+  code   (any(1,2)) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0730
+  from   inventory:infix:~<
+  cell   0 | v1.2
+  level  3
+  code   (0) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0731
+  from   inventory:infix:~<
+  cell   1 | v1.2
+  level  3
+  code   (1) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0732
+  from   inventory:infix:~<
+  cell   -1 | v1.2
+  level  3
+  code   (-1) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0733
+  from   inventory:infix:~<
+  cell   1/2 | v1.2
+  level  3
+  code   (1/2) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0734
+  from   inventory:infix:~<
+  cell   0e0 | v1.2
+  level  3
+  code   (0e0) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0735
+  from   inventory:infix:~<
+  cell   NaN | v1.2
+  level  3
+  code   (NaN) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0736
+  from   inventory:infix:~<
+  cell   "" | v1.2
+  level  3
+  code   ("") ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0737
+  from   inventory:infix:~<
+  cell   "a" | v1.2
+  level  3
+  code   ("a") ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0738
+  from   inventory:infix:~<
+  cell   True | v1.2
+  level  3
+  code   (True) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0739
+  from   inventory:infix:~<
+  cell   Any | v1.2
+  level  3
+  code   (Any) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0740
+  from   inventory:infix:~<
+  cell   (1,2) | v1.2
+  level  3
+  code   ((1,2)) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0741
+  from   inventory:infix:~<
+  cell   {a=>1} | v1.2
+  level  3
+  code   ({a=>1}) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0742
+  from   inventory:infix:~<
+  cell   -0e0 | v1.2
+  level  3
+  code   (-0e0) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0743
+  from   inventory:infix:~<
+  cell   Inf | v1.2
+  level  3
+  code   (Inf) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0744
+  from   inventory:infix:~<
+  cell   2**64 | v1.2
+  level  3
+  code   (2**64) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0745
+  from   inventory:infix:~<
+  cell   False | v1.2
+  level  3
+  code   (False) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0746
+  from   inventory:infix:~<
+  cell   Nil | v1.2
+  level  3
+  code   (Nil) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0747
+  from   inventory:infix:~<
+  cell   () | v1.2
+  level  3
+  code   (()) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0748
+  from   inventory:infix:~<
+  cell   "0" | v1.2
+  level  3
+  code   ("0") ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0749
+  from   inventory:infix:~<
+  cell   (1..3) | v1.2
+  level  3
+  code   ((1..3)) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0750
+  from   inventory:infix:~<
+  cell   Int | v1.2
+  level  3
+  code   (Int) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0751
+  from   inventory:infix:~<
+  cell   "a b" | v1.2
+  level  3
+  code   ("a b") ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0752
+  from   inventory:infix:~<
+  cell   [1,2] | v1.2
+  level  3
+  code   ([1,2]) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0753
+  from   inventory:infix:~<
+  cell   (a => 1) | v1.2
+  level  3
+  code   ((a => 1)) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0754
+  from   inventory:infix:~<
+  cell   bag(1,1) | v1.2
+  level  3
+  code   (bag(1,1)) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0755
+  from   inventory:infix:~<
+  cell   (1..3).Seq | v1.2
+  level  3
+  code   ((1..3).Seq) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0756
+  from   inventory:infix:~<
+  cell   any(1,2) | v1.2
+  level  3
+  code   (any(1,2)) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0757
+  from   inventory:infix:~<
+  cell   v1.2 | v1.2
+  level  3
+  code   (v1.2) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0758
+  from   inventory:infix:~<
+  cell   v1.2 | 0
+  level  3
+  code   (v1.2) ~< (0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0759
+  from   inventory:infix:~<
+  cell   v1.2 | 1
+  level  3
+  code   (v1.2) ~< (1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0760
+  from   inventory:infix:~<
+  cell   v1.2 | -1
+  level  3
+  code   (v1.2) ~< (-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0761
+  from   inventory:infix:~<
+  cell   v1.2 | 1/2
+  level  3
+  code   (v1.2) ~< (1/2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0762
+  from   inventory:infix:~<
+  cell   v1.2 | 0e0
+  level  3
+  code   (v1.2) ~< (0e0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0763
+  from   inventory:infix:~<
+  cell   v1.2 | NaN
+  level  3
+  code   (v1.2) ~< (NaN)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0764
+  from   inventory:infix:~<
+  cell   v1.2 | ""
+  level  3
+  code   (v1.2) ~< ("")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0765
+  from   inventory:infix:~<
+  cell   v1.2 | "a"
+  level  3
+  code   (v1.2) ~< ("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0766
+  from   inventory:infix:~<
+  cell   v1.2 | True
+  level  3
+  code   (v1.2) ~< (True)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0767
+  from   inventory:infix:~<
+  cell   v1.2 | Any
+  level  3
+  code   (v1.2) ~< (Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0768
+  from   inventory:infix:~<
+  cell   v1.2 | (1,2)
+  level  3
+  code   (v1.2) ~< ((1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0769
+  from   inventory:infix:~<
+  cell   v1.2 | {a=>1}
+  level  3
+  code   (v1.2) ~< ({a=>1})
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0770
+  from   inventory:infix:~<
+  cell   v1.2 | -0e0
+  level  3
+  code   (v1.2) ~< (-0e0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0771
+  from   inventory:infix:~<
+  cell   v1.2 | Inf
+  level  3
+  code   (v1.2) ~< (Inf)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0772
+  from   inventory:infix:~<
+  cell   v1.2 | 2**64
+  level  3
+  code   (v1.2) ~< (2**64)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0773
+  from   inventory:infix:~<
+  cell   v1.2 | False
+  level  3
+  code   (v1.2) ~< (False)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0774
+  from   inventory:infix:~<
+  cell   v1.2 | Nil
+  level  3
+  code   (v1.2) ~< (Nil)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0775
+  from   inventory:infix:~<
+  cell   v1.2 | ()
+  level  3
+  code   (v1.2) ~< (())
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0776
+  from   inventory:infix:~<
+  cell   v1.2 | "0"
+  level  3
+  code   (v1.2) ~< ("0")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0777
+  from   inventory:infix:~<
+  cell   v1.2 | (1..3)
+  level  3
+  code   (v1.2) ~< ((1..3))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0778
+  from   inventory:infix:~<
+  cell   v1.2 | Int
+  level  3
+  code   (v1.2) ~< (Int)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0779
+  from   inventory:infix:~<
+  cell   v1.2 | "a b"
+  level  3
+  code   (v1.2) ~< ("a b")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0780
+  from   inventory:infix:~<
+  cell   v1.2 | [1,2]
+  level  3
+  code   (v1.2) ~< ([1,2])
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0781
+  from   inventory:infix:~<
+  cell   v1.2 | (a => 1)
+  level  3
+  code   (v1.2) ~< ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0782
+  from   inventory:infix:~<
+  cell   v1.2 | bag(1,1)
+  level  3
+  code   (v1.2) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0783
+  from   inventory:infix:~<
+  cell   v1.2 | (1..3).Seq
+  level  3
+  code   (v1.2) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0784
+  from   inventory:infix:~<
+  cell   v1.2 | any(1,2)
+  level  3
+  code   (v1.2) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0785
+  from   inventory:infix:~<
+  cell   0 | 1+2i
+  level  3
+  code   (0) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0786
+  from   inventory:infix:~<
+  cell   1 | 1+2i
+  level  3
+  code   (1) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0787
+  from   inventory:infix:~<
+  cell   -1 | 1+2i
+  level  3
+  code   (-1) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0788
+  from   inventory:infix:~<
+  cell   1/2 | 1+2i
+  level  3
+  code   (1/2) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0789
+  from   inventory:infix:~<
+  cell   0e0 | 1+2i
+  level  3
+  code   (0e0) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0790
+  from   inventory:infix:~<
+  cell   NaN | 1+2i
+  level  3
+  code   (NaN) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0791
+  from   inventory:infix:~<
+  cell   "" | 1+2i
+  level  3
+  code   ("") ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0792
+  from   inventory:infix:~<
+  cell   "a" | 1+2i
+  level  3
+  code   ("a") ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0793
+  from   inventory:infix:~<
+  cell   True | 1+2i
+  level  3
+  code   (True) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0794
+  from   inventory:infix:~<
+  cell   Any | 1+2i
+  level  3
+  code   (Any) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0795
+  from   inventory:infix:~<
+  cell   (1,2) | 1+2i
+  level  3
+  code   ((1,2)) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0796
+  from   inventory:infix:~<
+  cell   {a=>1} | 1+2i
+  level  3
+  code   ({a=>1}) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0797
+  from   inventory:infix:~<
+  cell   -0e0 | 1+2i
+  level  3
+  code   (-0e0) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0798
+  from   inventory:infix:~<
+  cell   Inf | 1+2i
+  level  3
+  code   (Inf) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0799
+  from   inventory:infix:~<
+  cell   2**64 | 1+2i
+  level  3
+  code   (2**64) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0800
+  from   inventory:infix:~<
+  cell   False | 1+2i
+  level  3
+  code   (False) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0801
+  from   inventory:infix:~<
+  cell   Nil | 1+2i
+  level  3
+  code   (Nil) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0802
+  from   inventory:infix:~<
+  cell   () | 1+2i
+  level  3
+  code   (()) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0803
+  from   inventory:infix:~<
+  cell   "0" | 1+2i
+  level  3
+  code   ("0") ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0804
+  from   inventory:infix:~<
+  cell   (1..3) | 1+2i
+  level  3
+  code   ((1..3)) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0805
+  from   inventory:infix:~<
+  cell   Int | 1+2i
+  level  3
+  code   (Int) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0806
+  from   inventory:infix:~<
+  cell   "a b" | 1+2i
+  level  3
+  code   ("a b") ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0807
+  from   inventory:infix:~<
+  cell   [1,2] | 1+2i
+  level  3
+  code   ([1,2]) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0808
+  from   inventory:infix:~<
+  cell   (a => 1) | 1+2i
+  level  3
+  code   ((a => 1)) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0809
+  from   inventory:infix:~<
+  cell   bag(1,1) | 1+2i
+  level  3
+  code   (bag(1,1)) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0810
+  from   inventory:infix:~<
+  cell   (1..3).Seq | 1+2i
+  level  3
+  code   ((1..3).Seq) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0811
+  from   inventory:infix:~<
+  cell   any(1,2) | 1+2i
+  level  3
+  code   (any(1,2)) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0812
+  from   inventory:infix:~<
+  cell   v1.2 | 1+2i
+  level  3
+  code   (v1.2) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0813
+  from   inventory:infix:~<
+  cell   1+2i | 1+2i
+  level  3
+  code   (1+2i) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0814
+  from   inventory:infix:~<
+  cell   1+2i | 0
+  level  3
+  code   (1+2i) ~< (0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0815
+  from   inventory:infix:~<
+  cell   1+2i | 1
+  level  3
+  code   (1+2i) ~< (1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0816
+  from   inventory:infix:~<
+  cell   1+2i | -1
+  level  3
+  code   (1+2i) ~< (-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0817
+  from   inventory:infix:~<
+  cell   1+2i | 1/2
+  level  3
+  code   (1+2i) ~< (1/2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0818
+  from   inventory:infix:~<
+  cell   1+2i | 0e0
+  level  3
+  code   (1+2i) ~< (0e0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0819
+  from   inventory:infix:~<
+  cell   1+2i | NaN
+  level  3
+  code   (1+2i) ~< (NaN)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0820
+  from   inventory:infix:~<
+  cell   1+2i | ""
+  level  3
+  code   (1+2i) ~< ("")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0821
+  from   inventory:infix:~<
+  cell   1+2i | "a"
+  level  3
+  code   (1+2i) ~< ("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0822
+  from   inventory:infix:~<
+  cell   1+2i | True
+  level  3
+  code   (1+2i) ~< (True)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0823
+  from   inventory:infix:~<
+  cell   1+2i | Any
+  level  3
+  code   (1+2i) ~< (Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0824
+  from   inventory:infix:~<
+  cell   1+2i | (1,2)
+  level  3
+  code   (1+2i) ~< ((1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0825
+  from   inventory:infix:~<
+  cell   1+2i | {a=>1}
+  level  3
+  code   (1+2i) ~< ({a=>1})
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0826
+  from   inventory:infix:~<
+  cell   1+2i | -0e0
+  level  3
+  code   (1+2i) ~< (-0e0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0827
+  from   inventory:infix:~<
+  cell   1+2i | Inf
+  level  3
+  code   (1+2i) ~< (Inf)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0828
+  from   inventory:infix:~<
+  cell   1+2i | 2**64
+  level  3
+  code   (1+2i) ~< (2**64)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0829
+  from   inventory:infix:~<
+  cell   1+2i | False
+  level  3
+  code   (1+2i) ~< (False)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0830
+  from   inventory:infix:~<
+  cell   1+2i | Nil
+  level  3
+  code   (1+2i) ~< (Nil)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0831
+  from   inventory:infix:~<
+  cell   1+2i | ()
+  level  3
+  code   (1+2i) ~< (())
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0832
+  from   inventory:infix:~<
+  cell   1+2i | "0"
+  level  3
+  code   (1+2i) ~< ("0")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0833
+  from   inventory:infix:~<
+  cell   1+2i | (1..3)
+  level  3
+  code   (1+2i) ~< ((1..3))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0834
+  from   inventory:infix:~<
+  cell   1+2i | Int
+  level  3
+  code   (1+2i) ~< (Int)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0835
+  from   inventory:infix:~<
+  cell   1+2i | "a b"
+  level  3
+  code   (1+2i) ~< ("a b")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0836
+  from   inventory:infix:~<
+  cell   1+2i | [1,2]
+  level  3
+  code   (1+2i) ~< ([1,2])
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0837
+  from   inventory:infix:~<
+  cell   1+2i | (a => 1)
+  level  3
+  code   (1+2i) ~< ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0838
+  from   inventory:infix:~<
+  cell   1+2i | bag(1,1)
+  level  3
+  code   (1+2i) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0839
+  from   inventory:infix:~<
+  cell   1+2i | (1..3).Seq
+  level  3
+  code   (1+2i) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0840
+  from   inventory:infix:~<
+  cell   1+2i | any(1,2)
+  level  3
+  code   (1+2i) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0841
+  from   inventory:infix:~<
+  cell   1+2i | v1.2
+  level  3
+  code   (1+2i) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0842
+  from   inventory:infix:~<
+  cell   0 | Str
+  level  3
+  code   (0) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0843
+  from   inventory:infix:~<
+  cell   1 | Str
+  level  3
+  code   (1) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0844
+  from   inventory:infix:~<
+  cell   -1 | Str
+  level  3
+  code   (-1) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0845
+  from   inventory:infix:~<
+  cell   1/2 | Str
+  level  3
+  code   (1/2) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0846
+  from   inventory:infix:~<
+  cell   0e0 | Str
+  level  3
+  code   (0e0) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0847
+  from   inventory:infix:~<
+  cell   NaN | Str
+  level  3
+  code   (NaN) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0848
+  from   inventory:infix:~<
+  cell   "" | Str
+  level  3
+  code   ("") ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0849
+  from   inventory:infix:~<
+  cell   "a" | Str
+  level  3
+  code   ("a") ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0850
+  from   inventory:infix:~<
+  cell   True | Str
+  level  3
+  code   (True) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0851
+  from   inventory:infix:~<
+  cell   Any | Str
+  level  3
+  code   (Any) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0852
+  from   inventory:infix:~<
+  cell   (1,2) | Str
+  level  3
+  code   ((1,2)) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0853
+  from   inventory:infix:~<
+  cell   {a=>1} | Str
+  level  3
+  code   ({a=>1}) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0854
+  from   inventory:infix:~<
+  cell   -0e0 | Str
+  level  3
+  code   (-0e0) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0855
+  from   inventory:infix:~<
+  cell   Inf | Str
+  level  3
+  code   (Inf) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0856
+  from   inventory:infix:~<
+  cell   2**64 | Str
+  level  3
+  code   (2**64) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0857
+  from   inventory:infix:~<
+  cell   False | Str
+  level  3
+  code   (False) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0858
+  from   inventory:infix:~<
+  cell   Nil | Str
+  level  3
+  code   (Nil) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0859
+  from   inventory:infix:~<
+  cell   () | Str
+  level  3
+  code   (()) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0860
+  from   inventory:infix:~<
+  cell   "0" | Str
+  level  3
+  code   ("0") ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0861
+  from   inventory:infix:~<
+  cell   (1..3) | Str
+  level  3
+  code   ((1..3)) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0862
+  from   inventory:infix:~<
+  cell   Int | Str
+  level  3
+  code   (Int) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0863
+  from   inventory:infix:~<
+  cell   "a b" | Str
+  level  3
+  code   ("a b") ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0864
+  from   inventory:infix:~<
+  cell   [1,2] | Str
+  level  3
+  code   ([1,2]) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0865
+  from   inventory:infix:~<
+  cell   (a => 1) | Str
+  level  3
+  code   ((a => 1)) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0866
+  from   inventory:infix:~<
+  cell   bag(1,1) | Str
+  level  3
+  code   (bag(1,1)) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0867
+  from   inventory:infix:~<
+  cell   (1..3).Seq | Str
+  level  3
+  code   ((1..3).Seq) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0868
+  from   inventory:infix:~<
+  cell   any(1,2) | Str
+  level  3
+  code   (any(1,2)) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0869
+  from   inventory:infix:~<
+  cell   v1.2 | Str
+  level  3
+  code   (v1.2) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0870
+  from   inventory:infix:~<
+  cell   1+2i | Str
+  level  3
+  code   (1+2i) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0871
+  from   inventory:infix:~<
+  cell   Str | Str
+  level  3
+  code   (Str) ~< (Str)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0872
+  from   inventory:infix:~<
+  cell   Str | 0
+  level  3
+  code   (Str) ~< (0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0873
+  from   inventory:infix:~<
+  cell   Str | 1
+  level  3
+  code   (Str) ~< (1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0874
+  from   inventory:infix:~<
+  cell   Str | -1
+  level  3
+  code   (Str) ~< (-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0875
+  from   inventory:infix:~<
+  cell   Str | 1/2
+  level  3
+  code   (Str) ~< (1/2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0876
+  from   inventory:infix:~<
+  cell   Str | 0e0
+  level  3
+  code   (Str) ~< (0e0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0877
+  from   inventory:infix:~<
+  cell   Str | NaN
+  level  3
+  code   (Str) ~< (NaN)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0878
+  from   inventory:infix:~<
+  cell   Str | ""
+  level  3
+  code   (Str) ~< ("")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0879
+  from   inventory:infix:~<
+  cell   Str | "a"
+  level  3
+  code   (Str) ~< ("a")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0880
+  from   inventory:infix:~<
+  cell   Str | True
+  level  3
+  code   (Str) ~< (True)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0881
+  from   inventory:infix:~<
+  cell   Str | Any
+  level  3
+  code   (Str) ~< (Any)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0882
+  from   inventory:infix:~<
+  cell   Str | (1,2)
+  level  3
+  code   (Str) ~< ((1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0883
+  from   inventory:infix:~<
+  cell   Str | {a=>1}
+  level  3
+  code   (Str) ~< ({a=>1})
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0884
+  from   inventory:infix:~<
+  cell   Str | -0e0
+  level  3
+  code   (Str) ~< (-0e0)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0885
+  from   inventory:infix:~<
+  cell   Str | Inf
+  level  3
+  code   (Str) ~< (Inf)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0886
+  from   inventory:infix:~<
+  cell   Str | 2**64
+  level  3
+  code   (Str) ~< (2**64)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0887
+  from   inventory:infix:~<
+  cell   Str | False
+  level  3
+  code   (Str) ~< (False)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0888
+  from   inventory:infix:~<
+  cell   Str | Nil
+  level  3
+  code   (Str) ~< (Nil)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0889
+  from   inventory:infix:~<
+  cell   Str | ()
+  level  3
+  code   (Str) ~< (())
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0890
+  from   inventory:infix:~<
+  cell   Str | "0"
+  level  3
+  code   (Str) ~< ("0")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0891
+  from   inventory:infix:~<
+  cell   Str | (1..3)
+  level  3
+  code   (Str) ~< ((1..3))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0892
+  from   inventory:infix:~<
+  cell   Str | Int
+  level  3
+  code   (Str) ~< (Int)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0893
+  from   inventory:infix:~<
+  cell   Str | "a b"
+  level  3
+  code   (Str) ~< ("a b")
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0894
+  from   inventory:infix:~<
+  cell   Str | [1,2]
+  level  3
+  code   (Str) ~< ([1,2])
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0895
+  from   inventory:infix:~<
+  cell   Str | (a => 1)
+  level  3
+  code   (Str) ~< ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0896
+  from   inventory:infix:~<
+  cell   Str | bag(1,1)
+  level  3
+  code   (Str) ~< (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0897
+  from   inventory:infix:~<
+  cell   Str | (1..3).Seq
+  level  3
+  code   (Str) ~< ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0898
+  from   inventory:infix:~<
+  cell   Str | any(1,2)
+  level  3
+  code   (Str) ~< (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0899
+  from   inventory:infix:~<
+  cell   Str | v1.2
+  level  3
+  code   (Str) ~< (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch
+
+- id     0900
+  from   inventory:infix:~<
+  cell   Str | 1+2i
+  level  3
+  code   (Str) ~< (1+2i)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Multi::NoMatch

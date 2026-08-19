@@ -1,0 +1,5607 @@
+atom     signatures/bind-method
+source   generated
+gen      gen/signatures.raku
+callform method
+
+- id     0001
+  from   signatures:unary
+  cell   $a | 1
+  level  0
+  code   my $A = \(1); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0002
+  from   signatures:unary
+  cell   $a | "a"
+  level  1
+  code   my $A = \("a"); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a"
+
+- id     0003
+  from   signatures:unary
+  cell   Int $a | "a"
+  level  1
+  code   my $A = \("a"); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0004
+  from   signatures:unary
+  cell   Int $a | 1
+  level  1
+  code   my $A = \(1); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0005
+  from   signatures:unary
+  cell   $a | 0
+  level  1
+  code   my $A = \(0); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0006
+  from   signatures:unary
+  cell   Int $a | 0
+  level  1
+  code   my $A = \(0); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0007
+  from   signatures:unary
+  cell   Str $a | 0
+  level  1
+  code   my $A = \(0); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0008
+  from   signatures:unary
+  cell   Str $a | 1
+  level  1
+  code   my $A = \(1); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0009
+  from   signatures:unary
+  cell   Str $a | "a"
+  level  1
+  code   my $A = \("a"); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a"
+
+- id     0010
+  from   signatures:unary
+  cell   $a | Any
+  level  1
+  code   my $A = \(Any); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0011
+  from   signatures:unary
+  cell   Int $a | Any
+  level  1
+  code   my $A = \(Any); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0012
+  from   signatures:unary
+  cell   Str $a | Any
+  level  1
+  code   my $A = \(Any); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0013
+  from   signatures:unary
+  cell   Num $a | Any
+  level  1
+  code   my $A = \(Any); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0014
+  from   signatures:unary
+  cell   Num $a | 1
+  level  1
+  code   my $A = \(1); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0015
+  from   signatures:unary
+  cell   Num $a | "a"
+  level  1
+  code   my $A = \("a"); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0016
+  from   signatures:unary
+  cell   Num $a | 0
+  level  1
+  code   my $A = \(0); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0017
+  from   signatures:unary
+  cell   $a | Nil
+  level  2
+  code   my $A = \(Nil); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0018
+  from   signatures:unary
+  cell   Int $a | Nil
+  level  2
+  code   my $A = \(Nil); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0019
+  from   signatures:unary
+  cell   Str $a | Nil
+  level  2
+  code   my $A = \(Nil); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Str
+
+- id     0020
+  from   signatures:unary
+  cell   Num $a | Nil
+  level  2
+  code   my $A = \(Nil); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Num
+
+- id     0021
+  from   signatures:unary
+  cell   Any $a | Nil
+  level  2
+  code   my $A = \(Nil); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0022
+  from   signatures:unary
+  cell   Any $a | 1
+  level  2
+  code   my $A = \(1); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0023
+  from   signatures:unary
+  cell   Any $a | "a"
+  level  2
+  code   my $A = \("a"); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a"
+
+- id     0024
+  from   signatures:unary
+  cell   Any $a | 0
+  level  2
+  code   my $A = \(0); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0025
+  from   signatures:unary
+  cell   Any $a | Any
+  level  2
+  code   my $A = \(Any); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0026
+  from   signatures:unary
+  cell   $a | ()
+  level  2
+  code   my $A = \(()); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0027
+  from   signatures:unary
+  cell   Int $a | ()
+  level  2
+  code   my $A = \(()); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0028
+  from   signatures:unary
+  cell   Str $a | ()
+  level  2
+  code   my $A = \(()); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Str
+
+- id     0029
+  from   signatures:unary
+  cell   Num $a | ()
+  level  2
+  code   my $A = \(()); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Num
+
+- id     0030
+  from   signatures:unary
+  cell   Any $a | ()
+  level  2
+  code   my $A = \(()); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0031
+  from   signatures:unary
+  cell   Mu $a | ()
+  level  2
+  code   my $A = \(()); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → Mu
+
+- id     0032
+  from   signatures:unary
+  cell   Mu $a | 1
+  level  2
+  code   my $A = \(1); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0033
+  from   signatures:unary
+  cell   Mu $a | "a"
+  level  2
+  code   my $A = \("a"); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a"
+
+- id     0034
+  from   signatures:unary
+  cell   Mu $a | 0
+  level  2
+  code   my $A = \(0); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0035
+  from   signatures:unary
+  cell   Mu $a | Any
+  level  2
+  code   my $A = \(Any); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0036
+  from   signatures:unary
+  cell   Mu $a | Nil
+  level  2
+  code   my $A = \(Nil); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Mu
+
+- id     0037
+  from   signatures:unary
+  cell   $a | (1,2)
+  level  2
+  code   my $A = \((1,2)); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0038
+  from   signatures:unary
+  cell   Int $a | (1,2)
+  level  2
+  code   my $A = \((1,2)); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0039
+  from   signatures:unary
+  cell   Str $a | (1,2)
+  level  2
+  code   my $A = \((1,2)); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0040
+  from   signatures:unary
+  cell   Num $a | (1,2)
+  level  2
+  code   my $A = \((1,2)); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0041
+  from   signatures:unary
+  cell   Any $a | (1,2)
+  level  2
+  code   my $A = \((1,2)); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0042
+  from   signatures:unary
+  cell   Mu $a | (1,2)
+  level  2
+  code   my $A = \((1,2)); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0043
+  from   signatures:unary
+  cell   Cool $a | (1,2)
+  level  2
+  code   my $A = \((1,2)); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0044
+  from   signatures:unary
+  cell   Cool $a | 1
+  level  2
+  code   my $A = \(1); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0045
+  from   signatures:unary
+  cell   Cool $a | "a"
+  level  2
+  code   my $A = \("a"); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a"
+
+- id     0046
+  from   signatures:unary
+  cell   Cool $a | 0
+  level  2
+  code   my $A = \(0); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0047
+  from   signatures:unary
+  cell   Cool $a | Any
+  level  2
+  code   my $A = \(Any); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0048
+  from   signatures:unary
+  cell   Cool $a | Nil
+  level  2
+  code   my $A = \(Nil); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Cool
+
+- id     0049
+  from   signatures:unary
+  cell   Cool $a | ()
+  level  2
+  code   my $A = \(()); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → Cool
+
+- id     0050
+  from   signatures:unary
+  cell   $a | [1,2]
+  level  2
+  code   my $A = \([1,2]); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  is     $[1, 2]
+  type   Array
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0051
+  from   signatures:unary
+  cell   Int $a | [1,2]
+  level  2
+  code   my $A = \([1,2]); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0052
+  from   signatures:unary
+  cell   Str $a | [1,2]
+  level  2
+  code   my $A = \([1,2]); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0053
+  from   signatures:unary
+  cell   Num $a | [1,2]
+  level  2
+  code   my $A = \([1,2]); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0054
+  from   signatures:unary
+  cell   Any $a | [1,2]
+  level  2
+  code   my $A = \([1,2]); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  is     $[1, 2]
+  type   Array
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0055
+  from   signatures:unary
+  cell   Mu $a | [1,2]
+  level  2
+  code   my $A = \([1,2]); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  is     $[1, 2]
+  type   Array
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0056
+  from   signatures:unary
+  cell   Cool $a | [1,2]
+  level  2
+  code   my $A = \([1,2]); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  is     $[1, 2]
+  type   Array
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0057
+  from   signatures:unary
+  cell   Numeric $a | [1,2]
+  level  2
+  code   my $A = \([1,2]); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0058
+  from   signatures:unary
+  cell   Numeric $a | 1
+  level  2
+  code   my $A = \(1); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0059
+  from   signatures:unary
+  cell   Numeric $a | "a"
+  level  2
+  code   my $A = \("a"); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0060
+  from   signatures:unary
+  cell   Numeric $a | 0
+  level  2
+  code   my $A = \(0); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0061
+  from   signatures:unary
+  cell   Numeric $a | Any
+  level  2
+  code   my $A = \(Any); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0062
+  from   signatures:unary
+  cell   Numeric $a | Nil
+  level  2
+  code   my $A = \(Nil); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Numeric
+
+- id     0063
+  from   signatures:unary
+  cell   Numeric $a | ()
+  level  2
+  code   my $A = \(()); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Numeric
+
+- id     0064
+  from   signatures:unary
+  cell   Numeric $a | (1,2)
+  level  2
+  code   my $A = \((1,2)); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0065
+  from   signatures:unary
+  cell   $a | {a=>1}
+  level  2
+  code   my $A = \({a=>1}); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${:a(1)}
+
+- id     0066
+  from   signatures:unary
+  cell   Int $a | {a=>1}
+  level  2
+  code   my $A = \({a=>1}); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0067
+  from   signatures:unary
+  cell   Str $a | {a=>1}
+  level  2
+  code   my $A = \({a=>1}); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0068
+  from   signatures:unary
+  cell   Num $a | {a=>1}
+  level  2
+  code   my $A = \({a=>1}); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0069
+  from   signatures:unary
+  cell   Any $a | {a=>1}
+  level  2
+  code   my $A = \({a=>1}); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${:a(1)}
+
+- id     0070
+  from   signatures:unary
+  cell   Mu $a | {a=>1}
+  level  2
+  code   my $A = \({a=>1}); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${:a(1)}
+
+- id     0071
+  from   signatures:unary
+  cell   Cool $a | {a=>1}
+  level  2
+  code   my $A = \({a=>1}); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0072
+  from   signatures:unary
+  cell   Numeric $a | {a=>1}
+  level  2
+  code   my $A = \({a=>1}); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0073
+  from   signatures:unary
+  cell   Int:D $a | {a=>1}
+  level  2
+  code   my $A = \({a=>1}); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0074
+  from   signatures:unary
+  cell   Int:D $a | 1
+  level  2
+  code   my $A = \(1); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0075
+  from   signatures:unary
+  cell   Int:D $a | "a"
+  level  2
+  code   my $A = \("a"); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0076
+  from   signatures:unary
+  cell   Int:D $a | 0
+  level  2
+  code   my $A = \(0); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0077
+  from   signatures:unary
+  cell   Int:D $a | Any
+  level  2
+  code   my $A = \(Any); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0078
+  from   signatures:unary
+  cell   Int:D $a | Nil
+  level  2
+  code   my $A = \(Nil); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0079
+  from   signatures:unary
+  cell   Int:D $a | ()
+  level  2
+  code   my $A = \(()); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0080
+  from   signatures:unary
+  cell   Int:D $a | (1,2)
+  level  2
+  code   my $A = \((1,2)); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0081
+  from   signatures:unary
+  cell   Int:D $a | [1,2]
+  level  2
+  code   my $A = \([1,2]); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0082
+  from   signatures:unary
+  cell   $a | :a
+  level  2
+  code   my $A = \(:a); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0083
+  from   signatures:unary
+  cell   Int $a | :a
+  level  2
+  code   my $A = \(:a); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0084
+  from   signatures:unary
+  cell   Str $a | :a
+  level  2
+  code   my $A = \(:a); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Str
+
+- id     0085
+  from   signatures:unary
+  cell   Num $a | :a
+  level  2
+  code   my $A = \(:a); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Num
+
+- id     0086
+  from   signatures:unary
+  cell   Any $a | :a
+  level  2
+  code   my $A = \(:a); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0087
+  from   signatures:unary
+  cell   Mu $a | :a
+  level  2
+  code   my $A = \(:a); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Mu
+
+- id     0088
+  from   signatures:unary
+  cell   Cool $a | :a
+  level  2
+  code   my $A = \(:a); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Cool
+
+- id     0089
+  from   signatures:unary
+  cell   Numeric $a | :a
+  level  2
+  code   my $A = \(:a); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Numeric
+
+- id     0090
+  from   signatures:unary
+  cell   Int:D $a | :a
+  level  2
+  code   my $A = \(:a); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0091
+  from   signatures:unary
+  cell   Int:U $a | :a
+  level  2
+  code   my $A = \(:a); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0092
+  from   signatures:unary
+  cell   Int:U $a | 1
+  level  2
+  code   my $A = \(1); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0093
+  from   signatures:unary
+  cell   Int:U $a | "a"
+  level  2
+  code   my $A = \("a"); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0094
+  from   signatures:unary
+  cell   Int:U $a | 0
+  level  2
+  code   my $A = \(0); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0095
+  from   signatures:unary
+  cell   Int:U $a | Any
+  level  2
+  code   my $A = \(Any); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0096
+  from   signatures:unary
+  cell   Int:U $a | Nil
+  level  2
+  code   my $A = \(Nil); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0097
+  from   signatures:unary
+  cell   Int:U $a | ()
+  level  2
+  code   my $A = \(()); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0098
+  from   signatures:unary
+  cell   Int:U $a | (1,2)
+  level  2
+  code   my $A = \((1,2)); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0099
+  from   signatures:unary
+  cell   Int:U $a | [1,2]
+  level  2
+  code   my $A = \([1,2]); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0100
+  from   signatures:unary
+  cell   Int:U $a | {a=>1}
+  level  2
+  code   my $A = \({a=>1}); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0101
+  from   signatures:unary
+  cell   $a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0102
+  from   signatures:unary
+  cell   Int $a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0103
+  from   signatures:unary
+  cell   Str $a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Str
+
+- id     0104
+  from   signatures:unary
+  cell   Num $a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Num
+
+- id     0105
+  from   signatures:unary
+  cell   Any $a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0106
+  from   signatures:unary
+  cell   Mu $a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Mu
+
+- id     0107
+  from   signatures:unary
+  cell   Cool $a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Cool
+
+- id     0108
+  from   signatures:unary
+  cell   Numeric $a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Numeric
+
+- id     0109
+  from   signatures:unary
+  cell   Int:D $a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0110
+  from   signatures:unary
+  cell   Int:U $a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0111
+  from   signatures:unary
+  cell   Any:D $a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0112
+  from   signatures:unary
+  cell   Any:D $a | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0113
+  from   signatures:unary
+  cell   Any:D $a | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a"
+
+- id     0114
+  from   signatures:unary
+  cell   Any:D $a | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0115
+  from   signatures:unary
+  cell   Any:D $a | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0116
+  from   signatures:unary
+  cell   Any:D $a | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0117
+  from   signatures:unary
+  cell   Any:D $a | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0118
+  from   signatures:unary
+  cell   Any:D $a | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0119
+  from   signatures:unary
+  cell   Any:D $a | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  is     $[1, 2]
+  type   Array
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0120
+  from   signatures:unary
+  cell   Any:D $a | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${:a(1)}
+
+- id     0121
+  from   signatures:unary
+  cell   Any:D $a | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0122
+  from   signatures:unary
+  cell   $a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  is     \(1)
+  type   Capture
+  oracle rakudo-2026.07 → \(1)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0123
+  from   signatures:unary
+  cell   Int $a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0124
+  from   signatures:unary
+  cell   Str $a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0125
+  from   signatures:unary
+  cell   Num $a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0126
+  from   signatures:unary
+  cell   Any $a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  is     \(1)
+  type   Capture
+  oracle rakudo-2026.07 → \(1)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0127
+  from   signatures:unary
+  cell   Mu $a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  is     \(1)
+  type   Capture
+  oracle rakudo-2026.07 → \(1)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0128
+  from   signatures:unary
+  cell   Cool $a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0129
+  from   signatures:unary
+  cell   Numeric $a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0130
+  from   signatures:unary
+  cell   Int:D $a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0131
+  from   signatures:unary
+  cell   Int:U $a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0132
+  from   signatures:unary
+  cell   Any:D $a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  is     \(1)
+  type   Capture
+  oracle rakudo-2026.07 → \(1)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0133
+  from   signatures:unary
+  cell   $a where * > 0 | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0134
+  from   signatures:unary
+  cell   $a where * > 0 | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0135
+  from   signatures:unary
+  cell   $a where * > 0 | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Str::Numeric
+
+- id     0136
+  from   signatures:unary
+  cell   $a where * > 0 | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0137
+  from   signatures:unary
+  cell   $a where * > 0 | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0138
+  from   signatures:unary
+  cell   $a where * > 0 | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0139
+  from   signatures:unary
+  cell   $a where * > 0 | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0140
+  from   signatures:unary
+  cell   $a where * > 0 | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0141
+  from   signatures:unary
+  cell   $a where * > 0 | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  is     $[1, 2]
+  type   Array
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0142
+  from   signatures:unary
+  cell   $a where * > 0 | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${:a(1)}
+
+- id     0143
+  from   signatures:unary
+  cell   $a where * > 0 | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0144
+  from   signatures:unary
+  cell   $a where * > 0 | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0145
+  from   signatures:unary
+  cell   $a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0146
+  from   signatures:unary
+  cell   Int $a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0147
+  from   signatures:unary
+  cell   Str $a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0148
+  from   signatures:unary
+  cell   Num $a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0149
+  from   signatures:unary
+  cell   Any $a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0150
+  from   signatures:unary
+  cell   Mu $a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0151
+  from   signatures:unary
+  cell   Cool $a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0152
+  from   signatures:unary
+  cell   Numeric $a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0153
+  from   signatures:unary
+  cell   Int:D $a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0154
+  from   signatures:unary
+  cell   Int:U $a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0155
+  from   signatures:unary
+  cell   Any:D $a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0156
+  from   signatures:unary
+  cell   $a where * > 0 | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0157
+  from   signatures:unary
+  cell   $a where Int | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0158
+  from   signatures:unary
+  cell   $a where Int | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0159
+  from   signatures:unary
+  cell   $a where Int | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0160
+  from   signatures:unary
+  cell   $a where Int | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0161
+  from   signatures:unary
+  cell   $a where Int | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0162
+  from   signatures:unary
+  cell   $a where Int | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0163
+  from   signatures:unary
+  cell   $a where Int | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0164
+  from   signatures:unary
+  cell   $a where Int | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0165
+  from   signatures:unary
+  cell   $a where Int | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0166
+  from   signatures:unary
+  cell   $a where Int | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0167
+  from   signatures:unary
+  cell   $a where Int | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0168
+  from   signatures:unary
+  cell   $a where Int | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0169
+  from   signatures:unary
+  cell   $a where Int | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0170
+  from   signatures:unary
+  cell   $a | 
+  level  3
+  code   my $A = \(); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0171
+  from   signatures:unary
+  cell   Int $a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0172
+  from   signatures:unary
+  cell   Str $a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Str
+
+- id     0173
+  from   signatures:unary
+  cell   Num $a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Num
+
+- id     0174
+  from   signatures:unary
+  cell   Any $a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0175
+  from   signatures:unary
+  cell   Mu $a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Mu
+
+- id     0176
+  from   signatures:unary
+  cell   Cool $a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Cool
+
+- id     0177
+  from   signatures:unary
+  cell   Numeric $a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Numeric
+
+- id     0178
+  from   signatures:unary
+  cell   Int:D $a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0179
+  from   signatures:unary
+  cell   Int:U $a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0180
+  from   signatures:unary
+  cell   Any:D $a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0181
+  from   signatures:unary
+  cell   $a where * > 0 | 
+  level  3
+  code   my $A = \(); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0182
+  from   signatures:unary
+  cell   $a where Int | 
+  level  3
+  code   my $A = \(); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0183
+  from   signatures:unary
+  cell   $a? | 
+  level  3
+  code   my $A = \(); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0184
+  from   signatures:unary
+  cell   $a? | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0185
+  from   signatures:unary
+  cell   $a? | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a"
+
+- id     0186
+  from   signatures:unary
+  cell   $a? | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0187
+  from   signatures:unary
+  cell   $a? | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0188
+  from   signatures:unary
+  cell   $a? | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0189
+  from   signatures:unary
+  cell   $a? | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0190
+  from   signatures:unary
+  cell   $a? | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0191
+  from   signatures:unary
+  cell   $a? | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  is     $[1, 2]
+  type   Array
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0192
+  from   signatures:unary
+  cell   $a? | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${:a(1)}
+
+- id     0193
+  from   signatures:unary
+  cell   $a? | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0194
+  from   signatures:unary
+  cell   $a? | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0195
+  from   signatures:unary
+  cell   $a? | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  is     \(1)
+  type   Capture
+  oracle rakudo-2026.07 → \(1)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0196
+  from   signatures:unary
+  cell   $a? | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0197
+  from   signatures:unary
+  cell   $a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1e0
+
+- id     0198
+  from   signatures:unary
+  cell   Int $a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0199
+  from   signatures:unary
+  cell   Str $a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0200
+  from   signatures:unary
+  cell   Num $a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1e0
+
+- id     0201
+  from   signatures:unary
+  cell   Any $a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1e0
+
+- id     0202
+  from   signatures:unary
+  cell   Mu $a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1e0
+
+- id     0203
+  from   signatures:unary
+  cell   Cool $a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1e0
+
+- id     0204
+  from   signatures:unary
+  cell   Numeric $a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1e0
+
+- id     0205
+  from   signatures:unary
+  cell   Int:D $a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0206
+  from   signatures:unary
+  cell   Int:U $a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0207
+  from   signatures:unary
+  cell   Any:D $a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1e0
+
+- id     0208
+  from   signatures:unary
+  cell   $a where * > 0 | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1e0
+
+- id     0209
+  from   signatures:unary
+  cell   $a where Int | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0210
+  from   signatures:unary
+  cell   $a? | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1e0
+
+- id     0211
+  from   signatures:unary
+  cell   $a = 42 | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1e0
+
+- id     0212
+  from   signatures:unary
+  cell   $a = 42 | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0213
+  from   signatures:unary
+  cell   $a = 42 | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a"
+
+- id     0214
+  from   signatures:unary
+  cell   $a = 42 | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0215
+  from   signatures:unary
+  cell   $a = 42 | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0216
+  from   signatures:unary
+  cell   $a = 42 | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0217
+  from   signatures:unary
+  cell   $a = 42 | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0218
+  from   signatures:unary
+  cell   $a = 42 | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0219
+  from   signatures:unary
+  cell   $a = 42 | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  is     $[1, 2]
+  type   Array
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0220
+  from   signatures:unary
+  cell   $a = 42 | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${:a(1)}
+
+- id     0221
+  from   signatures:unary
+  cell   $a = 42 | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  is     42
+  type   Int
+  oracle rakudo-2026.07 → 42
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0222
+  from   signatures:unary
+  cell   $a = 42 | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  is     42
+  type   Int
+  oracle rakudo-2026.07 → 42
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0223
+  from   signatures:unary
+  cell   $a = 42 | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  is     \(1)
+  type   Capture
+  oracle rakudo-2026.07 → \(1)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0224
+  from   signatures:unary
+  cell   $a = 42 | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0225
+  from   signatures:unary
+  cell   $a = 42 | 
+  level  3
+  code   my $A = \(); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  is     42
+  type   Int
+  oracle rakudo-2026.07 → 42
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0226
+  from   signatures:unary
+  cell   $a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m($a) { $a } }; $C.m(|$A)
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0227
+  from   signatures:unary
+  cell   Int $a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(Int $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0228
+  from   signatures:unary
+  cell   Str $a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(Str $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0229
+  from   signatures:unary
+  cell   Num $a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(Num $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0230
+  from   signatures:unary
+  cell   Any $a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(Any $a) { $a } }; $C.m(|$A)
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0231
+  from   signatures:unary
+  cell   Mu $a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(Mu $a) { $a } }; $C.m(|$A)
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0232
+  from   signatures:unary
+  cell   Cool $a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(Cool $a) { $a } }; $C.m(|$A)
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0233
+  from   signatures:unary
+  cell   Numeric $a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(Numeric $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0234
+  from   signatures:unary
+  cell   Int:D $a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(Int:D $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0235
+  from   signatures:unary
+  cell   Int:U $a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(Int:U $a) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0236
+  from   signatures:unary
+  cell   Any:D $a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(Any:D $a) { $a } }; $C.m(|$A)
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0237
+  from   signatures:unary
+  cell   $a where * > 0 | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m($a where * > 0) { $a } }; $C.m(|$A)
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0238
+  from   signatures:unary
+  cell   $a where Int | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m($a where Int) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0239
+  from   signatures:unary
+  cell   $a? | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m($a?) { $a } }; $C.m(|$A)
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0240
+  from   signatures:unary
+  cell   $a = 42 | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m($a = 42) { $a } }; $C.m(|$A)
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0241
+  from   signatures:unary
+  cell   Int $a = 42 | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0242
+  from   signatures:unary
+  cell   Int $a = 42 | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0243
+  from   signatures:unary
+  cell   Int $a = 42 | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0244
+  from   signatures:unary
+  cell   Int $a = 42 | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0245
+  from   signatures:unary
+  cell   Int $a = 42 | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0246
+  from   signatures:unary
+  cell   Int $a = 42 | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0247
+  from   signatures:unary
+  cell   Int $a = 42 | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0248
+  from   signatures:unary
+  cell   Int $a = 42 | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0249
+  from   signatures:unary
+  cell   Int $a = 42 | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0250
+  from   signatures:unary
+  cell   Int $a = 42 | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0251
+  from   signatures:unary
+  cell   Int $a = 42 | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  is     42
+  type   Int
+  oracle rakudo-2026.07 → 42
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0252
+  from   signatures:unary
+  cell   Int $a = 42 | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  is     42
+  type   Int
+  oracle rakudo-2026.07 → 42
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0253
+  from   signatures:unary
+  cell   Int $a = 42 | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0254
+  from   signatures:unary
+  cell   Int $a = 42 | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0255
+  from   signatures:unary
+  cell   Int $a = 42 | 
+  level  3
+  code   my $A = \(); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  is     42
+  type   Int
+  oracle rakudo-2026.07 → 42
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0256
+  from   signatures:unary
+  cell   Int $a = 42 | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(Int $a = 42) { $a } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding
+
+- id     0257
+  from   signatures:unary
+  cell   $a = Nil | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0258
+  from   signatures:unary
+  cell   $a = Nil | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a"
+
+- id     0259
+  from   signatures:unary
+  cell   $a = Nil | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0260
+  from   signatures:unary
+  cell   $a = Nil | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0261
+  from   signatures:unary
+  cell   $a = Nil | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0262
+  from   signatures:unary
+  cell   $a = Nil | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0263
+  from   signatures:unary
+  cell   $a = Nil | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0264
+  from   signatures:unary
+  cell   $a = Nil | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  is     $[1, 2]
+  type   Array
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0265
+  from   signatures:unary
+  cell   $a = Nil | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${:a(1)}
+
+- id     0266
+  from   signatures:unary
+  cell   $a = Nil | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0267
+  from   signatures:unary
+  cell   $a = Nil | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0268
+  from   signatures:unary
+  cell   $a = Nil | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  is     \(1)
+  type   Capture
+  oracle rakudo-2026.07 → \(1)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0269
+  from   signatures:unary
+  cell   $a = Nil | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0270
+  from   signatures:unary
+  cell   $a = Nil | 
+  level  3
+  code   my $A = \(); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0271
+  from   signatures:unary
+  cell   $a = Nil | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1e0
+
+- id     0272
+  from   signatures:unary
+  cell   $a = Nil | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m($a = Nil) { $a } }; $C.m(|$A)
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0273
+  from   signatures:unary
+  cell   :$a | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0274
+  from   signatures:unary
+  cell   :$a | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0275
+  from   signatures:unary
+  cell   :$a | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0276
+  from   signatures:unary
+  cell   :$a | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0277
+  from   signatures:unary
+  cell   :$a | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0278
+  from   signatures:unary
+  cell   :$a | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0279
+  from   signatures:unary
+  cell   :$a | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0280
+  from   signatures:unary
+  cell   :$a | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0281
+  from   signatures:unary
+  cell   :$a | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0282
+  from   signatures:unary
+  cell   :$a | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0283
+  from   signatures:unary
+  cell   :$a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0284
+  from   signatures:unary
+  cell   :$a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0285
+  from   signatures:unary
+  cell   :$a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0286
+  from   signatures:unary
+  cell   :$a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0287
+  from   signatures:unary
+  cell   :$a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0288
+  from   signatures:unary
+  cell   :$a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(:$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0289
+  from   signatures:unary
+  cell   :$a! | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Parameter::RequiredNamed
+
+- id     0290
+  from   signatures:unary
+  cell   :$a! | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Parameter::RequiredNamed
+
+- id     0291
+  from   signatures:unary
+  cell   :$a! | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Parameter::RequiredNamed
+
+- id     0292
+  from   signatures:unary
+  cell   :$a! | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Parameter::RequiredNamed
+
+- id     0293
+  from   signatures:unary
+  cell   :$a! | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Parameter::RequiredNamed
+
+- id     0294
+  from   signatures:unary
+  cell   :$a! | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Parameter::RequiredNamed
+
+- id     0295
+  from   signatures:unary
+  cell   :$a! | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Parameter::RequiredNamed
+
+- id     0296
+  from   signatures:unary
+  cell   :$a! | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Parameter::RequiredNamed
+
+- id     0297
+  from   signatures:unary
+  cell   :$a! | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Parameter::RequiredNamed
+
+- id     0298
+  from   signatures:unary
+  cell   :$a! | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0299
+  from   signatures:unary
+  cell   :$a! | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0300
+  from   signatures:unary
+  cell   :$a! | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Parameter::RequiredNamed
+
+- id     0301
+  from   signatures:unary
+  cell   :$a! | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Parameter::RequiredNamed
+
+- id     0302
+  from   signatures:unary
+  cell   :$a! | 
+  level  3
+  code   my $A = \(); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Parameter::RequiredNamed
+
+- id     0303
+  from   signatures:unary
+  cell   :$a! | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Parameter::RequiredNamed
+
+- id     0304
+  from   signatures:unary
+  cell   :$a! | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(:$a!) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Parameter::RequiredNamed
+
+- id     0305
+  from   signatures:unary
+  cell   :$a = 42 | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0306
+  from   signatures:unary
+  cell   :$a = 42 | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0307
+  from   signatures:unary
+  cell   :$a = 42 | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0308
+  from   signatures:unary
+  cell   :$a = 42 | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0309
+  from   signatures:unary
+  cell   :$a = 42 | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0310
+  from   signatures:unary
+  cell   :$a = 42 | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0311
+  from   signatures:unary
+  cell   :$a = 42 | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0312
+  from   signatures:unary
+  cell   :$a = 42 | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0313
+  from   signatures:unary
+  cell   :$a = 42 | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0314
+  from   signatures:unary
+  cell   :$a = 42 | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0315
+  from   signatures:unary
+  cell   :$a = 42 | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0316
+  from   signatures:unary
+  cell   :$a = 42 | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0317
+  from   signatures:unary
+  cell   :$a = 42 | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0318
+  from   signatures:unary
+  cell   :$a = 42 | 
+  level  3
+  code   my $A = \(); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  is     42
+  type   Int
+  oracle rakudo-2026.07 → 42
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0319
+  from   signatures:unary
+  cell   :$a = 42 | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0320
+  from   signatures:unary
+  cell   :$a = 42 | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(:$a = 42) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 42
+
+- id     0321
+  from   signatures:unary
+  cell   Int :$a | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0322
+  from   signatures:unary
+  cell   Int :$a | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0323
+  from   signatures:unary
+  cell   Int :$a | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0324
+  from   signatures:unary
+  cell   Int :$a | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0325
+  from   signatures:unary
+  cell   Int :$a | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0326
+  from   signatures:unary
+  cell   Int :$a | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0327
+  from   signatures:unary
+  cell   Int :$a | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0328
+  from   signatures:unary
+  cell   Int :$a | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0329
+  from   signatures:unary
+  cell   Int :$a | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0330
+  from   signatures:unary
+  cell   Int :$a | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0331
+  from   signatures:unary
+  cell   Int :$a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0332
+  from   signatures:unary
+  cell   Int :$a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0333
+  from   signatures:unary
+  cell   Int :$a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0334
+  from   signatures:unary
+  cell   Int :$a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  is     Int
+  type   Int
+  oracle rakudo-2026.07 → Int
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0335
+  from   signatures:unary
+  cell   Int :$a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0336
+  from   signatures:unary
+  cell   Int :$a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(Int :$a) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Int
+
+- id     0337
+  from   signatures:unary
+  cell   :a($a) | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0338
+  from   signatures:unary
+  cell   :a($a) | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0339
+  from   signatures:unary
+  cell   :a($a) | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0340
+  from   signatures:unary
+  cell   :a($a) | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0341
+  from   signatures:unary
+  cell   :a($a) | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0342
+  from   signatures:unary
+  cell   :a($a) | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0343
+  from   signatures:unary
+  cell   :a($a) | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0344
+  from   signatures:unary
+  cell   :a($a) | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0345
+  from   signatures:unary
+  cell   :a($a) | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0346
+  from   signatures:unary
+  cell   :a($a) | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0347
+  from   signatures:unary
+  cell   :a($a) | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0348
+  from   signatures:unary
+  cell   :a($a) | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0349
+  from   signatures:unary
+  cell   :a($a) | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0350
+  from   signatures:unary
+  cell   :a($a) | 
+  level  3
+  code   my $A = \(); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0351
+  from   signatures:unary
+  cell   :a($a) | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0352
+  from   signatures:unary
+  cell   :a($a) | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(:a($a)) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0353
+  from   signatures:unary
+  cell   *@a | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[1]"
+  type   Str
+  oracle rakudo-2026.07 → "[1]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1]"
+
+- id     0354
+  from   signatures:unary
+  cell   *@a | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[\"a\"]"
+  type   Str
+  oracle rakudo-2026.07 → "[\"a\"]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[\"a\"]"
+
+- id     0355
+  from   signatures:unary
+  cell   *@a | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[0]"
+  type   Str
+  oracle rakudo-2026.07 → "[0]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[0]"
+
+- id     0356
+  from   signatures:unary
+  cell   *@a | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[Any]"
+  type   Str
+  oracle rakudo-2026.07 → "[Any]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[Any]"
+
+- id     0357
+  from   signatures:unary
+  cell   *@a | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[Nil]"
+  type   Str
+  oracle rakudo-2026.07 → "[Nil]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0358
+  from   signatures:unary
+  cell   *@a | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[]"
+  type   Str
+  oracle rakudo-2026.07 → "[]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0359
+  from   signatures:unary
+  cell   *@a | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[1, 2]"
+  type   Str
+  oracle rakudo-2026.07 → "[1, 2]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1, 2]"
+
+- id     0360
+  from   signatures:unary
+  cell   *@a | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[1, 2]"
+  type   Str
+  oracle rakudo-2026.07 → "[1, 2]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1, 2]"
+
+- id     0361
+  from   signatures:unary
+  cell   *@a | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[:a(1)]"
+  type   Str
+  oracle rakudo-2026.07 → "[:a(1)]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[\{:a(1)},]"
+
+- id     0362
+  from   signatures:unary
+  cell   *@a | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[]"
+  type   Str
+  oracle rakudo-2026.07 → "[]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0363
+  from   signatures:unary
+  cell   *@a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[]"
+  type   Str
+  oracle rakudo-2026.07 → "[]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0364
+  from   signatures:unary
+  cell   *@a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[\\(1)]"
+  type   Str
+  oracle rakudo-2026.07 → "[\\(1)]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1]"
+
+- id     0365
+  from   signatures:unary
+  cell   *@a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[1, 2]"
+  type   Str
+  oracle rakudo-2026.07 → "[1, 2]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1, 2]"
+
+- id     0366
+  from   signatures:unary
+  cell   *@a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[]"
+  type   Str
+  oracle rakudo-2026.07 → "[]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0367
+  from   signatures:unary
+  cell   *@a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[1e0]"
+  type   Str
+  oracle rakudo-2026.07 → "[1e0]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1e0]"
+
+- id     0368
+  from   signatures:unary
+  cell   *@a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(*@a) { @a.raku } }; $C.m(|$A)
+  is     "[1]"
+  type   Str
+  oracle rakudo-2026.07 → "[1]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1]"
+
+- id     0369
+  from   signatures:unary
+  cell   **@a | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[1]"
+  type   Str
+  oracle rakudo-2026.07 → "[1]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1]"
+
+- id     0370
+  from   signatures:unary
+  cell   **@a | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[\"a\"]"
+  type   Str
+  oracle rakudo-2026.07 → "[\"a\"]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[\"a\"]"
+
+- id     0371
+  from   signatures:unary
+  cell   **@a | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[0]"
+  type   Str
+  oracle rakudo-2026.07 → "[0]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[0]"
+
+- id     0372
+  from   signatures:unary
+  cell   **@a | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[Any]"
+  type   Str
+  oracle rakudo-2026.07 → "[Any]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[Any]"
+
+- id     0373
+  from   signatures:unary
+  cell   **@a | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[Any]"
+  type   Str
+  oracle rakudo-2026.07 → "[Any]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0374
+  from   signatures:unary
+  cell   **@a | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[(),]"
+  type   Str
+  oracle rakudo-2026.07 → "[(),]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0375
+  from   signatures:unary
+  cell   **@a | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[(1, 2),]"
+  type   Str
+  oracle rakudo-2026.07 → "[(1, 2),]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1, 2]"
+
+- id     0376
+  from   signatures:unary
+  cell   **@a | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[[1, 2],]"
+  type   Str
+  oracle rakudo-2026.07 → "[[1, 2],]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1, 2]"
+
+- id     0377
+  from   signatures:unary
+  cell   **@a | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[\{:a(1)},]"
+  type   Str
+  oracle rakudo-2026.07 → "[\{:a(1)},]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[\{:a(1)},]"
+
+- id     0378
+  from   signatures:unary
+  cell   **@a | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[]"
+  type   Str
+  oracle rakudo-2026.07 → "[]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0379
+  from   signatures:unary
+  cell   **@a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[]"
+  type   Str
+  oracle rakudo-2026.07 → "[]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0380
+  from   signatures:unary
+  cell   **@a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[\\(1)]"
+  type   Str
+  oracle rakudo-2026.07 → "[\\(1)]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1]"
+
+- id     0381
+  from   signatures:unary
+  cell   **@a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[1, 2]"
+  type   Str
+  oracle rakudo-2026.07 → "[1, 2]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1, 2]"
+
+- id     0382
+  from   signatures:unary
+  cell   **@a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[]"
+  type   Str
+  oracle rakudo-2026.07 → "[]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0383
+  from   signatures:unary
+  cell   **@a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[1e0]"
+  type   Str
+  oracle rakudo-2026.07 → "[1e0]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1e0]"
+
+- id     0384
+  from   signatures:unary
+  cell   **@a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(**@a) { @a.raku } }; $C.m(|$A)
+  is     "[(1,),]"
+  type   Str
+  oracle rakudo-2026.07 → "[(1,),]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1]"
+
+- id     0385
+  from   signatures:unary
+  cell   +@a | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[1]"
+  type   Str
+  oracle rakudo-2026.07 → "[1]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1]"
+
+- id     0386
+  from   signatures:unary
+  cell   +@a | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[\"a\"]"
+  type   Str
+  oracle rakudo-2026.07 → "[\"a\"]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[\"a\"]"
+
+- id     0387
+  from   signatures:unary
+  cell   +@a | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[0]"
+  type   Str
+  oracle rakudo-2026.07 → "[0]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[0]"
+
+- id     0388
+  from   signatures:unary
+  cell   +@a | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[Any]"
+  type   Str
+  oracle rakudo-2026.07 → "[Any]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[Any]"
+
+- id     0389
+  from   signatures:unary
+  cell   +@a | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[Any]"
+  type   Str
+  oracle rakudo-2026.07 → "[Any]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0390
+  from   signatures:unary
+  cell   +@a | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[]"
+  type   Str
+  oracle rakudo-2026.07 → "[]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0391
+  from   signatures:unary
+  cell   +@a | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[1, 2]"
+  type   Str
+  oracle rakudo-2026.07 → "[1, 2]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1, 2]"
+
+- id     0392
+  from   signatures:unary
+  cell   +@a | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[1, 2]"
+  type   Str
+  oracle rakudo-2026.07 → "[1, 2]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1, 2]"
+
+- id     0393
+  from   signatures:unary
+  cell   +@a | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[:a(1)]"
+  type   Str
+  oracle rakudo-2026.07 → "[:a(1)]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[\{:a(1)},]"
+
+- id     0394
+  from   signatures:unary
+  cell   +@a | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[]"
+  type   Str
+  oracle rakudo-2026.07 → "[]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0395
+  from   signatures:unary
+  cell   +@a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[]"
+  type   Str
+  oracle rakudo-2026.07 → "[]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0396
+  from   signatures:unary
+  cell   +@a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[\\(1)]"
+  type   Str
+  oracle rakudo-2026.07 → "[\\(1)]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1]"
+
+- id     0397
+  from   signatures:unary
+  cell   +@a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[1, 2]"
+  type   Str
+  oracle rakudo-2026.07 → "[1, 2]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1, 2]"
+
+- id     0398
+  from   signatures:unary
+  cell   +@a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[]"
+  type   Str
+  oracle rakudo-2026.07 → "[]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0399
+  from   signatures:unary
+  cell   +@a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[1e0]"
+  type   Str
+  oracle rakudo-2026.07 → "[1e0]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1e0]"
+
+- id     0400
+  from   signatures:unary
+  cell   +@a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(+@a) { @a.raku } }; $C.m(|$A)
+  is     "[1]"
+  type   Str
+  oracle rakudo-2026.07 → "[1]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1]"
+
+- id     0401
+  from   signatures:unary
+  cell   *%h | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0402
+  from   signatures:unary
+  cell   *%h | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0403
+  from   signatures:unary
+  cell   *%h | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0404
+  from   signatures:unary
+  cell   *%h | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0405
+  from   signatures:unary
+  cell   *%h | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0406
+  from   signatures:unary
+  cell   *%h | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0407
+  from   signatures:unary
+  cell   *%h | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0408
+  from   signatures:unary
+  cell   *%h | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0409
+  from   signatures:unary
+  cell   *%h | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0410
+  from   signatures:unary
+  cell   *%h | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  is     "\{:a}"
+  type   Str
+  oracle rakudo-2026.07 → "\{:a}"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{:a(Bool::True)}"
+
+- id     0411
+  from   signatures:unary
+  cell   *%h | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  is     "\{:a(1)}"
+  type   Str
+  oracle rakudo-2026.07 → "\{:a(1)}"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{:a(1)}"
+
+- id     0412
+  from   signatures:unary
+  cell   *%h | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0413
+  from   signatures:unary
+  cell   *%h | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0414
+  from   signatures:unary
+  cell   *%h | 
+  level  3
+  code   my $A = \(); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  is     "\{}"
+  type   Str
+  oracle rakudo-2026.07 → "\{}"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0415
+  from   signatures:unary
+  cell   *%h | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0416
+  from   signatures:unary
+  cell   *%h | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(*%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0417
+  from   signatures:unary
+  cell   *@a, *%h | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([1], \{})"
+  type   Str
+  oracle rakudo-2026.07 → "([1], \{})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([1], \{})"
+
+- id     0418
+  from   signatures:unary
+  cell   *@a, *%h | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([\"a\"], \{})"
+  type   Str
+  oracle rakudo-2026.07 → "([\"a\"], \{})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([\"a\"], \{})"
+
+- id     0419
+  from   signatures:unary
+  cell   *@a, *%h | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([0], \{})"
+  type   Str
+  oracle rakudo-2026.07 → "([0], \{})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([0], \{})"
+
+- id     0420
+  from   signatures:unary
+  cell   *@a, *%h | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([Any], \{})"
+  type   Str
+  oracle rakudo-2026.07 → "([Any], \{})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([Any], \{})"
+
+- id     0421
+  from   signatures:unary
+  cell   *@a, *%h | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([Nil], \{})"
+  type   Str
+  oracle rakudo-2026.07 → "([Nil], \{})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([], \{})"
+
+- id     0422
+  from   signatures:unary
+  cell   *@a, *%h | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([], \{})"
+  type   Str
+  oracle rakudo-2026.07 → "([], \{})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([], \{})"
+
+- id     0423
+  from   signatures:unary
+  cell   *@a, *%h | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([1, 2], \{})"
+  type   Str
+  oracle rakudo-2026.07 → "([1, 2], \{})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([1, 2], \{})"
+
+- id     0424
+  from   signatures:unary
+  cell   *@a, *%h | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([1, 2], \{})"
+  type   Str
+  oracle rakudo-2026.07 → "([1, 2], \{})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([1, 2], \{})"
+
+- id     0425
+  from   signatures:unary
+  cell   *@a, *%h | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([:a(1)], \{})"
+  type   Str
+  oracle rakudo-2026.07 → "([:a(1)], \{})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([\{:a(1)},], \{})"
+
+- id     0426
+  from   signatures:unary
+  cell   *@a, *%h | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([], \{:a})"
+  type   Str
+  oracle rakudo-2026.07 → "([], \{:a})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([], \{:a(Bool::True)})"
+
+- id     0427
+  from   signatures:unary
+  cell   *@a, *%h | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([], \{:a(1)})"
+  type   Str
+  oracle rakudo-2026.07 → "([], \{:a(1)})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([], \{:a(1)})"
+
+- id     0428
+  from   signatures:unary
+  cell   *@a, *%h | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([\\(1)], \{})"
+  type   Str
+  oracle rakudo-2026.07 → "([\\(1)], \{})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([1], \{})"
+
+- id     0429
+  from   signatures:unary
+  cell   *@a, *%h | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([1, 2], \{})"
+  type   Str
+  oracle rakudo-2026.07 → "([1, 2], \{})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([1, 2], \{})"
+
+- id     0430
+  from   signatures:unary
+  cell   *@a, *%h | 
+  level  3
+  code   my $A = \(); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([], \{})"
+  type   Str
+  oracle rakudo-2026.07 → "([], \{})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([], \{})"
+
+- id     0431
+  from   signatures:unary
+  cell   *@a, *%h | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([1e0], \{})"
+  type   Str
+  oracle rakudo-2026.07 → "([1e0], \{})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([1e0], \{})"
+
+- id     0432
+  from   signatures:unary
+  cell   *@a, *%h | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(*@a, *%h) { (@a, %h).raku } }; $C.m(|$A)
+  is     "([1], \{})"
+  type   Str
+  oracle rakudo-2026.07 → "([1], \{})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "([1], \{})"
+
+- id     0433
+  from   signatures:unary
+  cell   $a is rw | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::Parameter::RW
+  oracle rakudo-2026.07 → ERR:X::Parameter::RW
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0434
+  from   signatures:unary
+  cell   $a is rw | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::Parameter::RW
+  oracle rakudo-2026.07 → ERR:X::Parameter::RW
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a"
+
+- id     0435
+  from   signatures:unary
+  cell   $a is rw | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::Parameter::RW
+  oracle rakudo-2026.07 → ERR:X::Parameter::RW
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0436
+  from   signatures:unary
+  cell   $a is rw | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::Parameter::RW
+  oracle rakudo-2026.07 → ERR:X::Parameter::RW
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0437
+  from   signatures:unary
+  cell   $a is rw | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::Parameter::RW
+  oracle rakudo-2026.07 → ERR:X::Parameter::RW
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0438
+  from   signatures:unary
+  cell   $a is rw | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::Parameter::RW
+  oracle rakudo-2026.07 → ERR:X::Parameter::RW
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0439
+  from   signatures:unary
+  cell   $a is rw | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::Parameter::RW
+  oracle rakudo-2026.07 → ERR:X::Parameter::RW
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0440
+  from   signatures:unary
+  cell   $a is rw | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::Parameter::RW
+  oracle rakudo-2026.07 → ERR:X::Parameter::RW
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0441
+  from   signatures:unary
+  cell   $a is rw | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::Parameter::RW
+  oracle rakudo-2026.07 → ERR:X::Parameter::RW
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${:a(1)}
+
+- id     0442
+  from   signatures:unary
+  cell   $a is rw | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0443
+  from   signatures:unary
+  cell   $a is rw | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0444
+  from   signatures:unary
+  cell   $a is rw | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::Parameter::RW
+  oracle rakudo-2026.07 → ERR:X::Parameter::RW
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0445
+  from   signatures:unary
+  cell   $a is rw | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0446
+  from   signatures:unary
+  cell   $a is rw | 
+  level  3
+  code   my $A = \(); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0447
+  from   signatures:unary
+  cell   $a is rw | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::Parameter::RW
+  oracle rakudo-2026.07 → ERR:X::Parameter::RW
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1e0
+
+- id     0448
+  from   signatures:unary
+  cell   $a is rw | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m($a is rw) { $a } }; $C.m(|$A)
+  throws X::Parameter::RW
+  oracle rakudo-2026.07 → ERR:X::Parameter::RW
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0449
+  from   signatures:unary
+  cell   $a is copy | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0450
+  from   signatures:unary
+  cell   $a is copy | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a"
+
+- id     0451
+  from   signatures:unary
+  cell   $a is copy | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0452
+  from   signatures:unary
+  cell   $a is copy | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0453
+  from   signatures:unary
+  cell   $a is copy | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0454
+  from   signatures:unary
+  cell   $a is copy | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0455
+  from   signatures:unary
+  cell   $a is copy | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0456
+  from   signatures:unary
+  cell   $a is copy | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  is     $[1, 2]
+  type   Array
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0457
+  from   signatures:unary
+  cell   $a is copy | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${:a(1)}
+
+- id     0458
+  from   signatures:unary
+  cell   $a is copy | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0459
+  from   signatures:unary
+  cell   $a is copy | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0460
+  from   signatures:unary
+  cell   $a is copy | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  is     \(1)
+  type   Capture
+  oracle rakudo-2026.07 → \(1)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0461
+  from   signatures:unary
+  cell   $a is copy | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0462
+  from   signatures:unary
+  cell   $a is copy | 
+  level  3
+  code   my $A = \(); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0463
+  from   signatures:unary
+  cell   $a is copy | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1e0
+
+- id     0464
+  from   signatures:unary
+  cell   $a is copy | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m($a is copy) { $a } }; $C.m(|$A)
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0465
+  from   signatures:unary
+  cell   $a is raw | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0466
+  from   signatures:unary
+  cell   $a is raw | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a"
+
+- id     0467
+  from   signatures:unary
+  cell   $a is raw | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0468
+  from   signatures:unary
+  cell   $a is raw | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0469
+  from   signatures:unary
+  cell   $a is raw | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0470
+  from   signatures:unary
+  cell   $a is raw | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0471
+  from   signatures:unary
+  cell   $a is raw | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0472
+  from   signatures:unary
+  cell   $a is raw | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  is     $[1, 2]
+  type   Array
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0473
+  from   signatures:unary
+  cell   $a is raw | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  is     ${:a(1)}
+  type   Hash
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${:a(1)}
+
+- id     0474
+  from   signatures:unary
+  cell   $a is raw | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0475
+  from   signatures:unary
+  cell   $a is raw | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0476
+  from   signatures:unary
+  cell   $a is raw | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  is     \(1)
+  type   Capture
+  oracle rakudo-2026.07 → \(1)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0477
+  from   signatures:unary
+  cell   $a is raw | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0478
+  from   signatures:unary
+  cell   $a is raw | 
+  level  3
+  code   my $A = \(); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → Any
+
+- id     0479
+  from   signatures:unary
+  cell   $a is raw | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  is     1e0
+  type   Num
+  oracle rakudo-2026.07 → 1e0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1e0
+
+- id     0480
+  from   signatures:unary
+  cell   $a is raw | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m($a is raw) { $a } }; $C.m(|$A)
+  is     $(1,)
+  type   List
+  oracle rakudo-2026.07 → $(1,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0481
+  from   signatures:unary
+  cell   @a | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1]"
+
+- id     0482
+  from   signatures:unary
+  cell   @a | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[\"a\"]"
+
+- id     0483
+  from   signatures:unary
+  cell   @a | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[0]"
+
+- id     0484
+  from   signatures:unary
+  cell   @a | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[Any]"
+
+- id     0485
+  from   signatures:unary
+  cell   @a | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0486
+  from   signatures:unary
+  cell   @a | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  is     "()"
+  type   Str
+  oracle rakudo-2026.07 → "()"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0487
+  from   signatures:unary
+  cell   @a | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  is     "(1, 2)"
+  type   Str
+  oracle rakudo-2026.07 → "(1, 2)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1]"
+
+- id     0488
+  from   signatures:unary
+  cell   @a | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  is     "[1, 2]"
+  type   Str
+  oracle rakudo-2026.07 → "[1, 2]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1]"
+
+- id     0489
+  from   signatures:unary
+  cell   @a | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(:a(1),)"
+
+- id     0490
+  from   signatures:unary
+  cell   @a | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0491
+  from   signatures:unary
+  cell   @a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0492
+  from   signatures:unary
+  cell   @a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1]"
+
+- id     0493
+  from   signatures:unary
+  cell   @a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1]"
+
+- id     0494
+  from   signatures:unary
+  cell   @a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[]"
+
+- id     0495
+  from   signatures:unary
+  cell   @a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1e0]"
+
+- id     0496
+  from   signatures:unary
+  cell   @a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(@a) { @a.raku } }; $C.m(|$A)
+  is     "(1,)"
+  type   Str
+  oracle rakudo-2026.07 → "(1,)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "[1]"
+
+- id     0497
+  from   signatures:unary
+  cell   %h | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0498
+  from   signatures:unary
+  cell   %h | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0499
+  from   signatures:unary
+  cell   %h | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0500
+  from   signatures:unary
+  cell   %h | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0501
+  from   signatures:unary
+  cell   %h | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0502
+  from   signatures:unary
+  cell   %h | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0503
+  from   signatures:unary
+  cell   %h | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0504
+  from   signatures:unary
+  cell   %h | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0505
+  from   signatures:unary
+  cell   %h | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  is     "\{:a(1)}"
+  type   Str
+  oracle rakudo-2026.07 → "\{:a(1)}"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{:a(1)}"
+
+- id     0506
+  from   signatures:unary
+  cell   %h | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0507
+  from   signatures:unary
+  cell   %h | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0508
+  from   signatures:unary
+  cell   %h | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0509
+  from   signatures:unary
+  cell   %h | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0510
+  from   signatures:unary
+  cell   %h | 
+  level  3
+  code   my $A = \(); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0511
+  from   signatures:unary
+  cell   %h | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0512
+  from   signatures:unary
+  cell   %h | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(%h) { %h.raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{}"
+
+- id     0513
+  from   signatures:unary
+  cell   &c | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Int"
+
+- id     0514
+  from   signatures:unary
+  cell   &c | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Str"
+
+- id     0515
+  from   signatures:unary
+  cell   &c | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Int"
+
+- id     0516
+  from   signatures:unary
+  cell   &c | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Any"
+
+- id     0517
+  from   signatures:unary
+  cell   &c | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Any"
+
+- id     0518
+  from   signatures:unary
+  cell   &c | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Any"
+
+- id     0519
+  from   signatures:unary
+  cell   &c | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Int"
+
+- id     0520
+  from   signatures:unary
+  cell   &c | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Int"
+
+- id     0521
+  from   signatures:unary
+  cell   &c | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Hash"
+
+- id     0522
+  from   signatures:unary
+  cell   &c | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Any"
+
+- id     0523
+  from   signatures:unary
+  cell   &c | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Any"
+
+- id     0524
+  from   signatures:unary
+  cell   &c | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Int"
+
+- id     0525
+  from   signatures:unary
+  cell   &c | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Int"
+
+- id     0526
+  from   signatures:unary
+  cell   &c | 
+  level  3
+  code   my $A = \(); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Any"
+
+- id     0527
+  from   signatures:unary
+  cell   &c | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Num"
+
+- id     0528
+  from   signatures:unary
+  cell   &c | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(&c) { &c.WHAT.^name } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Int"
+
+- id     0529
+  from   signatures:unary
+  cell   |c | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\(1)"
+  type   Str
+  oracle rakudo-2026.07 → "\\(1)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\(1)"
+
+- id     0530
+  from   signatures:unary
+  cell   |c | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\(\"a\")"
+  type   Str
+  oracle rakudo-2026.07 → "\\(\"a\")"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\(\"a\")"
+
+- id     0531
+  from   signatures:unary
+  cell   |c | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\(0)"
+  type   Str
+  oracle rakudo-2026.07 → "\\(0)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\(0)"
+
+- id     0532
+  from   signatures:unary
+  cell   |c | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\(Any)"
+  type   Str
+  oracle rakudo-2026.07 → "\\(Any)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\(Any)"
+
+- id     0533
+  from   signatures:unary
+  cell   |c | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\(Nil)"
+  type   Str
+  oracle rakudo-2026.07 → "\\(Nil)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\()"
+
+- id     0534
+  from   signatures:unary
+  cell   |c | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\(())"
+  type   Str
+  oracle rakudo-2026.07 → "\\(())"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\()"
+
+- id     0535
+  from   signatures:unary
+  cell   |c | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\((1, 2))"
+  type   Str
+  oracle rakudo-2026.07 → "\\((1, 2))"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\(1, 2)"
+
+- id     0536
+  from   signatures:unary
+  cell   |c | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\([1, 2])"
+  type   Str
+  oracle rakudo-2026.07 → "\\([1, 2])"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\(1, 2)"
+
+- id     0537
+  from   signatures:unary
+  cell   |c | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\(\{:a(1)})"
+  type   Str
+  oracle rakudo-2026.07 → "\\(\{:a(1)})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\(\{:a(1)})"
+
+- id     0538
+  from   signatures:unary
+  cell   |c | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\(:a)"
+  type   Str
+  oracle rakudo-2026.07 → "\\(:a)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\(:a(Bool::True))"
+
+- id     0539
+  from   signatures:unary
+  cell   |c | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\(:a(1))"
+  type   Str
+  oracle rakudo-2026.07 → "\\(:a(1))"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\(:a(1))"
+
+- id     0540
+  from   signatures:unary
+  cell   |c | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\(\\(1))"
+  type   Str
+  oracle rakudo-2026.07 → "\\(\\(1))"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\(1)"
+
+- id     0541
+  from   signatures:unary
+  cell   |c | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\(1, 2)"
+  type   Str
+  oracle rakudo-2026.07 → "\\(1, 2)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\(1, 2)"
+
+- id     0542
+  from   signatures:unary
+  cell   |c | 
+  level  3
+  code   my $A = \(); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\()"
+  type   Str
+  oracle rakudo-2026.07 → "\\()"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\()"
+
+- id     0543
+  from   signatures:unary
+  cell   |c | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\(1e0)"
+  type   Str
+  oracle rakudo-2026.07 → "\\(1e0)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\(1e0)"
+
+- id     0544
+  from   signatures:unary
+  cell   |c | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(|c) { c.raku } }; $C.m(|$A)
+  is     "\\((1,))"
+  type   Str
+  oracle rakudo-2026.07 → "\\((1,))"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\\(1)"
+
+- id     0545
+  from   signatures:unary
+  cell   \a | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "1"
+
+- id     0546
+  from   signatures:unary
+  cell   \a | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  is     "\"a\""
+  type   Str
+  oracle rakudo-2026.07 → "\"a\""
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\"a\""
+
+- id     0547
+  from   signatures:unary
+  cell   \a | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "0"
+
+- id     0548
+  from   signatures:unary
+  cell   \a | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  is     "Any"
+  type   Str
+  oracle rakudo-2026.07 → "Any"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Any"
+
+- id     0549
+  from   signatures:unary
+  cell   \a | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  is     "Nil"
+  type   Str
+  oracle rakudo-2026.07 → "Nil"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Any"
+
+- id     0550
+  from   signatures:unary
+  cell   \a | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  is     "()"
+  type   Str
+  oracle rakudo-2026.07 → "()"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Any"
+
+- id     0551
+  from   signatures:unary
+  cell   \a | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  is     "(1, 2)"
+  type   Str
+  oracle rakudo-2026.07 → "(1, 2)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "1"
+
+- id     0552
+  from   signatures:unary
+  cell   \a | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  is     "[1, 2]"
+  type   Str
+  oracle rakudo-2026.07 → "[1, 2]"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "1"
+
+- id     0553
+  from   signatures:unary
+  cell   \a | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  is     "\{:a(1)}"
+  type   Str
+  oracle rakudo-2026.07 → "\{:a(1)}"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\{:a(1)}"
+
+- id     0554
+  from   signatures:unary
+  cell   \a | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Any"
+
+- id     0555
+  from   signatures:unary
+  cell   \a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Any"
+
+- id     0556
+  from   signatures:unary
+  cell   \a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  is     "\\(1)"
+  type   Str
+  oracle rakudo-2026.07 → "\\(1)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "1"
+
+- id     0557
+  from   signatures:unary
+  cell   \a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "1"
+
+- id     0558
+  from   signatures:unary
+  cell   \a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "Any"
+
+- id     0559
+  from   signatures:unary
+  cell   \a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  is     "1e0"
+  type   Str
+  oracle rakudo-2026.07 → "1e0"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "1e0"
+
+- id     0560
+  from   signatures:unary
+  cell   \a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(\a) { a.raku } }; $C.m(|$A)
+  is     "(1,)"
+  type   Str
+  oracle rakudo-2026.07 → "(1,)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "1"
+
+- id     0561
+  from   signatures:unary
+  cell   [$x, $y] | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(1, Any)"
+
+- id     0562
+  from   signatures:unary
+  cell   [$x, $y] | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"a\", Any)"
+
+- id     0563
+  from   signatures:unary
+  cell   [$x, $y] | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(0, Any)"
+
+- id     0564
+  from   signatures:unary
+  cell   [$x, $y] | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(Any, Any)"
+
+- id     0565
+  from   signatures:unary
+  cell   [$x, $y] | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(Any, Any)"
+
+- id     0566
+  from   signatures:unary
+  cell   [$x, $y] | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(Any, Any)"
+
+- id     0567
+  from   signatures:unary
+  cell   [$x, $y] | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  is     "(1, 2)"
+  type   Str
+  oracle rakudo-2026.07 → "(1, 2)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(1, Any)"
+
+- id     0568
+  from   signatures:unary
+  cell   [$x, $y] | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  is     "(1, 2)"
+  type   Str
+  oracle rakudo-2026.07 → "(1, 2)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(1, Any)"
+
+- id     0569
+  from   signatures:unary
+  cell   [$x, $y] | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(Any, Any)"
+
+- id     0570
+  from   signatures:unary
+  cell   [$x, $y] | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(Any, Any)"
+
+- id     0571
+  from   signatures:unary
+  cell   [$x, $y] | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(Any, Any)"
+
+- id     0572
+  from   signatures:unary
+  cell   [$x, $y] | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(1, Any)"
+
+- id     0573
+  from   signatures:unary
+  cell   [$x, $y] | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(1, Any)"
+
+- id     0574
+  from   signatures:unary
+  cell   [$x, $y] | 
+  level  3
+  code   my $A = \(); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(Any, Any)"
+
+- id     0575
+  from   signatures:unary
+  cell   [$x, $y] | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(1e0, Any)"
+
+- id     0576
+  from   signatures:unary
+  cell   [$x, $y] | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m([$x, $y]) { ($x, $y).raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(1, Any)"
+
+- id     0577
+  from   signatures:unary
+  cell   ::T $a | 1
+  level  3
+  code   my $A = \(1); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  is     "(\"Int\", 1)"
+  type   Str
+  oracle rakudo-2026.07 → "(\"Int\", 1)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", 1)"
+
+- id     0578
+  from   signatures:unary
+  cell   ::T $a | "a"
+  level  3
+  code   my $A = \("a"); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  is     "(\"Str\", \"a\")"
+  type   Str
+  oracle rakudo-2026.07 → "(\"Str\", \"a\")"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", \"a\")"
+
+- id     0579
+  from   signatures:unary
+  cell   ::T $a | 0
+  level  3
+  code   my $A = \(0); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  is     "(\"Int\", 0)"
+  type   Str
+  oracle rakudo-2026.07 → "(\"Int\", 0)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", 0)"
+
+- id     0580
+  from   signatures:unary
+  cell   ::T $a | Any
+  level  3
+  code   my $A = \(Any); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  is     "(\"Any\", Any)"
+  type   Str
+  oracle rakudo-2026.07 → "(\"Any\", Any)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", Any)"
+
+- id     0581
+  from   signatures:unary
+  cell   ::T $a | Nil
+  level  3
+  code   my $A = \(Nil); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  is     "(\"Nil\", Nil)"
+  type   Str
+  oracle rakudo-2026.07 → "(\"Nil\", Nil)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", T)"
+
+- id     0582
+  from   signatures:unary
+  cell   ::T $a | ()
+  level  3
+  code   my $A = \(()); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  is     "(\"List\", \$( ))"
+  type   Str
+  oracle rakudo-2026.07 → "(\"List\", \$( ))"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", T)"
+
+- id     0583
+  from   signatures:unary
+  cell   ::T $a | (1,2)
+  level  3
+  code   my $A = \((1,2)); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  is     "(\"List\", \$(1, 2))"
+  type   Str
+  oracle rakudo-2026.07 → "(\"List\", \$(1, 2))"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", 1)"
+
+- id     0584
+  from   signatures:unary
+  cell   ::T $a | [1,2]
+  level  3
+  code   my $A = \([1,2]); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  is     "(\"Array\", \$[1, 2])"
+  type   Str
+  oracle rakudo-2026.07 → "(\"Array\", \$[1, 2])"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", 1)"
+
+- id     0585
+  from   signatures:unary
+  cell   ::T $a | {a=>1}
+  level  3
+  code   my $A = \({a=>1}); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  is     "(\"Hash\", \$\{:a(1)})"
+  type   Str
+  oracle rakudo-2026.07 → "(\"Hash\", \$\{:a(1)})"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", \$\{:a(1)})"
+
+- id     0586
+  from   signatures:unary
+  cell   ::T $a | :a
+  level  3
+  code   my $A = \(:a); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", T)"
+
+- id     0587
+  from   signatures:unary
+  cell   ::T $a | :a(1)
+  level  3
+  code   my $A = \(:a(1)); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", T)"
+
+- id     0588
+  from   signatures:unary
+  cell   ::T $a | \(1)
+  level  3
+  code   my $A = \(\(1)); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  is     "(\"Capture\", \\(1))"
+  type   Str
+  oracle rakudo-2026.07 → "(\"Capture\", \\(1))"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", 1)"
+
+- id     0589
+  from   signatures:unary
+  cell   ::T $a | 1, 2
+  level  3
+  code   my $A = \(1, 2); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", 1)"
+
+- id     0590
+  from   signatures:unary
+  cell   ::T $a | 
+  level  3
+  code   my $A = \(); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", T)"
+
+- id     0591
+  from   signatures:unary
+  cell   ::T $a | 1e0
+  level  3
+  code   my $A = \(1e0); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  is     "(\"Num\", 1e0)"
+  type   Str
+  oracle rakudo-2026.07 → "(\"Num\", 1e0)"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", 1e0)"
+
+- id     0592
+  from   signatures:unary
+  cell   ::T $a | (1,)
+  level  3
+  code   my $A = \((1,)); my $C = class { method m(::T $a) { (T.^name, $a).raku } }; $C.m(|$A)
+  is     "(\"List\", \$(1,))"
+  type   Str
+  oracle rakudo-2026.07 → "(\"List\", \$(1,))"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "(\"T\", 1)"

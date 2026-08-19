@@ -3,8 +3,8 @@ source   generated
 gen      gen/operators.raku
 from-inventory infix Z
 ladder   mixed
-axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
-cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1) | bag(1,1) | (1..3).Seq | any(1,2) | v1.2 | 1+2i | Str
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1) | bag(1,1) | (1..3).Seq | any(1,2) | v1.2 | 1+2i | Str
 
 - id     0001
   from   inventory:infix:Z
@@ -5765,3 +5765,3243 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
   type   Seq
   oracle rakudo-2026.07 → $(((:a(1), 1),).Seq)
   oracle rakupp-v3.14.0-104-g2295fb0-modified → $(((:a(1), 1),).Seq)
+
+- id     0577
+  from   inventory:infix:Z
+  cell   0 | bag(1,1)
+  level  3
+  code   (0) Z (bag(1,1))
+  is     $(((0, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((0, (1=>2).Bag),).Seq)
+
+- id     0578
+  from   inventory:infix:Z
+  cell   1 | bag(1,1)
+  level  3
+  code   (1) Z (bag(1,1))
+  is     $(((1, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, (1=>2).Bag),).Seq)
+
+- id     0579
+  from   inventory:infix:Z
+  cell   -1 | bag(1,1)
+  level  3
+  code   (-1) Z (bag(1,1))
+  is     $(((-1, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-1, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((-1, (1=>2).Bag),).Seq)
+
+- id     0580
+  from   inventory:infix:Z
+  cell   1/2 | bag(1,1)
+  level  3
+  code   (1/2) Z (bag(1,1))
+  is     $(((0.5, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0.5, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((0.5, (1=>2).Bag),).Seq)
+
+- id     0581
+  from   inventory:infix:Z
+  cell   0e0 | bag(1,1)
+  level  3
+  code   (0e0) Z (bag(1,1))
+  is     $(((0e0, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0e0, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((0e0, (1=>2).Bag),).Seq)
+
+- id     0582
+  from   inventory:infix:Z
+  cell   NaN | bag(1,1)
+  level  3
+  code   (NaN) Z (bag(1,1))
+  is     $(((NaN, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((NaN, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((NaN, (1=>2).Bag),).Seq)
+
+- id     0583
+  from   inventory:infix:Z
+  cell   "" | bag(1,1)
+  level  3
+  code   ("") Z (bag(1,1))
+  is     $((("", 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("", 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("", (1=>2).Bag),).Seq)
+
+- id     0584
+  from   inventory:infix:Z
+  cell   "a" | bag(1,1)
+  level  3
+  code   ("a") Z (bag(1,1))
+  is     $((("a", 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a", 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("a", (1=>2).Bag),).Seq)
+
+- id     0585
+  from   inventory:infix:Z
+  cell   True | bag(1,1)
+  level  3
+  code   (True) Z (bag(1,1))
+  is     $(((Bool::True, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::True, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Bool::True, (1=>2).Bag),).Seq)
+
+- id     0586
+  from   inventory:infix:Z
+  cell   Any | bag(1,1)
+  level  3
+  code   (Any) Z (bag(1,1))
+  is     $(((Any, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Any, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Any, (1=>2).Bag),).Seq)
+
+- id     0587
+  from   inventory:infix:Z
+  cell   (1,2) | bag(1,1)
+  level  3
+  code   ((1,2)) Z (bag(1,1))
+  is     $(((1, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, (1=>2).Bag),).Seq)
+
+- id     0588
+  from   inventory:infix:Z
+  cell   {a=>1} | bag(1,1)
+  level  3
+  code   ({a=>1}) Z (bag(1,1))
+  is     $(((:a(1), 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((({:a(1)}, (1=>2).Bag),).Seq)
+
+- id     0589
+  from   inventory:infix:Z
+  cell   -0e0 | bag(1,1)
+  level  3
+  code   (-0e0) Z (bag(1,1))
+  is     $(((-0e0, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-0e0, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((-0e0, (1=>2).Bag),).Seq)
+
+- id     0590
+  from   inventory:infix:Z
+  cell   Inf | bag(1,1)
+  level  3
+  code   (Inf) Z (bag(1,1))
+  is     $(((Inf, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Inf, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Inf, (1=>2).Bag),).Seq)
+
+- id     0591
+  from   inventory:infix:Z
+  cell   2**64 | bag(1,1)
+  level  3
+  code   (2**64) Z (bag(1,1))
+  is     $(((18446744073709551616, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((18446744073709551616, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((18446744073709551616, (1=>2).Bag),).Seq)
+
+- id     0592
+  from   inventory:infix:Z
+  cell   False | bag(1,1)
+  level  3
+  code   (False) Z (bag(1,1))
+  is     $(((Bool::False, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::False, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Bool::False, (1=>2).Bag),).Seq)
+
+- id     0593
+  from   inventory:infix:Z
+  cell   Nil | bag(1,1)
+  level  3
+  code   (Nil) Z (bag(1,1))
+  is     $(((Nil, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Nil, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Nil, (1=>2).Bag),).Seq)
+
+- id     0594
+  from   inventory:infix:Z
+  cell   () | bag(1,1)
+  level  3
+  code   (()) Z (bag(1,1))
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(().Seq)
+
+- id     0595
+  from   inventory:infix:Z
+  cell   "0" | bag(1,1)
+  level  3
+  code   ("0") Z (bag(1,1))
+  is     $((("0", 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("0", 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("0", (1=>2).Bag),).Seq)
+
+- id     0596
+  from   inventory:infix:Z
+  cell   (1..3) | bag(1,1)
+  level  3
+  code   ((1..3)) Z (bag(1,1))
+  is     $(((1, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, (1=>2).Bag),).Seq)
+
+- id     0597
+  from   inventory:infix:Z
+  cell   Int | bag(1,1)
+  level  3
+  code   (Int) Z (bag(1,1))
+  is     $(((Int, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Int, (1=>2).Bag),).Seq)
+
+- id     0598
+  from   inventory:infix:Z
+  cell   "a b" | bag(1,1)
+  level  3
+  code   ("a b") Z (bag(1,1))
+  is     $((("a b", 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("a b", (1=>2).Bag),).Seq)
+
+- id     0599
+  from   inventory:infix:Z
+  cell   [1,2] | bag(1,1)
+  level  3
+  code   ([1,2]) Z (bag(1,1))
+  is     $(((1, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, (1=>2).Bag),).Seq)
+
+- id     0600
+  from   inventory:infix:Z
+  cell   (a => 1) | bag(1,1)
+  level  3
+  code   ((a => 1)) Z (bag(1,1))
+  is     $(((:a(1), 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((:a(1), (1=>2).Bag),).Seq)
+
+- id     0601
+  from   inventory:infix:Z
+  cell   bag(1,1) | bag(1,1)
+  level  3
+  code   (bag(1,1)) Z (bag(1,1))
+  is     $(((1 => 2, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, (1=>2).Bag),).Seq)
+
+- id     0602
+  from   inventory:infix:Z
+  cell   bag(1,1) | 0
+  level  3
+  code   (bag(1,1)) Z (0)
+  is     $(((1 => 2, 0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, 0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, 0),).Seq)
+
+- id     0603
+  from   inventory:infix:Z
+  cell   bag(1,1) | 1
+  level  3
+  code   (bag(1,1)) Z (1)
+  is     $(((1 => 2, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, 1),).Seq)
+
+- id     0604
+  from   inventory:infix:Z
+  cell   bag(1,1) | -1
+  level  3
+  code   (bag(1,1)) Z (-1)
+  is     $(((1 => 2, -1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, -1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, -1),).Seq)
+
+- id     0605
+  from   inventory:infix:Z
+  cell   bag(1,1) | 1/2
+  level  3
+  code   (bag(1,1)) Z (1/2)
+  is     $(((1 => 2, 0.5),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, 0.5),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, 0.5),).Seq)
+
+- id     0606
+  from   inventory:infix:Z
+  cell   bag(1,1) | 0e0
+  level  3
+  code   (bag(1,1)) Z (0e0)
+  is     $(((1 => 2, 0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, 0e0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, 0e0),).Seq)
+
+- id     0607
+  from   inventory:infix:Z
+  cell   bag(1,1) | NaN
+  level  3
+  code   (bag(1,1)) Z (NaN)
+  is     $(((1 => 2, NaN),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, NaN),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, NaN),).Seq)
+
+- id     0608
+  from   inventory:infix:Z
+  cell   bag(1,1) | ""
+  level  3
+  code   (bag(1,1)) Z ("")
+  is     $(((1 => 2, ""),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, ""),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, ""),).Seq)
+
+- id     0609
+  from   inventory:infix:Z
+  cell   bag(1,1) | "a"
+  level  3
+  code   (bag(1,1)) Z ("a")
+  is     $(((1 => 2, "a"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, "a"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, "a"),).Seq)
+
+- id     0610
+  from   inventory:infix:Z
+  cell   bag(1,1) | True
+  level  3
+  code   (bag(1,1)) Z (True)
+  is     $(((1 => 2, Bool::True),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, Bool::True),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, Bool::True),).Seq)
+
+- id     0611
+  from   inventory:infix:Z
+  cell   bag(1,1) | Any
+  level  3
+  code   (bag(1,1)) Z (Any)
+  is     $(((1 => 2, Any),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, Any),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, Any),).Seq)
+
+- id     0612
+  from   inventory:infix:Z
+  cell   bag(1,1) | (1,2)
+  level  3
+  code   (bag(1,1)) Z ((1,2))
+  is     $(((1 => 2, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, 1),).Seq)
+
+- id     0613
+  from   inventory:infix:Z
+  cell   bag(1,1) | {a=>1}
+  level  3
+  code   (bag(1,1)) Z ({a=>1})
+  is     $(((1 => 2, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, {:a(1)}),).Seq)
+
+- id     0614
+  from   inventory:infix:Z
+  cell   bag(1,1) | -0e0
+  level  3
+  code   (bag(1,1)) Z (-0e0)
+  is     $(((1 => 2, -0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, -0e0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, -0e0),).Seq)
+
+- id     0615
+  from   inventory:infix:Z
+  cell   bag(1,1) | Inf
+  level  3
+  code   (bag(1,1)) Z (Inf)
+  is     $(((1 => 2, Inf),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, Inf),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, Inf),).Seq)
+
+- id     0616
+  from   inventory:infix:Z
+  cell   bag(1,1) | 2**64
+  level  3
+  code   (bag(1,1)) Z (2**64)
+  is     $(((1 => 2, 18446744073709551616),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, 18446744073709551616),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, 18446744073709551616),).Seq)
+
+- id     0617
+  from   inventory:infix:Z
+  cell   bag(1,1) | False
+  level  3
+  code   (bag(1,1)) Z (False)
+  is     $(((1 => 2, Bool::False),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, Bool::False),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, Bool::False),).Seq)
+
+- id     0618
+  from   inventory:infix:Z
+  cell   bag(1,1) | Nil
+  level  3
+  code   (bag(1,1)) Z (Nil)
+  is     $(((1 => 2, Nil),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, Nil),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, Nil),).Seq)
+
+- id     0619
+  from   inventory:infix:Z
+  cell   bag(1,1) | ()
+  level  3
+  code   (bag(1,1)) Z (())
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(().Seq)
+
+- id     0620
+  from   inventory:infix:Z
+  cell   bag(1,1) | "0"
+  level  3
+  code   (bag(1,1)) Z ("0")
+  is     $(((1 => 2, "0"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, "0"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, "0"),).Seq)
+
+- id     0621
+  from   inventory:infix:Z
+  cell   bag(1,1) | (1..3)
+  level  3
+  code   (bag(1,1)) Z ((1..3))
+  is     $(((1 => 2, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, 1),).Seq)
+
+- id     0622
+  from   inventory:infix:Z
+  cell   bag(1,1) | Int
+  level  3
+  code   (bag(1,1)) Z (Int)
+  is     $(((1 => 2, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, Int),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, Int),).Seq)
+
+- id     0623
+  from   inventory:infix:Z
+  cell   bag(1,1) | "a b"
+  level  3
+  code   (bag(1,1)) Z ("a b")
+  is     $(((1 => 2, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, "a b"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, "a b"),).Seq)
+
+- id     0624
+  from   inventory:infix:Z
+  cell   bag(1,1) | [1,2]
+  level  3
+  code   (bag(1,1)) Z ([1,2])
+  is     $(((1 => 2, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, 1),).Seq)
+
+- id     0625
+  from   inventory:infix:Z
+  cell   bag(1,1) | (a => 1)
+  level  3
+  code   (bag(1,1)) Z ((a => 1))
+  is     $(((1 => 2, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, :a(1)),).Seq)
+
+- id     0626
+  from   inventory:infix:Z
+  cell   0 | (1..3).Seq
+  level  3
+  code   (0) Z ((1..3).Seq)
+  is     $(((0, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((0, 1),).Seq)
+
+- id     0627
+  from   inventory:infix:Z
+  cell   1 | (1..3).Seq
+  level  3
+  code   (1) Z ((1..3).Seq)
+  is     $(((1, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, 1),).Seq)
+
+- id     0628
+  from   inventory:infix:Z
+  cell   -1 | (1..3).Seq
+  level  3
+  code   (-1) Z ((1..3).Seq)
+  is     $(((-1, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-1, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((-1, 1),).Seq)
+
+- id     0629
+  from   inventory:infix:Z
+  cell   1/2 | (1..3).Seq
+  level  3
+  code   (1/2) Z ((1..3).Seq)
+  is     $(((0.5, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0.5, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((0.5, 1),).Seq)
+
+- id     0630
+  from   inventory:infix:Z
+  cell   0e0 | (1..3).Seq
+  level  3
+  code   (0e0) Z ((1..3).Seq)
+  is     $(((0e0, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0e0, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((0e0, 1),).Seq)
+
+- id     0631
+  from   inventory:infix:Z
+  cell   NaN | (1..3).Seq
+  level  3
+  code   (NaN) Z ((1..3).Seq)
+  is     $(((NaN, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((NaN, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((NaN, 1),).Seq)
+
+- id     0632
+  from   inventory:infix:Z
+  cell   "" | (1..3).Seq
+  level  3
+  code   ("") Z ((1..3).Seq)
+  is     $((("", 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("", 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("", 1),).Seq)
+
+- id     0633
+  from   inventory:infix:Z
+  cell   "a" | (1..3).Seq
+  level  3
+  code   ("a") Z ((1..3).Seq)
+  is     $((("a", 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a", 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("a", 1),).Seq)
+
+- id     0634
+  from   inventory:infix:Z
+  cell   True | (1..3).Seq
+  level  3
+  code   (True) Z ((1..3).Seq)
+  is     $(((Bool::True, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::True, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Bool::True, 1),).Seq)
+
+- id     0635
+  from   inventory:infix:Z
+  cell   Any | (1..3).Seq
+  level  3
+  code   (Any) Z ((1..3).Seq)
+  is     $(((Any, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Any, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Any, 1),).Seq)
+
+- id     0636
+  from   inventory:infix:Z
+  cell   (1,2) | (1..3).Seq
+  level  3
+  code   ((1,2)) Z ((1..3).Seq)
+  is     $(((1, 1), (2, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1), (2, 2)).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, 1), (2, 2)).Seq)
+
+- id     0637
+  from   inventory:infix:Z
+  cell   {a=>1} | (1..3).Seq
+  level  3
+  code   ({a=>1}) Z ((1..3).Seq)
+  is     $(((:a(1), 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((({:a(1)}, 1),).Seq)
+
+- id     0638
+  from   inventory:infix:Z
+  cell   -0e0 | (1..3).Seq
+  level  3
+  code   (-0e0) Z ((1..3).Seq)
+  is     $(((-0e0, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-0e0, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((-0e0, 1),).Seq)
+
+- id     0639
+  from   inventory:infix:Z
+  cell   Inf | (1..3).Seq
+  level  3
+  code   (Inf) Z ((1..3).Seq)
+  is     $(((Inf, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Inf, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Inf, 1),).Seq)
+
+- id     0640
+  from   inventory:infix:Z
+  cell   2**64 | (1..3).Seq
+  level  3
+  code   (2**64) Z ((1..3).Seq)
+  is     $(((18446744073709551616, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((18446744073709551616, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((18446744073709551616, 1),).Seq)
+
+- id     0641
+  from   inventory:infix:Z
+  cell   False | (1..3).Seq
+  level  3
+  code   (False) Z ((1..3).Seq)
+  is     $(((Bool::False, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::False, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Bool::False, 1),).Seq)
+
+- id     0642
+  from   inventory:infix:Z
+  cell   Nil | (1..3).Seq
+  level  3
+  code   (Nil) Z ((1..3).Seq)
+  is     $(((Nil, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Nil, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Nil, 1),).Seq)
+
+- id     0643
+  from   inventory:infix:Z
+  cell   () | (1..3).Seq
+  level  3
+  code   (()) Z ((1..3).Seq)
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(().Seq)
+
+- id     0644
+  from   inventory:infix:Z
+  cell   "0" | (1..3).Seq
+  level  3
+  code   ("0") Z ((1..3).Seq)
+  is     $((("0", 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("0", 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("0", 1),).Seq)
+
+- id     0645
+  from   inventory:infix:Z
+  cell   (1..3) | (1..3).Seq
+  level  3
+  code   ((1..3)) Z ((1..3).Seq)
+  is     $(((1, 1), (2, 2), (3, 3)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1), (2, 2), (3, 3)).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, 1), (2, 2), (3, 3)).Seq)
+
+- id     0646
+  from   inventory:infix:Z
+  cell   Int | (1..3).Seq
+  level  3
+  code   (Int) Z ((1..3).Seq)
+  is     $(((Int, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Int, 1),).Seq)
+
+- id     0647
+  from   inventory:infix:Z
+  cell   "a b" | (1..3).Seq
+  level  3
+  code   ("a b") Z ((1..3).Seq)
+  is     $((("a b", 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("a b", 1),).Seq)
+
+- id     0648
+  from   inventory:infix:Z
+  cell   [1,2] | (1..3).Seq
+  level  3
+  code   ([1,2]) Z ((1..3).Seq)
+  is     $(((1, 1), (2, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1), (2, 2)).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, 1), (2, 2)).Seq)
+
+- id     0649
+  from   inventory:infix:Z
+  cell   (a => 1) | (1..3).Seq
+  level  3
+  code   ((a => 1)) Z ((1..3).Seq)
+  is     $(((:a(1), 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((:a(1), 1),).Seq)
+
+- id     0650
+  from   inventory:infix:Z
+  cell   bag(1,1) | (1..3).Seq
+  level  3
+  code   (bag(1,1)) Z ((1..3).Seq)
+  is     $(((1 => 2, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, 1),).Seq)
+
+- id     0651
+  from   inventory:infix:Z
+  cell   (1..3).Seq | (1..3).Seq
+  level  3
+  code   ((1..3).Seq) Z ((1..3).Seq)
+  is     $(((1, 1), (2, 2), (3, 3)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1), (2, 2), (3, 3)).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, 1), (2, 2), (3, 3)).Seq)
+
+- id     0652
+  from   inventory:infix:Z
+  cell   (1..3).Seq | 0
+  level  3
+  code   ((1..3).Seq) Z (0)
+  is     $(((1, 0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, 0),).Seq)
+
+- id     0653
+  from   inventory:infix:Z
+  cell   (1..3).Seq | 1
+  level  3
+  code   ((1..3).Seq) Z (1)
+  is     $(((1, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, 1),).Seq)
+
+- id     0654
+  from   inventory:infix:Z
+  cell   (1..3).Seq | -1
+  level  3
+  code   ((1..3).Seq) Z (-1)
+  is     $(((1, -1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, -1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, -1),).Seq)
+
+- id     0655
+  from   inventory:infix:Z
+  cell   (1..3).Seq | 1/2
+  level  3
+  code   ((1..3).Seq) Z (1/2)
+  is     $(((1, 0.5),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 0.5),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, 0.5),).Seq)
+
+- id     0656
+  from   inventory:infix:Z
+  cell   (1..3).Seq | 0e0
+  level  3
+  code   ((1..3).Seq) Z (0e0)
+  is     $(((1, 0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 0e0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, 0e0),).Seq)
+
+- id     0657
+  from   inventory:infix:Z
+  cell   (1..3).Seq | NaN
+  level  3
+  code   ((1..3).Seq) Z (NaN)
+  is     $(((1, NaN),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, NaN),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, NaN),).Seq)
+
+- id     0658
+  from   inventory:infix:Z
+  cell   (1..3).Seq | ""
+  level  3
+  code   ((1..3).Seq) Z ("")
+  is     $(((1, ""),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, ""),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, ""),).Seq)
+
+- id     0659
+  from   inventory:infix:Z
+  cell   (1..3).Seq | "a"
+  level  3
+  code   ((1..3).Seq) Z ("a")
+  is     $(((1, "a"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, "a"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, "a"),).Seq)
+
+- id     0660
+  from   inventory:infix:Z
+  cell   (1..3).Seq | True
+  level  3
+  code   ((1..3).Seq) Z (True)
+  is     $(((1, Bool::True),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Bool::True),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, Bool::True),).Seq)
+
+- id     0661
+  from   inventory:infix:Z
+  cell   (1..3).Seq | Any
+  level  3
+  code   ((1..3).Seq) Z (Any)
+  is     $(((1, Any),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Any),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, Any),).Seq)
+
+- id     0662
+  from   inventory:infix:Z
+  cell   (1..3).Seq | (1,2)
+  level  3
+  code   ((1..3).Seq) Z ((1,2))
+  is     $(((1, 1), (2, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1), (2, 2)).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, 1), (2, 2)).Seq)
+
+- id     0663
+  from   inventory:infix:Z
+  cell   (1..3).Seq | {a=>1}
+  level  3
+  code   ((1..3).Seq) Z ({a=>1})
+  is     $(((1, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, {:a(1)}),).Seq)
+
+- id     0664
+  from   inventory:infix:Z
+  cell   (1..3).Seq | -0e0
+  level  3
+  code   ((1..3).Seq) Z (-0e0)
+  is     $(((1, -0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, -0e0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, -0e0),).Seq)
+
+- id     0665
+  from   inventory:infix:Z
+  cell   (1..3).Seq | Inf
+  level  3
+  code   ((1..3).Seq) Z (Inf)
+  is     $(((1, Inf),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Inf),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, Inf),).Seq)
+
+- id     0666
+  from   inventory:infix:Z
+  cell   (1..3).Seq | 2**64
+  level  3
+  code   ((1..3).Seq) Z (2**64)
+  is     $(((1, 18446744073709551616),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 18446744073709551616),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, 18446744073709551616),).Seq)
+
+- id     0667
+  from   inventory:infix:Z
+  cell   (1..3).Seq | False
+  level  3
+  code   ((1..3).Seq) Z (False)
+  is     $(((1, Bool::False),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Bool::False),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, Bool::False),).Seq)
+
+- id     0668
+  from   inventory:infix:Z
+  cell   (1..3).Seq | Nil
+  level  3
+  code   ((1..3).Seq) Z (Nil)
+  is     $(((1, Nil),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Nil),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, Nil),).Seq)
+
+- id     0669
+  from   inventory:infix:Z
+  cell   (1..3).Seq | ()
+  level  3
+  code   ((1..3).Seq) Z (())
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(().Seq)
+
+- id     0670
+  from   inventory:infix:Z
+  cell   (1..3).Seq | "0"
+  level  3
+  code   ((1..3).Seq) Z ("0")
+  is     $(((1, "0"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, "0"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, "0"),).Seq)
+
+- id     0671
+  from   inventory:infix:Z
+  cell   (1..3).Seq | (1..3)
+  level  3
+  code   ((1..3).Seq) Z ((1..3))
+  is     $(((1, 1), (2, 2), (3, 3)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1), (2, 2), (3, 3)).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, 1), (2, 2), (3, 3)).Seq)
+
+- id     0672
+  from   inventory:infix:Z
+  cell   (1..3).Seq | Int
+  level  3
+  code   ((1..3).Seq) Z (Int)
+  is     $(((1, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Int),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, Int),).Seq)
+
+- id     0673
+  from   inventory:infix:Z
+  cell   (1..3).Seq | "a b"
+  level  3
+  code   ((1..3).Seq) Z ("a b")
+  is     $(((1, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, "a b"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, "a b"),).Seq)
+
+- id     0674
+  from   inventory:infix:Z
+  cell   (1..3).Seq | [1,2]
+  level  3
+  code   ((1..3).Seq) Z ([1,2])
+  is     $(((1, 1), (2, 2)).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1), (2, 2)).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, 1), (2, 2)).Seq)
+
+- id     0675
+  from   inventory:infix:Z
+  cell   (1..3).Seq | (a => 1)
+  level  3
+  code   ((1..3).Seq) Z ((a => 1))
+  is     $(((1, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, :a(1)),).Seq)
+
+- id     0676
+  from   inventory:infix:Z
+  cell   (1..3).Seq | bag(1,1)
+  level  3
+  code   ((1..3).Seq) Z (bag(1,1))
+  is     $(((1, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, (1=>2).Bag),).Seq)
+
+- id     0677
+  from   inventory:infix:Z
+  cell   0 | any(1,2)
+  level  3
+  code   (0) Z (any(1,2))
+  is     $(((0, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((0, 1),).Seq, ((0, 2),).Seq)
+
+- id     0678
+  from   inventory:infix:Z
+  cell   1 | any(1,2)
+  level  3
+  code   (1) Z (any(1,2))
+  is     $(((1, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, 1),).Seq, ((1, 2),).Seq)
+
+- id     0679
+  from   inventory:infix:Z
+  cell   -1 | any(1,2)
+  level  3
+  code   (-1) Z (any(1,2))
+  is     $(((-1, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-1, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((-1, 1),).Seq, ((-1, 2),).Seq)
+
+- id     0680
+  from   inventory:infix:Z
+  cell   1/2 | any(1,2)
+  level  3
+  code   (1/2) Z (any(1,2))
+  is     $(((0.5, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0.5, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((0.5, 1),).Seq, ((0.5, 2),).Seq)
+
+- id     0681
+  from   inventory:infix:Z
+  cell   0e0 | any(1,2)
+  level  3
+  code   (0e0) Z (any(1,2))
+  is     $(((0e0, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0e0, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((0e0, 1),).Seq, ((0e0, 2),).Seq)
+
+- id     0682
+  from   inventory:infix:Z
+  cell   NaN | any(1,2)
+  level  3
+  code   (NaN) Z (any(1,2))
+  is     $(((NaN, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((NaN, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((NaN, 1),).Seq, ((NaN, 2),).Seq)
+
+- id     0683
+  from   inventory:infix:Z
+  cell   "" | any(1,2)
+  level  3
+  code   ("") Z (any(1,2))
+  is     $((("", any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("", any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any((("", 1),).Seq, (("", 2),).Seq)
+
+- id     0684
+  from   inventory:infix:Z
+  cell   "a" | any(1,2)
+  level  3
+  code   ("a") Z (any(1,2))
+  is     $((("a", any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a", any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any((("a", 1),).Seq, (("a", 2),).Seq)
+
+- id     0685
+  from   inventory:infix:Z
+  cell   True | any(1,2)
+  level  3
+  code   (True) Z (any(1,2))
+  is     $(((Bool::True, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::True, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((Bool::True, 1),).Seq, ((Bool::True, 2),).Seq)
+
+- id     0686
+  from   inventory:infix:Z
+  cell   Any | any(1,2)
+  level  3
+  code   (Any) Z (any(1,2))
+  is     $(((Any, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Any, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((Any, 1),).Seq, ((Any, 2),).Seq)
+
+- id     0687
+  from   inventory:infix:Z
+  cell   (1,2) | any(1,2)
+  level  3
+  code   ((1,2)) Z (any(1,2))
+  is     $(((1, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, 1),).Seq, ((1, 2),).Seq)
+
+- id     0688
+  from   inventory:infix:Z
+  cell   {a=>1} | any(1,2)
+  level  3
+  code   ({a=>1}) Z (any(1,2))
+  is     $(((:a(1), any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any((({:a(1)}, 1),).Seq, (({:a(1)}, 2),).Seq)
+
+- id     0689
+  from   inventory:infix:Z
+  cell   -0e0 | any(1,2)
+  level  3
+  code   (-0e0) Z (any(1,2))
+  is     $(((-0e0, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-0e0, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((-0e0, 1),).Seq, ((-0e0, 2),).Seq)
+
+- id     0690
+  from   inventory:infix:Z
+  cell   Inf | any(1,2)
+  level  3
+  code   (Inf) Z (any(1,2))
+  is     $(((Inf, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Inf, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((Inf, 1),).Seq, ((Inf, 2),).Seq)
+
+- id     0691
+  from   inventory:infix:Z
+  cell   2**64 | any(1,2)
+  level  3
+  code   (2**64) Z (any(1,2))
+  is     $(((18446744073709551616, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((18446744073709551616, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((18446744073709551616, 1),).Seq, ((18446744073709551616, 2),).Seq)
+
+- id     0692
+  from   inventory:infix:Z
+  cell   False | any(1,2)
+  level  3
+  code   (False) Z (any(1,2))
+  is     $(((Bool::False, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::False, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((Bool::False, 1),).Seq, ((Bool::False, 2),).Seq)
+
+- id     0693
+  from   inventory:infix:Z
+  cell   Nil | any(1,2)
+  level  3
+  code   (Nil) Z (any(1,2))
+  is     $(((Nil, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Nil, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((Nil, 1),).Seq, ((Nil, 2),).Seq)
+
+- id     0694
+  from   inventory:infix:Z
+  cell   () | any(1,2)
+  level  3
+  code   (()) Z (any(1,2))
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(().Seq, ().Seq)
+
+- id     0695
+  from   inventory:infix:Z
+  cell   "0" | any(1,2)
+  level  3
+  code   ("0") Z (any(1,2))
+  is     $((("0", any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("0", any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any((("0", 1),).Seq, (("0", 2),).Seq)
+
+- id     0696
+  from   inventory:infix:Z
+  cell   (1..3) | any(1,2)
+  level  3
+  code   ((1..3)) Z (any(1,2))
+  is     $(((1, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, 1),).Seq, ((1, 2),).Seq)
+
+- id     0697
+  from   inventory:infix:Z
+  cell   Int | any(1,2)
+  level  3
+  code   (Int) Z (any(1,2))
+  is     $(((Int, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((Int, 1),).Seq, ((Int, 2),).Seq)
+
+- id     0698
+  from   inventory:infix:Z
+  cell   "a b" | any(1,2)
+  level  3
+  code   ("a b") Z (any(1,2))
+  is     $((("a b", any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any((("a b", 1),).Seq, (("a b", 2),).Seq)
+
+- id     0699
+  from   inventory:infix:Z
+  cell   [1,2] | any(1,2)
+  level  3
+  code   ([1,2]) Z (any(1,2))
+  is     $(((1, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, 1),).Seq, ((1, 2),).Seq)
+
+- id     0700
+  from   inventory:infix:Z
+  cell   (a => 1) | any(1,2)
+  level  3
+  code   ((a => 1)) Z (any(1,2))
+  is     $(((:a(1), any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((:a(1), 1),).Seq, ((:a(1), 2),).Seq)
+
+- id     0701
+  from   inventory:infix:Z
+  cell   bag(1,1) | any(1,2)
+  level  3
+  code   (bag(1,1)) Z (any(1,2))
+  is     $(((1 => 2, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any((((1=>2).Bag, 1),).Seq, (((1=>2).Bag, 2),).Seq)
+
+- id     0702
+  from   inventory:infix:Z
+  cell   (1..3).Seq | any(1,2)
+  level  3
+  code   ((1..3).Seq) Z (any(1,2))
+  is     $(((1, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, 1),).Seq, ((1, 2),).Seq)
+
+- id     0703
+  from   inventory:infix:Z
+  cell   any(1,2) | any(1,2)
+  level  3
+  code   (any(1,2)) Z (any(1,2))
+  is     $(((any(1, 2), any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(any(((1, 1),).Seq, ((1, 2),).Seq), any(((2, 1),).Seq, ((2, 2),).Seq))
+
+- id     0704
+  from   inventory:infix:Z
+  cell   any(1,2) | 0
+  level  3
+  code   (any(1,2)) Z (0)
+  is     $(((any(1, 2), 0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), 0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, 0),).Seq, ((2, 0),).Seq)
+
+- id     0705
+  from   inventory:infix:Z
+  cell   any(1,2) | 1
+  level  3
+  code   (any(1,2)) Z (1)
+  is     $(((any(1, 2), 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, 1),).Seq, ((2, 1),).Seq)
+
+- id     0706
+  from   inventory:infix:Z
+  cell   any(1,2) | -1
+  level  3
+  code   (any(1,2)) Z (-1)
+  is     $(((any(1, 2), -1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), -1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, -1),).Seq, ((2, -1),).Seq)
+
+- id     0707
+  from   inventory:infix:Z
+  cell   any(1,2) | 1/2
+  level  3
+  code   (any(1,2)) Z (1/2)
+  is     $(((any(1, 2), 0.5),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), 0.5),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, 0.5),).Seq, ((2, 0.5),).Seq)
+
+- id     0708
+  from   inventory:infix:Z
+  cell   any(1,2) | 0e0
+  level  3
+  code   (any(1,2)) Z (0e0)
+  is     $(((any(1, 2), 0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), 0e0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, 0e0),).Seq, ((2, 0e0),).Seq)
+
+- id     0709
+  from   inventory:infix:Z
+  cell   any(1,2) | NaN
+  level  3
+  code   (any(1,2)) Z (NaN)
+  is     $(((any(1, 2), NaN),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), NaN),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, NaN),).Seq, ((2, NaN),).Seq)
+
+- id     0710
+  from   inventory:infix:Z
+  cell   any(1,2) | ""
+  level  3
+  code   (any(1,2)) Z ("")
+  is     $(((any(1, 2), ""),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), ""),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, ""),).Seq, ((2, ""),).Seq)
+
+- id     0711
+  from   inventory:infix:Z
+  cell   any(1,2) | "a"
+  level  3
+  code   (any(1,2)) Z ("a")
+  is     $(((any(1, 2), "a"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), "a"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, "a"),).Seq, ((2, "a"),).Seq)
+
+- id     0712
+  from   inventory:infix:Z
+  cell   any(1,2) | True
+  level  3
+  code   (any(1,2)) Z (True)
+  is     $(((any(1, 2), Bool::True),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), Bool::True),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, Bool::True),).Seq, ((2, Bool::True),).Seq)
+
+- id     0713
+  from   inventory:infix:Z
+  cell   any(1,2) | Any
+  level  3
+  code   (any(1,2)) Z (Any)
+  is     $(((any(1, 2), Any),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), Any),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, Any),).Seq, ((2, Any),).Seq)
+
+- id     0714
+  from   inventory:infix:Z
+  cell   any(1,2) | (1,2)
+  level  3
+  code   (any(1,2)) Z ((1,2))
+  is     $(((any(1, 2), 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, 1),).Seq, ((2, 1),).Seq)
+
+- id     0715
+  from   inventory:infix:Z
+  cell   any(1,2) | {a=>1}
+  level  3
+  code   (any(1,2)) Z ({a=>1})
+  is     $(((any(1, 2), :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), :a(1)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, {:a(1)}),).Seq, ((2, {:a(1)}),).Seq)
+
+- id     0716
+  from   inventory:infix:Z
+  cell   any(1,2) | -0e0
+  level  3
+  code   (any(1,2)) Z (-0e0)
+  is     $(((any(1, 2), -0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), -0e0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, -0e0),).Seq, ((2, -0e0),).Seq)
+
+- id     0717
+  from   inventory:infix:Z
+  cell   any(1,2) | Inf
+  level  3
+  code   (any(1,2)) Z (Inf)
+  is     $(((any(1, 2), Inf),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), Inf),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, Inf),).Seq, ((2, Inf),).Seq)
+
+- id     0718
+  from   inventory:infix:Z
+  cell   any(1,2) | 2**64
+  level  3
+  code   (any(1,2)) Z (2**64)
+  is     $(((any(1, 2), 18446744073709551616),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), 18446744073709551616),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, 18446744073709551616),).Seq, ((2, 18446744073709551616),).Seq)
+
+- id     0719
+  from   inventory:infix:Z
+  cell   any(1,2) | False
+  level  3
+  code   (any(1,2)) Z (False)
+  is     $(((any(1, 2), Bool::False),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), Bool::False),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, Bool::False),).Seq, ((2, Bool::False),).Seq)
+
+- id     0720
+  from   inventory:infix:Z
+  cell   any(1,2) | Nil
+  level  3
+  code   (any(1,2)) Z (Nil)
+  is     $(((any(1, 2), Nil),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), Nil),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, Nil),).Seq, ((2, Nil),).Seq)
+
+- id     0721
+  from   inventory:infix:Z
+  cell   any(1,2) | ()
+  level  3
+  code   (any(1,2)) Z (())
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(().Seq, ().Seq)
+
+- id     0722
+  from   inventory:infix:Z
+  cell   any(1,2) | "0"
+  level  3
+  code   (any(1,2)) Z ("0")
+  is     $(((any(1, 2), "0"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), "0"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, "0"),).Seq, ((2, "0"),).Seq)
+
+- id     0723
+  from   inventory:infix:Z
+  cell   any(1,2) | (1..3)
+  level  3
+  code   (any(1,2)) Z ((1..3))
+  is     $(((any(1, 2), 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, 1),).Seq, ((2, 1),).Seq)
+
+- id     0724
+  from   inventory:infix:Z
+  cell   any(1,2) | Int
+  level  3
+  code   (any(1,2)) Z (Int)
+  is     $(((any(1, 2), Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), Int),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, Int),).Seq, ((2, Int),).Seq)
+
+- id     0725
+  from   inventory:infix:Z
+  cell   any(1,2) | "a b"
+  level  3
+  code   (any(1,2)) Z ("a b")
+  is     $(((any(1, 2), "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), "a b"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, "a b"),).Seq, ((2, "a b"),).Seq)
+
+- id     0726
+  from   inventory:infix:Z
+  cell   any(1,2) | [1,2]
+  level  3
+  code   (any(1,2)) Z ([1,2])
+  is     $(((any(1, 2), 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, 1),).Seq, ((2, 1),).Seq)
+
+- id     0727
+  from   inventory:infix:Z
+  cell   any(1,2) | (a => 1)
+  level  3
+  code   (any(1,2)) Z ((a => 1))
+  is     $(((any(1, 2), :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), :a(1)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, :a(1)),).Seq, ((2, :a(1)),).Seq)
+
+- id     0728
+  from   inventory:infix:Z
+  cell   any(1,2) | bag(1,1)
+  level  3
+  code   (any(1,2)) Z (bag(1,1))
+  is     $(((any(1, 2), 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, (1=>2).Bag),).Seq, ((2, (1=>2).Bag),).Seq)
+
+- id     0729
+  from   inventory:infix:Z
+  cell   any(1,2) | (1..3).Seq
+  level  3
+  code   (any(1,2)) Z ((1..3).Seq)
+  is     $(((any(1, 2), 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, 1),).Seq, ((2, 1),).Seq)
+
+- id     0730
+  from   inventory:infix:Z
+  cell   0 | v1.2
+  level  3
+  code   (0) Z (v1.2)
+  is     $(((0, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((0, "1.2"),).Seq)
+
+- id     0731
+  from   inventory:infix:Z
+  cell   1 | v1.2
+  level  3
+  code   (1) Z (v1.2)
+  is     $(((1, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, "1.2"),).Seq)
+
+- id     0732
+  from   inventory:infix:Z
+  cell   -1 | v1.2
+  level  3
+  code   (-1) Z (v1.2)
+  is     $(((-1, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-1, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((-1, "1.2"),).Seq)
+
+- id     0733
+  from   inventory:infix:Z
+  cell   1/2 | v1.2
+  level  3
+  code   (1/2) Z (v1.2)
+  is     $(((0.5, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0.5, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((0.5, "1.2"),).Seq)
+
+- id     0734
+  from   inventory:infix:Z
+  cell   0e0 | v1.2
+  level  3
+  code   (0e0) Z (v1.2)
+  is     $(((0e0, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0e0, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((0e0, "1.2"),).Seq)
+
+- id     0735
+  from   inventory:infix:Z
+  cell   NaN | v1.2
+  level  3
+  code   (NaN) Z (v1.2)
+  is     $(((NaN, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((NaN, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((NaN, "1.2"),).Seq)
+
+- id     0736
+  from   inventory:infix:Z
+  cell   "" | v1.2
+  level  3
+  code   ("") Z (v1.2)
+  is     $((("", v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("", v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("", "1.2"),).Seq)
+
+- id     0737
+  from   inventory:infix:Z
+  cell   "a" | v1.2
+  level  3
+  code   ("a") Z (v1.2)
+  is     $((("a", v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a", v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("a", "1.2"),).Seq)
+
+- id     0738
+  from   inventory:infix:Z
+  cell   True | v1.2
+  level  3
+  code   (True) Z (v1.2)
+  is     $(((Bool::True, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::True, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Bool::True, "1.2"),).Seq)
+
+- id     0739
+  from   inventory:infix:Z
+  cell   Any | v1.2
+  level  3
+  code   (Any) Z (v1.2)
+  is     $(((Any, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Any, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Any, "1.2"),).Seq)
+
+- id     0740
+  from   inventory:infix:Z
+  cell   (1,2) | v1.2
+  level  3
+  code   ((1,2)) Z (v1.2)
+  is     $(((1, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, "1.2"),).Seq)
+
+- id     0741
+  from   inventory:infix:Z
+  cell   {a=>1} | v1.2
+  level  3
+  code   ({a=>1}) Z (v1.2)
+  is     $(((:a(1), v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((({:a(1)}, "1.2"),).Seq)
+
+- id     0742
+  from   inventory:infix:Z
+  cell   -0e0 | v1.2
+  level  3
+  code   (-0e0) Z (v1.2)
+  is     $(((-0e0, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-0e0, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((-0e0, "1.2"),).Seq)
+
+- id     0743
+  from   inventory:infix:Z
+  cell   Inf | v1.2
+  level  3
+  code   (Inf) Z (v1.2)
+  is     $(((Inf, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Inf, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Inf, "1.2"),).Seq)
+
+- id     0744
+  from   inventory:infix:Z
+  cell   2**64 | v1.2
+  level  3
+  code   (2**64) Z (v1.2)
+  is     $(((18446744073709551616, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((18446744073709551616, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((18446744073709551616, "1.2"),).Seq)
+
+- id     0745
+  from   inventory:infix:Z
+  cell   False | v1.2
+  level  3
+  code   (False) Z (v1.2)
+  is     $(((Bool::False, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::False, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Bool::False, "1.2"),).Seq)
+
+- id     0746
+  from   inventory:infix:Z
+  cell   Nil | v1.2
+  level  3
+  code   (Nil) Z (v1.2)
+  is     $(((Nil, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Nil, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Nil, "1.2"),).Seq)
+
+- id     0747
+  from   inventory:infix:Z
+  cell   () | v1.2
+  level  3
+  code   (()) Z (v1.2)
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(().Seq)
+
+- id     0748
+  from   inventory:infix:Z
+  cell   "0" | v1.2
+  level  3
+  code   ("0") Z (v1.2)
+  is     $((("0", v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("0", v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("0", "1.2"),).Seq)
+
+- id     0749
+  from   inventory:infix:Z
+  cell   (1..3) | v1.2
+  level  3
+  code   ((1..3)) Z (v1.2)
+  is     $(((1, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, "1.2"),).Seq)
+
+- id     0750
+  from   inventory:infix:Z
+  cell   Int | v1.2
+  level  3
+  code   (Int) Z (v1.2)
+  is     $(((Int, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Int, "1.2"),).Seq)
+
+- id     0751
+  from   inventory:infix:Z
+  cell   "a b" | v1.2
+  level  3
+  code   ("a b") Z (v1.2)
+  is     $((("a b", v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("a b", "1.2"),).Seq)
+
+- id     0752
+  from   inventory:infix:Z
+  cell   [1,2] | v1.2
+  level  3
+  code   ([1,2]) Z (v1.2)
+  is     $(((1, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, "1.2"),).Seq)
+
+- id     0753
+  from   inventory:infix:Z
+  cell   (a => 1) | v1.2
+  level  3
+  code   ((a => 1)) Z (v1.2)
+  is     $(((:a(1), v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((:a(1), "1.2"),).Seq)
+
+- id     0754
+  from   inventory:infix:Z
+  cell   bag(1,1) | v1.2
+  level  3
+  code   (bag(1,1)) Z (v1.2)
+  is     $(((1 => 2, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, "1.2"),).Seq)
+
+- id     0755
+  from   inventory:infix:Z
+  cell   (1..3).Seq | v1.2
+  level  3
+  code   ((1..3).Seq) Z (v1.2)
+  is     $(((1, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, "1.2"),).Seq)
+
+- id     0756
+  from   inventory:infix:Z
+  cell   any(1,2) | v1.2
+  level  3
+  code   (any(1,2)) Z (v1.2)
+  is     $(((any(1, 2), v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, "1.2"),).Seq, ((2, "1.2"),).Seq)
+
+- id     0757
+  from   inventory:infix:Z
+  cell   v1.2 | v1.2
+  level  3
+  code   (v1.2) Z (v1.2)
+  is     $(((v1.2, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", "1.2"),).Seq)
+
+- id     0758
+  from   inventory:infix:Z
+  cell   v1.2 | 0
+  level  3
+  code   (v1.2) Z (0)
+  is     $(((v1.2, 0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, 0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", 0),).Seq)
+
+- id     0759
+  from   inventory:infix:Z
+  cell   v1.2 | 1
+  level  3
+  code   (v1.2) Z (1)
+  is     $(((v1.2, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", 1),).Seq)
+
+- id     0760
+  from   inventory:infix:Z
+  cell   v1.2 | -1
+  level  3
+  code   (v1.2) Z (-1)
+  is     $(((v1.2, -1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, -1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", -1),).Seq)
+
+- id     0761
+  from   inventory:infix:Z
+  cell   v1.2 | 1/2
+  level  3
+  code   (v1.2) Z (1/2)
+  is     $(((v1.2, 0.5),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, 0.5),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", 0.5),).Seq)
+
+- id     0762
+  from   inventory:infix:Z
+  cell   v1.2 | 0e0
+  level  3
+  code   (v1.2) Z (0e0)
+  is     $(((v1.2, 0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, 0e0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", 0e0),).Seq)
+
+- id     0763
+  from   inventory:infix:Z
+  cell   v1.2 | NaN
+  level  3
+  code   (v1.2) Z (NaN)
+  is     $(((v1.2, NaN),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, NaN),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", NaN),).Seq)
+
+- id     0764
+  from   inventory:infix:Z
+  cell   v1.2 | ""
+  level  3
+  code   (v1.2) Z ("")
+  is     $(((v1.2, ""),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, ""),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", ""),).Seq)
+
+- id     0765
+  from   inventory:infix:Z
+  cell   v1.2 | "a"
+  level  3
+  code   (v1.2) Z ("a")
+  is     $(((v1.2, "a"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, "a"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", "a"),).Seq)
+
+- id     0766
+  from   inventory:infix:Z
+  cell   v1.2 | True
+  level  3
+  code   (v1.2) Z (True)
+  is     $(((v1.2, Bool::True),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, Bool::True),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", Bool::True),).Seq)
+
+- id     0767
+  from   inventory:infix:Z
+  cell   v1.2 | Any
+  level  3
+  code   (v1.2) Z (Any)
+  is     $(((v1.2, Any),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, Any),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", Any),).Seq)
+
+- id     0768
+  from   inventory:infix:Z
+  cell   v1.2 | (1,2)
+  level  3
+  code   (v1.2) Z ((1,2))
+  is     $(((v1.2, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", 1),).Seq)
+
+- id     0769
+  from   inventory:infix:Z
+  cell   v1.2 | {a=>1}
+  level  3
+  code   (v1.2) Z ({a=>1})
+  is     $(((v1.2, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", {:a(1)}),).Seq)
+
+- id     0770
+  from   inventory:infix:Z
+  cell   v1.2 | -0e0
+  level  3
+  code   (v1.2) Z (-0e0)
+  is     $(((v1.2, -0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, -0e0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", -0e0),).Seq)
+
+- id     0771
+  from   inventory:infix:Z
+  cell   v1.2 | Inf
+  level  3
+  code   (v1.2) Z (Inf)
+  is     $(((v1.2, Inf),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, Inf),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", Inf),).Seq)
+
+- id     0772
+  from   inventory:infix:Z
+  cell   v1.2 | 2**64
+  level  3
+  code   (v1.2) Z (2**64)
+  is     $(((v1.2, 18446744073709551616),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, 18446744073709551616),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", 18446744073709551616),).Seq)
+
+- id     0773
+  from   inventory:infix:Z
+  cell   v1.2 | False
+  level  3
+  code   (v1.2) Z (False)
+  is     $(((v1.2, Bool::False),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, Bool::False),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", Bool::False),).Seq)
+
+- id     0774
+  from   inventory:infix:Z
+  cell   v1.2 | Nil
+  level  3
+  code   (v1.2) Z (Nil)
+  is     $(((v1.2, Nil),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, Nil),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", Nil),).Seq)
+
+- id     0775
+  from   inventory:infix:Z
+  cell   v1.2 | ()
+  level  3
+  code   (v1.2) Z (())
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(().Seq)
+
+- id     0776
+  from   inventory:infix:Z
+  cell   v1.2 | "0"
+  level  3
+  code   (v1.2) Z ("0")
+  is     $(((v1.2, "0"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, "0"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", "0"),).Seq)
+
+- id     0777
+  from   inventory:infix:Z
+  cell   v1.2 | (1..3)
+  level  3
+  code   (v1.2) Z ((1..3))
+  is     $(((v1.2, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", 1),).Seq)
+
+- id     0778
+  from   inventory:infix:Z
+  cell   v1.2 | Int
+  level  3
+  code   (v1.2) Z (Int)
+  is     $(((v1.2, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, Int),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", Int),).Seq)
+
+- id     0779
+  from   inventory:infix:Z
+  cell   v1.2 | "a b"
+  level  3
+  code   (v1.2) Z ("a b")
+  is     $(((v1.2, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, "a b"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", "a b"),).Seq)
+
+- id     0780
+  from   inventory:infix:Z
+  cell   v1.2 | [1,2]
+  level  3
+  code   (v1.2) Z ([1,2])
+  is     $(((v1.2, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", 1),).Seq)
+
+- id     0781
+  from   inventory:infix:Z
+  cell   v1.2 | (a => 1)
+  level  3
+  code   (v1.2) Z ((a => 1))
+  is     $(((v1.2, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", :a(1)),).Seq)
+
+- id     0782
+  from   inventory:infix:Z
+  cell   v1.2 | bag(1,1)
+  level  3
+  code   (v1.2) Z (bag(1,1))
+  is     $(((v1.2, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", (1=>2).Bag),).Seq)
+
+- id     0783
+  from   inventory:infix:Z
+  cell   v1.2 | (1..3).Seq
+  level  3
+  code   (v1.2) Z ((1..3).Seq)
+  is     $(((v1.2, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", 1),).Seq)
+
+- id     0784
+  from   inventory:infix:Z
+  cell   v1.2 | any(1,2)
+  level  3
+  code   (v1.2) Z (any(1,2))
+  is     $(((v1.2, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any((("1.2", 1),).Seq, (("1.2", 2),).Seq)
+
+- id     0785
+  from   inventory:infix:Z
+  cell   0 | 1+2i
+  level  3
+  code   (0) Z (1+2i)
+  is     $(((0, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((0, <1+2i>),).Seq)
+
+- id     0786
+  from   inventory:infix:Z
+  cell   1 | 1+2i
+  level  3
+  code   (1) Z (1+2i)
+  is     $(((1, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, <1+2i>),).Seq)
+
+- id     0787
+  from   inventory:infix:Z
+  cell   -1 | 1+2i
+  level  3
+  code   (-1) Z (1+2i)
+  is     $(((-1, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-1, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((-1, <1+2i>),).Seq)
+
+- id     0788
+  from   inventory:infix:Z
+  cell   1/2 | 1+2i
+  level  3
+  code   (1/2) Z (1+2i)
+  is     $(((0.5, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0.5, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((0.5, <1+2i>),).Seq)
+
+- id     0789
+  from   inventory:infix:Z
+  cell   0e0 | 1+2i
+  level  3
+  code   (0e0) Z (1+2i)
+  is     $(((0e0, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0e0, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((0e0, <1+2i>),).Seq)
+
+- id     0790
+  from   inventory:infix:Z
+  cell   NaN | 1+2i
+  level  3
+  code   (NaN) Z (1+2i)
+  is     $(((NaN, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((NaN, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((NaN, <1+2i>),).Seq)
+
+- id     0791
+  from   inventory:infix:Z
+  cell   "" | 1+2i
+  level  3
+  code   ("") Z (1+2i)
+  is     $((("", <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("", <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("", <1+2i>),).Seq)
+
+- id     0792
+  from   inventory:infix:Z
+  cell   "a" | 1+2i
+  level  3
+  code   ("a") Z (1+2i)
+  is     $((("a", <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a", <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("a", <1+2i>),).Seq)
+
+- id     0793
+  from   inventory:infix:Z
+  cell   True | 1+2i
+  level  3
+  code   (True) Z (1+2i)
+  is     $(((Bool::True, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::True, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Bool::True, <1+2i>),).Seq)
+
+- id     0794
+  from   inventory:infix:Z
+  cell   Any | 1+2i
+  level  3
+  code   (Any) Z (1+2i)
+  is     $(((Any, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Any, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Any, <1+2i>),).Seq)
+
+- id     0795
+  from   inventory:infix:Z
+  cell   (1,2) | 1+2i
+  level  3
+  code   ((1,2)) Z (1+2i)
+  is     $(((1, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, <1+2i>),).Seq)
+
+- id     0796
+  from   inventory:infix:Z
+  cell   {a=>1} | 1+2i
+  level  3
+  code   ({a=>1}) Z (1+2i)
+  is     $(((:a(1), <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((({:a(1)}, <1+2i>),).Seq)
+
+- id     0797
+  from   inventory:infix:Z
+  cell   -0e0 | 1+2i
+  level  3
+  code   (-0e0) Z (1+2i)
+  is     $(((-0e0, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-0e0, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((-0e0, <1+2i>),).Seq)
+
+- id     0798
+  from   inventory:infix:Z
+  cell   Inf | 1+2i
+  level  3
+  code   (Inf) Z (1+2i)
+  is     $(((Inf, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Inf, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Inf, <1+2i>),).Seq)
+
+- id     0799
+  from   inventory:infix:Z
+  cell   2**64 | 1+2i
+  level  3
+  code   (2**64) Z (1+2i)
+  is     $(((18446744073709551616, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((18446744073709551616, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((18446744073709551616, <1+2i>),).Seq)
+
+- id     0800
+  from   inventory:infix:Z
+  cell   False | 1+2i
+  level  3
+  code   (False) Z (1+2i)
+  is     $(((Bool::False, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::False, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Bool::False, <1+2i>),).Seq)
+
+- id     0801
+  from   inventory:infix:Z
+  cell   Nil | 1+2i
+  level  3
+  code   (Nil) Z (1+2i)
+  is     $(((Nil, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Nil, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Nil, <1+2i>),).Seq)
+
+- id     0802
+  from   inventory:infix:Z
+  cell   () | 1+2i
+  level  3
+  code   (()) Z (1+2i)
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(().Seq)
+
+- id     0803
+  from   inventory:infix:Z
+  cell   "0" | 1+2i
+  level  3
+  code   ("0") Z (1+2i)
+  is     $((("0", <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("0", <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("0", <1+2i>),).Seq)
+
+- id     0804
+  from   inventory:infix:Z
+  cell   (1..3) | 1+2i
+  level  3
+  code   ((1..3)) Z (1+2i)
+  is     $(((1, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, <1+2i>),).Seq)
+
+- id     0805
+  from   inventory:infix:Z
+  cell   Int | 1+2i
+  level  3
+  code   (Int) Z (1+2i)
+  is     $(((Int, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Int, <1+2i>),).Seq)
+
+- id     0806
+  from   inventory:infix:Z
+  cell   "a b" | 1+2i
+  level  3
+  code   ("a b") Z (1+2i)
+  is     $((("a b", <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("a b", <1+2i>),).Seq)
+
+- id     0807
+  from   inventory:infix:Z
+  cell   [1,2] | 1+2i
+  level  3
+  code   ([1,2]) Z (1+2i)
+  is     $(((1, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, <1+2i>),).Seq)
+
+- id     0808
+  from   inventory:infix:Z
+  cell   (a => 1) | 1+2i
+  level  3
+  code   ((a => 1)) Z (1+2i)
+  is     $(((:a(1), <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((:a(1), <1+2i>),).Seq)
+
+- id     0809
+  from   inventory:infix:Z
+  cell   bag(1,1) | 1+2i
+  level  3
+  code   (bag(1,1)) Z (1+2i)
+  is     $(((1 => 2, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, <1+2i>),).Seq)
+
+- id     0810
+  from   inventory:infix:Z
+  cell   (1..3).Seq | 1+2i
+  level  3
+  code   ((1..3).Seq) Z (1+2i)
+  is     $(((1, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, <1+2i>),).Seq)
+
+- id     0811
+  from   inventory:infix:Z
+  cell   any(1,2) | 1+2i
+  level  3
+  code   (any(1,2)) Z (1+2i)
+  is     $(((any(1, 2), <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, <1+2i>),).Seq, ((2, <1+2i>),).Seq)
+
+- id     0812
+  from   inventory:infix:Z
+  cell   v1.2 | 1+2i
+  level  3
+  code   (v1.2) Z (1+2i)
+  is     $(((v1.2, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", <1+2i>),).Seq)
+
+- id     0813
+  from   inventory:infix:Z
+  cell   1+2i | 1+2i
+  level  3
+  code   (1+2i) Z (1+2i)
+  is     $(((<1+2i>, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, <1+2i>),).Seq)
+
+- id     0814
+  from   inventory:infix:Z
+  cell   1+2i | 0
+  level  3
+  code   (1+2i) Z (0)
+  is     $(((<1+2i>, 0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, 0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, 0),).Seq)
+
+- id     0815
+  from   inventory:infix:Z
+  cell   1+2i | 1
+  level  3
+  code   (1+2i) Z (1)
+  is     $(((<1+2i>, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, 1),).Seq)
+
+- id     0816
+  from   inventory:infix:Z
+  cell   1+2i | -1
+  level  3
+  code   (1+2i) Z (-1)
+  is     $(((<1+2i>, -1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, -1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, -1),).Seq)
+
+- id     0817
+  from   inventory:infix:Z
+  cell   1+2i | 1/2
+  level  3
+  code   (1+2i) Z (1/2)
+  is     $(((<1+2i>, 0.5),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, 0.5),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, 0.5),).Seq)
+
+- id     0818
+  from   inventory:infix:Z
+  cell   1+2i | 0e0
+  level  3
+  code   (1+2i) Z (0e0)
+  is     $(((<1+2i>, 0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, 0e0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, 0e0),).Seq)
+
+- id     0819
+  from   inventory:infix:Z
+  cell   1+2i | NaN
+  level  3
+  code   (1+2i) Z (NaN)
+  is     $(((<1+2i>, NaN),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, NaN),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, NaN),).Seq)
+
+- id     0820
+  from   inventory:infix:Z
+  cell   1+2i | ""
+  level  3
+  code   (1+2i) Z ("")
+  is     $(((<1+2i>, ""),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, ""),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, ""),).Seq)
+
+- id     0821
+  from   inventory:infix:Z
+  cell   1+2i | "a"
+  level  3
+  code   (1+2i) Z ("a")
+  is     $(((<1+2i>, "a"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, "a"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, "a"),).Seq)
+
+- id     0822
+  from   inventory:infix:Z
+  cell   1+2i | True
+  level  3
+  code   (1+2i) Z (True)
+  is     $(((<1+2i>, Bool::True),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, Bool::True),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, Bool::True),).Seq)
+
+- id     0823
+  from   inventory:infix:Z
+  cell   1+2i | Any
+  level  3
+  code   (1+2i) Z (Any)
+  is     $(((<1+2i>, Any),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, Any),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, Any),).Seq)
+
+- id     0824
+  from   inventory:infix:Z
+  cell   1+2i | (1,2)
+  level  3
+  code   (1+2i) Z ((1,2))
+  is     $(((<1+2i>, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, 1),).Seq)
+
+- id     0825
+  from   inventory:infix:Z
+  cell   1+2i | {a=>1}
+  level  3
+  code   (1+2i) Z ({a=>1})
+  is     $(((<1+2i>, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, {:a(1)}),).Seq)
+
+- id     0826
+  from   inventory:infix:Z
+  cell   1+2i | -0e0
+  level  3
+  code   (1+2i) Z (-0e0)
+  is     $(((<1+2i>, -0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, -0e0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, -0e0),).Seq)
+
+- id     0827
+  from   inventory:infix:Z
+  cell   1+2i | Inf
+  level  3
+  code   (1+2i) Z (Inf)
+  is     $(((<1+2i>, Inf),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, Inf),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, Inf),).Seq)
+
+- id     0828
+  from   inventory:infix:Z
+  cell   1+2i | 2**64
+  level  3
+  code   (1+2i) Z (2**64)
+  is     $(((<1+2i>, 18446744073709551616),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, 18446744073709551616),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, 18446744073709551616),).Seq)
+
+- id     0829
+  from   inventory:infix:Z
+  cell   1+2i | False
+  level  3
+  code   (1+2i) Z (False)
+  is     $(((<1+2i>, Bool::False),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, Bool::False),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, Bool::False),).Seq)
+
+- id     0830
+  from   inventory:infix:Z
+  cell   1+2i | Nil
+  level  3
+  code   (1+2i) Z (Nil)
+  is     $(((<1+2i>, Nil),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, Nil),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, Nil),).Seq)
+
+- id     0831
+  from   inventory:infix:Z
+  cell   1+2i | ()
+  level  3
+  code   (1+2i) Z (())
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(().Seq)
+
+- id     0832
+  from   inventory:infix:Z
+  cell   1+2i | "0"
+  level  3
+  code   (1+2i) Z ("0")
+  is     $(((<1+2i>, "0"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, "0"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, "0"),).Seq)
+
+- id     0833
+  from   inventory:infix:Z
+  cell   1+2i | (1..3)
+  level  3
+  code   (1+2i) Z ((1..3))
+  is     $(((<1+2i>, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, 1),).Seq)
+
+- id     0834
+  from   inventory:infix:Z
+  cell   1+2i | Int
+  level  3
+  code   (1+2i) Z (Int)
+  is     $(((<1+2i>, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, Int),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, Int),).Seq)
+
+- id     0835
+  from   inventory:infix:Z
+  cell   1+2i | "a b"
+  level  3
+  code   (1+2i) Z ("a b")
+  is     $(((<1+2i>, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, "a b"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, "a b"),).Seq)
+
+- id     0836
+  from   inventory:infix:Z
+  cell   1+2i | [1,2]
+  level  3
+  code   (1+2i) Z ([1,2])
+  is     $(((<1+2i>, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, 1),).Seq)
+
+- id     0837
+  from   inventory:infix:Z
+  cell   1+2i | (a => 1)
+  level  3
+  code   (1+2i) Z ((a => 1))
+  is     $(((<1+2i>, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, :a(1)),).Seq)
+
+- id     0838
+  from   inventory:infix:Z
+  cell   1+2i | bag(1,1)
+  level  3
+  code   (1+2i) Z (bag(1,1))
+  is     $(((<1+2i>, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, (1=>2).Bag),).Seq)
+
+- id     0839
+  from   inventory:infix:Z
+  cell   1+2i | (1..3).Seq
+  level  3
+  code   (1+2i) Z ((1..3).Seq)
+  is     $(((<1+2i>, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, 1),).Seq)
+
+- id     0840
+  from   inventory:infix:Z
+  cell   1+2i | any(1,2)
+  level  3
+  code   (1+2i) Z (any(1,2))
+  is     $(((<1+2i>, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((<1+2i>, 1),).Seq, ((<1+2i>, 2),).Seq)
+
+- id     0841
+  from   inventory:infix:Z
+  cell   1+2i | v1.2
+  level  3
+  code   (1+2i) Z (v1.2)
+  is     $(((<1+2i>, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, "1.2"),).Seq)
+
+- id     0842
+  from   inventory:infix:Z
+  cell   0 | Str
+  level  3
+  code   (0) Z (Str)
+  is     $(((0, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((0, Str),).Seq)
+
+- id     0843
+  from   inventory:infix:Z
+  cell   1 | Str
+  level  3
+  code   (1) Z (Str)
+  is     $(((1, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, Str),).Seq)
+
+- id     0844
+  from   inventory:infix:Z
+  cell   -1 | Str
+  level  3
+  code   (-1) Z (Str)
+  is     $(((-1, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-1, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((-1, Str),).Seq)
+
+- id     0845
+  from   inventory:infix:Z
+  cell   1/2 | Str
+  level  3
+  code   (1/2) Z (Str)
+  is     $(((0.5, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0.5, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((0.5, Str),).Seq)
+
+- id     0846
+  from   inventory:infix:Z
+  cell   0e0 | Str
+  level  3
+  code   (0e0) Z (Str)
+  is     $(((0e0, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((0e0, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((0e0, Str),).Seq)
+
+- id     0847
+  from   inventory:infix:Z
+  cell   NaN | Str
+  level  3
+  code   (NaN) Z (Str)
+  is     $(((NaN, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((NaN, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((NaN, Str),).Seq)
+
+- id     0848
+  from   inventory:infix:Z
+  cell   "" | Str
+  level  3
+  code   ("") Z (Str)
+  is     $((("", Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("", Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("", Str),).Seq)
+
+- id     0849
+  from   inventory:infix:Z
+  cell   "a" | Str
+  level  3
+  code   ("a") Z (Str)
+  is     $((("a", Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a", Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("a", Str),).Seq)
+
+- id     0850
+  from   inventory:infix:Z
+  cell   True | Str
+  level  3
+  code   (True) Z (Str)
+  is     $(((Bool::True, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::True, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Bool::True, Str),).Seq)
+
+- id     0851
+  from   inventory:infix:Z
+  cell   Any | Str
+  level  3
+  code   (Any) Z (Str)
+  is     $(((Any, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Any, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Any, Str),).Seq)
+
+- id     0852
+  from   inventory:infix:Z
+  cell   (1,2) | Str
+  level  3
+  code   ((1,2)) Z (Str)
+  is     $(((1, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, Str),).Seq)
+
+- id     0853
+  from   inventory:infix:Z
+  cell   {a=>1} | Str
+  level  3
+  code   ({a=>1}) Z (Str)
+  is     $(((:a(1), Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((({:a(1)}, Str),).Seq)
+
+- id     0854
+  from   inventory:infix:Z
+  cell   -0e0 | Str
+  level  3
+  code   (-0e0) Z (Str)
+  is     $(((-0e0, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((-0e0, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((-0e0, Str),).Seq)
+
+- id     0855
+  from   inventory:infix:Z
+  cell   Inf | Str
+  level  3
+  code   (Inf) Z (Str)
+  is     $(((Inf, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Inf, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Inf, Str),).Seq)
+
+- id     0856
+  from   inventory:infix:Z
+  cell   2**64 | Str
+  level  3
+  code   (2**64) Z (Str)
+  is     $(((18446744073709551616, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((18446744073709551616, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((18446744073709551616, Str),).Seq)
+
+- id     0857
+  from   inventory:infix:Z
+  cell   False | Str
+  level  3
+  code   (False) Z (Str)
+  is     $(((Bool::False, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Bool::False, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Bool::False, Str),).Seq)
+
+- id     0858
+  from   inventory:infix:Z
+  cell   Nil | Str
+  level  3
+  code   (Nil) Z (Str)
+  is     $(((Nil, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Nil, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Nil, Str),).Seq)
+
+- id     0859
+  from   inventory:infix:Z
+  cell   () | Str
+  level  3
+  code   (()) Z (Str)
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(().Seq)
+
+- id     0860
+  from   inventory:infix:Z
+  cell   "0" | Str
+  level  3
+  code   ("0") Z (Str)
+  is     $((("0", Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("0", Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("0", Str),).Seq)
+
+- id     0861
+  from   inventory:infix:Z
+  cell   (1..3) | Str
+  level  3
+  code   ((1..3)) Z (Str)
+  is     $(((1, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, Str),).Seq)
+
+- id     0862
+  from   inventory:infix:Z
+  cell   Int | Str
+  level  3
+  code   (Int) Z (Str)
+  is     $(((Int, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Int, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Int, Str),).Seq)
+
+- id     0863
+  from   inventory:infix:Z
+  cell   "a b" | Str
+  level  3
+  code   ("a b") Z (Str)
+  is     $((("a b", Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((("a b", Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("a b", Str),).Seq)
+
+- id     0864
+  from   inventory:infix:Z
+  cell   [1,2] | Str
+  level  3
+  code   ([1,2]) Z (Str)
+  is     $(((1, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, Str),).Seq)
+
+- id     0865
+  from   inventory:infix:Z
+  cell   (a => 1) | Str
+  level  3
+  code   ((a => 1)) Z (Str)
+  is     $(((:a(1), Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((:a(1), Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((:a(1), Str),).Seq)
+
+- id     0866
+  from   inventory:infix:Z
+  cell   bag(1,1) | Str
+  level  3
+  code   (bag(1,1)) Z (Str)
+  is     $(((1 => 2, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1 => 2, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((((1=>2).Bag, Str),).Seq)
+
+- id     0867
+  from   inventory:infix:Z
+  cell   (1..3).Seq | Str
+  level  3
+  code   ((1..3).Seq) Z (Str)
+  is     $(((1, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((1, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((1, Str),).Seq)
+
+- id     0868
+  from   inventory:infix:Z
+  cell   any(1,2) | Str
+  level  3
+  code   (any(1,2)) Z (Str)
+  is     $(((any(1, 2), Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((any(1, 2), Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((1, Str),).Seq, ((2, Str),).Seq)
+
+- id     0869
+  from   inventory:infix:Z
+  cell   v1.2 | Str
+  level  3
+  code   (v1.2) Z (Str)
+  is     $(((v1.2, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((v1.2, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $((("1.2", Str),).Seq)
+
+- id     0870
+  from   inventory:infix:Z
+  cell   1+2i | Str
+  level  3
+  code   (1+2i) Z (Str)
+  is     $(((<1+2i>, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((<1+2i>, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((<1+2i>, Str),).Seq)
+
+- id     0871
+  from   inventory:infix:Z
+  cell   Str | Str
+  level  3
+  code   (Str) Z (Str)
+  is     $(((Str, Str),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, Str),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, Str),).Seq)
+
+- id     0872
+  from   inventory:infix:Z
+  cell   Str | 0
+  level  3
+  code   (Str) Z (0)
+  is     $(((Str, 0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, 0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, 0),).Seq)
+
+- id     0873
+  from   inventory:infix:Z
+  cell   Str | 1
+  level  3
+  code   (Str) Z (1)
+  is     $(((Str, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, 1),).Seq)
+
+- id     0874
+  from   inventory:infix:Z
+  cell   Str | -1
+  level  3
+  code   (Str) Z (-1)
+  is     $(((Str, -1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, -1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, -1),).Seq)
+
+- id     0875
+  from   inventory:infix:Z
+  cell   Str | 1/2
+  level  3
+  code   (Str) Z (1/2)
+  is     $(((Str, 0.5),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, 0.5),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, 0.5),).Seq)
+
+- id     0876
+  from   inventory:infix:Z
+  cell   Str | 0e0
+  level  3
+  code   (Str) Z (0e0)
+  is     $(((Str, 0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, 0e0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, 0e0),).Seq)
+
+- id     0877
+  from   inventory:infix:Z
+  cell   Str | NaN
+  level  3
+  code   (Str) Z (NaN)
+  is     $(((Str, NaN),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, NaN),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, NaN),).Seq)
+
+- id     0878
+  from   inventory:infix:Z
+  cell   Str | ""
+  level  3
+  code   (Str) Z ("")
+  is     $(((Str, ""),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, ""),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, ""),).Seq)
+
+- id     0879
+  from   inventory:infix:Z
+  cell   Str | "a"
+  level  3
+  code   (Str) Z ("a")
+  is     $(((Str, "a"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, "a"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, "a"),).Seq)
+
+- id     0880
+  from   inventory:infix:Z
+  cell   Str | True
+  level  3
+  code   (Str) Z (True)
+  is     $(((Str, Bool::True),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, Bool::True),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, Bool::True),).Seq)
+
+- id     0881
+  from   inventory:infix:Z
+  cell   Str | Any
+  level  3
+  code   (Str) Z (Any)
+  is     $(((Str, Any),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, Any),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, Any),).Seq)
+
+- id     0882
+  from   inventory:infix:Z
+  cell   Str | (1,2)
+  level  3
+  code   (Str) Z ((1,2))
+  is     $(((Str, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, 1),).Seq)
+
+- id     0883
+  from   inventory:infix:Z
+  cell   Str | {a=>1}
+  level  3
+  code   (Str) Z ({a=>1})
+  is     $(((Str, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, {:a(1)}),).Seq)
+
+- id     0884
+  from   inventory:infix:Z
+  cell   Str | -0e0
+  level  3
+  code   (Str) Z (-0e0)
+  is     $(((Str, -0e0),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, -0e0),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, -0e0),).Seq)
+
+- id     0885
+  from   inventory:infix:Z
+  cell   Str | Inf
+  level  3
+  code   (Str) Z (Inf)
+  is     $(((Str, Inf),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, Inf),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, Inf),).Seq)
+
+- id     0886
+  from   inventory:infix:Z
+  cell   Str | 2**64
+  level  3
+  code   (Str) Z (2**64)
+  is     $(((Str, 18446744073709551616),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, 18446744073709551616),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, 18446744073709551616),).Seq)
+
+- id     0887
+  from   inventory:infix:Z
+  cell   Str | False
+  level  3
+  code   (Str) Z (False)
+  is     $(((Str, Bool::False),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, Bool::False),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, Bool::False),).Seq)
+
+- id     0888
+  from   inventory:infix:Z
+  cell   Str | Nil
+  level  3
+  code   (Str) Z (Nil)
+  is     $(((Str, Nil),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, Nil),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, Nil),).Seq)
+
+- id     0889
+  from   inventory:infix:Z
+  cell   Str | ()
+  level  3
+  code   (Str) Z (())
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(().Seq)
+
+- id     0890
+  from   inventory:infix:Z
+  cell   Str | "0"
+  level  3
+  code   (Str) Z ("0")
+  is     $(((Str, "0"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, "0"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, "0"),).Seq)
+
+- id     0891
+  from   inventory:infix:Z
+  cell   Str | (1..3)
+  level  3
+  code   (Str) Z ((1..3))
+  is     $(((Str, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, 1),).Seq)
+
+- id     0892
+  from   inventory:infix:Z
+  cell   Str | Int
+  level  3
+  code   (Str) Z (Int)
+  is     $(((Str, Int),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, Int),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, Int),).Seq)
+
+- id     0893
+  from   inventory:infix:Z
+  cell   Str | "a b"
+  level  3
+  code   (Str) Z ("a b")
+  is     $(((Str, "a b"),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, "a b"),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, "a b"),).Seq)
+
+- id     0894
+  from   inventory:infix:Z
+  cell   Str | [1,2]
+  level  3
+  code   (Str) Z ([1,2])
+  is     $(((Str, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, 1),).Seq)
+
+- id     0895
+  from   inventory:infix:Z
+  cell   Str | (a => 1)
+  level  3
+  code   (Str) Z ((a => 1))
+  is     $(((Str, :a(1)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, :a(1)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, :a(1)),).Seq)
+
+- id     0896
+  from   inventory:infix:Z
+  cell   Str | bag(1,1)
+  level  3
+  code   (Str) Z (bag(1,1))
+  is     $(((Str, 1 => 2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, 1 => 2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, (1=>2).Bag),).Seq)
+
+- id     0897
+  from   inventory:infix:Z
+  cell   Str | (1..3).Seq
+  level  3
+  code   (Str) Z ((1..3).Seq)
+  is     $(((Str, 1),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, 1),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, 1),).Seq)
+
+- id     0898
+  from   inventory:infix:Z
+  cell   Str | any(1,2)
+  level  3
+  code   (Str) Z (any(1,2))
+  is     $(((Str, any(1, 2)),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, any(1, 2)),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(((Str, 1),).Seq, ((Str, 2),).Seq)
+
+- id     0899
+  from   inventory:infix:Z
+  cell   Str | v1.2
+  level  3
+  code   (Str) Z (v1.2)
+  is     $(((Str, v1.2),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, v1.2),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, "1.2"),).Seq)
+
+- id     0900
+  from   inventory:infix:Z
+  cell   Str | 1+2i
+  level  3
+  code   (Str) Z (1+2i)
+  is     $(((Str, <1+2i>),).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(((Str, <1+2i>),).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → $(((Str, <1+2i>),).Seq)

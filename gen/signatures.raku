@@ -35,10 +35,10 @@ sub sh-quote($s) {
 }
 
 sub run-sh($line, $secs) {
-    my $base = $TMP.add('op-' ~ $*PID ~ '-' ~ $GUARD++).absolute;
+    my $base = $TMP.add('sig-' ~ $*PID ~ '-' ~ $GUARD++).absolute;
     my $script = "exec >/dev/null 2>&1; set -m 2>/dev/null || true; "
                ~ "$line > { sh-quote($base ~ '.out') } 2> { sh-quote($base ~ '.err') } & p=\$!; "
-               ~ "( sleep $secs; kill -9 \$p 2>/dev/null ) & w=\$!; "
+               ~ "( sleep $secs; kill -9 -\$p 2>/dev/null || kill -9 \$p 2>/dev/null ) & w=\$!; "
                ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; exit 0";
     my $p = run('/bin/sh', '-c', $script);
     my $rc = $p.exitcode;
@@ -48,8 +48,13 @@ sub run-sh($line, $secs) {
     return { out => $out, exit => $rc };
 }
 
-sub run-parallel($cmd, @exprs, $jobs, $batch = 200, $secs = 120) {
-    my $probe = $TMP.add('op-probe.raku');
+# $partial, when given, is the cache file for the engine being probed, and
+# every batch is appended to it as soon as it lands. A pass used to keep all
+# of its results in memory until the end, so one hang discarded hours of
+# probing — 36,000 cells, once. A truncated final line is skipped by
+# cache-load, so a kill mid-write costs at most the batch in flight.
+sub run-parallel($cmd, @exprs, $jobs, $batch = 200, $secs = 120, $partial = Str) {
+    my $probe = $TMP.add('sig-probe.raku');
     $probe.spurt($VALUE-PROBE);
 
     my %seen;
@@ -64,9 +69,9 @@ sub run-parallel($cmd, @exprs, $jobs, $batch = 200, $secs = 120) {
             my $from = $offset + $j * $batch;
             last if $from >= $total;
             my $to = min($from + $batch, $total) - 1;
-            my $list = $TMP.add("op-list-$j.txt");
+            my $list = $TMP.add("sig-list-$j.txt");
             $list.spurt(@exprs[$from .. $to].join("\n") ~ "\n");
-            my $out = $TMP.add("op-out-$j.txt").absolute;
+            my $out = $TMP.add("sig-out-$j.txt").absolute;
             $out.IO.unlink if $out.IO.e;
             @parts.push: $out;
             @cmds.push: "{ sh-quote($cmd) } { sh-quote($probe.absolute) } { sh-quote($list.absolute) } > { sh-quote($out) } 2>/dev/null &";
@@ -76,18 +81,23 @@ sub run-parallel($cmd, @exprs, $jobs, $batch = 200, $secs = 120) {
         my $script = "exec >/dev/null 2>&1; set -m 2>/dev/null || true; " ~ @cmds.join(' ') ~ " wait";
         my $proc = run('/bin/sh', '-c',
             "( $script ) & p=\$!; "
-          ~ "( sleep $secs; kill -9 \$p 2>/dev/null ) & w=\$!; "
+          ~ "( sleep $secs; kill -9 -\$p 2>/dev/null || kill -9 \$p 2>/dev/null ) & w=\$!; "
           ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; wait \$w 2>/dev/null; exit 0");
         my $ignored = $proc.exitcode;
 
+        my @fresh-rows;
         for @parts -> $f {
             next unless $f.IO.e;
             for $f.IO.slurp.lines -> $l {
                 my @c = $l.split("\t");
                 next unless @c >= 3;
                 %seen{@c[0]} = { value => @c[1], type => @c[2] };
+                @fresh-rows.push: join("\t", @c[0], @c[1], @c[2]);
             }
             $f.IO.unlink;
+        }
+        if $partial && @fresh-rows {
+            $partial.IO.spurt(@fresh-rows.join("\n") ~ "\n", :append);
         }
         $offset += $now * $batch;
         note "#     { min($offset, $total) } / $total" if min($offset, $total) %% 2000;
@@ -100,8 +110,8 @@ sub run-parallel($cmd, @exprs, $jobs, $batch = 200, $secs = 120) {
 # as long as its list could honestly need.
 sub recover($cmd, @missing, $depth = 0) {
     return {} unless @missing;
-    my $list  = $TMP.add("op-rec-$depth.txt");
-    my $probe = $TMP.add('op-probe.raku');
+    my $list  = $TMP.add("sig-rec-$depth.txt");
+    my $probe = $TMP.add('sig-probe.raku');
     $list.spurt(@missing.join("\n") ~ "\n");
     $probe.spurt($VALUE-PROBE);
 
@@ -130,7 +140,7 @@ sub recover($cmd, @missing, $depth = 0) {
 }
 
 sub cache-load($id) {
-    my $f = $TMP.add("op-cache-$id.tsv");
+    my $f = $TMP.add("sig-cache-$id.tsv");
     return {} unless $f.e;
     my %c;
     for $f.slurp.lines -> $l {
@@ -146,7 +156,7 @@ sub cache-save($id, %seen) {
     for %seen.keys.sort -> $k {
         @lines.push: join("\t", $k, %seen{$k}<value>, %seen{$k}<type>);
     }
-    $TMP.add("op-cache-$id.tsv").spurt(@lines.join("\n") ~ "\n");
+    $TMP.add("sig-cache-$id.tsv").spurt(@lines.join("\n") ~ "\n");
 }
 
 
@@ -468,7 +478,7 @@ for ^@engines -> $e {
         next;
     }
     say "# probing { @ids[$e] }: { @todo.elems } new of { @all.elems } …";
-    my %fresh = run-parallel(@engines[$e], @todo, $JOBS);
+    my %fresh = run-parallel(@engines[$e], @todo, $JOBS, 200, 120, $TMP.add("sig-cache-{@ids[$e]}.tsv").absolute);
     for %fresh.keys -> $k { %fresh{$k}<label> = @ids[$e]; %seen{$k} = %fresh{$k} }
 
     my @missing = @todo.grep({ !%seen{$_} });
@@ -487,7 +497,7 @@ my %again = cache-load(@ids[0] ~ '-again');
 my @re = @all.grep({ !%again{$_} });
 if @re {
     say "# re-probing { @ids[0] }: { @re.elems } cells …";
-    my %fresh = run-parallel(@engines[0], @re, $JOBS);
+    my %fresh = run-parallel(@engines[0], @re, $JOBS, 200, 120, $TMP.add("sig-cache-{@ids[0]}-again.tsv").absolute);
     for %fresh.keys -> $k { %again{$k} = %fresh{$k} }
     cache-save(@ids[0] ~ '-again', %again);
 }

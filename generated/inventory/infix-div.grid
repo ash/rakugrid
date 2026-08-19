@@ -3,8 +3,8 @@ source   generated
 gen      gen/operators.raku
 from-inventory infix div
 ladder   mixed
-axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
-cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1) | bag(1,1) | (1..3).Seq | any(1,2) | v1.2 | 1+2i | Str
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1) | bag(1,1) | (1..3).Seq | any(1,2) | v1.2 | 1+2i | Str
 
 - id     0001
   from   inventory:infix:div
@@ -5333,3 +5333,3021 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
   oracle rakupp-v3.14.0-104-g2295fb0-modified → 0
+
+- id     0577
+  from   inventory:infix:div
+  cell   0 | bag(1,1)
+  level  3
+  code   (0) div (bag(1,1))
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0578
+  from   inventory:infix:div
+  cell   1 | bag(1,1)
+  level  3
+  code   (1) div (bag(1,1))
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0579
+  from   inventory:infix:div
+  cell   -1 | bag(1,1)
+  level  3
+  code   (-1) div (bag(1,1))
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0580
+  from   inventory:infix:div
+  cell   1/2 | bag(1,1)
+  level  3
+  code   (1/2) div (bag(1,1))
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0581
+  from   inventory:infix:div
+  cell   0e0 | bag(1,1)
+  level  3
+  code   (0e0) div (bag(1,1))
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0582
+  from   inventory:infix:div
+  cell   NaN | bag(1,1)
+  level  3
+  code   (NaN) div (bag(1,1))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::CannotConvert
+
+- id     0583
+  from   inventory:infix:div
+  cell   "" | bag(1,1)
+  level  3
+  code   ("") div (bag(1,1))
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0584
+  from   inventory:infix:div
+  cell   "a" | bag(1,1)
+  level  3
+  code   ("a") div (bag(1,1))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0585
+  from   inventory:infix:div
+  cell   True | bag(1,1)
+  level  3
+  code   (True) div (bag(1,1))
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0586
+  from   inventory:infix:div
+  cell   Any | bag(1,1)
+  level  3
+  code   (Any) div (bag(1,1))
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0587
+  from   inventory:infix:div
+  cell   (1,2) | bag(1,1)
+  level  3
+  code   ((1,2)) div (bag(1,1))
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0588
+  from   inventory:infix:div
+  cell   {a=>1} | bag(1,1)
+  level  3
+  code   ({a=>1}) div (bag(1,1))
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0589
+  from   inventory:infix:div
+  cell   -0e0 | bag(1,1)
+  level  3
+  code   (-0e0) div (bag(1,1))
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0590
+  from   inventory:infix:div
+  cell   Inf | bag(1,1)
+  level  3
+  code   (Inf) div (bag(1,1))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::CannotConvert
+
+- id     0591
+  from   inventory:infix:div
+  cell   2**64 | bag(1,1)
+  level  3
+  code   (2**64) div (bag(1,1))
+  is     9223372036854775808
+  type   Int
+  oracle rakudo-2026.07 → 9223372036854775808
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 4611686018427387903
+
+- id     0592
+  from   inventory:infix:div
+  cell   False | bag(1,1)
+  level  3
+  code   (False) div (bag(1,1))
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0593
+  from   inventory:infix:div
+  cell   Nil | bag(1,1)
+  level  3
+  code   (Nil) div (bag(1,1))
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0594
+  from   inventory:infix:div
+  cell   () | bag(1,1)
+  level  3
+  code   (()) div (bag(1,1))
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0595
+  from   inventory:infix:div
+  cell   "0" | bag(1,1)
+  level  3
+  code   ("0") div (bag(1,1))
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0596
+  from   inventory:infix:div
+  cell   (1..3) | bag(1,1)
+  level  3
+  code   ((1..3)) div (bag(1,1))
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0597
+  from   inventory:infix:div
+  cell   Int | bag(1,1)
+  level  3
+  code   (Int) div (bag(1,1))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0598
+  from   inventory:infix:div
+  cell   "a b" | bag(1,1)
+  level  3
+  code   ("a b") div (bag(1,1))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0599
+  from   inventory:infix:div
+  cell   [1,2] | bag(1,1)
+  level  3
+  code   ([1,2]) div (bag(1,1))
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0600
+  from   inventory:infix:div
+  cell   (a => 1) | bag(1,1)
+  level  3
+  code   ((a => 1)) div (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0601
+  from   inventory:infix:div
+  cell   bag(1,1) | bag(1,1)
+  level  3
+  code   (bag(1,1)) div (bag(1,1))
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0602
+  from   inventory:infix:div
+  cell   bag(1,1) | 0
+  level  3
+  code   (bag(1,1)) div (0)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0603
+  from   inventory:infix:div
+  cell   bag(1,1) | 1
+  level  3
+  code   (bag(1,1)) div (1)
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 2
+
+- id     0604
+  from   inventory:infix:div
+  cell   bag(1,1) | -1
+  level  3
+  code   (bag(1,1)) div (-1)
+  is     -2
+  type   Int
+  oracle rakudo-2026.07 → -2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → -2
+
+- id     0605
+  from   inventory:infix:div
+  cell   bag(1,1) | 1/2
+  level  3
+  code   (bag(1,1)) div (1/2)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0606
+  from   inventory:infix:div
+  cell   bag(1,1) | 0e0
+  level  3
+  code   (bag(1,1)) div (0e0)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0607
+  from   inventory:infix:div
+  cell   bag(1,1) | NaN
+  level  3
+  code   (bag(1,1)) div (NaN)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0608
+  from   inventory:infix:div
+  cell   bag(1,1) | ""
+  level  3
+  code   (bag(1,1)) div ("")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0609
+  from   inventory:infix:div
+  cell   bag(1,1) | "a"
+  level  3
+  code   (bag(1,1)) div ("a")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0610
+  from   inventory:infix:div
+  cell   bag(1,1) | True
+  level  3
+  code   (bag(1,1)) div (True)
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 2
+
+- id     0611
+  from   inventory:infix:div
+  cell   bag(1,1) | Any
+  level  3
+  code   (bag(1,1)) div (Any)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0612
+  from   inventory:infix:div
+  cell   bag(1,1) | (1,2)
+  level  3
+  code   (bag(1,1)) div ((1,2))
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0613
+  from   inventory:infix:div
+  cell   bag(1,1) | {a=>1}
+  level  3
+  code   (bag(1,1)) div ({a=>1})
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 2
+
+- id     0614
+  from   inventory:infix:div
+  cell   bag(1,1) | -0e0
+  level  3
+  code   (bag(1,1)) div (-0e0)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0615
+  from   inventory:infix:div
+  cell   bag(1,1) | Inf
+  level  3
+  code   (bag(1,1)) div (Inf)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0616
+  from   inventory:infix:div
+  cell   bag(1,1) | 2**64
+  level  3
+  code   (bag(1,1)) div (2**64)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0617
+  from   inventory:infix:div
+  cell   bag(1,1) | False
+  level  3
+  code   (bag(1,1)) div (False)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0618
+  from   inventory:infix:div
+  cell   bag(1,1) | Nil
+  level  3
+  code   (bag(1,1)) div (Nil)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0619
+  from   inventory:infix:div
+  cell   bag(1,1) | ()
+  level  3
+  code   (bag(1,1)) div (())
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0620
+  from   inventory:infix:div
+  cell   bag(1,1) | "0"
+  level  3
+  code   (bag(1,1)) div ("0")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0621
+  from   inventory:infix:div
+  cell   bag(1,1) | (1..3)
+  level  3
+  code   (bag(1,1)) div ((1..3))
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0622
+  from   inventory:infix:div
+  cell   bag(1,1) | Int
+  level  3
+  code   (bag(1,1)) div (Int)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0623
+  from   inventory:infix:div
+  cell   bag(1,1) | "a b"
+  level  3
+  code   (bag(1,1)) div ("a b")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0624
+  from   inventory:infix:div
+  cell   bag(1,1) | [1,2]
+  level  3
+  code   (bag(1,1)) div ([1,2])
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0625
+  from   inventory:infix:div
+  cell   bag(1,1) | (a => 1)
+  level  3
+  code   (bag(1,1)) div ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0626
+  from   inventory:infix:div
+  cell   0 | (1..3).Seq
+  level  3
+  code   (0) div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0627
+  from   inventory:infix:div
+  cell   1 | (1..3).Seq
+  level  3
+  code   (1) div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0628
+  from   inventory:infix:div
+  cell   -1 | (1..3).Seq
+  level  3
+  code   (-1) div ((1..3).Seq)
+  is     -1
+  type   Int
+  oracle rakudo-2026.07 → -1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → -1
+
+- id     0629
+  from   inventory:infix:div
+  cell   1/2 | (1..3).Seq
+  level  3
+  code   (1/2) div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0630
+  from   inventory:infix:div
+  cell   0e0 | (1..3).Seq
+  level  3
+  code   (0e0) div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0631
+  from   inventory:infix:div
+  cell   NaN | (1..3).Seq
+  level  3
+  code   (NaN) div ((1..3).Seq)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::CannotConvert
+
+- id     0632
+  from   inventory:infix:div
+  cell   "" | (1..3).Seq
+  level  3
+  code   ("") div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0633
+  from   inventory:infix:div
+  cell   "a" | (1..3).Seq
+  level  3
+  code   ("a") div ((1..3).Seq)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0634
+  from   inventory:infix:div
+  cell   True | (1..3).Seq
+  level  3
+  code   (True) div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0635
+  from   inventory:infix:div
+  cell   Any | (1..3).Seq
+  level  3
+  code   (Any) div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0636
+  from   inventory:infix:div
+  cell   (1,2) | (1..3).Seq
+  level  3
+  code   ((1,2)) div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0637
+  from   inventory:infix:div
+  cell   {a=>1} | (1..3).Seq
+  level  3
+  code   ({a=>1}) div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0638
+  from   inventory:infix:div
+  cell   -0e0 | (1..3).Seq
+  level  3
+  code   (-0e0) div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0639
+  from   inventory:infix:div
+  cell   Inf | (1..3).Seq
+  level  3
+  code   (Inf) div ((1..3).Seq)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::CannotConvert
+
+- id     0640
+  from   inventory:infix:div
+  cell   2**64 | (1..3).Seq
+  level  3
+  code   (2**64) div ((1..3).Seq)
+  is     6148914691236517205
+  type   Int
+  oracle rakudo-2026.07 → 6148914691236517205
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 6148914691236517205
+
+- id     0641
+  from   inventory:infix:div
+  cell   False | (1..3).Seq
+  level  3
+  code   (False) div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0642
+  from   inventory:infix:div
+  cell   Nil | (1..3).Seq
+  level  3
+  code   (Nil) div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0643
+  from   inventory:infix:div
+  cell   () | (1..3).Seq
+  level  3
+  code   (()) div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0644
+  from   inventory:infix:div
+  cell   "0" | (1..3).Seq
+  level  3
+  code   ("0") div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0645
+  from   inventory:infix:div
+  cell   (1..3) | (1..3).Seq
+  level  3
+  code   ((1..3)) div ((1..3).Seq)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0646
+  from   inventory:infix:div
+  cell   Int | (1..3).Seq
+  level  3
+  code   (Int) div ((1..3).Seq)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0647
+  from   inventory:infix:div
+  cell   "a b" | (1..3).Seq
+  level  3
+  code   ("a b") div ((1..3).Seq)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0648
+  from   inventory:infix:div
+  cell   [1,2] | (1..3).Seq
+  level  3
+  code   ([1,2]) div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0649
+  from   inventory:infix:div
+  cell   (a => 1) | (1..3).Seq
+  level  3
+  code   ((a => 1)) div ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0650
+  from   inventory:infix:div
+  cell   bag(1,1) | (1..3).Seq
+  level  3
+  code   (bag(1,1)) div ((1..3).Seq)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0651
+  from   inventory:infix:div
+  cell   (1..3).Seq | (1..3).Seq
+  level  3
+  code   ((1..3).Seq) div ((1..3).Seq)
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0652
+  from   inventory:infix:div
+  cell   (1..3).Seq | 0
+  level  3
+  code   ((1..3).Seq) div (0)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0653
+  from   inventory:infix:div
+  cell   (1..3).Seq | 1
+  level  3
+  code   ((1..3).Seq) div (1)
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 3
+
+- id     0654
+  from   inventory:infix:div
+  cell   (1..3).Seq | -1
+  level  3
+  code   ((1..3).Seq) div (-1)
+  is     -3
+  type   Int
+  oracle rakudo-2026.07 → -3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → -3
+
+- id     0655
+  from   inventory:infix:div
+  cell   (1..3).Seq | 1/2
+  level  3
+  code   ((1..3).Seq) div (1/2)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0656
+  from   inventory:infix:div
+  cell   (1..3).Seq | 0e0
+  level  3
+  code   ((1..3).Seq) div (0e0)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0657
+  from   inventory:infix:div
+  cell   (1..3).Seq | NaN
+  level  3
+  code   ((1..3).Seq) div (NaN)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0658
+  from   inventory:infix:div
+  cell   (1..3).Seq | ""
+  level  3
+  code   ((1..3).Seq) div ("")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0659
+  from   inventory:infix:div
+  cell   (1..3).Seq | "a"
+  level  3
+  code   ((1..3).Seq) div ("a")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0660
+  from   inventory:infix:div
+  cell   (1..3).Seq | True
+  level  3
+  code   ((1..3).Seq) div (True)
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 3
+
+- id     0661
+  from   inventory:infix:div
+  cell   (1..3).Seq | Any
+  level  3
+  code   ((1..3).Seq) div (Any)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0662
+  from   inventory:infix:div
+  cell   (1..3).Seq | (1,2)
+  level  3
+  code   ((1..3).Seq) div ((1,2))
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0663
+  from   inventory:infix:div
+  cell   (1..3).Seq | {a=>1}
+  level  3
+  code   ((1..3).Seq) div ({a=>1})
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 3
+
+- id     0664
+  from   inventory:infix:div
+  cell   (1..3).Seq | -0e0
+  level  3
+  code   ((1..3).Seq) div (-0e0)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0665
+  from   inventory:infix:div
+  cell   (1..3).Seq | Inf
+  level  3
+  code   ((1..3).Seq) div (Inf)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0666
+  from   inventory:infix:div
+  cell   (1..3).Seq | 2**64
+  level  3
+  code   ((1..3).Seq) div (2**64)
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0667
+  from   inventory:infix:div
+  cell   (1..3).Seq | False
+  level  3
+  code   ((1..3).Seq) div (False)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0668
+  from   inventory:infix:div
+  cell   (1..3).Seq | Nil
+  level  3
+  code   ((1..3).Seq) div (Nil)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0669
+  from   inventory:infix:div
+  cell   (1..3).Seq | ()
+  level  3
+  code   ((1..3).Seq) div (())
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0670
+  from   inventory:infix:div
+  cell   (1..3).Seq | "0"
+  level  3
+  code   ((1..3).Seq) div ("0")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0671
+  from   inventory:infix:div
+  cell   (1..3).Seq | (1..3)
+  level  3
+  code   ((1..3).Seq) div ((1..3))
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0672
+  from   inventory:infix:div
+  cell   (1..3).Seq | Int
+  level  3
+  code   ((1..3).Seq) div (Int)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0673
+  from   inventory:infix:div
+  cell   (1..3).Seq | "a b"
+  level  3
+  code   ((1..3).Seq) div ("a b")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0674
+  from   inventory:infix:div
+  cell   (1..3).Seq | [1,2]
+  level  3
+  code   ((1..3).Seq) div ([1,2])
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0675
+  from   inventory:infix:div
+  cell   (1..3).Seq | (a => 1)
+  level  3
+  code   ((1..3).Seq) div ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0676
+  from   inventory:infix:div
+  cell   (1..3).Seq | bag(1,1)
+  level  3
+  code   ((1..3).Seq) div (bag(1,1))
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0677
+  from   inventory:infix:div
+  cell   0 | any(1,2)
+  level  3
+  code   (0) div (any(1,2))
+  is     any(0, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0678
+  from   inventory:infix:div
+  cell   1 | any(1,2)
+  level  3
+  code   (1) div (any(1,2))
+  is     any(1, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(1, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 0)
+
+- id     0679
+  from   inventory:infix:div
+  cell   -1 | any(1,2)
+  level  3
+  code   (-1) div (any(1,2))
+  is     any(-1, -1)
+  type   Junction
+  oracle rakudo-2026.07 → any(-1, -1)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(-1, -1)
+
+- id     0680
+  from   inventory:infix:div
+  cell   1/2 | any(1,2)
+  level  3
+  code   (1/2) div (any(1,2))
+  is     any(0, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0681
+  from   inventory:infix:div
+  cell   0e0 | any(1,2)
+  level  3
+  code   (0e0) div (any(1,2))
+  is     any(0, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0682
+  from   inventory:infix:div
+  cell   NaN | any(1,2)
+  level  3
+  code   (NaN) div (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::CannotConvert
+
+- id     0683
+  from   inventory:infix:div
+  cell   "" | any(1,2)
+  level  3
+  code   ("") div (any(1,2))
+  is     any(0, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0684
+  from   inventory:infix:div
+  cell   "a" | any(1,2)
+  level  3
+  code   ("a") div (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0685
+  from   inventory:infix:div
+  cell   True | any(1,2)
+  level  3
+  code   (True) div (any(1,2))
+  is     any(1, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(1, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 0)
+
+- id     0686
+  from   inventory:infix:div
+  cell   Any | any(1,2)
+  level  3
+  code   (Any) div (any(1,2))
+  is     any(0, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0687
+  from   inventory:infix:div
+  cell   (1,2) | any(1,2)
+  level  3
+  code   ((1,2)) div (any(1,2))
+  is     any(2, 1)
+  type   Junction
+  oracle rakudo-2026.07 → any(2, 1)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(2, 1)
+
+- id     0688
+  from   inventory:infix:div
+  cell   {a=>1} | any(1,2)
+  level  3
+  code   ({a=>1}) div (any(1,2))
+  is     any(1, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(1, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 0)
+
+- id     0689
+  from   inventory:infix:div
+  cell   -0e0 | any(1,2)
+  level  3
+  code   (-0e0) div (any(1,2))
+  is     any(0, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0690
+  from   inventory:infix:div
+  cell   Inf | any(1,2)
+  level  3
+  code   (Inf) div (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::CannotConvert
+
+- id     0691
+  from   inventory:infix:div
+  cell   2**64 | any(1,2)
+  level  3
+  code   (2**64) div (any(1,2))
+  is     any(18446744073709551616, 9223372036854775808)
+  type   Junction
+  oracle rakudo-2026.07 → any(18446744073709551616, 9223372036854775808)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(18446744073709551616, 9223372036854775808)
+
+- id     0692
+  from   inventory:infix:div
+  cell   False | any(1,2)
+  level  3
+  code   (False) div (any(1,2))
+  is     any(0, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0693
+  from   inventory:infix:div
+  cell   Nil | any(1,2)
+  level  3
+  code   (Nil) div (any(1,2))
+  is     any(0, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0694
+  from   inventory:infix:div
+  cell   () | any(1,2)
+  level  3
+  code   (()) div (any(1,2))
+  is     any(0, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0695
+  from   inventory:infix:div
+  cell   "0" | any(1,2)
+  level  3
+  code   ("0") div (any(1,2))
+  is     any(0, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0696
+  from   inventory:infix:div
+  cell   (1..3) | any(1,2)
+  level  3
+  code   ((1..3)) div (any(1,2))
+  is     any(3, 1)
+  type   Junction
+  oracle rakudo-2026.07 → any(3, 1)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0697
+  from   inventory:infix:div
+  cell   Int | any(1,2)
+  level  3
+  code   (Int) div (any(1,2))
+  throws X::TypeCheck::Return
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Return
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0698
+  from   inventory:infix:div
+  cell   "a b" | any(1,2)
+  level  3
+  code   ("a b") div (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0699
+  from   inventory:infix:div
+  cell   [1,2] | any(1,2)
+  level  3
+  code   ([1,2]) div (any(1,2))
+  is     any(2, 1)
+  type   Junction
+  oracle rakudo-2026.07 → any(2, 1)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(2, 1)
+
+- id     0700
+  from   inventory:infix:div
+  cell   (a => 1) | any(1,2)
+  level  3
+  code   ((a => 1)) div (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0701
+  from   inventory:infix:div
+  cell   bag(1,1) | any(1,2)
+  level  3
+  code   (bag(1,1)) div (any(1,2))
+  is     any(2, 1)
+  type   Junction
+  oracle rakudo-2026.07 → any(2, 1)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(2, 1)
+
+- id     0702
+  from   inventory:infix:div
+  cell   (1..3).Seq | any(1,2)
+  level  3
+  code   ((1..3).Seq) div (any(1,2))
+  is     any(3, 1)
+  type   Junction
+  oracle rakudo-2026.07 → any(3, 1)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(3, 1)
+
+- id     0703
+  from   inventory:infix:div
+  cell   any(1,2) | any(1,2)
+  level  3
+  code   (any(1,2)) div (any(1,2))
+  is     any(any(1, 0), any(2, 1))
+  type   Junction
+  oracle rakudo-2026.07 → any(any(1, 0), any(2, 1))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(any(1, 0), any(2, 1))
+
+- id     0704
+  from   inventory:infix:div
+  cell   any(1,2) | 0
+  level  3
+  code   (any(1,2)) div (0)
+  is     any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  type   Junction
+  oracle rakudo-2026.07 → any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0705
+  from   inventory:infix:div
+  cell   any(1,2) | 1
+  level  3
+  code   (any(1,2)) div (1)
+  is     any(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0706
+  from   inventory:infix:div
+  cell   any(1,2) | -1
+  level  3
+  code   (any(1,2)) div (-1)
+  is     any(-1, -2)
+  type   Junction
+  oracle rakudo-2026.07 → any(-1, -2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(-1, -2)
+
+- id     0707
+  from   inventory:infix:div
+  cell   any(1,2) | 1/2
+  level  3
+  code   (any(1,2)) div (1/2)
+  is     any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  type   Junction
+  oracle rakudo-2026.07 → any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0708
+  from   inventory:infix:div
+  cell   any(1,2) | 0e0
+  level  3
+  code   (any(1,2)) div (0e0)
+  is     any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  type   Junction
+  oracle rakudo-2026.07 → any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0709
+  from   inventory:infix:div
+  cell   any(1,2) | NaN
+  level  3
+  code   (any(1,2)) div (NaN)
+  is     any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  type   Junction
+  oracle rakudo-2026.07 → any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0710
+  from   inventory:infix:div
+  cell   any(1,2) | ""
+  level  3
+  code   (any(1,2)) div ("")
+  is     any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  type   Junction
+  oracle rakudo-2026.07 → any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0711
+  from   inventory:infix:div
+  cell   any(1,2) | "a"
+  level  3
+  code   (any(1,2)) div ("a")
+  is     any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  type   Junction
+  oracle rakudo-2026.07 → any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0712
+  from   inventory:infix:div
+  cell   any(1,2) | True
+  level  3
+  code   (any(1,2)) div (True)
+  is     any(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0713
+  from   inventory:infix:div
+  cell   any(1,2) | Any
+  level  3
+  code   (any(1,2)) div (Any)
+  is     any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  type   Junction
+  oracle rakudo-2026.07 → any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0714
+  from   inventory:infix:div
+  cell   any(1,2) | (1,2)
+  level  3
+  code   (any(1,2)) div ((1,2))
+  is     any(0, 1)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 1)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 1)
+
+- id     0715
+  from   inventory:infix:div
+  cell   any(1,2) | {a=>1}
+  level  3
+  code   (any(1,2)) div ({a=>1})
+  is     any(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0716
+  from   inventory:infix:div
+  cell   any(1,2) | -0e0
+  level  3
+  code   (any(1,2)) div (-0e0)
+  is     any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  type   Junction
+  oracle rakudo-2026.07 → any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0717
+  from   inventory:infix:div
+  cell   any(1,2) | Inf
+  level  3
+  code   (any(1,2)) div (Inf)
+  is     any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  type   Junction
+  oracle rakudo-2026.07 → any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0718
+  from   inventory:infix:div
+  cell   any(1,2) | 2**64
+  level  3
+  code   (any(1,2)) div (2**64)
+  is     any(0, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0719
+  from   inventory:infix:div
+  cell   any(1,2) | False
+  level  3
+  code   (any(1,2)) div (False)
+  is     any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  type   Junction
+  oracle rakudo-2026.07 → any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0720
+  from   inventory:infix:div
+  cell   any(1,2) | Nil
+  level  3
+  code   (any(1,2)) div (Nil)
+  is     any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  type   Junction
+  oracle rakudo-2026.07 → any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0721
+  from   inventory:infix:div
+  cell   any(1,2) | ()
+  level  3
+  code   (any(1,2)) div (())
+  is     any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  type   Junction
+  oracle rakudo-2026.07 → any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0722
+  from   inventory:infix:div
+  cell   any(1,2) | "0"
+  level  3
+  code   (any(1,2)) div ("0")
+  is     any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  type   Junction
+  oracle rakudo-2026.07 → any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0723
+  from   inventory:infix:div
+  cell   any(1,2) | (1..3)
+  level  3
+  code   (any(1,2)) div ((1..3))
+  is     any(0, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0724
+  from   inventory:infix:div
+  cell   any(1,2) | Int
+  level  3
+  code   (any(1,2)) div (Int)
+  is     any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  type   Junction
+  oracle rakudo-2026.07 → any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0725
+  from   inventory:infix:div
+  cell   any(1,2) | "a b"
+  level  3
+  code   (any(1,2)) div ("a b")
+  is     any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  type   Junction
+  oracle rakudo-2026.07 → any(Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 1), backtrace => Backtrace.new), Failure.new(exception => X::Numeric::DivideByZero.new(using => "div", details => Any, numerator => 2), backtrace => Backtrace.new))
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0726
+  from   inventory:infix:div
+  cell   any(1,2) | [1,2]
+  level  3
+  code   (any(1,2)) div ([1,2])
+  is     any(0, 1)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 1)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 1)
+
+- id     0727
+  from   inventory:infix:div
+  cell   any(1,2) | (a => 1)
+  level  3
+  code   (any(1,2)) div ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0728
+  from   inventory:infix:div
+  cell   any(1,2) | bag(1,1)
+  level  3
+  code   (any(1,2)) div (bag(1,1))
+  is     any(0, 1)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 1)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 1)
+
+- id     0729
+  from   inventory:infix:div
+  cell   any(1,2) | (1..3).Seq
+  level  3
+  code   (any(1,2)) div ((1..3).Seq)
+  is     any(0, 0)
+  type   Junction
+  oracle rakudo-2026.07 → any(0, 0)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0730
+  from   inventory:infix:div
+  cell   0 | v1.2
+  level  3
+  code   (0) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0731
+  from   inventory:infix:div
+  cell   1 | v1.2
+  level  3
+  code   (1) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0732
+  from   inventory:infix:div
+  cell   -1 | v1.2
+  level  3
+  code   (-1) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → -1
+
+- id     0733
+  from   inventory:infix:div
+  cell   1/2 | v1.2
+  level  3
+  code   (1/2) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0734
+  from   inventory:infix:div
+  cell   0e0 | v1.2
+  level  3
+  code   (0e0) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0735
+  from   inventory:infix:div
+  cell   NaN | v1.2
+  level  3
+  code   (NaN) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::CannotConvert
+
+- id     0736
+  from   inventory:infix:div
+  cell   "" | v1.2
+  level  3
+  code   ("") div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0737
+  from   inventory:infix:div
+  cell   "a" | v1.2
+  level  3
+  code   ("a") div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0738
+  from   inventory:infix:div
+  cell   True | v1.2
+  level  3
+  code   (True) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0739
+  from   inventory:infix:div
+  cell   Any | v1.2
+  level  3
+  code   (Any) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0740
+  from   inventory:infix:div
+  cell   (1,2) | v1.2
+  level  3
+  code   ((1,2)) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 2
+
+- id     0741
+  from   inventory:infix:div
+  cell   {a=>1} | v1.2
+  level  3
+  code   ({a=>1}) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0742
+  from   inventory:infix:div
+  cell   -0e0 | v1.2
+  level  3
+  code   (-0e0) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0743
+  from   inventory:infix:div
+  cell   Inf | v1.2
+  level  3
+  code   (Inf) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::CannotConvert
+
+- id     0744
+  from   inventory:infix:div
+  cell   2**64 | v1.2
+  level  3
+  code   (2**64) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 18446744073709551616
+
+- id     0745
+  from   inventory:infix:div
+  cell   False | v1.2
+  level  3
+  code   (False) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0746
+  from   inventory:infix:div
+  cell   Nil | v1.2
+  level  3
+  code   (Nil) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0747
+  from   inventory:infix:div
+  cell   () | v1.2
+  level  3
+  code   (()) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0748
+  from   inventory:infix:div
+  cell   "0" | v1.2
+  level  3
+  code   ("0") div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0749
+  from   inventory:infix:div
+  cell   (1..3) | v1.2
+  level  3
+  code   ((1..3)) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0750
+  from   inventory:infix:div
+  cell   Int | v1.2
+  level  3
+  code   (Int) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0751
+  from   inventory:infix:div
+  cell   "a b" | v1.2
+  level  3
+  code   ("a b") div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0752
+  from   inventory:infix:div
+  cell   [1,2] | v1.2
+  level  3
+  code   ([1,2]) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 2
+
+- id     0753
+  from   inventory:infix:div
+  cell   (a => 1) | v1.2
+  level  3
+  code   ((a => 1)) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0754
+  from   inventory:infix:div
+  cell   bag(1,1) | v1.2
+  level  3
+  code   (bag(1,1)) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 2
+
+- id     0755
+  from   inventory:infix:div
+  cell   (1..3).Seq | v1.2
+  level  3
+  code   ((1..3).Seq) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 3
+
+- id     0756
+  from   inventory:infix:div
+  cell   any(1,2) | v1.2
+  level  3
+  code   (any(1,2)) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0757
+  from   inventory:infix:div
+  cell   v1.2 | v1.2
+  level  3
+  code   (v1.2) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0758
+  from   inventory:infix:div
+  cell   v1.2 | 0
+  level  3
+  code   (v1.2) div (0)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0759
+  from   inventory:infix:div
+  cell   v1.2 | 1
+  level  3
+  code   (v1.2) div (1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0760
+  from   inventory:infix:div
+  cell   v1.2 | -1
+  level  3
+  code   (v1.2) div (-1)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → -1
+
+- id     0761
+  from   inventory:infix:div
+  cell   v1.2 | 1/2
+  level  3
+  code   (v1.2) div (1/2)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0762
+  from   inventory:infix:div
+  cell   v1.2 | 0e0
+  level  3
+  code   (v1.2) div (0e0)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0763
+  from   inventory:infix:div
+  cell   v1.2 | NaN
+  level  3
+  code   (v1.2) div (NaN)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0764
+  from   inventory:infix:div
+  cell   v1.2 | ""
+  level  3
+  code   (v1.2) div ("")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0765
+  from   inventory:infix:div
+  cell   v1.2 | "a"
+  level  3
+  code   (v1.2) div ("a")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0766
+  from   inventory:infix:div
+  cell   v1.2 | True
+  level  3
+  code   (v1.2) div (True)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0767
+  from   inventory:infix:div
+  cell   v1.2 | Any
+  level  3
+  code   (v1.2) div (Any)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0768
+  from   inventory:infix:div
+  cell   v1.2 | (1,2)
+  level  3
+  code   (v1.2) div ((1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0769
+  from   inventory:infix:div
+  cell   v1.2 | {a=>1}
+  level  3
+  code   (v1.2) div ({a=>1})
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0770
+  from   inventory:infix:div
+  cell   v1.2 | -0e0
+  level  3
+  code   (v1.2) div (-0e0)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0771
+  from   inventory:infix:div
+  cell   v1.2 | Inf
+  level  3
+  code   (v1.2) div (Inf)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0772
+  from   inventory:infix:div
+  cell   v1.2 | 2**64
+  level  3
+  code   (v1.2) div (2**64)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0773
+  from   inventory:infix:div
+  cell   v1.2 | False
+  level  3
+  code   (v1.2) div (False)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0774
+  from   inventory:infix:div
+  cell   v1.2 | Nil
+  level  3
+  code   (v1.2) div (Nil)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0775
+  from   inventory:infix:div
+  cell   v1.2 | ()
+  level  3
+  code   (v1.2) div (())
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0776
+  from   inventory:infix:div
+  cell   v1.2 | "0"
+  level  3
+  code   (v1.2) div ("0")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0777
+  from   inventory:infix:div
+  cell   v1.2 | (1..3)
+  level  3
+  code   (v1.2) div ((1..3))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0778
+  from   inventory:infix:div
+  cell   v1.2 | Int
+  level  3
+  code   (v1.2) div (Int)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0779
+  from   inventory:infix:div
+  cell   v1.2 | "a b"
+  level  3
+  code   (v1.2) div ("a b")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0780
+  from   inventory:infix:div
+  cell   v1.2 | [1,2]
+  level  3
+  code   (v1.2) div ([1,2])
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0781
+  from   inventory:infix:div
+  cell   v1.2 | (a => 1)
+  level  3
+  code   (v1.2) div ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0782
+  from   inventory:infix:div
+  cell   v1.2 | bag(1,1)
+  level  3
+  code   (v1.2) div (bag(1,1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0783
+  from   inventory:infix:div
+  cell   v1.2 | (1..3).Seq
+  level  3
+  code   (v1.2) div ((1..3).Seq)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0784
+  from   inventory:infix:div
+  cell   v1.2 | any(1,2)
+  level  3
+  code   (v1.2) div (any(1,2))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 0)
+
+- id     0785
+  from   inventory:infix:div
+  cell   0 | 1+2i
+  level  3
+  code   (0) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0786
+  from   inventory:infix:div
+  cell   1 | 1+2i
+  level  3
+  code   (1) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0787
+  from   inventory:infix:div
+  cell   -1 | 1+2i
+  level  3
+  code   (-1) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0788
+  from   inventory:infix:div
+  cell   1/2 | 1+2i
+  level  3
+  code   (1/2) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0789
+  from   inventory:infix:div
+  cell   0e0 | 1+2i
+  level  3
+  code   (0e0) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0790
+  from   inventory:infix:div
+  cell   NaN | 1+2i
+  level  3
+  code   (NaN) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0791
+  from   inventory:infix:div
+  cell   "" | 1+2i
+  level  3
+  code   ("") div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0792
+  from   inventory:infix:div
+  cell   "a" | 1+2i
+  level  3
+  code   ("a") div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0793
+  from   inventory:infix:div
+  cell   True | 1+2i
+  level  3
+  code   (True) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0794
+  from   inventory:infix:div
+  cell   Any | 1+2i
+  level  3
+  code   (Any) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0795
+  from   inventory:infix:div
+  cell   (1,2) | 1+2i
+  level  3
+  code   ((1,2)) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0796
+  from   inventory:infix:div
+  cell   {a=>1} | 1+2i
+  level  3
+  code   ({a=>1}) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0797
+  from   inventory:infix:div
+  cell   -0e0 | 1+2i
+  level  3
+  code   (-0e0) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0798
+  from   inventory:infix:div
+  cell   Inf | 1+2i
+  level  3
+  code   (Inf) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0799
+  from   inventory:infix:div
+  cell   2**64 | 1+2i
+  level  3
+  code   (2**64) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0800
+  from   inventory:infix:div
+  cell   False | 1+2i
+  level  3
+  code   (False) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0801
+  from   inventory:infix:div
+  cell   Nil | 1+2i
+  level  3
+  code   (Nil) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0802
+  from   inventory:infix:div
+  cell   () | 1+2i
+  level  3
+  code   (()) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0803
+  from   inventory:infix:div
+  cell   "0" | 1+2i
+  level  3
+  code   ("0") div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0804
+  from   inventory:infix:div
+  cell   (1..3) | 1+2i
+  level  3
+  code   ((1..3)) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0805
+  from   inventory:infix:div
+  cell   Int | 1+2i
+  level  3
+  code   (Int) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0806
+  from   inventory:infix:div
+  cell   "a b" | 1+2i
+  level  3
+  code   ("a b") div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0807
+  from   inventory:infix:div
+  cell   [1,2] | 1+2i
+  level  3
+  code   ([1,2]) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0808
+  from   inventory:infix:div
+  cell   (a => 1) | 1+2i
+  level  3
+  code   ((a => 1)) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0809
+  from   inventory:infix:div
+  cell   bag(1,1) | 1+2i
+  level  3
+  code   (bag(1,1)) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0810
+  from   inventory:infix:div
+  cell   (1..3).Seq | 1+2i
+  level  3
+  code   ((1..3).Seq) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0811
+  from   inventory:infix:div
+  cell   any(1,2) | 1+2i
+  level  3
+  code   (any(1,2)) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0812
+  from   inventory:infix:div
+  cell   v1.2 | 1+2i
+  level  3
+  code   (v1.2) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0813
+  from   inventory:infix:div
+  cell   1+2i | 1+2i
+  level  3
+  code   (1+2i) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0814
+  from   inventory:infix:div
+  cell   1+2i | 0
+  level  3
+  code   (1+2i) div (0)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0815
+  from   inventory:infix:div
+  cell   1+2i | 1
+  level  3
+  code   (1+2i) div (1)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0816
+  from   inventory:infix:div
+  cell   1+2i | -1
+  level  3
+  code   (1+2i) div (-1)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0817
+  from   inventory:infix:div
+  cell   1+2i | 1/2
+  level  3
+  code   (1+2i) div (1/2)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0818
+  from   inventory:infix:div
+  cell   1+2i | 0e0
+  level  3
+  code   (1+2i) div (0e0)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0819
+  from   inventory:infix:div
+  cell   1+2i | NaN
+  level  3
+  code   (1+2i) div (NaN)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0820
+  from   inventory:infix:div
+  cell   1+2i | ""
+  level  3
+  code   (1+2i) div ("")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0821
+  from   inventory:infix:div
+  cell   1+2i | "a"
+  level  3
+  code   (1+2i) div ("a")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0822
+  from   inventory:infix:div
+  cell   1+2i | True
+  level  3
+  code   (1+2i) div (True)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0823
+  from   inventory:infix:div
+  cell   1+2i | Any
+  level  3
+  code   (1+2i) div (Any)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0824
+  from   inventory:infix:div
+  cell   1+2i | (1,2)
+  level  3
+  code   (1+2i) div ((1,2))
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0825
+  from   inventory:infix:div
+  cell   1+2i | {a=>1}
+  level  3
+  code   (1+2i) div ({a=>1})
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0826
+  from   inventory:infix:div
+  cell   1+2i | -0e0
+  level  3
+  code   (1+2i) div (-0e0)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0827
+  from   inventory:infix:div
+  cell   1+2i | Inf
+  level  3
+  code   (1+2i) div (Inf)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0828
+  from   inventory:infix:div
+  cell   1+2i | 2**64
+  level  3
+  code   (1+2i) div (2**64)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0829
+  from   inventory:infix:div
+  cell   1+2i | False
+  level  3
+  code   (1+2i) div (False)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0830
+  from   inventory:infix:div
+  cell   1+2i | Nil
+  level  3
+  code   (1+2i) div (Nil)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0831
+  from   inventory:infix:div
+  cell   1+2i | ()
+  level  3
+  code   (1+2i) div (())
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0832
+  from   inventory:infix:div
+  cell   1+2i | "0"
+  level  3
+  code   (1+2i) div ("0")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0833
+  from   inventory:infix:div
+  cell   1+2i | (1..3)
+  level  3
+  code   (1+2i) div ((1..3))
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0834
+  from   inventory:infix:div
+  cell   1+2i | Int
+  level  3
+  code   (1+2i) div (Int)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0835
+  from   inventory:infix:div
+  cell   1+2i | "a b"
+  level  3
+  code   (1+2i) div ("a b")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0836
+  from   inventory:infix:div
+  cell   1+2i | [1,2]
+  level  3
+  code   (1+2i) div ([1,2])
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0837
+  from   inventory:infix:div
+  cell   1+2i | (a => 1)
+  level  3
+  code   (1+2i) div ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0838
+  from   inventory:infix:div
+  cell   1+2i | bag(1,1)
+  level  3
+  code   (1+2i) div (bag(1,1))
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0839
+  from   inventory:infix:div
+  cell   1+2i | (1..3).Seq
+  level  3
+  code   (1+2i) div ((1..3).Seq)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0840
+  from   inventory:infix:div
+  cell   1+2i | any(1,2)
+  level  3
+  code   (1+2i) div (any(1,2))
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0841
+  from   inventory:infix:div
+  cell   1+2i | v1.2
+  level  3
+  code   (1+2i) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0842
+  from   inventory:infix:div
+  cell   0 | Str
+  level  3
+  code   (0) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0843
+  from   inventory:infix:div
+  cell   1 | Str
+  level  3
+  code   (1) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0844
+  from   inventory:infix:div
+  cell   -1 | Str
+  level  3
+  code   (-1) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0845
+  from   inventory:infix:div
+  cell   1/2 | Str
+  level  3
+  code   (1/2) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0846
+  from   inventory:infix:div
+  cell   0e0 | Str
+  level  3
+  code   (0e0) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0847
+  from   inventory:infix:div
+  cell   NaN | Str
+  level  3
+  code   (NaN) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0848
+  from   inventory:infix:div
+  cell   "" | Str
+  level  3
+  code   ("") div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0849
+  from   inventory:infix:div
+  cell   "a" | Str
+  level  3
+  code   ("a") div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0850
+  from   inventory:infix:div
+  cell   True | Str
+  level  3
+  code   (True) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0851
+  from   inventory:infix:div
+  cell   Any | Str
+  level  3
+  code   (Any) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0852
+  from   inventory:infix:div
+  cell   (1,2) | Str
+  level  3
+  code   ((1,2)) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0853
+  from   inventory:infix:div
+  cell   {a=>1} | Str
+  level  3
+  code   ({a=>1}) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0854
+  from   inventory:infix:div
+  cell   -0e0 | Str
+  level  3
+  code   (-0e0) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0855
+  from   inventory:infix:div
+  cell   Inf | Str
+  level  3
+  code   (Inf) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0856
+  from   inventory:infix:div
+  cell   2**64 | Str
+  level  3
+  code   (2**64) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0857
+  from   inventory:infix:div
+  cell   False | Str
+  level  3
+  code   (False) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0858
+  from   inventory:infix:div
+  cell   Nil | Str
+  level  3
+  code   (Nil) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0859
+  from   inventory:infix:div
+  cell   () | Str
+  level  3
+  code   (()) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0860
+  from   inventory:infix:div
+  cell   "0" | Str
+  level  3
+  code   ("0") div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0861
+  from   inventory:infix:div
+  cell   (1..3) | Str
+  level  3
+  code   ((1..3)) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0862
+  from   inventory:infix:div
+  cell   Int | Str
+  level  3
+  code   (Int) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0863
+  from   inventory:infix:div
+  cell   "a b" | Str
+  level  3
+  code   ("a b") div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0864
+  from   inventory:infix:div
+  cell   [1,2] | Str
+  level  3
+  code   ([1,2]) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0865
+  from   inventory:infix:div
+  cell   (a => 1) | Str
+  level  3
+  code   ((a => 1)) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0866
+  from   inventory:infix:div
+  cell   bag(1,1) | Str
+  level  3
+  code   (bag(1,1)) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0867
+  from   inventory:infix:div
+  cell   (1..3).Seq | Str
+  level  3
+  code   ((1..3).Seq) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0868
+  from   inventory:infix:div
+  cell   any(1,2) | Str
+  level  3
+  code   (any(1,2)) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any({:exception(X::Numeric::DivideByZero), :message("Attempt to divide 1 by zero using infix:<div>")}, {:exception(X::Numeric::DivideByZero), :message("Attempt to divide 2 by zero using infix:<div>")})
+
+- id     0869
+  from   inventory:infix:div
+  cell   v1.2 | Str
+  level  3
+  code   (v1.2) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0870
+  from   inventory:infix:div
+  cell   1+2i | Str
+  level  3
+  code   (1+2i) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0871
+  from   inventory:infix:div
+  cell   Str | Str
+  level  3
+  code   (Str) div (Str)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0872
+  from   inventory:infix:div
+  cell   Str | 0
+  level  3
+  code   (Str) div (0)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0873
+  from   inventory:infix:div
+  cell   Str | 1
+  level  3
+  code   (Str) div (1)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0874
+  from   inventory:infix:div
+  cell   Str | -1
+  level  3
+  code   (Str) div (-1)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0875
+  from   inventory:infix:div
+  cell   Str | 1/2
+  level  3
+  code   (Str) div (1/2)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0876
+  from   inventory:infix:div
+  cell   Str | 0e0
+  level  3
+  code   (Str) div (0e0)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0877
+  from   inventory:infix:div
+  cell   Str | NaN
+  level  3
+  code   (Str) div (NaN)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0878
+  from   inventory:infix:div
+  cell   Str | ""
+  level  3
+  code   (Str) div ("")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0879
+  from   inventory:infix:div
+  cell   Str | "a"
+  level  3
+  code   (Str) div ("a")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0880
+  from   inventory:infix:div
+  cell   Str | True
+  level  3
+  code   (Str) div (True)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0881
+  from   inventory:infix:div
+  cell   Str | Any
+  level  3
+  code   (Str) div (Any)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0882
+  from   inventory:infix:div
+  cell   Str | (1,2)
+  level  3
+  code   (Str) div ((1,2))
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0883
+  from   inventory:infix:div
+  cell   Str | {a=>1}
+  level  3
+  code   (Str) div ({a=>1})
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0884
+  from   inventory:infix:div
+  cell   Str | -0e0
+  level  3
+  code   (Str) div (-0e0)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0885
+  from   inventory:infix:div
+  cell   Str | Inf
+  level  3
+  code   (Str) div (Inf)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0886
+  from   inventory:infix:div
+  cell   Str | 2**64
+  level  3
+  code   (Str) div (2**64)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0887
+  from   inventory:infix:div
+  cell   Str | False
+  level  3
+  code   (Str) div (False)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0888
+  from   inventory:infix:div
+  cell   Str | Nil
+  level  3
+  code   (Str) div (Nil)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0889
+  from   inventory:infix:div
+  cell   Str | ()
+  level  3
+  code   (Str) div (())
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0890
+  from   inventory:infix:div
+  cell   Str | "0"
+  level  3
+  code   (Str) div ("0")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0891
+  from   inventory:infix:div
+  cell   Str | (1..3)
+  level  3
+  code   (Str) div ((1..3))
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0892
+  from   inventory:infix:div
+  cell   Str | Int
+  level  3
+  code   (Str) div (Int)
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0893
+  from   inventory:infix:div
+  cell   Str | "a b"
+  level  3
+  code   (Str) div ("a b")
+  throws X::Numeric::DivideByZero
+  oracle rakudo-2026.07 → ERR:X::Numeric::DivideByZero
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Str::Numeric
+
+- id     0894
+  from   inventory:infix:div
+  cell   Str | [1,2]
+  level  3
+  code   (Str) div ([1,2])
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0895
+  from   inventory:infix:div
+  cell   Str | (a => 1)
+  level  3
+  code   (Str) div ((a => 1))
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero
+
+- id     0896
+  from   inventory:infix:div
+  cell   Str | bag(1,1)
+  level  3
+  code   (Str) div (bag(1,1))
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0897
+  from   inventory:infix:div
+  cell   Str | (1..3).Seq
+  level  3
+  code   (Str) div ((1..3).Seq)
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0898
+  from   inventory:infix:div
+  cell   Str | any(1,2)
+  level  3
+  code   (Str) div (any(1,2))
+  throws X::Parameter::InvalidConcreteness
+  oracle rakudo-2026.07 → ERR:X::Parameter::InvalidConcreteness
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(0, 0)
+
+- id     0899
+  from   inventory:infix:div
+  cell   Str | v1.2
+  level  3
+  code   (Str) div (v1.2)
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0900
+  from   inventory:infix:div
+  cell   Str | 1+2i
+  level  3
+  code   (Str) div (1+2i)
+  throws X::Numeric::Real
+  oracle rakudo-2026.07 → ERR:X::Numeric::Real
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::Numeric::DivideByZero

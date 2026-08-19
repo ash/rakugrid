@@ -39,7 +39,7 @@ usable, reproducible answer, the record is parked with a written reason and
 counted separately. That is the difference between a suite that is green because
 it is right and one that is green because it looked away.
 
-## The nine generators
+## The ten generators
 
 | Generator | Enumerates | Produces |
 |---|---|---|
@@ -52,6 +52,7 @@ it is right and one that is green because it looked away.
 | `import-regression.raku` | an existing repository's regression programs | curated whole-program records |
 | `regex.raku` | 94 patterns × 16 subjects × 8 match forms | derived facts, never Match objects |
 | `signatures.raku` | parameter forms × arguments × call forms, and parameter **pairs** | what bound, or what it threw |
+| `spelling.raku` | every infix operator × operand pairs × **three ways of writing it** | `same-as`, or `no-parse`, or the value the bare spelling gives |
 
 `syntax.raku` is the odd one: it compiles complete programs with `-c` and never
 runs them, and it asserts only whether they compile — never the wording of the
@@ -73,6 +74,31 @@ compiles it; since both the probe and `fire` evaluate many cells per process, a
 named class would have recorded a redeclaration error as the binding result for
 every method cell but the first.
 
+`spelling.raku` is the answer to a gap the other operator generators created.
+They parenthesise both operands — see the first safeguard below — which is right
+for the semantics and blind to the lexer: until it existed, not one test in the
+suite exercised `1 * 2` or `1*2`, only `(1) * (2)`. So the parens stay where the
+value is asserted, and spelling becomes an axis of its own:
+
+```
+({A}) op ({B})     the baseline — what the other generators assert
+{A} op {B}         spaced and bare
+{A}op{B}           tight
+```
+
+The assertion depends on what the reference does with the bare form, and the
+**baseline is compile-checked too**, because a spelling rejected in a crossing
+that is illegal however it is written (`1:=2`, and equally `(1) := (2)`) is not
+a finding about spelling:
+
+| Baseline | Bare spelling | Assertion |
+|---|---|---|
+| compiles | rejected | `no-parse` — **the spelling is what broke it** |
+| compiles | compiles, agrees | `same-as` the parenthesised form — needs no oracle |
+| compiles | compiles, differs | `is` / `type` — pin what the bare spelling really means |
+| rejected | rejected | `no-parse`, marked illegal-however-written |
+| rejected | compiles | `is` / `type` — only the bare form is legal here |
+
 `laws.raku` is the other odd one: it needs no reference at all. `a + b` must
 equal `b + a` whatever either is, so an engine that disagrees with *itself* is
 wrong without anyone deciding what the right answer was.
@@ -93,7 +119,10 @@ cross, and ids are permanent. New values must be **appended**, never inserted.
 Every item here exists because it went wrong. None is hypothetical.
 
 **Parenthesise the operands.** `1/2 ** 2` parses as `1/(2**2)`. Without parens a
-cell silently tests something other than what its label says.
+cell silently tests something other than what its label says. The cost of that
+safeguard is that the parenthesised spelling is not the one real programs
+contain — which is why `spelling.raku` exists, and why it treats the parens as a
+baseline to compare against rather than as the only way to write a test.
 
 **Ask whether it compiles separately from what it does.** `try EVAL` catches a
 compile failure as though it were a runtime exception, so a cell that cannot be

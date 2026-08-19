@@ -3,8 +3,8 @@ source   generated
 gen      gen/operators.raku
 from-inventory infix does
 ladder   mixed
-axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
-cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1)
+axes     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1) | bag(1,1) | (1..3).Seq | any(1,2) | v1.2 | 1+2i | Str
+cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} | -0e0 | Inf | 2**64 | False | Nil | () | "0" | (1..3) | Int | "a b" | [1,2] | (a => 1) | bag(1,1) | (1..3).Seq | any(1,2) | v1.2 | 1+2i | Str
 
 - id     0001
   from   inventory:infix:does
@@ -5420,3 +5420,3088 @@ cols     0 | 1 | -1 | 1/2 | 0e0 | NaN | "" | "a" | True | Any | (1,2) | {a=>1} |
   type   Pair+{<anon|60>}
   oracle rakudo-2026.07 → :a(1)
   oracle rakupp-v3.14.0-104-g2295fb0-modified → :a(1)
+
+- id     0577
+  from   inventory:infix:does
+  cell   0 | bag(1,1)
+  level  3
+  code   (0) does (bag(1,1))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0578
+  from   inventory:infix:does
+  cell   1 | bag(1,1)
+  level  3
+  code   (1) does (bag(1,1))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0579
+  from   inventory:infix:does
+  cell   -1 | bag(1,1)
+  level  3
+  code   (-1) does (bag(1,1))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → -1
+
+- id     0580
+  from   inventory:infix:does
+  cell   1/2 | bag(1,1)
+  level  3
+  code   (1/2) does (bag(1,1))
+  is     <1/2>
+  type   Rat+{<anon|1>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0.5
+
+- id     0581
+  from   inventory:infix:does
+  cell   0e0 | bag(1,1)
+  level  3
+  code   (0e0) does (bag(1,1))
+  is     0e0
+  type   Num+{<anon|2>}
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0e0
+
+- id     0582
+  from   inventory:infix:does
+  cell   NaN | bag(1,1)
+  level  3
+  code   (NaN) does (bag(1,1))
+  is     NaN
+  type   Num+{<anon|3>}
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → NaN
+
+- id     0583
+  from   inventory:infix:does
+  cell   "" | bag(1,1)
+  level  3
+  code   ("") does (bag(1,1))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0584
+  from   inventory:infix:does
+  cell   "a" | bag(1,1)
+  level  3
+  code   ("a") does (bag(1,1))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a"
+
+- id     0585
+  from   inventory:infix:does
+  cell   True | bag(1,1)
+  level  3
+  code   (True) does (bag(1,1))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0586
+  from   inventory:infix:does
+  cell   Any | bag(1,1)
+  level  3
+  code   (Any) does (bag(1,1))
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Any
+
+- id     0587
+  from   inventory:infix:does
+  cell   (1,2) | bag(1,1)
+  level  3
+  code   ((1,2)) does (bag(1,1))
+  is     $(1, 2)
+  type   List+{<anon|4>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2)
+
+- id     0588
+  from   inventory:infix:does
+  cell   {a=>1} | bag(1,1)
+  level  3
+  code   ({a=>1}) does (bag(1,1))
+  is     ${:a(1)}
+  type   Hash+{<anon|5>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → {:a(1)}
+
+- id     0589
+  from   inventory:infix:does
+  cell   -0e0 | bag(1,1)
+  level  3
+  code   (-0e0) does (bag(1,1))
+  is     -0e0
+  type   Num+{<anon|6>}
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → -0e0
+
+- id     0590
+  from   inventory:infix:does
+  cell   Inf | bag(1,1)
+  level  3
+  code   (Inf) does (bag(1,1))
+  is     Inf
+  type   Num+{<anon|7>}
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Inf
+
+- id     0591
+  from   inventory:infix:does
+  cell   2**64 | bag(1,1)
+  level  3
+  code   (2**64) does (bag(1,1))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 18446744073709551616
+
+- id     0592
+  from   inventory:infix:does
+  cell   False | bag(1,1)
+  level  3
+  code   (False) does (bag(1,1))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::False
+
+- id     0593
+  from   inventory:infix:does
+  cell   Nil | bag(1,1)
+  level  3
+  code   (Nil) does (bag(1,1))
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Nil
+
+- id     0594
+  from   inventory:infix:does
+  cell   () | bag(1,1)
+  level  3
+  code   (()) does (bag(1,1))
+  is     $( )
+  type   List+{<anon|8>}
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ()
+
+- id     0595
+  from   inventory:infix:does
+  cell   "0" | bag(1,1)
+  level  3
+  code   ("0") does (bag(1,1))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "0"
+
+- id     0596
+  from   inventory:infix:does
+  cell   (1..3) | bag(1,1)
+  level  3
+  code   ((1..3)) does (bag(1,1))
+  is     1..3
+  type   Range+{<anon|9>}
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1..3
+
+- id     0597
+  from   inventory:infix:does
+  cell   Int | bag(1,1)
+  level  3
+  code   (Int) does (bag(1,1))
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Int
+
+- id     0598
+  from   inventory:infix:does
+  cell   "a b" | bag(1,1)
+  level  3
+  code   ("a b") does (bag(1,1))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a b"
+
+- id     0599
+  from   inventory:infix:does
+  cell   [1,2] | bag(1,1)
+  level  3
+  code   ([1,2]) does (bag(1,1))
+  is     $[1, 2]
+  type   Array+{<anon|10>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → [1, 2]
+
+- id     0600
+  from   inventory:infix:does
+  cell   (a => 1) | bag(1,1)
+  level  3
+  code   ((a => 1)) does (bag(1,1))
+  is     :a(1)
+  type   Pair+{<anon|11>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → :a(1)
+
+- id     0601
+  from   inventory:infix:does
+  cell   bag(1,1) | bag(1,1)
+  level  3
+  code   (bag(1,1)) does (bag(1,1))
+  is     (1=>2).Bag+{<anon|12>}
+  type   Bag+{<anon|12>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|12>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1=>2).Bag
+
+- id     0602
+  from   inventory:infix:does
+  cell   bag(1,1) | 0
+  level  3
+  code   (bag(1,1)) does (0)
+  is     (1=>2).Bag+{<anon|13>}
+  type   Bag+{<anon|13>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|13>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0603
+  from   inventory:infix:does
+  cell   bag(1,1) | 1
+  level  3
+  code   (bag(1,1)) does (1)
+  is     (1=>2).Bag+{<anon|14>}
+  type   Bag+{<anon|14>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|14>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0604
+  from   inventory:infix:does
+  cell   bag(1,1) | -1
+  level  3
+  code   (bag(1,1)) does (-1)
+  is     (1=>2).Bag+{<anon|15>}
+  type   Bag+{<anon|15>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|15>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0605
+  from   inventory:infix:does
+  cell   bag(1,1) | 1/2
+  level  3
+  code   (bag(1,1)) does (1/2)
+  is     (1=>2).Bag+{<anon|16>}
+  type   Bag+{<anon|16>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|16>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0606
+  from   inventory:infix:does
+  cell   bag(1,1) | 0e0
+  level  3
+  code   (bag(1,1)) does (0e0)
+  is     (1=>2).Bag+{<anon|17>}
+  type   Bag+{<anon|17>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|17>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0607
+  from   inventory:infix:does
+  cell   bag(1,1) | NaN
+  level  3
+  code   (bag(1,1)) does (NaN)
+  is     (1=>2).Bag+{<anon|18>}
+  type   Bag+{<anon|18>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|18>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0608
+  from   inventory:infix:does
+  cell   bag(1,1) | ""
+  level  3
+  code   (bag(1,1)) does ("")
+  is     (1=>2).Bag+{<anon|19>}
+  type   Bag+{<anon|19>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|19>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0609
+  from   inventory:infix:does
+  cell   bag(1,1) | "a"
+  level  3
+  code   (bag(1,1)) does ("a")
+  is     (1=>2).Bag+{<anon|20>}
+  type   Bag+{<anon|20>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|20>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0610
+  from   inventory:infix:does
+  cell   bag(1,1) | True
+  level  3
+  code   (bag(1,1)) does (True)
+  is     (1=>2).Bag+{<anon|21>}
+  type   Bag+{<anon|21>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|21>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0611
+  from   inventory:infix:does
+  cell   bag(1,1) | Any
+  level  3
+  code   (bag(1,1)) does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1=>2).Bag
+
+- id     0612
+  from   inventory:infix:does
+  cell   bag(1,1) | (1,2)
+  level  3
+  code   (bag(1,1)) does ((1,2))
+  is     (1=>2).Bag+{<anon|22>}
+  type   Bag+{<anon|22>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|22>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1=>2).Bag
+
+- id     0613
+  from   inventory:infix:does
+  cell   bag(1,1) | {a=>1}
+  level  3
+  code   (bag(1,1)) does ({a=>1})
+  is     (1=>2).Bag+{<anon|23>}
+  type   Bag+{<anon|23>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|23>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1=>2).Bag
+
+- id     0614
+  from   inventory:infix:does
+  cell   bag(1,1) | -0e0
+  level  3
+  code   (bag(1,1)) does (-0e0)
+  is     (1=>2).Bag+{<anon|24>}
+  type   Bag+{<anon|24>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|24>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0615
+  from   inventory:infix:does
+  cell   bag(1,1) | Inf
+  level  3
+  code   (bag(1,1)) does (Inf)
+  is     (1=>2).Bag+{<anon|25>}
+  type   Bag+{<anon|25>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|25>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0616
+  from   inventory:infix:does
+  cell   bag(1,1) | 2**64
+  level  3
+  code   (bag(1,1)) does (2**64)
+  is     (1=>2).Bag+{<anon|26>}
+  type   Bag+{<anon|26>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|26>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0617
+  from   inventory:infix:does
+  cell   bag(1,1) | False
+  level  3
+  code   (bag(1,1)) does (False)
+  is     (1=>2).Bag+{<anon|27>}
+  type   Bag+{<anon|27>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|27>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0618
+  from   inventory:infix:does
+  cell   bag(1,1) | Nil
+  level  3
+  code   (bag(1,1)) does (Nil)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1=>2).Bag
+
+- id     0619
+  from   inventory:infix:does
+  cell   bag(1,1) | ()
+  level  3
+  code   (bag(1,1)) does (())
+  is     (1=>2).Bag+{<anon|28>}
+  type   Bag+{<anon|28>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|28>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1=>2).Bag
+
+- id     0620
+  from   inventory:infix:does
+  cell   bag(1,1) | "0"
+  level  3
+  code   (bag(1,1)) does ("0")
+  is     (1=>2).Bag+{<anon|29>}
+  type   Bag+{<anon|29>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|29>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0621
+  from   inventory:infix:does
+  cell   bag(1,1) | (1..3)
+  level  3
+  code   (bag(1,1)) does ((1..3))
+  is     (1=>2).Bag+{<anon|30>}
+  type   Bag+{<anon|30>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|30>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1=>2).Bag
+
+- id     0622
+  from   inventory:infix:does
+  cell   bag(1,1) | Int
+  level  3
+  code   (bag(1,1)) does (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1=>2).Bag
+
+- id     0623
+  from   inventory:infix:does
+  cell   bag(1,1) | "a b"
+  level  3
+  code   (bag(1,1)) does ("a b")
+  is     (1=>2).Bag+{<anon|31>}
+  type   Bag+{<anon|31>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|31>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0624
+  from   inventory:infix:does
+  cell   bag(1,1) | [1,2]
+  level  3
+  code   (bag(1,1)) does ([1,2])
+  is     (1=>2).Bag+{<anon|32>}
+  type   Bag+{<anon|32>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|32>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1=>2).Bag
+
+- id     0625
+  from   inventory:infix:does
+  cell   bag(1,1) | (a => 1)
+  level  3
+  code   (bag(1,1)) does ((a => 1))
+  is     (1=>2).Bag+{<anon|33>}
+  type   Bag+{<anon|33>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|33>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1=>2).Bag
+
+- id     0626
+  from   inventory:infix:does
+  cell   0 | (1..3).Seq
+  level  3
+  code   (0) does ((1..3).Seq)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0627
+  from   inventory:infix:does
+  cell   1 | (1..3).Seq
+  level  3
+  code   (1) does ((1..3).Seq)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0628
+  from   inventory:infix:does
+  cell   -1 | (1..3).Seq
+  level  3
+  code   (-1) does ((1..3).Seq)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → -1
+
+- id     0629
+  from   inventory:infix:does
+  cell   1/2 | (1..3).Seq
+  level  3
+  code   (1/2) does ((1..3).Seq)
+  is     <1/2>
+  type   Rat+{<anon|34>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0.5
+
+- id     0630
+  from   inventory:infix:does
+  cell   0e0 | (1..3).Seq
+  level  3
+  code   (0e0) does ((1..3).Seq)
+  is     0e0
+  type   Num+{<anon|35>}
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0e0
+
+- id     0631
+  from   inventory:infix:does
+  cell   NaN | (1..3).Seq
+  level  3
+  code   (NaN) does ((1..3).Seq)
+  is     NaN
+  type   Num+{<anon|36>}
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → NaN
+
+- id     0632
+  from   inventory:infix:does
+  cell   "" | (1..3).Seq
+  level  3
+  code   ("") does ((1..3).Seq)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0633
+  from   inventory:infix:does
+  cell   "a" | (1..3).Seq
+  level  3
+  code   ("a") does ((1..3).Seq)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a"
+
+- id     0634
+  from   inventory:infix:does
+  cell   True | (1..3).Seq
+  level  3
+  code   (True) does ((1..3).Seq)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0635
+  from   inventory:infix:does
+  cell   Any | (1..3).Seq
+  level  3
+  code   (Any) does ((1..3).Seq)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Any
+
+- id     0636
+  from   inventory:infix:does
+  cell   (1,2) | (1..3).Seq
+  level  3
+  code   ((1,2)) does ((1..3).Seq)
+  is     $(1, 2)
+  type   List+{<anon|37>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2)
+
+- id     0637
+  from   inventory:infix:does
+  cell   {a=>1} | (1..3).Seq
+  level  3
+  code   ({a=>1}) does ((1..3).Seq)
+  is     ${:a(1)}
+  type   Hash+{<anon|38>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → {:a(1)}
+
+- id     0638
+  from   inventory:infix:does
+  cell   -0e0 | (1..3).Seq
+  level  3
+  code   (-0e0) does ((1..3).Seq)
+  is     -0e0
+  type   Num+{<anon|39>}
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → -0e0
+
+- id     0639
+  from   inventory:infix:does
+  cell   Inf | (1..3).Seq
+  level  3
+  code   (Inf) does ((1..3).Seq)
+  is     Inf
+  type   Num+{<anon|1>}
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Inf
+
+- id     0640
+  from   inventory:infix:does
+  cell   2**64 | (1..3).Seq
+  level  3
+  code   (2**64) does ((1..3).Seq)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 18446744073709551616
+
+- id     0641
+  from   inventory:infix:does
+  cell   False | (1..3).Seq
+  level  3
+  code   (False) does ((1..3).Seq)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::False
+
+- id     0642
+  from   inventory:infix:does
+  cell   Nil | (1..3).Seq
+  level  3
+  code   (Nil) does ((1..3).Seq)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Nil
+
+- id     0643
+  from   inventory:infix:does
+  cell   () | (1..3).Seq
+  level  3
+  code   (()) does ((1..3).Seq)
+  is     $( )
+  type   List+{<anon|2>}
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ()
+
+- id     0644
+  from   inventory:infix:does
+  cell   "0" | (1..3).Seq
+  level  3
+  code   ("0") does ((1..3).Seq)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "0"
+
+- id     0645
+  from   inventory:infix:does
+  cell   (1..3) | (1..3).Seq
+  level  3
+  code   ((1..3)) does ((1..3).Seq)
+  is     1..3
+  type   Range+{<anon|3>}
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1..3
+
+- id     0646
+  from   inventory:infix:does
+  cell   Int | (1..3).Seq
+  level  3
+  code   (Int) does ((1..3).Seq)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Int
+
+- id     0647
+  from   inventory:infix:does
+  cell   "a b" | (1..3).Seq
+  level  3
+  code   ("a b") does ((1..3).Seq)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a b"
+
+- id     0648
+  from   inventory:infix:does
+  cell   [1,2] | (1..3).Seq
+  level  3
+  code   ([1,2]) does ((1..3).Seq)
+  is     $[1, 2]
+  type   Array+{<anon|4>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → [1, 2]
+
+- id     0649
+  from   inventory:infix:does
+  cell   (a => 1) | (1..3).Seq
+  level  3
+  code   ((a => 1)) does ((1..3).Seq)
+  is     :a(1)
+  type   Pair+{<anon|5>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → :a(1)
+
+- id     0650
+  from   inventory:infix:does
+  cell   bag(1,1) | (1..3).Seq
+  level  3
+  code   (bag(1,1)) does ((1..3).Seq)
+  is     (1=>2).Bag+{<anon|6>}
+  type   Bag+{<anon|6>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|6>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1=>2).Bag
+
+- id     0651
+  from   inventory:infix:does
+  cell   (1..3).Seq | (1..3).Seq
+  level  3
+  code   ((1..3).Seq) does ((1..3).Seq)
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|7>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2, 3).Seq
+
+- id     0652
+  from   inventory:infix:does
+  cell   (1..3).Seq | 0
+  level  3
+  code   ((1..3).Seq) does (0)
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|8>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0653
+  from   inventory:infix:does
+  cell   (1..3).Seq | 1
+  level  3
+  code   ((1..3).Seq) does (1)
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|9>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0654
+  from   inventory:infix:does
+  cell   (1..3).Seq | -1
+  level  3
+  code   ((1..3).Seq) does (-1)
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|10>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0655
+  from   inventory:infix:does
+  cell   (1..3).Seq | 1/2
+  level  3
+  code   ((1..3).Seq) does (1/2)
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|11>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0656
+  from   inventory:infix:does
+  cell   (1..3).Seq | 0e0
+  level  3
+  code   ((1..3).Seq) does (0e0)
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|12>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0657
+  from   inventory:infix:does
+  cell   (1..3).Seq | NaN
+  level  3
+  code   ((1..3).Seq) does (NaN)
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|13>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0658
+  from   inventory:infix:does
+  cell   (1..3).Seq | ""
+  level  3
+  code   ((1..3).Seq) does ("")
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|14>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0659
+  from   inventory:infix:does
+  cell   (1..3).Seq | "a"
+  level  3
+  code   ((1..3).Seq) does ("a")
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|15>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0660
+  from   inventory:infix:does
+  cell   (1..3).Seq | True
+  level  3
+  code   ((1..3).Seq) does (True)
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|16>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0661
+  from   inventory:infix:does
+  cell   (1..3).Seq | Any
+  level  3
+  code   ((1..3).Seq) does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2, 3).Seq
+
+- id     0662
+  from   inventory:infix:does
+  cell   (1..3).Seq | (1,2)
+  level  3
+  code   ((1..3).Seq) does ((1,2))
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|17>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2, 3).Seq
+
+- id     0663
+  from   inventory:infix:does
+  cell   (1..3).Seq | {a=>1}
+  level  3
+  code   ((1..3).Seq) does ({a=>1})
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|18>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2, 3).Seq
+
+- id     0664
+  from   inventory:infix:does
+  cell   (1..3).Seq | -0e0
+  level  3
+  code   ((1..3).Seq) does (-0e0)
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|19>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0665
+  from   inventory:infix:does
+  cell   (1..3).Seq | Inf
+  level  3
+  code   ((1..3).Seq) does (Inf)
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|20>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0666
+  from   inventory:infix:does
+  cell   (1..3).Seq | 2**64
+  level  3
+  code   ((1..3).Seq) does (2**64)
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|21>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0667
+  from   inventory:infix:does
+  cell   (1..3).Seq | False
+  level  3
+  code   ((1..3).Seq) does (False)
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|22>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0668
+  from   inventory:infix:does
+  cell   (1..3).Seq | Nil
+  level  3
+  code   ((1..3).Seq) does (Nil)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2, 3).Seq
+
+- id     0669
+  from   inventory:infix:does
+  cell   (1..3).Seq | ()
+  level  3
+  code   ((1..3).Seq) does (())
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|23>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2, 3).Seq
+
+- id     0670
+  from   inventory:infix:does
+  cell   (1..3).Seq | "0"
+  level  3
+  code   ((1..3).Seq) does ("0")
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|24>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0671
+  from   inventory:infix:does
+  cell   (1..3).Seq | (1..3)
+  level  3
+  code   ((1..3).Seq) does ((1..3))
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|25>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2, 3).Seq
+
+- id     0672
+  from   inventory:infix:does
+  cell   (1..3).Seq | Int
+  level  3
+  code   ((1..3).Seq) does (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2, 3).Seq
+
+- id     0673
+  from   inventory:infix:does
+  cell   (1..3).Seq | "a b"
+  level  3
+  code   ((1..3).Seq) does ("a b")
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|26>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0674
+  from   inventory:infix:does
+  cell   (1..3).Seq | [1,2]
+  level  3
+  code   ((1..3).Seq) does ([1,2])
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|27>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2, 3).Seq
+
+- id     0675
+  from   inventory:infix:does
+  cell   (1..3).Seq | (a => 1)
+  level  3
+  code   ((1..3).Seq) does ((a => 1))
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|28>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2, 3).Seq
+
+- id     0676
+  from   inventory:infix:does
+  cell   (1..3).Seq | bag(1,1)
+  level  3
+  code   ((1..3).Seq) does (bag(1,1))
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|29>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2, 3).Seq
+
+- id     0677
+  from   inventory:infix:does
+  cell   0 | any(1,2)
+  level  3
+  code   (0) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0678
+  from   inventory:infix:does
+  cell   1 | any(1,2)
+  level  3
+  code   (1) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0679
+  from   inventory:infix:does
+  cell   -1 | any(1,2)
+  level  3
+  code   (-1) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → -1
+
+- id     0680
+  from   inventory:infix:does
+  cell   1/2 | any(1,2)
+  level  3
+  code   (1/2) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0.5
+
+- id     0681
+  from   inventory:infix:does
+  cell   0e0 | any(1,2)
+  level  3
+  code   (0e0) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0e0
+
+- id     0682
+  from   inventory:infix:does
+  cell   NaN | any(1,2)
+  level  3
+  code   (NaN) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → NaN
+
+- id     0683
+  from   inventory:infix:does
+  cell   "" | any(1,2)
+  level  3
+  code   ("") does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0684
+  from   inventory:infix:does
+  cell   "a" | any(1,2)
+  level  3
+  code   ("a") does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a"
+
+- id     0685
+  from   inventory:infix:does
+  cell   True | any(1,2)
+  level  3
+  code   (True) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0686
+  from   inventory:infix:does
+  cell   Any | any(1,2)
+  level  3
+  code   (Any) does (any(1,2))
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Any
+
+- id     0687
+  from   inventory:infix:does
+  cell   (1,2) | any(1,2)
+  level  3
+  code   ((1,2)) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2)
+
+- id     0688
+  from   inventory:infix:does
+  cell   {a=>1} | any(1,2)
+  level  3
+  code   ({a=>1}) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → {:a(1)}
+
+- id     0689
+  from   inventory:infix:does
+  cell   -0e0 | any(1,2)
+  level  3
+  code   (-0e0) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → -0e0
+
+- id     0690
+  from   inventory:infix:does
+  cell   Inf | any(1,2)
+  level  3
+  code   (Inf) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Inf
+
+- id     0691
+  from   inventory:infix:does
+  cell   2**64 | any(1,2)
+  level  3
+  code   (2**64) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 18446744073709551616
+
+- id     0692
+  from   inventory:infix:does
+  cell   False | any(1,2)
+  level  3
+  code   (False) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::False
+
+- id     0693
+  from   inventory:infix:does
+  cell   Nil | any(1,2)
+  level  3
+  code   (Nil) does (any(1,2))
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Nil
+
+- id     0694
+  from   inventory:infix:does
+  cell   () | any(1,2)
+  level  3
+  code   (()) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ()
+
+- id     0695
+  from   inventory:infix:does
+  cell   "0" | any(1,2)
+  level  3
+  code   ("0") does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "0"
+
+- id     0696
+  from   inventory:infix:does
+  cell   (1..3) | any(1,2)
+  level  3
+  code   ((1..3)) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1..3
+
+- id     0697
+  from   inventory:infix:does
+  cell   Int | any(1,2)
+  level  3
+  code   (Int) does (any(1,2))
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Int
+
+- id     0698
+  from   inventory:infix:does
+  cell   "a b" | any(1,2)
+  level  3
+  code   ("a b") does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a b"
+
+- id     0699
+  from   inventory:infix:does
+  cell   [1,2] | any(1,2)
+  level  3
+  code   ([1,2]) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → [1, 2]
+
+- id     0700
+  from   inventory:infix:does
+  cell   (a => 1) | any(1,2)
+  level  3
+  code   ((a => 1)) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → :a(1)
+
+- id     0701
+  from   inventory:infix:does
+  cell   bag(1,1) | any(1,2)
+  level  3
+  code   (bag(1,1)) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1=>2).Bag
+
+- id     0702
+  from   inventory:infix:does
+  cell   (1..3).Seq | any(1,2)
+  level  3
+  code   ((1..3).Seq) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2, 3).Seq
+
+- id     0703
+  from   inventory:infix:does
+  cell   any(1,2) | any(1,2)
+  level  3
+  code   (any(1,2)) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0704
+  from   inventory:infix:does
+  cell   any(1,2) | 0
+  level  3
+  code   (any(1,2)) does (0)
+  is     any(1, 2)
+  type   Junction+{<anon|58>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0705
+  from   inventory:infix:does
+  cell   any(1,2) | 1
+  level  3
+  code   (any(1,2)) does (1)
+  is     any(1, 2)
+  type   Junction+{<anon|59>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0706
+  from   inventory:infix:does
+  cell   any(1,2) | -1
+  level  3
+  code   (any(1,2)) does (-1)
+  is     any(1, 2)
+  type   Junction+{<anon|60>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0707
+  from   inventory:infix:does
+  cell   any(1,2) | 1/2
+  level  3
+  code   (any(1,2)) does (1/2)
+  is     any(1, 2)
+  type   Junction+{<anon|61>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0708
+  from   inventory:infix:does
+  cell   any(1,2) | 0e0
+  level  3
+  code   (any(1,2)) does (0e0)
+  is     any(1, 2)
+  type   Junction+{<anon|62>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0709
+  from   inventory:infix:does
+  cell   any(1,2) | NaN
+  level  3
+  code   (any(1,2)) does (NaN)
+  is     any(1, 2)
+  type   Junction+{<anon|63>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0710
+  from   inventory:infix:does
+  cell   any(1,2) | ""
+  level  3
+  code   (any(1,2)) does ("")
+  is     any(1, 2)
+  type   Junction+{<anon|64>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0711
+  from   inventory:infix:does
+  cell   any(1,2) | "a"
+  level  3
+  code   (any(1,2)) does ("a")
+  is     any(1, 2)
+  type   Junction+{<anon|65>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0712
+  from   inventory:infix:does
+  cell   any(1,2) | True
+  level  3
+  code   (any(1,2)) does (True)
+  is     any(1, 2)
+  type   Junction+{<anon|66>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0713
+  from   inventory:infix:does
+  cell   any(1,2) | Any
+  level  3
+  code   (any(1,2)) does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0714
+  from   inventory:infix:does
+  cell   any(1,2) | (1,2)
+  level  3
+  code   (any(1,2)) does ((1,2))
+  is     any(1, 2)
+  type   Junction+{<anon|67>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0715
+  from   inventory:infix:does
+  cell   any(1,2) | {a=>1}
+  level  3
+  code   (any(1,2)) does ({a=>1})
+  is     any(1, 2)
+  type   Junction+{<anon|68>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0716
+  from   inventory:infix:does
+  cell   any(1,2) | -0e0
+  level  3
+  code   (any(1,2)) does (-0e0)
+  is     any(1, 2)
+  type   Junction+{<anon|69>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0717
+  from   inventory:infix:does
+  cell   any(1,2) | Inf
+  level  3
+  code   (any(1,2)) does (Inf)
+  is     any(1, 2)
+  type   Junction+{<anon|70>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0718
+  from   inventory:infix:does
+  cell   any(1,2) | 2**64
+  level  3
+  code   (any(1,2)) does (2**64)
+  is     any(1, 2)
+  type   Junction+{<anon|71>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0719
+  from   inventory:infix:does
+  cell   any(1,2) | False
+  level  3
+  code   (any(1,2)) does (False)
+  is     any(1, 2)
+  type   Junction+{<anon|72>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0720
+  from   inventory:infix:does
+  cell   any(1,2) | Nil
+  level  3
+  code   (any(1,2)) does (Nil)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0721
+  from   inventory:infix:does
+  cell   any(1,2) | ()
+  level  3
+  code   (any(1,2)) does (())
+  is     any(1, 2)
+  type   Junction+{<anon|73>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0722
+  from   inventory:infix:does
+  cell   any(1,2) | "0"
+  level  3
+  code   (any(1,2)) does ("0")
+  is     any(1, 2)
+  type   Junction+{<anon|74>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0723
+  from   inventory:infix:does
+  cell   any(1,2) | (1..3)
+  level  3
+  code   (any(1,2)) does ((1..3))
+  is     any(1, 2)
+  type   Junction+{<anon|75>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0724
+  from   inventory:infix:does
+  cell   any(1,2) | Int
+  level  3
+  code   (any(1,2)) does (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0725
+  from   inventory:infix:does
+  cell   any(1,2) | "a b"
+  level  3
+  code   (any(1,2)) does ("a b")
+  is     any(1, 2)
+  type   Junction+{<anon|76>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0726
+  from   inventory:infix:does
+  cell   any(1,2) | [1,2]
+  level  3
+  code   (any(1,2)) does ([1,2])
+  is     any(1, 2)
+  type   Junction+{<anon|77>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0727
+  from   inventory:infix:does
+  cell   any(1,2) | (a => 1)
+  level  3
+  code   (any(1,2)) does ((a => 1))
+  is     any(1, 2)
+  type   Junction+{<anon|78>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0728
+  from   inventory:infix:does
+  cell   any(1,2) | bag(1,1)
+  level  3
+  code   (any(1,2)) does (bag(1,1))
+  is     any(1, 2)
+  type   Junction+{<anon|79>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0729
+  from   inventory:infix:does
+  cell   any(1,2) | (1..3).Seq
+  level  3
+  code   (any(1,2)) does ((1..3).Seq)
+  is     any(1, 2)
+  type   Junction+{<anon|80>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0730
+  from   inventory:infix:does
+  cell   0 | v1.2
+  level  3
+  code   (0) does (v1.2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0731
+  from   inventory:infix:does
+  cell   1 | v1.2
+  level  3
+  code   (1) does (v1.2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0732
+  from   inventory:infix:does
+  cell   -1 | v1.2
+  level  3
+  code   (-1) does (v1.2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0733
+  from   inventory:infix:does
+  cell   1/2 | v1.2
+  level  3
+  code   (1/2) does (v1.2)
+  is     <1/2>
+  type   Rat+{<anon|81>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0734
+  from   inventory:infix:does
+  cell   0e0 | v1.2
+  level  3
+  code   (0e0) does (v1.2)
+  is     0e0
+  type   Num+{<anon|82>}
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0735
+  from   inventory:infix:does
+  cell   NaN | v1.2
+  level  3
+  code   (NaN) does (v1.2)
+  is     NaN
+  type   Num+{<anon|83>}
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0736
+  from   inventory:infix:does
+  cell   "" | v1.2
+  level  3
+  code   ("") does (v1.2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0737
+  from   inventory:infix:does
+  cell   "a" | v1.2
+  level  3
+  code   ("a") does (v1.2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0738
+  from   inventory:infix:does
+  cell   True | v1.2
+  level  3
+  code   (True) does (v1.2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0739
+  from   inventory:infix:does
+  cell   Any | v1.2
+  level  3
+  code   (Any) does (v1.2)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0740
+  from   inventory:infix:does
+  cell   (1,2) | v1.2
+  level  3
+  code   ((1,2)) does (v1.2)
+  is     $(1, 2)
+  type   List+{<anon|84>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0741
+  from   inventory:infix:does
+  cell   {a=>1} | v1.2
+  level  3
+  code   ({a=>1}) does (v1.2)
+  is     ${:a(1)}
+  type   Hash+{<anon|85>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0742
+  from   inventory:infix:does
+  cell   -0e0 | v1.2
+  level  3
+  code   (-0e0) does (v1.2)
+  is     -0e0
+  type   Num+{<anon|86>}
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0743
+  from   inventory:infix:does
+  cell   Inf | v1.2
+  level  3
+  code   (Inf) does (v1.2)
+  is     Inf
+  type   Num+{<anon|87>}
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0744
+  from   inventory:infix:does
+  cell   2**64 | v1.2
+  level  3
+  code   (2**64) does (v1.2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0745
+  from   inventory:infix:does
+  cell   False | v1.2
+  level  3
+  code   (False) does (v1.2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0746
+  from   inventory:infix:does
+  cell   Nil | v1.2
+  level  3
+  code   (Nil) does (v1.2)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0747
+  from   inventory:infix:does
+  cell   () | v1.2
+  level  3
+  code   (()) does (v1.2)
+  is     $( )
+  type   List+{<anon|88>}
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0748
+  from   inventory:infix:does
+  cell   "0" | v1.2
+  level  3
+  code   ("0") does (v1.2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0749
+  from   inventory:infix:does
+  cell   (1..3) | v1.2
+  level  3
+  code   ((1..3)) does (v1.2)
+  is     1..3
+  type   Range+{<anon|89>}
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0750
+  from   inventory:infix:does
+  cell   Int | v1.2
+  level  3
+  code   (Int) does (v1.2)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0751
+  from   inventory:infix:does
+  cell   "a b" | v1.2
+  level  3
+  code   ("a b") does (v1.2)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0752
+  from   inventory:infix:does
+  cell   [1,2] | v1.2
+  level  3
+  code   ([1,2]) does (v1.2)
+  is     $[1, 2]
+  type   Array+{<anon|90>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0753
+  from   inventory:infix:does
+  cell   (a => 1) | v1.2
+  level  3
+  code   ((a => 1)) does (v1.2)
+  is     :a(1)
+  type   Pair+{<anon|91>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0754
+  from   inventory:infix:does
+  cell   bag(1,1) | v1.2
+  level  3
+  code   (bag(1,1)) does (v1.2)
+  is     (1=>2).Bag+{<anon|92>}
+  type   Bag+{<anon|92>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|92>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0755
+  from   inventory:infix:does
+  cell   (1..3).Seq | v1.2
+  level  3
+  code   ((1..3).Seq) does (v1.2)
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|93>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0756
+  from   inventory:infix:does
+  cell   any(1,2) | v1.2
+  level  3
+  code   (any(1,2)) does (v1.2)
+  is     any(1, 2)
+  type   Junction+{<anon|94>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0757
+  from   inventory:infix:does
+  cell   v1.2 | v1.2
+  level  3
+  code   (v1.2) does (v1.2)
+  is     v1.2
+  type   Version+{<anon|95>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0758
+  from   inventory:infix:does
+  cell   v1.2 | 0
+  level  3
+  code   (v1.2) does (0)
+  is     v1.2
+  type   Version+{<anon|96>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0759
+  from   inventory:infix:does
+  cell   v1.2 | 1
+  level  3
+  code   (v1.2) does (1)
+  is     v1.2
+  type   Version+{<anon|97>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0760
+  from   inventory:infix:does
+  cell   v1.2 | -1
+  level  3
+  code   (v1.2) does (-1)
+  is     v1.2
+  type   Version+{<anon|98>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0761
+  from   inventory:infix:does
+  cell   v1.2 | 1/2
+  level  3
+  code   (v1.2) does (1/2)
+  is     v1.2
+  type   Version+{<anon|99>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0762
+  from   inventory:infix:does
+  cell   v1.2 | 0e0
+  level  3
+  code   (v1.2) does (0e0)
+  is     v1.2
+  type   Version+{<anon|100>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0763
+  from   inventory:infix:does
+  cell   v1.2 | NaN
+  level  3
+  code   (v1.2) does (NaN)
+  is     v1.2
+  type   Version+{<anon|101>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0764
+  from   inventory:infix:does
+  cell   v1.2 | ""
+  level  3
+  code   (v1.2) does ("")
+  is     v1.2
+  type   Version+{<anon|102>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0765
+  from   inventory:infix:does
+  cell   v1.2 | "a"
+  level  3
+  code   (v1.2) does ("a")
+  is     v1.2
+  type   Version+{<anon|103>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0766
+  from   inventory:infix:does
+  cell   v1.2 | True
+  level  3
+  code   (v1.2) does (True)
+  is     v1.2
+  type   Version+{<anon|104>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0767
+  from   inventory:infix:does
+  cell   v1.2 | Any
+  level  3
+  code   (v1.2) does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → v1.2
+
+- id     0768
+  from   inventory:infix:does
+  cell   v1.2 | (1,2)
+  level  3
+  code   (v1.2) does ((1,2))
+  is     v1.2
+  type   Version+{<anon|105>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → v1.2
+
+- id     0769
+  from   inventory:infix:does
+  cell   v1.2 | {a=>1}
+  level  3
+  code   (v1.2) does ({a=>1})
+  is     v1.2
+  type   Version+{<anon|106>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → v1.2
+
+- id     0770
+  from   inventory:infix:does
+  cell   v1.2 | -0e0
+  level  3
+  code   (v1.2) does (-0e0)
+  is     v1.2
+  type   Version+{<anon|107>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0771
+  from   inventory:infix:does
+  cell   v1.2 | Inf
+  level  3
+  code   (v1.2) does (Inf)
+  is     v1.2
+  type   Version+{<anon|108>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0772
+  from   inventory:infix:does
+  cell   v1.2 | 2**64
+  level  3
+  code   (v1.2) does (2**64)
+  is     v1.2
+  type   Version+{<anon|109>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0773
+  from   inventory:infix:does
+  cell   v1.2 | False
+  level  3
+  code   (v1.2) does (False)
+  is     v1.2
+  type   Version+{<anon|110>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0774
+  from   inventory:infix:does
+  cell   v1.2 | Nil
+  level  3
+  code   (v1.2) does (Nil)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → v1.2
+
+- id     0775
+  from   inventory:infix:does
+  cell   v1.2 | ()
+  level  3
+  code   (v1.2) does (())
+  is     v1.2
+  type   Version+{<anon|111>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → v1.2
+
+- id     0776
+  from   inventory:infix:does
+  cell   v1.2 | "0"
+  level  3
+  code   (v1.2) does ("0")
+  is     v1.2
+  type   Version+{<anon|112>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0777
+  from   inventory:infix:does
+  cell   v1.2 | (1..3)
+  level  3
+  code   (v1.2) does ((1..3))
+  is     v1.2
+  type   Version+{<anon|113>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → v1.2
+
+- id     0778
+  from   inventory:infix:does
+  cell   v1.2 | Int
+  level  3
+  code   (v1.2) does (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → v1.2
+
+- id     0779
+  from   inventory:infix:does
+  cell   v1.2 | "a b"
+  level  3
+  code   (v1.2) does ("a b")
+  is     v1.2
+  type   Version+{<anon|114>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0780
+  from   inventory:infix:does
+  cell   v1.2 | [1,2]
+  level  3
+  code   (v1.2) does ([1,2])
+  is     v1.2
+  type   Version+{<anon|115>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → v1.2
+
+- id     0781
+  from   inventory:infix:does
+  cell   v1.2 | (a => 1)
+  level  3
+  code   (v1.2) does ((a => 1))
+  is     v1.2
+  type   Version+{<anon|116>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → v1.2
+
+- id     0782
+  from   inventory:infix:does
+  cell   v1.2 | bag(1,1)
+  level  3
+  code   (v1.2) does (bag(1,1))
+  is     v1.2
+  type   Version+{<anon|117>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → v1.2
+
+- id     0783
+  from   inventory:infix:does
+  cell   v1.2 | (1..3).Seq
+  level  3
+  code   (v1.2) does ((1..3).Seq)
+  is     v1.2
+  type   Version+{<anon|118>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → v1.2
+
+- id     0784
+  from   inventory:infix:does
+  cell   v1.2 | any(1,2)
+  level  3
+  code   (v1.2) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → v1.2
+
+- id     0785
+  from   inventory:infix:does
+  cell   0 | 1+2i
+  level  3
+  code   (0) does (1+2i)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0786
+  from   inventory:infix:does
+  cell   1 | 1+2i
+  level  3
+  code   (1) does (1+2i)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0787
+  from   inventory:infix:does
+  cell   -1 | 1+2i
+  level  3
+  code   (-1) does (1+2i)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0788
+  from   inventory:infix:does
+  cell   1/2 | 1+2i
+  level  3
+  code   (1/2) does (1+2i)
+  is     <1/2>
+  type   Rat+{<anon|121>}
+  oracle rakudo-2026.07 → <1/2>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0789
+  from   inventory:infix:does
+  cell   0e0 | 1+2i
+  level  3
+  code   (0e0) does (1+2i)
+  is     0e0
+  type   Num+{<anon|122>}
+  oracle rakudo-2026.07 → 0e0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0790
+  from   inventory:infix:does
+  cell   NaN | 1+2i
+  level  3
+  code   (NaN) does (1+2i)
+  is     NaN
+  type   Num+{<anon|123>}
+  oracle rakudo-2026.07 → NaN
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0791
+  from   inventory:infix:does
+  cell   "" | 1+2i
+  level  3
+  code   ("") does (1+2i)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0792
+  from   inventory:infix:does
+  cell   "a" | 1+2i
+  level  3
+  code   ("a") does (1+2i)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0793
+  from   inventory:infix:does
+  cell   True | 1+2i
+  level  3
+  code   (True) does (1+2i)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0794
+  from   inventory:infix:does
+  cell   Any | 1+2i
+  level  3
+  code   (Any) does (1+2i)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0795
+  from   inventory:infix:does
+  cell   (1,2) | 1+2i
+  level  3
+  code   ((1,2)) does (1+2i)
+  is     $(1, 2)
+  type   List+{<anon|124>}
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0796
+  from   inventory:infix:does
+  cell   {a=>1} | 1+2i
+  level  3
+  code   ({a=>1}) does (1+2i)
+  is     ${:a(1)}
+  type   Hash+{<anon|125>}
+  oracle rakudo-2026.07 → ${:a(1)}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0797
+  from   inventory:infix:does
+  cell   -0e0 | 1+2i
+  level  3
+  code   (-0e0) does (1+2i)
+  is     -0e0
+  type   Num+{<anon|126>}
+  oracle rakudo-2026.07 → -0e0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0798
+  from   inventory:infix:does
+  cell   Inf | 1+2i
+  level  3
+  code   (Inf) does (1+2i)
+  is     Inf
+  type   Num+{<anon|127>}
+  oracle rakudo-2026.07 → Inf
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0799
+  from   inventory:infix:does
+  cell   2**64 | 1+2i
+  level  3
+  code   (2**64) does (1+2i)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0800
+  from   inventory:infix:does
+  cell   False | 1+2i
+  level  3
+  code   (False) does (1+2i)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0801
+  from   inventory:infix:does
+  cell   Nil | 1+2i
+  level  3
+  code   (Nil) does (1+2i)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0802
+  from   inventory:infix:does
+  cell   () | 1+2i
+  level  3
+  code   (()) does (1+2i)
+  is     $( )
+  type   List+{<anon|128>}
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0803
+  from   inventory:infix:does
+  cell   "0" | 1+2i
+  level  3
+  code   ("0") does (1+2i)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0804
+  from   inventory:infix:does
+  cell   (1..3) | 1+2i
+  level  3
+  code   ((1..3)) does (1+2i)
+  is     1..3
+  type   Range+{<anon|129>}
+  oracle rakudo-2026.07 → 1..3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0805
+  from   inventory:infix:does
+  cell   Int | 1+2i
+  level  3
+  code   (Int) does (1+2i)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0806
+  from   inventory:infix:does
+  cell   "a b" | 1+2i
+  level  3
+  code   ("a b") does (1+2i)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0807
+  from   inventory:infix:does
+  cell   [1,2] | 1+2i
+  level  3
+  code   ([1,2]) does (1+2i)
+  is     $[1, 2]
+  type   Array+{<anon|130>}
+  oracle rakudo-2026.07 → $[1, 2]
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0808
+  from   inventory:infix:does
+  cell   (a => 1) | 1+2i
+  level  3
+  code   ((a => 1)) does (1+2i)
+  is     :a(1)
+  type   Pair+{<anon|131>}
+  oracle rakudo-2026.07 → :a(1)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0809
+  from   inventory:infix:does
+  cell   bag(1,1) | 1+2i
+  level  3
+  code   (bag(1,1)) does (1+2i)
+  is     (1=>2).Bag+{<anon|132>}
+  type   Bag+{<anon|132>}
+  oracle rakudo-2026.07 → (1=>2).Bag+{<anon|132>}
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0810
+  from   inventory:infix:does
+  cell   (1..3).Seq | 1+2i
+  level  3
+  code   ((1..3).Seq) does (1+2i)
+  is     $((1, 2, 3).Seq)
+  type   Seq+{<anon|133>}
+  oracle rakudo-2026.07 → $((1, 2, 3).Seq)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0811
+  from   inventory:infix:does
+  cell   any(1,2) | 1+2i
+  level  3
+  code   (any(1,2)) does (1+2i)
+  is     any(1, 2)
+  type   Junction+{<anon|134>}
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0812
+  from   inventory:infix:does
+  cell   v1.2 | 1+2i
+  level  3
+  code   (v1.2) does (1+2i)
+  is     v1.2
+  type   Version+{<anon|135>}
+  oracle rakudo-2026.07 → v1.2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0813
+  from   inventory:infix:does
+  cell   1+2i | 1+2i
+  level  3
+  code   (1+2i) does (1+2i)
+  is     <1+2i>
+  type   Complex+{<anon|136>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0814
+  from   inventory:infix:does
+  cell   1+2i | 0
+  level  3
+  code   (1+2i) does (0)
+  is     <1+2i>
+  type   Complex+{<anon|137>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0815
+  from   inventory:infix:does
+  cell   1+2i | 1
+  level  3
+  code   (1+2i) does (1)
+  is     <1+2i>
+  type   Complex+{<anon|138>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0816
+  from   inventory:infix:does
+  cell   1+2i | -1
+  level  3
+  code   (1+2i) does (-1)
+  is     <1+2i>
+  type   Complex+{<anon|139>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0817
+  from   inventory:infix:does
+  cell   1+2i | 1/2
+  level  3
+  code   (1+2i) does (1/2)
+  is     <1+2i>
+  type   Complex+{<anon|140>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0818
+  from   inventory:infix:does
+  cell   1+2i | 0e0
+  level  3
+  code   (1+2i) does (0e0)
+  is     <1+2i>
+  type   Complex+{<anon|141>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0819
+  from   inventory:infix:does
+  cell   1+2i | NaN
+  level  3
+  code   (1+2i) does (NaN)
+  is     <1+2i>
+  type   Complex+{<anon|142>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0820
+  from   inventory:infix:does
+  cell   1+2i | ""
+  level  3
+  code   (1+2i) does ("")
+  is     <>
+  type   Complex+{<anon|143>}
+  oracle rakudo-2026.07 → <>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0821
+  from   inventory:infix:does
+  cell   1+2i | "a"
+  level  3
+  code   (1+2i) does ("a")
+  is     <a>
+  type   Complex+{<anon|144>}
+  oracle rakudo-2026.07 → <a>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0822
+  from   inventory:infix:does
+  cell   1+2i | True
+  level  3
+  code   (1+2i) does (True)
+  is     <1+2i>
+  type   Complex+{<anon|145>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0823
+  from   inventory:infix:does
+  cell   1+2i | Any
+  level  3
+  code   (1+2i) does (Any)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → <1+2i>
+
+- id     0824
+  from   inventory:infix:does
+  cell   1+2i | (1,2)
+  level  3
+  code   (1+2i) does ((1,2))
+  is     <1+2i>
+  type   Complex+{<anon|146>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → <1+2i>
+
+- id     0825
+  from   inventory:infix:does
+  cell   1+2i | {a=>1}
+  level  3
+  code   (1+2i) does ({a=>1})
+  is     <1+2i>
+  type   Complex+{<anon|147>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → <1+2i>
+
+- id     0826
+  from   inventory:infix:does
+  cell   1+2i | -0e0
+  level  3
+  code   (1+2i) does (-0e0)
+  is     <1+2i>
+  type   Complex+{<anon|148>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0827
+  from   inventory:infix:does
+  cell   1+2i | Inf
+  level  3
+  code   (1+2i) does (Inf)
+  is     <1+2i>
+  type   Complex+{<anon|149>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0828
+  from   inventory:infix:does
+  cell   1+2i | 2**64
+  level  3
+  code   (1+2i) does (2**64)
+  is     <1+2i>
+  type   Complex+{<anon|150>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0829
+  from   inventory:infix:does
+  cell   1+2i | False
+  level  3
+  code   (1+2i) does (False)
+  is     <1+2i>
+  type   Complex+{<anon|151>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0830
+  from   inventory:infix:does
+  cell   1+2i | Nil
+  level  3
+  code   (1+2i) does (Nil)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → <1+2i>
+
+- id     0831
+  from   inventory:infix:does
+  cell   1+2i | ()
+  level  3
+  code   (1+2i) does (())
+  is     <1+2i>
+  type   Complex+{<anon|152>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → <1+2i>
+
+- id     0832
+  from   inventory:infix:does
+  cell   1+2i | "0"
+  level  3
+  code   (1+2i) does ("0")
+  is     <0>
+  type   Complex+{<anon|153>}
+  oracle rakudo-2026.07 → <0>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0833
+  from   inventory:infix:does
+  cell   1+2i | (1..3)
+  level  3
+  code   (1+2i) does ((1..3))
+  is     <1+2i>
+  type   Complex+{<anon|154>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → <1+2i>
+
+- id     0834
+  from   inventory:infix:does
+  cell   1+2i | Int
+  level  3
+  code   (1+2i) does (Int)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → <1+2i>
+
+- id     0835
+  from   inventory:infix:does
+  cell   1+2i | "a b"
+  level  3
+  code   (1+2i) does ("a b")
+  is     <a b>
+  type   Complex+{<anon|155>}
+  oracle rakudo-2026.07 → <a b>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0836
+  from   inventory:infix:does
+  cell   1+2i | [1,2]
+  level  3
+  code   (1+2i) does ([1,2])
+  is     <1+2i>
+  type   Complex+{<anon|156>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → <1+2i>
+
+- id     0837
+  from   inventory:infix:does
+  cell   1+2i | (a => 1)
+  level  3
+  code   (1+2i) does ((a => 1))
+  is     <1+2i>
+  type   Complex+{<anon|157>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → <1+2i>
+
+- id     0838
+  from   inventory:infix:does
+  cell   1+2i | bag(1,1)
+  level  3
+  code   (1+2i) does (bag(1,1))
+  is     <1+2i>
+  type   Complex+{<anon|158>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → <1+2i>
+
+- id     0839
+  from   inventory:infix:does
+  cell   1+2i | (1..3).Seq
+  level  3
+  code   (1+2i) does ((1..3).Seq)
+  is     <1+2i>
+  type   Complex+{<anon|1>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → <1+2i>
+
+- id     0840
+  from   inventory:infix:does
+  cell   1+2i | any(1,2)
+  level  3
+  code   (1+2i) does (any(1,2))
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → <1+2i>
+
+- id     0841
+  from   inventory:infix:does
+  cell   1+2i | v1.2
+  level  3
+  code   (1+2i) does (v1.2)
+  is     <1+2i>
+  type   Complex+{<anon|4>}
+  oracle rakudo-2026.07 → <1+2i>
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0842
+  from   inventory:infix:does
+  cell   0 | Str
+  level  3
+  code   (0) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0843
+  from   inventory:infix:does
+  cell   1 | Str
+  level  3
+  code   (1) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0844
+  from   inventory:infix:does
+  cell   -1 | Str
+  level  3
+  code   (-1) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → -1
+
+- id     0845
+  from   inventory:infix:does
+  cell   1/2 | Str
+  level  3
+  code   (1/2) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0.5
+
+- id     0846
+  from   inventory:infix:does
+  cell   0e0 | Str
+  level  3
+  code   (0e0) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0e0
+
+- id     0847
+  from   inventory:infix:does
+  cell   NaN | Str
+  level  3
+  code   (NaN) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → NaN
+
+- id     0848
+  from   inventory:infix:does
+  cell   "" | Str
+  level  3
+  code   ("") does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0849
+  from   inventory:infix:does
+  cell   "a" | Str
+  level  3
+  code   ("a") does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a"
+
+- id     0850
+  from   inventory:infix:does
+  cell   True | Str
+  level  3
+  code   (True) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0851
+  from   inventory:infix:does
+  cell   Any | Str
+  level  3
+  code   (Any) does (Str)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Any
+
+- id     0852
+  from   inventory:infix:does
+  cell   (1,2) | Str
+  level  3
+  code   ((1,2)) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2)
+
+- id     0853
+  from   inventory:infix:does
+  cell   {a=>1} | Str
+  level  3
+  code   ({a=>1}) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → {:a(1)}
+
+- id     0854
+  from   inventory:infix:does
+  cell   -0e0 | Str
+  level  3
+  code   (-0e0) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → -0e0
+
+- id     0855
+  from   inventory:infix:does
+  cell   Inf | Str
+  level  3
+  code   (Inf) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Inf
+
+- id     0856
+  from   inventory:infix:does
+  cell   2**64 | Str
+  level  3
+  code   (2**64) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 18446744073709551616
+
+- id     0857
+  from   inventory:infix:does
+  cell   False | Str
+  level  3
+  code   (False) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::False
+
+- id     0858
+  from   inventory:infix:does
+  cell   Nil | Str
+  level  3
+  code   (Nil) does (Str)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Nil
+
+- id     0859
+  from   inventory:infix:does
+  cell   () | Str
+  level  3
+  code   (()) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ()
+
+- id     0860
+  from   inventory:infix:does
+  cell   "0" | Str
+  level  3
+  code   ("0") does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "0"
+
+- id     0861
+  from   inventory:infix:does
+  cell   (1..3) | Str
+  level  3
+  code   ((1..3)) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1..3
+
+- id     0862
+  from   inventory:infix:does
+  cell   Int | Str
+  level  3
+  code   (Int) does (Str)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Int
+
+- id     0863
+  from   inventory:infix:does
+  cell   "a b" | Str
+  level  3
+  code   ("a b") does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a b"
+
+- id     0864
+  from   inventory:infix:does
+  cell   [1,2] | Str
+  level  3
+  code   ([1,2]) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → [1, 2]
+
+- id     0865
+  from   inventory:infix:does
+  cell   (a => 1) | Str
+  level  3
+  code   ((a => 1)) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → :a(1)
+
+- id     0866
+  from   inventory:infix:does
+  cell   bag(1,1) | Str
+  level  3
+  code   (bag(1,1)) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1=>2).Bag
+
+- id     0867
+  from   inventory:infix:does
+  cell   (1..3).Seq | Str
+  level  3
+  code   ((1..3).Seq) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → (1, 2, 3).Seq
+
+- id     0868
+  from   inventory:infix:does
+  cell   any(1,2) | Str
+  level  3
+  code   (any(1,2)) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → any(1, 2)
+
+- id     0869
+  from   inventory:infix:does
+  cell   v1.2 | Str
+  level  3
+  code   (v1.2) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → v1.2
+
+- id     0870
+  from   inventory:infix:does
+  cell   1+2i | Str
+  level  3
+  code   (1+2i) does (Str)
+  throws X::Mixin::NotComposable
+  oracle rakudo-2026.07 → ERR:X::Mixin::NotComposable
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → <1+2i>
+
+- id     0871
+  from   inventory:infix:does
+  cell   Str | Str
+  level  3
+  code   (Str) does (Str)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Str
+
+- id     0872
+  from   inventory:infix:does
+  cell   Str | 0
+  level  3
+  code   (Str) does (0)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0873
+  from   inventory:infix:does
+  cell   Str | 1
+  level  3
+  code   (Str) does (1)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0874
+  from   inventory:infix:does
+  cell   Str | -1
+  level  3
+  code   (Str) does (-1)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0875
+  from   inventory:infix:does
+  cell   Str | 1/2
+  level  3
+  code   (Str) does (1/2)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0876
+  from   inventory:infix:does
+  cell   Str | 0e0
+  level  3
+  code   (Str) does (0e0)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0877
+  from   inventory:infix:does
+  cell   Str | NaN
+  level  3
+  code   (Str) does (NaN)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0878
+  from   inventory:infix:does
+  cell   Str | ""
+  level  3
+  code   (Str) does ("")
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0879
+  from   inventory:infix:does
+  cell   Str | "a"
+  level  3
+  code   (Str) does ("a")
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0880
+  from   inventory:infix:does
+  cell   Str | True
+  level  3
+  code   (Str) does (True)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0881
+  from   inventory:infix:does
+  cell   Str | Any
+  level  3
+  code   (Str) does (Any)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Str
+
+- id     0882
+  from   inventory:infix:does
+  cell   Str | (1,2)
+  level  3
+  code   (Str) does ((1,2))
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Str
+
+- id     0883
+  from   inventory:infix:does
+  cell   Str | {a=>1}
+  level  3
+  code   (Str) does ({a=>1})
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Str
+
+- id     0884
+  from   inventory:infix:does
+  cell   Str | -0e0
+  level  3
+  code   (Str) does (-0e0)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0885
+  from   inventory:infix:does
+  cell   Str | Inf
+  level  3
+  code   (Str) does (Inf)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0886
+  from   inventory:infix:does
+  cell   Str | 2**64
+  level  3
+  code   (Str) does (2**64)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0887
+  from   inventory:infix:does
+  cell   Str | False
+  level  3
+  code   (Str) does (False)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0888
+  from   inventory:infix:does
+  cell   Str | Nil
+  level  3
+  code   (Str) does (Nil)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Str
+
+- id     0889
+  from   inventory:infix:does
+  cell   Str | ()
+  level  3
+  code   (Str) does (())
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Str
+
+- id     0890
+  from   inventory:infix:does
+  cell   Str | "0"
+  level  3
+  code   (Str) does ("0")
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0891
+  from   inventory:infix:does
+  cell   Str | (1..3)
+  level  3
+  code   (Str) does ((1..3))
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Str
+
+- id     0892
+  from   inventory:infix:does
+  cell   Str | Int
+  level  3
+  code   (Str) does (Int)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Str
+
+- id     0893
+  from   inventory:infix:does
+  cell   Str | "a b"
+  level  3
+  code   (Str) does ("a b")
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0894
+  from   inventory:infix:does
+  cell   Str | [1,2]
+  level  3
+  code   (Str) does ([1,2])
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Str
+
+- id     0895
+  from   inventory:infix:does
+  cell   Str | (a => 1)
+  level  3
+  code   (Str) does ((a => 1))
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Str
+
+- id     0896
+  from   inventory:infix:does
+  cell   Str | bag(1,1)
+  level  3
+  code   (Str) does (bag(1,1))
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Str
+
+- id     0897
+  from   inventory:infix:does
+  cell   Str | (1..3).Seq
+  level  3
+  code   (Str) does ((1..3).Seq)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Str
+
+- id     0898
+  from   inventory:infix:does
+  cell   Str | any(1,2)
+  level  3
+  code   (Str) does (any(1,2))
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Str
+
+- id     0899
+  from   inventory:infix:does
+  cell   Str | v1.2
+  level  3
+  code   (Str) does (v1.2)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc
+
+- id     0900
+  from   inventory:infix:does
+  cell   Str | 1+2i
+  level  3
+  code   (Str) does (1+2i)
+  throws X::Does::TypeObject
+  oracle rakudo-2026.07 → ERR:X::Does::TypeObject
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ERR:X::AdHoc

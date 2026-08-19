@@ -1,0 +1,1286 @@
+atom     regexes/5c53
+source   generated
+gen      gen/regex.raku
+pattern  /\S/
+axes     "a" | "abc" | "" | "aaa" | "ABC" | "a b" | "a,b" | "123" | "a\nb" | " a " | "aä" | "e\c[COMBINING ACUTE ACCENT]" | "abcabc" | "0" | "_" | "a1b2"
+cols     matches | matched | from | captures | subst | subst-g | comb-count | split
+
+- id     0001
+  from   regex:matches
+  cell   "a" | matches
+  level  1
+  code   so("a" ~~ /\S/)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0002
+  from   regex:matched
+  cell   "a" | matched
+  level  1
+  code   ("a" ~~ /\S/).Str
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a"
+
+- id     0003
+  from   regex:from
+  cell   "a" | from
+  level  1
+  code   ("a" ~~ /\S/).from
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0004
+  from   regex:captures
+  cell   "a" | captures
+  level  1
+  code   ("a" ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0005
+  from   regex:subst
+  cell   "a" | subst
+  level  1
+  code   "a".subst(/\S/, "X")
+  is     "X"
+  type   Str
+  oracle rakudo-2026.07 → "X"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "X"
+
+- id     0006
+  from   regex:subst-g
+  cell   "a" | subst-g
+  level  1
+  code   "a".subst(/\S/, "X", :g)
+  is     "X"
+  type   Str
+  oracle rakudo-2026.07 → "X"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "X"
+
+- id     0007
+  from   regex:comb-count
+  cell   "a" | comb-count
+  level  1
+  code   "a".comb(/\S/).elems
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0008
+  from   regex:split
+  cell   "a" | split
+  level  1
+  code   "a".split(/\S/).elems
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 2
+
+- id     0009
+  from   regex:matches
+  cell   "abc" | matches
+  level  1
+  code   so("abc" ~~ /\S/)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0010
+  from   regex:matched
+  cell   "abc" | matched
+  level  1
+  code   ("abc" ~~ /\S/).Str
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a"
+
+- id     0011
+  from   regex:from
+  cell   "abc" | from
+  level  1
+  code   ("abc" ~~ /\S/).from
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0012
+  from   regex:captures
+  cell   "abc" | captures
+  level  1
+  code   ("abc" ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0013
+  from   regex:subst
+  cell   "abc" | subst
+  level  1
+  code   "abc".subst(/\S/, "X")
+  is     "Xbc"
+  type   Str
+  oracle rakudo-2026.07 → "Xbc"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "Xbc"
+
+- id     0014
+  from   regex:subst-g
+  cell   "abc" | subst-g
+  level  1
+  code   "abc".subst(/\S/, "X", :g)
+  is     "XXX"
+  type   Str
+  oracle rakudo-2026.07 → "XXX"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "XXX"
+
+- id     0015
+  from   regex:comb-count
+  cell   "abc" | comb-count
+  level  1
+  code   "abc".comb(/\S/).elems
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 3
+
+- id     0016
+  from   regex:split
+  cell   "abc" | split
+  level  1
+  code   "abc".split(/\S/).elems
+  is     4
+  type   Int
+  oracle rakudo-2026.07 → 4
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 4
+
+- id     0017
+  from   regex:matches
+  cell   "" | matches
+  level  1
+  code   so("" ~~ /\S/)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::False
+
+- id     0018
+  from   regex:matched
+  cell   "" | matched
+  level  1
+  code   ("" ~~ /\S/).Str
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0019
+  from   regex:from
+  cell   "" | from
+  level  1
+  code   ("" ~~ /\S/).from
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Any
+
+- id     0020
+  from   regex:captures
+  cell   "" | captures
+  level  1
+  code   ("" ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0021
+  from   regex:subst
+  cell   "" | subst
+  level  1
+  code   "".subst(/\S/, "X")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0022
+  from   regex:subst-g
+  cell   "" | subst-g
+  level  1
+  code   "".subst(/\S/, "X", :g)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0023
+  from   regex:comb-count
+  cell   "" | comb-count
+  level  1
+  code   "".comb(/\S/).elems
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0024
+  from   regex:split
+  cell   "" | split
+  level  1
+  code   "".split(/\S/).elems
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0025
+  from   regex:matches
+  cell   "aaa" | matches
+  level  1
+  code   so("aaa" ~~ /\S/)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0026
+  from   regex:matched
+  cell   "aaa" | matched
+  level  1
+  code   ("aaa" ~~ /\S/).Str
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a"
+
+- id     0027
+  from   regex:from
+  cell   "aaa" | from
+  level  1
+  code   ("aaa" ~~ /\S/).from
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0028
+  from   regex:captures
+  cell   "aaa" | captures
+  level  1
+  code   ("aaa" ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0029
+  from   regex:subst
+  cell   "aaa" | subst
+  level  1
+  code   "aaa".subst(/\S/, "X")
+  is     "Xaa"
+  type   Str
+  oracle rakudo-2026.07 → "Xaa"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "Xaa"
+
+- id     0030
+  from   regex:subst-g
+  cell   "aaa" | subst-g
+  level  1
+  code   "aaa".subst(/\S/, "X", :g)
+  is     "XXX"
+  type   Str
+  oracle rakudo-2026.07 → "XXX"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "XXX"
+
+- id     0031
+  from   regex:comb-count
+  cell   "aaa" | comb-count
+  level  1
+  code   "aaa".comb(/\S/).elems
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 3
+
+- id     0032
+  from   regex:split
+  cell   "aaa" | split
+  level  1
+  code   "aaa".split(/\S/).elems
+  is     4
+  type   Int
+  oracle rakudo-2026.07 → 4
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 4
+
+- id     0033
+  from   regex:matches
+  cell   "ABC" | matches
+  level  1
+  code   so("ABC" ~~ /\S/)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0034
+  from   regex:matched
+  cell   "ABC" | matched
+  level  1
+  code   ("ABC" ~~ /\S/).Str
+  is     "A"
+  type   Str
+  oracle rakudo-2026.07 → "A"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "A"
+
+- id     0035
+  from   regex:from
+  cell   "ABC" | from
+  level  1
+  code   ("ABC" ~~ /\S/).from
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0036
+  from   regex:captures
+  cell   "ABC" | captures
+  level  1
+  code   ("ABC" ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0037
+  from   regex:subst
+  cell   "ABC" | subst
+  level  1
+  code   "ABC".subst(/\S/, "X")
+  is     "XBC"
+  type   Str
+  oracle rakudo-2026.07 → "XBC"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "XBC"
+
+- id     0038
+  from   regex:subst-g
+  cell   "ABC" | subst-g
+  level  1
+  code   "ABC".subst(/\S/, "X", :g)
+  is     "XXX"
+  type   Str
+  oracle rakudo-2026.07 → "XXX"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "XXX"
+
+- id     0039
+  from   regex:comb-count
+  cell   "ABC" | comb-count
+  level  1
+  code   "ABC".comb(/\S/).elems
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 3
+
+- id     0040
+  from   regex:split
+  cell   "ABC" | split
+  level  1
+  code   "ABC".split(/\S/).elems
+  is     4
+  type   Int
+  oracle rakudo-2026.07 → 4
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 4
+
+- id     0041
+  from   regex:matches
+  cell   "a b" | matches
+  level  1
+  code   so("a b" ~~ /\S/)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0042
+  from   regex:matched
+  cell   "a b" | matched
+  level  1
+  code   ("a b" ~~ /\S/).Str
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a"
+
+- id     0043
+  from   regex:from
+  cell   "a b" | from
+  level  1
+  code   ("a b" ~~ /\S/).from
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0044
+  from   regex:captures
+  cell   "a b" | captures
+  level  1
+  code   ("a b" ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0045
+  from   regex:subst
+  cell   "a b" | subst
+  level  1
+  code   "a b".subst(/\S/, "X")
+  is     "X b"
+  type   Str
+  oracle rakudo-2026.07 → "X b"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "X b"
+
+- id     0046
+  from   regex:subst-g
+  cell   "a b" | subst-g
+  level  1
+  code   "a b".subst(/\S/, "X", :g)
+  is     "X X"
+  type   Str
+  oracle rakudo-2026.07 → "X X"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "X X"
+
+- id     0047
+  from   regex:comb-count
+  cell   "a b" | comb-count
+  level  1
+  code   "a b".comb(/\S/).elems
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 2
+
+- id     0048
+  from   regex:split
+  cell   "a b" | split
+  level  1
+  code   "a b".split(/\S/).elems
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 3
+
+- id     0049
+  from   regex:matches
+  cell   "a,b" | matches
+  level  1
+  code   so("a,b" ~~ /\S/)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0050
+  from   regex:matched
+  cell   "a,b" | matched
+  level  1
+  code   ("a,b" ~~ /\S/).Str
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a"
+
+- id     0051
+  from   regex:from
+  cell   "a,b" | from
+  level  1
+  code   ("a,b" ~~ /\S/).from
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0052
+  from   regex:captures
+  cell   "a,b" | captures
+  level  1
+  code   ("a,b" ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0053
+  from   regex:subst
+  cell   "a,b" | subst
+  level  1
+  code   "a,b".subst(/\S/, "X")
+  is     "X,b"
+  type   Str
+  oracle rakudo-2026.07 → "X,b"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "X,b"
+
+- id     0054
+  from   regex:subst-g
+  cell   "a,b" | subst-g
+  level  1
+  code   "a,b".subst(/\S/, "X", :g)
+  is     "XXX"
+  type   Str
+  oracle rakudo-2026.07 → "XXX"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "XXX"
+
+- id     0055
+  from   regex:comb-count
+  cell   "a,b" | comb-count
+  level  1
+  code   "a,b".comb(/\S/).elems
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 3
+
+- id     0056
+  from   regex:split
+  cell   "a,b" | split
+  level  1
+  code   "a,b".split(/\S/).elems
+  is     4
+  type   Int
+  oracle rakudo-2026.07 → 4
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 4
+
+- id     0057
+  from   regex:matches
+  cell   "123" | matches
+  level  1
+  code   so("123" ~~ /\S/)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0058
+  from   regex:matched
+  cell   "123" | matched
+  level  1
+  code   ("123" ~~ /\S/).Str
+  is     "1"
+  type   Str
+  oracle rakudo-2026.07 → "1"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "1"
+
+- id     0059
+  from   regex:from
+  cell   "123" | from
+  level  1
+  code   ("123" ~~ /\S/).from
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0060
+  from   regex:captures
+  cell   "123" | captures
+  level  1
+  code   ("123" ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0061
+  from   regex:subst
+  cell   "123" | subst
+  level  1
+  code   "123".subst(/\S/, "X")
+  is     "X23"
+  type   Str
+  oracle rakudo-2026.07 → "X23"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "X23"
+
+- id     0062
+  from   regex:subst-g
+  cell   "123" | subst-g
+  level  1
+  code   "123".subst(/\S/, "X", :g)
+  is     "XXX"
+  type   Str
+  oracle rakudo-2026.07 → "XXX"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "XXX"
+
+- id     0063
+  from   regex:comb-count
+  cell   "123" | comb-count
+  level  1
+  code   "123".comb(/\S/).elems
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 3
+
+- id     0064
+  from   regex:split
+  cell   "123" | split
+  level  1
+  code   "123".split(/\S/).elems
+  is     4
+  type   Int
+  oracle rakudo-2026.07 → 4
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 4
+
+- id     0065
+  from   regex:matches
+  cell   "a\nb" | matches
+  level  1
+  code   so("a\nb" ~~ /\S/)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0066
+  from   regex:matched
+  cell   "a\nb" | matched
+  level  1
+  code   ("a\nb" ~~ /\S/).Str
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a"
+
+- id     0067
+  from   regex:from
+  cell   "a\nb" | from
+  level  1
+  code   ("a\nb" ~~ /\S/).from
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0068
+  from   regex:captures
+  cell   "a\nb" | captures
+  level  1
+  code   ("a\nb" ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0069
+  from   regex:subst
+  cell   "a\nb" | subst
+  level  1
+  code   "a\nb".subst(/\S/, "X")
+  is     "X\nb"
+  type   Str
+  oracle rakudo-2026.07 → "X\nb"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "X\nb"
+
+- id     0070
+  from   regex:subst-g
+  cell   "a\nb" | subst-g
+  level  1
+  code   "a\nb".subst(/\S/, "X", :g)
+  is     "X\nX"
+  type   Str
+  oracle rakudo-2026.07 → "X\nX"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "X\nX"
+
+- id     0071
+  from   regex:comb-count
+  cell   "a\nb" | comb-count
+  level  1
+  code   "a\nb".comb(/\S/).elems
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 2
+
+- id     0072
+  from   regex:split
+  cell   "a\nb" | split
+  level  1
+  code   "a\nb".split(/\S/).elems
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 3
+
+- id     0073
+  from   regex:matches
+  cell   " a " | matches
+  level  1
+  code   so(" a " ~~ /\S/)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0074
+  from   regex:matched
+  cell   " a " | matched
+  level  1
+  code   (" a " ~~ /\S/).Str
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a"
+
+- id     0075
+  from   regex:from
+  cell   " a " | from
+  level  1
+  code   (" a " ~~ /\S/).from
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0076
+  from   regex:captures
+  cell   " a " | captures
+  level  1
+  code   (" a " ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0077
+  from   regex:subst
+  cell   " a " | subst
+  level  1
+  code   " a ".subst(/\S/, "X")
+  is     " X "
+  type   Str
+  oracle rakudo-2026.07 → " X "
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → " X "
+
+- id     0078
+  from   regex:subst-g
+  cell   " a " | subst-g
+  level  1
+  code   " a ".subst(/\S/, "X", :g)
+  is     " X "
+  type   Str
+  oracle rakudo-2026.07 → " X "
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → " X "
+
+- id     0079
+  from   regex:comb-count
+  cell   " a " | comb-count
+  level  1
+  code   " a ".comb(/\S/).elems
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0080
+  from   regex:split
+  cell   " a " | split
+  level  1
+  code   " a ".split(/\S/).elems
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 2
+
+- id     0081
+  from   regex:matches
+  cell   "aä" | matches
+  level  1
+  code   so("aä" ~~ /\S/)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0082
+  from   regex:matched
+  cell   "aä" | matched
+  level  1
+  code   ("aä" ~~ /\S/).Str
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a"
+
+- id     0083
+  from   regex:from
+  cell   "aä" | from
+  level  1
+  code   ("aä" ~~ /\S/).from
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0084
+  from   regex:captures
+  cell   "aä" | captures
+  level  1
+  code   ("aä" ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0085
+  from   regex:subst
+  cell   "aä" | subst
+  level  1
+  code   "aä".subst(/\S/, "X")
+  is     "Xä"
+  type   Str
+  oracle rakudo-2026.07 → "Xä"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "Xä"
+
+- id     0086
+  from   regex:subst-g
+  cell   "aä" | subst-g
+  level  1
+  code   "aä".subst(/\S/, "X", :g)
+  is     "XX"
+  type   Str
+  oracle rakudo-2026.07 → "XX"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "XX"
+
+- id     0087
+  from   regex:comb-count
+  cell   "aä" | comb-count
+  level  1
+  code   "aä".comb(/\S/).elems
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 2
+
+- id     0088
+  from   regex:split
+  cell   "aä" | split
+  level  1
+  code   "aä".split(/\S/).elems
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 3
+
+- id     0089
+  from   regex:matches
+  cell   "e\c[COMBINING ACUTE ACCENT]" | matches
+  level  1
+  code   so("e\c[COMBINING ACUTE ACCENT]" ~~ /\S/)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0090
+  from   regex:matched
+  cell   "e\c[COMBINING ACUTE ACCENT]" | matched
+  level  1
+  code   ("e\c[COMBINING ACUTE ACCENT]" ~~ /\S/).Str
+  is     "é"
+  type   Str
+  oracle rakudo-2026.07 → "é"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "é"
+
+- id     0091
+  from   regex:from
+  cell   "e\c[COMBINING ACUTE ACCENT]" | from
+  level  1
+  code   ("e\c[COMBINING ACUTE ACCENT]" ~~ /\S/).from
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0092
+  from   regex:captures
+  cell   "e\c[COMBINING ACUTE ACCENT]" | captures
+  level  1
+  code   ("e\c[COMBINING ACUTE ACCENT]" ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0093
+  from   regex:subst
+  cell   "e\c[COMBINING ACUTE ACCENT]" | subst
+  level  1
+  code   "e\c[COMBINING ACUTE ACCENT]".subst(/\S/, "X")
+  is     "X"
+  type   Str
+  oracle rakudo-2026.07 → "X"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "X"
+
+- id     0094
+  from   regex:subst-g
+  cell   "e\c[COMBINING ACUTE ACCENT]" | subst-g
+  level  1
+  code   "e\c[COMBINING ACUTE ACCENT]".subst(/\S/, "X", :g)
+  is     "X"
+  type   Str
+  oracle rakudo-2026.07 → "X"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "X"
+
+- id     0095
+  from   regex:comb-count
+  cell   "e\c[COMBINING ACUTE ACCENT]" | comb-count
+  level  1
+  code   "e\c[COMBINING ACUTE ACCENT]".comb(/\S/).elems
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0096
+  from   regex:split
+  cell   "e\c[COMBINING ACUTE ACCENT]" | split
+  level  1
+  code   "e\c[COMBINING ACUTE ACCENT]".split(/\S/).elems
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 2
+
+- id     0097
+  from   regex:matches
+  cell   "abcabc" | matches
+  level  1
+  code   so("abcabc" ~~ /\S/)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0098
+  from   regex:matched
+  cell   "abcabc" | matched
+  level  1
+  code   ("abcabc" ~~ /\S/).Str
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a"
+
+- id     0099
+  from   regex:from
+  cell   "abcabc" | from
+  level  1
+  code   ("abcabc" ~~ /\S/).from
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0100
+  from   regex:captures
+  cell   "abcabc" | captures
+  level  1
+  code   ("abcabc" ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0101
+  from   regex:subst
+  cell   "abcabc" | subst
+  level  1
+  code   "abcabc".subst(/\S/, "X")
+  is     "Xbcabc"
+  type   Str
+  oracle rakudo-2026.07 → "Xbcabc"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "Xbcabc"
+
+- id     0102
+  from   regex:subst-g
+  cell   "abcabc" | subst-g
+  level  1
+  code   "abcabc".subst(/\S/, "X", :g)
+  is     "XXXXXX"
+  type   Str
+  oracle rakudo-2026.07 → "XXXXXX"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "XXXXXX"
+
+- id     0103
+  from   regex:comb-count
+  cell   "abcabc" | comb-count
+  level  1
+  code   "abcabc".comb(/\S/).elems
+  is     6
+  type   Int
+  oracle rakudo-2026.07 → 6
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 6
+
+- id     0104
+  from   regex:split
+  cell   "abcabc" | split
+  level  1
+  code   "abcabc".split(/\S/).elems
+  is     7
+  type   Int
+  oracle rakudo-2026.07 → 7
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 7
+
+- id     0105
+  from   regex:matches
+  cell   "0" | matches
+  level  1
+  code   so("0" ~~ /\S/)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0106
+  from   regex:matched
+  cell   "0" | matched
+  level  1
+  code   ("0" ~~ /\S/).Str
+  is     "0"
+  type   Str
+  oracle rakudo-2026.07 → "0"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "0"
+
+- id     0107
+  from   regex:from
+  cell   "0" | from
+  level  1
+  code   ("0" ~~ /\S/).from
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0108
+  from   regex:captures
+  cell   "0" | captures
+  level  1
+  code   ("0" ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0109
+  from   regex:subst
+  cell   "0" | subst
+  level  1
+  code   "0".subst(/\S/, "X")
+  is     "X"
+  type   Str
+  oracle rakudo-2026.07 → "X"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "X"
+
+- id     0110
+  from   regex:subst-g
+  cell   "0" | subst-g
+  level  1
+  code   "0".subst(/\S/, "X", :g)
+  is     "X"
+  type   Str
+  oracle rakudo-2026.07 → "X"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "X"
+
+- id     0111
+  from   regex:comb-count
+  cell   "0" | comb-count
+  level  1
+  code   "0".comb(/\S/).elems
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0112
+  from   regex:split
+  cell   "0" | split
+  level  1
+  code   "0".split(/\S/).elems
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 2
+
+- id     0113
+  from   regex:matches
+  cell   "_" | matches
+  level  1
+  code   so("_" ~~ /\S/)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0114
+  from   regex:matched
+  cell   "_" | matched
+  level  1
+  code   ("_" ~~ /\S/).Str
+  is     "_"
+  type   Str
+  oracle rakudo-2026.07 → "_"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "_"
+
+- id     0115
+  from   regex:from
+  cell   "_" | from
+  level  1
+  code   ("_" ~~ /\S/).from
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0116
+  from   regex:captures
+  cell   "_" | captures
+  level  1
+  code   ("_" ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0117
+  from   regex:subst
+  cell   "_" | subst
+  level  1
+  code   "_".subst(/\S/, "X")
+  is     "X"
+  type   Str
+  oracle rakudo-2026.07 → "X"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "X"
+
+- id     0118
+  from   regex:subst-g
+  cell   "_" | subst-g
+  level  1
+  code   "_".subst(/\S/, "X", :g)
+  is     "X"
+  type   Str
+  oracle rakudo-2026.07 → "X"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "X"
+
+- id     0119
+  from   regex:comb-count
+  cell   "_" | comb-count
+  level  1
+  code   "_".comb(/\S/).elems
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 1
+
+- id     0120
+  from   regex:split
+  cell   "_" | split
+  level  1
+  code   "_".split(/\S/).elems
+  is     2
+  type   Int
+  oracle rakudo-2026.07 → 2
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 2
+
+- id     0121
+  from   regex:matches
+  cell   "a1b2" | matches
+  level  1
+  code   so("a1b2" ~~ /\S/)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → Bool::True
+
+- id     0122
+  from   regex:matched
+  cell   "a1b2" | matched
+  level  1
+  code   ("a1b2" ~~ /\S/).Str
+  is     "a"
+  type   Str
+  oracle rakudo-2026.07 → "a"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "a"
+
+- id     0123
+  from   regex:from
+  cell   "a1b2" | from
+  level  1
+  code   ("a1b2" ~~ /\S/).from
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 0
+
+- id     0124
+  from   regex:captures
+  cell   "a1b2" | captures
+  level  1
+  code   ("a1b2" ~~ /\S/).list.map(*.Str).join(",")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → ""
+
+- id     0125
+  from   regex:subst
+  cell   "a1b2" | subst
+  level  1
+  code   "a1b2".subst(/\S/, "X")
+  is     "X1b2"
+  type   Str
+  oracle rakudo-2026.07 → "X1b2"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "X1b2"
+
+- id     0126
+  from   regex:subst-g
+  cell   "a1b2" | subst-g
+  level  1
+  code   "a1b2".subst(/\S/, "X", :g)
+  is     "XXXX"
+  type   Str
+  oracle rakudo-2026.07 → "XXXX"
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → "XXXX"
+
+- id     0127
+  from   regex:comb-count
+  cell   "a1b2" | comb-count
+  level  1
+  code   "a1b2".comb(/\S/).elems
+  is     4
+  type   Int
+  oracle rakudo-2026.07 → 4
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 4
+
+- id     0128
+  from   regex:split
+  cell   "a1b2" | split
+  level  1
+  code   "a1b2".split(/\S/).elems
+  is     5
+  type   Int
+  oracle rakudo-2026.07 → 5
+  oracle rakupp-v3.14.0-107-gb8ea9bb-modified → 5

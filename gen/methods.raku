@@ -173,7 +173,10 @@ sub run-sh($line, $secs) {
 # genuine hang costs that whole timeout — and a timeout short enough to catch a
 # hang kills healthy work instead. With small batches the timeout is honest at
 # both ends: a hang costs one batch, and a slow batch is still only a batch.
-sub run-parallel($cmd, @exprs, $probe-src, $jobs, $batch = 200, $secs = 120) {
+# $partial, when given, is the cache file for the engine being probed; each
+# batch is appended as soon as it lands, so a hang costs the batch in flight
+# rather than the whole pass. cache-load skips a truncated line.
+sub run-parallel($cmd, @exprs, $probe-src, $jobs, $batch = 200, $secs = 120, $partial = Str) {
     my $probe = $TMP.add('mm-probe-' ~ $GUARD++ ~ '.raku');
     $probe.spurt($probe-src);
 
@@ -206,21 +209,30 @@ sub run-parallel($cmd, @exprs, $probe-src, $jobs, $batch = 200, $secs = 120) {
         # Capture it and read the code instead.
         my $proc = run('/bin/sh', '-c',
             "( $script ) & p=\$!; "
-          ~ "( sleep $secs; kill -9 \$p 2>/dev/null ) & w=\$!; "
+          ~ "( sleep $secs; kill -9 -\$p 2>/dev/null || kill -9 \$p 2>/dev/null ) & w=\$!; "
           ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; wait \$w 2>/dev/null; exit 0");
         my $ignored = $proc.exitcode;
 
+        my @fresh-rows;
         for @parts -> $f {
             next unless $f.IO.e;
             for $f.IO.slurp.lines -> $l {
                 my @c = $l.split("\t");
                 next unless @c >= 3;
                 %seen{@c[0]} = { value => @c[1], type => @c[2] };
+                @fresh-rows.push: join("\t", @c[0], @c[1], @c[2]);
             }
             $f.IO.unlink;
         }
+        if $partial && @fresh-rows {
+            $partial.IO.spurt(@fresh-rows.join("\n") ~ "\n", :append);
+        }
 
-        $offset += $now * $batch;
+        # @parts is what this round actually launched — never more than $jobs,
+        # and fewer on the last round. `$now` was never declared: this line only
+        # runs when there are new cells to probe, and until the ladders widened
+        # every run was served entirely from cache, so it never executed.
+        $offset += @parts.elems * $batch;
         $done = min($offset, $total);
         note "#     { $done } / $total" if $done %% 2000 || $done == $total;
     }
@@ -514,7 +526,7 @@ for ^@engines -> $e {
         next;
     }
     say "# probing { @ids[$e] }: { @todo.elems } new of { @all.elems } ({ @all.elems - @todo.elems } carried forward from earlier builds), $JOBS jobs …";
-    my %fresh = run-parallel(@engines[$e], @todo, $VALUE-PROBE, $JOBS);
+    my %fresh = run-parallel(@engines[$e], @todo, $VALUE-PROBE, $JOBS, 200, 120, $TMP.add("mm-cache-{@ids[$e]}.tsv").absolute);
     for %fresh.keys -> $k { %fresh{$k}<label> = @ids[$e]; %seen{$k} = %fresh{$k} }
     my @missing = @todo.grep({ !%seen{$_} });
     if @missing {
@@ -532,7 +544,7 @@ my %again = cache-load(@ids[0] ~ '-again');
 my @re = @all.grep({ !%again{$_} });
 if @re {
     say "# re-probing { @ids[0] }: { @re.elems } cells, to check the observations reproduce …";
-    my %fresh = run-parallel(@engines[0], @re, $VALUE-PROBE, $JOBS);
+    my %fresh = run-parallel(@engines[0], @re, $VALUE-PROBE, $JOBS, 200, 120, $TMP.add("mm-cache-{@ids[0]}-again.tsv").absolute);
     for %fresh.keys -> $k { %again{$k} = %fresh{$k} }
     cache-save(@ids[0] ~ '-again', %again);
 }
