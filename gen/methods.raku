@@ -207,9 +207,22 @@ sub run-parallel($cmd, @exprs, $probe-src, $jobs, $batch = 200, $secs = 120, $pa
         # A killed batch makes `sh` exit non-zero, and a Proc that is merely
         # sunk THROWS on that — which killed the whole run three hours in.
         # Capture it and read the code instead.
+        # The watchdog has to kill the batch's CHILDREN, not just the subshell
+        # that owns them. `kill -9 -$p` names a process group, and `( … ) &`
+        # here is not a group leader — `set -m` is inside $script, and putting
+        # it on the outer shell does not help either, which is measurable: both
+        # spellings leave the probes running. So the fallback `kill -9 $p` fired
+        # every time, killed the subshell, and left its `raku` children with
+        # PPID 1 — one runaway per timed-out batch, each at ~74% of a core,
+        # writing into an output file the NEXT batch had already truncated.
+        # Two levels of `pkill -P` because the tree is sh → sh → raku.
+        # (run-sh above is unaffected: its $p IS the probe, so killing $p
+        # kills the thing that matters.)
         my $proc = run('/bin/sh', '-c',
             "( $script ) & p=\$!; "
-          ~ "( sleep $secs; kill -9 -\$p 2>/dev/null || kill -9 \$p 2>/dev/null ) & w=\$!; "
+          ~ "( sleep $secs; "
+          ~ "for c in \$(pgrep -P \$p); do pkill -9 -P \$c 2>/dev/null; done; "
+          ~ "pkill -9 -P \$p 2>/dev/null; kill -9 \$p 2>/dev/null ) & w=\$!; "
           ~ "wait \$p; rc=\$?; kill \$w 2>/dev/null; wait \$w 2>/dev/null; exit 0");
         my $ignored = $proc.exitcode;
 
