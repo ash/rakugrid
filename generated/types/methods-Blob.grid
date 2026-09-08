@@ -3,7 +3,7 @@ source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
 axes     Buf | Capture | Int | Numeric | bytes | chars | codes | contents | decode-with-valid-encoding | encoding
-cols     Blob.new(1,2,3) | Blob.new()
+cols     Blob.new(1,2,3) | Blob.new() | Blob.new(0) | Blob.new(255)
 
 - id     0001
   from   inventory:Blob.^methods
@@ -12,7 +12,7 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     Buf.new(1,2,3)
   type   Buf
   oracle rakudo-2026.07 → Buf.new(1,2,3)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
 - id     0002
   from   inventory:Blob.^methods
@@ -21,225 +21,463 @@ cols     Blob.new(1,2,3) | Blob.new()
   is     Buf.new()
   type   Buf
   oracle rakudo-2026.07 → Buf.new()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
 - id     0003
+  from   inventory:Blob.^methods
+  cell   Buf | Blob.new(0)
+  code   (Blob.new(0)).Buf
+  is     Buf.new(0)
+  type   Buf
+  oracle rakudo-2026.07 → Buf.new(0)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0004
+  from   inventory:Blob.^methods
+  cell   Buf | Blob.new(255)
+  code   (Blob.new(255)).Buf
+  is     Buf.new(255)
+  type   Buf
+  oracle rakudo-2026.07 → Buf.new(255)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0005
   from   inventory:Blob.^methods
   cell   Capture | Blob.new(1,2,3)
   code   (Blob.new(1,2,3)).Capture
   is     \(1, 2, 3)
   type   Capture
   oracle rakudo-2026.07 → \(1, 2, 3)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → \(1, 2, 3)
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(1, 2, 3)
 
-- id     0004
+- id     0006
   from   inventory:Blob.^methods
   cell   Capture | Blob.new()
   code   (Blob.new()).Capture
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → \()
+  oracle rakupp-v3.14.0-114-gc779017-modified → \()
 
-- id     0005
+- id     0007
+  from   inventory:Blob.^methods
+  cell   Capture | Blob.new(0)
+  code   (Blob.new(0)).Capture
+  is     \(0)
+  type   Capture
+  oracle rakudo-2026.07 → \(0)
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(0)
+
+- id     0008
+  from   inventory:Blob.^methods
+  cell   Capture | Blob.new(255)
+  code   (Blob.new(255)).Capture
+  is     \(255)
+  type   Capture
+  oracle rakudo-2026.07 → \(255)
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(255)
+
+- id     0009
   from   inventory:Blob.^methods
   cell   Int | Blob.new(1,2,3)
   code   (Blob.new(1,2,3)).Int
   is     3
   type   Int
   oracle rakudo-2026.07 → 3
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Str::Numeric
 
-- id     0006
+- id     0010
   from   inventory:Blob.^methods
   cell   Int | Blob.new()
   code   (Blob.new()).Int
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
 
-- id     0007
+- id     0011
+  from   inventory:Blob.^methods
+  cell   Int | Blob.new(0)
+  code   (Blob.new(0)).Int
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Str::Numeric
+
+- id     0012
+  from   inventory:Blob.^methods
+  cell   Int | Blob.new(255)
+  code   (Blob.new(255)).Int
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Str::Numeric
+
+- id     0013
   from   inventory:Blob.^methods
   cell   Numeric | Blob.new(1,2,3)
   code   (Blob.new(1,2,3)).Numeric
   is     3
   type   Int
   oracle rakudo-2026.07 → 3
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Str::Numeric
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Str::Numeric
 
-- id     0008
+- id     0014
   from   inventory:Blob.^methods
   cell   Numeric | Blob.new()
   code   (Blob.new()).Numeric
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
 
-- id     0009
+- id     0015
+  from   inventory:Blob.^methods
+  cell   Numeric | Blob.new(0)
+  code   (Blob.new(0)).Numeric
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Str::Numeric
+
+- id     0016
+  from   inventory:Blob.^methods
+  cell   Numeric | Blob.new(255)
+  code   (Blob.new(255)).Numeric
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Str::Numeric
+
+- id     0017
   from   inventory:Blob.^methods
   cell   bytes | Blob.new(1,2,3)
   code   (Blob.new(1,2,3)).bytes
   is     3
   type   Int
   oracle rakudo-2026.07 → 3
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → 3
+  oracle rakupp-v3.14.0-114-gc779017-modified → 3
 
-- id     0010
+- id     0018
   from   inventory:Blob.^methods
   cell   bytes | Blob.new()
   code   (Blob.new()).bytes
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
 
-- id     0011
+- id     0019
+  from   inventory:Blob.^methods
+  cell   bytes | Blob.new(0)
+  code   (Blob.new(0)).bytes
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0020
+  from   inventory:Blob.^methods
+  cell   bytes | Blob.new(255)
+  code   (Blob.new(255)).bytes
+  is     1
+  type   Int
+  oracle rakudo-2026.07 → 1
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0021
   from   inventory:Blob.^methods
   cell   chars | Blob.new(1,2,3)
   code   (Blob.new(1,2,3)).chars
   throws X::Buf::AsStr
   oracle rakudo-2026.07 → ERR:X::Buf::AsStr
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → 3
+  oracle rakupp-v3.14.0-114-gc779017-modified → 3
 
-- id     0012
+- id     0022
   from   inventory:Blob.^methods
   cell   chars | Blob.new()
   code   (Blob.new()).chars
   throws X::Buf::AsStr
   oracle rakudo-2026.07 → ERR:X::Buf::AsStr
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
 
-- id     0013
+- id     0023
+  from   inventory:Blob.^methods
+  cell   chars | Blob.new(0)
+  code   (Blob.new(0)).chars
+  throws X::Buf::AsStr
+  oracle rakudo-2026.07 → ERR:X::Buf::AsStr
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0024
+  from   inventory:Blob.^methods
+  cell   chars | Blob.new(255)
+  code   (Blob.new(255)).chars
+  throws X::Buf::AsStr
+  oracle rakudo-2026.07 → ERR:X::Buf::AsStr
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0025
   from   inventory:Blob.^methods
   cell   codes | Blob.new(1,2,3)
   code   (Blob.new(1,2,3)).codes
   throws X::Buf::AsStr
   oracle rakudo-2026.07 → ERR:X::Buf::AsStr
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → 3
+  oracle rakupp-v3.14.0-114-gc779017-modified → 3
 
-- id     0014
+- id     0026
   from   inventory:Blob.^methods
   cell   codes | Blob.new()
   code   (Blob.new()).codes
   throws X::Buf::AsStr
   oracle rakudo-2026.07 → ERR:X::Buf::AsStr
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
 
-- id     0015
+- id     0027
+  from   inventory:Blob.^methods
+  cell   codes | Blob.new(0)
+  code   (Blob.new(0)).codes
+  throws X::Buf::AsStr
+  oracle rakudo-2026.07 → ERR:X::Buf::AsStr
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0028
+  from   inventory:Blob.^methods
+  cell   codes | Blob.new(255)
+  code   (Blob.new(255)).codes
+  throws X::Buf::AsStr
+  oracle rakudo-2026.07 → ERR:X::Buf::AsStr
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1
+
+- id     0029
   from   inventory:Blob.^methods
   cell   contents | Blob.new(1,2,3)
   code   (Blob.new(1,2,3)).contents
   is     $(1, 2, 3)
   type   List
   oracle rakudo-2026.07 → $(1, 2, 3)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
 
-- id     0016
+- id     0030
   from   inventory:Blob.^methods
   cell   contents | Blob.new()
   code   (Blob.new()).contents
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
 
-- id     0017
+- id     0031
+  from   inventory:Blob.^methods
+  cell   contents | Blob.new(0)
+  code   (Blob.new(0)).contents
+  is     $(0,)
+  type   List
+  oracle rakudo-2026.07 → $(0,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0032
+  from   inventory:Blob.^methods
+  cell   contents | Blob.new(255)
+  code   (Blob.new(255)).contents
+  is     $(255,)
+  type   List
+  oracle rakudo-2026.07 → $(255,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0033
   from   inventory:Blob.^methods
   cell   decode-with-valid-encoding(0) | Blob.new(1,2,3)
   code   (Blob.new(1,2,3)).decode-with-valid-encoding(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0018
+- id     0034
   from   inventory:Blob.^methods
   cell   decode-with-valid-encoding(1) | Blob.new(1,2,3)
   code   (Blob.new(1,2,3)).decode-with-valid-encoding(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0019
+- id     0035
   from   inventory:Blob.^methods
   cell   decode-with-valid-encoding(-1) | Blob.new(1,2,3)
   code   (Blob.new(1,2,3)).decode-with-valid-encoding(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0020
+- id     0036
   from   inventory:Blob.^methods
   cell   decode-with-valid-encoding("a") | Blob.new(1,2,3)
   code   (Blob.new(1,2,3)).decode-with-valid-encoding("a")
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0021
+- id     0037
   from   inventory:Blob.^methods
   cell   decode-with-valid-encoding(Any) | Blob.new(1,2,3)
   code   (Blob.new(1,2,3)).decode-with-valid-encoding(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0022
+- id     0038
   from   inventory:Blob.^methods
   cell   decode-with-valid-encoding(0) | Blob.new()
   code   (Blob.new()).decode-with-valid-encoding(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0023
+- id     0039
   from   inventory:Blob.^methods
   cell   decode-with-valid-encoding(1) | Blob.new()
   code   (Blob.new()).decode-with-valid-encoding(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0024
+- id     0040
   from   inventory:Blob.^methods
   cell   decode-with-valid-encoding(-1) | Blob.new()
   code   (Blob.new()).decode-with-valid-encoding(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0025
+- id     0041
   from   inventory:Blob.^methods
   cell   decode-with-valid-encoding("a") | Blob.new()
   code   (Blob.new()).decode-with-valid-encoding("a")
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0026
+- id     0042
   from   inventory:Blob.^methods
   cell   decode-with-valid-encoding(Any) | Blob.new()
   code   (Blob.new()).decode-with-valid-encoding(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0027
+- id     0043
+  from   inventory:Blob.^methods
+  cell   decode-with-valid-encoding(0) | Blob.new(0)
+  code   (Blob.new(0)).decode-with-valid-encoding(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0044
+  from   inventory:Blob.^methods
+  cell   decode-with-valid-encoding(1) | Blob.new(0)
+  code   (Blob.new(0)).decode-with-valid-encoding(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0045
+  from   inventory:Blob.^methods
+  cell   decode-with-valid-encoding(-1) | Blob.new(0)
+  code   (Blob.new(0)).decode-with-valid-encoding(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0046
+  from   inventory:Blob.^methods
+  cell   decode-with-valid-encoding("a") | Blob.new(0)
+  code   (Blob.new(0)).decode-with-valid-encoding("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0047
+  from   inventory:Blob.^methods
+  cell   decode-with-valid-encoding(Any) | Blob.new(0)
+  code   (Blob.new(0)).decode-with-valid-encoding(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0048
+  from   inventory:Blob.^methods
+  cell   decode-with-valid-encoding(0) | Blob.new(255)
+  code   (Blob.new(255)).decode-with-valid-encoding(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0049
+  from   inventory:Blob.^methods
+  cell   decode-with-valid-encoding(1) | Blob.new(255)
+  code   (Blob.new(255)).decode-with-valid-encoding(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0050
+  from   inventory:Blob.^methods
+  cell   decode-with-valid-encoding(-1) | Blob.new(255)
+  code   (Blob.new(255)).decode-with-valid-encoding(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0051
+  from   inventory:Blob.^methods
+  cell   decode-with-valid-encoding("a") | Blob.new(255)
+  code   (Blob.new(255)).decode-with-valid-encoding("a")
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0052
+  from   inventory:Blob.^methods
+  cell   decode-with-valid-encoding(Any) | Blob.new(255)
+  code   (Blob.new(255)).decode-with-valid-encoding(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0053
   from   inventory:Blob.^methods
   cell   encoding | Blob.new(1,2,3)
   code   (Blob.new(1,2,3)).encoding
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0028
+- id     0054
   from   inventory:Blob.^methods
   cell   encoding | Blob.new()
   code   (Blob.new()).encoding
   is     Any
   type   Any
   oracle rakudo-2026.07 → Any
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0055
+  from   inventory:Blob.^methods
+  cell   encoding | Blob.new(0)
+  code   (Blob.new(0)).encoding
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0056
+  from   inventory:Blob.^methods
+  cell   encoding | Blob.new(255)
+  code   (Blob.new(255)).encoding
+  is     Any
+  type   Any
+  oracle rakudo-2026.07 → Any
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound

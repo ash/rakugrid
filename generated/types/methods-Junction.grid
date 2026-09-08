@@ -3,7 +3,7 @@ source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
 axes     Bool | Capture | DEFINITE | HOW | REPR | VAR | WHAT | WHO | bless | can | does | is-generic | item | not | self | so | take
-cols     any(1,2) | all(1,2)
+cols     any(1,2) | all(1,2) | one(1,2) | none(1,2) | any() | all()
 
 - id     0001
   from   inventory:Junction.^methods
@@ -12,7 +12,7 @@ cols     any(1,2) | all(1,2)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
 
 - id     0002
   from   inventory:Junction.^methods
@@ -21,432 +21,1450 @@ cols     any(1,2) | all(1,2)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
 
 - id     0003
+  from   inventory:Junction.^methods
+  cell   Bool | one(1,2)
+  code   (one(1,2)).Bool
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0004
+  from   inventory:Junction.^methods
+  cell   Bool | none(1,2)
+  code   (none(1,2)).Bool
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0005
+  from   inventory:Junction.^methods
+  cell   Bool | any()
+  code   (any()).Bool
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0006
+  from   inventory:Junction.^methods
+  cell   Bool | all()
+  code   (all()).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0007
   from   inventory:Junction.^methods
   cell   Capture | any(1,2)
   code   (any(1,2)).Capture
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Cannot::Capture
 
-- id     0004
+- id     0008
   from   inventory:Junction.^methods
   cell   Capture | all(1,2)
   code   (all(1,2)).Capture
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Cannot::Capture
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Cannot::Capture
 
-- id     0005
+- id     0009
+  from   inventory:Junction.^methods
+  cell   Capture | one(1,2)
+  code   (one(1,2)).Capture
+  is     \()
+  type   Capture
+  oracle rakudo-2026.07 → \()
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Cannot::Capture
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0010
+  from   inventory:Junction.^methods
+  cell   Capture | none(1,2)
+  code   (none(1,2)).Capture
+  is     \()
+  type   Capture
+  oracle rakudo-2026.07 → \()
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Cannot::Capture
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0011
+  from   inventory:Junction.^methods
+  cell   Capture | any()
+  code   (any()).Capture
+  is     \()
+  type   Capture
+  oracle rakudo-2026.07 → \()
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0012
+  from   inventory:Junction.^methods
+  cell   Capture | all()
+  code   (all()).Capture
+  is     \()
+  type   Capture
+  oracle rakudo-2026.07 → \()
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0013
   from   inventory:Junction.^methods
   cell   DEFINITE | any(1,2)
   code   (any(1,2)).DEFINITE
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
 
-- id     0006
+- id     0014
   from   inventory:Junction.^methods
   cell   DEFINITE | all(1,2)
   code   (all(1,2)).DEFINITE
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
 
-- id     0007
+- id     0015
+  from   inventory:Junction.^methods
+  cell   DEFINITE | one(1,2)
+  code   (one(1,2)).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0016
+  from   inventory:Junction.^methods
+  cell   DEFINITE | none(1,2)
+  code   (none(1,2)).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0017
+  from   inventory:Junction.^methods
+  cell   DEFINITE | any()
+  code   (any()).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0018
+  from   inventory:Junction.^methods
+  cell   DEFINITE | all()
+  code   (all()).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0019
   from   inventory:Junction.^methods
   cell   HOW | any(1,2)
   code   (any(1,2)).HOW
   is     Perl6::Metamodel::ClassHOW.new
   type   Perl6::Metamodel::ClassHOW
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+  oracle rakupp-v3.14.0-114-gc779017-modified → Metamodel::ClassHOW
 
-- id     0008
+- id     0020
   from   inventory:Junction.^methods
   cell   HOW | all(1,2)
   code   (all(1,2)).HOW
   is     Perl6::Metamodel::ClassHOW.new
   type   Perl6::Metamodel::ClassHOW
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+  oracle rakupp-v3.14.0-114-gc779017-modified → Metamodel::ClassHOW
 
-- id     0009
+- id     0021
+  from   inventory:Junction.^methods
+  cell   HOW | one(1,2)
+  code   (one(1,2)).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-114-gc779017-modified → Metamodel::ClassHOW
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0022
+  from   inventory:Junction.^methods
+  cell   HOW | none(1,2)
+  code   (none(1,2)).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-114-gc779017-modified → Metamodel::ClassHOW
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0023
+  from   inventory:Junction.^methods
+  cell   HOW | any()
+  code   (any()).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-114-gc779017-modified → Metamodel::ClassHOW
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0024
+  from   inventory:Junction.^methods
+  cell   HOW | all()
+  code   (all()).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-114-gc779017-modified → Metamodel::ClassHOW
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0025
   from   inventory:Junction.^methods
   cell   REPR | any(1,2)
   code   (any(1,2)).REPR
   is     "P6opaque"
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0010
+- id     0026
   from   inventory:Junction.^methods
   cell   REPR | all(1,2)
   code   (all(1,2)).REPR
   is     "P6opaque"
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0011
+- id     0027
+  from   inventory:Junction.^methods
+  cell   REPR | one(1,2)
+  code   (one(1,2)).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0028
+  from   inventory:Junction.^methods
+  cell   REPR | none(1,2)
+  code   (none(1,2)).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0029
+  from   inventory:Junction.^methods
+  cell   REPR | any()
+  code   (any()).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0030
+  from   inventory:Junction.^methods
+  cell   REPR | all()
+  code   (all()).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0031
   from   inventory:Junction.^methods
   cell   VAR | any(1,2)
   code   (any(1,2)).VAR
   is     any(1, 2)
   type   Junction
   oracle rakudo-2026.07 → any(1, 2)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → any(1, 2)
 
-- id     0012
+- id     0032
   from   inventory:Junction.^methods
   cell   VAR | all(1,2)
   code   (all(1,2)).VAR
   is     all(1, 2)
   type   Junction
   oracle rakudo-2026.07 → all(1, 2)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → all(1, 2)
 
-- id     0013
+- id     0033
+  from   inventory:Junction.^methods
+  cell   VAR | one(1,2)
+  code   (one(1,2)).VAR
+  is     one(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → one(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → one(1, 2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0034
+  from   inventory:Junction.^methods
+  cell   VAR | none(1,2)
+  code   (none(1,2)).VAR
+  is     none(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → none(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → none(1, 2)
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0035
+  from   inventory:Junction.^methods
+  cell   VAR | any()
+  code   (any()).VAR
+  is     any()
+  type   Junction
+  oracle rakudo-2026.07 → any()
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0036
+  from   inventory:Junction.^methods
+  cell   VAR | all()
+  code   (all()).VAR
+  is     all()
+  type   Junction
+  oracle rakudo-2026.07 → all()
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0037
   from   inventory:Junction.^methods
   cell   WHAT | any(1,2)
   code   (any(1,2)).WHAT
   is     Junction
   type   Junction
   oracle rakudo-2026.07 → Junction
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Junction
+  oracle rakupp-v3.14.0-114-gc779017-modified → Junction
 
-- id     0014
+- id     0038
   from   inventory:Junction.^methods
   cell   WHAT | all(1,2)
   code   (all(1,2)).WHAT
   is     Junction
   type   Junction
   oracle rakudo-2026.07 → Junction
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Junction
+  oracle rakupp-v3.14.0-114-gc779017-modified → Junction
 
-- id     0015
+- id     0039
+  from   inventory:Junction.^methods
+  cell   WHAT | one(1,2)
+  code   (one(1,2)).WHAT
+  is     Junction
+  type   Junction
+  oracle rakudo-2026.07 → Junction
+  oracle rakupp-v3.14.0-114-gc779017-modified → Junction
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0040
+  from   inventory:Junction.^methods
+  cell   WHAT | none(1,2)
+  code   (none(1,2)).WHAT
+  is     Junction
+  type   Junction
+  oracle rakudo-2026.07 → Junction
+  oracle rakupp-v3.14.0-114-gc779017-modified → Junction
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0041
+  from   inventory:Junction.^methods
+  cell   WHAT | any()
+  code   (any()).WHAT
+  is     Junction
+  type   Junction
+  oracle rakudo-2026.07 → Junction
+  oracle rakupp-v3.14.0-114-gc779017-modified → Junction
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0042
+  from   inventory:Junction.^methods
+  cell   WHAT | all()
+  code   (all()).WHAT
+  is     Junction
+  type   Junction
+  oracle rakudo-2026.07 → Junction
+  oracle rakupp-v3.14.0-114-gc779017-modified → Junction
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0043
   from   inventory:Junction.^methods
   cell   WHO | any(1,2)
   code   (any(1,2)).WHO
   is     ${}
   type   Stash
   oracle rakudo-2026.07 → ${}
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${}
 
-- id     0016
+- id     0044
   from   inventory:Junction.^methods
   cell   WHO | all(1,2)
   code   (all(1,2)).WHO
   is     ${}
   type   Stash
   oracle rakudo-2026.07 → ${}
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${}
 
-- id     0017
+- id     0045
+  from   inventory:Junction.^methods
+  cell   WHO | one(1,2)
+  code   (one(1,2)).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${}
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0046
+  from   inventory:Junction.^methods
+  cell   WHO | none(1,2)
+  code   (none(1,2)).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${}
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0047
+  from   inventory:Junction.^methods
+  cell   WHO | any()
+  code   (any()).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${}
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0048
+  from   inventory:Junction.^methods
+  cell   WHO | all()
+  code   (all()).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${}
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0049
   from   inventory:Junction.^methods
   cell   bless | any(1,2)
   code   (any(1,2)).bless
   is     UNRENDERABLE
   type   Junction
   oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(0, 0)
+  oracle rakupp-v3.14.0-114-gc779017-modified → any(0, 0)
   verdict disputed
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0018
+- id     0050
   from   inventory:Junction.^methods
   cell   bless | all(1,2)
   code   (all(1,2)).bless
   is     UNRENDERABLE
   type   Junction
   oracle rakudo-2026.07 → UNRENDERABLE
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(0, 0)
+  oracle rakupp-v3.14.0-114-gc779017-modified → all(0, 0)
   verdict disputed
   why    the reference produced no usable answer for this cell
   ruled  2026-08-15 against rakudo-2026.07
 
-- id     0019
+- id     0051
+  from   inventory:Junction.^methods
+  cell   bless | one(1,2)
+  code   (one(1,2)).bless
+  is     UNRENDERABLE
+  type   Junction
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-v3.14.0-114-gc779017-modified → one(0, 0)
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0052
+  from   inventory:Junction.^methods
+  cell   bless | none(1,2)
+  code   (none(1,2)).bless
+  is     UNRENDERABLE
+  type   Junction
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-v3.14.0-114-gc779017-modified → none(0, 0)
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0053
+  from   inventory:Junction.^methods
+  cell   bless | any()
+  code   (any()).bless
+  is     UNRENDERABLE
+  type   Junction
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0054
+  from   inventory:Junction.^methods
+  cell   bless | all()
+  code   (all()).bless
+  is     UNRENDERABLE
+  type   Junction
+  oracle rakudo-2026.07 → UNRENDERABLE
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+  verdict disputed
+  why    the reference produced no usable answer for this cell
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0055
   from   inventory:Junction.^methods
   cell   can(0) | any(1,2)
   code   (any(1,2)).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any((), ())
+  oracle rakupp-v3.14.0-114-gc779017-modified → any((), ())
 
-- id     0020
+- id     0056
   from   inventory:Junction.^methods
   cell   can(1) | any(1,2)
   code   (any(1,2)).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any((), ())
+  oracle rakupp-v3.14.0-114-gc779017-modified → any((), ())
 
-- id     0021
+- id     0057
   from   inventory:Junction.^methods
   cell   can(-1) | any(1,2)
   code   (any(1,2)).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any((), ())
+  oracle rakupp-v3.14.0-114-gc779017-modified → any((), ())
 
-- id     0022
+- id     0058
   from   inventory:Junction.^methods
   cell   can("a") | any(1,2)
   code   (any(1,2)).can("a")
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any((), ())
+  oracle rakupp-v3.14.0-114-gc779017-modified → any((), ())
 
-- id     0023
+- id     0059
   from   inventory:Junction.^methods
   cell   can(Any) | any(1,2)
   code   (any(1,2)).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any((), ())
+  oracle rakupp-v3.14.0-114-gc779017-modified → any((), ())
 
-- id     0024
+- id     0060
   from   inventory:Junction.^methods
   cell   can(0) | all(1,2)
   code   (all(1,2)).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all((), ())
+  oracle rakupp-v3.14.0-114-gc779017-modified → all((), ())
 
-- id     0025
+- id     0061
   from   inventory:Junction.^methods
   cell   can(1) | all(1,2)
   code   (all(1,2)).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all((), ())
+  oracle rakupp-v3.14.0-114-gc779017-modified → all((), ())
 
-- id     0026
+- id     0062
   from   inventory:Junction.^methods
   cell   can(-1) | all(1,2)
   code   (all(1,2)).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all((), ())
+  oracle rakupp-v3.14.0-114-gc779017-modified → all((), ())
 
-- id     0027
+- id     0063
   from   inventory:Junction.^methods
   cell   can("a") | all(1,2)
   code   (all(1,2)).can("a")
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all((), ())
+  oracle rakupp-v3.14.0-114-gc779017-modified → all((), ())
 
-- id     0028
+- id     0064
   from   inventory:Junction.^methods
   cell   can(Any) | all(1,2)
   code   (all(1,2)).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all((), ())
+  oracle rakupp-v3.14.0-114-gc779017-modified → all((), ())
 
-- id     0029
+- id     0065
+  from   inventory:Junction.^methods
+  cell   can(0) | one(1,2)
+  code   (one(1,2)).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → one((), ())
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0066
+  from   inventory:Junction.^methods
+  cell   can(1) | one(1,2)
+  code   (one(1,2)).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → one((), ())
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0067
+  from   inventory:Junction.^methods
+  cell   can(-1) | one(1,2)
+  code   (one(1,2)).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → one((), ())
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0068
+  from   inventory:Junction.^methods
+  cell   can("a") | one(1,2)
+  code   (one(1,2)).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → one((), ())
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0069
+  from   inventory:Junction.^methods
+  cell   can(Any) | one(1,2)
+  code   (one(1,2)).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → one((), ())
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0070
+  from   inventory:Junction.^methods
+  cell   can(0) | none(1,2)
+  code   (none(1,2)).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → none((), ())
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0071
+  from   inventory:Junction.^methods
+  cell   can(1) | none(1,2)
+  code   (none(1,2)).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → none((), ())
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0072
+  from   inventory:Junction.^methods
+  cell   can(-1) | none(1,2)
+  code   (none(1,2)).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → none((), ())
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0073
+  from   inventory:Junction.^methods
+  cell   can("a") | none(1,2)
+  code   (none(1,2)).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → none((), ())
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0074
+  from   inventory:Junction.^methods
+  cell   can(Any) | none(1,2)
+  code   (none(1,2)).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → none((), ())
+  verdict disputed
+  why    the reference answers differently on two identical runs, so there is nothing stable to assert
+  ruled  2026-08-15 against rakudo-2026.07
+
+- id     0075
+  from   inventory:Junction.^methods
+  cell   can(0) | any()
+  code   (any()).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+
+- id     0076
+  from   inventory:Junction.^methods
+  cell   can(1) | any()
+  code   (any()).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+
+- id     0077
+  from   inventory:Junction.^methods
+  cell   can(-1) | any()
+  code   (any()).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+
+- id     0078
+  from   inventory:Junction.^methods
+  cell   can("a") | any()
+  code   (any()).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+
+- id     0079
+  from   inventory:Junction.^methods
+  cell   can(Any) | any()
+  code   (any()).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+
+- id     0080
+  from   inventory:Junction.^methods
+  cell   can(0) | all()
+  code   (all()).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+
+- id     0081
+  from   inventory:Junction.^methods
+  cell   can(1) | all()
+  code   (all()).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+
+- id     0082
+  from   inventory:Junction.^methods
+  cell   can(-1) | all()
+  code   (all()).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+
+- id     0083
+  from   inventory:Junction.^methods
+  cell   can("a") | all()
+  code   (all()).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+
+- id     0084
+  from   inventory:Junction.^methods
+  cell   can(Any) | all()
+  code   (all()).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+
+- id     0085
   from   inventory:Junction.^methods
   cell   does(0) | any(1,2)
   code   (any(1,2)).does(0)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(Bool::True, Bool::True)
+  oracle rakupp-v3.14.0-114-gc779017-modified → any(Bool::True, Bool::True)
 
-- id     0030
+- id     0086
   from   inventory:Junction.^methods
   cell   does(1) | any(1,2)
   code   (any(1,2)).does(1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(Bool::True, Bool::True)
+  oracle rakupp-v3.14.0-114-gc779017-modified → any(Bool::True, Bool::True)
 
-- id     0031
+- id     0087
   from   inventory:Junction.^methods
   cell   does(-1) | any(1,2)
   code   (any(1,2)).does(-1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(Bool::True, Bool::True)
+  oracle rakupp-v3.14.0-114-gc779017-modified → any(Bool::True, Bool::True)
 
-- id     0032
+- id     0088
   from   inventory:Junction.^methods
   cell   does("a") | any(1,2)
   code   (any(1,2)).does("a")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(Bool::False, Bool::False)
+  oracle rakupp-v3.14.0-114-gc779017-modified → any(Bool::False, Bool::False)
 
-- id     0033
+- id     0089
   from   inventory:Junction.^methods
   cell   does(Any) | any(1,2)
   code   (any(1,2)).does(Any)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(Bool::True, Bool::True)
+  oracle rakupp-v3.14.0-114-gc779017-modified → any(Bool::True, Bool::True)
 
-- id     0034
+- id     0090
   from   inventory:Junction.^methods
   cell   does(0) | all(1,2)
   code   (all(1,2)).does(0)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(Bool::True, Bool::True)
+  oracle rakupp-v3.14.0-114-gc779017-modified → all(Bool::True, Bool::True)
 
-- id     0035
+- id     0091
   from   inventory:Junction.^methods
   cell   does(1) | all(1,2)
   code   (all(1,2)).does(1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(Bool::True, Bool::True)
+  oracle rakupp-v3.14.0-114-gc779017-modified → all(Bool::True, Bool::True)
 
-- id     0036
+- id     0092
   from   inventory:Junction.^methods
   cell   does(-1) | all(1,2)
   code   (all(1,2)).does(-1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(Bool::True, Bool::True)
+  oracle rakupp-v3.14.0-114-gc779017-modified → all(Bool::True, Bool::True)
 
-- id     0037
+- id     0093
   from   inventory:Junction.^methods
   cell   does("a") | all(1,2)
   code   (all(1,2)).does("a")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(Bool::False, Bool::False)
+  oracle rakupp-v3.14.0-114-gc779017-modified → all(Bool::False, Bool::False)
 
-- id     0038
+- id     0094
   from   inventory:Junction.^methods
   cell   does(Any) | all(1,2)
   code   (all(1,2)).does(Any)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(Bool::True, Bool::True)
+  oracle rakupp-v3.14.0-114-gc779017-modified → all(Bool::True, Bool::True)
 
-- id     0039
+- id     0095
+  from   inventory:Junction.^methods
+  cell   does(0) | one(1,2)
+  code   (one(1,2)).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → one(Bool::True, Bool::True)
+
+- id     0096
+  from   inventory:Junction.^methods
+  cell   does(1) | one(1,2)
+  code   (one(1,2)).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → one(Bool::True, Bool::True)
+
+- id     0097
+  from   inventory:Junction.^methods
+  cell   does(-1) | one(1,2)
+  code   (one(1,2)).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → one(Bool::True, Bool::True)
+
+- id     0098
+  from   inventory:Junction.^methods
+  cell   does("a") | one(1,2)
+  code   (one(1,2)).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → one(Bool::False, Bool::False)
+
+- id     0099
+  from   inventory:Junction.^methods
+  cell   does(Any) | one(1,2)
+  code   (one(1,2)).does(Any)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → one(Bool::True, Bool::True)
+
+- id     0100
+  from   inventory:Junction.^methods
+  cell   does(0) | none(1,2)
+  code   (none(1,2)).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → none(Bool::True, Bool::True)
+
+- id     0101
+  from   inventory:Junction.^methods
+  cell   does(1) | none(1,2)
+  code   (none(1,2)).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → none(Bool::True, Bool::True)
+
+- id     0102
+  from   inventory:Junction.^methods
+  cell   does(-1) | none(1,2)
+  code   (none(1,2)).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → none(Bool::True, Bool::True)
+
+- id     0103
+  from   inventory:Junction.^methods
+  cell   does("a") | none(1,2)
+  code   (none(1,2)).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → none(Bool::False, Bool::False)
+
+- id     0104
+  from   inventory:Junction.^methods
+  cell   does(Any) | none(1,2)
+  code   (none(1,2)).does(Any)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → none(Bool::True, Bool::True)
+
+- id     0105
+  from   inventory:Junction.^methods
+  cell   does(0) | any()
+  code   (any()).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+
+- id     0106
+  from   inventory:Junction.^methods
+  cell   does(1) | any()
+  code   (any()).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+
+- id     0107
+  from   inventory:Junction.^methods
+  cell   does(-1) | any()
+  code   (any()).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+
+- id     0108
+  from   inventory:Junction.^methods
+  cell   does("a") | any()
+  code   (any()).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+
+- id     0109
+  from   inventory:Junction.^methods
+  cell   does(Any) | any()
+  code   (any()).does(Any)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+
+- id     0110
+  from   inventory:Junction.^methods
+  cell   does(0) | all()
+  code   (all()).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+
+- id     0111
+  from   inventory:Junction.^methods
+  cell   does(1) | all()
+  code   (all()).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+
+- id     0112
+  from   inventory:Junction.^methods
+  cell   does(-1) | all()
+  code   (all()).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+
+- id     0113
+  from   inventory:Junction.^methods
+  cell   does("a") | all()
+  code   (all()).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+
+- id     0114
+  from   inventory:Junction.^methods
+  cell   does(Any) | all()
+  code   (all()).does(Any)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+
+- id     0115
   from   inventory:Junction.^methods
   cell   is-generic | any(1,2)
   code   (any(1,2)).is-generic
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0040
+- id     0116
   from   inventory:Junction.^methods
   cell   is-generic | all(1,2)
   code   (all(1,2)).is-generic
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0041
+- id     0117
+  from   inventory:Junction.^methods
+  cell   is-generic | one(1,2)
+  code   (one(1,2)).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0118
+  from   inventory:Junction.^methods
+  cell   is-generic | none(1,2)
+  code   (none(1,2)).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0119
+  from   inventory:Junction.^methods
+  cell   is-generic | any()
+  code   (any()).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+
+- id     0120
+  from   inventory:Junction.^methods
+  cell   is-generic | all()
+  code   (all()).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+
+- id     0121
   from   inventory:Junction.^methods
   cell   item | any(1,2)
   code   (any(1,2)).item
   is     any(1, 2)
   type   Junction
   oracle rakudo-2026.07 → any(1, 2)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → any(1, 2)
 
-- id     0042
+- id     0122
   from   inventory:Junction.^methods
   cell   item | all(1,2)
   code   (all(1,2)).item
   is     all(1, 2)
   type   Junction
   oracle rakudo-2026.07 → all(1, 2)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → all(1, 2)
 
-- id     0043
+- id     0123
+  from   inventory:Junction.^methods
+  cell   item | one(1,2)
+  code   (one(1,2)).item
+  is     one(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → one(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → one(1, 2)
+
+- id     0124
+  from   inventory:Junction.^methods
+  cell   item | none(1,2)
+  code   (none(1,2)).item
+  is     none(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → none(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → none(1, 2)
+
+- id     0125
+  from   inventory:Junction.^methods
+  cell   item | any()
+  code   (any()).item
+  is     any()
+  type   Junction
+  oracle rakudo-2026.07 → any()
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+
+- id     0126
+  from   inventory:Junction.^methods
+  cell   item | all()
+  code   (all()).item
+  is     all()
+  type   Junction
+  oracle rakudo-2026.07 → all()
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+
+- id     0127
   from   inventory:Junction.^methods
   cell   not | any(1,2)
   code   (any(1,2)).not
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
 
-- id     0044
+- id     0128
   from   inventory:Junction.^methods
   cell   not | all(1,2)
   code   (all(1,2)).not
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
 
-- id     0045
+- id     0129
+  from   inventory:Junction.^methods
+  cell   not | one(1,2)
+  code   (one(1,2)).not
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0130
+  from   inventory:Junction.^methods
+  cell   not | none(1,2)
+  code   (none(1,2)).not
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0131
+  from   inventory:Junction.^methods
+  cell   not | any()
+  code   (any()).not
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0132
+  from   inventory:Junction.^methods
+  cell   not | all()
+  code   (all()).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0133
   from   inventory:Junction.^methods
   cell   self | any(1,2)
   code   (any(1,2)).self
   is     any(1, 2)
   type   Junction
   oracle rakudo-2026.07 → any(1, 2)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → any(1, 2)
 
-- id     0046
+- id     0134
   from   inventory:Junction.^methods
   cell   self | all(1,2)
   code   (all(1,2)).self
   is     all(1, 2)
   type   Junction
   oracle rakudo-2026.07 → all(1, 2)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → all(1, 2)
 
-- id     0047
+- id     0135
+  from   inventory:Junction.^methods
+  cell   self | one(1,2)
+  code   (one(1,2)).self
+  is     one(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → one(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → one(1, 2)
+
+- id     0136
+  from   inventory:Junction.^methods
+  cell   self | none(1,2)
+  code   (none(1,2)).self
+  is     none(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → none(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → none(1, 2)
+
+- id     0137
+  from   inventory:Junction.^methods
+  cell   self | any()
+  code   (any()).self
+  is     any()
+  type   Junction
+  oracle rakudo-2026.07 → any()
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+
+- id     0138
+  from   inventory:Junction.^methods
+  cell   self | all()
+  code   (all()).self
+  is     all()
+  type   Junction
+  oracle rakudo-2026.07 → all()
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
+
+- id     0139
   from   inventory:Junction.^methods
   cell   so | any(1,2)
   code   (any(1,2)).so
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
 
-- id     0048
+- id     0140
   from   inventory:Junction.^methods
   cell   so | all(1,2)
   code   (all(1,2)).so
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
 
-- id     0049
+- id     0141
+  from   inventory:Junction.^methods
+  cell   so | one(1,2)
+  code   (one(1,2)).so
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0142
+  from   inventory:Junction.^methods
+  cell   so | none(1,2)
+  code   (none(1,2)).so
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0143
+  from   inventory:Junction.^methods
+  cell   so | any()
+  code   (any()).so
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0144
+  from   inventory:Junction.^methods
+  cell   so | all()
+  code   (all()).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0145
   from   inventory:Junction.^methods
   cell   take | any(1,2)
   code   (any(1,2)).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::ControlFlow
 
-- id     0050
+- id     0146
   from   inventory:Junction.^methods
   cell   take | all(1,2)
   code   (all(1,2)).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::ControlFlow
+
+- id     0147
+  from   inventory:Junction.^methods
+  cell   take | one(1,2)
+  code   (one(1,2)).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::ControlFlow
+
+- id     0148
+  from   inventory:Junction.^methods
+  cell   take | none(1,2)
+  code   (none(1,2)).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::ControlFlow
+
+- id     0149
+  from   inventory:Junction.^methods
+  cell   take | any()
+  code   (any()).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
+
+- id     0150
+  from   inventory:Junction.^methods
+  cell   take | all()
+  code   (all()).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()

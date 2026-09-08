@@ -3,7 +3,7 @@ source   generated
 gen      gen/methods.raku
 kind     method matrix — every nullary method the type reports
 axes     Bool | Capture | DEFINITE | HOW | REPR | VAR | WHAT | WHO | all | any | bless | cache | can | chrs | does | hash | is-generic | item | join | lazy-if | list | nl-out | none | not | one | reverse | self | so | sum | take
-cols     \(1, :a) | \()
+cols     \(1, :a) | \() | \(1,2) | \(:a, :b) | \(Any)
 
 - id     0001
   from   inventory:Capture.^methods
@@ -12,7 +12,7 @@ cols     \(1, :a) | \()
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
 
 - id     0002
   from   inventory:Capture.^methods
@@ -21,800 +21,2021 @@ cols     \(1, :a) | \()
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
 
 - id     0003
+  from   inventory:Capture.^methods
+  cell   Bool | \(1,2)
+  code   (\(1,2)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0004
+  from   inventory:Capture.^methods
+  cell   Bool | \(:a, :b)
+  code   (\(:a, :b)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0005
+  from   inventory:Capture.^methods
+  cell   Bool | \(Any)
+  code   (\(Any)).Bool
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0006
   from   inventory:Capture.^methods
   cell   Capture | \(1, :a)
   code   (\(1, :a)).Capture
   is     \(1, :a)
   type   Capture
   oracle rakudo-2026.07 → \(1, :a)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → \(1, :a(Bool::True))
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(1, :a(Bool::True))
 
-- id     0004
+- id     0007
   from   inventory:Capture.^methods
   cell   Capture | \()
   code   (\()).Capture
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → \()
+  oracle rakupp-v3.14.0-114-gc779017-modified → \()
 
-- id     0005
+- id     0008
+  from   inventory:Capture.^methods
+  cell   Capture | \(1,2)
+  code   (\(1,2)).Capture
+  is     \(1, 2)
+  type   Capture
+  oracle rakudo-2026.07 → \(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(1, 2)
+
+- id     0009
+  from   inventory:Capture.^methods
+  cell   Capture | \(:a, :b)
+  code   (\(:a, :b)).Capture
+  is     \(:a, :b)
+  type   Capture
+  oracle rakudo-2026.07 → \(:a, :b)
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(:a(Bool::True), :b(Bool::True))
+
+- id     0010
+  from   inventory:Capture.^methods
+  cell   Capture | \(Any)
+  code   (\(Any)).Capture
+  is     \(Any)
+  type   Capture
+  oracle rakudo-2026.07 → \(Any)
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(Any)
+
+- id     0011
   from   inventory:Capture.^methods
   cell   DEFINITE | \(1, :a)
   code   (\(1, :a)).DEFINITE
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
 
-- id     0006
+- id     0012
   from   inventory:Capture.^methods
   cell   DEFINITE | \()
   code   (\()).DEFINITE
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
 
-- id     0007
+- id     0013
+  from   inventory:Capture.^methods
+  cell   DEFINITE | \(1,2)
+  code   (\(1,2)).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0014
+  from   inventory:Capture.^methods
+  cell   DEFINITE | \(:a, :b)
+  code   (\(:a, :b)).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0015
+  from   inventory:Capture.^methods
+  cell   DEFINITE | \(Any)
+  code   (\(Any)).DEFINITE
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0016
   from   inventory:Capture.^methods
   cell   HOW | \(1, :a)
   code   (\(1, :a)).HOW
   is     Perl6::Metamodel::ClassHOW.new
   type   Perl6::Metamodel::ClassHOW
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+  oracle rakupp-v3.14.0-114-gc779017-modified → Metamodel::ClassHOW
 
-- id     0008
+- id     0017
   from   inventory:Capture.^methods
   cell   HOW | \()
   code   (\()).HOW
   is     Perl6::Metamodel::ClassHOW.new
   type   Perl6::Metamodel::ClassHOW
   oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Metamodel::ClassHOW
+  oracle rakupp-v3.14.0-114-gc779017-modified → Metamodel::ClassHOW
 
-- id     0009
+- id     0018
+  from   inventory:Capture.^methods
+  cell   HOW | \(1,2)
+  code   (\(1,2)).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-114-gc779017-modified → Metamodel::ClassHOW
+
+- id     0019
+  from   inventory:Capture.^methods
+  cell   HOW | \(:a, :b)
+  code   (\(:a, :b)).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-114-gc779017-modified → Metamodel::ClassHOW
+
+- id     0020
+  from   inventory:Capture.^methods
+  cell   HOW | \(Any)
+  code   (\(Any)).HOW
+  is     Perl6::Metamodel::ClassHOW.new
+  type   Perl6::Metamodel::ClassHOW
+  oracle rakudo-2026.07 → Perl6::Metamodel::ClassHOW.new
+  oracle rakupp-v3.14.0-114-gc779017-modified → Metamodel::ClassHOW
+
+- id     0021
   from   inventory:Capture.^methods
   cell   REPR | \(1, :a)
   code   (\(1, :a)).REPR
   is     "P6opaque"
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0010
+- id     0022
   from   inventory:Capture.^methods
   cell   REPR | \()
   code   (\()).REPR
   is     "P6opaque"
   type   Str
   oracle rakudo-2026.07 → "P6opaque"
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0011
+- id     0023
+  from   inventory:Capture.^methods
+  cell   REPR | \(1,2)
+  code   (\(1,2)).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0024
+  from   inventory:Capture.^methods
+  cell   REPR | \(:a, :b)
+  code   (\(:a, :b)).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0025
+  from   inventory:Capture.^methods
+  cell   REPR | \(Any)
+  code   (\(Any)).REPR
+  is     "P6opaque"
+  type   Str
+  oracle rakudo-2026.07 → "P6opaque"
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0026
   from   inventory:Capture.^methods
   cell   VAR | \(1, :a)
   code   (\(1, :a)).VAR
   is     \(1, :a)
   type   Capture
   oracle rakudo-2026.07 → \(1, :a)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → \(1, :a(Bool::True))
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(1, :a(Bool::True))
 
-- id     0012
+- id     0027
   from   inventory:Capture.^methods
   cell   VAR | \()
   code   (\()).VAR
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → \()
+  oracle rakupp-v3.14.0-114-gc779017-modified → \()
 
-- id     0013
+- id     0028
+  from   inventory:Capture.^methods
+  cell   VAR | \(1,2)
+  code   (\(1,2)).VAR
+  is     \(1, 2)
+  type   Capture
+  oracle rakudo-2026.07 → \(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(1, 2)
+
+- id     0029
+  from   inventory:Capture.^methods
+  cell   VAR | \(:a, :b)
+  code   (\(:a, :b)).VAR
+  is     \(:a, :b)
+  type   Capture
+  oracle rakudo-2026.07 → \(:a, :b)
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(:a(Bool::True), :b(Bool::True))
+
+- id     0030
+  from   inventory:Capture.^methods
+  cell   VAR | \(Any)
+  code   (\(Any)).VAR
+  is     \(Any)
+  type   Capture
+  oracle rakudo-2026.07 → \(Any)
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(Any)
+
+- id     0031
   from   inventory:Capture.^methods
   cell   WHAT | \(1, :a)
   code   (\(1, :a)).WHAT
   is     Capture
   type   Capture
   oracle rakudo-2026.07 → Capture
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Capture
+  oracle rakupp-v3.14.0-114-gc779017-modified → Capture
 
-- id     0014
+- id     0032
   from   inventory:Capture.^methods
   cell   WHAT | \()
   code   (\()).WHAT
   is     Capture
   type   Capture
   oracle rakudo-2026.07 → Capture
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Capture
+  oracle rakupp-v3.14.0-114-gc779017-modified → Capture
 
-- id     0015
+- id     0033
+  from   inventory:Capture.^methods
+  cell   WHAT | \(1,2)
+  code   (\(1,2)).WHAT
+  is     Capture
+  type   Capture
+  oracle rakudo-2026.07 → Capture
+  oracle rakupp-v3.14.0-114-gc779017-modified → Capture
+
+- id     0034
+  from   inventory:Capture.^methods
+  cell   WHAT | \(:a, :b)
+  code   (\(:a, :b)).WHAT
+  is     Capture
+  type   Capture
+  oracle rakudo-2026.07 → Capture
+  oracle rakupp-v3.14.0-114-gc779017-modified → Capture
+
+- id     0035
+  from   inventory:Capture.^methods
+  cell   WHAT | \(Any)
+  code   (\(Any)).WHAT
+  is     Capture
+  type   Capture
+  oracle rakudo-2026.07 → Capture
+  oracle rakupp-v3.14.0-114-gc779017-modified → Capture
+
+- id     0036
   from   inventory:Capture.^methods
   cell   WHO | \(1, :a)
   code   (\(1, :a)).WHO
   is     ${}
   type   Stash
   oracle rakudo-2026.07 → ${}
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${}
 
-- id     0016
+- id     0037
   from   inventory:Capture.^methods
   cell   WHO | \()
   code   (\()).WHO
   is     ${}
   type   Stash
   oracle rakudo-2026.07 → ${}
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ${}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${}
 
-- id     0017
+- id     0038
+  from   inventory:Capture.^methods
+  cell   WHO | \(1,2)
+  code   (\(1,2)).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${}
+
+- id     0039
+  from   inventory:Capture.^methods
+  cell   WHO | \(:a, :b)
+  code   (\(:a, :b)).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${}
+
+- id     0040
+  from   inventory:Capture.^methods
+  cell   WHO | \(Any)
+  code   (\(Any)).WHO
+  is     ${}
+  type   Stash
+  oracle rakudo-2026.07 → ${}
+  oracle rakupp-v3.14.0-114-gc779017-modified → ${}
+
+- id     0041
   from   inventory:Capture.^methods
   cell   all | \(1, :a)
   code   (\(1, :a)).all
   is     all(1)
   type   Junction
   oracle rakudo-2026.07 → all(1)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all(1, :a(Bool::True))
+  oracle rakupp-v3.14.0-114-gc779017-modified → all(1, :a(Bool::True))
 
-- id     0018
+- id     0042
   from   inventory:Capture.^methods
   cell   all | \()
   code   (\()).all
   is     all()
   type   Junction
   oracle rakudo-2026.07 → all()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → all()
+  oracle rakupp-v3.14.0-114-gc779017-modified → all()
 
-- id     0019
+- id     0043
+  from   inventory:Capture.^methods
+  cell   all | \(1,2)
+  code   (\(1,2)).all
+  is     all(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → all(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → all(1, 2)
+
+- id     0044
+  from   inventory:Capture.^methods
+  cell   all | \(:a, :b)
+  code   (\(:a, :b)).all
+  is     all()
+  type   Junction
+  oracle rakudo-2026.07 → all()
+  oracle rakupp-v3.14.0-114-gc779017-modified → all(:a(Bool::True), :b(Bool::True))
+
+- id     0045
+  from   inventory:Capture.^methods
+  cell   all | \(Any)
+  code   (\(Any)).all
+  is     all(Any)
+  type   Junction
+  oracle rakudo-2026.07 → all(Any)
+  oracle rakupp-v3.14.0-114-gc779017-modified → all(Any)
+
+- id     0046
   from   inventory:Capture.^methods
   cell   any | \(1, :a)
   code   (\(1, :a)).any
   is     any(1)
   type   Junction
   oracle rakudo-2026.07 → any(1)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any(1, :a(Bool::True))
+  oracle rakupp-v3.14.0-114-gc779017-modified → any(1, :a(Bool::True))
 
-- id     0020
+- id     0047
   from   inventory:Capture.^methods
   cell   any | \()
   code   (\()).any
   is     any()
   type   Junction
   oracle rakudo-2026.07 → any()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → any()
+  oracle rakupp-v3.14.0-114-gc779017-modified → any()
 
-- id     0021
+- id     0048
+  from   inventory:Capture.^methods
+  cell   any | \(1,2)
+  code   (\(1,2)).any
+  is     any(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → any(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → any(1, 2)
+
+- id     0049
+  from   inventory:Capture.^methods
+  cell   any | \(:a, :b)
+  code   (\(:a, :b)).any
+  is     any()
+  type   Junction
+  oracle rakudo-2026.07 → any()
+  oracle rakupp-v3.14.0-114-gc779017-modified → any(:a(Bool::True), :b(Bool::True))
+
+- id     0050
+  from   inventory:Capture.^methods
+  cell   any | \(Any)
+  code   (\(Any)).any
+  is     any(Any)
+  type   Junction
+  oracle rakudo-2026.07 → any(Any)
+  oracle rakupp-v3.14.0-114-gc779017-modified → any(Any)
+
+- id     0051
   from   inventory:Capture.^methods
   cell   bless | \(1, :a)
   code   (\(1, :a)).bless
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → \()
+  oracle rakupp-v3.14.0-114-gc779017-modified → \()
 
-- id     0022
+- id     0052
   from   inventory:Capture.^methods
   cell   bless | \()
   code   (\()).bless
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → \()
+  oracle rakupp-v3.14.0-114-gc779017-modified → \()
 
-- id     0023
+- id     0053
+  from   inventory:Capture.^methods
+  cell   bless | \(1,2)
+  code   (\(1,2)).bless
+  is     \()
+  type   Capture
+  oracle rakudo-2026.07 → \()
+  oracle rakupp-v3.14.0-114-gc779017-modified → \()
+
+- id     0054
+  from   inventory:Capture.^methods
+  cell   bless | \(:a, :b)
+  code   (\(:a, :b)).bless
+  is     \()
+  type   Capture
+  oracle rakudo-2026.07 → \()
+  oracle rakupp-v3.14.0-114-gc779017-modified → \()
+
+- id     0055
+  from   inventory:Capture.^methods
+  cell   bless | \(Any)
+  code   (\(Any)).bless
+  is     \()
+  type   Capture
+  oracle rakudo-2026.07 → \()
+  oracle rakupp-v3.14.0-114-gc779017-modified → \()
+
+- id     0056
   from   inventory:Capture.^methods
   cell   cache | \(1, :a)
   code   (\(1, :a)).cache
   is     $(1,)
   type   List
   oracle rakudo-2026.07 → $(1,)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1, :a(Bool::True))
+  oracle rakupp-v3.14.0-114-gc779017-modified → $(1, :a(Bool::True))
 
-- id     0024
+- id     0057
   from   inventory:Capture.^methods
   cell   cache | \()
   code   (\()).cache
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
 
-- id     0025
+- id     0058
+  from   inventory:Capture.^methods
+  cell   cache | \(1,2)
+  code   (\(1,2)).cache
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → $(1, 2)
+
+- id     0059
+  from   inventory:Capture.^methods
+  cell   cache | \(:a, :b)
+  code   (\(:a, :b)).cache
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $(:a(Bool::True), :b(Bool::True))
+
+- id     0060
+  from   inventory:Capture.^methods
+  cell   cache | \(Any)
+  code   (\(Any)).cache
+  is     $(Any,)
+  type   List
+  oracle rakudo-2026.07 → $(Any,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → $(Any,)
+
+- id     0061
   from   inventory:Capture.^methods
   cell   can(0) | \(1, :a)
   code   (\(1, :a)).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
 
-- id     0026
+- id     0062
   from   inventory:Capture.^methods
   cell   can(1) | \(1, :a)
   code   (\(1, :a)).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
 
-- id     0027
+- id     0063
   from   inventory:Capture.^methods
   cell   can(-1) | \(1, :a)
   code   (\(1, :a)).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
 
-- id     0028
+- id     0064
   from   inventory:Capture.^methods
   cell   can("a") | \(1, :a)
   code   (\(1, :a)).can("a")
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
 
-- id     0029
+- id     0065
   from   inventory:Capture.^methods
   cell   can(Any) | \(1, :a)
   code   (\(1, :a)).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
 
-- id     0030
+- id     0066
   from   inventory:Capture.^methods
   cell   can(0) | \()
   code   (\()).can(0)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
 
-- id     0031
+- id     0067
   from   inventory:Capture.^methods
   cell   can(1) | \()
   code   (\()).can(1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
 
-- id     0032
+- id     0068
   from   inventory:Capture.^methods
   cell   can(-1) | \()
   code   (\()).can(-1)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
 
-- id     0033
+- id     0069
   from   inventory:Capture.^methods
   cell   can("a") | \()
   code   (\()).can("a")
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
 
-- id     0034
+- id     0070
   from   inventory:Capture.^methods
   cell   can(Any) | \()
   code   (\()).can(Any)
   throws X::AdHoc
   oracle rakudo-2026.07 → ERR:X::AdHoc
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
 
-- id     0035
+- id     0071
+  from   inventory:Capture.^methods
+  cell   can(0) | \(1,2)
+  code   (\(1,2)).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0072
+  from   inventory:Capture.^methods
+  cell   can(1) | \(1,2)
+  code   (\(1,2)).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0073
+  from   inventory:Capture.^methods
+  cell   can(-1) | \(1,2)
+  code   (\(1,2)).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0074
+  from   inventory:Capture.^methods
+  cell   can("a") | \(1,2)
+  code   (\(1,2)).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0075
+  from   inventory:Capture.^methods
+  cell   can(Any) | \(1,2)
+  code   (\(1,2)).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0076
+  from   inventory:Capture.^methods
+  cell   can(0) | \(:a, :b)
+  code   (\(:a, :b)).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0077
+  from   inventory:Capture.^methods
+  cell   can(1) | \(:a, :b)
+  code   (\(:a, :b)).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0078
+  from   inventory:Capture.^methods
+  cell   can(-1) | \(:a, :b)
+  code   (\(:a, :b)).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0079
+  from   inventory:Capture.^methods
+  cell   can("a") | \(:a, :b)
+  code   (\(:a, :b)).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0080
+  from   inventory:Capture.^methods
+  cell   can(Any) | \(:a, :b)
+  code   (\(:a, :b)).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0081
+  from   inventory:Capture.^methods
+  cell   can(0) | \(Any)
+  code   (\(Any)).can(0)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0082
+  from   inventory:Capture.^methods
+  cell   can(1) | \(Any)
+  code   (\(Any)).can(1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0083
+  from   inventory:Capture.^methods
+  cell   can(-1) | \(Any)
+  code   (\(Any)).can(-1)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0084
+  from   inventory:Capture.^methods
+  cell   can("a") | \(Any)
+  code   (\(Any)).can("a")
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0085
+  from   inventory:Capture.^methods
+  cell   can(Any) | \(Any)
+  code   (\(Any)).can(Any)
+  throws X::AdHoc
+  oracle rakudo-2026.07 → ERR:X::AdHoc
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0086
   from   inventory:Capture.^methods
   cell   chrs | \(1, :a)
   code   (\(1, :a)).chrs
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → "\x[1]\0"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\x[1]\0"
 
-- id     0036
+- id     0087
   from   inventory:Capture.^methods
   cell   chrs | \()
   code   (\()).chrs
   throws X::Multi::NoMatch
   oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+  oracle rakupp-v3.14.0-114-gc779017-modified → ""
 
-- id     0037
+- id     0088
+  from   inventory:Capture.^methods
+  cell   chrs | \(1,2)
+  code   (\(1,2)).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\x[1]\x[2]"
+
+- id     0089
+  from   inventory:Capture.^methods
+  cell   chrs | \(:a, :b)
+  code   (\(:a, :b)).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\0\0"
+
+- id     0090
+  from   inventory:Capture.^methods
+  cell   chrs | \(Any)
+  code   (\(Any)).chrs
+  throws X::Multi::NoMatch
+  oracle rakudo-2026.07 → ERR:X::Multi::NoMatch
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\0"
+
+- id     0091
   from   inventory:Capture.^methods
   cell   does(0) | \(1, :a)
   code   (\(1, :a)).does(0)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
 
-- id     0038
+- id     0092
   from   inventory:Capture.^methods
   cell   does(1) | \(1, :a)
   code   (\(1, :a)).does(1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
 
-- id     0039
+- id     0093
   from   inventory:Capture.^methods
   cell   does(-1) | \(1, :a)
   code   (\(1, :a)).does(-1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
 
-- id     0040
+- id     0094
   from   inventory:Capture.^methods
   cell   does("a") | \(1, :a)
   code   (\(1, :a)).does("a")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
 
-- id     0041
+- id     0095
   from   inventory:Capture.^methods
   cell   does(Any) | \(1, :a)
   code   (\(1, :a)).does(Any)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
 
-- id     0042
+- id     0096
   from   inventory:Capture.^methods
   cell   does(0) | \()
   code   (\()).does(0)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
 
-- id     0043
+- id     0097
   from   inventory:Capture.^methods
   cell   does(1) | \()
   code   (\()).does(1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
 
-- id     0044
+- id     0098
   from   inventory:Capture.^methods
   cell   does(-1) | \()
   code   (\()).does(-1)
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
 
-- id     0045
+- id     0099
   from   inventory:Capture.^methods
   cell   does("a") | \()
   code   (\()).does("a")
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
 
-- id     0046
+- id     0100
   from   inventory:Capture.^methods
   cell   does(Any) | \()
   code   (\()).does(Any)
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
 
-- id     0047
+- id     0101
+  from   inventory:Capture.^methods
+  cell   does(0) | \(1,2)
+  code   (\(1,2)).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0102
+  from   inventory:Capture.^methods
+  cell   does(1) | \(1,2)
+  code   (\(1,2)).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0103
+  from   inventory:Capture.^methods
+  cell   does(-1) | \(1,2)
+  code   (\(1,2)).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0104
+  from   inventory:Capture.^methods
+  cell   does("a") | \(1,2)
+  code   (\(1,2)).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0105
+  from   inventory:Capture.^methods
+  cell   does(Any) | \(1,2)
+  code   (\(1,2)).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0106
+  from   inventory:Capture.^methods
+  cell   does(0) | \(:a, :b)
+  code   (\(:a, :b)).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0107
+  from   inventory:Capture.^methods
+  cell   does(1) | \(:a, :b)
+  code   (\(:a, :b)).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0108
+  from   inventory:Capture.^methods
+  cell   does(-1) | \(:a, :b)
+  code   (\(:a, :b)).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0109
+  from   inventory:Capture.^methods
+  cell   does("a") | \(:a, :b)
+  code   (\(:a, :b)).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0110
+  from   inventory:Capture.^methods
+  cell   does(Any) | \(:a, :b)
+  code   (\(:a, :b)).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0111
+  from   inventory:Capture.^methods
+  cell   does(0) | \(Any)
+  code   (\(Any)).does(0)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0112
+  from   inventory:Capture.^methods
+  cell   does(1) | \(Any)
+  code   (\(Any)).does(1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0113
+  from   inventory:Capture.^methods
+  cell   does(-1) | \(Any)
+  code   (\(Any)).does(-1)
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0114
+  from   inventory:Capture.^methods
+  cell   does("a") | \(Any)
+  code   (\(Any)).does("a")
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0115
+  from   inventory:Capture.^methods
+  cell   does(Any) | \(Any)
+  code   (\(Any)).does(Any)
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0116
   from   inventory:Capture.^methods
   cell   hash | \(1, :a)
   code   (\(1, :a)).hash
   is     $(Map.new((:a)))
   type   Map
   oracle rakudo-2026.07 → $(Map.new((:a)))
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Map.new((:a(Bool::True)))
+  oracle rakupp-v3.14.0-114-gc779017-modified → Map.new((:a(Bool::True)))
 
-- id     0048
+- id     0117
   from   inventory:Capture.^methods
   cell   hash | \()
   code   (\()).hash
   is     $(Map.new)
   type   Map
   oracle rakudo-2026.07 → $(Map.new)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Map.new(())
+  oracle rakupp-v3.14.0-114-gc779017-modified → Map.new(())
 
-- id     0049
+- id     0118
+  from   inventory:Capture.^methods
+  cell   hash | \(1,2)
+  code   (\(1,2)).hash
+  is     $(Map.new)
+  type   Map
+  oracle rakudo-2026.07 → $(Map.new)
+  oracle rakupp-v3.14.0-114-gc779017-modified → Map.new(())
+
+- id     0119
+  from   inventory:Capture.^methods
+  cell   hash | \(:a, :b)
+  code   (\(:a, :b)).hash
+  is     $(Map.new((:a,:b)))
+  type   Map
+  oracle rakudo-2026.07 → $(Map.new((:a,:b)))
+  oracle rakupp-v3.14.0-114-gc779017-modified → Map.new((:a(Bool::True),:b(Bool::True)))
+
+- id     0120
+  from   inventory:Capture.^methods
+  cell   hash | \(Any)
+  code   (\(Any)).hash
+  is     $(Map.new)
+  type   Map
+  oracle rakudo-2026.07 → $(Map.new)
+  oracle rakupp-v3.14.0-114-gc779017-modified → Map.new(())
+
+- id     0121
   from   inventory:Capture.^methods
   cell   is-generic | \(1, :a)
   code   (\(1, :a)).is-generic
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0050
+- id     0122
   from   inventory:Capture.^methods
   cell   is-generic | \()
   code   (\()).is-generic
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0051
+- id     0123
+  from   inventory:Capture.^methods
+  cell   is-generic | \(1,2)
+  code   (\(1,2)).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0124
+  from   inventory:Capture.^methods
+  cell   is-generic | \(:a, :b)
+  code   (\(:a, :b)).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0125
+  from   inventory:Capture.^methods
+  cell   is-generic | \(Any)
+  code   (\(Any)).is-generic
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0126
   from   inventory:Capture.^methods
   cell   item | \(1, :a)
   code   (\(1, :a)).item
   is     \(1, :a)
   type   Capture
   oracle rakudo-2026.07 → \(1, :a)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → \(1, :a(Bool::True))
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(1, :a(Bool::True))
 
-- id     0052
+- id     0127
   from   inventory:Capture.^methods
   cell   item | \()
   code   (\()).item
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → \()
+  oracle rakupp-v3.14.0-114-gc779017-modified → \()
 
-- id     0053
+- id     0128
+  from   inventory:Capture.^methods
+  cell   item | \(1,2)
+  code   (\(1,2)).item
+  is     \(1, 2)
+  type   Capture
+  oracle rakudo-2026.07 → \(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(1, 2)
+
+- id     0129
+  from   inventory:Capture.^methods
+  cell   item | \(:a, :b)
+  code   (\(:a, :b)).item
+  is     \(:a, :b)
+  type   Capture
+  oracle rakudo-2026.07 → \(:a, :b)
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(:a(Bool::True), :b(Bool::True))
+
+- id     0130
+  from   inventory:Capture.^methods
+  cell   item | \(Any)
+  code   (\(Any)).item
+  is     \(Any)
+  type   Capture
+  oracle rakudo-2026.07 → \(Any)
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(Any)
+
+- id     0131
   from   inventory:Capture.^methods
   cell   join(0) | \(1, :a)
   code   (\(1, :a)).join(0)
   is     "1"
   type   Str
   oracle rakudo-2026.07 → "1"
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → "10a\tTrue"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "10a\tTrue"
 
-- id     0054
+- id     0132
   from   inventory:Capture.^methods
   cell   join(1) | \(1, :a)
   code   (\(1, :a)).join(1)
   is     "1"
   type   Str
   oracle rakudo-2026.07 → "1"
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → "11a\tTrue"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "11a\tTrue"
 
-- id     0055
+- id     0133
   from   inventory:Capture.^methods
   cell   join(-1) | \(1, :a)
   code   (\(1, :a)).join(-1)
   is     "1"
   type   Str
   oracle rakudo-2026.07 → "1"
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1-1a\tTrue"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "1-1a\tTrue"
 
-- id     0056
+- id     0134
   from   inventory:Capture.^methods
   cell   join("a") | \(1, :a)
   code   (\(1, :a)).join("a")
   is     "1"
   type   Str
   oracle rakudo-2026.07 → "1"
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → "1aa\tTrue"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "1aa\tTrue"
 
-- id     0057
+- id     0135
   from   inventory:Capture.^methods
   cell   join(Any) | \(1, :a)
   code   (\(1, :a)).join(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding::Parameter
 
-- id     0058
+- id     0136
   from   inventory:Capture.^methods
   cell   join(0) | \()
   code   (\()).join(0)
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+  oracle rakupp-v3.14.0-114-gc779017-modified → ""
 
-- id     0059
+- id     0137
   from   inventory:Capture.^methods
   cell   join(1) | \()
   code   (\()).join(1)
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+  oracle rakupp-v3.14.0-114-gc779017-modified → ""
 
-- id     0060
+- id     0138
   from   inventory:Capture.^methods
   cell   join(-1) | \()
   code   (\()).join(-1)
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+  oracle rakupp-v3.14.0-114-gc779017-modified → ""
 
-- id     0061
+- id     0139
   from   inventory:Capture.^methods
   cell   join("a") | \()
   code   (\()).join("a")
   is     ""
   type   Str
   oracle rakudo-2026.07 → ""
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ""
+  oracle rakupp-v3.14.0-114-gc779017-modified → ""
 
-- id     0062
+- id     0140
   from   inventory:Capture.^methods
   cell   join(Any) | \()
   code   (\()).join(Any)
   throws X::TypeCheck::Binding::Parameter
   oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding::Parameter
 
-- id     0063
+- id     0141
+  from   inventory:Capture.^methods
+  cell   join(0) | \(1,2)
+  code   (\(1,2)).join(0)
+  is     "102"
+  type   Str
+  oracle rakudo-2026.07 → "102"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "102"
+
+- id     0142
+  from   inventory:Capture.^methods
+  cell   join(1) | \(1,2)
+  code   (\(1,2)).join(1)
+  is     "112"
+  type   Str
+  oracle rakudo-2026.07 → "112"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "112"
+
+- id     0143
+  from   inventory:Capture.^methods
+  cell   join(-1) | \(1,2)
+  code   (\(1,2)).join(-1)
+  is     "1-12"
+  type   Str
+  oracle rakudo-2026.07 → "1-12"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "1-12"
+
+- id     0144
+  from   inventory:Capture.^methods
+  cell   join("a") | \(1,2)
+  code   (\(1,2)).join("a")
+  is     "1a2"
+  type   Str
+  oracle rakudo-2026.07 → "1a2"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "1a2"
+
+- id     0145
+  from   inventory:Capture.^methods
+  cell   join(Any) | \(1,2)
+  code   (\(1,2)).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0146
+  from   inventory:Capture.^methods
+  cell   join(0) | \(:a, :b)
+  code   (\(:a, :b)).join(0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a\tTrue0b\tTrue"
+
+- id     0147
+  from   inventory:Capture.^methods
+  cell   join(1) | \(:a, :b)
+  code   (\(:a, :b)).join(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a\tTrue1b\tTrue"
+
+- id     0148
+  from   inventory:Capture.^methods
+  cell   join(-1) | \(:a, :b)
+  code   (\(:a, :b)).join(-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a\tTrue-1b\tTrue"
+
+- id     0149
+  from   inventory:Capture.^methods
+  cell   join("a") | \(:a, :b)
+  code   (\(:a, :b)).join("a")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-114-gc779017-modified → "a\tTrueab\tTrue"
+
+- id     0150
+  from   inventory:Capture.^methods
+  cell   join(Any) | \(:a, :b)
+  code   (\(:a, :b)).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0151
+  from   inventory:Capture.^methods
+  cell   join(0) | \(Any)
+  code   (\(Any)).join(0)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-114-gc779017-modified → ""
+
+- id     0152
+  from   inventory:Capture.^methods
+  cell   join(1) | \(Any)
+  code   (\(Any)).join(1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-114-gc779017-modified → ""
+
+- id     0153
+  from   inventory:Capture.^methods
+  cell   join(-1) | \(Any)
+  code   (\(Any)).join(-1)
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-114-gc779017-modified → ""
+
+- id     0154
+  from   inventory:Capture.^methods
+  cell   join("a") | \(Any)
+  code   (\(Any)).join("a")
+  is     ""
+  type   Str
+  oracle rakudo-2026.07 → ""
+  oracle rakupp-v3.14.0-114-gc779017-modified → ""
+
+- id     0155
+  from   inventory:Capture.^methods
+  cell   join(Any) | \(Any)
+  code   (\(Any)).join(Any)
+  throws X::TypeCheck::Binding::Parameter
+  oracle rakudo-2026.07 → ERR:X::TypeCheck::Binding::Parameter
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::TypeCheck::Binding::Parameter
+
+- id     0156
   from   inventory:Capture.^methods
   cell   lazy-if(0) | \(1, :a)
   code   (\(1, :a)).lazy-if(0)
   is     \(1, :a)
   type   Capture
   oracle rakudo-2026.07 → \(1, :a)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0064
+- id     0157
   from   inventory:Capture.^methods
   cell   lazy-if(1) | \(1, :a)
   code   (\(1, :a)).lazy-if(1)
   is     \(1, :a)
   type   Capture
   oracle rakudo-2026.07 → \(1, :a)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0065
+- id     0158
   from   inventory:Capture.^methods
   cell   lazy-if(-1) | \(1, :a)
   code   (\(1, :a)).lazy-if(-1)
   is     \(1, :a)
   type   Capture
   oracle rakudo-2026.07 → \(1, :a)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0066
+- id     0159
   from   inventory:Capture.^methods
   cell   lazy-if("a") | \(1, :a)
   code   (\(1, :a)).lazy-if("a")
   is     \(1, :a)
   type   Capture
   oracle rakudo-2026.07 → \(1, :a)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0067
+- id     0160
   from   inventory:Capture.^methods
   cell   lazy-if(Any) | \(1, :a)
   code   (\(1, :a)).lazy-if(Any)
   is     \(1, :a)
   type   Capture
   oracle rakudo-2026.07 → \(1, :a)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0068
+- id     0161
   from   inventory:Capture.^methods
   cell   lazy-if(0) | \()
   code   (\()).lazy-if(0)
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0069
+- id     0162
   from   inventory:Capture.^methods
   cell   lazy-if(1) | \()
   code   (\()).lazy-if(1)
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0070
+- id     0163
   from   inventory:Capture.^methods
   cell   lazy-if(-1) | \()
   code   (\()).lazy-if(-1)
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0071
+- id     0164
   from   inventory:Capture.^methods
   cell   lazy-if("a") | \()
   code   (\()).lazy-if("a")
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0072
+- id     0165
   from   inventory:Capture.^methods
   cell   lazy-if(Any) | \()
   code   (\()).lazy-if(Any)
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0073
+- id     0166
+  from   inventory:Capture.^methods
+  cell   lazy-if(0) | \(1,2)
+  code   (\(1,2)).lazy-if(0)
+  is     \(1, 2)
+  type   Capture
+  oracle rakudo-2026.07 → \(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0167
+  from   inventory:Capture.^methods
+  cell   lazy-if(1) | \(1,2)
+  code   (\(1,2)).lazy-if(1)
+  is     \(1, 2)
+  type   Capture
+  oracle rakudo-2026.07 → \(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0168
+  from   inventory:Capture.^methods
+  cell   lazy-if(-1) | \(1,2)
+  code   (\(1,2)).lazy-if(-1)
+  is     \(1, 2)
+  type   Capture
+  oracle rakudo-2026.07 → \(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0169
+  from   inventory:Capture.^methods
+  cell   lazy-if("a") | \(1,2)
+  code   (\(1,2)).lazy-if("a")
+  is     \(1, 2)
+  type   Capture
+  oracle rakudo-2026.07 → \(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0170
+  from   inventory:Capture.^methods
+  cell   lazy-if(Any) | \(1,2)
+  code   (\(1,2)).lazy-if(Any)
+  is     \(1, 2)
+  type   Capture
+  oracle rakudo-2026.07 → \(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0171
+  from   inventory:Capture.^methods
+  cell   lazy-if(0) | \(:a, :b)
+  code   (\(:a, :b)).lazy-if(0)
+  is     \(:a, :b)
+  type   Capture
+  oracle rakudo-2026.07 → \(:a, :b)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0172
+  from   inventory:Capture.^methods
+  cell   lazy-if(1) | \(:a, :b)
+  code   (\(:a, :b)).lazy-if(1)
+  is     \(:a, :b)
+  type   Capture
+  oracle rakudo-2026.07 → \(:a, :b)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0173
+  from   inventory:Capture.^methods
+  cell   lazy-if(-1) | \(:a, :b)
+  code   (\(:a, :b)).lazy-if(-1)
+  is     \(:a, :b)
+  type   Capture
+  oracle rakudo-2026.07 → \(:a, :b)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0174
+  from   inventory:Capture.^methods
+  cell   lazy-if("a") | \(:a, :b)
+  code   (\(:a, :b)).lazy-if("a")
+  is     \(:a, :b)
+  type   Capture
+  oracle rakudo-2026.07 → \(:a, :b)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0175
+  from   inventory:Capture.^methods
+  cell   lazy-if(Any) | \(:a, :b)
+  code   (\(:a, :b)).lazy-if(Any)
+  is     \(:a, :b)
+  type   Capture
+  oracle rakudo-2026.07 → \(:a, :b)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0176
+  from   inventory:Capture.^methods
+  cell   lazy-if(0) | \(Any)
+  code   (\(Any)).lazy-if(0)
+  is     \(Any)
+  type   Capture
+  oracle rakudo-2026.07 → \(Any)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0177
+  from   inventory:Capture.^methods
+  cell   lazy-if(1) | \(Any)
+  code   (\(Any)).lazy-if(1)
+  is     \(Any)
+  type   Capture
+  oracle rakudo-2026.07 → \(Any)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0178
+  from   inventory:Capture.^methods
+  cell   lazy-if(-1) | \(Any)
+  code   (\(Any)).lazy-if(-1)
+  is     \(Any)
+  type   Capture
+  oracle rakudo-2026.07 → \(Any)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0179
+  from   inventory:Capture.^methods
+  cell   lazy-if("a") | \(Any)
+  code   (\(Any)).lazy-if("a")
+  is     \(Any)
+  type   Capture
+  oracle rakudo-2026.07 → \(Any)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0180
+  from   inventory:Capture.^methods
+  cell   lazy-if(Any) | \(Any)
+  code   (\(Any)).lazy-if(Any)
+  is     \(Any)
+  type   Capture
+  oracle rakudo-2026.07 → \(Any)
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
+
+- id     0181
   from   inventory:Capture.^methods
   cell   list | \(1, :a)
   code   (\(1, :a)).list
   is     $(1,)
   type   List
   oracle rakudo-2026.07 → $(1,)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(1,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → $(1,)
 
-- id     0074
+- id     0182
   from   inventory:Capture.^methods
   cell   list | \()
   code   (\()).list
   is     $( )
   type   List
   oracle rakudo-2026.07 → $( )
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
 
-- id     0075
+- id     0183
+  from   inventory:Capture.^methods
+  cell   list | \(1,2)
+  code   (\(1,2)).list
+  is     $(1, 2)
+  type   List
+  oracle rakudo-2026.07 → $(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → $(1, 2)
+
+- id     0184
+  from   inventory:Capture.^methods
+  cell   list | \(:a, :b)
+  code   (\(:a, :b)).list
+  is     $( )
+  type   List
+  oracle rakudo-2026.07 → $( )
+  oracle rakupp-v3.14.0-114-gc779017-modified → $( )
+
+- id     0185
+  from   inventory:Capture.^methods
+  cell   list | \(Any)
+  code   (\(Any)).list
+  is     $(Any,)
+  type   List
+  oracle rakudo-2026.07 → $(Any,)
+  oracle rakupp-v3.14.0-114-gc779017-modified → $(Any,)
+
+- id     0186
   from   inventory:Capture.^methods
   cell   nl-out | \(1, :a)
   code   (\(1, :a)).nl-out
   is     "\n"
   type   Str
   oracle rakudo-2026.07 → "\n"
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0076
+- id     0187
   from   inventory:Capture.^methods
   cell   nl-out | \()
   code   (\()).nl-out
   is     "\n"
   type   Str
   oracle rakudo-2026.07 → "\n"
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::Method::NotFound
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::Method::NotFound
 
-- id     0077
+- id     0188
+  from   inventory:Capture.^methods
+  cell   nl-out | \(1,2)
+  code   (\(1,2)).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\n"
+
+- id     0189
+  from   inventory:Capture.^methods
+  cell   nl-out | \(:a, :b)
+  code   (\(:a, :b)).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\n"
+
+- id     0190
+  from   inventory:Capture.^methods
+  cell   nl-out | \(Any)
+  code   (\(Any)).nl-out
+  is     "\n"
+  type   Str
+  oracle rakudo-2026.07 → "\n"
+  oracle rakupp-v3.14.0-114-gc779017-modified → "\n"
+
+- id     0191
   from   inventory:Capture.^methods
   cell   none | \(1, :a)
   code   (\(1, :a)).none
   is     none(1)
   type   Junction
   oracle rakudo-2026.07 → none(1)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → none(1, :a(Bool::True))
+  oracle rakupp-v3.14.0-114-gc779017-modified → none(1, :a(Bool::True))
 
-- id     0078
+- id     0192
   from   inventory:Capture.^methods
   cell   none | \()
   code   (\()).none
   is     none()
   type   Junction
   oracle rakudo-2026.07 → none()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → none()
+  oracle rakupp-v3.14.0-114-gc779017-modified → none()
 
-- id     0079
+- id     0193
+  from   inventory:Capture.^methods
+  cell   none | \(1,2)
+  code   (\(1,2)).none
+  is     none(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → none(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → none(1, 2)
+
+- id     0194
+  from   inventory:Capture.^methods
+  cell   none | \(:a, :b)
+  code   (\(:a, :b)).none
+  is     none()
+  type   Junction
+  oracle rakudo-2026.07 → none()
+  oracle rakupp-v3.14.0-114-gc779017-modified → none(:a(Bool::True), :b(Bool::True))
+
+- id     0195
+  from   inventory:Capture.^methods
+  cell   none | \(Any)
+  code   (\(Any)).none
+  is     none(Any)
+  type   Junction
+  oracle rakudo-2026.07 → none(Any)
+  oracle rakupp-v3.14.0-114-gc779017-modified → none(Any)
+
+- id     0196
   from   inventory:Capture.^methods
   cell   not | \(1, :a)
   code   (\(1, :a)).not
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
 
-- id     0080
+- id     0197
   from   inventory:Capture.^methods
   cell   not | \()
   code   (\()).not
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
 
-- id     0081
+- id     0198
+  from   inventory:Capture.^methods
+  cell   not | \(1,2)
+  code   (\(1,2)).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0199
+  from   inventory:Capture.^methods
+  cell   not | \(:a, :b)
+  code   (\(:a, :b)).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0200
+  from   inventory:Capture.^methods
+  cell   not | \(Any)
+  code   (\(Any)).not
+  is     Bool::False
+  type   Bool
+  oracle rakudo-2026.07 → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
+
+- id     0201
   from   inventory:Capture.^methods
   cell   one | \(1, :a)
   code   (\(1, :a)).one
   is     one(1)
   type   Junction
   oracle rakudo-2026.07 → one(1)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → one(1, :a(Bool::True))
+  oracle rakupp-v3.14.0-114-gc779017-modified → one(1, :a(Bool::True))
 
-- id     0082
+- id     0202
   from   inventory:Capture.^methods
   cell   one | \()
   code   (\()).one
   is     one()
   type   Junction
   oracle rakudo-2026.07 → one()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → one()
+  oracle rakupp-v3.14.0-114-gc779017-modified → one()
 
-- id     0083
+- id     0203
+  from   inventory:Capture.^methods
+  cell   one | \(1,2)
+  code   (\(1,2)).one
+  is     one(1, 2)
+  type   Junction
+  oracle rakudo-2026.07 → one(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → one(1, 2)
+
+- id     0204
+  from   inventory:Capture.^methods
+  cell   one | \(:a, :b)
+  code   (\(:a, :b)).one
+  is     one()
+  type   Junction
+  oracle rakudo-2026.07 → one()
+  oracle rakupp-v3.14.0-114-gc779017-modified → one(:a(Bool::True), :b(Bool::True))
+
+- id     0205
+  from   inventory:Capture.^methods
+  cell   one | \(Any)
+  code   (\(Any)).one
+  is     one(Any)
+  type   Junction
+  oracle rakudo-2026.07 → one(Any)
+  oracle rakupp-v3.14.0-114-gc779017-modified → one(Any)
+
+- id     0206
   from   inventory:Capture.^methods
   cell   reverse | \(1, :a)
   code   (\(1, :a)).reverse
   is     $((1,).Seq)
   type   Seq
   oracle rakudo-2026.07 → $((1,).Seq)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $((:a(Bool::True), 1).Seq)
+  oracle rakupp-v3.14.0-114-gc779017-modified → $((:a(Bool::True), 1).Seq)
 
-- id     0084
+- id     0207
   from   inventory:Capture.^methods
   cell   reverse | \()
   code   (\()).reverse
   is     $(().Seq)
   type   Seq
   oracle rakudo-2026.07 → $(().Seq)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → $(().Seq)
+  oracle rakupp-v3.14.0-114-gc779017-modified → $(().Seq)
 
-- id     0085
+- id     0208
+  from   inventory:Capture.^methods
+  cell   reverse | \(1,2)
+  code   (\(1,2)).reverse
+  is     $((2, 1).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((2, 1).Seq)
+  oracle rakupp-v3.14.0-114-gc779017-modified → $((2, 1).Seq)
+
+- id     0209
+  from   inventory:Capture.^methods
+  cell   reverse | \(:a, :b)
+  code   (\(:a, :b)).reverse
+  is     $(().Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $(().Seq)
+  oracle rakupp-v3.14.0-114-gc779017-modified → $((:b(Bool::True), :a(Bool::True)).Seq)
+
+- id     0210
+  from   inventory:Capture.^methods
+  cell   reverse | \(Any)
+  code   (\(Any)).reverse
+  is     $((Any,).Seq)
+  type   Seq
+  oracle rakudo-2026.07 → $((Any,).Seq)
+  oracle rakupp-v3.14.0-114-gc779017-modified → $((Any,).Seq)
+
+- id     0211
   from   inventory:Capture.^methods
   cell   self | \(1, :a)
   code   (\(1, :a)).self
   is     \(1, :a)
   type   Capture
   oracle rakudo-2026.07 → \(1, :a)
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → \(1, :a(Bool::True))
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(1, :a(Bool::True))
 
-- id     0086
+- id     0212
   from   inventory:Capture.^methods
   cell   self | \()
   code   (\()).self
   is     \()
   type   Capture
   oracle rakudo-2026.07 → \()
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → \()
+  oracle rakupp-v3.14.0-114-gc779017-modified → \()
 
-- id     0087
+- id     0213
+  from   inventory:Capture.^methods
+  cell   self | \(1,2)
+  code   (\(1,2)).self
+  is     \(1, 2)
+  type   Capture
+  oracle rakudo-2026.07 → \(1, 2)
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(1, 2)
+
+- id     0214
+  from   inventory:Capture.^methods
+  cell   self | \(:a, :b)
+  code   (\(:a, :b)).self
+  is     \(:a, :b)
+  type   Capture
+  oracle rakudo-2026.07 → \(:a, :b)
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(:a(Bool::True), :b(Bool::True))
+
+- id     0215
+  from   inventory:Capture.^methods
+  cell   self | \(Any)
+  code   (\(Any)).self
+  is     \(Any)
+  type   Capture
+  oracle rakudo-2026.07 → \(Any)
+  oracle rakupp-v3.14.0-114-gc779017-modified → \(Any)
+
+- id     0216
   from   inventory:Capture.^methods
   cell   so | \(1, :a)
   code   (\(1, :a)).so
   is     Bool::True
   type   Bool
   oracle rakudo-2026.07 → Bool::True
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
 
-- id     0088
+- id     0217
   from   inventory:Capture.^methods
   cell   so | \()
   code   (\()).so
   is     Bool::False
   type   Bool
   oracle rakudo-2026.07 → Bool::False
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → Bool::False
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::False
 
-- id     0089
+- id     0218
+  from   inventory:Capture.^methods
+  cell   so | \(1,2)
+  code   (\(1,2)).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0219
+  from   inventory:Capture.^methods
+  cell   so | \(:a, :b)
+  code   (\(:a, :b)).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0220
+  from   inventory:Capture.^methods
+  cell   so | \(Any)
+  code   (\(Any)).so
+  is     Bool::True
+  type   Bool
+  oracle rakudo-2026.07 → Bool::True
+  oracle rakupp-v3.14.0-114-gc779017-modified → Bool::True
+
+- id     0221
   from   inventory:Capture.^methods
   cell   sum | \(1, :a)
   code   (\(1, :a)).sum
   is     1
   type   Int
   oracle rakudo-2026.07 → 1
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → 1e0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 1e0
 
-- id     0090
+- id     0222
   from   inventory:Capture.^methods
   cell   sum | \()
   code   (\()).sum
   is     0
   type   Int
   oracle rakudo-2026.07 → 0
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
 
-- id     0091
+- id     0223
+  from   inventory:Capture.^methods
+  cell   sum | \(1,2)
+  code   (\(1,2)).sum
+  is     3
+  type   Int
+  oracle rakudo-2026.07 → 3
+  oracle rakupp-v3.14.0-114-gc779017-modified → 3
+
+- id     0224
+  from   inventory:Capture.^methods
+  cell   sum | \(:a, :b)
+  code   (\(:a, :b)).sum
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0e0
+
+- id     0225
+  from   inventory:Capture.^methods
+  cell   sum | \(Any)
+  code   (\(Any)).sum
+  is     0
+  type   Int
+  oracle rakudo-2026.07 → 0
+  oracle rakupp-v3.14.0-114-gc779017-modified → 0
+
+- id     0226
   from   inventory:Capture.^methods
   cell   take | \(1, :a)
   code   (\(1, :a)).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::ControlFlow
 
-- id     0092
+- id     0227
   from   inventory:Capture.^methods
   cell   take | \()
   code   (\()).take
   throws X::ControlFlow
   oracle rakudo-2026.07 → ERR:X::ControlFlow
-  oracle rakupp-v3.14.0-100-g899ad9f-modified → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::ControlFlow
+
+- id     0228
+  from   inventory:Capture.^methods
+  cell   take | \(1,2)
+  code   (\(1,2)).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::ControlFlow
+
+- id     0229
+  from   inventory:Capture.^methods
+  cell   take | \(:a, :b)
+  code   (\(:a, :b)).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::ControlFlow
+
+- id     0230
+  from   inventory:Capture.^methods
+  cell   take | \(Any)
+  code   (\(Any)).take
+  throws X::ControlFlow
+  oracle rakudo-2026.07 → ERR:X::ControlFlow
+  oracle rakupp-v3.14.0-114-gc779017-modified → ERR:X::ControlFlow
