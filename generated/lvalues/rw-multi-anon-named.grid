@@ -1,0 +1,149 @@
+atom     lvalues/rw-multi-anon-named
+source   generated
+gen      gen/lvalues.raku
+law      a write through `rn({T}, :k)`  ===  a write straight to `{T}`
+ladder   8 targets x 3 writes
+
+- id     0001
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   scalar | rw-multi-anon-named | assign
+  code   do { my $v = 1; multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn($v, :k) = 7; $v }
+  same-as do { my $v = 1; $v = 7; $v }
+
+- id     0002
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   scalar | rw-multi-anon-named | incr
+  code   do { my $v = 1; multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn($v, :k)++; $v }
+  same-as do { my $v = 1; $v++; $v }
+
+- id     0003
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   scalar | rw-multi-anon-named | addto
+  code   do { my $v = 1; multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn($v, :k) += 5; $v }
+  same-as do { my $v = 1; $v += 5; $v }
+
+- id     0004
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   array-elem | rw-multi-anon-named | assign
+  code   do { my @a = 1, 2, 3; multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(@a[1], :k) = 7; @a[1] }
+  same-as do { my @a = 1, 2, 3; @a[1] = 7; @a[1] }
+
+- id     0005
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   array-elem | rw-multi-anon-named | incr
+  code   do { my @a = 1, 2, 3; multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(@a[1], :k)++; @a[1] }
+  same-as do { my @a = 1, 2, 3; @a[1]++; @a[1] }
+
+- id     0006
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   array-elem | rw-multi-anon-named | addto
+  code   do { my @a = 1, 2, 3; multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(@a[1], :k) += 5; @a[1] }
+  same-as do { my @a = 1, 2, 3; @a[1] += 5; @a[1] }
+
+- id     0007
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   hash-elem | rw-multi-anon-named | assign
+  code   do { my %h = :a(1); multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(%h<a>, :k) = 7; %h<a> }
+  same-as do { my %h = :a(1); %h<a> = 7; %h<a> }
+
+- id     0008
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   hash-elem | rw-multi-anon-named | incr
+  code   do { my %h = :a(1); multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(%h<a>, :k)++; %h<a> }
+  same-as do { my %h = :a(1); %h<a>++; %h<a> }
+
+- id     0009
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   hash-elem | rw-multi-anon-named | addto
+  code   do { my %h = :a(1); multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(%h<a>, :k) += 5; %h<a> }
+  same-as do { my %h = :a(1); %h<a> += 5; %h<a> }
+
+- id     0010
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   hash-nested | rw-multi-anon-named | assign
+  code   do { my %h = :a({:b(1)}); multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(%h<a><b>, :k) = 7; %h<a><b> }
+  same-as do { my %h = :a({:b(1)}); %h<a><b> = 7; %h<a><b> }
+
+- id     0011
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   hash-nested | rw-multi-anon-named | incr
+  code   do { my %h = :a({:b(1)}); multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(%h<a><b>, :k)++; %h<a><b> }
+  same-as do { my %h = :a({:b(1)}); %h<a><b>++; %h<a><b> }
+
+- id     0012
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   hash-nested | rw-multi-anon-named | addto
+  code   do { my %h = :a({:b(1)}); multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(%h<a><b>, :k) += 5; %h<a><b> }
+  same-as do { my %h = :a({:b(1)}); %h<a><b> += 5; %h<a><b> }
+
+- id     0013
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   array-of-hash | rw-multi-anon-named | assign
+  code   do { my @a = ({:k(1)},); multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(@a[0]<k>, :k) = 7; @a[0]<k> }
+  same-as do { my @a = ({:k(1)},); @a[0]<k> = 7; @a[0]<k> }
+
+- id     0014
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   array-of-hash | rw-multi-anon-named | incr
+  code   do { my @a = ({:k(1)},); multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(@a[0]<k>, :k)++; @a[0]<k> }
+  same-as do { my @a = ({:k(1)},); @a[0]<k>++; @a[0]<k> }
+
+- id     0015
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   array-of-hash | rw-multi-anon-named | addto
+  code   do { my @a = ({:k(1)},); multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(@a[0]<k>, :k) += 5; @a[0]<k> }
+  same-as do { my @a = ({:k(1)},); @a[0]<k> += 5; @a[0]<k> }
+
+- id     0016
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   attribute | rw-multi-anon-named | assign
+  code   do { my $o = (class { has $.x is rw }).new(:x(1)); multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn($o.x, :k) = 7; $o.x }
+  same-as do { my $o = (class { has $.x is rw }).new(:x(1)); $o.x = 7; $o.x }
+
+- id     0017
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   attribute | rw-multi-anon-named | incr
+  code   do { my $o = (class { has $.x is rw }).new(:x(1)); multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn($o.x, :k)++; $o.x }
+  same-as do { my $o = (class { has $.x is rw }).new(:x(1)); $o.x++; $o.x }
+
+- id     0018
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   attribute | rw-multi-anon-named | addto
+  code   do { my $o = (class { has $.x is rw }).new(:x(1)); multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn($o.x, :k) += 5; $o.x }
+  same-as do { my $o = (class { has $.x is rw }).new(:x(1)); $o.x += 5; $o.x }
+
+- id     0019
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   autoviv-elem | rw-multi-anon-named | assign
+  code   do { my %h; multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(%h<new>, :k) = 7; %h<new> }
+  same-as do { my %h; %h<new> = 7; %h<new> }
+
+- id     0020
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   autoviv-elem | rw-multi-anon-named | incr
+  code   do { my %h; multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(%h<new>, :k)++; %h<new> }
+  same-as do { my %h; %h<new>++; %h<new> }
+
+- id     0021
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   autoviv-elem | rw-multi-anon-named | addto
+  code   do { my %h; multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(%h<new>, :k) += 5; %h<new> }
+  same-as do { my %h; %h<new> += 5; %h<new> }
+
+- id     0022
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   autoviv-deep | rw-multi-anon-named | assign
+  code   do { my %h; multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(%h<a><b>, :k) = 7; %h<a><b> }
+  same-as do { my %h; %h<a><b> = 7; %h<a><b> }
+
+- id     0023
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   autoviv-deep | rw-multi-anon-named | incr
+  code   do { my %h; multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(%h<a><b>, :k)++; %h<a><b> }
+  same-as do { my %h; %h<a><b>++; %h<a><b> }
+
+- id     0024
+  from   law:write-through · bug:rakupp-anonymous-params-share-a-slot
+  cell   autoviv-deep | rw-multi-anon-named | addto
+  code   do { my %h; multi rn($x is rw, Bool :k($), Bool :v($)) is rw { return-rw $x }; rn(%h<a><b>, :k) += 5; %h<a><b> }
+  same-as do { my %h; %h<a><b> += 5; %h<a><b> }

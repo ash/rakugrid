@@ -1,0 +1,870 @@
+atom     routes/smartmatch-is-dispatch
+source   generated
+gen      gen/routes.raku
+law      V ~~ T  ===  multi dispatch choosing the T candidate
+why      the type a multi dispatches on is the one `~~` answers
+ladder   144 crossings
+
+- id     0001
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1 ~~ Int
+  code   so((1) ~~ Int)
+  same-as so(do { my $A = \(1); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0002
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1 ~~ Str
+  code   so((1) ~~ Str)
+  same-as so(do { my $A = \(1); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0003
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1 ~~ Cool
+  code   so((1) ~~ Cool)
+  same-as so(do { my $A = \(1); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0004
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1 ~~ Associative
+  code   so((1) ~~ Associative)
+  same-as so(do { my $A = \(1); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0005
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1 ~~ Positional
+  code   so((1) ~~ Positional)
+  same-as so(do { my $A = \(1); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0006
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1 ~~ Iterable
+  code   so((1) ~~ Iterable)
+  same-as so(do { my $A = \(1); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0007
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1 ~~ Callable
+  code   so((1) ~~ Callable)
+  same-as so(do { my $A = \(1); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0008
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1 ~~ Numeric
+  code   so((1) ~~ Numeric)
+  same-as so(do { my $A = \(1); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0009
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1 ~~ Pair
+  code   so((1) ~~ Pair)
+  same-as so(do { my $A = \(1); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0010
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   "a" ~~ Int
+  code   so(("a") ~~ Int)
+  same-as so(do { my $A = \("a"); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0011
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   "a" ~~ Str
+  code   so(("a") ~~ Str)
+  same-as so(do { my $A = \("a"); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0012
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   "a" ~~ Cool
+  code   so(("a") ~~ Cool)
+  same-as so(do { my $A = \("a"); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0013
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   "a" ~~ Associative
+  code   so(("a") ~~ Associative)
+  same-as so(do { my $A = \("a"); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0014
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   "a" ~~ Positional
+  code   so(("a") ~~ Positional)
+  same-as so(do { my $A = \("a"); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0015
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   "a" ~~ Iterable
+  code   so(("a") ~~ Iterable)
+  same-as so(do { my $A = \("a"); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0016
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   "a" ~~ Callable
+  code   so(("a") ~~ Callable)
+  same-as so(do { my $A = \("a"); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0017
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   "a" ~~ Numeric
+  code   so(("a") ~~ Numeric)
+  same-as so(do { my $A = \("a"); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0018
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   "a" ~~ Pair
+  code   so(("a") ~~ Pair)
+  same-as so(do { my $A = \("a"); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0019
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1.5 ~~ Int
+  code   so((1.5) ~~ Int)
+  same-as so(do { my $A = \(1.5); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0020
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1.5 ~~ Str
+  code   so((1.5) ~~ Str)
+  same-as so(do { my $A = \(1.5); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0021
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1.5 ~~ Cool
+  code   so((1.5) ~~ Cool)
+  same-as so(do { my $A = \(1.5); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0022
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1.5 ~~ Associative
+  code   so((1.5) ~~ Associative)
+  same-as so(do { my $A = \(1.5); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0023
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1.5 ~~ Positional
+  code   so((1.5) ~~ Positional)
+  same-as so(do { my $A = \(1.5); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0024
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1.5 ~~ Iterable
+  code   so((1.5) ~~ Iterable)
+  same-as so(do { my $A = \(1.5); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0025
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1.5 ~~ Callable
+  code   so((1.5) ~~ Callable)
+  same-as so(do { my $A = \(1.5); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0026
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1.5 ~~ Numeric
+  code   so((1.5) ~~ Numeric)
+  same-as so(do { my $A = \(1.5); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0027
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1.5 ~~ Pair
+  code   so((1.5) ~~ Pair)
+  same-as so(do { my $A = \(1.5); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0028
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (a => 1) ~~ Int
+  code   so(((a => 1)) ~~ Int)
+  same-as so(do { my $A = \((a => 1)); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0029
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (a => 1) ~~ Str
+  code   so(((a => 1)) ~~ Str)
+  same-as so(do { my $A = \((a => 1)); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0030
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (a => 1) ~~ Cool
+  code   so(((a => 1)) ~~ Cool)
+  same-as so(do { my $A = \((a => 1)); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0031
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (a => 1) ~~ Associative
+  code   so(((a => 1)) ~~ Associative)
+  same-as so(do { my $A = \((a => 1)); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0032
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (a => 1) ~~ Positional
+  code   so(((a => 1)) ~~ Positional)
+  same-as so(do { my $A = \((a => 1)); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0033
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (a => 1) ~~ Iterable
+  code   so(((a => 1)) ~~ Iterable)
+  same-as so(do { my $A = \((a => 1)); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0034
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (a => 1) ~~ Callable
+  code   so(((a => 1)) ~~ Callable)
+  same-as so(do { my $A = \((a => 1)); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0035
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (a => 1) ~~ Numeric
+  code   so(((a => 1)) ~~ Numeric)
+  same-as so(do { my $A = \((a => 1)); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0036
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (a => 1) ~~ Pair
+  code   so(((a => 1)) ~~ Pair)
+  same-as so(do { my $A = \((a => 1)); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0037
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (1,2) ~~ Int
+  code   so(((1,2)) ~~ Int)
+  same-as so(do { my $A = \((1,2)); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0038
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (1,2) ~~ Str
+  code   so(((1,2)) ~~ Str)
+  same-as so(do { my $A = \((1,2)); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0039
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (1,2) ~~ Cool
+  code   so(((1,2)) ~~ Cool)
+  same-as so(do { my $A = \((1,2)); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0040
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (1,2) ~~ Associative
+  code   so(((1,2)) ~~ Associative)
+  same-as so(do { my $A = \((1,2)); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0041
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (1,2) ~~ Positional
+  code   so(((1,2)) ~~ Positional)
+  same-as so(do { my $A = \((1,2)); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0042
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (1,2) ~~ Iterable
+  code   so(((1,2)) ~~ Iterable)
+  same-as so(do { my $A = \((1,2)); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0043
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (1,2) ~~ Callable
+  code   so(((1,2)) ~~ Callable)
+  same-as so(do { my $A = \((1,2)); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0044
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (1,2) ~~ Numeric
+  code   so(((1,2)) ~~ Numeric)
+  same-as so(do { my $A = \((1,2)); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0045
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   (1,2) ~~ Pair
+  code   so(((1,2)) ~~ Pair)
+  same-as so(do { my $A = \((1,2)); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0046
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   [1,2] ~~ Int
+  code   so(([1,2]) ~~ Int)
+  same-as so(do { my $A = \([1,2]); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0047
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   [1,2] ~~ Str
+  code   so(([1,2]) ~~ Str)
+  same-as so(do { my $A = \([1,2]); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0048
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   [1,2] ~~ Cool
+  code   so(([1,2]) ~~ Cool)
+  same-as so(do { my $A = \([1,2]); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0049
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   [1,2] ~~ Associative
+  code   so(([1,2]) ~~ Associative)
+  same-as so(do { my $A = \([1,2]); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0050
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   [1,2] ~~ Positional
+  code   so(([1,2]) ~~ Positional)
+  same-as so(do { my $A = \([1,2]); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0051
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   [1,2] ~~ Iterable
+  code   so(([1,2]) ~~ Iterable)
+  same-as so(do { my $A = \([1,2]); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0052
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   [1,2] ~~ Callable
+  code   so(([1,2]) ~~ Callable)
+  same-as so(do { my $A = \([1,2]); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0053
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   [1,2] ~~ Numeric
+  code   so(([1,2]) ~~ Numeric)
+  same-as so(do { my $A = \([1,2]); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0054
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   [1,2] ~~ Pair
+  code   so(([1,2]) ~~ Pair)
+  same-as so(do { my $A = \([1,2]); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0055
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   {:a(1)} ~~ Int
+  code   so(({:a(1)}) ~~ Int)
+  same-as so(do { my $A = \({:a(1)}); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0056
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   {:a(1)} ~~ Str
+  code   so(({:a(1)}) ~~ Str)
+  same-as so(do { my $A = \({:a(1)}); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0057
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   {:a(1)} ~~ Cool
+  code   so(({:a(1)}) ~~ Cool)
+  same-as so(do { my $A = \({:a(1)}); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0058
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   {:a(1)} ~~ Associative
+  code   so(({:a(1)}) ~~ Associative)
+  same-as so(do { my $A = \({:a(1)}); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0059
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   {:a(1)} ~~ Positional
+  code   so(({:a(1)}) ~~ Positional)
+  same-as so(do { my $A = \({:a(1)}); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0060
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   {:a(1)} ~~ Iterable
+  code   so(({:a(1)}) ~~ Iterable)
+  same-as so(do { my $A = \({:a(1)}); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0061
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   {:a(1)} ~~ Callable
+  code   so(({:a(1)}) ~~ Callable)
+  same-as so(do { my $A = \({:a(1)}); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0062
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   {:a(1)} ~~ Numeric
+  code   so(({:a(1)}) ~~ Numeric)
+  same-as so(do { my $A = \({:a(1)}); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0063
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   {:a(1)} ~~ Pair
+  code   so(({:a(1)}) ~~ Pair)
+  same-as so(do { my $A = \({:a(1)}); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0064
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   *-0 ~~ Int
+  code   so((*-0) ~~ Int)
+  same-as so(do { my $A = \(*-0); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0065
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   *-0 ~~ Str
+  code   so((*-0) ~~ Str)
+  same-as so(do { my $A = \(*-0); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0066
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   *-0 ~~ Cool
+  code   so((*-0) ~~ Cool)
+  same-as so(do { my $A = \(*-0); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0067
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   *-0 ~~ Associative
+  code   so((*-0) ~~ Associative)
+  same-as so(do { my $A = \(*-0); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0068
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   *-0 ~~ Positional
+  code   so((*-0) ~~ Positional)
+  same-as so(do { my $A = \(*-0); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0069
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   *-0 ~~ Iterable
+  code   so((*-0) ~~ Iterable)
+  same-as so(do { my $A = \(*-0); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0070
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   *-0 ~~ Callable
+  code   so((*-0) ~~ Callable)
+  same-as so(do { my $A = \(*-0); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0071
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   *-0 ~~ Numeric
+  code   so((*-0) ~~ Numeric)
+  same-as so(do { my $A = \(*-0); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0072
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   *-0 ~~ Pair
+  code   so((*-0) ~~ Pair)
+  same-as so(do { my $A = \(*-0); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0073
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   { $_ } ~~ Int
+  code   so(({ $_ }) ~~ Int)
+  same-as so(do { my $A = \({ $_ }); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0074
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   { $_ } ~~ Str
+  code   so(({ $_ }) ~~ Str)
+  same-as so(do { my $A = \({ $_ }); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0075
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   { $_ } ~~ Cool
+  code   so(({ $_ }) ~~ Cool)
+  same-as so(do { my $A = \({ $_ }); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0076
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   { $_ } ~~ Associative
+  code   so(({ $_ }) ~~ Associative)
+  same-as so(do { my $A = \({ $_ }); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0077
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   { $_ } ~~ Positional
+  code   so(({ $_ }) ~~ Positional)
+  same-as so(do { my $A = \({ $_ }); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0078
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   { $_ } ~~ Iterable
+  code   so(({ $_ }) ~~ Iterable)
+  same-as so(do { my $A = \({ $_ }); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0079
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   { $_ } ~~ Callable
+  code   so(({ $_ }) ~~ Callable)
+  same-as so(do { my $A = \({ $_ }); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0080
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   { $_ } ~~ Numeric
+  code   so(({ $_ }) ~~ Numeric)
+  same-as so(do { my $A = \({ $_ }); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0081
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   { $_ } ~~ Pair
+  code   so(({ $_ }) ~~ Pair)
+  same-as so(do { my $A = \({ $_ }); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0082
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   /x/ ~~ Int
+  code   so((/x/) ~~ Int)
+  same-as so(do { my $A = \(/x/); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0083
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   /x/ ~~ Str
+  code   so((/x/) ~~ Str)
+  same-as so(do { my $A = \(/x/); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0084
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   /x/ ~~ Cool
+  code   so((/x/) ~~ Cool)
+  same-as so(do { my $A = \(/x/); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0085
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   /x/ ~~ Associative
+  code   so((/x/) ~~ Associative)
+  same-as so(do { my $A = \(/x/); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0086
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   /x/ ~~ Positional
+  code   so((/x/) ~~ Positional)
+  same-as so(do { my $A = \(/x/); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0087
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   /x/ ~~ Iterable
+  code   so((/x/) ~~ Iterable)
+  same-as so(do { my $A = \(/x/); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0088
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   /x/ ~~ Callable
+  code   so((/x/) ~~ Callable)
+  same-as so(do { my $A = \(/x/); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0089
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   /x/ ~~ Numeric
+  code   so((/x/) ~~ Numeric)
+  same-as so(do { my $A = \(/x/); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0090
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   /x/ ~~ Pair
+  code   so((/x/) ~~ Pair)
+  same-as so(do { my $A = \(/x/); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0091
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Any ~~ Int
+  code   so((Any) ~~ Int)
+  same-as so(do { my $A = \(Any); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0092
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Any ~~ Str
+  code   so((Any) ~~ Str)
+  same-as so(do { my $A = \(Any); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0093
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Any ~~ Cool
+  code   so((Any) ~~ Cool)
+  same-as so(do { my $A = \(Any); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0094
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Any ~~ Associative
+  code   so((Any) ~~ Associative)
+  same-as so(do { my $A = \(Any); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0095
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Any ~~ Positional
+  code   so((Any) ~~ Positional)
+  same-as so(do { my $A = \(Any); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0096
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Any ~~ Iterable
+  code   so((Any) ~~ Iterable)
+  same-as so(do { my $A = \(Any); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0097
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Any ~~ Callable
+  code   so((Any) ~~ Callable)
+  same-as so(do { my $A = \(Any); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0098
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Any ~~ Numeric
+  code   so((Any) ~~ Numeric)
+  same-as so(do { my $A = \(Any); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0099
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Any ~~ Pair
+  code   so((Any) ~~ Pair)
+  same-as so(do { my $A = \(Any); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0100
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Nil ~~ Int
+  code   so((Nil) ~~ Int)
+  same-as so(do { my $A = \(Nil); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0101
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Nil ~~ Str
+  code   so((Nil) ~~ Str)
+  same-as so(do { my $A = \(Nil); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0102
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Nil ~~ Cool
+  code   so((Nil) ~~ Cool)
+  same-as so(do { my $A = \(Nil); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0103
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Nil ~~ Associative
+  code   so((Nil) ~~ Associative)
+  same-as so(do { my $A = \(Nil); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0104
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Nil ~~ Positional
+  code   so((Nil) ~~ Positional)
+  same-as so(do { my $A = \(Nil); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0105
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Nil ~~ Iterable
+  code   so((Nil) ~~ Iterable)
+  same-as so(do { my $A = \(Nil); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0106
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Nil ~~ Callable
+  code   so((Nil) ~~ Callable)
+  same-as so(do { my $A = \(Nil); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0107
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Nil ~~ Numeric
+  code   so((Nil) ~~ Numeric)
+  same-as so(do { my $A = \(Nil); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0108
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   Nil ~~ Pair
+  code   so((Nil) ~~ Pair)
+  same-as so(do { my $A = \(Nil); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0109
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1..3 ~~ Int
+  code   so((1..3) ~~ Int)
+  same-as so(do { my $A = \(1..3); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0110
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1..3 ~~ Str
+  code   so((1..3) ~~ Str)
+  same-as so(do { my $A = \(1..3); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0111
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1..3 ~~ Cool
+  code   so((1..3) ~~ Cool)
+  same-as so(do { my $A = \(1..3); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0112
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1..3 ~~ Associative
+  code   so((1..3) ~~ Associative)
+  same-as so(do { my $A = \(1..3); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0113
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1..3 ~~ Positional
+  code   so((1..3) ~~ Positional)
+  same-as so(do { my $A = \(1..3); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0114
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1..3 ~~ Iterable
+  code   so((1..3) ~~ Iterable)
+  same-as so(do { my $A = \(1..3); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0115
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1..3 ~~ Callable
+  code   so((1..3) ~~ Callable)
+  same-as so(do { my $A = \(1..3); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0116
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1..3 ~~ Numeric
+  code   so((1..3) ~~ Numeric)
+  same-as so(do { my $A = \(1..3); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0117
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   1..3 ~~ Pair
+  code   so((1..3) ~~ Pair)
+  same-as so(do { my $A = \(1..3); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0118
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   True ~~ Int
+  code   so((True) ~~ Int)
+  same-as so(do { my $A = \(True); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0119
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   True ~~ Str
+  code   so((True) ~~ Str)
+  same-as so(do { my $A = \(True); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0120
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   True ~~ Cool
+  code   so((True) ~~ Cool)
+  same-as so(do { my $A = \(True); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0121
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   True ~~ Associative
+  code   so((True) ~~ Associative)
+  same-as so(do { my $A = \(True); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0122
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   True ~~ Positional
+  code   so((True) ~~ Positional)
+  same-as so(do { my $A = \(True); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0123
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   True ~~ Iterable
+  code   so((True) ~~ Iterable)
+  same-as so(do { my $A = \(True); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0124
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   True ~~ Callable
+  code   so((True) ~~ Callable)
+  same-as so(do { my $A = \(True); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0125
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   True ~~ Numeric
+  code   so((True) ~~ Numeric)
+  same-as so(do { my $A = \(True); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0126
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   True ~~ Pair
+  code   so((True) ~~ Pair)
+  same-as so(do { my $A = \(True); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0127
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   set(1) ~~ Int
+  code   so((set(1)) ~~ Int)
+  same-as so(do { my $A = \(set(1)); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0128
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   set(1) ~~ Str
+  code   so((set(1)) ~~ Str)
+  same-as so(do { my $A = \(set(1)); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0129
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   set(1) ~~ Cool
+  code   so((set(1)) ~~ Cool)
+  same-as so(do { my $A = \(set(1)); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0130
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   set(1) ~~ Associative
+  code   so((set(1)) ~~ Associative)
+  same-as so(do { my $A = \(set(1)); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0131
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   set(1) ~~ Positional
+  code   so((set(1)) ~~ Positional)
+  same-as so(do { my $A = \(set(1)); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0132
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   set(1) ~~ Iterable
+  code   so((set(1)) ~~ Iterable)
+  same-as so(do { my $A = \(set(1)); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0133
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   set(1) ~~ Callable
+  code   so((set(1)) ~~ Callable)
+  same-as so(do { my $A = \(set(1)); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0134
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   set(1) ~~ Numeric
+  code   so((set(1)) ~~ Numeric)
+  same-as so(do { my $A = \(set(1)); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0135
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   set(1) ~~ Pair
+  code   so((set(1)) ~~ Pair)
+  same-as so(do { my $A = \(set(1)); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0136
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   now.Date ~~ Int
+  code   so((now.Date) ~~ Int)
+  same-as so(do { my $A = \(now.Date); multi m(Int $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0137
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   now.Date ~~ Str
+  code   so((now.Date) ~~ Str)
+  same-as so(do { my $A = \(now.Date); multi m(Str $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0138
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   now.Date ~~ Cool
+  code   so((now.Date) ~~ Cool)
+  same-as so(do { my $A = \(now.Date); multi m(Cool $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0139
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   now.Date ~~ Associative
+  code   so((now.Date) ~~ Associative)
+  same-as so(do { my $A = \(now.Date); multi m(Associative $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0140
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   now.Date ~~ Positional
+  code   so((now.Date) ~~ Positional)
+  same-as so(do { my $A = \(now.Date); multi m(Positional $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0141
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   now.Date ~~ Iterable
+  code   so((now.Date) ~~ Iterable)
+  same-as so(do { my $A = \(now.Date); multi m(Iterable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0142
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   now.Date ~~ Callable
+  code   so((now.Date) ~~ Callable)
+  same-as so(do { my $A = \(now.Date); multi m(Callable $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0143
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   now.Date ~~ Numeric
+  code   so((now.Date) ~~ Numeric)
+  same-as so(do { my $A = \(now.Date); multi m(Numeric $x) { True }; multi m($x) { False }; m(|$A) })
+
+- id     0144
+  from   law:smartmatch-is-dispatch · bug:rakupp-whatevercode-not-in-type-matcher
+  cell   now.Date ~~ Pair
+  code   so((now.Date) ~~ Pair)
+  same-as so(do { my $A = \(now.Date); multi m(Pair $x) { True }; multi m($x) { False }; m(|$A) })

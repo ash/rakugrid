@@ -1,0 +1,149 @@
+atom     lvalues/rw-sub-sigilless
+source   generated
+gen      gen/lvalues.raku
+law      a write through `rs({T})`  ===  a write straight to `{T}`
+ladder   8 targets x 3 writes
+
+- id     0001
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   scalar | rw-sub-sigilless | assign
+  code   do { my $v = 1; sub rs(\c) is rw { return-rw c }; rs($v) = 7; $v }
+  same-as do { my $v = 1; $v = 7; $v }
+
+- id     0002
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   scalar | rw-sub-sigilless | incr
+  code   do { my $v = 1; sub rs(\c) is rw { return-rw c }; rs($v)++; $v }
+  same-as do { my $v = 1; $v++; $v }
+
+- id     0003
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   scalar | rw-sub-sigilless | addto
+  code   do { my $v = 1; sub rs(\c) is rw { return-rw c }; rs($v) += 5; $v }
+  same-as do { my $v = 1; $v += 5; $v }
+
+- id     0004
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   array-elem | rw-sub-sigilless | assign
+  code   do { my @a = 1, 2, 3; sub rs(\c) is rw { return-rw c }; rs(@a[1]) = 7; @a[1] }
+  same-as do { my @a = 1, 2, 3; @a[1] = 7; @a[1] }
+
+- id     0005
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   array-elem | rw-sub-sigilless | incr
+  code   do { my @a = 1, 2, 3; sub rs(\c) is rw { return-rw c }; rs(@a[1])++; @a[1] }
+  same-as do { my @a = 1, 2, 3; @a[1]++; @a[1] }
+
+- id     0006
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   array-elem | rw-sub-sigilless | addto
+  code   do { my @a = 1, 2, 3; sub rs(\c) is rw { return-rw c }; rs(@a[1]) += 5; @a[1] }
+  same-as do { my @a = 1, 2, 3; @a[1] += 5; @a[1] }
+
+- id     0007
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   hash-elem | rw-sub-sigilless | assign
+  code   do { my %h = :a(1); sub rs(\c) is rw { return-rw c }; rs(%h<a>) = 7; %h<a> }
+  same-as do { my %h = :a(1); %h<a> = 7; %h<a> }
+
+- id     0008
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   hash-elem | rw-sub-sigilless | incr
+  code   do { my %h = :a(1); sub rs(\c) is rw { return-rw c }; rs(%h<a>)++; %h<a> }
+  same-as do { my %h = :a(1); %h<a>++; %h<a> }
+
+- id     0009
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   hash-elem | rw-sub-sigilless | addto
+  code   do { my %h = :a(1); sub rs(\c) is rw { return-rw c }; rs(%h<a>) += 5; %h<a> }
+  same-as do { my %h = :a(1); %h<a> += 5; %h<a> }
+
+- id     0010
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   hash-nested | rw-sub-sigilless | assign
+  code   do { my %h = :a({:b(1)}); sub rs(\c) is rw { return-rw c }; rs(%h<a><b>) = 7; %h<a><b> }
+  same-as do { my %h = :a({:b(1)}); %h<a><b> = 7; %h<a><b> }
+
+- id     0011
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   hash-nested | rw-sub-sigilless | incr
+  code   do { my %h = :a({:b(1)}); sub rs(\c) is rw { return-rw c }; rs(%h<a><b>)++; %h<a><b> }
+  same-as do { my %h = :a({:b(1)}); %h<a><b>++; %h<a><b> }
+
+- id     0012
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   hash-nested | rw-sub-sigilless | addto
+  code   do { my %h = :a({:b(1)}); sub rs(\c) is rw { return-rw c }; rs(%h<a><b>) += 5; %h<a><b> }
+  same-as do { my %h = :a({:b(1)}); %h<a><b> += 5; %h<a><b> }
+
+- id     0013
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   array-of-hash | rw-sub-sigilless | assign
+  code   do { my @a = ({:k(1)},); sub rs(\c) is rw { return-rw c }; rs(@a[0]<k>) = 7; @a[0]<k> }
+  same-as do { my @a = ({:k(1)},); @a[0]<k> = 7; @a[0]<k> }
+
+- id     0014
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   array-of-hash | rw-sub-sigilless | incr
+  code   do { my @a = ({:k(1)},); sub rs(\c) is rw { return-rw c }; rs(@a[0]<k>)++; @a[0]<k> }
+  same-as do { my @a = ({:k(1)},); @a[0]<k>++; @a[0]<k> }
+
+- id     0015
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   array-of-hash | rw-sub-sigilless | addto
+  code   do { my @a = ({:k(1)},); sub rs(\c) is rw { return-rw c }; rs(@a[0]<k>) += 5; @a[0]<k> }
+  same-as do { my @a = ({:k(1)},); @a[0]<k> += 5; @a[0]<k> }
+
+- id     0016
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   attribute | rw-sub-sigilless | assign
+  code   do { my $o = (class { has $.x is rw }).new(:x(1)); sub rs(\c) is rw { return-rw c }; rs($o.x) = 7; $o.x }
+  same-as do { my $o = (class { has $.x is rw }).new(:x(1)); $o.x = 7; $o.x }
+
+- id     0017
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   attribute | rw-sub-sigilless | incr
+  code   do { my $o = (class { has $.x is rw }).new(:x(1)); sub rs(\c) is rw { return-rw c }; rs($o.x)++; $o.x }
+  same-as do { my $o = (class { has $.x is rw }).new(:x(1)); $o.x++; $o.x }
+
+- id     0018
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   attribute | rw-sub-sigilless | addto
+  code   do { my $o = (class { has $.x is rw }).new(:x(1)); sub rs(\c) is rw { return-rw c }; rs($o.x) += 5; $o.x }
+  same-as do { my $o = (class { has $.x is rw }).new(:x(1)); $o.x += 5; $o.x }
+
+- id     0019
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   autoviv-elem | rw-sub-sigilless | assign
+  code   do { my %h; sub rs(\c) is rw { return-rw c }; rs(%h<new>) = 7; %h<new> }
+  same-as do { my %h; %h<new> = 7; %h<new> }
+
+- id     0020
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   autoviv-elem | rw-sub-sigilless | incr
+  code   do { my %h; sub rs(\c) is rw { return-rw c }; rs(%h<new>)++; %h<new> }
+  same-as do { my %h; %h<new>++; %h<new> }
+
+- id     0021
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   autoviv-elem | rw-sub-sigilless | addto
+  code   do { my %h; sub rs(\c) is rw { return-rw c }; rs(%h<new>) += 5; %h<new> }
+  same-as do { my %h; %h<new> += 5; %h<new> }
+
+- id     0022
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   autoviv-deep | rw-sub-sigilless | assign
+  code   do { my %h; sub rs(\c) is rw { return-rw c }; rs(%h<a><b>) = 7; %h<a><b> }
+  same-as do { my %h; %h<a><b> = 7; %h<a><b> }
+
+- id     0023
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   autoviv-deep | rw-sub-sigilless | incr
+  code   do { my %h; sub rs(\c) is rw { return-rw c }; rs(%h<a><b>)++; %h<a><b> }
+  same-as do { my %h; %h<a><b>++; %h<a><b> }
+
+- id     0024
+  from   law:write-through · bug:rakupp-sigilless-param-is-callers-container
+  cell   autoviv-deep | rw-sub-sigilless | addto
+  code   do { my %h; sub rs(\c) is rw { return-rw c }; rs(%h<a><b>) += 5; %h<a><b> }
+  same-as do { my %h; %h<a><b> += 5; %h<a><b> }

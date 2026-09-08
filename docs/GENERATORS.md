@@ -39,7 +39,7 @@ usable, reproducible answer, the record is parked with a written reason and
 counted separately. That is the difference between a suite that is green because
 it is right and one that is green because it looked away.
 
-## The ten generators
+## The thirteen generators
 
 | Generator | Enumerates | Produces |
 |---|---|---|
@@ -53,6 +53,33 @@ it is right and one that is green because it looked away.
 | `regex.raku` | 94 patterns × 16 subjects × 8 match forms | derived facts, never Match objects |
 | `signatures.raku` | parameter forms × arguments × call forms, and parameter **pairs** | what bound, or what it threw |
 | `spelling.raku` | every infix operator × operand pairs × **three ways of writing it** | `same-as`, or `no-parse`, or the value the bare spelling gives |
+| `lvalues.raku` | containers × the routes a write travels × three writes | `same-as` — no oracle needed |
+| `containers.raku` | construction spellings × a ladder of things to put in them | `same-as` — no oracle needed |
+| `routes.raku` | one question × every route that can ask it | `same-as` — no oracle needed |
+
+The last three are a different KIND of question from the rest, and were added
+because the first ten could not pose it. Those enumerate the language's
+**vocabulary** — operators, methods, signature binding, regex forms, spellings —
+which is what documentation and introspection hand you. Their cells are shaped
+`code → .raku`, so the answer has to be a value.
+
+Three things are not values:
+
+- **where a write lands.** `signatures.raku` covers `is rw` in 13,912 cells,
+  every one asking whether an argument BINDS. None asks whether assigning
+  through the parameter reaches the caller, which is what `is rw` is for.
+  `lvalues.raku` asks that.
+- **whether a construction flattens.** `[X]`, `(X,)`, `Array.new(X)` and
+  `List.new(X)` do not all mean the same, and a bracket is neither an operator
+  nor a method, so no inventory lists it. `containers.raku` asks that.
+- **whether two routes to one answer agree.** A type relationship can be asked
+  with `~~`, by binding a parameter, or by multi dispatch; a named regex reached
+  as `<R>`, as `&R`, or through `.ACCEPTS`. Each route is a separate code path,
+  and nothing makes them agree except that they must. `routes.raku` asks that.
+
+All three are oracle-free, so they record no observations: two spellings
+disagreeing inside ONE engine is a defect without anyone deciding which answer
+was right.
 
 `syntax.raku` is the odd one: it compiles complete programs with `-c` and never
 runs them, and it asserts only whether they compile — never the wording of the

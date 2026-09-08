@@ -1,0 +1,888 @@
+atom     routes/callable-is-subrule
+source   generated
+gen      gen/routes.raku
+law      $s ~~ &R  ===  $s ~~ / <R> /
+why      a named regex means the same reached as a Callable as it does as a subrule
+ladder   147 crossings
+
+- id     0001
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'ab' } vs 'ab'
+  code   do { my regex r { 'ab' }; so('ab' ~~ &r) }
+  same-as do { my regex r { 'ab' }; so('ab' ~~ / <r> /) }
+
+- id     0002
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'ab' } vs 'abcd'
+  code   do { my regex r { 'ab' }; so('abcd' ~~ &r) }
+  same-as do { my regex r { 'ab' }; so('abcd' ~~ / <r> /) }
+
+- id     0003
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'ab' } vs 'ab cd'
+  code   do { my regex r { 'ab' }; so('ab cd' ~~ &r) }
+  same-as do { my regex r { 'ab' }; so('ab cd' ~~ / <r> /) }
+
+- id     0004
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'ab' } vs 'zab'
+  code   do { my regex r { 'ab' }; so('zab' ~~ &r) }
+  same-as do { my regex r { 'ab' }; so('zab' ~~ / <r> /) }
+
+- id     0005
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'ab' } vs '123'
+  code   do { my regex r { 'ab' }; so('123' ~~ &r) }
+  same-as do { my regex r { 'ab' }; so('123' ~~ / <r> /) }
+
+- id     0006
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'ab' } vs ''
+  code   do { my regex r { 'ab' }; so('' ~~ &r) }
+  same-as do { my regex r { 'ab' }; so('' ~~ / <r> /) }
+
+- id     0007
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'ab' } vs 'x  y'
+  code   do { my regex r { 'ab' }; so('x  y' ~~ &r) }
+  same-as do { my regex r { 'ab' }; so('x  y' ~~ / <r> /) }
+
+- id     0008
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'ab' 'cd' } vs 'ab'
+  code   do { my regex r { 'ab' 'cd' }; so('ab' ~~ &r) }
+  same-as do { my regex r { 'ab' 'cd' }; so('ab' ~~ / <r> /) }
+
+- id     0009
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'ab' 'cd' } vs 'abcd'
+  code   do { my regex r { 'ab' 'cd' }; so('abcd' ~~ &r) }
+  same-as do { my regex r { 'ab' 'cd' }; so('abcd' ~~ / <r> /) }
+
+- id     0010
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'ab' 'cd' } vs 'ab cd'
+  code   do { my regex r { 'ab' 'cd' }; so('ab cd' ~~ &r) }
+  same-as do { my regex r { 'ab' 'cd' }; so('ab cd' ~~ / <r> /) }
+
+- id     0011
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'ab' 'cd' } vs 'zab'
+  code   do { my regex r { 'ab' 'cd' }; so('zab' ~~ &r) }
+  same-as do { my regex r { 'ab' 'cd' }; so('zab' ~~ / <r> /) }
+
+- id     0012
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'ab' 'cd' } vs '123'
+  code   do { my regex r { 'ab' 'cd' }; so('123' ~~ &r) }
+  same-as do { my regex r { 'ab' 'cd' }; so('123' ~~ / <r> /) }
+
+- id     0013
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'ab' 'cd' } vs ''
+  code   do { my regex r { 'ab' 'cd' }; so('' ~~ &r) }
+  same-as do { my regex r { 'ab' 'cd' }; so('' ~~ / <r> /) }
+
+- id     0014
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'ab' 'cd' } vs 'x  y'
+  code   do { my regex r { 'ab' 'cd' }; so('x  y' ~~ &r) }
+  same-as do { my regex r { 'ab' 'cd' }; so('x  y' ~~ / <r> /) }
+
+- id     0015
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { ab cd } vs 'ab'
+  code   do { my regex r { ab cd }; so('ab' ~~ &r) }
+  same-as do { my regex r { ab cd }; so('ab' ~~ / <r> /) }
+
+- id     0016
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { ab cd } vs 'abcd'
+  code   do { my regex r { ab cd }; so('abcd' ~~ &r) }
+  same-as do { my regex r { ab cd }; so('abcd' ~~ / <r> /) }
+
+- id     0017
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { ab cd } vs 'ab cd'
+  code   do { my regex r { ab cd }; so('ab cd' ~~ &r) }
+  same-as do { my regex r { ab cd }; so('ab cd' ~~ / <r> /) }
+
+- id     0018
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { ab cd } vs 'zab'
+  code   do { my regex r { ab cd }; so('zab' ~~ &r) }
+  same-as do { my regex r { ab cd }; so('zab' ~~ / <r> /) }
+
+- id     0019
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { ab cd } vs '123'
+  code   do { my regex r { ab cd }; so('123' ~~ &r) }
+  same-as do { my regex r { ab cd }; so('123' ~~ / <r> /) }
+
+- id     0020
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { ab cd } vs ''
+  code   do { my regex r { ab cd }; so('' ~~ &r) }
+  same-as do { my regex r { ab cd }; so('' ~~ / <r> /) }
+
+- id     0021
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { ab cd } vs 'x  y'
+  code   do { my regex r { ab cd }; so('x  y' ~~ &r) }
+  same-as do { my regex r { ab cd }; so('x  y' ~~ / <r> /) }
+
+- id     0022
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { \d+ } vs 'ab'
+  code   do { my regex r { \d+ }; so('ab' ~~ &r) }
+  same-as do { my regex r { \d+ }; so('ab' ~~ / <r> /) }
+
+- id     0023
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { \d+ } vs 'abcd'
+  code   do { my regex r { \d+ }; so('abcd' ~~ &r) }
+  same-as do { my regex r { \d+ }; so('abcd' ~~ / <r> /) }
+
+- id     0024
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { \d+ } vs 'ab cd'
+  code   do { my regex r { \d+ }; so('ab cd' ~~ &r) }
+  same-as do { my regex r { \d+ }; so('ab cd' ~~ / <r> /) }
+
+- id     0025
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { \d+ } vs 'zab'
+  code   do { my regex r { \d+ }; so('zab' ~~ &r) }
+  same-as do { my regex r { \d+ }; so('zab' ~~ / <r> /) }
+
+- id     0026
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { \d+ } vs '123'
+  code   do { my regex r { \d+ }; so('123' ~~ &r) }
+  same-as do { my regex r { \d+ }; so('123' ~~ / <r> /) }
+
+- id     0027
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { \d+ } vs ''
+  code   do { my regex r { \d+ }; so('' ~~ &r) }
+  same-as do { my regex r { \d+ }; so('' ~~ / <r> /) }
+
+- id     0028
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { \d+ } vs 'x  y'
+  code   do { my regex r { \d+ }; so('x  y' ~~ &r) }
+  same-as do { my regex r { \d+ }; so('x  y' ~~ / <r> /) }
+
+- id     0029
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'a' | 'b' } vs 'ab'
+  code   do { my regex r { 'a' | 'b' }; so('ab' ~~ &r) }
+  same-as do { my regex r { 'a' | 'b' }; so('ab' ~~ / <r> /) }
+
+- id     0030
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'a' | 'b' } vs 'abcd'
+  code   do { my regex r { 'a' | 'b' }; so('abcd' ~~ &r) }
+  same-as do { my regex r { 'a' | 'b' }; so('abcd' ~~ / <r> /) }
+
+- id     0031
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'a' | 'b' } vs 'ab cd'
+  code   do { my regex r { 'a' | 'b' }; so('ab cd' ~~ &r) }
+  same-as do { my regex r { 'a' | 'b' }; so('ab cd' ~~ / <r> /) }
+
+- id     0032
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'a' | 'b' } vs 'zab'
+  code   do { my regex r { 'a' | 'b' }; so('zab' ~~ &r) }
+  same-as do { my regex r { 'a' | 'b' }; so('zab' ~~ / <r> /) }
+
+- id     0033
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'a' | 'b' } vs '123'
+  code   do { my regex r { 'a' | 'b' }; so('123' ~~ &r) }
+  same-as do { my regex r { 'a' | 'b' }; so('123' ~~ / <r> /) }
+
+- id     0034
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'a' | 'b' } vs ''
+  code   do { my regex r { 'a' | 'b' }; so('' ~~ &r) }
+  same-as do { my regex r { 'a' | 'b' }; so('' ~~ / <r> /) }
+
+- id     0035
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'a' | 'b' } vs 'x  y'
+  code   do { my regex r { 'a' | 'b' }; so('x  y' ~~ &r) }
+  same-as do { my regex r { 'a' | 'b' }; so('x  y' ~~ / <r> /) }
+
+- id     0036
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { [<[a..c]>]+ } vs 'ab'
+  code   do { my regex r { [<[a..c]>]+ }; so('ab' ~~ &r) }
+  same-as do { my regex r { [<[a..c]>]+ }; so('ab' ~~ / <r> /) }
+
+- id     0037
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { [<[a..c]>]+ } vs 'abcd'
+  code   do { my regex r { [<[a..c]>]+ }; so('abcd' ~~ &r) }
+  same-as do { my regex r { [<[a..c]>]+ }; so('abcd' ~~ / <r> /) }
+
+- id     0038
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { [<[a..c]>]+ } vs 'ab cd'
+  code   do { my regex r { [<[a..c]>]+ }; so('ab cd' ~~ &r) }
+  same-as do { my regex r { [<[a..c]>]+ }; so('ab cd' ~~ / <r> /) }
+
+- id     0039
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { [<[a..c]>]+ } vs 'zab'
+  code   do { my regex r { [<[a..c]>]+ }; so('zab' ~~ &r) }
+  same-as do { my regex r { [<[a..c]>]+ }; so('zab' ~~ / <r> /) }
+
+- id     0040
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { [<[a..c]>]+ } vs '123'
+  code   do { my regex r { [<[a..c]>]+ }; so('123' ~~ &r) }
+  same-as do { my regex r { [<[a..c]>]+ }; so('123' ~~ / <r> /) }
+
+- id     0041
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { [<[a..c]>]+ } vs ''
+  code   do { my regex r { [<[a..c]>]+ }; so('' ~~ &r) }
+  same-as do { my regex r { [<[a..c]>]+ }; so('' ~~ / <r> /) }
+
+- id     0042
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { [<[a..c]>]+ } vs 'x  y'
+  code   do { my regex r { [<[a..c]>]+ }; so('x  y' ~~ &r) }
+  same-as do { my regex r { [<[a..c]>]+ }; so('x  y' ~~ / <r> /) }
+
+- id     0043
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'x' \s* 'y' } vs 'ab'
+  code   do { my regex r { 'x' \s* 'y' }; so('ab' ~~ &r) }
+  same-as do { my regex r { 'x' \s* 'y' }; so('ab' ~~ / <r> /) }
+
+- id     0044
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'x' \s* 'y' } vs 'abcd'
+  code   do { my regex r { 'x' \s* 'y' }; so('abcd' ~~ &r) }
+  same-as do { my regex r { 'x' \s* 'y' }; so('abcd' ~~ / <r> /) }
+
+- id     0045
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'x' \s* 'y' } vs 'ab cd'
+  code   do { my regex r { 'x' \s* 'y' }; so('ab cd' ~~ &r) }
+  same-as do { my regex r { 'x' \s* 'y' }; so('ab cd' ~~ / <r> /) }
+
+- id     0046
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'x' \s* 'y' } vs 'zab'
+  code   do { my regex r { 'x' \s* 'y' }; so('zab' ~~ &r) }
+  same-as do { my regex r { 'x' \s* 'y' }; so('zab' ~~ / <r> /) }
+
+- id     0047
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'x' \s* 'y' } vs '123'
+  code   do { my regex r { 'x' \s* 'y' }; so('123' ~~ &r) }
+  same-as do { my regex r { 'x' \s* 'y' }; so('123' ~~ / <r> /) }
+
+- id     0048
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'x' \s* 'y' } vs ''
+  code   do { my regex r { 'x' \s* 'y' }; so('' ~~ &r) }
+  same-as do { my regex r { 'x' \s* 'y' }; so('' ~~ / <r> /) }
+
+- id     0049
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   regex { 'x' \s* 'y' } vs 'x  y'
+  code   do { my regex r { 'x' \s* 'y' }; so('x  y' ~~ &r) }
+  same-as do { my regex r { 'x' \s* 'y' }; so('x  y' ~~ / <r> /) }
+
+- id     0050
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'ab' } vs 'ab'
+  code   do { my token r { 'ab' }; so('ab' ~~ &r) }
+  same-as do { my token r { 'ab' }; so('ab' ~~ / <r> /) }
+
+- id     0051
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'ab' } vs 'abcd'
+  code   do { my token r { 'ab' }; so('abcd' ~~ &r) }
+  same-as do { my token r { 'ab' }; so('abcd' ~~ / <r> /) }
+
+- id     0052
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'ab' } vs 'ab cd'
+  code   do { my token r { 'ab' }; so('ab cd' ~~ &r) }
+  same-as do { my token r { 'ab' }; so('ab cd' ~~ / <r> /) }
+
+- id     0053
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'ab' } vs 'zab'
+  code   do { my token r { 'ab' }; so('zab' ~~ &r) }
+  same-as do { my token r { 'ab' }; so('zab' ~~ / <r> /) }
+
+- id     0054
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'ab' } vs '123'
+  code   do { my token r { 'ab' }; so('123' ~~ &r) }
+  same-as do { my token r { 'ab' }; so('123' ~~ / <r> /) }
+
+- id     0055
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'ab' } vs ''
+  code   do { my token r { 'ab' }; so('' ~~ &r) }
+  same-as do { my token r { 'ab' }; so('' ~~ / <r> /) }
+
+- id     0056
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'ab' } vs 'x  y'
+  code   do { my token r { 'ab' }; so('x  y' ~~ &r) }
+  same-as do { my token r { 'ab' }; so('x  y' ~~ / <r> /) }
+
+- id     0057
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'ab' 'cd' } vs 'ab'
+  code   do { my token r { 'ab' 'cd' }; so('ab' ~~ &r) }
+  same-as do { my token r { 'ab' 'cd' }; so('ab' ~~ / <r> /) }
+
+- id     0058
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'ab' 'cd' } vs 'abcd'
+  code   do { my token r { 'ab' 'cd' }; so('abcd' ~~ &r) }
+  same-as do { my token r { 'ab' 'cd' }; so('abcd' ~~ / <r> /) }
+
+- id     0059
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'ab' 'cd' } vs 'ab cd'
+  code   do { my token r { 'ab' 'cd' }; so('ab cd' ~~ &r) }
+  same-as do { my token r { 'ab' 'cd' }; so('ab cd' ~~ / <r> /) }
+
+- id     0060
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'ab' 'cd' } vs 'zab'
+  code   do { my token r { 'ab' 'cd' }; so('zab' ~~ &r) }
+  same-as do { my token r { 'ab' 'cd' }; so('zab' ~~ / <r> /) }
+
+- id     0061
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'ab' 'cd' } vs '123'
+  code   do { my token r { 'ab' 'cd' }; so('123' ~~ &r) }
+  same-as do { my token r { 'ab' 'cd' }; so('123' ~~ / <r> /) }
+
+- id     0062
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'ab' 'cd' } vs ''
+  code   do { my token r { 'ab' 'cd' }; so('' ~~ &r) }
+  same-as do { my token r { 'ab' 'cd' }; so('' ~~ / <r> /) }
+
+- id     0063
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'ab' 'cd' } vs 'x  y'
+  code   do { my token r { 'ab' 'cd' }; so('x  y' ~~ &r) }
+  same-as do { my token r { 'ab' 'cd' }; so('x  y' ~~ / <r> /) }
+
+- id     0064
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { ab cd } vs 'ab'
+  code   do { my token r { ab cd }; so('ab' ~~ &r) }
+  same-as do { my token r { ab cd }; so('ab' ~~ / <r> /) }
+
+- id     0065
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { ab cd } vs 'abcd'
+  code   do { my token r { ab cd }; so('abcd' ~~ &r) }
+  same-as do { my token r { ab cd }; so('abcd' ~~ / <r> /) }
+
+- id     0066
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { ab cd } vs 'ab cd'
+  code   do { my token r { ab cd }; so('ab cd' ~~ &r) }
+  same-as do { my token r { ab cd }; so('ab cd' ~~ / <r> /) }
+
+- id     0067
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { ab cd } vs 'zab'
+  code   do { my token r { ab cd }; so('zab' ~~ &r) }
+  same-as do { my token r { ab cd }; so('zab' ~~ / <r> /) }
+
+- id     0068
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { ab cd } vs '123'
+  code   do { my token r { ab cd }; so('123' ~~ &r) }
+  same-as do { my token r { ab cd }; so('123' ~~ / <r> /) }
+
+- id     0069
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { ab cd } vs ''
+  code   do { my token r { ab cd }; so('' ~~ &r) }
+  same-as do { my token r { ab cd }; so('' ~~ / <r> /) }
+
+- id     0070
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { ab cd } vs 'x  y'
+  code   do { my token r { ab cd }; so('x  y' ~~ &r) }
+  same-as do { my token r { ab cd }; so('x  y' ~~ / <r> /) }
+
+- id     0071
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { \d+ } vs 'ab'
+  code   do { my token r { \d+ }; so('ab' ~~ &r) }
+  same-as do { my token r { \d+ }; so('ab' ~~ / <r> /) }
+
+- id     0072
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { \d+ } vs 'abcd'
+  code   do { my token r { \d+ }; so('abcd' ~~ &r) }
+  same-as do { my token r { \d+ }; so('abcd' ~~ / <r> /) }
+
+- id     0073
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { \d+ } vs 'ab cd'
+  code   do { my token r { \d+ }; so('ab cd' ~~ &r) }
+  same-as do { my token r { \d+ }; so('ab cd' ~~ / <r> /) }
+
+- id     0074
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { \d+ } vs 'zab'
+  code   do { my token r { \d+ }; so('zab' ~~ &r) }
+  same-as do { my token r { \d+ }; so('zab' ~~ / <r> /) }
+
+- id     0075
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { \d+ } vs '123'
+  code   do { my token r { \d+ }; so('123' ~~ &r) }
+  same-as do { my token r { \d+ }; so('123' ~~ / <r> /) }
+
+- id     0076
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { \d+ } vs ''
+  code   do { my token r { \d+ }; so('' ~~ &r) }
+  same-as do { my token r { \d+ }; so('' ~~ / <r> /) }
+
+- id     0077
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { \d+ } vs 'x  y'
+  code   do { my token r { \d+ }; so('x  y' ~~ &r) }
+  same-as do { my token r { \d+ }; so('x  y' ~~ / <r> /) }
+
+- id     0078
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'a' | 'b' } vs 'ab'
+  code   do { my token r { 'a' | 'b' }; so('ab' ~~ &r) }
+  same-as do { my token r { 'a' | 'b' }; so('ab' ~~ / <r> /) }
+
+- id     0079
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'a' | 'b' } vs 'abcd'
+  code   do { my token r { 'a' | 'b' }; so('abcd' ~~ &r) }
+  same-as do { my token r { 'a' | 'b' }; so('abcd' ~~ / <r> /) }
+
+- id     0080
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'a' | 'b' } vs 'ab cd'
+  code   do { my token r { 'a' | 'b' }; so('ab cd' ~~ &r) }
+  same-as do { my token r { 'a' | 'b' }; so('ab cd' ~~ / <r> /) }
+
+- id     0081
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'a' | 'b' } vs 'zab'
+  code   do { my token r { 'a' | 'b' }; so('zab' ~~ &r) }
+  same-as do { my token r { 'a' | 'b' }; so('zab' ~~ / <r> /) }
+
+- id     0082
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'a' | 'b' } vs '123'
+  code   do { my token r { 'a' | 'b' }; so('123' ~~ &r) }
+  same-as do { my token r { 'a' | 'b' }; so('123' ~~ / <r> /) }
+
+- id     0083
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'a' | 'b' } vs ''
+  code   do { my token r { 'a' | 'b' }; so('' ~~ &r) }
+  same-as do { my token r { 'a' | 'b' }; so('' ~~ / <r> /) }
+
+- id     0084
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'a' | 'b' } vs 'x  y'
+  code   do { my token r { 'a' | 'b' }; so('x  y' ~~ &r) }
+  same-as do { my token r { 'a' | 'b' }; so('x  y' ~~ / <r> /) }
+
+- id     0085
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { [<[a..c]>]+ } vs 'ab'
+  code   do { my token r { [<[a..c]>]+ }; so('ab' ~~ &r) }
+  same-as do { my token r { [<[a..c]>]+ }; so('ab' ~~ / <r> /) }
+
+- id     0086
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { [<[a..c]>]+ } vs 'abcd'
+  code   do { my token r { [<[a..c]>]+ }; so('abcd' ~~ &r) }
+  same-as do { my token r { [<[a..c]>]+ }; so('abcd' ~~ / <r> /) }
+
+- id     0087
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { [<[a..c]>]+ } vs 'ab cd'
+  code   do { my token r { [<[a..c]>]+ }; so('ab cd' ~~ &r) }
+  same-as do { my token r { [<[a..c]>]+ }; so('ab cd' ~~ / <r> /) }
+
+- id     0088
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { [<[a..c]>]+ } vs 'zab'
+  code   do { my token r { [<[a..c]>]+ }; so('zab' ~~ &r) }
+  same-as do { my token r { [<[a..c]>]+ }; so('zab' ~~ / <r> /) }
+
+- id     0089
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { [<[a..c]>]+ } vs '123'
+  code   do { my token r { [<[a..c]>]+ }; so('123' ~~ &r) }
+  same-as do { my token r { [<[a..c]>]+ }; so('123' ~~ / <r> /) }
+
+- id     0090
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { [<[a..c]>]+ } vs ''
+  code   do { my token r { [<[a..c]>]+ }; so('' ~~ &r) }
+  same-as do { my token r { [<[a..c]>]+ }; so('' ~~ / <r> /) }
+
+- id     0091
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { [<[a..c]>]+ } vs 'x  y'
+  code   do { my token r { [<[a..c]>]+ }; so('x  y' ~~ &r) }
+  same-as do { my token r { [<[a..c]>]+ }; so('x  y' ~~ / <r> /) }
+
+- id     0092
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'x' \s* 'y' } vs 'ab'
+  code   do { my token r { 'x' \s* 'y' }; so('ab' ~~ &r) }
+  same-as do { my token r { 'x' \s* 'y' }; so('ab' ~~ / <r> /) }
+
+- id     0093
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'x' \s* 'y' } vs 'abcd'
+  code   do { my token r { 'x' \s* 'y' }; so('abcd' ~~ &r) }
+  same-as do { my token r { 'x' \s* 'y' }; so('abcd' ~~ / <r> /) }
+
+- id     0094
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'x' \s* 'y' } vs 'ab cd'
+  code   do { my token r { 'x' \s* 'y' }; so('ab cd' ~~ &r) }
+  same-as do { my token r { 'x' \s* 'y' }; so('ab cd' ~~ / <r> /) }
+
+- id     0095
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'x' \s* 'y' } vs 'zab'
+  code   do { my token r { 'x' \s* 'y' }; so('zab' ~~ &r) }
+  same-as do { my token r { 'x' \s* 'y' }; so('zab' ~~ / <r> /) }
+
+- id     0096
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'x' \s* 'y' } vs '123'
+  code   do { my token r { 'x' \s* 'y' }; so('123' ~~ &r) }
+  same-as do { my token r { 'x' \s* 'y' }; so('123' ~~ / <r> /) }
+
+- id     0097
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'x' \s* 'y' } vs ''
+  code   do { my token r { 'x' \s* 'y' }; so('' ~~ &r) }
+  same-as do { my token r { 'x' \s* 'y' }; so('' ~~ / <r> /) }
+
+- id     0098
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   token { 'x' \s* 'y' } vs 'x  y'
+  code   do { my token r { 'x' \s* 'y' }; so('x  y' ~~ &r) }
+  same-as do { my token r { 'x' \s* 'y' }; so('x  y' ~~ / <r> /) }
+
+- id     0099
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'ab' } vs 'ab'
+  code   do { my rule r { 'ab' }; so('ab' ~~ &r) }
+  same-as do { my rule r { 'ab' }; so('ab' ~~ / <r> /) }
+
+- id     0100
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'ab' } vs 'abcd'
+  code   do { my rule r { 'ab' }; so('abcd' ~~ &r) }
+  same-as do { my rule r { 'ab' }; so('abcd' ~~ / <r> /) }
+
+- id     0101
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'ab' } vs 'ab cd'
+  code   do { my rule r { 'ab' }; so('ab cd' ~~ &r) }
+  same-as do { my rule r { 'ab' }; so('ab cd' ~~ / <r> /) }
+
+- id     0102
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'ab' } vs 'zab'
+  code   do { my rule r { 'ab' }; so('zab' ~~ &r) }
+  same-as do { my rule r { 'ab' }; so('zab' ~~ / <r> /) }
+
+- id     0103
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'ab' } vs '123'
+  code   do { my rule r { 'ab' }; so('123' ~~ &r) }
+  same-as do { my rule r { 'ab' }; so('123' ~~ / <r> /) }
+
+- id     0104
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'ab' } vs ''
+  code   do { my rule r { 'ab' }; so('' ~~ &r) }
+  same-as do { my rule r { 'ab' }; so('' ~~ / <r> /) }
+
+- id     0105
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'ab' } vs 'x  y'
+  code   do { my rule r { 'ab' }; so('x  y' ~~ &r) }
+  same-as do { my rule r { 'ab' }; so('x  y' ~~ / <r> /) }
+
+- id     0106
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'ab' 'cd' } vs 'ab'
+  code   do { my rule r { 'ab' 'cd' }; so('ab' ~~ &r) }
+  same-as do { my rule r { 'ab' 'cd' }; so('ab' ~~ / <r> /) }
+
+- id     0107
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'ab' 'cd' } vs 'abcd'
+  code   do { my rule r { 'ab' 'cd' }; so('abcd' ~~ &r) }
+  same-as do { my rule r { 'ab' 'cd' }; so('abcd' ~~ / <r> /) }
+
+- id     0108
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'ab' 'cd' } vs 'ab cd'
+  code   do { my rule r { 'ab' 'cd' }; so('ab cd' ~~ &r) }
+  same-as do { my rule r { 'ab' 'cd' }; so('ab cd' ~~ / <r> /) }
+
+- id     0109
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'ab' 'cd' } vs 'zab'
+  code   do { my rule r { 'ab' 'cd' }; so('zab' ~~ &r) }
+  same-as do { my rule r { 'ab' 'cd' }; so('zab' ~~ / <r> /) }
+
+- id     0110
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'ab' 'cd' } vs '123'
+  code   do { my rule r { 'ab' 'cd' }; so('123' ~~ &r) }
+  same-as do { my rule r { 'ab' 'cd' }; so('123' ~~ / <r> /) }
+
+- id     0111
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'ab' 'cd' } vs ''
+  code   do { my rule r { 'ab' 'cd' }; so('' ~~ &r) }
+  same-as do { my rule r { 'ab' 'cd' }; so('' ~~ / <r> /) }
+
+- id     0112
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'ab' 'cd' } vs 'x  y'
+  code   do { my rule r { 'ab' 'cd' }; so('x  y' ~~ &r) }
+  same-as do { my rule r { 'ab' 'cd' }; so('x  y' ~~ / <r> /) }
+
+- id     0113
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { ab cd } vs 'ab'
+  code   do { my rule r { ab cd }; so('ab' ~~ &r) }
+  same-as do { my rule r { ab cd }; so('ab' ~~ / <r> /) }
+
+- id     0114
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { ab cd } vs 'abcd'
+  code   do { my rule r { ab cd }; so('abcd' ~~ &r) }
+  same-as do { my rule r { ab cd }; so('abcd' ~~ / <r> /) }
+
+- id     0115
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { ab cd } vs 'ab cd'
+  code   do { my rule r { ab cd }; so('ab cd' ~~ &r) }
+  same-as do { my rule r { ab cd }; so('ab cd' ~~ / <r> /) }
+
+- id     0116
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { ab cd } vs 'zab'
+  code   do { my rule r { ab cd }; so('zab' ~~ &r) }
+  same-as do { my rule r { ab cd }; so('zab' ~~ / <r> /) }
+
+- id     0117
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { ab cd } vs '123'
+  code   do { my rule r { ab cd }; so('123' ~~ &r) }
+  same-as do { my rule r { ab cd }; so('123' ~~ / <r> /) }
+
+- id     0118
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { ab cd } vs ''
+  code   do { my rule r { ab cd }; so('' ~~ &r) }
+  same-as do { my rule r { ab cd }; so('' ~~ / <r> /) }
+
+- id     0119
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { ab cd } vs 'x  y'
+  code   do { my rule r { ab cd }; so('x  y' ~~ &r) }
+  same-as do { my rule r { ab cd }; so('x  y' ~~ / <r> /) }
+
+- id     0120
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { \d+ } vs 'ab'
+  code   do { my rule r { \d+ }; so('ab' ~~ &r) }
+  same-as do { my rule r { \d+ }; so('ab' ~~ / <r> /) }
+
+- id     0121
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { \d+ } vs 'abcd'
+  code   do { my rule r { \d+ }; so('abcd' ~~ &r) }
+  same-as do { my rule r { \d+ }; so('abcd' ~~ / <r> /) }
+
+- id     0122
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { \d+ } vs 'ab cd'
+  code   do { my rule r { \d+ }; so('ab cd' ~~ &r) }
+  same-as do { my rule r { \d+ }; so('ab cd' ~~ / <r> /) }
+
+- id     0123
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { \d+ } vs 'zab'
+  code   do { my rule r { \d+ }; so('zab' ~~ &r) }
+  same-as do { my rule r { \d+ }; so('zab' ~~ / <r> /) }
+
+- id     0124
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { \d+ } vs '123'
+  code   do { my rule r { \d+ }; so('123' ~~ &r) }
+  same-as do { my rule r { \d+ }; so('123' ~~ / <r> /) }
+
+- id     0125
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { \d+ } vs ''
+  code   do { my rule r { \d+ }; so('' ~~ &r) }
+  same-as do { my rule r { \d+ }; so('' ~~ / <r> /) }
+
+- id     0126
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { \d+ } vs 'x  y'
+  code   do { my rule r { \d+ }; so('x  y' ~~ &r) }
+  same-as do { my rule r { \d+ }; so('x  y' ~~ / <r> /) }
+
+- id     0127
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'a' | 'b' } vs 'ab'
+  code   do { my rule r { 'a' | 'b' }; so('ab' ~~ &r) }
+  same-as do { my rule r { 'a' | 'b' }; so('ab' ~~ / <r> /) }
+
+- id     0128
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'a' | 'b' } vs 'abcd'
+  code   do { my rule r { 'a' | 'b' }; so('abcd' ~~ &r) }
+  same-as do { my rule r { 'a' | 'b' }; so('abcd' ~~ / <r> /) }
+
+- id     0129
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'a' | 'b' } vs 'ab cd'
+  code   do { my rule r { 'a' | 'b' }; so('ab cd' ~~ &r) }
+  same-as do { my rule r { 'a' | 'b' }; so('ab cd' ~~ / <r> /) }
+
+- id     0130
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'a' | 'b' } vs 'zab'
+  code   do { my rule r { 'a' | 'b' }; so('zab' ~~ &r) }
+  same-as do { my rule r { 'a' | 'b' }; so('zab' ~~ / <r> /) }
+
+- id     0131
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'a' | 'b' } vs '123'
+  code   do { my rule r { 'a' | 'b' }; so('123' ~~ &r) }
+  same-as do { my rule r { 'a' | 'b' }; so('123' ~~ / <r> /) }
+
+- id     0132
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'a' | 'b' } vs ''
+  code   do { my rule r { 'a' | 'b' }; so('' ~~ &r) }
+  same-as do { my rule r { 'a' | 'b' }; so('' ~~ / <r> /) }
+
+- id     0133
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'a' | 'b' } vs 'x  y'
+  code   do { my rule r { 'a' | 'b' }; so('x  y' ~~ &r) }
+  same-as do { my rule r { 'a' | 'b' }; so('x  y' ~~ / <r> /) }
+
+- id     0134
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { [<[a..c]>]+ } vs 'ab'
+  code   do { my rule r { [<[a..c]>]+ }; so('ab' ~~ &r) }
+  same-as do { my rule r { [<[a..c]>]+ }; so('ab' ~~ / <r> /) }
+
+- id     0135
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { [<[a..c]>]+ } vs 'abcd'
+  code   do { my rule r { [<[a..c]>]+ }; so('abcd' ~~ &r) }
+  same-as do { my rule r { [<[a..c]>]+ }; so('abcd' ~~ / <r> /) }
+
+- id     0136
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { [<[a..c]>]+ } vs 'ab cd'
+  code   do { my rule r { [<[a..c]>]+ }; so('ab cd' ~~ &r) }
+  same-as do { my rule r { [<[a..c]>]+ }; so('ab cd' ~~ / <r> /) }
+
+- id     0137
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { [<[a..c]>]+ } vs 'zab'
+  code   do { my rule r { [<[a..c]>]+ }; so('zab' ~~ &r) }
+  same-as do { my rule r { [<[a..c]>]+ }; so('zab' ~~ / <r> /) }
+
+- id     0138
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { [<[a..c]>]+ } vs '123'
+  code   do { my rule r { [<[a..c]>]+ }; so('123' ~~ &r) }
+  same-as do { my rule r { [<[a..c]>]+ }; so('123' ~~ / <r> /) }
+
+- id     0139
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { [<[a..c]>]+ } vs ''
+  code   do { my rule r { [<[a..c]>]+ }; so('' ~~ &r) }
+  same-as do { my rule r { [<[a..c]>]+ }; so('' ~~ / <r> /) }
+
+- id     0140
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { [<[a..c]>]+ } vs 'x  y'
+  code   do { my rule r { [<[a..c]>]+ }; so('x  y' ~~ &r) }
+  same-as do { my rule r { [<[a..c]>]+ }; so('x  y' ~~ / <r> /) }
+
+- id     0141
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'x' \s* 'y' } vs 'ab'
+  code   do { my rule r { 'x' \s* 'y' }; so('ab' ~~ &r) }
+  same-as do { my rule r { 'x' \s* 'y' }; so('ab' ~~ / <r> /) }
+
+- id     0142
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'x' \s* 'y' } vs 'abcd'
+  code   do { my rule r { 'x' \s* 'y' }; so('abcd' ~~ &r) }
+  same-as do { my rule r { 'x' \s* 'y' }; so('abcd' ~~ / <r> /) }
+
+- id     0143
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'x' \s* 'y' } vs 'ab cd'
+  code   do { my rule r { 'x' \s* 'y' }; so('ab cd' ~~ &r) }
+  same-as do { my rule r { 'x' \s* 'y' }; so('ab cd' ~~ / <r> /) }
+
+- id     0144
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'x' \s* 'y' } vs 'zab'
+  code   do { my rule r { 'x' \s* 'y' }; so('zab' ~~ &r) }
+  same-as do { my rule r { 'x' \s* 'y' }; so('zab' ~~ / <r> /) }
+
+- id     0145
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'x' \s* 'y' } vs '123'
+  code   do { my rule r { 'x' \s* 'y' }; so('123' ~~ &r) }
+  same-as do { my rule r { 'x' \s* 'y' }; so('123' ~~ / <r> /) }
+
+- id     0146
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'x' \s* 'y' } vs ''
+  code   do { my rule r { 'x' \s* 'y' }; so('' ~~ &r) }
+  same-as do { my rule r { 'x' \s* 'y' }; so('' ~~ / <r> /) }
+
+- id     0147
+  from   law:callable-is-subrule · bug:rakupp-named-regex-callable-lost-its-flags
+  cell   rule { 'x' \s* 'y' } vs 'x  y'
+  code   do { my rule r { 'x' \s* 'y' }; so('x  y' ~~ &r) }
+  same-as do { my rule r { 'x' \s* 'y' }; so('x  y' ~~ / <r> /) }

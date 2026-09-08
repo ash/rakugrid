@@ -1,0 +1,42 @@
+atom     containers/itemised-is-one
+source   generated
+gen      gen/containers.raku
+law      do { my $it = {X}; [$it].elems }  ===  1
+why      a value reached through a `$` is ONE element however it is spelled
+ladder   6 spellings
+
+- id     0001
+  from   law:itemised-is-one
+  cell   1
+  code   do { do { my $it = 1; [$it].elems } }
+  same-as do { 1 }
+
+- id     0002
+  from   law:itemised-is-one
+  cell   (1,2,3)
+  code   do { do { my $it = (1,2,3); [$it].elems } }
+  same-as do { 1 }
+
+- id     0003
+  from   law:itemised-is-one
+  cell   [1,2,3]
+  code   do { do { my $it = [1,2,3]; [$it].elems } }
+  same-as do { 1 }
+
+- id     0004
+  from   law:itemised-is-one
+  cell   {:a(1)}
+  code   do { do { my $it = {:a(1)}; [$it].elems } }
+  same-as do { 1 }
+
+- id     0005
+  from   law:itemised-is-one
+  cell   (1..3)
+  code   do { do { my $it = (1..3); [$it].elems } }
+  same-as do { 1 }
+
+- id     0006
+  from   law:itemised-is-one
+  cell   <a b>
+  code   do { do { my $it = <a b>; [$it].elems } }
+  same-as do { 1 }

@@ -1,0 +1,90 @@
+atom     containers/one-arg-spreads
+source   generated
+gen      gen/containers.raku
+law      [{X}].elems  ===  ({X}).elems
+why      a lone container argument spreads, so the literal has its elements
+ladder   14 spellings
+
+- id     0001
+  from   law:one-arg-spreads · bug:rakupp-single-hash-does-not-spread
+  cell   1
+  code   do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); [1].elems }
+  same-as do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); (1).elems }
+
+- id     0002
+  from   law:one-arg-spreads · bug:rakupp-single-hash-does-not-spread
+  cell   "a"
+  code   do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); ["a"].elems }
+  same-as do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); ("a").elems }
+
+- id     0003
+  from   law:one-arg-spreads · bug:rakupp-single-hash-does-not-spread
+  cell   (1,2,3)
+  code   do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); [(1,2,3)].elems }
+  same-as do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); ((1,2,3)).elems }
+
+- id     0004
+  from   law:one-arg-spreads · bug:rakupp-single-hash-does-not-spread
+  cell   [1,2,3]
+  code   do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); [[1,2,3]].elems }
+  same-as do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); ([1,2,3]).elems }
+
+- id     0005
+  from   law:one-arg-spreads · bug:rakupp-single-hash-does-not-spread
+  cell   {}
+  code   do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); [{}].elems }
+  same-as do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); ({}).elems }
+
+- id     0006
+  from   law:one-arg-spreads · bug:rakupp-single-hash-does-not-spread
+  cell   {:a(1)}
+  code   do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); [{:a(1)}].elems }
+  same-as do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); ({:a(1)}).elems }
+
+- id     0007
+  from   law:one-arg-spreads · bug:rakupp-single-hash-does-not-spread
+  cell   (1..3)
+  code   do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); [(1..3)].elems }
+  same-as do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); ((1..3)).elems }
+
+- id     0008
+  from   law:one-arg-spreads · bug:rakupp-single-hash-does-not-spread
+  cell   <a b>
+  code   do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); [<a b>].elems }
+  same-as do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); (<a b>).elems }
+
+- id     0009
+  from   law:one-arg-spreads · bug:rakupp-single-hash-does-not-spread
+  cell   ()
+  code   do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); [()].elems }
+  same-as do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); (()).elems }
+
+- id     0010
+  from   law:one-arg-spreads · bug:rakupp-single-hash-does-not-spread
+  cell   (1,)
+  code   do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); [(1,)].elems }
+  same-as do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); ((1,)).elems }
+
+- id     0011
+  from   law:one-arg-spreads · bug:rakupp-single-hash-does-not-spread
+  cell   Nil
+  code   do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); [Nil].elems }
+  same-as do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); (Nil).elems }
+
+- id     0012
+  from   law:one-arg-spreads · bug:rakupp-single-hash-does-not-spread
+  cell   %h
+  code   do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); [%h].elems }
+  same-as do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); (%h).elems }
+
+- id     0013
+  from   law:one-arg-spreads · bug:rakupp-single-hash-does-not-spread
+  cell   @a
+  code   do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); [@a].elems }
+  same-as do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); (@a).elems }
+
+- id     0014
+  from   law:one-arg-spreads · bug:rakupp-single-hash-does-not-spread
+  cell   $s.list
+  code   do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); [$s.list].elems }
+  same-as do { my %h = :a(1); my @a = 1, 2, 3; my $s = (1, 2, 3); ($s.list).elems }
